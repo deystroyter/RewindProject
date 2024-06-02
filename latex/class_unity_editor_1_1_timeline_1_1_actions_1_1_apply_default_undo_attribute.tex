@@ -1,0 +1,73 @@
+\doxysection{Unity\+Editor.\+Timeline.\+Actions.\+Apply\+Default\+Undo\+Attribute Class Reference}
+\hypertarget{class_unity_editor_1_1_timeline_1_1_actions_1_1_apply_default_undo_attribute}{}\label{class_unity_editor_1_1_timeline_1_1_actions_1_1_apply_default_undo_attribute}\index{UnityEditor.Timeline.Actions.ApplyDefaultUndoAttribute@{UnityEditor.Timeline.Actions.ApplyDefaultUndoAttribute}}
+
+
+Use this attribute on action classes (Timeline\+Action, Clip\+Action, Marker\+Action and Track\+Action) to have the default undo behaviour applied.  
+
+
+Inheritance diagram for Unity\+Editor.\+Timeline.\+Actions.\+Apply\+Default\+Undo\+Attribute\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_editor_1_1_timeline_1_1_actions_1_1_apply_default_undo_attribute}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_actions_1_1_apply_default_undo_attribute_a7c7a4114af9c2d07ba9dcb64d1de81a9}{Apply\+Default\+Undo\+Attribute}} (string undo\+Title=null)
+\begin{DoxyCompactList}\small\item\em Use this attribute on action classes to have the default undo behaviour applied. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_actions_1_1_apply_default_undo_attribute_a6d31f3e35657d9c935c9c9586538b448}{Undo\+Title}}
+\begin{DoxyCompactList}\small\item\em The title of the action to appear in the undo history. If not specified, the name is taken from the Display\+Name attribute, or derived from the name of the class this attribute is applied to. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Use this attribute on action classes (Timeline\+Action, Clip\+Action, Marker\+Action and Track\+Action) to have the default undo behaviour applied. 
+
+By default, applying this attribute will record all objects passed to the Execute method with the Undo system, using the name of Action it is applied to.
+
+Simple track Action example (with context menu and shortcut support).  
+
+\begin{DoxySeeAlso}{See also}
+Timeline\+Action, Track\+Action, Clip\+Action, Marker\+Action
+
+
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_actions_1_1_apply_default_undo_attribute_a7c7a4114af9c2d07ba9dcb64d1de81a9}\label{class_unity_editor_1_1_timeline_1_1_actions_1_1_apply_default_undo_attribute_a7c7a4114af9c2d07ba9dcb64d1de81a9} 
+\index{UnityEditor.Timeline.Actions.ApplyDefaultUndoAttribute@{UnityEditor.Timeline.Actions.ApplyDefaultUndoAttribute}!ApplyDefaultUndoAttribute@{ApplyDefaultUndoAttribute}}
+\index{ApplyDefaultUndoAttribute@{ApplyDefaultUndoAttribute}!UnityEditor.Timeline.Actions.ApplyDefaultUndoAttribute@{UnityEditor.Timeline.Actions.ApplyDefaultUndoAttribute}}
+\doxysubsubsection{\texorpdfstring{ApplyDefaultUndoAttribute()}{ApplyDefaultUndoAttribute()}}
+{\footnotesize\ttfamily Unity\+Editor.\+Timeline.\+Actions.\+Apply\+Default\+Undo\+Attribute.\+Apply\+Default\+Undo\+Attribute (\begin{DoxyParamCaption}\item[{string}]{undo\+Title = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+
+Use this attribute on action classes to have the default undo behaviour applied. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em undo\+Title} & The title of the action to appear in the undo history.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_actions_1_1_apply_default_undo_attribute_a6d31f3e35657d9c935c9c9586538b448}\label{class_unity_editor_1_1_timeline_1_1_actions_1_1_apply_default_undo_attribute_a6d31f3e35657d9c935c9c9586538b448} 
+\index{UnityEditor.Timeline.Actions.ApplyDefaultUndoAttribute@{UnityEditor.Timeline.Actions.ApplyDefaultUndoAttribute}!UndoTitle@{UndoTitle}}
+\index{UndoTitle@{UndoTitle}!UnityEditor.Timeline.Actions.ApplyDefaultUndoAttribute@{UnityEditor.Timeline.Actions.ApplyDefaultUndoAttribute}}
+\doxysubsubsection{\texorpdfstring{UndoTitle}{UndoTitle}}
+{\footnotesize\ttfamily string Unity\+Editor.\+Timeline.\+Actions.\+Apply\+Default\+Undo\+Attribute.\+Undo\+Title}
+
+
+
+The title of the action to appear in the undo history. If not specified, the name is taken from the Display\+Name attribute, or derived from the name of the class this attribute is applied to. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+7.\+6/\+Editor/\+Undo/\mbox{\hyperlink{_apply_default_undo_attribute_8cs}{Apply\+Default\+Undo\+Attribute.\+cs}}\end{DoxyCompactItemize}

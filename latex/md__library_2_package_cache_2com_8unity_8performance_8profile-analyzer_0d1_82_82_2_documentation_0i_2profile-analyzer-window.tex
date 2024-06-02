@@ -1,0 +1,94 @@
+\chapter{Profile Analyzer window}
+\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2profile-analyzer-window}{}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2profile-analyzer-window}\index{Profile Analyzer window@{Profile Analyzer window}}
+\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2profile-analyzer-window_autotoc_md421}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2profile-analyzer-window_autotoc_md421}%
+ The Profile Analyzer window visualizes frame, thread, and marker data from the \href{https://docs.unity3d.com/Manual/Profiler.html}{\texttt{ Unity Profiler}} window. You can use it to analyze the performance of specific markers, threads, and frames.
+
+To open the Profile Analyzer window, in the \doxylink{namespace_unity}{Unity} Editor go to menu\+: {\bfseries{Window \texorpdfstring{$>$}{>} Analysis \texorpdfstring{$>$}{>} Profile Analyzer}}.
+
+~\newline
+{\itshape The Profile Analyzer window on start up, with no data loaded.}
+
+The Profile Analyzer has two views\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Single\+:}} The \doxysectlink{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2single-view}{Single view}{0} displays one set of Profiler data. You can use this view to analyze specific events on one set of profiling data.
+\item {\bfseries{Compare\+:}} In the \doxysectlink{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2compare-view}{Compare view}{0}, you can load two sets of Profiler data to compare. You can use the Compare view to compare two different sets of profiling data, or to compare different events in the same data set.
+\end{DoxyItemize}
+
+In both views, the Profile Analyzer displays min, max, median, mean, and lower/upper quartile values of the selected frame range. It also displays information on the distribution of each profiler marker in histograms and box and whisker plots.\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2profile-analyzer-window_autotoc_md422}{}\doxysection{\texorpdfstring{Pulling and analyzing performance data}{Pulling and analyzing performance data}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2profile-analyzer-window_autotoc_md422}
+The Profile Analyzer only analyzes CPU data. It can either analyze data from the active set of frames loaded into the Profiler, or from a saved Profile Analyzer .pdata file.
+
+The Profile Analyzer aggregates the activity of each marker, and generates useful statistics to help you analyze the marker costs over a number of threads and frames. This includes summing the runtime and counts of each occurrence of every marker for all active threads and frames the Profile captured.\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2profile-analyzer-window_autotoc_md423}{}\doxysubsection{\texorpdfstring{Pulling data from the Profiler window}{Pulling data from the Profiler window}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2profile-analyzer-window_autotoc_md423}
+To pull data from an active profiling session, click the {\bfseries{Pull Data}} button. This pulls in the current set of available frames from the Profiler and visualizes the analyzed results.
+
+If you don\textquotesingle{}t have an active profile session, click the {\bfseries{Open Profiler Window}} button, then load or record some data.\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2profile-analyzer-window_autotoc_md424}{}\doxysubsection{\texorpdfstring{Loading and saving a data set}{Loading and saving a data set}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2profile-analyzer-window_autotoc_md424}
+You can save or reload any data that the Profile Analyzer analyzes at any point in time. This means you can share your analysis with others and load the results into the {\bfseries{Single}} or {\bfseries{Compare}} view at any time. To save the data from the Profile Analyzer, click the {\bfseries{Save}} button in any view. This saves the data in the .pdata format. To load this data, click the {\bfseries{Load}} button in any view.
+
+\texorpdfstring{$>$}{>}\mbox{[}!\+NOTE\mbox{]} \texorpdfstring{$>$}{>}If you select the {\bfseries{Load}} option, the data must be in the Profile Analyzer .pdata format. If you have data from the Profiler in the .data file format, open it in the Profiler first, and then select the {\bfseries{Pull Data}} button in the Profile Analyzer.
+
+For more information on how to pull data into the Profile Analyzer, see the workflow documentation on \doxysectlink{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentationb6070e6060e44e5a67dc3091858ab5a4}{Collecting and viewing data}{0}.\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2profile-analyzer-window_autotoc_md425}{}\doxysection{\texorpdfstring{Window navigation}{Window navigation}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2profile-analyzer-window_autotoc_md425}
+The controls and navigation for the Profile Analyzer window are very similar in both the Single and Compare view.
+
+The Profile Analyzer window has the following controls across both views, which you can access at the top of the window\+:
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Control}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Function}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Control}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Function}}    }\\\cline{1-2}
+\endhead
+{\bfseries{Single}}   &Enter the \doxysectlink{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2single-view}{Single view}{0} mode. This is the default view mode.    \\\cline{1-2}
+{\bfseries{Compare}}   &Enter the \doxysectlink{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2compare-view}{Compare view}{0} mode. You can compare two sets of profiling data in this mode.    \\\cline{1-2}
+{\bfseries{Export}}   &Export the data into a .csv format. When you click this button, a dialog box opens and you can choose from\+:~\newline
+ {\bfseries{Marker table\+:}} Exports the marker data visible in \doxysectlink{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2single-view}{Single view}{0}~\newline
+{\bfseries{Single Frame Times\+:}} Exports the frame data visible in the Single view~\newline
+{\bfseries{Comparison Frame Times\+:}} Exports both sets of data visible in the \doxysectlink{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2compare-view}{Compare view}{0}.~\newline
+~\newline
+This button is disabled if you haven\textquotesingle{}t imported any data into the Profile Analyzer window.    \\\cline{1-2}
+{\bfseries{Open Profiler Window}}   &Click this button to open the \href{https://docs.unity3d.com/Manual/ProfilerWindow.html}{\texttt{ Profiler window}}. When the Profiler window is open, this button changes to {\bfseries{Close Profiler Window}}.   \\\cline{1-2}
+\end{longtabu}
+
+
+When you load some data into the Profile Analyzer window, the window populates with the profiling data, and is laid out as follows\+:
+
+~\newline
+\texorpdfstring{$\ast$}{*}\+The Profile Analyzer window in Single view
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Pane   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Pane   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endhead
+{\bfseries{A\+:}} Frame control   &Displays individual frame timings, ordered by frame index or frame duration. You can also use this pane to select a range of frames for the Profile Analyzer to analyze. For more information on this pane, see the \doxysectlink{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2frame-range-selection}{Frame control}{0} documentation. ~\newline
+~\newline
+ In Compare View, to select the same range on both sets of data, enable {\bfseries{Pair Graph Selection}} underneath the charts and then click and drag a selection on either of the charts. For more information on this pane, see the \doxysectlink{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2frame-range-selection}{Frame control}{0} documentation.    \\\cline{1-2}
+{\bfseries{B\+:}} Filters   &Use the filter pane to limit the data that the Profile Analyzer displays. You can filter by partial match name, thread, or depth slice. You can also exclude markers to remove any markers that aren\textquotesingle{}t relevant from the filtered view. For more information on how to use the filter pane, see the \doxysectlink{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2filtering-system}{Filter}{0} documentation.    \\\cline{1-2}
+{\bfseries{C\+:}} Top 10 markers on median frame(s)   &Visualizes the ten highest duration markers that contributed to the frame. In Compare view, this shows the ten highest markers for both sets of data. You can select any of the markers in this pane to see more information on them. The Profile Analyzer reflects changes you make to the Depth filter in this pane.~\newline
+~\newline
+In Compare view, to adjust how the Profile Analyzer draws the markers against each other, use the {\bfseries{Ratio}} dropdown.~\newline
+ {\bfseries{Normalised}} displays the two data sets relative to their own time at the selected depth. ~\newline
+{\bfseries{Longest}} displays the absolute difference between the two sets at the selected depth.    \\\cline{1-2}
+{\bfseries{D\+:}} Marker details for currently selected range \texorpdfstring{$\ast$}{*}(Single view)\texorpdfstring{$\ast$}{*}~\newline
+Marker Comparison for currently selected range \texorpdfstring{$\ast$}{*}(Compare view)\texorpdfstring{$\ast$}{*}   &A sortable list of markers, with detailed information on their timings. For more information on the particular statistics available in these panes, see the documentation on \href{single-view.html\#marker-details-list}{\texttt{ Single view marker details list}} and \href{compare-view.html\#marker-comparison-list}{\texttt{ Compare view Marker Comparison list}}.    \\\cline{1-2}
+{\bfseries{E\+:}} Frame summary   &Displays a summary of frame times. For more information on this pane, see the documentation on \doxysectlink{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2frame-summary}{Frame Summary}{0}.    \\\cline{1-2}
+{\bfseries{F\+:}} Thread summary   &Displays information about the threads in the data set. For more information, see the documentation on the \doxysectlink{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2thread-summary}{Thread Summary pane}{0}.    \\\cline{1-2}
+{\bfseries{G\+:}} Marker summary   &Summarizes the marker data of the current selected item in the {\bfseries{Marker Details}} list. For more information, see the \doxysectlink{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2marker-summary}{Marker summary}{0} documentation.   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2profile-analyzer-window_autotoc_md426}{}\doxysubsection{\texorpdfstring{Frame buttons}{Frame buttons}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2profile-analyzer-window_autotoc_md426}
+If the data you analyze in the Profile Analyzer is also loaded into the Profiler window, you can click on the frame buttons in the Profile Analyzer window to jump to the relevant frames in the Profiler.
+
+~\newline
+{\itshape The Frame Summary pane with the frame buttons highlighted.}\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2profile-analyzer-window_autotoc_md427}{}\doxysection{\texorpdfstring{Frame range selection}{Frame range selection}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2profile-analyzer-window_autotoc_md427}
+You can limit the analysis to a subset or selection of frames. To do this, you can click and drag on the chart in the Frame Control pane at the top of the {\bfseries{Single}} and {\bfseries{Compare}} views and select a range, or use the context menu commands to select a range. For more information on using the frame range pane, see the \doxysectlink{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2frame-range-selection}{Frame Control pane}{0} documentation.\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2profile-analyzer-window_autotoc_md428}{}\doxysection{\texorpdfstring{Filtering}{Filtering}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2profile-analyzer-window_autotoc_md428}
+You can also filter the data to limit the number of markers the Profile Analyzer displays. This includes filtering by thread, call depth and name substrings. You can order the remaining markers by any of the available metrics in the marker list control. For more information on how to use the filter system, see the \doxysectlink{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2filtering-system}{Filters pane}{0} documentation. 

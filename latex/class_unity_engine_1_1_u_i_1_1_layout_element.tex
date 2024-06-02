@@ -1,0 +1,127 @@
+\doxysection{Unity\+Engine.\+UI.\+Layout\+Element Class Reference}
+\hypertarget{class_unity_engine_1_1_u_i_1_1_layout_element}{}\label{class_unity_engine_1_1_u_i_1_1_layout_element}\index{UnityEngine.UI.LayoutElement@{UnityEngine.UI.LayoutElement}}
+
+
+Add this component to a Game\+Object to make it into a layout element or override values on an existing layout element.  
+
+
+Inheritance diagram for Unity\+Engine.\+UI.\+Layout\+Element\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.314050cm]{class_unity_engine_1_1_u_i_1_1_layout_element}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_element_a2fd108eb648837ba312fdd9fd58f3fd1}{Calculate\+Layout\+Input\+Horizontal}} ()
+\begin{DoxyCompactList}\small\item\em After this method is invoked, layout horizontal input properties should return up-\/to-\/date values. Children will already have up-\/to-\/date layout horizontal inputs when this methods is called. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_element_a0682cab252b2cc9033be414cc5fb80f5}{Calculate\+Layout\+Input\+Vertical}} ()
+\begin{DoxyCompactList}\small\item\em After this method is invoked, layout vertical input properties should return up-\/to-\/date values. Children will already have up-\/to-\/date layout vertical inputs when this methods is called. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour}{Unity\+Engine.\+Event\+Systems.\+UIBehaviour}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_ac3b9d503ad9eb607e691775b2c680d08}{Is\+Active}} ()
+\begin{DoxyCompactList}\small\item\em Returns true if the Game\+Object and the Component are active. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_a1b4d2b6956ce44150ae96433d1d15e8f}{Is\+Destroyed}} ()
+\begin{DoxyCompactList}\small\item\em Returns true if the native representation of the behaviour has been destroyed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_element_a5623075893272fee3cf54988848ad399}{ignore\+Layout}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Should this Rect\+Transform be ignored by the layout system? \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element}{Unity\+Engine.\+UI.\+ILayout\+Element}}}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a61f430b52f90f43b91f9ded0fcee43d6}{min\+Width}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The minimum width this layout element may be allocated. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a69c7300cf30f5787cbb8e6750cf9a035}{preferred\+Width}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The preferred width this layout element should be allocated if there is sufficient space. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a8c4aaed207092d7d625b40c383e21816}{flexible\+Width}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The extra relative width this layout element should be allocated if there is additional available space. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a05bfb63b5a7eb646ba6576af07060333}{min\+Height}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The minimum height this layout element may be allocated. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a103a61023ccb5bc93fbb3cc8c3460531}{preferred\+Height}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The preferred height this layout element should be allocated if there is sufficient space. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a98516af90dc6529d486803b6774dc798}{flexible\+Height}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The extra relative height this layout element should be allocated if there is additional available space. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a13e5c560042cac2db6ddfd22143f1be9}{layout\+Priority}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The layout priority of this component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour}{Unity\+Engine.\+Event\+Systems.\+UIBehaviour}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_a1235b9fe2fae01d3a2fc407166e0fa41}{Awake}} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_a50bb1d6a54cafd4e344fc4578fc7c322}{On\+Enable}} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_ad9097dfd9b409602fc182c1b790600ea}{Start}} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_ad7fc972dc923e760a4be478cf72de2f9}{On\+Disable}} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_a3eaa412ca986ca777a4d7b9654c1f3d4}{On\+Destroy}} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_acfb0bcf126b8ea0953525ebb20a87985}{On\+Rect\+Transform\+Dimensions\+Change}} ()
+\begin{DoxyCompactList}\small\item\em This callback is called when the dimensions of an associated Rect\+Transform change. It is always called before Awake, On\+Enable, or Start. The call is also made to all child Rect\+Transforms, regardless of whether their dimensions change (which depends on how they are anchored). \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_ac9eba6c0a20f81ea61f6e760b6df5d83}{On\+Before\+Transform\+Parent\+Changed}} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_a6ed51ea799aa1a343e0e847255dfd3cd}{On\+Transform\+Parent\+Changed}} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_a6ad4a13c8cc29c6620e56028e07d4c0e}{On\+Did\+Apply\+Animation\+Properties}} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_aa47d9812b94689b322fa7370fa47f5ca}{On\+Canvas\+Group\+Changed}} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_a73f180fef8560a44a756525ecfe3092f}{On\+Canvas\+Hierarchy\+Changed}} ()
+\begin{DoxyCompactList}\small\item\em Called when the state of the parent Canvas is changed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Add this component to a Game\+Object to make it into a layout element or override values on an existing layout element. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_u_i_1_1_layout_element_a2fd108eb648837ba312fdd9fd58f3fd1}\label{class_unity_engine_1_1_u_i_1_1_layout_element_a2fd108eb648837ba312fdd9fd58f3fd1} 
+\index{UnityEngine.UI.LayoutElement@{UnityEngine.UI.LayoutElement}!CalculateLayoutInputHorizontal@{CalculateLayoutInputHorizontal}}
+\index{CalculateLayoutInputHorizontal@{CalculateLayoutInputHorizontal}!UnityEngine.UI.LayoutElement@{UnityEngine.UI.LayoutElement}}
+\doxysubsubsection{\texorpdfstring{CalculateLayoutInputHorizontal()}{CalculateLayoutInputHorizontal()}}
+{\footnotesize\ttfamily virtual void Unity\+Engine.\+UI.\+Layout\+Element.\+Calculate\+Layout\+Input\+Horizontal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+After this method is invoked, layout horizontal input properties should return up-\/to-\/date values. Children will already have up-\/to-\/date layout horizontal inputs when this methods is called. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a38e697b28b30f3ff350c0c43d9c29441}{Unity\+Engine.\+UI.\+ILayout\+Element}}.
+
+\Hypertarget{class_unity_engine_1_1_u_i_1_1_layout_element_a0682cab252b2cc9033be414cc5fb80f5}\label{class_unity_engine_1_1_u_i_1_1_layout_element_a0682cab252b2cc9033be414cc5fb80f5} 
+\index{UnityEngine.UI.LayoutElement@{UnityEngine.UI.LayoutElement}!CalculateLayoutInputVertical@{CalculateLayoutInputVertical}}
+\index{CalculateLayoutInputVertical@{CalculateLayoutInputVertical}!UnityEngine.UI.LayoutElement@{UnityEngine.UI.LayoutElement}}
+\doxysubsubsection{\texorpdfstring{CalculateLayoutInputVertical()}{CalculateLayoutInputVertical()}}
+{\footnotesize\ttfamily virtual void Unity\+Engine.\+UI.\+Layout\+Element.\+Calculate\+Layout\+Input\+Vertical (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+After this method is invoked, layout vertical input properties should return up-\/to-\/date values. Children will already have up-\/to-\/date layout vertical inputs when this methods is called. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a1e0f42ff8a350a7996b1ebfacdac2b0b}{Unity\+Engine.\+UI.\+ILayout\+Element}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_unity_engine_1_1_u_i_1_1_layout_element_a5623075893272fee3cf54988848ad399}\label{class_unity_engine_1_1_u_i_1_1_layout_element_a5623075893272fee3cf54988848ad399} 
+\index{UnityEngine.UI.LayoutElement@{UnityEngine.UI.LayoutElement}!ignoreLayout@{ignoreLayout}}
+\index{ignoreLayout@{ignoreLayout}!UnityEngine.UI.LayoutElement@{UnityEngine.UI.LayoutElement}}
+\doxysubsubsection{\texorpdfstring{ignoreLayout}{ignoreLayout}}
+{\footnotesize\ttfamily virtual bool Unity\+Engine.\+UI.\+Layout\+Element.\+ignore\+Layout\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Should this Rect\+Transform be ignored by the layout system? 
+
+Setting this property to true will make a parent layout group component not consider this Rect\+Transform part of the group. The Rect\+Transform can then be manually positioned despite being a child Game\+Object of a layout group. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Runtime/\+UI/\+Core/\+Layout/\mbox{\hyperlink{_layout_element_8cs}{Layout\+Element.\+cs}}\end{DoxyCompactItemize}

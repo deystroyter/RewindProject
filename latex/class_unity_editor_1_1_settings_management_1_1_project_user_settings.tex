@@ -1,0 +1,109 @@
+\doxysection{Unity\+Editor.\+Settings\+Management.\+Project\+User\+Settings Class Reference}
+\hypertarget{class_unity_editor_1_1_settings_management_1_1_project_user_settings}{}\label{class_unity_editor_1_1_settings_management_1_1_project_user_settings}\index{UnityEditor.SettingsManagement.ProjectUserSettings@{UnityEditor.SettingsManagement.ProjectUserSettings}}
+
+
+Represents a settings repository that stores data local to a \doxylink{namespace_unity}{Unity} project. The settings data is serialized to a JSON file.  
+
+
+Inheritance diagram for Unity\+Editor.\+Settings\+Management.\+Project\+User\+Settings\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_unity_editor_1_1_settings_management_1_1_project_user_settings}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_project_user_settings_a89bb7245f5d1b92e2046d8771bc26dcc}{Project\+User\+Settings}} (string package, string \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_file_settings_repository_aa2202c7b81b41117f6c9a0b94adacbca}{name}}="{}Settings"{})
+\begin{DoxyCompactList}\small\item\em Initializes and returns an instance of the Project\+User\+Settings repository with the serialized data location set to a path defined by the specified {\ttfamily package} and {\ttfamily name} values relative to the {\ttfamily User\+Settings} directory. For example\+: {\ttfamily My\+Unity\+Project/\+User\+Settings/\+Packages/com.\+example.\+my-\/package/\+Settings.\+json}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_file_settings_repository}{Unity\+Editor.\+Settings\+Management.\+File\+Settings\+Repository}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_file_settings_repository_a2a5cfbaa346321db5b4b9d103c20b8ae}{File\+Settings\+Repository}} (string \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_file_settings_repository_a992518858c0aa642cb4c72a1531e16bd}{path}})
+\begin{DoxyCompactList}\small\item\em Initializes and returns an instance of the File\+Settings\+Repository with the serialized data location set to the specified path. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_file_settings_repository_ad2146de62a2070190a82ac1e6132d6a0}{Try\+Load\+Saved\+Json}} (out string json)
+\begin{DoxyCompactList}\small\item\em Loads the JSON file that stores the values for this settings object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_file_settings_repository_aa2fe7051e189e9639ce89eb86e91c3de}{Save}} ()
+\begin{DoxyCompactList}\small\item\em Saves all settings to their serialized state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_file_settings_repository_a1f56a6fa2ae6235478a768394a7f8fe2}{Set$<$ T $>$}} (string key, T value)
+\begin{DoxyCompactList}\small\item\em Sets a value for a settings entry with a matching key and type {\ttfamily T}. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_file_settings_repository_aa3aa034e5f5627fdc29ba3afb7895579}{Get$<$ T $>$}} (string key, T fallback=default(T))
+\begin{DoxyCompactList}\small\item\em Returns a value with key of type {\ttfamily T}, or the fallback value if no matching key is found. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_file_settings_repository_a411440ce5e77d7b0b401ecbbffd85482}{Contains\+Key$<$ T $>$}} (string key)
+\begin{DoxyCompactList}\small\item\em Determines whether this repository contains a settings entry that matches the specified key and is of type {\ttfamily T}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_file_settings_repository_a8ce9b5456f63ec411bde251206d3bacf}{Remove$<$ T $>$}} (string key)
+\begin{DoxyCompactList}\small\item\em Removes a key-\/value pair from the settings repository. This method identifies the settings entry to remove by matching the specified key for a value of type {\ttfamily T}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static string \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_project_user_settings_ad8c1742b5bf25c26ee8e40143fc6d4ea}{Get\+User\+Settings\+Path}} (string package, string \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_file_settings_repository_aa2202c7b81b41117f6c9a0b94adacbca}{name}})
+\begin{DoxyCompactList}\small\item\em Builds and returns a path for a settings file relative to the calling assembly\textquotesingle{}s package directory. This method constructs the location from the specified {\ttfamily package} and (filename) {\ttfamily name} under the {\ttfamily User\+Settings} folder. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Protected Attributes inherited from \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_file_settings_repository}{Unity\+Editor.\+Settings\+Management.\+File\+Settings\+Repository}}}
+\begin{DoxyCompactItemize}
+\item 
+const string \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_file_settings_repository_a46e2e106cd560ff7633f4c5e7bc2ebec}{k\+\_\+\+Package\+Settings\+Directory}} = "{}Project\+Settings/Packages"{}
+\begin{DoxyCompactList}\small\item\em Location of where the package settings are saved under the {\ttfamily Project\+Settings} directory. \end{DoxyCompactList}\item 
+const string \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_file_settings_repository_aa7f28e7c9231358122c5e024668769b7}{k\+\_\+\+User\+Project\+Settings\+Directory}} = "{}User\+Settings/Packages"{}
+\begin{DoxyCompactList}\small\item\em Location of where the package settings are saved under the {\ttfamily User\+Settings} directory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_file_settings_repository}{Unity\+Editor.\+Settings\+Management.\+File\+Settings\+Repository}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual Settings\+Scope \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_file_settings_repository_aed7faf3d169bdce2a79c074f573fe7b0}{scope}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Sets the Settings\+Scope this repository applies to. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_file_settings_repository_a992518858c0aa642cb4c72a1531e16bd}{path}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the full path to the file containing the serialized settings data. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_file_settings_repository_aa2202c7b81b41117f6c9a0b94adacbca}{name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Sets the name of file containing the serialized settings data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_unity_editor_1_1_settings_management_1_1_i_settings_repository}{Unity\+Editor.\+Settings\+Management.\+ISettings\+Repository}}}
+
+
+\doxysubsection{Detailed Description}
+Represents a settings repository that stores data local to a \doxylink{namespace_unity}{Unity} project. The settings data is serialized to a JSON file. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_unity_editor_1_1_settings_management_1_1_project_user_settings_a89bb7245f5d1b92e2046d8771bc26dcc}\label{class_unity_editor_1_1_settings_management_1_1_project_user_settings_a89bb7245f5d1b92e2046d8771bc26dcc} 
+\index{UnityEditor.SettingsManagement.ProjectUserSettings@{UnityEditor.SettingsManagement.ProjectUserSettings}!ProjectUserSettings@{ProjectUserSettings}}
+\index{ProjectUserSettings@{ProjectUserSettings}!UnityEditor.SettingsManagement.ProjectUserSettings@{UnityEditor.SettingsManagement.ProjectUserSettings}}
+\doxysubsubsection{\texorpdfstring{ProjectUserSettings()}{ProjectUserSettings()}}
+{\footnotesize\ttfamily Unity\+Editor.\+Settings\+Management.\+Project\+User\+Settings.\+Project\+User\+Settings (\begin{DoxyParamCaption}\item[{string}]{package,  }\item[{string}]{name = {\ttfamily "{}Settings"{}} }\end{DoxyParamCaption})}
+
+
+
+Initializes and returns an instance of the Project\+User\+Settings repository with the serialized data location set to a path defined by the specified {\ttfamily package} and {\ttfamily name} values relative to the {\ttfamily User\+Settings} directory. For example\+: {\ttfamily My\+Unity\+Project/\+User\+Settings/\+Packages/com.\+example.\+my-\/package/\+Settings.\+json}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em package} & The name of the package to store the serialized data under.\\
+\hline
+{\em name} & The base filename to use for the serialized data location (defaults to "{}\+Settings"{}).\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_editor_1_1_settings_management_1_1_project_user_settings_ad8c1742b5bf25c26ee8e40143fc6d4ea}\label{class_unity_editor_1_1_settings_management_1_1_project_user_settings_ad8c1742b5bf25c26ee8e40143fc6d4ea} 
+\index{UnityEditor.SettingsManagement.ProjectUserSettings@{UnityEditor.SettingsManagement.ProjectUserSettings}!GetUserSettingsPath@{GetUserSettingsPath}}
+\index{GetUserSettingsPath@{GetUserSettingsPath}!UnityEditor.SettingsManagement.ProjectUserSettings@{UnityEditor.SettingsManagement.ProjectUserSettings}}
+\doxysubsubsection{\texorpdfstring{GetUserSettingsPath()}{GetUserSettingsPath()}}
+{\footnotesize\ttfamily static string Unity\+Editor.\+Settings\+Management.\+Project\+User\+Settings.\+Get\+User\+Settings\+Path (\begin{DoxyParamCaption}\item[{string}]{package,  }\item[{string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Builds and returns a path for a settings file relative to the calling assembly\textquotesingle{}s package directory. This method constructs the location from the specified {\ttfamily package} and (filename) {\ttfamily name} under the {\ttfamily User\+Settings} folder. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em package} & The name of the package requesting this setting.\\
+\hline
+{\em name} & An optional name for the settings file. Default is "{}\+Settings."{}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A package-\/scoped path to the settings file inside the project\textquotesingle{}s {\ttfamily User\+Settings} folder.
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Package\+Cache/com.\+unity.\+settings-\/manager@2.\+0.\+1/\+Editor/\mbox{\hyperlink{_project_user_settings_8cs}{Project\+User\+Settings.\+cs}}\end{DoxyCompactItemize}

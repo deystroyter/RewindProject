@@ -1,0 +1,44 @@
+\chapter{Add a Custom Event node}
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-add-custom-event-node}{}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-add-custom-event-node}\index{Add a Custom Event node@{Add a Custom Event node}}
+\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-add-custom-event-node_autotoc_md1652}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-add-custom-event-node_autotoc_md1652}%
+ You can add a Custom Event node to a Script Graph to trigger specific logic after an Event occurs. For more information about custom Events, see \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-custom-events}{Custom Events}{0}.
+
+\begin{quote}
+\mbox{[}!\+NOTE\mbox{]} To use a Custom Event node, you must configure the node with the following instructions, then add a Custom Event Trigger node to your graph. For more information on how to add a Custom Event Trigger node, see \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-add-custom-event-node-trigger}{Add a Custom Event Trigger node}{0} \end{quote}
+To add a Custom Event node to a Script Graph\+:
+
+
+\begin{DoxyEnumerate}
+\item \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-open-graph-edit}{Open the Script Graph}{0} where you want to add a Custom Event node.
+\item \mbox{[}!include\doxylink{vs-open-fuzzy-finder_8md}{open-\/fuzzy-\/finder}\mbox{]}.
+\item Go to {\bfseries{Events}}.
+\item Select the {\bfseries{Custom Event}} node to add it to your graph.
+\item In the {\bfseries{Game\+Object}} field, indicated by the Game\+Object icon on the node, choose the Game\+Object where you want to create the Event. Do one of the following\+:
+\begin{DoxyItemize}
+\item Select the object picker (circle icon), and select a Game\+Object.
+\item Attach a node to the field\textquotesingle{}s data input port that outputs a Game\+Object.
+\item Leave the field as the default value of {\bfseries{This}} to use the Game\+Object where you attached your Script Graph to a Script Machine.
+\end{DoxyItemize}
+\item In the {\bfseries{Arguments}} field, enter the number of arguments you want the custom Event to receive and pass to other nodes in your graph. The default value is 0. If you enter a number greater than 0, Visual Scripting adds the corresponding number of Output ports to the Custom Event node.
+\end{DoxyEnumerate}
+
+\begin{quote}
+\mbox{[}!\+NOTE\mbox{]} Visual Scripting labels your first argument as {\ttfamily Arg. 0}. \end{quote}
+
+\begin{DoxyEnumerate}
+\item Enter a unique name for the custom Event through one of the following methods\+:
+\begin{DoxyItemize}
+\item Enter a name in the field next to the {\bfseries{Name}} input port.
+\item Attach a node that outputs a string value to the {\bfseries{Name}} input port.
+\end{DoxyItemize}
+\end{DoxyEnumerate}
+
+In the following example, a custom Event called {\bfseries{On Damage}} returns a single argument when it\textquotesingle{}s triggered in a Script Graph.
+
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-add-custom-event-node_autotoc_md1653}{}\doxysection{\texorpdfstring{Next steps}{Next steps}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-add-custom-event-node_autotoc_md1653}
+After you add a Custom Event node to your graph, \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-add-node-to-graph}{add more nodes to your graph}{0} or \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-creating-connections}{connect nodes}{0} to specify what happens after your Event triggers.
+
+Then, \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-add-custom-event-node-trigger}{add a Custom Event Trigger node}{0} to specify when to trigger the custom Event in your graph.
+
+To create more complex logic for your custom Event, you can also \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create-own-custom-event-node}{create a Custom Scripting Event node}{0}. 

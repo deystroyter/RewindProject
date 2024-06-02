@@ -1,0 +1,276 @@
+\chapter{Custom C\# node attributes reference}
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create3336f87366c0cc1e970200c966432893}{}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create3336f87366c0cc1e970200c966432893}\index{Custom C\# node attributes reference@{Custom C\# node attributes reference}}
+\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create3336f87366c0cc1e970200c966432893_autotoc_md1751}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create3336f87366c0cc1e970200c966432893_autotoc_md1751}%
+ You can add attributes to a node class and port variable definitions to customize the look of a Custom C\# node.\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create3336f87366c0cc1e970200c966432893_autotoc_md1752}{}\doxysection{\texorpdfstring{Node class attributes}{Node class attributes}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create3336f87366c0cc1e970200c966432893_autotoc_md1752}
+You can customize the titles that appear on a node, where it appears in the fuzzy finder, and its icon. Node class attributes must be placed above the node class definition in a node\textquotesingle{}s C\# script.
+
+Visual Scripting has 5 node class attributes\+:
+
+
+\begin{DoxyItemize}
+\item Unit\+Title
+\item Unit\+Short\+Title
+\item Unit\+Subtitle
+\item Unit\+Category
+\item Type\+Icon
+\end{DoxyItemize}
+
+Usually, Visual Scripting automatically applies any changes you make to a node\textquotesingle{}s class attributes after you save the C\# file.\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create3336f87366c0cc1e970200c966432893_autotoc_md1753}{}\doxysubsection{\texorpdfstring{Unit\+Title}{Unit\+Title}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create3336f87366c0cc1e970200c966432893_autotoc_md1753}
+\texorpdfstring{$<$}{<}img src="{}images/vs-\/my-\/node-\/custom-\/node-\/unit-\/title.\+png"{} alt="{}\+An image of the Graph window. The opened Script Graph has two groups that each contain a single Custom C\# node\+: a yellow Before group and a purple After group. In the Before group, the title of the Custom C\# node is "{}My Node."{} In the After group, the title of the Custom C\# node is "{}My New Title."{}"{}/\texorpdfstring{$>$}{>}
+
+You can specify a {\ttfamily \mbox{[}Unit\+Title\mbox{]}} to display a different title than the node\textquotesingle{}s class name on the node when it appears in a Script Graph, and when you view details about the node in the Graph Inspector\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \#}}
+\DoxyCodeLine{\textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\textcolor{keyword}{using\ }Unity.VisualScripting;}
+\DoxyCodeLine{\textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_unity_engine}{UnityEngine}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{[UnitTitle(\textcolor{stringliteral}{"{}My\ New\ Title"{}})]}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }MyNodeAfter\ :\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit}{Unit}}}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ ...}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+The {\ttfamily \mbox{[}Unit\+Title\mbox{]}} attribute overrides the node\textquotesingle{}s class name.\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create3336f87366c0cc1e970200c966432893_autotoc_md1754}{}\doxysubsection{\texorpdfstring{Unit\+Short\+Title}{Unit\+Short\+Title}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create3336f87366c0cc1e970200c966432893_autotoc_md1754}
+\texorpdfstring{$<$}{<}img src="{}images/vs-\/my-\/node-\/custom-\/node-\/short-\/title.\+png"{} alt="{}\+An image of the Graph window. The opened Script Graph has two groups that each contain a single Custom C\# node\+: a yellow Before group and a purple After group. In the Before group, the title of the Custom C\# node is "{}My Node."{} In the After group, the title of the Custom C\# node is "{}Short Title."{}"{}/\texorpdfstring{$>$}{>}
+
+You can specify a {\ttfamily \mbox{[}Unit\+Short\+Title\mbox{]}} to display a different title on the node when it appears in a Script Graph\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \#}}
+\DoxyCodeLine{\textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\textcolor{keyword}{using\ }Unity.VisualScripting;}
+\DoxyCodeLine{\textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_unity_engine}{UnityEngine}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{[UnitShortTitle(\textcolor{stringliteral}{"{}Short\ Title"{}})]}
+\DoxyCodeLine{[UnitTitle(\textcolor{stringliteral}{"{}My\ New\ Title"{}})]}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }MyNodeAfter\ :\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit}{Unit}}}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ ...}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+The {\ttfamily \mbox{[}Unit\+Short\+Title\mbox{]}} only appears on the node in a Script Graph. The {\ttfamily \mbox{[}Unit\+Title\mbox{]}} or node class name still displays in the Graph Inspector.\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create3336f87366c0cc1e970200c966432893_autotoc_md1755}{}\doxysubsection{\texorpdfstring{Unit\+Subtitle}{Unit\+Subtitle}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create3336f87366c0cc1e970200c966432893_autotoc_md1755}
+\texorpdfstring{$<$}{<}img src="{}images/vs-\/my-\/node-\/custom-\/node-\/subtitle.\+png"{} alt="{}\+An image of the Graph window. The opened Script Graph has two groups that each contain a single Custom C\# node\+: a yellow Before group and a purple After group. In the Before group, the Custom C\# node doesn\textquotesingle{}t have a subtitle. In the After group, the Custom C\# node has a subtitle of "{}It\textquotesingle{}s a subtitle!"{} that displays underneath the node title."{}/\texorpdfstring{$>$}{>}
+
+You can add a {\ttfamily \mbox{[}Unit\+Subtitle\mbox{]}} to add a line of text below the {\ttfamily \mbox{[}Unit\+Title\mbox{]}}, {\ttfamily \mbox{[}Unit\+Short\+Title\mbox{]}}, or node class name when a node appears in a Script Graph\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \#}}
+\DoxyCodeLine{\textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\textcolor{keyword}{using\ }Unity.VisualScripting;}
+\DoxyCodeLine{\textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_unity_engine}{UnityEngine}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{[UnitSubtitle(\textcolor{stringliteral}{"{}It's\ a\ subtitle!"{}})]}
+\DoxyCodeLine{[UnitShortTitle(\textcolor{stringliteral}{"{}Short\ Title"{}})]}
+\DoxyCodeLine{[UnitTitle(\textcolor{stringliteral}{"{}My\ New\ Title"{}})]}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }MyNodeAfter\ :\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit}{Unit}}}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ ...}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+The {\ttfamily \mbox{[}Unit\+Subtitle\mbox{]}} doesn\textquotesingle{}t appear in the Graph Inspector.\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create3336f87366c0cc1e970200c966432893_autotoc_md1756}{}\doxysubsection{\texorpdfstring{Unit\+Category}{Unit\+Category}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create3336f87366c0cc1e970200c966432893_autotoc_md1756}
+
+
+You can specify a {\ttfamily \mbox{[}Unit\+Category\mbox{]}} to tell Visual Scripting where to place the node in the fuzzy finder\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \#}}
+\DoxyCodeLine{\textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\textcolor{keyword}{using\ }Unity.VisualScripting;}
+\DoxyCodeLine{\textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_unity_engine}{UnityEngine}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{[\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit_category}{UnitCategory}}(\textcolor{stringliteral}{"{}FirstLevel/SecondLevel"{}})]}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }MyNodeAfter\ :\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit}{Unit}}}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ ...}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Replace {\ttfamily First\+Level} with the name of the top-\/level category in the fuzzy finder where you want Visual Scripting to place the node. Replace {\ttfamily Second\+Level} with the name of a subcategory. Visual Scripting creates the categories if they don\textquotesingle{}t already exist in the fuzzy finder.
+
+\begin{quote}
+\mbox{[}!\+NOTE\mbox{]} You must \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-configuration}{regenerate your Node Library}{0} for changes made to a node\textquotesingle{}s {\ttfamily \mbox{[}Unit\+Category\mbox{]}} to take effect. \end{quote}
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create3336f87366c0cc1e970200c966432893_autotoc_md1757}{}\doxysubsection{\texorpdfstring{Type\+Icon}{Type\+Icon}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create3336f87366c0cc1e970200c966432893_autotoc_md1757}
+
+
+You can use the {\ttfamily \mbox{[}Type\+Icon\mbox{]}} attribute to change the icon that appears on a node when it appears in a Script Graph\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \#}}
+\DoxyCodeLine{\textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\textcolor{keyword}{using\ }Unity.VisualScripting;}
+\DoxyCodeLine{\textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_unity_engine}{UnityEngine}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{[TypeIcon(typeof(\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_toggle_value}{ToggleValue}}))]}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }MyNodeAfter\ :\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit}{Unit}}}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ ...}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ The icon for the node changes in the Graph Inspector, too.
+
+\begin{quote}
+\mbox{[}!\+NOTE\mbox{]} You can\textquotesingle{}t point to your own custom icons from this attribute. You must use an icon from the Visual Scripting icons library, which includes all \doxylink{namespace_unity}{Unity} types. \end{quote}
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create3336f87366c0cc1e970200c966432893_autotoc_md1758}{}\doxysection{\texorpdfstring{Port attributes}{Port attributes}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create3336f87366c0cc1e970200c966432893_autotoc_md1758}
+Custom nodes have one mandatory port attribute and one optional port attribute\+: Do\+Not\+Serialize and Port\+Label\+Hidden, respectively. Port attributes must be placed above your variable declarations for each port variable in the node.
+
+Visual Scripting automatically applies any changes you make to a node\textquotesingle{}s port attributes after you save the script file.\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create3336f87366c0cc1e970200c966432893_autotoc_md1759}{}\doxysubsection{\texorpdfstring{Do\+Not\+Serialize}{Do\+Not\+Serialize}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create3336f87366c0cc1e970200c966432893_autotoc_md1759}
+{\ttfamily \mbox{[}Do\+Not\+Serialize\mbox{]}} is a mandatory attribute for all ports on custom nodes. Add this attribute to avoid serialization of data that shouldn\textquotesingle{}t be serialized\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \#}}
+\DoxyCodeLine{\textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\textcolor{keyword}{using\ }Unity.VisualScripting;}
+\DoxyCodeLine{\textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_unity_engine}{UnityEngine}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{[UnitShortTitle(\textcolor{stringliteral}{"{}Short\ Title"{}})]}
+\DoxyCodeLine{[UnitTitle(\textcolor{stringliteral}{"{}My\ New\ Title"{}})]}
+\DoxyCodeLine{[\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit_category}{UnitCategory}}(\textcolor{stringliteral}{"{}My\ Nodes"{}})]}
+\DoxyCodeLine{[UnitSubtitle(\textcolor{stringliteral}{"{}It's\ a\ subtitle!"{}})]}
+\DoxyCodeLine{[TypeIcon(typeof(Color))]}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }MyNodeAfter\ :\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit}{Unit}}}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ [DoNotSerialize]}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_control_input}{ControlInput}}\ inputTrigger;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ [DoNotSerialize]}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_control_output}{ControlOutput}}\ outputTrigger;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ [DoNotSerialize]}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_value_input}{ValueInput}}\ myValueA;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ [DoNotSerialize]}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_value_input}{ValueInput}}\ myValueB;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ [DoNotSerialize]}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_value_output}{ValueOutput}}\ result;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{string}\ resultValue;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Definition()}
+\DoxyCodeLine{\ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ ...}
+\DoxyCodeLine{\ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create3336f87366c0cc1e970200c966432893_autotoc_md1760}{}\doxysubsection{\texorpdfstring{Port\+Label\+Hidden}{Port\+Label\+Hidden}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create3336f87366c0cc1e970200c966432893_autotoc_md1760}
+
+
+You can add the {\ttfamily \mbox{[}Port\+Label\+Hidden\mbox{]}} attribute to hide the name label for any port on a node when it appears in a Script Graph\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \#}}
+\DoxyCodeLine{\textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\textcolor{keyword}{using\ }Unity.VisualScripting;}
+\DoxyCodeLine{\textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_unity_engine}{UnityEngine}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{[UnitShortTitle(\textcolor{stringliteral}{"{}Short\ Title"{}})]}
+\DoxyCodeLine{[UnitTitle(\textcolor{stringliteral}{"{}My\ New\ Title"{}})]}
+\DoxyCodeLine{[\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit_category}{UnitCategory}}(\textcolor{stringliteral}{"{}My\ Nodes"{}})]}
+\DoxyCodeLine{[UnitSubtitle(\textcolor{stringliteral}{"{}It's\ a\ subtitle!"{}})]}
+\DoxyCodeLine{[TypeIcon(typeof(Color))]}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }MyNodeAfter\ :\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit}{Unit}}}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ [DoNotSerialize]}
+\DoxyCodeLine{\ \ \ [PortLabelHidden]}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_control_input}{ControlInput}}\ inputTrigger;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ [DoNotSerialize]}
+\DoxyCodeLine{\ \ \ [PortLabelHidden]}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_control_output}{ControlOutput}}\ outputTrigger;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ [DoNotSerialize]}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_value_input}{ValueInput}}\ myValueA;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ [DoNotSerialize]}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_value_input}{ValueInput}}\ myValueB;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ [DoNotSerialize]}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_value_output}{ValueOutput}}\ result;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{string}\ resultValue;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Definition()}
+\DoxyCodeLine{\ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ ...}
+\DoxyCodeLine{\ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+The port\textquotesingle{}s label is still visible in the Graph Inspector. Use the same name in a port\textquotesingle{}s variable definition and the port\textquotesingle{}s key in the {\ttfamily Definition} method for the node\textquotesingle{}s class, as shown\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \#}}
+\DoxyCodeLine{\textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\textcolor{keyword}{using\ }Unity.VisualScripting;}
+\DoxyCodeLine{\textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_unity_engine}{UnityEngine}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }MyNode\ :\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit}{Unit}}}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ ...}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ [DoNotSerialize,\ PortLabelHidden]}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_value_input}{ValueInput}}\ myValueA;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ [DoNotSerialize,\ PortLabelHidden]}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_value_input}{ValueInput}}\ myValueB;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ ...}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Definition()}
+\DoxyCodeLine{\ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ ...}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ myValueA\ =\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_value_input}{ValueInput<string>}}(\textcolor{stringliteral}{"{}myValueA"{}},\ \textcolor{stringliteral}{"{}Hello\ "{}});}
+\DoxyCodeLine{\ \ \ \ \ \ \ myValueB\ =\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_value_input}{ValueInput<string>}}(\textcolor{stringliteral}{"{}myValueB"{}},\ String.Empty);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ ...}
+\DoxyCodeLine{\ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 

@@ -1,0 +1,102 @@
+\chapter{Setup and cleanup at build time}
+\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-setup-and-cleanup}{}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-setup-and-cleanup}\index{Setup and cleanup at build time@{Setup and cleanup at build time}}
+\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-setup-and-cleanup_autotoc_md692}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-setup-and-cleanup_autotoc_md692}%
+ In some cases, it is relevant to perform changes to \doxylink{namespace_unity}{Unity} or the file system before building the tests. In the same way, it may be necessary to clean up such changes after the test run. In response to such needs, you can incorporate the pre-\/build setup and post-\/build cleanup concepts into your tests in one of the following ways\+:
+
+
+\begin{DoxyEnumerate}
+\item Via implementation of {\ttfamily IPrebuild\+Setup} and {\ttfamily IPost\+Build\+Cleanup} interfaces by a test class.
+\item Via applying the {\ttfamily Prebuild\+Setup} attribute and {\ttfamily Post\+Build\+Cleanup} attribute on your test class, one of the tests or the test assembly, providing a class name that implements the corresponding interface as an argument (fx {\ttfamily \mbox{[}Prebuild\+Setup("{}\+My\+Test\+Scene\+Setup"{})\mbox{]}}).
+\end{DoxyEnumerate}\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-setup-and-cleanup_autotoc_md693}{}\doxysection{\texorpdfstring{Execution order}{Execution order}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-setup-and-cleanup_autotoc_md693}
+All setups run in a deterministic order one after another. The first to run are the setups defined with attributes. Then any test class implementing the interface runs, in alphabetical order inside their namespace, which is the same order as the tests run.
+
+\begin{quote}
+{\bfseries{Note}}\+: Cleanup runs right away for a standalone test run, but only after related tests run in the \doxylink{namespace_unity}{Unity} Editor. \end{quote}
+\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-setup-and-cleanup_autotoc_md694}{}\doxysection{\texorpdfstring{Prebuild\+Setup and Post\+Build\+Cleanup}{Prebuild\+Setup and Post\+Build\+Cleanup}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-setup-and-cleanup_autotoc_md694}
+Both {\ttfamily Prebuild\+Setup} and {\ttfamily Post\+Build\+Cleanup} attributes run if the respective test or test class is in the current test run. The test is included either by running all tests or setting a \href{./workflow-create-test.md\#filters}{\texttt{ filter}} that includes the test. If multiple tests reference the same pre-\/built setup or post-\/build cleanup, then it only runs once.\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-setup-and-cleanup_autotoc_md695}{}\doxysection{\texorpdfstring{IPrebuild\+Setup}{IPrebuild\+Setup}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-setup-and-cleanup_autotoc_md695}
+Implement this interface if you want to define a set of actions to run as a pre-\/build step.\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-setup-and-cleanup_autotoc_md696}{}\doxysubsection{\texorpdfstring{Public methods}{Public methods}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-setup-and-cleanup_autotoc_md696}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Syntax   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Syntax   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endhead
+{\ttfamily void Setup()}   &Implement this method to call actions automatically before the build process.   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-setup-and-cleanup_autotoc_md697}{}\doxysection{\texorpdfstring{IPost\+Build\+Cleanup}{IPost\+Build\+Cleanup}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-setup-and-cleanup_autotoc_md697}
+Implement this interface if you want to define a set of actions to execute as a post-\/build step. Cleanup runs right away for a standalone test run, but only after all the tests run within the Editor.\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-setup-and-cleanup_autotoc_md698}{}\doxysubsection{\texorpdfstring{Public methods}{Public methods}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-setup-and-cleanup_autotoc_md698}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Syntax   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Syntax   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endhead
+{\ttfamily void Cleanup()}   &Implement this method to specify actions that should run as a post-\/build cleanup step.   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-setup-and-cleanup_autotoc_md699}{}\doxysection{\texorpdfstring{Example}{Example}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-setup-and-cleanup_autotoc_md699}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \#}}
+\DoxyCodeLine{[TestFixture]}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }CreateSpriteTest\ :\ IPrebuildSetup}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ Texture2D\ m\_Texture;}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{namespace_t_m_pro_ab5662f47179bf1b81c575ecf80b24065a51f2b7b14433aa22c67d1f4fc18943cd}{Sprite}}\ m\_Sprite;}
+\DoxyCodeLine{\ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Setup()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ var\ spritePath\ =\ \textcolor{stringliteral}{"{}Assets/Resources/Circle.png"{}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ var\ ti\ =\ \mbox{\hyperlink{namespace_unity_editor}{UnityEditor}}.AssetImporter.GetAtPath(spritePath)\ as\ \mbox{\hyperlink{namespace_unity_editor}{UnityEditor}}.TextureImporter;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ ti.textureCompression\ =\ \mbox{\hyperlink{namespace_unity_editor}{UnityEditor}}.TextureImporterCompression.Uncompressed;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ ti.SaveAndReimport();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ [SetUp]}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ SetUpTest()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ m\_Texture\ =\ Resources.Load<Texture2D>(\textcolor{stringliteral}{"{}Circle"{}});}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ [Test]}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ WhenNullTextureIsPassed\_CreateShouldReturnNullSprite()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Check\ with\ Valid\ Texture.}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ LogAssert.Expect(LogType.Log,\ \textcolor{stringliteral}{"{}Circle\ Sprite\ Created"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_t_m_pro_ab5662f47179bf1b81c575ecf80b24065a51f2b7b14433aa22c67d1f4fc18943cd}{Sprite}}.Create(m\_Texture,\ \textcolor{keyword}{new}\ Rect(0,\ 0,\ m\_Texture.width,\ m\_Texture.height),\ \textcolor{keyword}{new}\ Vector2(0.5f,\ 0.5f));}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \mbox{\hyperlink{_editor_plugin_interop_8cs_a0100be52d45f14348918ea69ec09f959}{Debug}}.Log(\textcolor{stringliteral}{"{}Circle\ Sprite\ Created"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Check\ with\ NULL\ Texture.\ Should\ return\ NULL\ Sprite.}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ m\_Sprite\ =\ \mbox{\hyperlink{namespace_t_m_pro_ab5662f47179bf1b81c575ecf80b24065a51f2b7b14433aa22c67d1f4fc18943cd}{Sprite}}.Create(null,\ \textcolor{keyword}{new}\ Rect(0,\ 0,\ m\_Texture.width,\ m\_Texture.height),\ \textcolor{keyword}{new}\ Vector2(0.5f,\ 0.5f));}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ Assert.That(m\_Sprite,\ Is.Null,\ \textcolor{stringliteral}{"{}Sprite\ created\ with\ null\ texture\ should\ be\ null"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+\begin{quote}
+{\bfseries{Tip}}\+: Use {\ttfamily \#if UNITY\+\_\+\+EDITOR} if you want to access Editor only APIs, but the setup/cleanup is inside a {\bfseries{Play Mode}} assembly. \end{quote}

@@ -1,0 +1,42 @@
+\chapter{Input node}
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-input-node}{}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-input-node}\index{Input node@{Input node}}
+\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-input-node_autotoc_md1921}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-input-node_autotoc_md1921}%
+ Use an Input node to control the flow of logic and data from a Script Graph\textquotesingle{}s Subgraph node. An Input node takes data from a parent graph and makes it available to a Subgraph.
+
+
+
+For more information on Subgraphs, see \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-subgraphs-state-units}{Subgraphs and State Units}{0} and \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-subgraph-node}{Subgraph node}{0}. For more information on Script Graphs, see \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-graph-types}{Graphs}{0}.\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-input-node_autotoc_md1922}{}\doxysection{\texorpdfstring{Fuzzy finder category}{Fuzzy finder category}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-input-node_autotoc_md1922}
+The Input node is in the {\bfseries{Nesting}} category in the fuzzy finder.\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-input-node_autotoc_md1923}{}\doxysection{\texorpdfstring{Available outputs}{Available outputs}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-input-node_autotoc_md1923}
+By default, an Input node has no ports.
+
+An Input node can only have output ports. Define the number and specific data type for the output ports with the \href{vs-interface-overview.md\#the-graph-inspector}{\texttt{ Graph Inspector}}. For more information on how to define ports on a Script Graph, see \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-add-triggers-data-graph}{Add a Trigger or Data port to a Script Graph}{0}.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Port Type}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Port Type}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-2}
+\endhead
+{\bfseries{Trigger Input}}   &A control port. Make a connection to this port to tell Visual Scripting what node to run next in the graph. Visual Scripting triggers any node to this port after the matching Trigger Input port triggers on the Subgraph node in the parent Script Graph.    \\\cline{1-2}
+{\bfseries{Data Input}}   &A data port. Make a connection to this port to send a value or other data to another node in the graph. The data source is the matching Data Input port on the Subgraph node in a parent Script Graph.   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-input-node_autotoc_md1924}{}\doxysection{\texorpdfstring{Example graph usage}{Example graph usage}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-input-node_autotoc_md1924}
+In the following example, the {\bfseries{Character Move}} Subgraph uses an Input node to receive data from a parent graph. The Input node has one Trigger Input port and three Data Input ports. It uses the values from the parent graph and the values from two Input Get Axis nodes to create a new Vector 3 value that it sends back to its parent graph.
+
+
+
+The parent graph sends three values from the current Game\+Object\textquotesingle{}s Transform component to the Input node. The Subgraph reduces the number of nodes in the parent graph.
+
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-input-node_autotoc_md1925}{}\doxysection{\texorpdfstring{Related nodes}{Related nodes}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-input-node_autotoc_md1925}
+Use an Input node with the following nodes\+:
+
+
+\begin{DoxyItemize}
+\item \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-subgraph-node}{Subgraph node}{0}
+\item \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-output-node}{Output node}{0} 
+\end{DoxyItemize}

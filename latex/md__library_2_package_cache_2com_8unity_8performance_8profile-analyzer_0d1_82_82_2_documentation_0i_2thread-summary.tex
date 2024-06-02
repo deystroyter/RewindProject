@@ -1,0 +1,31 @@
+\chapter{Thread Summary}
+\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2thread-summary}{}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2thread-summary}\index{Thread Summary@{Thread Summary}}
+\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2thread-summary_autotoc_md444}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2thread-summary_autotoc_md444}%
+ The Thread Summary pane displays information about the threads in the data set. You can use the information in this pane to compare and understand the number of threads used in the data set.
+
+By default, the Profile Analyzer only displays information about the Main Thread. To add more threads to the analysis, use the {\bfseries{Thread}} button in the Filters pane. For more information, see the documentation on the \href{filtering-system.html/\#thread-window}{\texttt{ Filters pane}}.
+
+~\newline
+{\itshape The Thread Summary pane in Single View (left), and Compare View (right)}\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2thread-summary_autotoc_md445}{}\doxysection{\texorpdfstring{Statistics}{Statistics}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2thread-summary_autotoc_md445}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Statistic}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Statistic}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-2}
+\endhead
+{\bfseries{Total Count}}   &The total number of threads in the data set, or data selection. The Compare view also has a {\bfseries{Total}} column, which displays the total count for all threads across both data sets.    \\\cline{1-2}
+{\bfseries{Unique Count}}~\newline
+\texorpdfstring{$\ast$}{*}(Compare view only)\texorpdfstring{$\ast$}{*}   &The number of unique threads in each data set. A unique thread is one that is not in the other data set. The {\bfseries{Total}} column displays the total of unique threads across both data sets.    \\\cline{1-2}
+{\bfseries{Selected}}   &The number of threads selected in the data set. To add more threads use the {\bfseries{Thread}} button in the \href{filtering-system.html/\#thread-window}{\texttt{ Filters pane}}.    \\\cline{1-2}
+{\bfseries{Graph Scale}}   &Select a scale for the plot. You can choose from\+:~\newline
+ {\bfseries{Median frame time}}~\newline
+{\bfseries{Upper quartile of frame time}}{\bfseries{Max frame time}}.   \\\cline{1-2}
+\end{longtabu}
+
+
+At the bottom of the pane, there is a summary of the median run time of the current filtered threads with a box and whisker plot of them. You can use these graphs to analyze which threads \doxylink{namespace_unity}{Unity} spends the most time on. 

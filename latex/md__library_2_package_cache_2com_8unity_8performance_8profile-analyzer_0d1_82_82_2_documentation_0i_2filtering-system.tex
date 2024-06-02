@@ -1,0 +1,63 @@
+\chapter{Filters pane}
+\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2filtering-system}{}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2filtering-system}\index{Filters pane@{Filters pane}}
+\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2filtering-system_autotoc_md399}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2filtering-system_autotoc_md399}%
+ You can use the {\bfseries{Filters}} pane in the \doxysectlink{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2single-view}{Single}{0} and \doxysectlink{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2compare-view}{Compare}{0} view to reduce and filter the working data set. You can limit the data set by filters such as partial marker name match, a specific thread, or a specific stack level. As well as filtering by match, you can set the filter to exclude any markers by name. This is particularly useful to exclude markers the might distort the view, or aren\textquotesingle{}t statistically relevant.
+
+~\newline
+{\itshape Single view Filters pane (above) and Compare view Filters pane (below). Note the addition of further Depth Slice controls in the Compare view.}
+
+The pane has the following controls\+:
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Control}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Function}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Control}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Function}}    }\\\cline{1-2}
+\endhead
+{\bfseries{Name Filter}}   &Enter the name of a marker you would like to filter the data set by. Once you start typing, the Profile Analyzer automatically filters the {\bfseries{Marker details}} pane to display the matching markers. You can also right click on a marker in the {\bfseries{Marker details}} pane and select {\bfseries{Add to Include Filter}} to add it to the filter. To include a marker name with a space, surround it in quotation marks ~\newline
+~\newline
+ Choose {\bfseries{Any}} from the dropdown to match any of the terms to the markers in the list. Select {\bfseries{All}} from the dropdown to match all of the listed terms to the markers in the list.    \\\cline{1-2}
+{\bfseries{Exclude Names}}   &Enter the name of a marker you would like to exclude from the data set. Once you start typing, the Profile Analyzer automatically filters the {\bfseries{Marker details}} pane to display the matching markers. You can also right click on a marker in the {\bfseries{Marker details}} pane and select {\bfseries{Add to Exclude Filter}} to exclude it from the filter. ~\newline
+~\newline
+ Select {\bfseries{Any}} from the dropdown to match any of the terms to the markers in the list. Select {\bfseries{All}} from the dropdown to match all of the listed terms to the markers in the list.    \\\cline{1-2}
+{\bfseries{Thread}}   &Select which thread or threads to filter the data set by. Click the {\bfseries{Select}} button to open the {\bfseries{Thread}} window and filter the data set further. For more information, see the Thread window section of this page.    \\\cline{1-2}
+{\bfseries{Depth Slice}}   &Set the depth level of the \href{https://docs.unity3d.com/Manual/ProfilerCPU.html\#hierarchy}{\texttt{ Hierarchy}} to display. The {\bfseries{Marker Details/\+Comparison}} view then displays all the markers on this level only. In the {\bfseries{Compare}} view, the {\bfseries{Auto Right}} checkbox is enabled by default, which automatically aligns the depth of the two data sets. For more information, see the Depth Slice section of this page.    \\\cline{1-2}
+{\bfseries{Parent Marker}}   &Displays the parent marker the data set is filtered by. To filter by a parent marker, right click on it in the {\bfseries{Marker Details/\+Comparison}} list and then select {\bfseries{Set As Parent Marker Filter}}. For more information, see the Parent Marker section of this page.    \\\cline{1-2}
+{\bfseries{Analyze}} (Single view)~\newline
+{\bfseries{Compare}} (Compare view)   &Contains details of the number of markers and threads in the data set. {\bfseries{Note\+:}} The button is redundant, because the Profile Analyzer automatically updates the marker pane with the filters you set. However, you can hover on the button to see timings of the analysis or comparison.    \\\cline{1-2}
+{\bfseries{Analysis type}}   &Select what times the Profile Analyzer includes in its analysis, from either {\bfseries{Total}} or {\bfseries{self}}. The {\bfseries{Total}} option sets the marker times to inclusive, which means the time spent in the marker and its children is included in the filter. The {\bfseries{Self}} option sets the marker times to exclusive, which means that the the time in the marker\textquotesingle{}s children is excluded from the filter.    \\\cline{1-2}
+{\bfseries{Units}}   &Select the unit of measurement of time to display in the Profile Analyzer. Choose between {\bfseries{Milliseconds}} (default) or {\bfseries{Microseconds}}. ~\newline
+~\newline
+{\bfseries{Note\+:}} If you select {\bfseries{Microseconds}}, the Profile Analyzer displays larger timings in milliseconds.    \\\cline{1-2}
+{\bfseries{Marker Columns}}   &Select a layout for the {\bfseries{Marker Details/\+Comparison}} pane. For more information on the columns in this pane, see the documentation on \href{single-view.html\#marker-details-list}{\texttt{ Single view Marker Details list}} and \href{compare-view.html\#marker-comparison-list}{\texttt{ Compare view Marker Comparison list}}.   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2filtering-system_autotoc_md400}{}\doxysection{\texorpdfstring{Thread window}{Thread window}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2filtering-system_autotoc_md400}
+By default, the Profile Analyzer displays the markers on the main thread in the {\bfseries{Marker Details/\+Comparison}} pane. To analyze the markers on other threads, under {\bfseries{Threads}}, click the {\bfseries{Select}} button, and the Threads window opens.
+
+~\newline
+{\itshape The Thread window}
+
+To add more threads to the analysis, enable the checkboxes next to their names, then click the {\bfseries{Apply}} button. The Profile Analyzer then updates the data set. There are two pre-\/defined sets of threads\+: {\bfseries{Main Only}} and {\bfseries{Common Set}}. {\bfseries{Main Only}} selects just the Main Thread, and the {\bfseries{Common Set}} selects the Main Thread, plus the Render and Jobs threads.
+
+Click the {\bfseries{Clear}} button to clear all of the threads you\textquotesingle{}ve selected, and {\bfseries{Reset}} to reset the selection back to the previous thread set.\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2filtering-system_autotoc_md401}{}\doxysection{\texorpdfstring{Depth Slice}{Depth Slice}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2filtering-system_autotoc_md401}
+When you select a {\bfseries{Depth Slice}} level in the dropdown, it corresponds to the level of the marker within the hierarchy of the thread. You can visualize this in the Profiler window as follows\+:
+
+~\newline
+{\itshape The Profile Analyzer in the Single view with a Depth Slice of 3 selected in the Filters pane.}
+
+~\newline
+{\itshape The Profiler window with the CPU Usage module selected, in \doxylink{namespace_timeline}{Timeline} view. Note that the markers in the Marker Details list correspond to the markers in the third level of the Main Thread\textquotesingle{}s hierarchy.}
+
+In the Compare view, the Profile Analyzer automatically aligns the depth of the two data sets so that the top level markers are aligned correctly. The value of the offset is displayed in brackets after the {\bfseries{Auto Right}} checkbox.
+
+To override the automatic depth alignment, disable the {\bfseries{Auto Right}} checkbox and then manually set the depth levels for the left (blue) and right (orange) sets. This is useful if you\textquotesingle{}re comparing data sets from different versions of \doxylink{namespace_unity}{Unity}.\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2filtering-system_autotoc_md402}{}\doxysection{\texorpdfstring{Parent Marker}{Parent Marker}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2filtering-system_autotoc_md402}
+To filter the dataset by a specific marker and its children, right click on the marker in the {\bfseries{Marker Details/\+Comparison}} pane and then select {\bfseries{Set As Parent Marker Filter}}. You can visualize this in the Profiler window as follows\+:
+
+~\newline
+{\itshape The Profile Analyzer in the Single view with the data filtered by the parent marker of Behaviour\+Update.} ~\newline
+{\itshape The same frame opened in the Profiler window, with this thread highlighted. Note that the markers in the \doxylink{namespace_timeline}{Timeline} view correspond to those filtered in the Profile Analyzer.} 

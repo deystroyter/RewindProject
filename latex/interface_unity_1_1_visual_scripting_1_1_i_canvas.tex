@@ -1,0 +1,585 @@
+\doxysection{Unity.\+Visual\+Scripting.\+ICanvas Interface Reference}
+\hypertarget{interface_unity_1_1_visual_scripting_1_1_i_canvas}{}\label{interface_unity_1_1_visual_scripting_1_1_i_canvas}\index{Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}}
+Inheritance diagram for Unity.\+Visual\+Scripting.\+ICanvas\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.507463cm]{interface_unity_1_1_visual_scripting_1_1_i_canvas}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_canvas_a200ff359afbbdcd3e7cbaec62a3adba7}{Cache}} ()
+\item 
+void \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_canvas_a0edf37b24ad423427eb3b859553d8d7c}{Recollect}} ()
+\item 
+void \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_canvas_a9f6a4e2be583f01052660b97f3b8cbe1}{Cache\+Widget\+Collections}} ()
+\item 
+void \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_canvas_aaefb3c0ce2a66f4fa0a21fbd6fb04ab1}{Delete\+Selection}} ()
+\item 
+void \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_canvas_ae885455da74ac54080874156feca3d33}{Shrink\+Copy\+Group}} (Hash\+Set$<$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element}{IGraph\+Element}} $>$ copy\+Group)
+\item 
+void \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_canvas_abf3c960856837b1272039dcddab336a1}{Register\+Controls}} ()
+\item 
+void \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_canvas_aa0422bc615edc04726445ba33f333612}{Open}} ()
+\item 
+void \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_canvas_a7944eb81bf1d741385bf11d185ad5f04}{Close}} ()
+\item 
+void \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_canvas_ab3ed8765a1b447987fc87036845e2363}{Update}} ()
+\item 
+void \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_canvas_a5203cba4672cc21614dbfeca92011216}{Before\+Frame}} ()
+\item 
+void \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_canvas_aa3ebf3029aee6e268cbed6a282ca1bf2}{On\+GUI}} ()
+\item 
+void \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_canvas_a5e7f29e2875462d677e65ffe9a619580}{Update\+Viewport}} ()
+\item 
+void \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_canvas_a1da46762db73b63e08169ba79b636989}{View\+Elements}} (IEnumerable$<$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element}{IGraph\+Element}} $>$ elements)
+\item 
+bool \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_canvas_a3ff0afea96ca25e19ae0b397a11bacba}{Is\+Visible}} (\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_widget}{IWidget}} widget)
+\item 
+void \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_canvas_a78300e657e405a784d0e5600bb08e263}{Cache\+Widget\+Positions}} ()
+\item 
+void \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_canvas_a8a0cd5f43505a807401db54723bfec16}{Begin\+Drag}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_event_wrapper}{Event\+Wrapper}} e)
+\item 
+void \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_canvas_a268d2251b520b75971737c2417bba8cb}{Drag}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_event_wrapper}{Event\+Wrapper}} e)
+\item 
+void \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_canvas_a7f2496c4e629ea992af780c18e29c4c1}{End\+Drag}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_event_wrapper}{Event\+Wrapper}} e)
+\item 
+void \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_canvas_ad4a27919f2941996408b6579c192182c}{Align}} (\mbox{\hyperlink{namespace_unity_1_1_visual_scripting_ab81e060157d5864d06d9dcf3489a73c3}{Align\+Operation}} operation)
+\item 
+void \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_canvas_abb9fff391424c8cece686dec3f0eb888}{Distribute}} (\mbox{\hyperlink{namespace_unity_1_1_visual_scripting_ae06faf6dfa51936e141de85d76d69864}{Distribute\+Operation}} operation)
+\item 
+void \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_canvas_aa9a00a08ced24da11503994177c78b9c}{On\+Toolbar\+GUI}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_drag_and_drop_handler}{Unity.\+Visual\+Scripting.\+IDrag\+And\+Drop\+Handler}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_drag_and_drop_handler_a37531e8e76b40beb8847f214e43672d3}{Accepts\+Drag\+And\+Drop}} ()
+\item 
+void \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_drag_and_drop_handler_aad1245913814ee5e62f8d4d1366918c7}{Perform\+Drag\+And\+Drop}} ()
+\item 
+void \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_drag_and_drop_handler_a219761a462381b749952825ce7ed10dc}{Update\+Drag\+And\+Drop}} ()
+\item 
+void \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_drag_and_drop_handler_a45a921e85e8bf1bdf5361e0c5fdbe525}{Draw\+Drag\+And\+Drop\+Preview}} ()
+\item 
+void \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_drag_and_drop_handler_a7523846d8164b33df0c7acc4e9f6fb13}{Exit\+Drag\+And\+Drop}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_canvas_window}{ICanvas\+Window}} \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_canvas_a87299a3891feaecdb266f69920c4ef26}{window}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph}{IGraph}} \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_canvas_ab3370a45f61b56613a20ec6ca10761f9}{graph}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_widget_provider}{Widget\+Provider}} \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_canvas_aecdc60d870c67a918e11db3aa63b37a2}{widget\+Provider}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_selection}{Graph\+Selection}} \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_canvas_a12fe439e814774371d7a8f7b4c5876a1}{selection}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+IEnumerable$<$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_widget}{IWidget}} $>$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_canvas_ac0ba375d28ffc9db1cb1d84272fa783f}{widgets}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_widget}{IWidget}} \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_canvas_aa58de4ad589b471a1dac13f3ee530f27}{hovered\+Widget}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+float \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_canvas_a03a0bbbaf9d0547b2709767976403f5f}{zoom}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Vector2 \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_canvas_a522ce73bf2e0b295288af2d69eb1d491}{pan}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Rect \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_canvas_afb68dadda7474c561dc4f48635a8430c}{viewport}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+Vector2 \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_canvas_a024490b9000f377f7206cce2230ced6d}{mouse\+Position}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_canvas_a69d73ac7853692c6413c7d6864cab29c}{is\+Mouse\+Over}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_canvas_a50ecd3af968f184bccf50a83004ab125}{is\+Mouse\+Over\+Background}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_canvas_a180db0b63bdd873261dea26a19a72981}{is\+Lassoing}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Rect \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_canvas_a9f5224a297276bba19248c937dd143ac}{lasso\+Area}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_canvas_a78fb58709786e996a0966ab6465c4449}{is\+Selecting}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Rect \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_canvas_ac25634abecab577d832304e3797e2242}{selection\+Area}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_canvas_a797102f70f733455d56e3583d8e6be05}{is\+Grouping}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Rect \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_canvas_aa531aaf949f1aef2f2eaeec6c0b07a3f}{group\+Area}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_canvas_a9d0486b9a7cb800d486c01ee5013ff66}{is\+Dragging}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+float \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_canvas_a132574ff4bba58881f77fa5c6de1f9a7}{frame\+Delta\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+float \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_canvas_a8c918cd0c3e2940d2b9e1fe7d779dbb8}{event\+Delta\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+float \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_canvas_a354f8b79f3759e5a2c65270c0aadc8ae}{repaint\+Delta\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Queue$<$ Action $>$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_canvas_a02d1770485d96c1fb12fe5d998253cf5}{delayed\+Calls}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_drag_and_drop_handler}{Unity.\+Visual\+Scripting.\+IDrag\+And\+Drop\+Handler}}}
+\begin{DoxyCompactItemize}
+\item 
+Drag\+And\+Drop\+Visual\+Mode \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_drag_and_drop_handler_a2aafd8cac85ada9b52e5d1b04b8e77fe}{drag\+And\+Drop\+Visual\+Mode}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+Action \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_canvas_ac04ef55d80c7fa3f2cddb2943dd4c3aa}{delay\+Call}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_canvas_ad4a27919f2941996408b6579c192182c}\label{interface_unity_1_1_visual_scripting_1_1_i_canvas_ad4a27919f2941996408b6579c192182c} 
+\index{Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}!Align@{Align}}
+\index{Align@{Align}!Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}}
+\doxysubsubsection{\texorpdfstring{Align()}{Align()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+ICanvas.\+Align (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_unity_1_1_visual_scripting_ab81e060157d5864d06d9dcf3489a73c3}{Align\+Operation}}}]{operation }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas_a9e3e1ebb208ea3d09876f3f5e05eb348}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ TGraph $>$}}.
+
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_canvas_a5203cba4672cc21614dbfeca92011216}\label{interface_unity_1_1_visual_scripting_1_1_i_canvas_a5203cba4672cc21614dbfeca92011216} 
+\index{Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}!BeforeFrame@{BeforeFrame}}
+\index{BeforeFrame@{BeforeFrame}!Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}}
+\doxysubsubsection{\texorpdfstring{BeforeFrame()}{BeforeFrame()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+ICanvas.\+Before\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas_a6afbbe1a2dcd506f4982d85b0f1f06f5}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ TGraph $>$}}.
+
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_canvas_a8a0cd5f43505a807401db54723bfec16}\label{interface_unity_1_1_visual_scripting_1_1_i_canvas_a8a0cd5f43505a807401db54723bfec16} 
+\index{Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}!BeginDrag@{BeginDrag}}
+\index{BeginDrag@{BeginDrag}!Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}}
+\doxysubsubsection{\texorpdfstring{BeginDrag()}{BeginDrag()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+ICanvas.\+Begin\+Drag (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_event_wrapper}{Event\+Wrapper}}}]{e }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas_a520960c35db227425995d9550918b22d}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ TGraph $>$}}.
+
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_canvas_a200ff359afbbdcd3e7cbaec62a3adba7}\label{interface_unity_1_1_visual_scripting_1_1_i_canvas_a200ff359afbbdcd3e7cbaec62a3adba7} 
+\index{Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}!Cache@{Cache}}
+\index{Cache@{Cache}!Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}}
+\doxysubsubsection{\texorpdfstring{Cache()}{Cache()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+ICanvas.\+Cache (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas_ae76d5461ae8187897ccb4516a5278b8c}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ TGraph $>$}}.
+
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_canvas_a9f6a4e2be583f01052660b97f3b8cbe1}\label{interface_unity_1_1_visual_scripting_1_1_i_canvas_a9f6a4e2be583f01052660b97f3b8cbe1} 
+\index{Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}!CacheWidgetCollections@{CacheWidgetCollections}}
+\index{CacheWidgetCollections@{CacheWidgetCollections}!Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}}
+\doxysubsubsection{\texorpdfstring{CacheWidgetCollections()}{CacheWidgetCollections()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+ICanvas.\+Cache\+Widget\+Collections (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas_aa8fb17bac25439dfa4022f9b3b3f4ce1}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ TGraph $>$}}.
+
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_canvas_a78300e657e405a784d0e5600bb08e263}\label{interface_unity_1_1_visual_scripting_1_1_i_canvas_a78300e657e405a784d0e5600bb08e263} 
+\index{Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}!CacheWidgetPositions@{CacheWidgetPositions}}
+\index{CacheWidgetPositions@{CacheWidgetPositions}!Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}}
+\doxysubsubsection{\texorpdfstring{CacheWidgetPositions()}{CacheWidgetPositions()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+ICanvas.\+Cache\+Widget\+Positions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas_af42c065c735495be14836802e8e6b059}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ TGraph $>$}}.
+
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_canvas_a7944eb81bf1d741385bf11d185ad5f04}\label{interface_unity_1_1_visual_scripting_1_1_i_canvas_a7944eb81bf1d741385bf11d185ad5f04} 
+\index{Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}!Close@{Close}}
+\index{Close@{Close}!Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}}
+\doxysubsubsection{\texorpdfstring{Close()}{Close()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+ICanvas.\+Close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas_a02b4d9866eecb60614b93f2fe49875bc}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ TGraph $>$}}.
+
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_canvas_aaefb3c0ce2a66f4fa0a21fbd6fb04ab1}\label{interface_unity_1_1_visual_scripting_1_1_i_canvas_aaefb3c0ce2a66f4fa0a21fbd6fb04ab1} 
+\index{Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}!DeleteSelection@{DeleteSelection}}
+\index{DeleteSelection@{DeleteSelection}!Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}}
+\doxysubsubsection{\texorpdfstring{DeleteSelection()}{DeleteSelection()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+ICanvas.\+Delete\+Selection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas_a7e74bd4aa14a856793e6c05cacd2f8e6}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ TGraph $>$}}.
+
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_canvas_abb9fff391424c8cece686dec3f0eb888}\label{interface_unity_1_1_visual_scripting_1_1_i_canvas_abb9fff391424c8cece686dec3f0eb888} 
+\index{Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}!Distribute@{Distribute}}
+\index{Distribute@{Distribute}!Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}}
+\doxysubsubsection{\texorpdfstring{Distribute()}{Distribute()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+ICanvas.\+Distribute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_unity_1_1_visual_scripting_ae06faf6dfa51936e141de85d76d69864}{Distribute\+Operation}}}]{operation }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas_a24d66065901891663bd84d8604923dce}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ TGraph $>$}}.
+
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_canvas_a268d2251b520b75971737c2417bba8cb}\label{interface_unity_1_1_visual_scripting_1_1_i_canvas_a268d2251b520b75971737c2417bba8cb} 
+\index{Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}!Drag@{Drag}}
+\index{Drag@{Drag}!Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}}
+\doxysubsubsection{\texorpdfstring{Drag()}{Drag()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+ICanvas.\+Drag (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_event_wrapper}{Event\+Wrapper}}}]{e }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas_a7f1cea07bf10ffd0246ab77d44529559}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ TGraph $>$}}.
+
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_canvas_a7f2496c4e629ea992af780c18e29c4c1}\label{interface_unity_1_1_visual_scripting_1_1_i_canvas_a7f2496c4e629ea992af780c18e29c4c1} 
+\index{Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}!EndDrag@{EndDrag}}
+\index{EndDrag@{EndDrag}!Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}}
+\doxysubsubsection{\texorpdfstring{EndDrag()}{EndDrag()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+ICanvas.\+End\+Drag (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_event_wrapper}{Event\+Wrapper}}}]{e }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas_a2312d6af5ae9962ebd90255813531285}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ TGraph $>$}}.
+
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_canvas_a3ff0afea96ca25e19ae0b397a11bacba}\label{interface_unity_1_1_visual_scripting_1_1_i_canvas_a3ff0afea96ca25e19ae0b397a11bacba} 
+\index{Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}!IsVisible@{IsVisible}}
+\index{IsVisible@{IsVisible}!Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}}
+\doxysubsubsection{\texorpdfstring{IsVisible()}{IsVisible()}}
+{\footnotesize\ttfamily bool Unity.\+Visual\+Scripting.\+ICanvas.\+Is\+Visible (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_widget}{IWidget}}}]{widget }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas_aa1d669903e1da13ac93fd7f4afbcb9ff}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ TGraph $>$}}.
+
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_canvas_aa3ebf3029aee6e268cbed6a282ca1bf2}\label{interface_unity_1_1_visual_scripting_1_1_i_canvas_aa3ebf3029aee6e268cbed6a282ca1bf2} 
+\index{Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}!OnGUI@{OnGUI}}
+\index{OnGUI@{OnGUI}!Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}}
+\doxysubsubsection{\texorpdfstring{OnGUI()}{OnGUI()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+ICanvas.\+On\+GUI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas_a871d626b87081f57b0260c822a110878}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ TGraph $>$}}.
+
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_canvas_aa9a00a08ced24da11503994177c78b9c}\label{interface_unity_1_1_visual_scripting_1_1_i_canvas_aa9a00a08ced24da11503994177c78b9c} 
+\index{Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}!OnToolbarGUI@{OnToolbarGUI}}
+\index{OnToolbarGUI@{OnToolbarGUI}!Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}}
+\doxysubsubsection{\texorpdfstring{OnToolbarGUI()}{OnToolbarGUI()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+ICanvas.\+On\+Toolbar\+GUI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas_abcc2969d9f22be67966d19afe9ab6deb}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ TGraph $>$}}.
+
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_canvas_aa0422bc615edc04726445ba33f333612}\label{interface_unity_1_1_visual_scripting_1_1_i_canvas_aa0422bc615edc04726445ba33f333612} 
+\index{Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}!Open@{Open}}
+\index{Open@{Open}!Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}}
+\doxysubsubsection{\texorpdfstring{Open()}{Open()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+ICanvas.\+Open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas_a24f5a56e9abe0249c663bac2a2af4ad8}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ TGraph $>$}}.
+
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_canvas_a0edf37b24ad423427eb3b859553d8d7c}\label{interface_unity_1_1_visual_scripting_1_1_i_canvas_a0edf37b24ad423427eb3b859553d8d7c} 
+\index{Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}!Recollect@{Recollect}}
+\index{Recollect@{Recollect}!Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}}
+\doxysubsubsection{\texorpdfstring{Recollect()}{Recollect()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+ICanvas.\+Recollect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas_aaa13717634ea5539b53658bf89f47c9c}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ TGraph $>$}}.
+
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_canvas_abf3c960856837b1272039dcddab336a1}\label{interface_unity_1_1_visual_scripting_1_1_i_canvas_abf3c960856837b1272039dcddab336a1} 
+\index{Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}!RegisterControls@{RegisterControls}}
+\index{RegisterControls@{RegisterControls}!Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}}
+\doxysubsubsection{\texorpdfstring{RegisterControls()}{RegisterControls()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+ICanvas.\+Register\+Controls (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas_a6dfafc971a70b39ed9030bd5f2814b3a}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ TGraph $>$}}.
+
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_canvas_ae885455da74ac54080874156feca3d33}\label{interface_unity_1_1_visual_scripting_1_1_i_canvas_ae885455da74ac54080874156feca3d33} 
+\index{Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}!ShrinkCopyGroup@{ShrinkCopyGroup}}
+\index{ShrinkCopyGroup@{ShrinkCopyGroup}!Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}}
+\doxysubsubsection{\texorpdfstring{ShrinkCopyGroup()}{ShrinkCopyGroup()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+ICanvas.\+Shrink\+Copy\+Group (\begin{DoxyParamCaption}\item[{Hash\+Set$<$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element}{IGraph\+Element}} $>$}]{copy\+Group }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas_a528965fce43a662934e4bc627f3f84b2}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ TGraph $>$}}.
+
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_canvas_ab3ed8765a1b447987fc87036845e2363}\label{interface_unity_1_1_visual_scripting_1_1_i_canvas_ab3ed8765a1b447987fc87036845e2363} 
+\index{Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}!Update@{Update}}
+\index{Update@{Update}!Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+ICanvas.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas_a3a1d497377f455eec9f4143c231051e9}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ TGraph $>$}}.
+
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_canvas_a5e7f29e2875462d677e65ffe9a619580}\label{interface_unity_1_1_visual_scripting_1_1_i_canvas_a5e7f29e2875462d677e65ffe9a619580} 
+\index{Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}!UpdateViewport@{UpdateViewport}}
+\index{UpdateViewport@{UpdateViewport}!Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}}
+\doxysubsubsection{\texorpdfstring{UpdateViewport()}{UpdateViewport()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+ICanvas.\+Update\+Viewport (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas_a247bba546a8fe9ce62c35670fa76b127}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ TGraph $>$}}.
+
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_canvas_a1da46762db73b63e08169ba79b636989}\label{interface_unity_1_1_visual_scripting_1_1_i_canvas_a1da46762db73b63e08169ba79b636989} 
+\index{Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}!ViewElements@{ViewElements}}
+\index{ViewElements@{ViewElements}!Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}}
+\doxysubsubsection{\texorpdfstring{ViewElements()}{ViewElements()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+ICanvas.\+View\+Elements (\begin{DoxyParamCaption}\item[{IEnumerable$<$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element}{IGraph\+Element}} $>$}]{elements }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas_a06220f8abbd05833ce4f2f7ffd32d5bb}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ TGraph $>$}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_canvas_a02d1770485d96c1fb12fe5d998253cf5}\label{interface_unity_1_1_visual_scripting_1_1_i_canvas_a02d1770485d96c1fb12fe5d998253cf5} 
+\index{Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}!delayedCalls@{delayedCalls}}
+\index{delayedCalls@{delayedCalls}!Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}}
+\doxysubsubsection{\texorpdfstring{delayedCalls}{delayedCalls}}
+{\footnotesize\ttfamily Queue$<$Action$>$ Unity.\+Visual\+Scripting.\+ICanvas.\+delayed\+Calls\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas_a4e32aab98ba56abea4cc47b3fda6a99c}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ TGraph $>$}}.
+
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_canvas_a8c918cd0c3e2940d2b9e1fe7d779dbb8}\label{interface_unity_1_1_visual_scripting_1_1_i_canvas_a8c918cd0c3e2940d2b9e1fe7d779dbb8} 
+\index{Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}!eventDeltaTime@{eventDeltaTime}}
+\index{eventDeltaTime@{eventDeltaTime}!Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}}
+\doxysubsubsection{\texorpdfstring{eventDeltaTime}{eventDeltaTime}}
+{\footnotesize\ttfamily float Unity.\+Visual\+Scripting.\+ICanvas.\+event\+Delta\+Time\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas_a2b1c3d2dd5246e86a36f0c95d4a3c0cb}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ TGraph $>$}}.
+
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_canvas_a132574ff4bba58881f77fa5c6de1f9a7}\label{interface_unity_1_1_visual_scripting_1_1_i_canvas_a132574ff4bba58881f77fa5c6de1f9a7} 
+\index{Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}!frameDeltaTime@{frameDeltaTime}}
+\index{frameDeltaTime@{frameDeltaTime}!Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}}
+\doxysubsubsection{\texorpdfstring{frameDeltaTime}{frameDeltaTime}}
+{\footnotesize\ttfamily float Unity.\+Visual\+Scripting.\+ICanvas.\+frame\+Delta\+Time\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas_a24242fa0642d37605885c6682c776809}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ TGraph $>$}}.
+
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_canvas_ab3370a45f61b56613a20ec6ca10761f9}\label{interface_unity_1_1_visual_scripting_1_1_i_canvas_ab3370a45f61b56613a20ec6ca10761f9} 
+\index{Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}!graph@{graph}}
+\index{graph@{graph}!Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}}
+\doxysubsubsection{\texorpdfstring{graph}{graph}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph}{IGraph}} Unity.\+Visual\+Scripting.\+ICanvas.\+graph\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas_a390009561b0454dbd41b8b1535ecb619}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ TGraph $>$}}.
+
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_canvas_aa531aaf949f1aef2f2eaeec6c0b07a3f}\label{interface_unity_1_1_visual_scripting_1_1_i_canvas_aa531aaf949f1aef2f2eaeec6c0b07a3f} 
+\index{Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}!groupArea@{groupArea}}
+\index{groupArea@{groupArea}!Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}}
+\doxysubsubsection{\texorpdfstring{groupArea}{groupArea}}
+{\footnotesize\ttfamily Rect Unity.\+Visual\+Scripting.\+ICanvas.\+group\+Area\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas_a471e7a53e7f71551a61179f6a1aaad55}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ TGraph $>$}}.
+
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_canvas_aa58de4ad589b471a1dac13f3ee530f27}\label{interface_unity_1_1_visual_scripting_1_1_i_canvas_aa58de4ad589b471a1dac13f3ee530f27} 
+\index{Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}!hoveredWidget@{hoveredWidget}}
+\index{hoveredWidget@{hoveredWidget}!Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}}
+\doxysubsubsection{\texorpdfstring{hoveredWidget}{hoveredWidget}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_widget}{IWidget}} Unity.\+Visual\+Scripting.\+ICanvas.\+hovered\+Widget\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas_ab16be2c96d141f1cfc2a87b514b927bd}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ TGraph $>$}}.
+
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_canvas_a9d0486b9a7cb800d486c01ee5013ff66}\label{interface_unity_1_1_visual_scripting_1_1_i_canvas_a9d0486b9a7cb800d486c01ee5013ff66} 
+\index{Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}!isDragging@{isDragging}}
+\index{isDragging@{isDragging}!Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}}
+\doxysubsubsection{\texorpdfstring{isDragging}{isDragging}}
+{\footnotesize\ttfamily bool Unity.\+Visual\+Scripting.\+ICanvas.\+is\+Dragging\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas_acc459668fc9d6957338315a37db73ac9}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ TGraph $>$}}.
+
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_canvas_a797102f70f733455d56e3583d8e6be05}\label{interface_unity_1_1_visual_scripting_1_1_i_canvas_a797102f70f733455d56e3583d8e6be05} 
+\index{Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}!isGrouping@{isGrouping}}
+\index{isGrouping@{isGrouping}!Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}}
+\doxysubsubsection{\texorpdfstring{isGrouping}{isGrouping}}
+{\footnotesize\ttfamily bool Unity.\+Visual\+Scripting.\+ICanvas.\+is\+Grouping\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas_a0393dbb9d425dbdc06651d56e7123d08}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ TGraph $>$}}.
+
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_canvas_a180db0b63bdd873261dea26a19a72981}\label{interface_unity_1_1_visual_scripting_1_1_i_canvas_a180db0b63bdd873261dea26a19a72981} 
+\index{Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}!isLassoing@{isLassoing}}
+\index{isLassoing@{isLassoing}!Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}}
+\doxysubsubsection{\texorpdfstring{isLassoing}{isLassoing}}
+{\footnotesize\ttfamily bool Unity.\+Visual\+Scripting.\+ICanvas.\+is\+Lassoing\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas_a2d25ab132652282b3217d3a57e9a4204}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ TGraph $>$}}.
+
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_canvas_a69d73ac7853692c6413c7d6864cab29c}\label{interface_unity_1_1_visual_scripting_1_1_i_canvas_a69d73ac7853692c6413c7d6864cab29c} 
+\index{Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}!isMouseOver@{isMouseOver}}
+\index{isMouseOver@{isMouseOver}!Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}}
+\doxysubsubsection{\texorpdfstring{isMouseOver}{isMouseOver}}
+{\footnotesize\ttfamily bool Unity.\+Visual\+Scripting.\+ICanvas.\+is\+Mouse\+Over\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas_abcf0da7edd62b4875bec1dd8fca45fb3}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ TGraph $>$}}.
+
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_canvas_a50ecd3af968f184bccf50a83004ab125}\label{interface_unity_1_1_visual_scripting_1_1_i_canvas_a50ecd3af968f184bccf50a83004ab125} 
+\index{Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}!isMouseOverBackground@{isMouseOverBackground}}
+\index{isMouseOverBackground@{isMouseOverBackground}!Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}}
+\doxysubsubsection{\texorpdfstring{isMouseOverBackground}{isMouseOverBackground}}
+{\footnotesize\ttfamily bool Unity.\+Visual\+Scripting.\+ICanvas.\+is\+Mouse\+Over\+Background\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas_ab539e63aab8bdb4be77e80cc9b1e34d7}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ TGraph $>$}}.
+
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_canvas_a78fb58709786e996a0966ab6465c4449}\label{interface_unity_1_1_visual_scripting_1_1_i_canvas_a78fb58709786e996a0966ab6465c4449} 
+\index{Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}!isSelecting@{isSelecting}}
+\index{isSelecting@{isSelecting}!Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}}
+\doxysubsubsection{\texorpdfstring{isSelecting}{isSelecting}}
+{\footnotesize\ttfamily bool Unity.\+Visual\+Scripting.\+ICanvas.\+is\+Selecting\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas_abd1bebe0ecd2f602133870e8e42b06f3}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ TGraph $>$}}.
+
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_canvas_a9f5224a297276bba19248c937dd143ac}\label{interface_unity_1_1_visual_scripting_1_1_i_canvas_a9f5224a297276bba19248c937dd143ac} 
+\index{Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}!lassoArea@{lassoArea}}
+\index{lassoArea@{lassoArea}!Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}}
+\doxysubsubsection{\texorpdfstring{lassoArea}{lassoArea}}
+{\footnotesize\ttfamily Rect Unity.\+Visual\+Scripting.\+ICanvas.\+lasso\+Area\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas_a97c05ceaef7747e0a93785c7d90c2ea5}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ TGraph $>$}}.
+
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_canvas_a024490b9000f377f7206cce2230ced6d}\label{interface_unity_1_1_visual_scripting_1_1_i_canvas_a024490b9000f377f7206cce2230ced6d} 
+\index{Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}!mousePosition@{mousePosition}}
+\index{mousePosition@{mousePosition}!Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}}
+\doxysubsubsection{\texorpdfstring{mousePosition}{mousePosition}}
+{\footnotesize\ttfamily Vector2 Unity.\+Visual\+Scripting.\+ICanvas.\+mouse\+Position\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas_aa0b63862dfc4eec78dde9feb7675b2ad}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ TGraph $>$}}.
+
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_canvas_a522ce73bf2e0b295288af2d69eb1d491}\label{interface_unity_1_1_visual_scripting_1_1_i_canvas_a522ce73bf2e0b295288af2d69eb1d491} 
+\index{Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}!pan@{pan}}
+\index{pan@{pan}!Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}}
+\doxysubsubsection{\texorpdfstring{pan}{pan}}
+{\footnotesize\ttfamily Vector2 Unity.\+Visual\+Scripting.\+ICanvas.\+pan\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas_ae559093e3a13e2c4c1ab0f85022d4734}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ TGraph $>$}}.
+
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_canvas_a354f8b79f3759e5a2c65270c0aadc8ae}\label{interface_unity_1_1_visual_scripting_1_1_i_canvas_a354f8b79f3759e5a2c65270c0aadc8ae} 
+\index{Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}!repaintDeltaTime@{repaintDeltaTime}}
+\index{repaintDeltaTime@{repaintDeltaTime}!Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}}
+\doxysubsubsection{\texorpdfstring{repaintDeltaTime}{repaintDeltaTime}}
+{\footnotesize\ttfamily float Unity.\+Visual\+Scripting.\+ICanvas.\+repaint\+Delta\+Time\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas_a1480e4babdaeb63ffd4ff9094e57d610}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ TGraph $>$}}.
+
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_canvas_a12fe439e814774371d7a8f7b4c5876a1}\label{interface_unity_1_1_visual_scripting_1_1_i_canvas_a12fe439e814774371d7a8f7b4c5876a1} 
+\index{Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}!selection@{selection}}
+\index{selection@{selection}!Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}}
+\doxysubsubsection{\texorpdfstring{selection}{selection}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_selection}{Graph\+Selection}} Unity.\+Visual\+Scripting.\+ICanvas.\+selection\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas_a035c676a52773b3874c77b20ea9f9751}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ TGraph $>$}}.
+
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_canvas_ac25634abecab577d832304e3797e2242}\label{interface_unity_1_1_visual_scripting_1_1_i_canvas_ac25634abecab577d832304e3797e2242} 
+\index{Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}!selectionArea@{selectionArea}}
+\index{selectionArea@{selectionArea}!Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}}
+\doxysubsubsection{\texorpdfstring{selectionArea}{selectionArea}}
+{\footnotesize\ttfamily Rect Unity.\+Visual\+Scripting.\+ICanvas.\+selection\+Area\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas_a5ab54152c242fd2a2eabd4f851d4dd70}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ TGraph $>$}}.
+
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_canvas_afb68dadda7474c561dc4f48635a8430c}\label{interface_unity_1_1_visual_scripting_1_1_i_canvas_afb68dadda7474c561dc4f48635a8430c} 
+\index{Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}!viewport@{viewport}}
+\index{viewport@{viewport}!Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}}
+\doxysubsubsection{\texorpdfstring{viewport}{viewport}}
+{\footnotesize\ttfamily Rect Unity.\+Visual\+Scripting.\+ICanvas.\+viewport\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas_a9def90f0472ff7ff9c85862b5cfd4e1c}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ TGraph $>$}}.
+
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_canvas_aecdc60d870c67a918e11db3aa63b37a2}\label{interface_unity_1_1_visual_scripting_1_1_i_canvas_aecdc60d870c67a918e11db3aa63b37a2} 
+\index{Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}!widgetProvider@{widgetProvider}}
+\index{widgetProvider@{widgetProvider}!Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}}
+\doxysubsubsection{\texorpdfstring{widgetProvider}{widgetProvider}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_widget_provider}{Widget\+Provider}} Unity.\+Visual\+Scripting.\+ICanvas.\+widget\+Provider\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas_ae1e0fefb157f1b04918f4586d927c8bd}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ TGraph $>$}}.
+
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_canvas_ac0ba375d28ffc9db1cb1d84272fa783f}\label{interface_unity_1_1_visual_scripting_1_1_i_canvas_ac0ba375d28ffc9db1cb1d84272fa783f} 
+\index{Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}!widgets@{widgets}}
+\index{widgets@{widgets}!Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}}
+\doxysubsubsection{\texorpdfstring{widgets}{widgets}}
+{\footnotesize\ttfamily IEnumerable$<$\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_widget}{IWidget}}$>$ Unity.\+Visual\+Scripting.\+ICanvas.\+widgets\hspace{0.3cm}{\ttfamily [get]}}
+
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_canvas_a87299a3891feaecdb266f69920c4ef26}\label{interface_unity_1_1_visual_scripting_1_1_i_canvas_a87299a3891feaecdb266f69920c4ef26} 
+\index{Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}!window@{window}}
+\index{window@{window}!Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}}
+\doxysubsubsection{\texorpdfstring{window}{window}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_canvas_window}{ICanvas\+Window}} Unity.\+Visual\+Scripting.\+ICanvas.\+window\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas_af1db9e8e7713cc99e797a3b6813a040c}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ TGraph $>$}}.
+
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_canvas_a03a0bbbaf9d0547b2709767976403f5f}\label{interface_unity_1_1_visual_scripting_1_1_i_canvas_a03a0bbbaf9d0547b2709767976403f5f} 
+\index{Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}!zoom@{zoom}}
+\index{zoom@{zoom}!Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}}
+\doxysubsubsection{\texorpdfstring{zoom}{zoom}}
+{\footnotesize\ttfamily float Unity.\+Visual\+Scripting.\+ICanvas.\+zoom\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas_a3901456a664d07c6923b341fe37c5015}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ TGraph $>$}}.
+
+
+
+\doxysubsection{Event Documentation}
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_canvas_ac04ef55d80c7fa3f2cddb2943dd4c3aa}\label{interface_unity_1_1_visual_scripting_1_1_i_canvas_ac04ef55d80c7fa3f2cddb2943dd4c3aa} 
+\index{Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}!delayCall@{delayCall}}
+\index{delayCall@{delayCall}!Unity.VisualScripting.ICanvas@{Unity.VisualScripting.ICanvas}}
+\doxysubsubsection{\texorpdfstring{delayCall}{delayCall}}
+{\footnotesize\ttfamily Action Unity.\+Visual\+Scripting.\+ICanvas.\+delay\+Call}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_visual_scripting_canvas_a2754c3bbd71417132e9fc6443615dff5}{Unity.\+Visual\+Scripting.\+Visual\+Scripting\+Canvas$<$ TGraph $>$}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Package\+Cache/com.\+unity.\+visualscripting@1.\+9.\+2/\+Editor/\+Visual\+Scripting.\+Core/\+Canvases/\mbox{\hyperlink{_i_canvas_8cs}{ICanvas.\+cs}}\end{DoxyCompactItemize}

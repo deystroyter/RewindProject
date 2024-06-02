@@ -1,0 +1,231 @@
+\doxysection{Unity\+Editor.\+Timeline.\+Timeline\+Item\+GUI Class Reference}
+\hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i}{}\label{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i}\index{UnityEditor.Timeline.TimelineItemGUI@{UnityEditor.Timeline.TimelineItemGUI}}
+Inheritance diagram for Unity\+Editor.\+Timeline.\+Timeline\+Item\+GUI\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.647754cm]{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_a244baf678616743d654fe1b9026aff45}{Draw}} (Rect \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_a3a673d30e1636ba3306220babfdb7cff}{rect}}, bool rect\+Changed, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_window_state}{Window\+State}} state)
+\item 
+Rect \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_ad6b4083fc947537e513da43c2a14796d}{Rect\+To\+Timeline}} (Rect track\+Rect, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_window_state}{Window\+State}} state)
+\item 
+virtual void \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_a4b36ea46153feea16a9618928eaad990}{Select}} ()
+\item 
+virtual bool \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_addab9624be4f66866bc7a987ddf8b732}{Is\+Selected}} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_ab64614d2ba64c05cb96f52c857c5a58f}{Deselect}} ()
+\item 
+virtual bool \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_af9988204667f4cbd72a56ac384576e09}{Can\+Select}} (Event evt)
+\item 
+virtual void \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_ab5a02226f7343c20794ea9a7d487639c}{Start\+Drag}} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_ade42b94b8815df8bccf1764262d11ea4}{Stop\+Drag}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_selectable}{Unity\+Editor.\+Timeline.\+ISelectable}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_selectable_a9023deacd9362782faa5919e3c84c264}{Can\+Select}} (Unity\+Engine.\+Event evt)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_a8b1760cdb8a90325ce62af496a1813f9}{Timeline\+Item\+GUI}} (\mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_row_g_u_i}{IRow\+GUI}} \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_a3bcf82019555301cb2d6356578799749}{parent}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+readonly \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_director_styles}{Director\+Styles}} \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_ac22f5e2ee6536d557a9363f9527e7c41}{m\+\_\+\+Styles}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_timeline_item}{ITimeline\+Item}} \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_a0fe3631408b51bc22256e756277fddfd}{item}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+double \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_a9863258b23cede75596fb384d885da29}{start}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+double \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_adc7e482a4bb1f5d0c1f7d90cd0a9d4fa}{end}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_layer_z_order}{Layer\+ZOrder}} \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_a7204db210720e02051a0c8bea1c0c8be}{z\+Order}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_aa816120dfec1746efbe6404c643b64cf}{visible}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_a4afabb2a8c74d3b467e1d16ef31f84c5}{is\+Invalid}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_row_g_u_i}{IRow\+GUI}} \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_a3bcf82019555301cb2d6356578799749}{parent}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Rect \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_a3a673d30e1636ba3306220babfdb7cff}{rect}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Rect \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_a3257dd2e685ba3bb61b678977281e285}{tree\+View\+Rect}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_layerable}{Unity\+Editor.\+Timeline.\+ILayerable}}}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_a8b1760cdb8a90325ce62af496a1813f9}\label{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_a8b1760cdb8a90325ce62af496a1813f9} 
+\index{UnityEditor.Timeline.TimelineItemGUI@{UnityEditor.Timeline.TimelineItemGUI}!TimelineItemGUI@{TimelineItemGUI}}
+\index{TimelineItemGUI@{TimelineItemGUI}!UnityEditor.Timeline.TimelineItemGUI@{UnityEditor.Timeline.TimelineItemGUI}}
+\doxysubsubsection{\texorpdfstring{TimelineItemGUI()}{TimelineItemGUI()}}
+{\footnotesize\ttfamily Unity\+Editor.\+Timeline.\+Timeline\+Item\+GUI.\+Timeline\+Item\+GUI (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_row_g_u_i}{IRow\+GUI}}}]{parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_af9988204667f4cbd72a56ac384576e09}\label{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_af9988204667f4cbd72a56ac384576e09} 
+\index{UnityEditor.Timeline.TimelineItemGUI@{UnityEditor.Timeline.TimelineItemGUI}!CanSelect@{CanSelect}}
+\index{CanSelect@{CanSelect}!UnityEditor.Timeline.TimelineItemGUI@{UnityEditor.Timeline.TimelineItemGUI}}
+\doxysubsubsection{\texorpdfstring{CanSelect()}{CanSelect()}}
+{\footnotesize\ttfamily virtual bool Unity\+Editor.\+Timeline.\+Timeline\+Item\+GUI.\+Can\+Select (\begin{DoxyParamCaption}\item[{Event}]{evt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_a84991aedbe0b987fc9c5cd82f5c95d3a}{Unity\+Editor.\+Timeline.\+Timeline\+Clip\+GUI}}.
+
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_ab64614d2ba64c05cb96f52c857c5a58f}\label{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_ab64614d2ba64c05cb96f52c857c5a58f} 
+\index{UnityEditor.Timeline.TimelineItemGUI@{UnityEditor.Timeline.TimelineItemGUI}!Deselect@{Deselect}}
+\index{Deselect@{Deselect}!UnityEditor.Timeline.TimelineItemGUI@{UnityEditor.Timeline.TimelineItemGUI}}
+\doxysubsubsection{\texorpdfstring{Deselect()}{Deselect()}}
+{\footnotesize\ttfamily virtual void Unity\+Editor.\+Timeline.\+Timeline\+Item\+GUI.\+Deselect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_selectable_af0befaba3a64127d10c7769cb2d6f24e}{Unity\+Editor.\+Timeline.\+ISelectable}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_a45ea5f563aa66cd32d337b301c6d3c36}{Unity\+Editor.\+Timeline.\+Timeline\+Clip\+GUI}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_marker_cluster_g_u_i_acf050bb158b55a39d149903948bdabf2}{Unity\+Editor.\+Timeline.\+Timeline\+Marker\+Cluster\+GUI}}, and \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_a4794002d73a4ce35c5ec38d95eded252}{Unity\+Editor.\+Timeline.\+Timeline\+Marker\+GUI}}.
+
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_a244baf678616743d654fe1b9026aff45}\label{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_a244baf678616743d654fe1b9026aff45} 
+\index{UnityEditor.Timeline.TimelineItemGUI@{UnityEditor.Timeline.TimelineItemGUI}!Draw@{Draw}}
+\index{Draw@{Draw}!UnityEditor.Timeline.TimelineItemGUI@{UnityEditor.Timeline.TimelineItemGUI}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Unity\+Editor.\+Timeline.\+Timeline\+Item\+GUI.\+Draw (\begin{DoxyParamCaption}\item[{Rect}]{rect,  }\item[{bool}]{rect\+Changed,  }\item[{\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_window_state}{Window\+State}}}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_addab9624be4f66866bc7a987ddf8b732}\label{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_addab9624be4f66866bc7a987ddf8b732} 
+\index{UnityEditor.Timeline.TimelineItemGUI@{UnityEditor.Timeline.TimelineItemGUI}!IsSelected@{IsSelected}}
+\index{IsSelected@{IsSelected}!UnityEditor.Timeline.TimelineItemGUI@{UnityEditor.Timeline.TimelineItemGUI}}
+\doxysubsubsection{\texorpdfstring{IsSelected()}{IsSelected()}}
+{\footnotesize\ttfamily virtual bool Unity\+Editor.\+Timeline.\+Timeline\+Item\+GUI.\+Is\+Selected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_selectable_aef30b18031329a6dce7a727f40da58b0}{Unity\+Editor.\+Timeline.\+ISelectable}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_a96b1a8b018d61b9cb0806cfcd9d44b53}{Unity\+Editor.\+Timeline.\+Timeline\+Clip\+GUI}}, and \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_a2c449fa6227f238f87230f44c3fffe74}{Unity\+Editor.\+Timeline.\+Timeline\+Marker\+GUI}}.
+
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_ad6b4083fc947537e513da43c2a14796d}\label{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_ad6b4083fc947537e513da43c2a14796d} 
+\index{UnityEditor.Timeline.TimelineItemGUI@{UnityEditor.Timeline.TimelineItemGUI}!RectToTimeline@{RectToTimeline}}
+\index{RectToTimeline@{RectToTimeline}!UnityEditor.Timeline.TimelineItemGUI@{UnityEditor.Timeline.TimelineItemGUI}}
+\doxysubsubsection{\texorpdfstring{RectToTimeline()}{RectToTimeline()}}
+{\footnotesize\ttfamily Rect Unity\+Editor.\+Timeline.\+Timeline\+Item\+GUI.\+Rect\+To\+Timeline (\begin{DoxyParamCaption}\item[{Rect}]{track\+Rect,  }\item[{\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_window_state}{Window\+State}}}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_a4b36ea46153feea16a9618928eaad990}\label{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_a4b36ea46153feea16a9618928eaad990} 
+\index{UnityEditor.Timeline.TimelineItemGUI@{UnityEditor.Timeline.TimelineItemGUI}!Select@{Select}}
+\index{Select@{Select}!UnityEditor.Timeline.TimelineItemGUI@{UnityEditor.Timeline.TimelineItemGUI}}
+\doxysubsubsection{\texorpdfstring{Select()}{Select()}}
+{\footnotesize\ttfamily virtual void Unity\+Editor.\+Timeline.\+Timeline\+Item\+GUI.\+Select (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_selectable_a425fc32e986a45940d4bbbb7731dbfed}{Unity\+Editor.\+Timeline.\+ISelectable}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_clip_g_u_i_a9e0f2f798967715d98da1e0ec9d3db33}{Unity\+Editor.\+Timeline.\+Timeline\+Clip\+GUI}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_marker_cluster_g_u_i_adf09404c27ed019a2ce3362fdcac4798}{Unity\+Editor.\+Timeline.\+Timeline\+Marker\+Cluster\+GUI}}, and \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_a11fea001ba44a20283e31729c46732b8}{Unity\+Editor.\+Timeline.\+Timeline\+Marker\+GUI}}.
+
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_ab5a02226f7343c20794ea9a7d487639c}\label{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_ab5a02226f7343c20794ea9a7d487639c} 
+\index{UnityEditor.Timeline.TimelineItemGUI@{UnityEditor.Timeline.TimelineItemGUI}!StartDrag@{StartDrag}}
+\index{StartDrag@{StartDrag}!UnityEditor.Timeline.TimelineItemGUI@{UnityEditor.Timeline.TimelineItemGUI}}
+\doxysubsubsection{\texorpdfstring{StartDrag()}{StartDrag()}}
+{\footnotesize\ttfamily virtual void Unity\+Editor.\+Timeline.\+Timeline\+Item\+GUI.\+Start\+Drag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_marker_g_u_i_ab3d618ca9be0707de4e1caeead734d83}{Unity\+Editor.\+Timeline.\+Timeline\+Marker\+GUI}}.
+
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_ade42b94b8815df8bccf1764262d11ea4}\label{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_ade42b94b8815df8bccf1764262d11ea4} 
+\index{UnityEditor.Timeline.TimelineItemGUI@{UnityEditor.Timeline.TimelineItemGUI}!StopDrag@{StopDrag}}
+\index{StopDrag@{StopDrag}!UnityEditor.Timeline.TimelineItemGUI@{UnityEditor.Timeline.TimelineItemGUI}}
+\doxysubsubsection{\texorpdfstring{StopDrag()}{StopDrag()}}
+{\footnotesize\ttfamily virtual void Unity\+Editor.\+Timeline.\+Timeline\+Item\+GUI.\+Stop\+Drag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_ac22f5e2ee6536d557a9363f9527e7c41}\label{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_ac22f5e2ee6536d557a9363f9527e7c41} 
+\index{UnityEditor.Timeline.TimelineItemGUI@{UnityEditor.Timeline.TimelineItemGUI}!m\_Styles@{m\_Styles}}
+\index{m\_Styles@{m\_Styles}!UnityEditor.Timeline.TimelineItemGUI@{UnityEditor.Timeline.TimelineItemGUI}}
+\doxysubsubsection{\texorpdfstring{m\_Styles}{m\_Styles}}
+{\footnotesize\ttfamily readonly \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_director_styles}{Director\+Styles}} Unity\+Editor.\+Timeline.\+Timeline\+Item\+GUI.\+m\+\_\+\+Styles\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_adc7e482a4bb1f5d0c1f7d90cd0a9d4fa}\label{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_adc7e482a4bb1f5d0c1f7d90cd0a9d4fa} 
+\index{UnityEditor.Timeline.TimelineItemGUI@{UnityEditor.Timeline.TimelineItemGUI}!end@{end}}
+\index{end@{end}!UnityEditor.Timeline.TimelineItemGUI@{UnityEditor.Timeline.TimelineItemGUI}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily double Unity\+Editor.\+Timeline.\+Timeline\+Item\+GUI.\+end\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [abstract]}}
+
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_a4afabb2a8c74d3b467e1d16ef31f84c5}\label{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_a4afabb2a8c74d3b467e1d16ef31f84c5} 
+\index{UnityEditor.Timeline.TimelineItemGUI@{UnityEditor.Timeline.TimelineItemGUI}!isInvalid@{isInvalid}}
+\index{isInvalid@{isInvalid}!UnityEditor.Timeline.TimelineItemGUI@{UnityEditor.Timeline.TimelineItemGUI}}
+\doxysubsubsection{\texorpdfstring{isInvalid}{isInvalid}}
+{\footnotesize\ttfamily bool Unity\+Editor.\+Timeline.\+Timeline\+Item\+GUI.\+is\+Invalid\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_a0fe3631408b51bc22256e756277fddfd}\label{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_a0fe3631408b51bc22256e756277fddfd} 
+\index{UnityEditor.Timeline.TimelineItemGUI@{UnityEditor.Timeline.TimelineItemGUI}!item@{item}}
+\index{item@{item}!UnityEditor.Timeline.TimelineItemGUI@{UnityEditor.Timeline.TimelineItemGUI}}
+\doxysubsubsection{\texorpdfstring{item}{item}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_timeline_item}{ITimeline\+Item}} Unity\+Editor.\+Timeline.\+Timeline\+Item\+GUI.\+item\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [abstract]}}
+
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_a3bcf82019555301cb2d6356578799749}\label{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_a3bcf82019555301cb2d6356578799749} 
+\index{UnityEditor.Timeline.TimelineItemGUI@{UnityEditor.Timeline.TimelineItemGUI}!parent@{parent}}
+\index{parent@{parent}!UnityEditor.Timeline.TimelineItemGUI@{UnityEditor.Timeline.TimelineItemGUI}}
+\doxysubsubsection{\texorpdfstring{parent}{parent}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_row_g_u_i}{IRow\+GUI}} Unity\+Editor.\+Timeline.\+Timeline\+Item\+GUI.\+parent\hspace{0.3cm}{\ttfamily [get]}}
+
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_a3a673d30e1636ba3306220babfdb7cff}\label{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_a3a673d30e1636ba3306220babfdb7cff} 
+\index{UnityEditor.Timeline.TimelineItemGUI@{UnityEditor.Timeline.TimelineItemGUI}!rect@{rect}}
+\index{rect@{rect}!UnityEditor.Timeline.TimelineItemGUI@{UnityEditor.Timeline.TimelineItemGUI}}
+\doxysubsubsection{\texorpdfstring{rect}{rect}}
+{\footnotesize\ttfamily Rect Unity\+Editor.\+Timeline.\+Timeline\+Item\+GUI.\+rect\hspace{0.3cm}{\ttfamily [get]}}
+
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_a9863258b23cede75596fb384d885da29}\label{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_a9863258b23cede75596fb384d885da29} 
+\index{UnityEditor.Timeline.TimelineItemGUI@{UnityEditor.Timeline.TimelineItemGUI}!start@{start}}
+\index{start@{start}!UnityEditor.Timeline.TimelineItemGUI@{UnityEditor.Timeline.TimelineItemGUI}}
+\doxysubsubsection{\texorpdfstring{start}{start}}
+{\footnotesize\ttfamily double Unity\+Editor.\+Timeline.\+Timeline\+Item\+GUI.\+start\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [abstract]}}
+
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_a3257dd2e685ba3bb61b678977281e285}\label{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_a3257dd2e685ba3bb61b678977281e285} 
+\index{UnityEditor.Timeline.TimelineItemGUI@{UnityEditor.Timeline.TimelineItemGUI}!treeViewRect@{treeViewRect}}
+\index{treeViewRect@{treeViewRect}!UnityEditor.Timeline.TimelineItemGUI@{UnityEditor.Timeline.TimelineItemGUI}}
+\doxysubsubsection{\texorpdfstring{treeViewRect}{treeViewRect}}
+{\footnotesize\ttfamily Rect Unity\+Editor.\+Timeline.\+Timeline\+Item\+GUI.\+tree\+View\+Rect\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected set]}}
+
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_aa816120dfec1746efbe6404c643b64cf}\label{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_aa816120dfec1746efbe6404c643b64cf} 
+\index{UnityEditor.Timeline.TimelineItemGUI@{UnityEditor.Timeline.TimelineItemGUI}!visible@{visible}}
+\index{visible@{visible}!UnityEditor.Timeline.TimelineItemGUI@{UnityEditor.Timeline.TimelineItemGUI}}
+\doxysubsubsection{\texorpdfstring{visible}{visible}}
+{\footnotesize\ttfamily bool Unity\+Editor.\+Timeline.\+Timeline\+Item\+GUI.\+visible\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_a7204db210720e02051a0c8bea1c0c8be}\label{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i_a7204db210720e02051a0c8bea1c0c8be} 
+\index{UnityEditor.Timeline.TimelineItemGUI@{UnityEditor.Timeline.TimelineItemGUI}!zOrder@{zOrder}}
+\index{zOrder@{zOrder}!UnityEditor.Timeline.TimelineItemGUI@{UnityEditor.Timeline.TimelineItemGUI}}
+\doxysubsubsection{\texorpdfstring{zOrder}{zOrder}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_layer_z_order}{Layer\+ZOrder}} Unity\+Editor.\+Timeline.\+Timeline\+Item\+GUI.\+z\+Order\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_layerable_a786ccb4c8bb72f94b4fca73abca32219}{Unity\+Editor.\+Timeline.\+ILayerable}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+7.\+6/\+Editor/treeview/\+Item\+Gui/\mbox{\hyperlink{_timeline_item_g_u_i_8cs}{Timeline\+Item\+GUI.\+cs}}\end{DoxyCompactItemize}

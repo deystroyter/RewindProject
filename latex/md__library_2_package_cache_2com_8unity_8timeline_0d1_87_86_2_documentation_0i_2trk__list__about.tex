@@ -1,0 +1,36 @@
+\chapter{Track list and Track headers}
+\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2trk__list__about}{}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2trk__list__about}\index{Track list and Track headers@{Track list and Track headers}}
+\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2trk__list__about_autotoc_md1259}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2trk__list__about_autotoc_md1259}%
+ Use the Track list to add, select, duplicate, delete, lock, mute, and reorder the tracks that comprise a \doxylink{namespace_timeline}{Timeline} Asset. You can also organize tracks into Track groups.
+
+
+
+{\itshape Track list and Track headers for the \doxylink{namespace_timeline}{Timeline} instance named Ground\+ETL}
+
+Each track has two areas\+:
+
+
+\begin{DoxyItemize}
+\item Track list\+: Shows a Track header for each track.
+\item Clips view\+: Shows the clips for each track.
+\end{DoxyItemize}
+
+The Track header contains the name of the track or its binding information. Track bindings are saved to the Playable Director component associated with the Game\+Object that is linked to the \doxylink{namespace_timeline}{Timeline} Asset. This association is referred to as a {\bfseries{\doxylink{namespace_timeline}{Timeline} instance}} (see \doxysectlink{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__about}{Timeline overview}{0}).
+
+Each Track header has a colored accent that identifies the track type and its clips\+:
+
+
+\begin{DoxyItemize}
+\item Activation tracks are green. Use Activation tracks to add Activation clips which set when the bound Game\+Object is active (shown). The Game\+Object is bound to the Activation track.
+\item Animation tracks are blue. Use Animation tracks to add Animation clips that animate the bound Game\+Object. Use an Animation track and its Animation clips to \doxysectlink{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2wf__rec__anim}{record basic animation}{0} or \doxysectlink{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2wf__char__anim}{animate a humanoid}{0}.
+\item Audio tracks are orange. Use Audio tracks to add Audio clips for playing background music or sound effects. Each Audio clip is bound to an audio waveform. The audio source, that plays each waveform, is bound to the Audio track.
+\item Control tracks are turquoise. Use Control tracks to add Control clips which are special clips that control a nested \doxylink{namespace_timeline}{Timeline} instance, Particle System, Prefab instance, or ITime\+Control Script. \doxysectlink{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2insp__clp__ctrl__com}{How the Control clip is created}{0} determines what it controls.
+\item Playable tracks are white. Use Playable tracks to add Playable clips. Each Playable clip is bound to a script that uses the \href{https://docs.unity3d.com/Manual/Playables.html}{\texttt{ Playables API}} to create custom animation tools, effects or gameplay mechanisms.
+\end{DoxyItemize}
+
+Each Track header is also identified by an icon. If a track has a binding error or if the bound Game\+Object is disabled, the icon representing a track changes to an alert icon. For example, if an Animation track is bound to a Game\+Object that is disabled at the location of the Playhead, the icon switches to an alert icon.
+
+
+
+{\itshape An alert icon indicates that the Red\+Cube bound Game\+Object is disabled at the start of the \doxylink{namespace_timeline}{Timeline} instance} 

@@ -1,0 +1,339 @@
+\chapter{Changelog}
+\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g}{}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g}\index{Changelog@{Changelog}}
+\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md735}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md735}%
+All notable changes to the Code Coverage package will be documented in this file.
+
+The format is based on \href{http://keepachangelog.com/en/1.0.0/}{\texttt{ Keep a Changelog}} and this project adheres to \href{http://semver.org/spec/v2.0.0.html}{\texttt{ Semantic Versioning}}.\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md736}{}\doxysection{\texorpdfstring{\mbox{[}1.\+2.\+5\mbox{]} -\/ 2023-\/12-\/20}{\mbox{[}1.\+2.\+5\mbox{]} -\/ 2023-\/12-\/20}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md736}
+\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md737}{}\doxysubsection{\texorpdfstring{Fixes}{Fixes}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md737}
+
+\begin{DoxyItemize}
+\item Fixed failing to generate code coverage for assemblies whose name starts with \textquotesingle{}system\textquotesingle{} (case \href{https://issuetracker.unity3d.com/issues/code-coverage-fails-to-generate-a-report-when-the-assembly-name-begins-with-the-word-system}{\texttt{ COV-\/38}}).
+\item Fixed results xml file not been correctly stored under the Edit\+Mode folder if it is written after a domain reload (case \href{https://issuetracker.unity3d.com/issues/coverage-results-xml-file-is-not-categorized-as-editmode-if-it-is-written-after-domain-reload}{\texttt{ COV-\/36}}).
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md738}{}\doxysection{\texorpdfstring{\mbox{[}1.\+2.\+4\mbox{]} -\/ 2023-\/06-\/02}{\mbox{[}1.\+2.\+4\mbox{]} -\/ 2023-\/06-\/02}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md738}
+\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md739}{}\doxysubsection{\texorpdfstring{Fixes}{Fixes}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md739}
+
+\begin{DoxyItemize}
+\item Fixed failing to gather code coverage for normal methods in generic classes (case \href{https://issuetracker.unity3d.com/issues/non-generic-methods-in-generic-classes-always-show-no-coverage}{\texttt{ COV-\/27}}).
+\item Documentation\+: Corrected {\itshape Settings.\+json} path in {\ttfamily use\+Project\+Settings} section in {\itshape -\/coverage\+Options} (case \href{https://issuetracker.unity3d.com/issues/documentation-for-useprojectsettings-references-incorrect-settings-dot-json-path}{\texttt{ COV-\/26}}).
+\item Make sure {\itshape Auto Generate Report} defaults to true when running from the command line (case \href{https://issuetracker.unity3d.com/issues/useprojectsettings-does-not-generate-report-until-auto-generate-report-is-toggled-off-and-on-again}{\texttt{ COV-\/25}}).
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md740}{}\doxysection{\texorpdfstring{\mbox{[}1.\+2.\+3\mbox{]} -\/ 2023-\/04-\/14}{\mbox{[}1.\+2.\+3\mbox{]} -\/ 2023-\/04-\/14}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md740}
+\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md741}{}\doxysubsection{\texorpdfstring{Fixes}{Fixes}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md741}
+
+\begin{DoxyItemize}
+\item Fixed failing to gather code coverage for generic methods (case \href{https://issuetracker.unity3d.com/issues/coverage-package-fails-to-gather-any-coverage-for-generic-methods}{\texttt{ COV-\/17}}).
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md742}{}\doxysubsection{\texorpdfstring{Improvements}{Improvements}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md742}
+
+\begin{DoxyItemize}
+\item Added {\ttfamily filters\+From\+File} in {\itshape -\/coverage\+Options} for \href{https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.2/manual/CoverageBatchmode.html}{\texttt{ batchmode}}. This allows specifying an external Json file which contains path and assembly filtering rules. When this file contains relative paths, the {\ttfamily source\+Paths} option can be used to specify the source directories. ~\newline
+{\bfseries{Note\+:}} The {\ttfamily path\+Filters\+From\+File} option will be deprecated in the next package major release. Please use the new {\ttfamily filters\+From\+File} option instead.
+\item Make sure {\ttfamily -\/-\/burst-\/disable-\/compilation} is \href{https://docs.unity3d.com/Packages/com.unity.burst@latest/index.html?subfolder=/manual/getting-started.html\#command-line-options}{\texttt{ expected}} to be passed with two dashes, unlike other editor command line options.
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md743}{}\doxysection{\texorpdfstring{\mbox{[}1.\+2.\+2\mbox{]} -\/ 2022-\/11-\/18}{\mbox{[}1.\+2.\+2\mbox{]} -\/ 2022-\/11-\/18}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md743}
+\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md744}{}\doxysubsection{\texorpdfstring{Fixes}{Fixes}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md744}
+
+\begin{DoxyItemize}
+\item Temporary fix for the \href{https://docs.unity3d.com/Packages/com.unity.test-framework@latest/index.html}{\texttt{ Test Framework}} 1.\+3 issue where the {\itshape Run\+Finished} callback is not called when running from the command line and there is a domain reload (case \href{https://issuetracker.unity3d.com/issues/registered-callbacks-dont-work-after-domain-reload}{\texttt{ DSTR-\/692}}).
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md745}{}\doxysubsection{\texorpdfstring{Improvements}{Improvements}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md745}
+
+\begin{DoxyItemize}
+\item Reduced the number of logs for the default {\itshape Verbosity\+:Info}.
+\item Added {\itshape Uncoverable lines} definition in \href{https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.2/manual/HowToInterpretResults.html\#summary}{\texttt{ How to interpret the results}} page in the documentation.
+\item Updated documentation to match version 1.\+2.\+2.
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md746}{}\doxysection{\texorpdfstring{\mbox{[}1.\+2.\+1\mbox{]} -\/ 2022-\/10-\/27}{\mbox{[}1.\+2.\+1\mbox{]} -\/ 2022-\/10-\/27}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md746}
+\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md747}{}\doxysubsection{\texorpdfstring{Fixes}{Fixes}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md747}
+
+\begin{DoxyItemize}
+\item Fixed compatibility with \href{https://docs.unity3d.com/Packages/com.unity.test-framework@latest/index.html}{\texttt{ Test Framework}} package version 1.\+3.
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md748}{}\doxysubsection{\texorpdfstring{Improvements}{Improvements}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md748}
+
+\begin{DoxyItemize}
+\item A single file summary version of the report is now generated in Json format, in addition to the XML and Markdown formats.
+\item Added a warning when an invalid coverage option is passed in {\itshape -\/coverage\+Options} in \href{https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.2/manual/CoverageBatchmode.html}{\texttt{ batchmode}}.
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md749}{}\doxysection{\texorpdfstring{\mbox{[}1.\+2.\+0\mbox{]} -\/ 2022-\/08-\/01}{\mbox{[}1.\+2.\+0\mbox{]} -\/ 2022-\/08-\/01}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md749}
+\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md750}{}\doxysubsection{\texorpdfstring{Fixes}{Fixes}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md750}
+
+\begin{DoxyItemize}
+\item Ensure assemblies are removed from the Included Assemblies field if they no longer exist (case \href{https://issuetracker.unity3d.com/issues/code-coverage-the-included-assemblies-field-shows-assemblies-that-no-longer-exist}{\texttt{ 1318668}}).
+\item Ensure hidden sequence points are ignored (case \href{https://issuetracker.unity3d.com/issues/class-which-derives-from-methodbase-causes-incorrect-sequence-points-to-be-generated-by-coverage-api}{\texttt{ 1372305}}).
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md751}{}\doxysubsection{\texorpdfstring{Changes}{Changes}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md751}
+
+\begin{DoxyItemize}
+\item Updated Report Generator to version 5.\+0.\+4.
+\item Updated the UI of the \href{https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.2/manual/CodeCoverageWindow.html}{\texttt{ Code Coverage window}} moving the action buttons into a toolbar at the top.
+\item Renamed {\itshape assembly\+Filters} aliases in \href{https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.2/manual/CoverageBatchmode.html}{\texttt{ batchmode}}; {\ttfamily \texorpdfstring{$<$}{<}user\texorpdfstring{$>$}{>}} was renamed to {\ttfamily \texorpdfstring{$<$}{<}assets\texorpdfstring{$>$}{>}} and {\ttfamily \texorpdfstring{$<$}{<}project\texorpdfstring{$>$}{>}} was renamed to {\ttfamily \texorpdfstring{$<$}{<}all\texorpdfstring{$>$}{>}}.
+\item Replaced {\ttfamily path\+Stripping\+Patterns} with {\ttfamily path\+Replace\+Patterns} in \href{https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.2/manual/CoverageBatchmode.html}{\texttt{ batchmode}}. The {\ttfamily path\+Replace\+Patterns} option allows stripping and replacing specific sections from the paths that are stored in the coverage results xml files.
+\end{DoxyItemize}
+
+See the \href{https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.2/manual/upgrade-guide.html}{\texttt{ Upgrade guide}} if upgrading to Code Coverage package version 1.\+2.\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md752}{}\doxysubsection{\texorpdfstring{Improvements}{Improvements}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md752}
+
+\begin{DoxyItemize}
+\item The size of the coverage result files and the Code Coverage session duration have been optimized. At the start of the session a coverage xml result file is generated which includes all the lines but with zero coverage. The following coverage xml result files that are generated within a Code Coverage session include only the coverage data of the visited lines.
+\item Added Help Icon\+Button in the toolbar in the \href{https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.2/manual/CodeCoverageWindow.html}{\texttt{ Code Coverage window}}.
+\item Updated the mechanic for opening the containing folder, change the location or reset to the default location for {\itshape Results Location} and {\itshape Report History Location}.
+\item Refactored the \href{https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.2/manual/CodeCoverageWindow.html}{\texttt{ Code Coverage window}} UI to include a new {\itshape Report Options} section and removing the word \textquotesingle{}Generate\textquotesingle{} from the options.
+\item Introduced new selection buttons under the {\itshape Included Assemblies} dropdown in the \href{https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.2/manual/CodeCoverageWindow.html}{\texttt{ Code Coverage window}}; use the {\itshape All} button to select all the assemblies in the project. Use the {\itshape Assets} button to select only the assemblies under the {\ttfamily Assets} folder. Use the {\itshape \doxylink{namespace_packages}{Packages}} button to select only the \doxylink{namespace_packages}{Packages}\textquotesingle{} assemblies. If searching, the buttons will apply only to the assemblies visible in the list.
+\item Updated \href{https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.2/manual/whats-new.html}{\texttt{ What\textquotesingle{}s new}} and \href{https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.2/manual/upgrade-guide.html}{\texttt{ Upgrade guide}} pages in the documentation.
+\item Added \href{https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.2/manual/CoverageBatchmode.html\#using-relative-paths-in-path-filters}{\texttt{ Using relative paths in path filters}} section in documentation.
+\item Updated the editor and console logs; added information about the assembly and path filters, improved coverage session logs.
+\item Improved the progress bars for {\ttfamily Writing coverage results} and {\ttfamily Generating the report}.
+\item Added an icon for the \href{https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.2/manual/CodeCoverageWindow.html}{\texttt{ Code Coverage window}}.
+\item Updated documentation to match version 1.\+2.\+0.
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md753}{}\doxysubsection{\texorpdfstring{Features}{Features}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md753}
+
+\begin{DoxyItemize}
+\item Added {\ttfamily Pause Recording} and {\ttfamily Resume Recording} buttons in the toolbar in the \href{https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.2/manual/CodeCoverageWindow.html}{\texttt{ Code Coverage window}}.
+\item Added {\ttfamily Log Verbosity Level} setting in the \href{https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.2/manual/CodeCoverageWindow.html}{\texttt{ Code Coverage window}} which allows setting the verbosity level for the editor and console logs.
+\item Added {\ttfamily Additional Reports} option in the \href{https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.2/manual/CodeCoverageWindow.html}{\texttt{ Code Coverage window}} which if checked \href{https://docs.sonarqube.org/latest/analysis/generic-test}{\texttt{ Sonar\+Qube}}, \href{https://cobertura.github.io/cobertura}{\texttt{ Cobertura}} and \href{https://github.com/linux-test-project/lcov}{\texttt{ LCOV}} reports will be generated. Added {\ttfamily generate\+Additional\+Reports} in {\itshape -\/coverage\+Options} for \href{https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.2/manual/CoverageBatchmode.html}{\texttt{ batchmode}}.
+\item Added {\ttfamily Test Runner References} report option in the \href{https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.2/manual/CodeCoverageWindow.html}{\texttt{ Code Coverage window}} which if checked includes test references to the generated coverage results and enables the \href{https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.2/manual/HowToInterpretResults.html\#coverage-by-test-methods}{\texttt{ Coverage by test methods}} section in the HTML report, allowing you to see how each test contributes to the overall coverage. Added {\ttfamily generate\+Test\+References} in {\itshape -\/coverage\+Options} for \href{https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.2/manual/CoverageBatchmode.html}{\texttt{ batchmode}}.
+\item Added {\ttfamily Auto Open Report} option in the \href{https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.2/manual/CodeCoverageWindow.html}{\texttt{ Code Coverage window}} which if checked the coverage report will open automatically after it has been generated.
+\item Added {\ttfamily path\+Filters\+From\+File} in {\itshape -\/coverage\+Options} for \href{https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.2/manual/CoverageBatchmode.html}{\texttt{ batchmode}} which allows specifying an external file which contains a list of path filters. When this file contains relative paths, the {\ttfamily source\+Paths} option can be used to specify the source directories.
+\item Added {\ttfamily dont\+Clear} in {\itshape -\/coverage\+Options} for \href{https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.2/manual/CoverageBatchmode.html}{\texttt{ batchmode}} which allows coverage results to be accumulated after every code coverage session. If not passed the results are cleared before a new session. For more information see \href{https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.2/manual/CoverageBatchmode.html\#generate-combined-report-from-editmode-and-playmode-tests}{\texttt{ Generate combined report from Edit\+Mode and Play\+Mode tests}}.
+\item When the {\ttfamily path\+Filters} option or the {\ttfamily path\+Filters\+From\+File} option in {\itshape -\/coverage\+Options} contains relative paths, the {\ttfamily source\+Paths} option can be used to specify the source directories.
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md754}{}\doxysection{\texorpdfstring{\mbox{[}1.\+1.\+1\mbox{]} -\/ 2021-\/12-\/17}{\mbox{[}1.\+1.\+1\mbox{]} -\/ 2021-\/12-\/17}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md754}
+\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md755}{}\doxysubsection{\texorpdfstring{Fixes}{Fixes}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md755}
+
+\begin{DoxyItemize}
+\item Ensure assemblies are removed from the Included Assemblies field if they no longer exist (case \href{https://issuetracker.unity3d.com/issues/code-coverage-the-included-assemblies-field-shows-assemblies-that-no-longer-exist}{\texttt{ 1318668}})
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md756}{}\doxysubsection{\texorpdfstring{Changes}{Changes}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md756}
+
+\begin{DoxyItemize}
+\item Updated Report Generator to version 4.\+8.\+13
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md757}{}\doxysubsection{\texorpdfstring{Improvements}{Improvements}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md757}
+
+\begin{DoxyItemize}
+\item Added Help Icon\+Button in the \href{https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.1/manual/CodeCoverageWindow.html}{\texttt{ Code Coverage window}} for \doxylink{namespace_unity}{Unity} versions 2021.\+2.\+2f1 and above
+\item Added \href{https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.1/manual/whats-new.html}{\texttt{ What\textquotesingle{}s new}} and \href{https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.1/manual/upgrade-guide.html}{\texttt{ Upgrade guide}} pages in the documentation
+\item Updated documentation to match version 1.\+1.\+1
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md758}{}\doxysection{\texorpdfstring{\mbox{[}1.\+1.\+0\mbox{]} -\/ 2021-\/06-\/09}{\mbox{[}1.\+1.\+0\mbox{]} -\/ 2021-\/06-\/09}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md758}
+\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md759}{}\doxysubsection{\texorpdfstring{Fixes}{Fixes}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md759}
+
+\begin{DoxyItemize}
+\item Ensure Results and History folders are created if they do not exist (case \href{https://issuetracker.unity3d.com/issues/code-coverage-results-slash-history-location-path-is-reset-to-default-if-set-path-no-longer-exists}{\texttt{ 1334551}})
+\item Added support for \href{https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.0/manual/UsingCodeCoverage.html\#excluding-code-from-code-coverage}{\texttt{ Exclude\+From\+Coverage/\+Exclude\+From\+Code\+Coverage}} for lambda expressions and yield statements (case \href{https://issuetracker.unity3d.com/issues/code-coverage-excludefromcoverage-attribute-doesnt-exclude-lambda-expressions-and-yield-statements-from-coverage}{\texttt{ 1338636}})
+\item Added support for \href{https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.0/manual/UsingCodeCoverage.html\#excluding-code-from-code-coverage}{\texttt{ Exclude\+From\+Code\+Coverage}} for getter/setter properties (case \href{https://issuetracker.unity3d.com/issues/code-coverage-get-and-set-accessors-are-still-marked-as-coverable-when-property-has-excludefromcodecoverage-attribute}{\texttt{ 1338665}})
+\item {\itshape -\/coverage\+Options} are only parsed when running from the command line (\href{https://forum.unity.com/threads/code-coverage-slowing-editor-on-enter-playmode-and-assembly-reload.1121566}{\texttt{ feedback}})
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md760}{}\doxysubsection{\texorpdfstring{Changes}{Changes}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md760}
+
+\begin{DoxyItemize}
+\item Updated Report Generator to version 4.\+8.\+9
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md761}{}\doxysubsection{\texorpdfstring{Improvements}{Improvements}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md761}
+
+\begin{DoxyItemize}
+\item Implemented changes to support \href{https://docs.unity3d.com/Packages/com.unity.test-framework@latest/index.html}{\texttt{ Test Framework}} package version 1.\+2
+\item Logs while the Report is generated are output per message rather than at the end of the generation
+\item Do not log burst warning when {\ttfamily -\/-\/burst-\/disable-\/compilation} is passed in the command line
+\item Added \href{https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.1/manual/CoverageBatchmode.html\#ignoring-tests-for-code-coverage}{\texttt{ Ignoring tests for Code Coverage}} section in documentation
+\item Updated the \href{https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.1/manual/CoverageBatchmode.html\#generate-combined-report-from-separate-projects}{\texttt{ Generate combined report from separate projects}} section in documentation
+\item Updated documentation to match version 1.\+1.\+0
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md762}{}\doxysubsection{\texorpdfstring{Features}{Features}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md762}
+
+\begin{DoxyItemize}
+\item Added {\ttfamily Code Coverage session Events} \href{https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.1/api/UnityEditor.TestTools.CodeCoverage.Events.html}{\texttt{ API}} to subscribe to events invoked during a Code Coverage session
+\item Added {\ttfamily use\+Project\+Settings} in {\itshape -\/coverage\+Options} for \href{https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.1/manual/CoverageBatchmode.html}{\texttt{ batchmode}} which allows using the settings specified in {\ttfamily Project\+Settings/\+Settings.\+json}
+\item Added {\ttfamily path\+Stripping\+Patterns} in {\itshape -\/coverage\+Options} for \href{https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.1/manual/CoverageBatchmode.html}{\texttt{ batchmode}} which allows stripping specific sections from the paths that are stored in the coverage results xml files
+\item Added {\ttfamily source\+Paths} in {\itshape -\/coverage\+Options} for \href{https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.1/manual/CoverageBatchmode.html}{\texttt{ batchmode}} which allows specifying the source directories which contain the corresponding source code
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md763}{}\doxysection{\texorpdfstring{\mbox{[}1.\+0.\+0\mbox{]} -\/ 2021-\/03-\/09}{\mbox{[}1.\+0.\+0\mbox{]} -\/ 2021-\/03-\/09}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md763}
+\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md764}{}\doxysubsection{\texorpdfstring{Fixes}{Fixes}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md764}
+
+\begin{DoxyItemize}
+\item Fixed issues with Path Filtering (cases \href{https://issuetracker.unity3d.com/issues/code-coverage-typing-comma-into-the-included-or-excluded-paths-list-will-start-adding-row-for-each-letter-you-type-afterwards}{\texttt{ 1318896}}, \href{https://issuetracker.unity3d.com/issues/code-coverage-clearing-last-included-paths-row-immediatly-jumps-to-the-first-excluded-paths-row-and-starts-editing-it}{\texttt{ 1318897}})
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md765}{}\doxysubsection{\texorpdfstring{Improvements}{Improvements}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md765}
+
+\begin{DoxyItemize}
+\item Selection/focus is cleared when mouse is clicked outside of the individual settings\textquotesingle{} areas
+\item Added \href{https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.0/manual/Quickstart.html}{\texttt{ Quickstart guide}} in documentation
+\item Renamed the {\itshape Code Coverage Workshop} sample to {\itshape Code Coverage Tutorial}
+\item Updated documentation and workshop to match version 1.\+0.\+0
+\end{DoxyItemize}
+
+{\bfseries{Note\+:}} In \doxylink{namespace_unity}{Unity} 2019 and 2020 you can enable Code Coverage in \href{https://docs.unity3d.com/Manual/Preferences.html}{\texttt{ General Preferences}}. This was removed in \doxylink{namespace_unity}{Unity} 2021; the user interface for managing Code Coverage is now entirely inside the Code Coverage package.\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md766}{}\doxysection{\texorpdfstring{\mbox{[}1.\+0.\+0-\/pre.\+4\mbox{]} -\/ 2021-\/02-\/26}{\mbox{[}1.\+0.\+0-\/pre.\+4\mbox{]} -\/ 2021-\/02-\/26}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md766}
+\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md767}{}\doxysubsection{\texorpdfstring{Fixes}{Fixes}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md767}
+
+\begin{DoxyItemize}
+\item Fixed assembly version validation error due to internal libraries included in the Report\+Generator\+Merged.\+dll (case \href{https://issuetracker.unity3d.com/issues/code-coverage-reportgeneratormerged-cant-be-loaded-due-to-assembly-version-validation-failure}{\texttt{ 1312121}})
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md768}{}\doxysubsection{\texorpdfstring{Changes}{Changes}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md768}
+
+\begin{DoxyItemize}
+\item Added {\itshape Enable Code Coverage} checkbox under Settings in \href{https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.0/manual/CodeCoverageWindow.html}{\texttt{ Code Coverage window}}.~\newline
+{\bfseries{Note\+:}} In \doxylink{namespace_unity}{Unity} 2019 and 2020 you can enable Code Coverage in \href{https://docs.unity3d.com/Manual/Preferences.html}{\texttt{ General Preferences}}. This was removed in \doxylink{namespace_unity}{Unity} 2021; the user interface for managing Code Coverage is now entirely inside the Code Coverage package.
+\item The settings and options passed in the command line override/disable the settings in the Code Coverage window and relevant warnings display to indicate this
+\item Updated Report Generator to version 4.\+8.\+5
+\item Updated documentation and workshop to match version 1.\+0.\+0-\/pre.\+4
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md769}{}\doxysubsection{\texorpdfstring{Improvements}{Improvements}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md769}
+
+\begin{DoxyItemize}
+\item Added {\ttfamily verbosity} in {\itshape -\/coverage\+Options} for \href{https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.0/manual/CoverageBatchmode.html}{\texttt{ batchmode}}
+\item Added {\itshape Generate combined report from separate projects} section in documentation, under \href{https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.0/manual/CoverageBatchmode.html\#generate-combined-report-from-separate-projects}{\texttt{ Using Code Coverage in batchmode}}
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md770}{}\doxysection{\texorpdfstring{\mbox{[}1.\+0.\+0-\/pre.\+3\mbox{]} -\/ 2021-\/01-\/21}{\mbox{[}1.\+0.\+0-\/pre.\+3\mbox{]} -\/ 2021-\/01-\/21}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md770}
+\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md771}{}\doxysubsection{\texorpdfstring{Fixes}{Fixes}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md771}
+
+\begin{DoxyItemize}
+\item Updated Include Platforms to Editor only in the Report\+Generator\+Merged.\+dll settings. Fixes an Android build error introduced in 1.\+0.\+0-\/pre.\+2 (case 1306557)
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md772}{}\doxysection{\texorpdfstring{\mbox{[}1.\+0.\+0-\/pre.\+2\mbox{]} -\/ 2021-\/01-\/13}{\mbox{[}1.\+0.\+0-\/pre.\+2\mbox{]} -\/ 2021-\/01-\/13}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md772}
+\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md773}{}\doxysubsection{\texorpdfstring{Fixes}{Fixes}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md773}
+
+\begin{DoxyItemize}
+\item Fixed multiple reports generated in batchmode when passing {\ttfamily generate\+Html\+Report} in {\itshape -\/coverage\+Options} without passing {\ttfamily -\/run\+Tests}
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md774}{}\doxysubsection{\texorpdfstring{Changes}{Changes}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md774}
+
+\begin{DoxyItemize}
+\item All project assemblies are included when there are included paths specified in {\itshape path\+Filters} but no included assemblies in {\itshape assembly\+Filters}, when running in batchmode
+\item Updated Report Generator to version 4.\+8.\+4
+\item Updated documentation to match version 1.\+0.\+0-\/pre.\+2
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md775}{}\doxysubsection{\texorpdfstring{Improvements}{Improvements}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md775}
+
+\begin{DoxyItemize}
+\item Introduced new {\itshape assembly\+Filters} aliases in \href{https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@1.0/manual/CoverageBatchmode.html}{\texttt{ batchmode}}, used for referencing a group of assemblies to include or exclude. These are {\ttfamily \texorpdfstring{$<$}{<}user\texorpdfstring{$>$}{>}}, {\ttfamily \texorpdfstring{$<$}{<}project\texorpdfstring{$>$}{>}} and {\ttfamily \texorpdfstring{$<$}{<}packages\texorpdfstring{$>$}{>}}
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md776}{}\doxysection{\texorpdfstring{\mbox{[}1.\+0.\+0-\/pre.\+1\mbox{]} -\/ 2020-\/11-\/12}{\mbox{[}1.\+0.\+0-\/pre.\+1\mbox{]} -\/ 2020-\/11-\/12}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md776}
+
+\begin{DoxyItemize}
+\item {\itshape 1.\+0.\+0-\/pre.\+1} matches {\itshape 0.\+4.\+0-\/preview}
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md777}{}\doxysection{\texorpdfstring{\mbox{[}0.\+4.\+0-\/preview\mbox{]} -\/ 2020-\/11-\/11}{\mbox{[}0.\+4.\+0-\/preview\mbox{]} -\/ 2020-\/11-\/11}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md777}
+\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md778}{}\doxysubsection{\texorpdfstring{Changes}{Changes}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md778}
+
+\begin{DoxyItemize}
+\item Moved Code Coverage window under {\itshape Window} \texorpdfstring{$>$}{>} {\itshape Analysis}
+\item {\itshape Included Assemblies} now use a single dropdown instead of an editable text field which acted as a dropdown
+\item Added Command\+Line\+Parser and removed dependency to internals in Test Framework
+\item Removed the old {\itshape Editor\+Pref} workflow from Coverage\+Preferences
+\item Moved {\itshape Generate History} outside of {\itshape Generate HTML Report}. It is now disabled only if both {\itshape Generate HTML Report} and {\itshape Generate Badges} are not selected
+\item Updated Report Generator to version 4.\+7.\+1
+\item Updated documentation and workshop to match version 0.\+4.\+0-\/preview
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md779}{}\doxysubsection{\texorpdfstring{Improvements}{Improvements}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md779}
+
+\begin{DoxyItemize}
+\item Implemented {\ttfamily \{Project\+Path\}} alias in {\ttfamily Settings.\+json}
+\item Added a console warning when {\itshape Burst Compilation} is enabled and an info Help\+Box with a button to disable
+\item Added Analytics to help improve the user experience
+\item Disabled {\itshape Generate from Last} button when there are no assemblies selected
+\item Display an info Help\+Box when there are no assemblies selected
+\item Paths are now stored with forward slashes on Windows
+\item Added warning about Code Coverage not being supported currently when running Play\+Mode tests in standalone player
+\item Refactored code; in Utils, Filtering, Result\+Writer, Window and API classes
+\item Added {\itshape Coverage\+Window} and {\itshape Filtering} folders
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md780}{}\doxysubsection{\texorpdfstring{Features}{Features}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md780}
+
+\begin{DoxyItemize}
+\item Added {\itshape Included Paths} and {\itshape Excluded Paths} as Reorderable\+Lists in the \href{https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@0.4/manual/CodeCoverageWindow.html}{\texttt{ Code Coverage window}}
+\item Added \href{https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@0.4/manual/UsingCodeCoverage.html\#excluding-code-from-code-coverage}{\texttt{ support}} for {\ttfamily Exclude\+From\+Coverage} and {\ttfamily Exclude\+From\+Code\+Coverage} attributes
+\item Added {\ttfamily Code\+Coverage.\+Verbosity\+Level} \href{https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@0.4/api/UnityEditor.TestTools.CodeCoverage.CodeCoverage.html}{\texttt{ API}} to set the verbosity level used in editor and console logs
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md781}{}\doxysection{\texorpdfstring{\mbox{[}0.\+3.\+1-\/preview\mbox{]} -\/ 2020-\/08-\/03}{\mbox{[}0.\+3.\+1-\/preview\mbox{]} -\/ 2020-\/08-\/03}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md781}
+\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md782}{}\doxysubsection{\texorpdfstring{Fixes}{Fixes}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md782}
+
+\begin{DoxyItemize}
+\item Fixed issue where CRAP calculation was incorrect when generic methods were parsed
+\item Corrected Six Labors License copyright in Third Party Notices
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md783}{}\doxysubsection{\texorpdfstring{Changes}{Changes}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md783}
+
+\begin{DoxyItemize}
+\item If {\ttfamily assembly\+Filters} is not specified in {\itshape -\/coverage\+Options} in batchmode, include only the assemblies found under the {\itshape Assets} folder
+\item Updated Report Generator to version 4.\+6.\+4
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md784}{}\doxysection{\texorpdfstring{\mbox{[}0.\+3.\+0-\/preview\mbox{]} -\/ 2020-\/05-\/20}{\mbox{[}0.\+3.\+0-\/preview\mbox{]} -\/ 2020-\/05-\/20}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md784}
+\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md785}{}\doxysubsection{\texorpdfstring{Fixes}{Fixes}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md785}
+
+\begin{DoxyItemize}
+\item Make sure {\itshape operator} and {\itshape anonymous function} names are generated correctly
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md786}{}\doxysubsection{\texorpdfstring{Changes}{Changes}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md786}
+
+\begin{DoxyItemize}
+\item Added {\itshape Generate Additional Metrics} setting in the \href{https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@0.3/manual/CodeCoverageWindow.html}{\texttt{ Code Coverage window}} and removed {\itshape Cyclomatic Complexity} (it is now included in Additional Metrics)
+\item Updated Report Generator to version 4.\+5.\+8
+\item Updated documentation to match version 0.\+3.\+0-\/preview
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md787}{}\doxysubsection{\texorpdfstring{Improvements}{Improvements}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md787}
+
+\begin{DoxyItemize}
+\item Added \href{https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@0.3/manual/CodeCoverageWorkshop.html}{\texttt{ Code Coverage Workshop}} sample project
+\item Using the \href{https://docs.unity3d.com/Manual/com.unity.settings-manager.html}{\texttt{ Settings Manager}} package to handle the serialization of project settings
+\item Added an info Help\+Box when {\itshape Code Optimization} is set to Release mode with a button to switch to Debug mode
+\item Execute {\itshape Stop Recording} on the update loop, instead of the On\+GUI (removes an {\itshape End\+Layout\+Group} error)
+\item Refactored code; in Open\+Cover\+Reporter class (to reduce Cyclomatic Complexity), in Code\+Coverage\+Window class and others
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md788}{}\doxysubsection{\texorpdfstring{Features}{Features}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md788}
+
+\begin{DoxyItemize}
+\item Added {\itshape History Location} and {\itshape Generate History} settings in the \href{https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@0.3/manual/CodeCoverageWindow.html}{\texttt{ Code Coverage window}}
+\item Added {\ttfamily coverage\+History\+Path} and {\ttfamily generate\+Html\+Report\+History} in {\itshape -\/coverage\+Options} for \href{https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@0.3/manual/UsingCodeCoverage.html\#using-code-coverage-in-batchmode}{\texttt{ batchmode}}
+\item Added {\ttfamily generate\+Additional\+Metrics} in {\itshape -\/coverage\+Options} for \href{https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@0.3/manual/UsingCodeCoverage.html\#using-code-coverage-in-batchmode}{\texttt{ batchmode}} and removed {\itshape enable\+Cyclomatic\+Complexity} (it is now included in Additional Metrics)
+\item Added {\itshape Crap Score} in Additional Metrics. See \href{https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@0.3/manual/HowToInterpretResults.html}{\texttt{ How to interpret the results}}.
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md789}{}\doxysection{\texorpdfstring{\mbox{[}0.\+2.\+3-\/preview\mbox{]} -\/ 2020-\/02-\/18}{\mbox{[}0.\+2.\+3-\/preview\mbox{]} -\/ 2020-\/02-\/18}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md789}
+\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md790}{}\doxysubsection{\texorpdfstring{Fixes}{Fixes}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md790}
+
+\begin{DoxyItemize}
+\item {\itshape Included Assemblies} dropdown is now resizing to the longest assembly name (\href{https://issuetracker.unity3d.com/issues/there-is-no-way-to-view-the-full-name-of-an-assembly-when-selecting-it-in-a-small-code-coverage-window}{\texttt{ 1215600}})
+\item When closing (selecting outside of) the {\itshape Included Assemblies} dropdown, input is not accidentally propagated to the Code Coverage window
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md791}{}\doxysubsection{\texorpdfstring{Improvements}{Improvements}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md791}
+
+\begin{DoxyItemize}
+\item If more than one instance of the {\itshape -\/coverage\+Options} command-\/line argument is specified, they will now be merged into a single instance
+\item If more than one instance of the {\itshape -\/coverage\+Results\+Path} command-\/line argument is specified, only the first instance will be accepted
+\item Added {\itshape Generate combined report from Edit\+Mode and Play\+Mode tests} section in documentation, under \href{https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@0.2/manual/UsingCodeCoverage.html\#using-code-coverage-in-batchmode}{\texttt{ Using Code Coverage in batchmode}}
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md792}{}\doxysection{\texorpdfstring{\mbox{[}0.\+2.\+2-\/preview\mbox{]} -\/ 2019-\/12-\/11}{\mbox{[}0.\+2.\+2-\/preview\mbox{]} -\/ 2019-\/12-\/11}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md792}
+\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md793}{}\doxysubsection{\texorpdfstring{Fixes}{Fixes}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md793}
+
+\begin{DoxyItemize}
+\item Fixed unassigned {\itshape Code\+Coverage\+Window.\+m\+\_\+\+Include\+Warnings} warning in 2019.\+3
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md794}{}\doxysubsection{\texorpdfstring{Changes}{Changes}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md794}
+
+\begin{DoxyItemize}
+\item The default {\itshape Included Assemblies} are now only the assemblies found under the project\textquotesingle{}s {\itshape Assets} folder, instead of all project assemblies
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md795}{}\doxysubsection{\texorpdfstring{Improvements}{Improvements}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md795}
+
+\begin{DoxyItemize}
+\item After the report is generated, the file viewer window highlights the {\ttfamily index.\+htm} file, if {\itshape Generate HTML Report} is selected
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md796}{}\doxysection{\texorpdfstring{\mbox{[}0.\+2.\+1-\/preview\mbox{]} -\/ 2019-\/12-\/04}{\mbox{[}0.\+2.\+1-\/preview\mbox{]} -\/ 2019-\/12-\/04}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md796}
+\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md797}{}\doxysubsection{\texorpdfstring{Improvements}{Improvements}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md797}
+
+\begin{DoxyItemize}
+\item Improved globbing for {\ttfamily path\+Filters} and {\ttfamily assembly\+Filters}
+\item Added new sections and examples in documentation
+\item Added confirmation dialogs when selecting {\itshape Clear Data} and {\itshape Clear History} buttons
+\item Added warning and button to switch to debug mode, when using Code Optimization in release mode in 2020.\+1 and above
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md798}{}\doxysubsection{\texorpdfstring{Features}{Features}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md798}
+
+\begin{DoxyItemize}
+\item Added {\ttfamily path\+Filters} in {\itshape -\/coverage\+Options} for \href{https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@0.2/manual/UsingCodeCoverage.html\#using-code-coverage-in-batchmode}{\texttt{ batchmode}}
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md799}{}\doxysection{\texorpdfstring{\mbox{[}0.\+2.\+0-\/preview\mbox{]} -\/ 2019-\/11-\/13}{\mbox{[}0.\+2.\+0-\/preview\mbox{]} -\/ 2019-\/11-\/13}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md799}
+\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md800}{}\doxysubsection{\texorpdfstring{Fixes}{Fixes}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md800}
+
+\begin{DoxyItemize}
+\item Make sure recording coverage results are saved in the {\itshape Recording} folder, and starting a new recording session does not affect existing non-\/recording data
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md801}{}\doxysubsection{\texorpdfstring{Changes}{Changes}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md801}
+
+\begin{DoxyItemize}
+\item Updated Report Generator to version 4.\+3.\+6
+\item Split documentation into separate pages
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md802}{}\doxysubsection{\texorpdfstring{Improvements}{Improvements}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md802}
+
+\begin{DoxyItemize}
+\item Updated UX design of the Code Coverage window
+\item Make sure settings and Record button are disabled when coverage is running
+\item Make sure coverage window is disabled before unity is restarted when {\itshape Enabling Code Coverage} in Preferences
+\item Only parse xml files with the correct filename format when generating the report
+\item Implemented try/catch when deleting files/folders when selecting {\itshape Clear Data} or {\itshape Clear History}
+\item Handle nested classes, nested generic classes and anonymous functions
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md803}{}\doxysubsection{\texorpdfstring{Features}{Features}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md803}
+
+\begin{DoxyItemize}
+\item Exposed {\ttfamily Code\+Coverage.\+Start\+Recording()}, {\ttfamily Code\+Coverage.\+Stop\+Recording()}, {\ttfamily Code\+Coverage.\+Pause\+Recording()} and {\ttfamily Code\+Coverage.\+Unpause\+Recording()} \href{https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@0.2/api/UnityEditor.TestTools.CodeCoverage.CodeCoverage.html}{\texttt{ API}}
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md804}{}\doxysection{\texorpdfstring{\mbox{[}0.\+1.\+0-\/preview.\+3\mbox{]} -\/ 2019-\/09-\/27}{\mbox{[}0.\+1.\+0-\/preview.\+3\mbox{]} -\/ 2019-\/09-\/27}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md804}
+\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md805}{}\doxysubsection{\texorpdfstring{Improvements}{Improvements}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md805}
+
+\begin{DoxyItemize}
+\item Passing {\ttfamily -\/coverage\+Options generate\+Html\+Report} on the command line now creates a report if {\ttfamily -\/run\+Tests} is not passed
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md806}{}\doxysection{\texorpdfstring{\mbox{[}0.\+1.\+0-\/preview.\+2\mbox{]} -\/ 2019-\/09-\/23}{\mbox{[}0.\+1.\+0-\/preview.\+2\mbox{]} -\/ 2019-\/09-\/23}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md806}
+\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md807}{}\doxysubsection{\texorpdfstring{Changes}{Changes}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md807}
+
+\begin{DoxyItemize}
+\item Updated Report Generator to version 4.\+2.\+20
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md808}{}\doxysubsection{\texorpdfstring{Improvements}{Improvements}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md808}
+
+\begin{DoxyItemize}
+\item Added support for correct naming of c\# operators
+\item Added support for correct naming of constructors
+\item Added declaring type name as a prefix
+\item Added support for return types in method names
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md809}{}\doxysubsection{\texorpdfstring{Features}{Features}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md809}
+
+\begin{DoxyItemize}
+\item Added \href{https://docs.unity3d.com/Packages/com.unity.testtools.codecoverage@0.2/manual/CoverageRecording.html}{\texttt{ Coverage Recording}} feature
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md810}{}\doxysection{\texorpdfstring{\mbox{[}0.\+1.\+0-\/preview.\+0\mbox{]} -\/ 2019-\/03-\/18}{\mbox{[}0.\+1.\+0-\/preview.\+0\mbox{]} -\/ 2019-\/03-\/18}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md810}
+\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md811}{}\doxysubsection{\texorpdfstring{This is the first release of {\itshape Code Coverage Package}}{This is the first release of {\itshape Code Coverage Package}}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_c_h_a_n_g_e_l_o_g_autotoc_md811}

@@ -1,0 +1,148 @@
+\doxysection{Unity\+Editor.\+Timeline.\+Moving\+Items Class Reference}
+\hypertarget{class_unity_editor_1_1_timeline_1_1_moving_items}{}\label{class_unity_editor_1_1_timeline_1_1_moving_items}\index{UnityEditor.Timeline.MovingItems@{UnityEditor.Timeline.MovingItems}}
+Inheritance diagram for Unity\+Editor.\+Timeline.\+Moving\+Items\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_editor_1_1_timeline_1_1_moving_items}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_moving_items_af5725311025b1ad5e9a9557e154e8c37}{Moving\+Items}} (\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_window_state}{Window\+State}} state, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} parent\+Track, \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_timeline_item}{ITimeline\+Item}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_items_per_track_a9d7aeea8e6a0e84fb1205ffefd11fc27}{items}}, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} reference\+Track, Vector2 mouse\+Position, bool allow\+Track\+Switch)
+\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_moving_items_a53c09b37d30cae710c8808e9b86c5bb5}{Set\+Reference\+Track}} (\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} track)
+\item 
+bool \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_moving_items_afbd44f4496ffd82872c9120de8959c14}{Has\+Any\+Detached\+Parents}} ()
+\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_moving_items_a0c5b0bef1e3d7ef3c4411ba50fd2096d}{Refresh\+Bounds}} (\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_window_state}{Window\+State}} state, Vector2 mouse\+Position)
+\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_moving_items_af39ee0b34c59524ed63641226a2cc5dd}{Draw}} (bool is\+Valid)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_items_per_track}{Unity\+Editor.\+Timeline.\+Items\+Per\+Track}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_items_per_track_aafaeb74b1cec7e387bcc32c79ec85849}{Items\+Per\+Track}} (\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_items_per_track_a14da4c0a7f88a227907be38a98351073}{target\+Track}}, IEnumerable$<$ \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_timeline_item}{ITimeline\+Item}} $>$ \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_items_per_track_a9d7aeea8e6a0e84fb1205ffefd11fc27}{items}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_moving_items_a80f348e74be6dcc15fdae74765b28eaf}{can\+Drop}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_moving_items_a24b7ad52b3834c4faee68e9af6429988}{original\+Track}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+override \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_moving_items_a5ac16dea09e14c0b2862ea5e302829ed}{target\+Track}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+double \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_moving_items_a793146bb2142fe061d7d8e3865769f57}{start}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+double \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_moving_items_a3e9b900991f4e9cc4597ac7e97004fde}{end}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Rect\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_moving_items_a48237f33d7583833657eea01b6303918}{on\+Track\+Items\+Bounds}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_items_per_track}{Unity\+Editor.\+Timeline.\+Items\+Per\+Track}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_items_per_track_a14da4c0a7f88a227907be38a98351073}{target\+Track}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+IEnumerable$<$ \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_timeline_item}{ITimeline\+Item}} $>$ \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_items_per_track_a9d7aeea8e6a0e84fb1205ffefd11fc27}{items}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+IEnumerable$<$ \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}} $>$ \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_items_per_track_a1d143fbb4b05d030fe1b6f8a0955a9af}{clips}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+IEnumerable$<$ \mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_marker}{IMarker}} $>$ \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_items_per_track_a6edda0b0ed349468744fb046ccdd0832}{markers}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_timeline_item}{ITimeline\+Item}} \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_items_per_track_aa841b1afbefbd0e4506bd985988cbf85}{left\+Most\+Item}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_timeline_item}{ITimeline\+Item}} \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_items_per_track_aa38e7fde23e922e6b3c1c8e4010867bb}{right\+Most\+Item}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_items_per_track}{Unity\+Editor.\+Timeline.\+Items\+Per\+Track}}}
+\begin{DoxyCompactItemize}
+\item 
+readonly \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_items_group}{Items\+Group}} \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_items_per_track_a06e849b8488766fb360e0d4953fa1bfa}{m\+\_\+\+Items\+Group}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_moving_items_af5725311025b1ad5e9a9557e154e8c37}\label{class_unity_editor_1_1_timeline_1_1_moving_items_af5725311025b1ad5e9a9557e154e8c37} 
+\index{UnityEditor.Timeline.MovingItems@{UnityEditor.Timeline.MovingItems}!MovingItems@{MovingItems}}
+\index{MovingItems@{MovingItems}!UnityEditor.Timeline.MovingItems@{UnityEditor.Timeline.MovingItems}}
+\doxysubsubsection{\texorpdfstring{MovingItems()}{MovingItems()}}
+{\footnotesize\ttfamily Unity\+Editor.\+Timeline.\+Moving\+Items.\+Moving\+Items (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_window_state}{Window\+State}}}]{state,  }\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}}}]{parent\+Track,  }\item[{\mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_timeline_item}{ITimeline\+Item}}\mbox{[}$\,$\mbox{]}}]{items,  }\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}}}]{reference\+Track,  }\item[{Vector2}]{mouse\+Position,  }\item[{bool}]{allow\+Track\+Switch }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_moving_items_af39ee0b34c59524ed63641226a2cc5dd}\label{class_unity_editor_1_1_timeline_1_1_moving_items_af39ee0b34c59524ed63641226a2cc5dd} 
+\index{UnityEditor.Timeline.MovingItems@{UnityEditor.Timeline.MovingItems}!Draw@{Draw}}
+\index{Draw@{Draw}!UnityEditor.Timeline.MovingItems@{UnityEditor.Timeline.MovingItems}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Unity\+Editor.\+Timeline.\+Moving\+Items.\+Draw (\begin{DoxyParamCaption}\item[{bool}]{is\+Valid }\end{DoxyParamCaption})}
+
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_moving_items_afbd44f4496ffd82872c9120de8959c14}\label{class_unity_editor_1_1_timeline_1_1_moving_items_afbd44f4496ffd82872c9120de8959c14} 
+\index{UnityEditor.Timeline.MovingItems@{UnityEditor.Timeline.MovingItems}!HasAnyDetachedParents@{HasAnyDetachedParents}}
+\index{HasAnyDetachedParents@{HasAnyDetachedParents}!UnityEditor.Timeline.MovingItems@{UnityEditor.Timeline.MovingItems}}
+\doxysubsubsection{\texorpdfstring{HasAnyDetachedParents()}{HasAnyDetachedParents()}}
+{\footnotesize\ttfamily bool Unity\+Editor.\+Timeline.\+Moving\+Items.\+Has\+Any\+Detached\+Parents (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_moving_items_a0c5b0bef1e3d7ef3c4411ba50fd2096d}\label{class_unity_editor_1_1_timeline_1_1_moving_items_a0c5b0bef1e3d7ef3c4411ba50fd2096d} 
+\index{UnityEditor.Timeline.MovingItems@{UnityEditor.Timeline.MovingItems}!RefreshBounds@{RefreshBounds}}
+\index{RefreshBounds@{RefreshBounds}!UnityEditor.Timeline.MovingItems@{UnityEditor.Timeline.MovingItems}}
+\doxysubsubsection{\texorpdfstring{RefreshBounds()}{RefreshBounds()}}
+{\footnotesize\ttfamily void Unity\+Editor.\+Timeline.\+Moving\+Items.\+Refresh\+Bounds (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_window_state}{Window\+State}}}]{state,  }\item[{Vector2}]{mouse\+Position }\end{DoxyParamCaption})}
+
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_moving_items_a53c09b37d30cae710c8808e9b86c5bb5}\label{class_unity_editor_1_1_timeline_1_1_moving_items_a53c09b37d30cae710c8808e9b86c5bb5} 
+\index{UnityEditor.Timeline.MovingItems@{UnityEditor.Timeline.MovingItems}!SetReferenceTrack@{SetReferenceTrack}}
+\index{SetReferenceTrack@{SetReferenceTrack}!UnityEditor.Timeline.MovingItems@{UnityEditor.Timeline.MovingItems}}
+\doxysubsubsection{\texorpdfstring{SetReferenceTrack()}{SetReferenceTrack()}}
+{\footnotesize\ttfamily void Unity\+Editor.\+Timeline.\+Moving\+Items.\+Set\+Reference\+Track (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}}}]{track }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_moving_items_a80f348e74be6dcc15fdae74765b28eaf}\label{class_unity_editor_1_1_timeline_1_1_moving_items_a80f348e74be6dcc15fdae74765b28eaf} 
+\index{UnityEditor.Timeline.MovingItems@{UnityEditor.Timeline.MovingItems}!canDrop@{canDrop}}
+\index{canDrop@{canDrop}!UnityEditor.Timeline.MovingItems@{UnityEditor.Timeline.MovingItems}}
+\doxysubsubsection{\texorpdfstring{canDrop}{canDrop}}
+{\footnotesize\ttfamily bool Unity\+Editor.\+Timeline.\+Moving\+Items.\+can\+Drop}
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_moving_items_a3e9b900991f4e9cc4597ac7e97004fde}\label{class_unity_editor_1_1_timeline_1_1_moving_items_a3e9b900991f4e9cc4597ac7e97004fde} 
+\index{UnityEditor.Timeline.MovingItems@{UnityEditor.Timeline.MovingItems}!end@{end}}
+\index{end@{end}!UnityEditor.Timeline.MovingItems@{UnityEditor.Timeline.MovingItems}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily double Unity\+Editor.\+Timeline.\+Moving\+Items.\+end\hspace{0.3cm}{\ttfamily [get]}}
+
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_moving_items_a48237f33d7583833657eea01b6303918}\label{class_unity_editor_1_1_timeline_1_1_moving_items_a48237f33d7583833657eea01b6303918} 
+\index{UnityEditor.Timeline.MovingItems@{UnityEditor.Timeline.MovingItems}!onTrackItemsBounds@{onTrackItemsBounds}}
+\index{onTrackItemsBounds@{onTrackItemsBounds}!UnityEditor.Timeline.MovingItems@{UnityEditor.Timeline.MovingItems}}
+\doxysubsubsection{\texorpdfstring{onTrackItemsBounds}{onTrackItemsBounds}}
+{\footnotesize\ttfamily Rect \mbox{[}$\,$\mbox{]} Unity\+Editor.\+Timeline.\+Moving\+Items.\+on\+Track\+Items\+Bounds\hspace{0.3cm}{\ttfamily [get]}}
+
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_moving_items_a24b7ad52b3834c4faee68e9af6429988}\label{class_unity_editor_1_1_timeline_1_1_moving_items_a24b7ad52b3834c4faee68e9af6429988} 
+\index{UnityEditor.Timeline.MovingItems@{UnityEditor.Timeline.MovingItems}!originalTrack@{originalTrack}}
+\index{originalTrack@{originalTrack}!UnityEditor.Timeline.MovingItems@{UnityEditor.Timeline.MovingItems}}
+\doxysubsubsection{\texorpdfstring{originalTrack}{originalTrack}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} Unity\+Editor.\+Timeline.\+Moving\+Items.\+original\+Track\hspace{0.3cm}{\ttfamily [get]}}
+
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_moving_items_a793146bb2142fe061d7d8e3865769f57}\label{class_unity_editor_1_1_timeline_1_1_moving_items_a793146bb2142fe061d7d8e3865769f57} 
+\index{UnityEditor.Timeline.MovingItems@{UnityEditor.Timeline.MovingItems}!start@{start}}
+\index{start@{start}!UnityEditor.Timeline.MovingItems@{UnityEditor.Timeline.MovingItems}}
+\doxysubsubsection{\texorpdfstring{start}{start}}
+{\footnotesize\ttfamily double Unity\+Editor.\+Timeline.\+Moving\+Items.\+start\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_moving_items_a5ac16dea09e14c0b2862ea5e302829ed}\label{class_unity_editor_1_1_timeline_1_1_moving_items_a5ac16dea09e14c0b2862ea5e302829ed} 
+\index{UnityEditor.Timeline.MovingItems@{UnityEditor.Timeline.MovingItems}!targetTrack@{targetTrack}}
+\index{targetTrack@{targetTrack}!UnityEditor.Timeline.MovingItems@{UnityEditor.Timeline.MovingItems}}
+\doxysubsubsection{\texorpdfstring{targetTrack}{targetTrack}}
+{\footnotesize\ttfamily override \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} Unity\+Editor.\+Timeline.\+Moving\+Items.\+target\+Track\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+7.\+6/\+Editor/\+Manipulators/\+Move/\mbox{\hyperlink{_moving_items_8cs}{Moving\+Items.\+cs}}\end{DoxyCompactItemize}

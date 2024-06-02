@@ -1,0 +1,41 @@
+\chapter{Animation clip Playable Asset properties}
+\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2insp__clp__anim__plyb}{}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2insp__clp__anim__plyb}\index{Animation clip Playable Asset properties@{Animation clip Playable Asset properties}}
+\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2insp__clp__anim__plyb_autotoc_md1161}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2insp__clp__anim__plyb_autotoc_md1161}%
+ Use the Inspector window to change the Playable Asset properties of an Animation clip. These properties include controls for manually applying position and rotation clip offsets, and options for overriding default clip matching.
+
+To view the Playable Asset properties for an Animation clip, select an Animation clip in the \doxylink{namespace_timeline}{Timeline} window and expand {\bfseries{Animation Playable Asset}} in the Inspector window.
+
+
+
+{\itshape Inspector window showing the {\bfseries{Animation Playable Asset}} properties for the selected Animation clip}\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2insp__clp__anim__plyb_autotoc_md1162}{}\doxysection{\texorpdfstring{Animation Clip}{Animation Clip}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2insp__clp__anim__plyb_autotoc_md1162}
+Use the {\bfseries{Animation Clip}} to change the source asset used by the clip on the Animation track. The source asset is either a \doxysectlink{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2wf__rec__anim}{recorded Infinite clip}{0} or an \doxysectlink{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2wf__char__anim}{external motion clip}{0}.\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2insp__clp__anim__plyb_autotoc_md1163}{}\doxysection{\texorpdfstring{Clip Transform Offsets}{Clip Transform Offsets}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2insp__clp__anim__plyb_autotoc_md1163}
+Use the {\bfseries{Clip Transform Offsets}} area to manually apply position and rotation offsets to the selected Animation clip. The tools and properties underneath the Clip Transform Offsets provide two methods of manually applying offsets based on the selected source\+:
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property\+:}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description\+:}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property\+:}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description\+:}}    }\\\cline{1-2}
+\endhead
+{\bfseries{Move tool}}   &Shows a Move Gizmo in the Scene view. Use the Move Gizmo to manually position the clip offset for the selected Animation clip. Using the Move Gizmo changes the Position coordinates.    \\\cline{1-2}
+{\bfseries{Rotate tool}}   &Shows a Rotate Gizmo in the Scene view. Use the Rotate Gizmo to manually rotate the clip offset for the selected Animation clip. Using the Rotate Gizmo changes the Rotation coordinates.    \\\cline{1-2}
+{\bfseries{Position}}   &Manually sets the clip offset in X, Y, and Z coordinates. By default, the Position coordinates are set to zero and are relative to the \doxysectlink{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2insp__trk__anim}{track offsets}{0}.    \\\cline{1-2}
+{\bfseries{Rotation}}   &Manually sets the clip rotation offset around the X, Y, and Z axes. By default, the Rotation axes are set to zero and are relative to the \doxysectlink{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2insp__trk__anim}{track offsets}{0}.   \\\cline{1-2}
+\end{longtabu}
+
+
+You can also \doxysectlink{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2clp__match}{automatically match the clip offsets}{0} based on the end of the previous Animation clip, or the start of the next Animation clip. The transforms that are matched depends on the {\bfseries{Offset Match Fields}}.\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2insp__clp__anim__plyb_autotoc_md1164}{}\doxysection{\texorpdfstring{Offsets Match Fields}{Offsets Match Fields}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2insp__clp__anim__plyb_autotoc_md1164}
+Use {\bfseries{Offsets Match Fields}} to choose which transforms to match when \doxysectlink{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2clp__match}{matching clip offsets}{0}. By default, {\bfseries{Use Defaults}} is enabled and uses the default matching options set for the \doxysectlink{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2insp__trk__anim}{Animation track}{0}.
+
+Disable {\bfseries{Use Defaults}} to override the track matching options and choose which transformations to match when performing a Match Offsets to Previous Clip or Match Offsets to Next Clip for the selected Animation clip. When you disable {\bfseries{Offsets Match Fields}}, a series of additional checkboxes appear. Use these additional checkboxes to enable or disable matching per coordinate, for both position and rotation.\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2insp__clp__anim__plyb_autotoc_md1165}{}\doxysection{\texorpdfstring{Remove Start Offset}{Remove Start Offset}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2insp__clp__anim__plyb_autotoc_md1165}
+Enable {\bfseries{Remove Start Offset}} to make the Animation clip begin at position zero and rotation zero. The rest of the position and rotation keys in the Animation clip follow from zero. Enabling {\bfseries{Remove Start Offset}} makes it easier to match the Animation clip with the previous Animation clip.
+
+Disable {\bfseries{Remove Start Offset}} to keep the starting position and rotation. The Animation clip starts from its original position and rotation.\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2insp__clp__anim__plyb_autotoc_md1166}{}\doxysection{\texorpdfstring{Foot IK}{Foot IK}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2insp__clp__anim__plyb_autotoc_md1166}
+Enable {\bfseries{Foot IK}} if the Animation clip is animating a humanoid and you want to use inverse kinematics for foot solving. Inverse kinematics attempts to remedy foot sliding by solving and influencing foot placement from the foot to the hip of the humanoid.
+
+Disable Foot IK if the Animation clip is animating a non-\/humanoid object such as a moving platform or a quadruped character with a non-\/human bone structure. 

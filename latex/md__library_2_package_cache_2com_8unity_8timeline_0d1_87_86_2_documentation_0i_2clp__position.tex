@@ -1,0 +1,53 @@
+\chapter{Positioning clips}
+\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2clp__position}{}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2clp__position}\index{Positioning clips@{Positioning clips}}
+\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2clp__position_autotoc_md1120}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2clp__position_autotoc_md1120}%
+ To position a clip, select Mix mode as the Clip Edit mode. Select a clip and hover over the middle of the clip. When the cursor changes to a position cursor, click and drag the clip to its new position.
+
+While dragging, black lines indicate the selection of clips being positioned. The \doxylink{namespace_timeline}{Timeline} ruler shows the start time and end time of the selected clips being positioned.
+
+
+
+{\itshape Select Mix mode (circled). Select and drag to position a clip.}
+
+By default, when you drag to position clips, both Snap to Frame and Edge Snap are enabled in the Clips view. You can change these snap settings in the \doxysectlink{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__settings}{Timeline Settings}{0} menu.
+
+You can also move a clip to another track of the same type. Drag the clip off of its current track and a white ghost indicates where the clip will be moved. If you drag a clip to an area where the clip cannot be placed, the ghost changes to red indicating that you cannot release the clip in that area. For example, you cannot drag a clip where there is no track.
+
+
+
+{\itshape The ghost of the selection being moved is drawn in red if you attempt to move a clip to an invalid area}
+
+You can position a selection of clips on the same track, or on different tracks. You are not limited to positioning one clip at a time. The same edge snapping rules and invalid area restrictions apply when positioning a selection of clips on many tracks.\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2clp__position_autotoc_md1121}{}\doxysection{\texorpdfstring{Positioning clips with the Inspector window}{Positioning clips with the Inspector window}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2clp__position_autotoc_md1121}
+You can use the \doxysectlink{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2insp__clp}{Inspector window to position clips}{0}. To position a clip with the Inspector window, select a clip and use the Clip Timing properties in the Inspector window to change its {\bfseries{Start}} property.
+
+
+
+{\itshape Clip Timing properties for an Animation clip}
+
+The effect that changing the Start value has on adjacent clips depends on the selected Clip Edit mode.\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2clp__position_autotoc_md1122}{}\doxysection{\texorpdfstring{Positioning clips in different Clip Edit modes}{Positioning clips in different Clip Edit modes}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2clp__position_autotoc_md1122}
+You are not restricted to positioning clips with Mix mode as the selected Clip Edit mode. You can also position clips in Ripple mode and in Replace mode. The difference is the effect each Clip Edit mode has on adjacent clips on the tracks where clips are being moved\+:
+
+
+\begin{DoxyItemize}
+\item Positioning clips in Mix mode creates blends between intersecting clips.
+\item Positioning clips in Ripple mode ripples subsequent clips, respecting the gaps between clips.
+\item Positioning clips in Replace mode cuts or replaces intersecting clips.
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2clp__position_autotoc_md1123}{}\doxysection{\texorpdfstring{Positioning clips with the Timeline Playhead}{Positioning clips with the Timeline Playhead}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2clp__position_autotoc_md1123}
+You can position clips by inserting frames at the position of the \doxylink{namespace_timeline}{Timeline} Playhead. To do this, move the \doxylink{namespace_timeline}{Timeline} Playhead to where you want to insert frames.
+
+
+
+{\itshape To insert frames starting at frame 40, move the \doxylink{namespace_timeline}{Timeline} Playhead to frame 40}
+
+Right-\/click the \doxylink{namespace_timeline}{Timeline} Playhead on the \doxylink{namespace_timeline}{Timeline} ruler above the Clips view, choose {\bfseries{Insert}} \texorpdfstring{$>$}{>} {\bfseries{Frame}}, and a number of frames.
+
+
+
+{\itshape To insert 25 frames, right-\/click the \doxylink{namespace_timeline}{Timeline} Playhead and select {\bfseries{Insert}} \texorpdfstring{$>$}{>} {\bfseries{Frame}}, then 25 Frames}
+
+This inserts frames in the \doxylink{namespace_timeline}{Timeline} Asset at the position of the \doxylink{namespace_timeline}{Timeline} Playhead. Inserting frames only repositions the clips that start {\bfseries{after}} the position of the \doxylink{namespace_timeline}{Timeline} Playhead.
+
+
+
+{\itshape Only the clips that start after the \doxylink{namespace_timeline}{Timeline} Playhead are moved. In this example, inserting 25 frames at frame 40 affects Clip 1B, Clip 2B, and Clip 2C.} 

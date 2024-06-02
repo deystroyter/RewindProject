@@ -1,0 +1,61 @@
+\chapter{About Editor Coroutines}
+\hypertarget{md__library_2_package_cache_2com_8unity_8editorcoroutines_0d1_80_80_2_documentation_0i_2index}{}\label{md__library_2_package_cache_2com_8unity_8editorcoroutines_0d1_80_80_2_documentation_0i_2index}\index{About Editor Coroutines@{About Editor Coroutines}}
+\label{md__library_2_package_cache_2com_8unity_8editorcoroutines_0d1_80_80_2_documentation_0i_2index_autotoc_md191}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8editorcoroutines_0d1_80_80_2_documentation_0i_2index_autotoc_md191}%
+ The Editor Coroutines package allows the user to start the execution of \href{https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/yield}{\texttt{ iterator methods}} within the Editor similar to how we handle \href{https://docs.unity3d.com/Manual/Coroutines.html}{\texttt{ Coroutines}} inside \href{https://docs.unity3d.com/ScriptReference/MonoBehaviour.html}{\texttt{ Mono\+Behaviour}} scripts during runtime.\hypertarget{md__library_2_package_cache_2com_8unity_8editorcoroutines_0d1_80_80_2_documentation_0i_2index_autotoc_md192}{}\doxysection{\texorpdfstring{Installing Editor Coroutines}{Installing Editor Coroutines}}\label{md__library_2_package_cache_2com_8unity_8editorcoroutines_0d1_80_80_2_documentation_0i_2index_autotoc_md192}
+To install this package, follow the instructions in the \href{https://docs.unity3d.com/Packages/com.unity.package-manager-ui@latest/index.html}{\texttt{ Package Manager documentation}}.
+
+\begin{quote}
+{\bfseries{Note}}\+: While this package is in preview, the Package Manager needs to be configured to show {\bfseries{Preview \doxylink{namespace_packages}{Packages}}}. (Under the {\bfseries{Advanced}} drop-\/down menu, enable {\bfseries{Show preview packages}}.) Then search for the Editor Coroutines package. \end{quote}
+\label{md__library_2_package_cache_2com_8unity_8editorcoroutines_0d1_80_80_2_documentation_0i_2index_UsingPackageName}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8editorcoroutines_0d1_80_80_2_documentation_0i_2index_UsingPackageName}%
+\hypertarget{md__library_2_package_cache_2com_8unity_8editorcoroutines_0d1_80_80_2_documentation_0i_2index_autotoc_md193}{}\doxysection{\texorpdfstring{Using Editor Coroutines}{Using Editor Coroutines}}\label{md__library_2_package_cache_2com_8unity_8editorcoroutines_0d1_80_80_2_documentation_0i_2index_autotoc_md193}
+To learn how to use the Editor Coroutines package in your project, please refer to the Scripting API section of the documentation.\hypertarget{md__library_2_package_cache_2com_8unity_8editorcoroutines_0d1_80_80_2_documentation_0i_2index_autotoc_md194}{}\doxysection{\texorpdfstring{Technical details}{Technical details}}\label{md__library_2_package_cache_2com_8unity_8editorcoroutines_0d1_80_80_2_documentation_0i_2index_autotoc_md194}
+\hypertarget{md__library_2_package_cache_2com_8unity_8editorcoroutines_0d1_80_80_2_documentation_0i_2index_autotoc_md195}{}\doxysubsection{\texorpdfstring{Requirements}{Requirements}}\label{md__library_2_package_cache_2com_8unity_8editorcoroutines_0d1_80_80_2_documentation_0i_2index_autotoc_md195}
+This version of Editor Coroutines is compatible with the following versions of the \doxylink{namespace_unity}{Unity} Editor\+:
+
+
+\begin{DoxyItemize}
+\item 2018.\+1 and later (recommended)
+\end{DoxyItemize}
+
+\begin{quote}
+{\bfseries{Note}}\+: If you install the Memory Profiler package it will automatically install the Editor Coroutines package as a dependency. \end{quote}
+\hypertarget{md__library_2_package_cache_2com_8unity_8editorcoroutines_0d1_80_80_2_documentation_0i_2index_autotoc_md196}{}\doxysubsection{\texorpdfstring{Known limitations}{Known limitations}}\label{md__library_2_package_cache_2com_8unity_8editorcoroutines_0d1_80_80_2_documentation_0i_2index_autotoc_md196}
+Editor Coroutines version 0.\+0.\+1-\/preview.\+2 includes the following known limitation(s)\+:
+
+The iterator functions passed to Editor Coroutines do not support yielding any of the instruction classes present inside the \doxylink{namespace_unity}{Unity} Scripting API (e.\+g., \href{https://docs.unity3d.com/ScriptReference/WaitForSeconds.html}{\texttt{ Wait\+For\+Seconds}}, \href{https://docs.unity3d.com/ScriptReference/WaitForEndOfFrame.html}{\texttt{ Wait\+For\+End\+Of\+Frame}}), except for the \href{https://docs.unity3d.com/ScriptReference/CustomYieldInstruction.html}{\texttt{ Custom\+Yield\+Instruction}} derived classes with the {\ttfamily Move\+Next} method implemented.
+
+\begin{quote}
+{\bfseries{Tip}}\+: {\ttfamily yield return null} is a way to skip a frame within the Editor. \end{quote}
+\hypertarget{md__library_2_package_cache_2com_8unity_8editorcoroutines_0d1_80_80_2_documentation_0i_2index_autotoc_md197}{}\doxysubsection{\texorpdfstring{Package contents}{Package contents}}\label{md__library_2_package_cache_2com_8unity_8editorcoroutines_0d1_80_80_2_documentation_0i_2index_autotoc_md197}
+The following table indicates the root folders in the package where you can find useful resources\+:
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Location   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Location   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endhead
+{\ttfamily Documentation\texorpdfstring{$\sim$}{\string~}}   &Contains the documentation for the package.    \\\cline{1-2}
+{\ttfamily \doxylink{namespace_tests}{Tests}}   &Contains the unit tests for the package.   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__library_2_package_cache_2com_8unity_8editorcoroutines_0d1_80_80_2_documentation_0i_2index_autotoc_md198}{}\doxysubsection{\texorpdfstring{Document revision history}{Document revision history}}\label{md__library_2_package_cache_2com_8unity_8editorcoroutines_0d1_80_80_2_documentation_0i_2index_autotoc_md198}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Date   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Reason    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Date   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Reason    }\\\cline{1-2}
+\endhead
+June 20, 2019   &Removed deprecated manual link.    \\\cline{1-2}
+Dec 7, 2018   &Api documentation added. Matches package version 0.\+0.\+1-\/preview.\+4.    \\\cline{1-2}
+Oct 11, 2018   &Document created. Matches package version 0.\+0.\+1-\/preview.\+2.   \\\cline{1-2}
+\end{longtabu}

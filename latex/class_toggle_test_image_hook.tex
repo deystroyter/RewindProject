@@ -1,0 +1,172 @@
+\doxysection{Toggle\+Test\+Image\+Hook Class Reference}
+\hypertarget{class_toggle_test_image_hook}{}\label{class_toggle_test_image_hook}\index{ToggleTestImageHook@{ToggleTestImageHook}}
+Inheritance diagram for Toggle\+Test\+Image\+Hook\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.821138cm]{class_toggle_test_image_hook}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_toggle_test_image_hook_a4893d275b2db80083f13d308afda052e}{Cross\+Fade\+Color}} (Color target\+Color, float duration, bool ignore\+Time\+Scale, bool use\+Alpha, bool use\+RGB)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_maskable_graphic}{Unity\+Engine.\+UI.\+Maskable\+Graphic}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual Material \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_maskable_graphic_a08cdd6ba228d1c72132a5c7dbdfa4958}{Get\+Modified\+Material}} (Material base\+Material)
+\begin{DoxyCompactList}\small\item\em See IMaterial\+Modifier.\+Get\+Modified\+Material. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_maskable_graphic_adc5580730216425ec6da811c9dbca08e}{Cull}} (Rect clip\+Rect, bool valid\+Rect)
+\begin{DoxyCompactList}\small\item\em See IClippable.\+Cull. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_maskable_graphic_ad434089f656a3d6944a6172391698e03}{Set\+Clip\+Rect}} (Rect clip\+Rect, bool valid\+Rect)
+\begin{DoxyCompactList}\small\item\em See IClippable.\+Set\+Clip\+Rect. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_maskable_graphic_a7d529345c46cba834558aeab469007ad}{Set\+Clip\+Softness}} (Vector2 clip\+Softness)
+\begin{DoxyCompactList}\small\item\em Set the clip softness for the IClippable. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_maskable_graphic_ae2fe133f176727b170638de39e54b86a}{Parent\+Mask\+State\+Changed}} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_maskable_graphic_a50a7c755855aaac608d6dd1f3b674f1d}{Recalculate\+Clipping}} ()
+\begin{DoxyCompactList}\small\item\em See IClippable.\+Recalculate\+Clipping. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_maskable_graphic_a661cf20be729e50931e4b72766259931}{Recalculate\+Masking}} ()
+\begin{DoxyCompactList}\small\item\em See IMaskable.\+Recalculate\+Masking. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element}{Unity\+Engine.\+UI.\+ILayout\+Element}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a38e697b28b30f3ff350c0c43d9c29441}{Calculate\+Layout\+Input\+Horizontal}} ()
+\begin{DoxyCompactList}\small\item\em After this method is invoked, layout horizontal input properties should return up-\/to-\/date values. Children will already have up-\/to-\/date layout horizontal inputs when this methods is called. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a1e0f42ff8a350a7996b1ebfacdac2b0b}{Calculate\+Layout\+Input\+Vertical}} ()
+\begin{DoxyCompactList}\small\item\em After this method is invoked, layout vertical input properties should return up-\/to-\/date values. Children will already have up-\/to-\/date layout vertical inputs when this methods is called. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_toggle_test_image_hook_ae5a474c3438ce1c39ff1516c4f4a4331}{duration\+Tween}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image}{Unity\+Engine.\+UI.\+Image}}}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_ac8ca5b86942f856ba1e5c94d638edc44}{Type}} \{ \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_ac8ca5b86942f856ba1e5c94d638edc44a1fbb1e3943c2c6c560247ac8f9289780}{Simple}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_ac8ca5b86942f856ba1e5c94d638edc44afa6a7b9fa989f179f6bbf2796bf4337c}{Sliced}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_ac8ca5b86942f856ba1e5c94d638edc44a320af35370596a9ea75686c6624a9f07}{Tiled}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_ac8ca5b86942f856ba1e5c94d638edc44ad9d586f8c792f8f661052af42536323c}{Filled}}
+ \}
+\begin{DoxyCompactList}\small\item\em Image fill type controls how to display the image. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a3400198db3dcbb58d8718391e0fe6264}{Fill\+Method}} \{ \newline
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a3400198db3dcbb58d8718391e0fe6264ac1b5fa03ecdb95d4a45dd1c40b02527f}{Horizontal}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a3400198db3dcbb58d8718391e0fe6264a06ce2a25e5d12c166a36f654dbea6012}{Vertical}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a3400198db3dcbb58d8718391e0fe6264ae0dfa985a2ef37ae7d082e900b6238e3}{Radial90}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a3400198db3dcbb58d8718391e0fe6264a6bd7fc00f06215961bb5f04035792535}{Radial180}}
+, \newline
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a3400198db3dcbb58d8718391e0fe6264a48e5a36465bbfc8b2a203cb260e29cfe}{Radial360}}
+ \}
+\begin{DoxyCompactList}\small\item\em The possible fill method types for a Filled Image. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a7930dd0018586b7a106c332efb22cc8b}{Origin\+Horizontal}} \{ \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a7930dd0018586b7a106c332efb22cc8ba945d5e233cf7d6240f6b783b36a374ff}{Left}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a7930dd0018586b7a106c332efb22cc8ba92b09c7c48c520c3c55e497875da437c}{Right}}
+ \}
+\begin{DoxyCompactList}\small\item\em Origin for the Image.\+Fill\+Method.\+Horizontal. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a846c0b9bc908f5b0f98bfb1f199c2c36}{Origin\+Vertical}} \{ \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a846c0b9bc908f5b0f98bfb1f199c2c36a2ad9d63b69c4a10a5cc9cad923133bc4}{Bottom}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a846c0b9bc908f5b0f98bfb1f199c2c36aa4ffdcf0dc1f31b9acaf295d75b51d00}{Top}}
+ \}
+\begin{DoxyCompactList}\small\item\em Origin for the Image.\+Fill\+Method.\+Vertical. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a709fe5ae5ffcfc60981013279425c59f}{Origin90}} \{ \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a709fe5ae5ffcfc60981013279425c59fa98e5a1c44509157ebcaf46c515c78875}{Bottom\+Left}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a709fe5ae5ffcfc60981013279425c59fab32beb056fbfe36afbabc6c88c81ab36}{Top\+Left}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a709fe5ae5ffcfc60981013279425c59fa1d85a557894c340c318493f33bfa8efb}{Top\+Right}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a709fe5ae5ffcfc60981013279425c59fa9146bfc669fddc88db2c4d89297d0e9a}{Bottom\+Right}}
+ \}
+\begin{DoxyCompactList}\small\item\em Origin for the Image.\+Fill\+Method.\+Radial90. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a20ea7c76bb558fe160c6114254e6f885}{Origin180}} \{ \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a20ea7c76bb558fe160c6114254e6f885a2ad9d63b69c4a10a5cc9cad923133bc4}{Bottom}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a20ea7c76bb558fe160c6114254e6f885a945d5e233cf7d6240f6b783b36a374ff}{Left}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a20ea7c76bb558fe160c6114254e6f885aa4ffdcf0dc1f31b9acaf295d75b51d00}{Top}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a20ea7c76bb558fe160c6114254e6f885a92b09c7c48c520c3c55e497875da437c}{Right}}
+ \}
+\begin{DoxyCompactList}\small\item\em Origin for the Image.\+Fill\+Method.\+Radial180. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a8835e7ff1cf68e7c2fe338539ea2c312}{Origin360}} \{ \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a8835e7ff1cf68e7c2fe338539ea2c312a2ad9d63b69c4a10a5cc9cad923133bc4}{Bottom}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a8835e7ff1cf68e7c2fe338539ea2c312a92b09c7c48c520c3c55e497875da437c}{Right}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a8835e7ff1cf68e7c2fe338539ea2c312aa4ffdcf0dc1f31b9acaf295d75b51d00}{Top}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a8835e7ff1cf68e7c2fe338539ea2c312a945d5e233cf7d6240f6b783b36a374ff}{Left}}
+ \}
+\begin{DoxyCompactList}\small\item\em One of the points of the Arc for the Image.\+Fill\+Method.\+Radial360. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_maskable_graphic}{Unity\+Engine.\+UI.\+Maskable\+Graphic}}}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_maskable_graphic_ae2db0491c74feed4d4e25583322bfaf7}{On\+Enable}} ()
+\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_maskable_graphic_a4d87d0850d3fb93e41f4b9e93f9ae76e}{On\+Disable}} ()
+\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_maskable_graphic_a9b5b2495e742c2f9552311b8c103b943}{On\+Transform\+Parent\+Changed}} ()
+\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_maskable_graphic_ab51e14fb527823b1042a38cbb74cec58}{On\+Canvas\+Hierarchy\+Changed}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_maskable_graphic}{Unity\+Engine.\+UI.\+Maskable\+Graphic}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_maskable_graphic_af6c9a3801fbccb39a87a764df550d555}{m\+\_\+\+Should\+Recalculate\+Stencil}} = true
+\item 
+Material \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_maskable_graphic_a8412a5fd33d2cb87b8467c3f16c31cc3}{m\+\_\+\+Mask\+Material}}
+\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_maskable_graphic_a074cd6c5d806f1a48a368d608458ac7d}{m\+\_\+\+Include\+For\+Masking}} = false
+\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_maskable_graphic_aab0de63f1498250d98217edf556bd1a5}{m\+\_\+\+Should\+Recalculate}} = true
+\item 
+int \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_maskable_graphic_a7f2d20a51992060fbe51d1d7be693c75}{m\+\_\+\+Stencil\+Value}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes inherited from \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image}{Unity\+Engine.\+UI.\+Image}}}
+\begin{DoxyCompactItemize}
+\item 
+static Material \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_image_a62939b0c582cfa78bf52c426c0a5b063}{s\+\_\+\+ETC1\+Default\+UI}} = null
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_maskable_graphic}{Unity\+Engine.\+UI.\+Maskable\+Graphic}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_maskable_graphic_1_1_cull_state_changed_event}{Cull\+State\+Changed\+Event}} \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_maskable_graphic_a254747bd8a339db2f8e86525fe5e6ad9}{on\+Cull\+State\+Changed}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Callback issued when culling changes. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_maskable_graphic_a9b63d2b215f916d09659f261912529d1}{maskable}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Does this graphic allow masking. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_maskable_graphic_a538bce32c79e9f767c9ee6fbdacffe24}{is\+Masking\+Graphic}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Is this graphic the graphic on the same object as a Mask that is enabled. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_clippable}{Unity\+Engine.\+UI.\+IClippable}}}
+\begin{DoxyCompactItemize}
+\item 
+Game\+Object \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_clippable_a68c9fb9a9fcd380b8f14fc7f3fba5f6d}{game\+Object}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Game\+Object of the IClippable object. \end{DoxyCompactList}\item 
+Rect\+Transform \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_clippable_a77d35f9fab18c019194ae39aa9f0251c}{rect\+Transform}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The Rect\+Transform of the clippable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element}{Unity\+Engine.\+UI.\+ILayout\+Element}}}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a61f430b52f90f43b91f9ded0fcee43d6}{min\+Width}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The minimum width this layout element may be allocated. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a69c7300cf30f5787cbb8e6750cf9a035}{preferred\+Width}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The preferred width this layout element should be allocated if there is sufficient space. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a8c4aaed207092d7d625b40c383e21816}{flexible\+Width}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The extra relative width this layout element should be allocated if there is additional available space. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a05bfb63b5a7eb646ba6576af07060333}{min\+Height}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The minimum height this layout element may be allocated. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a103a61023ccb5bc93fbb3cc8c3460531}{preferred\+Height}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The preferred height this layout element should be allocated if there is sufficient space. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a98516af90dc6529d486803b6774dc798}{flexible\+Height}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The extra relative height this layout element should be allocated if there is additional available space. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a13e5c560042cac2db6ddfd22143f1be9}{layout\+Priority}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The layout priority of this component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_toggle_test_image_hook_a4893d275b2db80083f13d308afda052e}\label{class_toggle_test_image_hook_a4893d275b2db80083f13d308afda052e} 
+\index{ToggleTestImageHook@{ToggleTestImageHook}!CrossFadeColor@{CrossFadeColor}}
+\index{CrossFadeColor@{CrossFadeColor}!ToggleTestImageHook@{ToggleTestImageHook}}
+\doxysubsubsection{\texorpdfstring{CrossFadeColor()}{CrossFadeColor()}}
+{\footnotesize\ttfamily override void Toggle\+Test\+Image\+Hook.\+Cross\+Fade\+Color (\begin{DoxyParamCaption}\item[{Color}]{target\+Color,  }\item[{float}]{duration,  }\item[{bool}]{ignore\+Time\+Scale,  }\item[{bool}]{use\+Alpha,  }\item[{bool}]{use\+RGB }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_toggle_test_image_hook_ae5a474c3438ce1c39ff1516c4f4a4331}\label{class_toggle_test_image_hook_ae5a474c3438ce1c39ff1516c4f4a4331} 
+\index{ToggleTestImageHook@{ToggleTestImageHook}!durationTween@{durationTween}}
+\index{durationTween@{durationTween}!ToggleTestImageHook@{ToggleTestImageHook}}
+\doxysubsubsection{\texorpdfstring{durationTween}{durationTween}}
+{\footnotesize\ttfamily float Toggle\+Test\+Image\+Hook.\+duration\+Tween}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Tests/\+Runtime/\+Graphic/\mbox{\hyperlink{_toggle_test_image_hook_8cs}{Toggle\+Test\+Image\+Hook.\+cs}}\end{DoxyCompactItemize}

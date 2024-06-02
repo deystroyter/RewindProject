@@ -1,0 +1,241 @@
+\doxysection{Unity\+Editor.\+Timeline.\+ISequence\+State Interface Reference}
+\hypertarget{interface_unity_editor_1_1_timeline_1_1_i_sequence_state}{}\label{interface_unity_editor_1_1_timeline_1_1_i_sequence_state}\index{UnityEditor.Timeline.ISequenceState@{UnityEditor.Timeline.ISequenceState}}
+Inheritance diagram for Unity\+Editor.\+Timeline.\+ISequence\+State\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{interface_unity_editor_1_1_timeline_1_1_i_sequence_state}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_range}{Range}} \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_sequence_state_ae4c6b2b44fde0f1f5f57be982f573107}{Get\+Evaluable\+Range}} ()
+\item 
+double \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_sequence_state_a2d1921dec1efd2e0aea2a5234529eef0}{To\+Global\+Time}} (double t)
+\item 
+double \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_sequence_state_a44a18b7a7f2d366afa4f9b720552f3f8}{To\+Local\+Time}} (double t)
+\item 
+void \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_sequence_state_a09de9823fa96e76481c87b67b8bdac0d}{Reset\+Is\+Read\+Only}} ()
+\item 
+void \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_sequence_state_a7574a2219e33da00ca4cf43d23f32589}{Invalidate\+Child\+Asset\+Cache}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_asset}{Timeline\+Asset}} \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_sequence_state_a247d8d2cad32a1cd5ca92c5c411687c3}{asset}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Playable\+Director \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_sequence_state_a08ce693fcd3a6acc64b0b9bf36d1c29f}{director}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}} \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_sequence_state_a4af4b247a259dd8669e4cc39eb275c9a}{host\+Clip}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+List$<$ Unity\+Engine.\+Object $>$ \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_sequence_state_a8b90f476c1367d56c201e813f8b5f1b1}{cached\+Child\+Assets}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+double \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_sequence_state_a728d661f9eb931f9b2e268846fce4786}{start}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+double \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_sequence_state_a7229406d76c7221e81f141e6ac28cc9f}{time\+Scale}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+double \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_sequence_state_a713e56e88bc2e68549f4dae26ddcf0bd}{duration}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_sequence_state_ad56c92e4109749915ad28b0a9742ddb9}{is\+Read\+Only}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_sequence_state_a2bd3842cd282a6745264023f514d24a2}{is\+Asset\+Only}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model}{Timeline\+Asset\+View\+Model}} \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_sequence_state_aa8752b8f028ed08f6ca7a19d2baa3302}{view\+Model}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+double \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_sequence_state_a1b008874fa5e6f943c0a168fd2829156}{time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+int \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_sequence_state_a7dce856904128b55d1779e6a4c9c2b42}{frame}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+double \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_sequence_state_a757d90aa4921b7c25fdd78fa5c2edd38}{frame\+Rate}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interface_unity_editor_1_1_timeline_1_1_i_sequence_state_ae4c6b2b44fde0f1f5f57be982f573107}\label{interface_unity_editor_1_1_timeline_1_1_i_sequence_state_ae4c6b2b44fde0f1f5f57be982f573107} 
+\index{UnityEditor.Timeline.ISequenceState@{UnityEditor.Timeline.ISequenceState}!GetEvaluableRange@{GetEvaluableRange}}
+\index{GetEvaluableRange@{GetEvaluableRange}!UnityEditor.Timeline.ISequenceState@{UnityEditor.Timeline.ISequenceState}}
+\doxysubsubsection{\texorpdfstring{GetEvaluableRange()}{GetEvaluableRange()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_range}{Range}} Unity\+Editor.\+Timeline.\+ISequence\+State.\+Get\+Evaluable\+Range (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_null_sequence_state_ad5fe4ecec7d1eb5970a90fe0012c038a}{Unity\+Editor.\+Timeline.\+Null\+Sequence\+State}}, and \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_sequence_state_a180d8df4e8f1c7539d7b52ce0b223d23}{Unity\+Editor.\+Timeline.\+Sequence\+State}}.
+
+\Hypertarget{interface_unity_editor_1_1_timeline_1_1_i_sequence_state_a7574a2219e33da00ca4cf43d23f32589}\label{interface_unity_editor_1_1_timeline_1_1_i_sequence_state_a7574a2219e33da00ca4cf43d23f32589} 
+\index{UnityEditor.Timeline.ISequenceState@{UnityEditor.Timeline.ISequenceState}!InvalidateChildAssetCache@{InvalidateChildAssetCache}}
+\index{InvalidateChildAssetCache@{InvalidateChildAssetCache}!UnityEditor.Timeline.ISequenceState@{UnityEditor.Timeline.ISequenceState}}
+\doxysubsubsection{\texorpdfstring{InvalidateChildAssetCache()}{InvalidateChildAssetCache()}}
+{\footnotesize\ttfamily void Unity\+Editor.\+Timeline.\+ISequence\+State.\+Invalidate\+Child\+Asset\+Cache (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_null_sequence_state_a1cb0736303e5c18bd7df6f659f45d733}{Unity\+Editor.\+Timeline.\+Null\+Sequence\+State}}, and \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_sequence_state_a53a23577962cb6e2c885fc7949243b09}{Unity\+Editor.\+Timeline.\+Sequence\+State}}.
+
+\Hypertarget{interface_unity_editor_1_1_timeline_1_1_i_sequence_state_a09de9823fa96e76481c87b67b8bdac0d}\label{interface_unity_editor_1_1_timeline_1_1_i_sequence_state_a09de9823fa96e76481c87b67b8bdac0d} 
+\index{UnityEditor.Timeline.ISequenceState@{UnityEditor.Timeline.ISequenceState}!ResetIsReadOnly@{ResetIsReadOnly}}
+\index{ResetIsReadOnly@{ResetIsReadOnly}!UnityEditor.Timeline.ISequenceState@{UnityEditor.Timeline.ISequenceState}}
+\doxysubsubsection{\texorpdfstring{ResetIsReadOnly()}{ResetIsReadOnly()}}
+{\footnotesize\ttfamily void Unity\+Editor.\+Timeline.\+ISequence\+State.\+Reset\+Is\+Read\+Only (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_null_sequence_state_a478e9f51acd7e1deb589b1098f6db668}{Unity\+Editor.\+Timeline.\+Null\+Sequence\+State}}, and \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_sequence_state_a89bbd75ecb0112bdd97fd1c905f68371}{Unity\+Editor.\+Timeline.\+Sequence\+State}}.
+
+\Hypertarget{interface_unity_editor_1_1_timeline_1_1_i_sequence_state_a2d1921dec1efd2e0aea2a5234529eef0}\label{interface_unity_editor_1_1_timeline_1_1_i_sequence_state_a2d1921dec1efd2e0aea2a5234529eef0} 
+\index{UnityEditor.Timeline.ISequenceState@{UnityEditor.Timeline.ISequenceState}!ToGlobalTime@{ToGlobalTime}}
+\index{ToGlobalTime@{ToGlobalTime}!UnityEditor.Timeline.ISequenceState@{UnityEditor.Timeline.ISequenceState}}
+\doxysubsubsection{\texorpdfstring{ToGlobalTime()}{ToGlobalTime()}}
+{\footnotesize\ttfamily double Unity\+Editor.\+Timeline.\+ISequence\+State.\+To\+Global\+Time (\begin{DoxyParamCaption}\item[{double}]{t }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_null_sequence_state_ac8cb0f6ab3a85f8a6fd631183198c154}{Unity\+Editor.\+Timeline.\+Null\+Sequence\+State}}, and \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_sequence_state_a7f8f444cf485c3fc56f760c4e8901e98}{Unity\+Editor.\+Timeline.\+Sequence\+State}}.
+
+\Hypertarget{interface_unity_editor_1_1_timeline_1_1_i_sequence_state_a44a18b7a7f2d366afa4f9b720552f3f8}\label{interface_unity_editor_1_1_timeline_1_1_i_sequence_state_a44a18b7a7f2d366afa4f9b720552f3f8} 
+\index{UnityEditor.Timeline.ISequenceState@{UnityEditor.Timeline.ISequenceState}!ToLocalTime@{ToLocalTime}}
+\index{ToLocalTime@{ToLocalTime}!UnityEditor.Timeline.ISequenceState@{UnityEditor.Timeline.ISequenceState}}
+\doxysubsubsection{\texorpdfstring{ToLocalTime()}{ToLocalTime()}}
+{\footnotesize\ttfamily double Unity\+Editor.\+Timeline.\+ISequence\+State.\+To\+Local\+Time (\begin{DoxyParamCaption}\item[{double}]{t }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_null_sequence_state_a631c51869a94baacf6b06c6d580a9a47}{Unity\+Editor.\+Timeline.\+Null\+Sequence\+State}}, and \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_sequence_state_aa02d8f5598baa9bef12801695af4eb1f}{Unity\+Editor.\+Timeline.\+Sequence\+State}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{interface_unity_editor_1_1_timeline_1_1_i_sequence_state_a247d8d2cad32a1cd5ca92c5c411687c3}\label{interface_unity_editor_1_1_timeline_1_1_i_sequence_state_a247d8d2cad32a1cd5ca92c5c411687c3} 
+\index{UnityEditor.Timeline.ISequenceState@{UnityEditor.Timeline.ISequenceState}!asset@{asset}}
+\index{asset@{asset}!UnityEditor.Timeline.ISequenceState@{UnityEditor.Timeline.ISequenceState}}
+\doxysubsubsection{\texorpdfstring{asset}{asset}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_asset}{Timeline\+Asset}} Unity\+Editor.\+Timeline.\+ISequence\+State.\+asset\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_null_sequence_state_a86ae5dd5b43913287b91027db4463241}{Unity\+Editor.\+Timeline.\+Null\+Sequence\+State}}, and \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_sequence_state_aa2389e7a2de31928f89fc957085a1319}{Unity\+Editor.\+Timeline.\+Sequence\+State}}.
+
+\Hypertarget{interface_unity_editor_1_1_timeline_1_1_i_sequence_state_a8b90f476c1367d56c201e813f8b5f1b1}\label{interface_unity_editor_1_1_timeline_1_1_i_sequence_state_a8b90f476c1367d56c201e813f8b5f1b1} 
+\index{UnityEditor.Timeline.ISequenceState@{UnityEditor.Timeline.ISequenceState}!cachedChildAssets@{cachedChildAssets}}
+\index{cachedChildAssets@{cachedChildAssets}!UnityEditor.Timeline.ISequenceState@{UnityEditor.Timeline.ISequenceState}}
+\doxysubsubsection{\texorpdfstring{cachedChildAssets}{cachedChildAssets}}
+{\footnotesize\ttfamily List$<$Unity\+Engine.\+Object$>$ Unity\+Editor.\+Timeline.\+ISequence\+State.\+cached\+Child\+Assets\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_sequence_state_af005d1b78a5007476a22d54af47aaa10}{Unity\+Editor.\+Timeline.\+Sequence\+State}}.
+
+\Hypertarget{interface_unity_editor_1_1_timeline_1_1_i_sequence_state_a08ce693fcd3a6acc64b0b9bf36d1c29f}\label{interface_unity_editor_1_1_timeline_1_1_i_sequence_state_a08ce693fcd3a6acc64b0b9bf36d1c29f} 
+\index{UnityEditor.Timeline.ISequenceState@{UnityEditor.Timeline.ISequenceState}!director@{director}}
+\index{director@{director}!UnityEditor.Timeline.ISequenceState@{UnityEditor.Timeline.ISequenceState}}
+\doxysubsubsection{\texorpdfstring{director}{director}}
+{\footnotesize\ttfamily Playable\+Director Unity\+Editor.\+Timeline.\+ISequence\+State.\+director\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_null_sequence_state_a2df315b6b70169a718405ca5d1d62f68}{Unity\+Editor.\+Timeline.\+Null\+Sequence\+State}}, and \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_sequence_state_aeb961793af4600d97b91f365bc804ffc}{Unity\+Editor.\+Timeline.\+Sequence\+State}}.
+
+\Hypertarget{interface_unity_editor_1_1_timeline_1_1_i_sequence_state_a713e56e88bc2e68549f4dae26ddcf0bd}\label{interface_unity_editor_1_1_timeline_1_1_i_sequence_state_a713e56e88bc2e68549f4dae26ddcf0bd} 
+\index{UnityEditor.Timeline.ISequenceState@{UnityEditor.Timeline.ISequenceState}!duration@{duration}}
+\index{duration@{duration}!UnityEditor.Timeline.ISequenceState@{UnityEditor.Timeline.ISequenceState}}
+\doxysubsubsection{\texorpdfstring{duration}{duration}}
+{\footnotesize\ttfamily double Unity\+Editor.\+Timeline.\+ISequence\+State.\+duration\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_null_sequence_state_acb15d5e410119a6f79a4e8efd90ae093}{Unity\+Editor.\+Timeline.\+Null\+Sequence\+State}}, and \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_sequence_state_ac383fd69519f77ac0750797b102a9dc0}{Unity\+Editor.\+Timeline.\+Sequence\+State}}.
+
+\Hypertarget{interface_unity_editor_1_1_timeline_1_1_i_sequence_state_a7dce856904128b55d1779e6a4c9c2b42}\label{interface_unity_editor_1_1_timeline_1_1_i_sequence_state_a7dce856904128b55d1779e6a4c9c2b42} 
+\index{UnityEditor.Timeline.ISequenceState@{UnityEditor.Timeline.ISequenceState}!frame@{frame}}
+\index{frame@{frame}!UnityEditor.Timeline.ISequenceState@{UnityEditor.Timeline.ISequenceState}}
+\doxysubsubsection{\texorpdfstring{frame}{frame}}
+{\footnotesize\ttfamily int Unity\+Editor.\+Timeline.\+ISequence\+State.\+frame\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_null_sequence_state_a64af41fb091d80464f5cf547c6c63901}{Unity\+Editor.\+Timeline.\+Null\+Sequence\+State}}, and \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_sequence_state_a4e85be9650430d48a2fd69517fcc61b8}{Unity\+Editor.\+Timeline.\+Sequence\+State}}.
+
+\Hypertarget{interface_unity_editor_1_1_timeline_1_1_i_sequence_state_a757d90aa4921b7c25fdd78fa5c2edd38}\label{interface_unity_editor_1_1_timeline_1_1_i_sequence_state_a757d90aa4921b7c25fdd78fa5c2edd38} 
+\index{UnityEditor.Timeline.ISequenceState@{UnityEditor.Timeline.ISequenceState}!frameRate@{frameRate}}
+\index{frameRate@{frameRate}!UnityEditor.Timeline.ISequenceState@{UnityEditor.Timeline.ISequenceState}}
+\doxysubsubsection{\texorpdfstring{frameRate}{frameRate}}
+{\footnotesize\ttfamily double Unity\+Editor.\+Timeline.\+ISequence\+State.\+frame\+Rate\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_null_sequence_state_a680b75173ee3679a7065859359a82f30}{Unity\+Editor.\+Timeline.\+Null\+Sequence\+State}}, and \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_sequence_state_ae88635fed654148b72edab328adafcf7}{Unity\+Editor.\+Timeline.\+Sequence\+State}}.
+
+\Hypertarget{interface_unity_editor_1_1_timeline_1_1_i_sequence_state_a4af4b247a259dd8669e4cc39eb275c9a}\label{interface_unity_editor_1_1_timeline_1_1_i_sequence_state_a4af4b247a259dd8669e4cc39eb275c9a} 
+\index{UnityEditor.Timeline.ISequenceState@{UnityEditor.Timeline.ISequenceState}!hostClip@{hostClip}}
+\index{hostClip@{hostClip}!UnityEditor.Timeline.ISequenceState@{UnityEditor.Timeline.ISequenceState}}
+\doxysubsubsection{\texorpdfstring{hostClip}{hostClip}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}} Unity\+Editor.\+Timeline.\+ISequence\+State.\+host\+Clip\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_null_sequence_state_afdada0a109aed10fca381428ef9bcda1}{Unity\+Editor.\+Timeline.\+Null\+Sequence\+State}}, and \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_sequence_state_a2bfcd712c75645850fc618550f87d618}{Unity\+Editor.\+Timeline.\+Sequence\+State}}.
+
+\Hypertarget{interface_unity_editor_1_1_timeline_1_1_i_sequence_state_a2bd3842cd282a6745264023f514d24a2}\label{interface_unity_editor_1_1_timeline_1_1_i_sequence_state_a2bd3842cd282a6745264023f514d24a2} 
+\index{UnityEditor.Timeline.ISequenceState@{UnityEditor.Timeline.ISequenceState}!isAssetOnly@{isAssetOnly}}
+\index{isAssetOnly@{isAssetOnly}!UnityEditor.Timeline.ISequenceState@{UnityEditor.Timeline.ISequenceState}}
+\doxysubsubsection{\texorpdfstring{isAssetOnly}{isAssetOnly}}
+{\footnotesize\ttfamily bool Unity\+Editor.\+Timeline.\+ISequence\+State.\+is\+Asset\+Only\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_null_sequence_state_afb2c27f7311e20733832a280b5442001}{Unity\+Editor.\+Timeline.\+Null\+Sequence\+State}}, and \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_sequence_state_ad6fa5a1cee22cc9c2bb3b1e53796773b}{Unity\+Editor.\+Timeline.\+Sequence\+State}}.
+
+\Hypertarget{interface_unity_editor_1_1_timeline_1_1_i_sequence_state_ad56c92e4109749915ad28b0a9742ddb9}\label{interface_unity_editor_1_1_timeline_1_1_i_sequence_state_ad56c92e4109749915ad28b0a9742ddb9} 
+\index{UnityEditor.Timeline.ISequenceState@{UnityEditor.Timeline.ISequenceState}!isReadOnly@{isReadOnly}}
+\index{isReadOnly@{isReadOnly}!UnityEditor.Timeline.ISequenceState@{UnityEditor.Timeline.ISequenceState}}
+\doxysubsubsection{\texorpdfstring{isReadOnly}{isReadOnly}}
+{\footnotesize\ttfamily bool Unity\+Editor.\+Timeline.\+ISequence\+State.\+is\+Read\+Only\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_null_sequence_state_a50b468c958d5f9658959ddaa037e85fc}{Unity\+Editor.\+Timeline.\+Null\+Sequence\+State}}, and \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_sequence_state_a60084c983889ee89f11007d069c2aaf7}{Unity\+Editor.\+Timeline.\+Sequence\+State}}.
+
+\Hypertarget{interface_unity_editor_1_1_timeline_1_1_i_sequence_state_a728d661f9eb931f9b2e268846fce4786}\label{interface_unity_editor_1_1_timeline_1_1_i_sequence_state_a728d661f9eb931f9b2e268846fce4786} 
+\index{UnityEditor.Timeline.ISequenceState@{UnityEditor.Timeline.ISequenceState}!start@{start}}
+\index{start@{start}!UnityEditor.Timeline.ISequenceState@{UnityEditor.Timeline.ISequenceState}}
+\doxysubsubsection{\texorpdfstring{start}{start}}
+{\footnotesize\ttfamily double Unity\+Editor.\+Timeline.\+ISequence\+State.\+start\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_null_sequence_state_ac1e32b49ac7ef3a9963a4b3972276d5f}{Unity\+Editor.\+Timeline.\+Null\+Sequence\+State}}, and \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_sequence_state_ad32b94bdd7cfa84338928dfbda2b79e2}{Unity\+Editor.\+Timeline.\+Sequence\+State}}.
+
+\Hypertarget{interface_unity_editor_1_1_timeline_1_1_i_sequence_state_a1b008874fa5e6f943c0a168fd2829156}\label{interface_unity_editor_1_1_timeline_1_1_i_sequence_state_a1b008874fa5e6f943c0a168fd2829156} 
+\index{UnityEditor.Timeline.ISequenceState@{UnityEditor.Timeline.ISequenceState}!time@{time}}
+\index{time@{time}!UnityEditor.Timeline.ISequenceState@{UnityEditor.Timeline.ISequenceState}}
+\doxysubsubsection{\texorpdfstring{time}{time}}
+{\footnotesize\ttfamily double Unity\+Editor.\+Timeline.\+ISequence\+State.\+time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_null_sequence_state_a4482d41c9924e2e0e75e02b5688a6b62}{Unity\+Editor.\+Timeline.\+Null\+Sequence\+State}}, and \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_sequence_state_a1b854df37d21b45f3fcdaee420e2e32a}{Unity\+Editor.\+Timeline.\+Sequence\+State}}.
+
+\Hypertarget{interface_unity_editor_1_1_timeline_1_1_i_sequence_state_a7229406d76c7221e81f141e6ac28cc9f}\label{interface_unity_editor_1_1_timeline_1_1_i_sequence_state_a7229406d76c7221e81f141e6ac28cc9f} 
+\index{UnityEditor.Timeline.ISequenceState@{UnityEditor.Timeline.ISequenceState}!timeScale@{timeScale}}
+\index{timeScale@{timeScale}!UnityEditor.Timeline.ISequenceState@{UnityEditor.Timeline.ISequenceState}}
+\doxysubsubsection{\texorpdfstring{timeScale}{timeScale}}
+{\footnotesize\ttfamily double Unity\+Editor.\+Timeline.\+ISequence\+State.\+time\+Scale\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_null_sequence_state_a5e99c5036e44ed1d29a747fe1eaa4643}{Unity\+Editor.\+Timeline.\+Null\+Sequence\+State}}, and \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_sequence_state_afa85e6f92568f285795df16f421fcfb4}{Unity\+Editor.\+Timeline.\+Sequence\+State}}.
+
+\Hypertarget{interface_unity_editor_1_1_timeline_1_1_i_sequence_state_aa8752b8f028ed08f6ca7a19d2baa3302}\label{interface_unity_editor_1_1_timeline_1_1_i_sequence_state_aa8752b8f028ed08f6ca7a19d2baa3302} 
+\index{UnityEditor.Timeline.ISequenceState@{UnityEditor.Timeline.ISequenceState}!viewModel@{viewModel}}
+\index{viewModel@{viewModel}!UnityEditor.Timeline.ISequenceState@{UnityEditor.Timeline.ISequenceState}}
+\doxysubsubsection{\texorpdfstring{viewModel}{viewModel}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_asset_view_model}{Timeline\+Asset\+View\+Model}} Unity\+Editor.\+Timeline.\+ISequence\+State.\+view\+Model\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_null_sequence_state_ab469fc2ba2a565a00332c83b54b9f9f9}{Unity\+Editor.\+Timeline.\+Null\+Sequence\+State}}, and \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_sequence_state_a1e7f38ed7785b7fa8538b261b0600052}{Unity\+Editor.\+Timeline.\+Sequence\+State}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+7.\+6/\+Editor/\+State/\mbox{\hyperlink{_i_sequence_state_8cs}{ISequence\+State.\+cs}}\end{DoxyCompactItemize}

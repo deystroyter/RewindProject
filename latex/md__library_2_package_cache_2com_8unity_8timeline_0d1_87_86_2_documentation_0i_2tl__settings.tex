@@ -1,0 +1,49 @@
+\chapter{Timeline Settings}
+\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__settings}{}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__settings}\index{Timeline Settings@{Timeline Settings}}
+\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__settings_autotoc_md1247}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__settings_autotoc_md1247}%
+ Use the \doxylink{namespace_timeline}{Timeline} Settings to choose the \doxylink{namespace_timeline}{Timeline} window and \doxylink{namespace_timeline}{Timeline} Asset settings such as the unit of measurement, the duration mode, audio waveform, and window snap settings.
+
+
+
+{\itshape Click the Cog icon in the \doxylink{namespace_timeline}{Timeline} window to view the \doxylink{namespace_timeline}{Timeline} Settings menu}\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__settings_autotoc_md1248}{}\doxysection{\texorpdfstring{Time Unit}{Time Unit}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__settings_autotoc_md1248}
+Select either {\bfseries{Frames}}, {\bfseries{Timecode}} or {\bfseries{Seconds}} to set the \doxylink{namespace_timeline}{Timeline} window to display time in that format. Timecode will display the time in seconds with sub-\/second values displayed in frames.\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__settings_autotoc_md1249}{}\doxysection{\texorpdfstring{Duration Mode}{Duration Mode}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__settings_autotoc_md1249}
+Use the {\bfseries{Duration Mode}} to set whether the duration of the \doxylink{namespace_timeline}{Timeline} Asset extends to the end of the last clip ({\bfseries{Based On Clips}}), or ends at a specific time or frame ({\bfseries{Fixed Length}}). When the {\bfseries{Duration Mode}} is set to {\bfseries{Fixed Length}}, use one of the following methods to change the length of the \doxylink{namespace_timeline}{Timeline} Asset\+:
+
+
+\begin{DoxyItemize}
+\item Select the \doxylink{namespace_timeline}{Timeline} Asset in the Project window and use the Inspector window to set the Duration in seconds or frames.
+\item In the \doxylink{namespace_timeline}{Timeline} window, drag the blue marker on the timeline. The blue marker indicates the end of the \doxylink{namespace_timeline}{Timeline} Asset. A blue line indicates the duration of the \doxylink{namespace_timeline}{Timeline} Asset.
+\end{DoxyItemize}
+
+
+
+{\itshape \doxylink{namespace_timeline}{Timeline} Asset duration (red rectangle) and end marker (green circle)}\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__settings_autotoc_md1250}{}\doxysection{\texorpdfstring{Frame Rate}{Frame Rate}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__settings_autotoc_md1250}
+Select one of the options under {\bfseries{Frame Rate}} to set the unit of measurement for the \doxylink{namespace_timeline}{Timeline} ruler. Change the Frame Rate to align clips at precise frames but changing the Frame Rate is only visual and has no effect on play speed, keys, tracks, or clips. The following standard frame rates are listed\+: Film (24 fps), PAL (25 fps), NTSC (29.\+97 fps), 30, 50, or 60.
+
+\doxylink{namespace_timeline}{Timeline} supports custom frame rates from 1e-\/6 to 1000. To set a custom frame rate, you must use the {\bfseries{Frame Rate}} property in the \doxysectlink{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2insp__tl}{Timeline Asset settings}{0}. When the \doxylink{namespace_timeline}{Timeline} Asset is set to a custom frame rate, the Custom menu item is enabled and is automatically selected for the \doxylink{namespace_timeline}{Timeline} instance. The Custom menu item shows the custom frame rate in parentheses.\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__settings_autotoc_md1251}{}\doxysection{\texorpdfstring{Show Audio Waveforms}{Show Audio Waveforms}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__settings_autotoc_md1251}
+Enable {\bfseries{Show Audio Waveforms}} to draw the waveforms for all audio clips on all audio tracks. For example, use an audio waveform as a guide when manually positioning an Audio clip of footsteps with the Animation clip of a humanoid walking. Disable {\bfseries{Show Audio Waveform}} to hide audio waveforms. {\bfseries{Show Audio Waveforms}} is enabled by default.\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__settings_autotoc_md1252}{}\doxysection{\texorpdfstring{Enable Audio Scrubbing}{Enable Audio Scrubbing}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__settings_autotoc_md1252}
+{\bfseries{Enable Audio Scrubbing}} to play audio while dragging the \doxylink{namespace_timeline}{Timeline} Playhead.
+
+Disable {\bfseries{Enable Audio Scrubbing}} to stop playing audio while dragging the \doxylink{namespace_timeline}{Timeline} Playhead. When disabled, \doxylink{namespace_timeline}{Timeline} only plays audio when in \href{tl_play_cntrls.md\#playbutton}{\texttt{ Timeline Playback mode}}.\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__settings_autotoc_md1253}{}\doxysection{\texorpdfstring{Snap to Frame}{Snap to Frame}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__settings_autotoc_md1253}
+Enable {\bfseries{Snap to Frame}} to manipulate clips, preview \doxylink{namespace_timeline}{Timeline} instances, drag the \doxylink{namespace_timeline}{Timeline} Playhead, and position the \doxylink{namespace_timeline}{Timeline} Playhead using frames. Disable {\bfseries{Snap to Frame}} to use subframes. {\bfseries{Snap to Frame}} is enabled by default.
+
+
+
+{\itshape Disable {\bfseries{Snap to Frame}} to position clips and drag the playhead between frames}
+
+For example, when {\bfseries{Snap to Frame}} is disabled and you drag the \doxylink{namespace_timeline}{Timeline} Playhead, it moves the playhead between frames. The format of \href{tl_play_cntrls.md\#playheadlocation}{\texttt{ Playhead Location}} displays differently depending on whether the \doxylink{namespace_timeline}{Timeline} window is set to {\bfseries{Seconds}}, {\bfseries{Timecode}} or {\bfseries{Frames}}\+:
+
+
+\begin{DoxyItemize}
+\item When the \doxylink{namespace_timeline}{Timeline} window is set to {\bfseries{Frames}}, the Playhead Location shows frames and subframes. For example, 8 frames and 34 subframes displays as 8.\+34.
+\item When the \doxylink{namespace_timeline}{Timeline} window is set to {\bfseries{Timecode}}, the Playhead Location shows seconds, frames, and subframes. For example, 6 seconds, 17 frames, and 59 subframes displays as 6\+:17 \mbox{[}.59\mbox{]}.
+\item When the \doxylink{namespace_timeline}{Timeline} window is set to {\bfseries{Seconds}}, the Playhead Location shows seconds. For example, 6.\+5 seconds displays as 6\+:50.
+\end{DoxyItemize}
+
+Manipulating clips, previewing \doxylink{namespace_timeline}{Timeline} instances, and positioning the playhead at the subframes level is useful when attempting to synchronize animation and effects with audio. Many high-\/end audio processing software products create audio waveforms with subframe accuracy.\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__settings_autotoc_md1254}{}\doxysection{\texorpdfstring{Edge Snap}{Edge Snap}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__settings_autotoc_md1254}
+Enable the {\bfseries{Edge Snap}} option to snap clips when you position, trim, and create blends.
+
+When enabled, the \doxylink{namespace_timeline}{Timeline} window snaps the start or end of a clip when dragged within 10 pixels of the \doxylink{namespace_timeline}{Timeline} Playhead, the start or end of a clip on the same track, the start or end of a clip on another track, or the start or end of the entire \doxylink{namespace_timeline}{Timeline} instance. The start guide or end guide is redrawn in white to indicate that the clip has snapped to the edge of another clip or the \doxylink{namespace_timeline}{Timeline} Playhead.
+
+Disable {\bfseries{Edge Snap}} to create more accurate blends, ease-\/ins, or ease-\/outs. {\bfseries{Edge Snap}} is enabled by default. 

@@ -1,0 +1,302 @@
+\doxysection{TMPro.\+TMP\+\_\+\+Mesh\+Info Struct Reference}
+\hypertarget{struct_t_m_pro_1_1_t_m_p___mesh_info}{}\label{struct_t_m_pro_1_1_t_m_p___mesh_info}\index{TMPro.TMP\_MeshInfo@{TMPro.TMP\_MeshInfo}}
+
+
+Structure which contains the vertex attributes (geometry) of the text object.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___mesh_info_a457cf31e803ba04bcbc37a88fe70ab12}{TMP\+\_\+\+Mesh\+Info}} (Mesh \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___mesh_info_a2b53d43187ab86ccefe3f5dd6babcfef}{mesh}}, int size)
+\begin{DoxyCompactList}\small\item\em Function to pre-\/allocate vertex attributes for a mesh of size X. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___mesh_info_a34bbcd82d7626fdc9d7598eac632f2b9}{TMP\+\_\+\+Mesh\+Info}} (Mesh \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___mesh_info_a2b53d43187ab86ccefe3f5dd6babcfef}{mesh}}, int size, bool is\+Volumetric)
+\begin{DoxyCompactList}\small\item\em Function to pre-\/allocate vertex attributes for a mesh of size X. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___mesh_info_ac2631e006b2107ce543716541a48e5d1}{Resize\+Mesh\+Info}} (int size)
+\begin{DoxyCompactList}\small\item\em Function to resized the content of Mesh\+Data and re-\/assign normals, tangents and triangles. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___mesh_info_a4948f8abff302bcc8b6ea6cfc2f0af3d}{Resize\+Mesh\+Info}} (int size, bool is\+Volumetric)
+\begin{DoxyCompactList}\small\item\em Function to resized the content of Mesh\+Data and re-\/assign normals, tangents and triangles. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___mesh_info_add2e199157007db54ca91226a7d8a3dc}{Clear}} ()
+\begin{DoxyCompactList}\small\item\em Function to clear the vertices while preserving the Triangles, Normals and Tangents. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___mesh_info_ad1fe51b4a54d9707e40400ebcfae7dea}{Clear}} (bool upload\+Changes)
+\begin{DoxyCompactList}\small\item\em Function to clear the vertices while preserving the Triangles, Normals and Tangents. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___mesh_info_a7abd732cdaf4d54113166700701defd4}{Clear\+Unused\+Vertices}} ()
+\begin{DoxyCompactList}\small\item\em Function to clear the vertices while preserving the Triangles, Normals and Tangents. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___mesh_info_ad2667025b52d22291cc6c57fd5a95126}{Clear\+Unused\+Vertices}} (int start\+Index)
+\begin{DoxyCompactList}\small\item\em Function used to mark unused vertices as degenerate. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___mesh_info_aba0fe3e04e63be7438407d54d7e1c1e8}{Clear\+Unused\+Vertices}} (int start\+Index, bool update\+Mesh)
+\begin{DoxyCompactList}\small\item\em Function used to mark unused vertices as degenerate an upload resulting data to the mesh. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___mesh_info_a2514314a12727c88ad96da1fc2dcbfab}{Sort\+Geometry}} (\mbox{\hyperlink{namespace_t_m_pro_a29c2b2e41c29850d1bc0760ac64b1ee0}{Vertex\+Sorting\+Order}} order)
+\item 
+void \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___mesh_info_af12a00628b4e8a24470a6f4656fee685}{Sort\+Geometry}} (IList$<$ int $>$ sorting\+Order)
+\begin{DoxyCompactList}\small\item\em Function to rearrange the quads of the text object to change their rendering order. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___mesh_info_aea0d76fdcacdb531d31b168575444c2a}{Swap\+Vertex\+Data}} (int src, int dst)
+\begin{DoxyCompactList}\small\item\em Method to swap the vertex attributes between src and dst quads. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Mesh \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___mesh_info_a2b53d43187ab86ccefe3f5dd6babcfef}{mesh}}
+\item 
+int \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___mesh_info_a6546f16eff9f1de656a8f75415934aea}{vertex\+Count}}
+\item 
+Vector3\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___mesh_info_a7f31f8c5b18a9d84129a7f2cb5981728}{vertices}}
+\item 
+Vector3\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___mesh_info_aefcdce93dcac35b872ddfff6200fa856}{normals}}
+\item 
+Vector4\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___mesh_info_a15f45cfb1e38b9576d92f6025a767c40}{tangents}}
+\item 
+Vector2\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___mesh_info_aa6816d4ade18d6066c2c0b17d1fe5987}{uvs0}}
+\item 
+Vector2\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___mesh_info_a2ea56e0aace99edfe971760bd76a890d}{uvs2}}
+\item 
+Color32\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___mesh_info_afcf1ebf60c4633e1b14cb1855347d836}{colors32}}
+\item 
+int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___mesh_info_a377745ba8f3d9d45b012198fad04ae3b}{triangles}}
+\item 
+Material \mbox{\hyperlink{struct_t_m_pro_1_1_t_m_p___mesh_info_a81d232f7f00a144bef30f9e1436cd288}{material}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure which contains the vertex attributes (geometry) of the text object. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_t_m_pro_1_1_t_m_p___mesh_info_a457cf31e803ba04bcbc37a88fe70ab12}\label{struct_t_m_pro_1_1_t_m_p___mesh_info_a457cf31e803ba04bcbc37a88fe70ab12} 
+\index{TMPro.TMP\_MeshInfo@{TMPro.TMP\_MeshInfo}!TMP\_MeshInfo@{TMP\_MeshInfo}}
+\index{TMP\_MeshInfo@{TMP\_MeshInfo}!TMPro.TMP\_MeshInfo@{TMPro.TMP\_MeshInfo}}
+\doxysubsubsection{\texorpdfstring{TMP\_MeshInfo()}{TMP\_MeshInfo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily TMPro.\+TMP\+\_\+\+Mesh\+Info.\+TMP\+\_\+\+Mesh\+Info (\begin{DoxyParamCaption}\item[{Mesh}]{mesh,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Function to pre-\/allocate vertex attributes for a mesh of size X. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mesh} & \\
+\hline
+{\em size} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{struct_t_m_pro_1_1_t_m_p___mesh_info_a34bbcd82d7626fdc9d7598eac632f2b9}\label{struct_t_m_pro_1_1_t_m_p___mesh_info_a34bbcd82d7626fdc9d7598eac632f2b9} 
+\index{TMPro.TMP\_MeshInfo@{TMPro.TMP\_MeshInfo}!TMP\_MeshInfo@{TMP\_MeshInfo}}
+\index{TMP\_MeshInfo@{TMP\_MeshInfo}!TMPro.TMP\_MeshInfo@{TMPro.TMP\_MeshInfo}}
+\doxysubsubsection{\texorpdfstring{TMP\_MeshInfo()}{TMP\_MeshInfo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily TMPro.\+TMP\+\_\+\+Mesh\+Info.\+TMP\+\_\+\+Mesh\+Info (\begin{DoxyParamCaption}\item[{Mesh}]{mesh,  }\item[{int}]{size,  }\item[{bool}]{is\+Volumetric }\end{DoxyParamCaption})}
+
+
+
+Function to pre-\/allocate vertex attributes for a mesh of size X. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mesh} & \\
+\hline
+{\em size} & \\
+\hline
+{\em is\+Volumetric} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_t_m_pro_1_1_t_m_p___mesh_info_add2e199157007db54ca91226a7d8a3dc}\label{struct_t_m_pro_1_1_t_m_p___mesh_info_add2e199157007db54ca91226a7d8a3dc} 
+\index{TMPro.TMP\_MeshInfo@{TMPro.TMP\_MeshInfo}!Clear@{Clear}}
+\index{Clear@{Clear}!TMPro.TMP\_MeshInfo@{TMPro.TMP\_MeshInfo}}
+\doxysubsubsection{\texorpdfstring{Clear()}{Clear()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void TMPro.\+TMP\+\_\+\+Mesh\+Info.\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function to clear the vertices while preserving the Triangles, Normals and Tangents. 
+
+\Hypertarget{struct_t_m_pro_1_1_t_m_p___mesh_info_ad1fe51b4a54d9707e40400ebcfae7dea}\label{struct_t_m_pro_1_1_t_m_p___mesh_info_ad1fe51b4a54d9707e40400ebcfae7dea} 
+\index{TMPro.TMP\_MeshInfo@{TMPro.TMP\_MeshInfo}!Clear@{Clear}}
+\index{Clear@{Clear}!TMPro.TMP\_MeshInfo@{TMPro.TMP\_MeshInfo}}
+\doxysubsubsection{\texorpdfstring{Clear()}{Clear()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void TMPro.\+TMP\+\_\+\+Mesh\+Info.\+Clear (\begin{DoxyParamCaption}\item[{bool}]{upload\+Changes }\end{DoxyParamCaption})}
+
+
+
+Function to clear the vertices while preserving the Triangles, Normals and Tangents. 
+
+\Hypertarget{struct_t_m_pro_1_1_t_m_p___mesh_info_a7abd732cdaf4d54113166700701defd4}\label{struct_t_m_pro_1_1_t_m_p___mesh_info_a7abd732cdaf4d54113166700701defd4} 
+\index{TMPro.TMP\_MeshInfo@{TMPro.TMP\_MeshInfo}!ClearUnusedVertices@{ClearUnusedVertices}}
+\index{ClearUnusedVertices@{ClearUnusedVertices}!TMPro.TMP\_MeshInfo@{TMPro.TMP\_MeshInfo}}
+\doxysubsubsection{\texorpdfstring{ClearUnusedVertices()}{ClearUnusedVertices()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void TMPro.\+TMP\+\_\+\+Mesh\+Info.\+Clear\+Unused\+Vertices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function to clear the vertices while preserving the Triangles, Normals and Tangents. 
+
+\Hypertarget{struct_t_m_pro_1_1_t_m_p___mesh_info_ad2667025b52d22291cc6c57fd5a95126}\label{struct_t_m_pro_1_1_t_m_p___mesh_info_ad2667025b52d22291cc6c57fd5a95126} 
+\index{TMPro.TMP\_MeshInfo@{TMPro.TMP\_MeshInfo}!ClearUnusedVertices@{ClearUnusedVertices}}
+\index{ClearUnusedVertices@{ClearUnusedVertices}!TMPro.TMP\_MeshInfo@{TMPro.TMP\_MeshInfo}}
+\doxysubsubsection{\texorpdfstring{ClearUnusedVertices()}{ClearUnusedVertices()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void TMPro.\+TMP\+\_\+\+Mesh\+Info.\+Clear\+Unused\+Vertices (\begin{DoxyParamCaption}\item[{int}]{start\+Index }\end{DoxyParamCaption})}
+
+
+
+Function used to mark unused vertices as degenerate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Index} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{struct_t_m_pro_1_1_t_m_p___mesh_info_aba0fe3e04e63be7438407d54d7e1c1e8}\label{struct_t_m_pro_1_1_t_m_p___mesh_info_aba0fe3e04e63be7438407d54d7e1c1e8} 
+\index{TMPro.TMP\_MeshInfo@{TMPro.TMP\_MeshInfo}!ClearUnusedVertices@{ClearUnusedVertices}}
+\index{ClearUnusedVertices@{ClearUnusedVertices}!TMPro.TMP\_MeshInfo@{TMPro.TMP\_MeshInfo}}
+\doxysubsubsection{\texorpdfstring{ClearUnusedVertices()}{ClearUnusedVertices()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void TMPro.\+TMP\+\_\+\+Mesh\+Info.\+Clear\+Unused\+Vertices (\begin{DoxyParamCaption}\item[{int}]{start\+Index,  }\item[{bool}]{update\+Mesh }\end{DoxyParamCaption})}
+
+
+
+Function used to mark unused vertices as degenerate an upload resulting data to the mesh. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Index} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{struct_t_m_pro_1_1_t_m_p___mesh_info_ac2631e006b2107ce543716541a48e5d1}\label{struct_t_m_pro_1_1_t_m_p___mesh_info_ac2631e006b2107ce543716541a48e5d1} 
+\index{TMPro.TMP\_MeshInfo@{TMPro.TMP\_MeshInfo}!ResizeMeshInfo@{ResizeMeshInfo}}
+\index{ResizeMeshInfo@{ResizeMeshInfo}!TMPro.TMP\_MeshInfo@{TMPro.TMP\_MeshInfo}}
+\doxysubsubsection{\texorpdfstring{ResizeMeshInfo()}{ResizeMeshInfo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void TMPro.\+TMP\+\_\+\+Mesh\+Info.\+Resize\+Mesh\+Info (\begin{DoxyParamCaption}\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Function to resized the content of Mesh\+Data and re-\/assign normals, tangents and triangles. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mesh\+Data} & \\
+\hline
+{\em size} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{struct_t_m_pro_1_1_t_m_p___mesh_info_a4948f8abff302bcc8b6ea6cfc2f0af3d}\label{struct_t_m_pro_1_1_t_m_p___mesh_info_a4948f8abff302bcc8b6ea6cfc2f0af3d} 
+\index{TMPro.TMP\_MeshInfo@{TMPro.TMP\_MeshInfo}!ResizeMeshInfo@{ResizeMeshInfo}}
+\index{ResizeMeshInfo@{ResizeMeshInfo}!TMPro.TMP\_MeshInfo@{TMPro.TMP\_MeshInfo}}
+\doxysubsubsection{\texorpdfstring{ResizeMeshInfo()}{ResizeMeshInfo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void TMPro.\+TMP\+\_\+\+Mesh\+Info.\+Resize\+Mesh\+Info (\begin{DoxyParamCaption}\item[{int}]{size,  }\item[{bool}]{is\+Volumetric }\end{DoxyParamCaption})}
+
+
+
+Function to resized the content of Mesh\+Data and re-\/assign normals, tangents and triangles. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & \\
+\hline
+{\em is\+Volumetric} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{struct_t_m_pro_1_1_t_m_p___mesh_info_af12a00628b4e8a24470a6f4656fee685}\label{struct_t_m_pro_1_1_t_m_p___mesh_info_af12a00628b4e8a24470a6f4656fee685} 
+\index{TMPro.TMP\_MeshInfo@{TMPro.TMP\_MeshInfo}!SortGeometry@{SortGeometry}}
+\index{SortGeometry@{SortGeometry}!TMPro.TMP\_MeshInfo@{TMPro.TMP\_MeshInfo}}
+\doxysubsubsection{\texorpdfstring{SortGeometry()}{SortGeometry()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void TMPro.\+TMP\+\_\+\+Mesh\+Info.\+Sort\+Geometry (\begin{DoxyParamCaption}\item[{IList$<$ int $>$}]{sorting\+Order }\end{DoxyParamCaption})}
+
+
+
+Function to rearrange the quads of the text object to change their rendering order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sorting\+Order} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{struct_t_m_pro_1_1_t_m_p___mesh_info_a2514314a12727c88ad96da1fc2dcbfab}\label{struct_t_m_pro_1_1_t_m_p___mesh_info_a2514314a12727c88ad96da1fc2dcbfab} 
+\index{TMPro.TMP\_MeshInfo@{TMPro.TMP\_MeshInfo}!SortGeometry@{SortGeometry}}
+\index{SortGeometry@{SortGeometry}!TMPro.TMP\_MeshInfo@{TMPro.TMP\_MeshInfo}}
+\doxysubsubsection{\texorpdfstring{SortGeometry()}{SortGeometry()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void TMPro.\+TMP\+\_\+\+Mesh\+Info.\+Sort\+Geometry (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_t_m_pro_a29c2b2e41c29850d1bc0760ac64b1ee0}{Vertex\+Sorting\+Order}}}]{order }\end{DoxyParamCaption})}
+
+\Hypertarget{struct_t_m_pro_1_1_t_m_p___mesh_info_aea0d76fdcacdb531d31b168575444c2a}\label{struct_t_m_pro_1_1_t_m_p___mesh_info_aea0d76fdcacdb531d31b168575444c2a} 
+\index{TMPro.TMP\_MeshInfo@{TMPro.TMP\_MeshInfo}!SwapVertexData@{SwapVertexData}}
+\index{SwapVertexData@{SwapVertexData}!TMPro.TMP\_MeshInfo@{TMPro.TMP\_MeshInfo}}
+\doxysubsubsection{\texorpdfstring{SwapVertexData()}{SwapVertexData()}}
+{\footnotesize\ttfamily void TMPro.\+TMP\+\_\+\+Mesh\+Info.\+Swap\+Vertex\+Data (\begin{DoxyParamCaption}\item[{int}]{src,  }\item[{int}]{dst }\end{DoxyParamCaption})}
+
+
+
+Method to swap the vertex attributes between src and dst quads. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & Index of the first vertex attribute of the source character / quad.\\
+\hline
+{\em dst} & Index of the first vertex attribute of the destination character / quad.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_t_m_pro_1_1_t_m_p___mesh_info_afcf1ebf60c4633e1b14cb1855347d836}\label{struct_t_m_pro_1_1_t_m_p___mesh_info_afcf1ebf60c4633e1b14cb1855347d836} 
+\index{TMPro.TMP\_MeshInfo@{TMPro.TMP\_MeshInfo}!colors32@{colors32}}
+\index{colors32@{colors32}!TMPro.TMP\_MeshInfo@{TMPro.TMP\_MeshInfo}}
+\doxysubsubsection{\texorpdfstring{colors32}{colors32}}
+{\footnotesize\ttfamily Color32 \mbox{[}$\,$\mbox{]} TMPro.\+TMP\+\_\+\+Mesh\+Info.\+colors32}
+
+\Hypertarget{struct_t_m_pro_1_1_t_m_p___mesh_info_a81d232f7f00a144bef30f9e1436cd288}\label{struct_t_m_pro_1_1_t_m_p___mesh_info_a81d232f7f00a144bef30f9e1436cd288} 
+\index{TMPro.TMP\_MeshInfo@{TMPro.TMP\_MeshInfo}!material@{material}}
+\index{material@{material}!TMPro.TMP\_MeshInfo@{TMPro.TMP\_MeshInfo}}
+\doxysubsubsection{\texorpdfstring{material}{material}}
+{\footnotesize\ttfamily Material TMPro.\+TMP\+\_\+\+Mesh\+Info.\+material}
+
+\Hypertarget{struct_t_m_pro_1_1_t_m_p___mesh_info_a2b53d43187ab86ccefe3f5dd6babcfef}\label{struct_t_m_pro_1_1_t_m_p___mesh_info_a2b53d43187ab86ccefe3f5dd6babcfef} 
+\index{TMPro.TMP\_MeshInfo@{TMPro.TMP\_MeshInfo}!mesh@{mesh}}
+\index{mesh@{mesh}!TMPro.TMP\_MeshInfo@{TMPro.TMP\_MeshInfo}}
+\doxysubsubsection{\texorpdfstring{mesh}{mesh}}
+{\footnotesize\ttfamily Mesh TMPro.\+TMP\+\_\+\+Mesh\+Info.\+mesh}
+
+\Hypertarget{struct_t_m_pro_1_1_t_m_p___mesh_info_aefcdce93dcac35b872ddfff6200fa856}\label{struct_t_m_pro_1_1_t_m_p___mesh_info_aefcdce93dcac35b872ddfff6200fa856} 
+\index{TMPro.TMP\_MeshInfo@{TMPro.TMP\_MeshInfo}!normals@{normals}}
+\index{normals@{normals}!TMPro.TMP\_MeshInfo@{TMPro.TMP\_MeshInfo}}
+\doxysubsubsection{\texorpdfstring{normals}{normals}}
+{\footnotesize\ttfamily Vector3 \mbox{[}$\,$\mbox{]} TMPro.\+TMP\+\_\+\+Mesh\+Info.\+normals}
+
+\Hypertarget{struct_t_m_pro_1_1_t_m_p___mesh_info_a15f45cfb1e38b9576d92f6025a767c40}\label{struct_t_m_pro_1_1_t_m_p___mesh_info_a15f45cfb1e38b9576d92f6025a767c40} 
+\index{TMPro.TMP\_MeshInfo@{TMPro.TMP\_MeshInfo}!tangents@{tangents}}
+\index{tangents@{tangents}!TMPro.TMP\_MeshInfo@{TMPro.TMP\_MeshInfo}}
+\doxysubsubsection{\texorpdfstring{tangents}{tangents}}
+{\footnotesize\ttfamily Vector4 \mbox{[}$\,$\mbox{]} TMPro.\+TMP\+\_\+\+Mesh\+Info.\+tangents}
+
+\Hypertarget{struct_t_m_pro_1_1_t_m_p___mesh_info_a377745ba8f3d9d45b012198fad04ae3b}\label{struct_t_m_pro_1_1_t_m_p___mesh_info_a377745ba8f3d9d45b012198fad04ae3b} 
+\index{TMPro.TMP\_MeshInfo@{TMPro.TMP\_MeshInfo}!triangles@{triangles}}
+\index{triangles@{triangles}!TMPro.TMP\_MeshInfo@{TMPro.TMP\_MeshInfo}}
+\doxysubsubsection{\texorpdfstring{triangles}{triangles}}
+{\footnotesize\ttfamily int \mbox{[}$\,$\mbox{]} TMPro.\+TMP\+\_\+\+Mesh\+Info.\+triangles}
+
+\Hypertarget{struct_t_m_pro_1_1_t_m_p___mesh_info_aa6816d4ade18d6066c2c0b17d1fe5987}\label{struct_t_m_pro_1_1_t_m_p___mesh_info_aa6816d4ade18d6066c2c0b17d1fe5987} 
+\index{TMPro.TMP\_MeshInfo@{TMPro.TMP\_MeshInfo}!uvs0@{uvs0}}
+\index{uvs0@{uvs0}!TMPro.TMP\_MeshInfo@{TMPro.TMP\_MeshInfo}}
+\doxysubsubsection{\texorpdfstring{uvs0}{uvs0}}
+{\footnotesize\ttfamily Vector2 \mbox{[}$\,$\mbox{]} TMPro.\+TMP\+\_\+\+Mesh\+Info.\+uvs0}
+
+\Hypertarget{struct_t_m_pro_1_1_t_m_p___mesh_info_a2ea56e0aace99edfe971760bd76a890d}\label{struct_t_m_pro_1_1_t_m_p___mesh_info_a2ea56e0aace99edfe971760bd76a890d} 
+\index{TMPro.TMP\_MeshInfo@{TMPro.TMP\_MeshInfo}!uvs2@{uvs2}}
+\index{uvs2@{uvs2}!TMPro.TMP\_MeshInfo@{TMPro.TMP\_MeshInfo}}
+\doxysubsubsection{\texorpdfstring{uvs2}{uvs2}}
+{\footnotesize\ttfamily Vector2 \mbox{[}$\,$\mbox{]} TMPro.\+TMP\+\_\+\+Mesh\+Info.\+uvs2}
+
+\Hypertarget{struct_t_m_pro_1_1_t_m_p___mesh_info_a6546f16eff9f1de656a8f75415934aea}\label{struct_t_m_pro_1_1_t_m_p___mesh_info_a6546f16eff9f1de656a8f75415934aea} 
+\index{TMPro.TMP\_MeshInfo@{TMPro.TMP\_MeshInfo}!vertexCount@{vertexCount}}
+\index{vertexCount@{vertexCount}!TMPro.TMP\_MeshInfo@{TMPro.TMP\_MeshInfo}}
+\doxysubsubsection{\texorpdfstring{vertexCount}{vertexCount}}
+{\footnotesize\ttfamily int TMPro.\+TMP\+\_\+\+Mesh\+Info.\+vertex\+Count}
+
+\Hypertarget{struct_t_m_pro_1_1_t_m_p___mesh_info_a7f31f8c5b18a9d84129a7f2cb5981728}\label{struct_t_m_pro_1_1_t_m_p___mesh_info_a7f31f8c5b18a9d84129a7f2cb5981728} 
+\index{TMPro.TMP\_MeshInfo@{TMPro.TMP\_MeshInfo}!vertices@{vertices}}
+\index{vertices@{vertices}!TMPro.TMP\_MeshInfo@{TMPro.TMP\_MeshInfo}}
+\doxysubsubsection{\texorpdfstring{vertices}{vertices}}
+{\footnotesize\ttfamily Vector3 \mbox{[}$\,$\mbox{]} TMPro.\+TMP\+\_\+\+Mesh\+Info.\+vertices}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Package\+Cache/com.\+unity.\+textmeshpro@3.\+0.\+6/\+Scripts/\+Runtime/\mbox{\hyperlink{_t_m_p___mesh_info_8cs}{TMP\+\_\+\+Mesh\+Info.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,34 @@
+\chapter{Working with debug messages}
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-debug-messages}{}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-debug-messages}\index{Working with debug messages@{Working with debug messages}}
+\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-debug-messages_autotoc_md1820}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-debug-messages_autotoc_md1820}%
+ You can use debug nodes to see the result of a code segment inside the \doxylink{namespace_unity}{Unity} console. For example, attaching a Debug node to a Variable node outputs the value of the variable.
+
+\begin{quote}
+\mbox{[}!\+TIP\mbox{]} Debugs are a useful tool when prototyping. \end{quote}
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-debug-messages_autotoc_md1821}{}\doxysection{\texorpdfstring{To create a debug message}{To create a debug message}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-debug-messages_autotoc_md1821}
+\begin{quote}
+\mbox{[}!\+IMPORTANT\mbox{]} Remove or disconnect the debugs from the graphs before producing the final executable. \end{quote}
+
+\begin{DoxyEnumerate}
+\item Add a Script Machine component to the Game\+Object.
+\item Select {\bfseries{Edit Graph}}.
+\item Do one of the following\+:
+\begin{DoxyItemize}
+\item Use the starting events that are created with the script machine.
+\item Add an event node to the graph.
+\end{DoxyItemize}
+\item Drag and release from the node port. The fuzzy finder appears.
+\item In the finder field, enter “\+Log”. A list of Debug nodes appears.
+\item Select the relevant debug message type you want to use (for example {\bfseries{Log(\+Message)}}, {\bfseries{Log Error(\+Message)}} or {\bfseries{Log Warning(\+Message)}}). The select Debug node is placed in the graph and linked to the event.
+\item Drag and release from the Debug green (output) port. The fuzzy finder appears.
+\item In the list, select the String node. A String node appears on the graph, connected to the Debug node.\+v Enter the debug message in the string node\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}.\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}
+\end{DoxyEnumerate}
+
+\begin{quote}
+\mbox{[}!\+TIP\mbox{]} You can link variables or Game\+Objects other than a string to the port to see the value in the console. \end{quote}
+Whenever the graph is run and the Event is fired, the debug node executes and the text in the String appears in the console.
+
+\begin{quote}
+\mbox{[}!\+NOTE\mbox{]} The debug bar indicates the number of messages of each debug type (in the following order Message, Error, Warning). \end{quote}
+ 

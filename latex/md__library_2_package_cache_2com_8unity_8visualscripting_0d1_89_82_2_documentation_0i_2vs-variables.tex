@@ -1,0 +1,58 @@
+\chapter{Variables}
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-variables}{}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-variables}\index{Variables@{Variables}}
+\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-variables_autotoc_md2166}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-variables_autotoc_md2166}%
+ Variables act as a container for a piece of information that might change as an application runs. To define a variable, you need to provide\+:
+
+
+\begin{DoxyItemize}
+\item A name for the variable, such as {\ttfamily My\+Variable}.
+\item The type of data the variable holds, such as {\ttfamily int} or {\ttfamily string} .
+\item A value for the variable, such as {\ttfamily 1} or {\ttfamily cat}.
+\end{DoxyItemize}
+
+In Visual Scripting, you can give a node the name of a variable, instead of a fixed value or text. Your Script Graph uses the variable\textquotesingle{}s name to access its value. For example, you can use a variable called {\ttfamily Count}, with an {\ttfamily int} type and a value of {\ttfamily 1}. You can use an Add node in Visual Scripting to add 1 to the value of {\ttfamily Count}, and save the new value in {\ttfamily Count} to use again in another part of your Script Graph, or a different Script Graph.
+
+Variables also have scopes. A variable\textquotesingle{}s scope determines what parts of your Script Graph can access which variables to read or modify their values. The scope can also decide whether another Script Graph can access a variable.
+
+You can create and manage variables in a graph from the Blackboard. For more information on the Blackboard, see \href{vs-interface-overview.md\#the-blackboard}{\texttt{ The Blackboard}}. For more information on how to use variables, see \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-add-variable-graph}{Create and add a variable to a Script Graph}{0}.\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-variables_autotoc_md2167}{}\doxysection{\texorpdfstring{Variable scopes}{Variable scopes}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-variables_autotoc_md2167}
+Each variable scope has its own tab on the Blackboard, except Flow variables. Visual Scripting has six variable scopes.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Variable Scope}} }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Variable Scope}} }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property}}    }\\\cline{1-2}
+\endhead
+{\bfseries{Flow Variables}} &Flow variables are like local variables in a scripting language\+: they have the smallest scope. You can\textquotesingle{}t use a Flow variable if\+:~\newline
+ 
+\begin{DoxyItemize}
+\item The Flow variable doesn’t have a direct or indirect connection to the nodes where you want to use its value. The node where the variable is defined must be a part of the logical flow where you want to use its value. 
+\item The Flow variable hasn’t been set before Visual Scripting tries to run any logic that needs its value. The node where the variable is defined must come before any other logic in your graph. 
+\end{DoxyItemize}You can\textquotesingle{}t create a Flow variable from the Blackboard -\/ you can create one with a Set Variable node and set the {\bfseries{Scope}} to {\bfseries{Flow}}.   \\\cline{1-2}
+{\bfseries{Graph Variables}} &Graph variables belong to a specific Script Graph. You can\textquotesingle{}t access or modify Graph variables outside the specific Script Graph where they\textquotesingle{}re defined. ~\newline
+You also can\textquotesingle{}t create a new Graph variable unless you have a Script Graph open in the Graph window.  \\\cline{1-2}
+{\bfseries{Object Variables}} &Object variables belong to a specific Game\+Object. You can edit an Object variable from the \doxylink{namespace_unity}{Unity} Editor\textquotesingle{}s Inspector for the Game\+Object, and the Object variable is accessible in all graphs attached to the Game\+Object. ~\newline
+You can\textquotesingle{}t create a new Object variable unless you\textquotesingle{}ve opened your Script Graph from a Script Machine component on a Game\+Object.  \\\cline{1-2}
+{\bfseries{Scene Variables}} &Scene variables belong to the current scene. Visual Scripting creates a new Game\+Object in your scene to hold references to your Scene variables. You can access your Scene variables from any Script Graph attached to a different Game\+Object in a single scene, but can\textquotesingle{}t access a Scene variable in another scene in your project.  \\\cline{1-2}
+{\bfseries{App or Application Variables}} &Application variables belong to your entire application. You can access an Application variable across multiple scenes while your application runs, and the Application variable would hold your changes. ~\newline
+Any values held in an Application variable reset to their default values after your application quits.  \\\cline{1-2}
+{\bfseries{Saved Variables}} &Saved variables are like Application variables, but they persist even after your application quits. You can use a Saved variable as a simple but powerful save system. \doxylink{namespace_unity}{Unity} stores Saved variables in its {\ttfamily Player\+Prefs}, and they don\textquotesingle{}t refer to \doxylink{namespace_unity}{Unity} objects, like Game\+Objects and components. For more information on {\ttfamily Player\+Prefs}, see \href{https://docs.unity3d.com/ScriptReference/PlayerPrefs.html}{\texttt{ Player\+Prefs}} in the \doxylink{namespace_unity}{Unity} User Manual Scripting Reference.   \\\cline{1-2}
+\end{longtabu}
+
+
+\begin{quote}
+\mbox{[}!\+NOTE\mbox{]} You can still access the Blackboard and create new variables with a State Graph open in the Graph window, but you can\textquotesingle{}t add a variable node and use it inside a State Graph. \end{quote}
+For Saved variables, there are two additional tabs on the Blackboard\+: {\bfseries{Initial}} and {\bfseries{Saved}}\+:
+
+
+\begin{DoxyItemize}
+\item Values defined in the {\bfseries{Initial}} tab apply to all new instances of your application as default values.
+\item Values defined in the {\bfseries{Saved}} tab are the last modified values for those variables, based on when you last ran your application. You can edit them manually, or delete the values to reset them to the values defined in the {\bfseries{Initial}} tab.
+\end{DoxyItemize}
+
+ 

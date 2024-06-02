@@ -1,0 +1,105 @@
+\doxysection{Unity\+Engine.\+Test\+Tools.\+Exit\+Play\+Mode Class Reference}
+\hypertarget{class_unity_engine_1_1_test_tools_1_1_exit_play_mode}{}\label{class_unity_engine_1_1_test_tools_1_1_exit_play_mode}\index{UnityEngine.TestTools.ExitPlayMode@{UnityEngine.TestTools.ExitPlayMode}}
+
+
+Implements IEdit\+Mode\+Test\+Yield\+Instruction. A new instance of the class is a yield instruction to exit Play Mode.  
+
+
+Inheritance diagram for Unity\+Engine.\+Test\+Tools.\+Exit\+Play\+Mode\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_engine_1_1_test_tools_1_1_exit_play_mode}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_exit_play_mode_adc3a54aa76cfac2ed677641c9b472067}{Exit\+Play\+Mode}} ()
+\begin{DoxyCompactList}\small\item\em Sets Expect\+Domain\+Reload and Expected\+Playmode\+State to false. \end{DoxyCompactList}\item 
+IEnumerator \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_exit_play_mode_aa17fd2b60de390aa6973cf93c319d6be}{Perform}} ()
+\begin{DoxyCompactList}\small\item\em Performs the multi-\/step instruction of exiting Play\+Mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_exit_play_mode_a18cb0e0f13c5ac86c3ff5e1d005e040a}{Expect\+Domain\+Reload}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the value of Expect\+Domain\+Reload. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_exit_play_mode_a4d243050b469dc4b4f2bf5697015a68d}{Expected\+Playmode\+State}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the value of Expected\+Playmode\+State. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_edit_mode_test_yield_instruction}{Unity\+Engine.\+Test\+Tools.\+IEdit\+Mode\+Test\+Yield\+Instruction}}}
+
+
+\doxysubsection{Detailed Description}
+Implements IEdit\+Mode\+Test\+Yield\+Instruction. A new instance of the class is a yield instruction to exit Play Mode. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_unity_engine_1_1_test_tools_1_1_exit_play_mode_adc3a54aa76cfac2ed677641c9b472067}\label{class_unity_engine_1_1_test_tools_1_1_exit_play_mode_adc3a54aa76cfac2ed677641c9b472067} 
+\index{UnityEngine.TestTools.ExitPlayMode@{UnityEngine.TestTools.ExitPlayMode}!ExitPlayMode@{ExitPlayMode}}
+\index{ExitPlayMode@{ExitPlayMode}!UnityEngine.TestTools.ExitPlayMode@{UnityEngine.TestTools.ExitPlayMode}}
+\doxysubsubsection{\texorpdfstring{ExitPlayMode()}{ExitPlayMode()}}
+{\footnotesize\ttfamily Unity\+Engine.\+Test\+Tools.\+Exit\+Play\+Mode.\+Exit\+Play\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sets Expect\+Domain\+Reload and Expected\+Playmode\+State to false. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_test_tools_1_1_exit_play_mode_aa17fd2b60de390aa6973cf93c319d6be}\label{class_unity_engine_1_1_test_tools_1_1_exit_play_mode_aa17fd2b60de390aa6973cf93c319d6be} 
+\index{UnityEngine.TestTools.ExitPlayMode@{UnityEngine.TestTools.ExitPlayMode}!Perform@{Perform}}
+\index{Perform@{Perform}!UnityEngine.TestTools.ExitPlayMode@{UnityEngine.TestTools.ExitPlayMode}}
+\doxysubsubsection{\texorpdfstring{Perform()}{Perform()}}
+{\footnotesize\ttfamily IEnumerator Unity\+Engine.\+Test\+Tools.\+Exit\+Play\+Mode.\+Perform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Performs the multi-\/step instruction of exiting Play\+Mode. 
+
+\begin{DoxyReturn}{Returns}
+An IEnumerator with the async steps.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & An exception is thrown if the editor is not in Play\+Mode.\\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_edit_mode_test_yield_instruction_a4f785da8cc50e662bf8e4da01004c7fe}{Unity\+Engine.\+Test\+Tools.\+IEdit\+Mode\+Test\+Yield\+Instruction}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_unity_engine_1_1_test_tools_1_1_exit_play_mode_a18cb0e0f13c5ac86c3ff5e1d005e040a}\label{class_unity_engine_1_1_test_tools_1_1_exit_play_mode_a18cb0e0f13c5ac86c3ff5e1d005e040a} 
+\index{UnityEngine.TestTools.ExitPlayMode@{UnityEngine.TestTools.ExitPlayMode}!ExpectDomainReload@{ExpectDomainReload}}
+\index{ExpectDomainReload@{ExpectDomainReload}!UnityEngine.TestTools.ExitPlayMode@{UnityEngine.TestTools.ExitPlayMode}}
+\doxysubsubsection{\texorpdfstring{ExpectDomainReload}{ExpectDomainReload}}
+{\footnotesize\ttfamily bool Unity\+Engine.\+Test\+Tools.\+Exit\+Play\+Mode.\+Expect\+Domain\+Reload\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the value of Expect\+Domain\+Reload. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_edit_mode_test_yield_instruction_a3cf7b174d1ecc9cdd26d231adcd4f3a9}{Unity\+Engine.\+Test\+Tools.\+IEdit\+Mode\+Test\+Yield\+Instruction}}.
+
+\Hypertarget{class_unity_engine_1_1_test_tools_1_1_exit_play_mode_a4d243050b469dc4b4f2bf5697015a68d}\label{class_unity_engine_1_1_test_tools_1_1_exit_play_mode_a4d243050b469dc4b4f2bf5697015a68d} 
+\index{UnityEngine.TestTools.ExitPlayMode@{UnityEngine.TestTools.ExitPlayMode}!ExpectedPlaymodeState@{ExpectedPlaymodeState}}
+\index{ExpectedPlaymodeState@{ExpectedPlaymodeState}!UnityEngine.TestTools.ExitPlayMode@{UnityEngine.TestTools.ExitPlayMode}}
+\doxysubsubsection{\texorpdfstring{ExpectedPlaymodeState}{ExpectedPlaymodeState}}
+{\footnotesize\ttfamily bool Unity\+Engine.\+Test\+Tools.\+Exit\+Play\+Mode.\+Expected\+Playmode\+State\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the value of Expected\+Playmode\+State. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_edit_mode_test_yield_instruction_af28e01e066b7355ab048bcf78a24e9cd}{Unity\+Engine.\+Test\+Tools.\+IEdit\+Mode\+Test\+Yield\+Instruction}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Package\+Cache/com.\+unity.\+test-\/framework@1.\+1.\+33/\+Unity\+Editor.\+Test\+Runner/\+Test\+Runner/\+Messages/\mbox{\hyperlink{_exit_play_mode_8cs}{Exit\+Play\+Mode.\+cs}}\end{DoxyCompactItemize}

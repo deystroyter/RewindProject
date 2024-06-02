@@ -1,0 +1,73 @@
+\chapter{Timeline glossary}
+\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__gloss}{}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__gloss}\index{Timeline glossary@{Timeline glossary}}
+\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__gloss_autotoc_md1236}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__gloss_autotoc_md1236}%
+ This topic provides an alphabetical list of the terminology used throughout the \doxylink{namespace_timeline}{Timeline} documentation.
+
+{\bfseries{animatable property}}\+: A property belonging to a Game\+Object, or belonging to a component added to a Game\+Object, that can have different values over time.
+
+{\bfseries{animation}}\+: The result of adding two different keys, at two different times, for the same animatable property.
+
+{\bfseries{animation curve}}\+: The curve drawn between keys set for the same animatable property, at different frames or seconds. The position of the tangents and the selected interpolation mode for each key determines the shape of the animation curve.
+
+{\bfseries{binding}} or {\bfseries{Track binding}}\+: Refers to the link between \doxylink{namespace_timeline}{Timeline} Asset tracks and the Game\+Objects in the scene. When you link a Game\+Object to a track, the track animates the Game\+Object. Bindings are stored as part of the \doxylink{namespace_timeline}{Timeline} instance.
+
+{\bfseries{blend}} and {\bfseries{blend area}}\+: The area where two Animation clips, Audio clips, or Control clips overlap. The overlap creates a transition that is referred to as a {\bfseries{blend}}. The duration of the overlap is referred to as the {\bfseries{blend area}}. The blend area sets the duration of the transition.
+
+{\bfseries{Blend In curve}}\+: In a blend between two Animation clips, Audio clips, or Control clips, there are two blend curves. The blend curve for the incoming clip is referred to as the {\bfseries{Blend In}} curve.
+
+{\bfseries{Blend Out curve}}\+: In a blend between two Animation clips, Audio clips, or Control clips, there are two blend curves. The blend curve for the out-\/going clip is referred to as the {\bfseries{Blend Out}} curve.
+
+{\bfseries{clip}}\+: A generic term that refers to any clip within the Clips view of the \doxylink{namespace_timeline}{Timeline} window.
+
+{\bfseries{Clips view}}\+: The area in the \doxylink{namespace_timeline}{Timeline} window where you add, position, and manipulate clips.
+
+{\bfseries{Control/\+Command}}\+: This term is used when instructing the user to press or hold down the Control key on Windows, or the Command key on Mac.
+
+{\bfseries{Curves view}}\+: The area in the \doxylink{namespace_timeline}{Timeline} window that shows the animation curves for Infinite clips or for Animation clips that have been converted from Infinite clips. The Curves view is similar to \mbox{[}Curves mode\mbox{]}(animeditor-\/\+Animation\+Curves) in the Animation window.
+
+{\bfseries{Gap extrapolation}}\+: How an Animation track approximates animation data in the gaps before and after an Animation clip.
+
+{\bfseries{field}}\+: A generic term that describes an editable box that the user clicks and types-\/in a value. A field is also referred to as a {\bfseries{property}}.
+
+{\bfseries{incoming clip\+:}} The second clip in a blend between two clips. The first clip, the out-\/going clip, transitions to the second clip, the {\bfseries{incoming clip}}.
+
+{\bfseries{Infinite clip}}\+: A special animation clip that contains basic key animation recorded directly to an Animation track within the \doxylink{namespace_timeline}{Timeline} window. An Infinite clip cannot be positioned, trimmed, or split because it does not have a defined duration\+: it spans the entirety of an Animation track.
+
+{\bfseries{interpolation}}\+: The estimation of values that determine the shape of an animation curve between two keys.
+
+{\bfseries{interpolation mode}}\+: The interpolation algorithm that draws the animation curve between two keys. The interpolation mode also joins or breaks left and right tangents.
+
+{\bfseries{key}}\+: The value of an animatable property, set at a specific point in time. Setting at least two keys for the same property creates an animation.
+
+{\bfseries{out-\/going clip}}\+: The first clip in a blend between two clips. The first clip, the {\bfseries{out-\/going clip}}, transitions to the second clip, the incoming clip.
+
+{\bfseries{Playhead Location field}}\+: The field that expresses the location of the \doxylink{namespace_timeline}{Timeline} Playhead in either frames or seconds, depending on the \doxylink{namespace_timeline}{Timeline} Settings.
+
+{\bfseries{property}}\+: A generic term for the editable fields, buttons, checkboxes, or menus that comprise a component. An editable field is also referred to as a {\bfseries{field}}.
+
+{\bfseries{tangent}}\+: One of two handles that controls the shape of the animation curve before and after a key. Tangents appear when a key is selected in the Curves view, or when a key is selected in the Curve Editor.
+
+{\bfseries{tangent mode}}\+: The selected interpolation mode used by the left tangent, right tangent, or both tangents.
+
+{\bfseries{\doxylink{namespace_timeline}{Timeline}}} or {\bfseries{\doxylink{namespace_unity}{Unity}\textquotesingle{}s \doxylink{namespace_timeline}{Timeline}}}\+: Generic terms that refer to all features, windows, editors, and components related to creating, modifying, or reusing cut-\/scenes, cinematics, and game-\/play sequences.
+
+{\bfseries{\doxylink{namespace_timeline}{Timeline} Asset}}\+: Refers to the tracks, clips, and recorded animation that comprise a cinematic, cut-\/scene, game-\/play sequence, or other effect created with the \doxylink{namespace_timeline}{Timeline} window. A \doxylink{namespace_timeline}{Timeline} Asset does not include bindings to the Game\+Objects animated by the \doxylink{namespace_timeline}{Timeline} Asset. The bindings to scene Game\+Objects are stored in the \doxylink{namespace_timeline}{Timeline} instance. The \doxylink{namespace_timeline}{Timeline} Asset is project-\/based.
+
+{\bfseries{\doxylink{namespace_timeline}{Timeline} window}}\+: The official name of the window where you create, modify, and preview a \doxylink{namespace_timeline}{Timeline} instance. Modifications to a \doxylink{namespace_timeline}{Timeline} instance also affects the \doxylink{namespace_timeline}{Timeline} Asset.
+
+{\bfseries{\doxylink{namespace_timeline}{Timeline} instance}}\+: Refers to the link between a \doxylink{namespace_timeline}{Timeline} Asset and the Game\+Objects that the \doxylink{namespace_timeline}{Timeline} Asset animates in the scene. You create a \doxylink{namespace_timeline}{Timeline} instance by associating a \doxylink{namespace_timeline}{Timeline} Asset to a Game\+Object through a Playable Director component. The \doxylink{namespace_timeline}{Timeline} instance is scene-\/based.
+
+{\bfseries{\doxylink{namespace_timeline}{Timeline} Playback Controls}}\+: The row of buttons and fields in the \doxylink{namespace_timeline}{Timeline} window that controls playback of the \doxylink{namespace_timeline}{Timeline} instance. The \doxylink{namespace_timeline}{Timeline} Playback Controls affect the location of the \doxylink{namespace_timeline}{Timeline} Playhead.
+
+{\bfseries{\doxylink{namespace_timeline}{Timeline} Playback mode}}\+: The mode that previews the \doxylink{namespace_timeline}{Timeline} instance in the \doxylink{namespace_timeline}{Timeline} window. \doxylink{namespace_timeline}{Timeline} Playback mode is a simulation of Play mode. \doxylink{namespace_timeline}{Timeline} Playback mode does not support audio playback.
+
+{\bfseries{\doxylink{namespace_timeline}{Timeline} Playhead}}\+: The white marker and line that indicates the exact point in time being previewed in the \doxylink{namespace_timeline}{Timeline} window.
+
+{\bfseries{\doxylink{namespace_timeline}{Timeline} Selector}}\+: The name of the menu in the \doxylink{namespace_timeline}{Timeline} window that selects the \doxylink{namespace_timeline}{Timeline} instance to be previewed or modified.
+
+{\bfseries{track}}\+: A generic term that refers to any track within the Track list of the \doxylink{namespace_timeline}{Timeline} window.
+
+{\bfseries{Track groups}}\+: The term for a series of tracks organized in an expandable and collapse collection of tracks.
+
+{\bfseries{Track list}}\+: The area in the \doxylink{namespace_timeline}{Timeline} window where you add, group, and modify tracks. 

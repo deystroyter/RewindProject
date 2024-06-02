@@ -1,0 +1,71 @@
+\chapter{Subgraph node}
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-subgraph-node}{}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-subgraph-node}\index{Subgraph node@{Subgraph node}}
+\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-subgraph-node_autotoc_md1937}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-subgraph-node_autotoc_md1937}%
+ Use a Subgraph node to reference and trigger another Script Graph\textquotesingle{}s logic from inside a parent Script Graph.
+
+
+
+For more information on Subgraphs, see \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-subgraphs-state-units}{Subgraphs and State Units}{0}. For more information on Script Graphs, see \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-graph-types}{Graphs}{0}.\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-subgraph-node_autotoc_md1938}{}\doxysection{\texorpdfstring{Fuzzy finder category}{Fuzzy finder category}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-subgraph-node_autotoc_md1938}
+The Subgraph node is in the {\bfseries{Nesting}} category in the fuzzy finder.
+
+You can go to the {\bfseries{Graphs}} category and select any Script Graph to create a Subgraph node. For more information on how to create a Subgraph, see \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-add-subgraph}{Add a Subgraph to a Script Graph}{0}.\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-subgraph-node_autotoc_md1939}{}\doxysection{\texorpdfstring{Available ports}{Available ports}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-subgraph-node_autotoc_md1939}
+By default, a Subgraph node has no ports.
+
+Use the \href{vs-interface-overview.md\#the-graph-inspector}{\texttt{ Graph Inspector}} to specify the following on a Script Graph\+:
+
+
+\begin{DoxyItemize}
+\item Trigger Inputs.
+\item Trigger Outputs.
+\item Data Inputs.
+\item Data Outputs.
+\end{DoxyItemize}
+
+These determine the type and number of ports available on its Subgraph node. For more information on how to define ports on a Script Graph, see \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-add-triggers-data-graph}{Add a Trigger or Data port to a Script Graph}{0}.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Port type}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Port type}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-2}
+\endhead
+{\bfseries{Trigger Input}}   &Adds a control input port to the Subgraph node for the Script Graph. Use a Trigger Input to choose which node or nodes from a parent graph triggers Visual Scripting to run the logic in the Subgraph.    \\\cline{1-2}
+{\bfseries{Trigger Output}}   &Adds a control output port to the Subgraph node for the Script Graph. Use a Trigger Output to choose which node or nodes Visual Scripting triggers after the logic contained in the Subgraph finishes.    \\\cline{1-2}
+{\bfseries{Data Input}}   &Adds a data input port to the Subgraph node for the Script Graph. Use a Data Input to receive data from a parent graph.    \\\cline{1-2}
+{\bfseries{Data Output}}   &Adds a data output port to the Subgraph node for the Script Graph. Use a Data Output to send data back to a parent graph.   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-subgraph-node_autotoc_md1940}{}\doxysection{\texorpdfstring{Example graph usage}{Example graph usage}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-subgraph-node_autotoc_md1940}
+\begin{quote}
+\mbox{[}!\+TIP\mbox{]} A Subgraph node can use a new blank Script Graph or an existing Script Graph from a project. For more information, see \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-add-subgraph}{Add a Subgraph to a Script Graph}{0}. \end{quote}
+In the following example, the Subgraph node {\bfseries{Character Move}} references a graph that makes a Game\+Object move based on a user\textquotesingle{}s input. It has the following\+:
+
+
+\begin{DoxyItemize}
+\item One Trigger Input port.
+\item One Trigger Output port.
+\item Three Data Input ports.
+\item One Data Output port.
+\end{DoxyItemize}
+
+After every Update Event in the application, the {\bfseries{Character Move}} Subgraph node triggers and takes the X, Y, and Z coordinates of the current Game\+Object\textquotesingle{}s Transform component. The Subgraph node then outputs a new Vector 3 value, which the parent graph assigns to the current Game\+Object with a Transform Set Position node. ~\newline
+
+
+
+
+The Subgraph node reduces the number of nodes in the parent graph.
+
+\begin{quote}
+\mbox{[}!\+TIP\mbox{]} To see the Script Graph attached to the Subgraph node in this example, see either \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-input-node}{Input node}{0} or \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-output-node}{Output node}{0}. \end{quote}
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-subgraph-node_autotoc_md1941}{}\doxysection{\texorpdfstring{Related nodes}{Related nodes}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-subgraph-node_autotoc_md1941}
+Use a Subgraph node with the following nodes\+:
+
+
+\begin{DoxyItemize}
+\item \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-input-node}{Input node}{0}
+\item \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-output-node}{Output node}{0} 
+\end{DoxyItemize}

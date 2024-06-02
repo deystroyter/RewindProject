@@ -1,0 +1,33 @@
+\chapter{Resetting clips}
+\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2clp__reset}{}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2clp__reset}\index{Resetting clips@{Resetting clips}}
+\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2clp__reset_autotoc_md1124}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2clp__reset_autotoc_md1124}%
+ You can reset the duration and speed of a clip. Resetting a clip {\bfseries{does not reset}} the following properties\+:
+
+
+\begin{DoxyItemize}
+\item Start
+\item Ease In Duration and Ease Out Duration
+\item Animation Extrapolation settings
+\item Blend Curves
+\end{DoxyItemize}
+
+To reset a clip, right-\/click the clip and select {\bfseries{Editing}} from the context menu. Then, select {\bfseries{Reset Duration}}, {\bfseries{Reset Speed}}, or {\bfseries{Reset All}}. Depending on the reset option you select, resetting a clip does the following\+:
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Option\+:}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description\+:}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Option\+:}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description\+:}}    }\\\cline{1-2}
+\endhead
+{\bfseries{Reset Duration}}   &Resets the Duration and the Clip In.    \\\cline{1-2}
+{\bfseries{Reset Speed}}   &Resets the Speed Multiplier.    \\\cline{1-2}
+{\bfseries{Reset All}}   &Resets the Duration, Clip In, and Speed Multiplier.   \\\cline{1-2}
+\end{longtabu}
+
+
+If resetting a clip results in two clips overlapping each other, \doxylink{namespace_timeline}{Timeline} creates a blend for the overlap, regardless of the selected Clip Edit mode. 

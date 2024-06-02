@@ -1,0 +1,223 @@
+\doxysection{Unity.\+Visual\+Scripting.\+Subgraph\+Unit Class Reference}
+\hypertarget{class_unity_1_1_visual_scripting_1_1_subgraph_unit}{}\label{class_unity_1_1_visual_scripting_1_1_subgraph_unit}\index{Unity.VisualScripting.SubgraphUnit@{Unity.VisualScripting.SubgraphUnit}}
+Inheritance diagram for Unity.\+Visual\+Scripting.\+Subgraph\+Unit\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=0.814249cm]{class_unity_1_1_visual_scripting_1_1_subgraph_unit}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_subgraph_unit_1_1_data}{Data}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element_data}{IGraph\+Element\+Data}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_subgraph_unit_a9b385d7ea72801ae1e99b6cb14c34152}{Create\+Data}} ()
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_subgraph_unit_aaf0c82441d477dec5df2265708bef8f4}{Subgraph\+Unit}} ()
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_subgraph_unit_a58da4e8373e36b55d594848046145d41}{Subgraph\+Unit}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_script_graph_asset}{Script\+Graph\+Asset}} macro)
+\item 
+override \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_flow_graph}{Flow\+Graph}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_subgraph_unit_ae711ac6671e990d4e5b5d6a5ab221303}{Default\+Graph}} ()
+\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_subgraph_unit_a9f044c2738d11f235141d63e24525142}{Start\+Listening}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_stack}{Graph\+Stack}} stack)
+\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_subgraph_unit_a1f555df76290e49a1889a576e7fb2e3e}{Stop\+Listening}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_stack}{Graph\+Stack}} stack)
+\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_subgraph_unit_a2c7399ace00b1cf80870ba5c8d9e0873}{Is\+Listening}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer}{Graph\+Pointer}} pointer)
+\item 
+override void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_subgraph_unit_a6f9fe68be65305f755a688a75d8bc07a}{After\+Add}} ()
+\item 
+override void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_subgraph_unit_a1583c3a8f695d78ca426158aad983a44}{Before\+Remove}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_nester_unit}{Unity.\+Visual\+Scripting.\+Nester\+Unit$<$ Flow\+Graph, Script\+Graph\+Asset $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+override IEnumerable$<$ object $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_nester_unit_af984284407c51660e2f0e6a68621c0e7}{Get\+Aot\+Stubs}} (Hash\+Set$<$ object $>$ visited)
+\item 
+TGraph \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_nester_unit_a8b976d5fbd45726de40fc45af3424bf5}{Default\+Graph}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element}{Unity.\+Visual\+Scripting.\+IGraph\+Element}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element_a1fd6faca2766fb1629356640556e71a3}{Handle\+Dependencies}} ()
+\item 
+void \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element_ac74c2f6eae3a817b2fffcaf5a1047fbd}{Instantiate}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}} instance)
+\item 
+void \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element_a3d063b41e04dabc487b9751586069509}{Uninstantiate}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}} instance)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_notified_collection_item}{Unity.\+Visual\+Scripting.\+INotified\+Collection\+Item}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_notified_collection_item_ad1326025224e3ffc006556f0e12ba700}{Before\+Add}} ()
+\item 
+void \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_notified_collection_item_abe4ef17ee1c33e3572635db6b6c565e0}{After\+Remove}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_prewarmable}{Unity.\+Visual\+Scripting.\+IPrewarmable}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_prewarmable_a1692968cffe8e3a858df423dbef32c81}{Prewarm}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_aot_stubbable}{Unity.\+Visual\+Scripting.\+IAot\+Stubbable}}}
+\begin{DoxyCompactItemize}
+\item 
+IEnumerable$<$ object $>$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_aot_stubbable_ac1b9801f8e0740a9d910f745985a9db6}{Get\+Aot\+Stubs}} (Hash\+Set$<$ object $>$ visited)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_analytics_identifiable}{Unity.\+Visual\+Scripting.\+IAnalytics\+Identifiable}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_analytics_identifier}{Analytics\+Identifier}} \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_analytics_identifiable_a100f5a94f54d018a1a4d74bdb1750953}{Get\+Analytics\+Identifier}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_subgraph_unit}{Subgraph\+Unit}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_subgraph_unit_a256de36e64e98d565fb81d58f6a73d81}{With\+Input\+Output}} ()
+\item 
+static \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_subgraph_unit}{Subgraph\+Unit}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_subgraph_unit_a30bc48e1249d916ecf714f56926d2bf0}{With\+Start\+Update}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_subgraph_unit_a0e7e8f7b950bbe041fa724787318c6c1}{Definition}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_nester_unit}{Unity.\+Visual\+Scripting.\+Nester\+Unit$<$ Flow\+Graph, Script\+Graph\+Asset $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_nester_unit_aa83a24df0f7230c864cfbbc433158be4}{Nester\+Unit}} ()
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_nester_unit_a0b999a94094e3ba9bb830be5594bebf7}{Nester\+Unit}} (TMacro macro)
+\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_nester_unit_a3c9ba0370c5be78e397aa58c6f474d00}{Copy\+From}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_nester_unit}{Nester\+Unit}}$<$ TGraph, TMacro $>$ source)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_nester_unit}{Unity.\+Visual\+Scripting.\+Nester\+Unit$<$ Flow\+Graph, Script\+Graph\+Asset $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+override bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_nester_unit_ac5e835239f28fe159044e9aedf7aea4a}{can\+Define}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_nest}{Graph\+Nest}}$<$ TGraph, TMacro $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_nester_unit_a46487f40982621f111e9e5945251ff7a}{nest}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+override IEnumerable$<$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_serialization_dependency}{ISerialization\+Dependency}} $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_nester_unit_af2112899459f7293df51d57be534187b}{deserialization\+Dependencies}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element}{Unity.\+Visual\+Scripting.\+IGraph\+Element}}}
+\begin{DoxyCompactItemize}
+\item 
+new \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph}{IGraph}} \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element_a9d83ab95a9de34409a79339ff5ba7d57}{graph}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+int \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element_aef2abd2bc4e2b87b8239128cd132bb3b}{dependency\+Order}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+new Guid \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element_a205f9d50223aa8d0db19cd922cb3663c}{guid}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+IEnumerable$<$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_serialization_dependency}{ISerialization\+Dependency}} $>$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element_ae5011b2d1d2111bd56fb3e9ac89daf7f}{deserialization\+Dependencies}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_item}{Unity.\+Visual\+Scripting.\+IGraph\+Item}}}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_identifiable}{Unity.\+Visual\+Scripting.\+IIdentifiable}}}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_subgraph_unit_aaf0c82441d477dec5df2265708bef8f4}\label{class_unity_1_1_visual_scripting_1_1_subgraph_unit_aaf0c82441d477dec5df2265708bef8f4} 
+\index{Unity.VisualScripting.SubgraphUnit@{Unity.VisualScripting.SubgraphUnit}!SubgraphUnit@{SubgraphUnit}}
+\index{SubgraphUnit@{SubgraphUnit}!Unity.VisualScripting.SubgraphUnit@{Unity.VisualScripting.SubgraphUnit}}
+\doxysubsubsection{\texorpdfstring{SubgraphUnit()}{SubgraphUnit()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Unity.\+Visual\+Scripting.\+Subgraph\+Unit.\+Subgraph\+Unit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_subgraph_unit_a58da4e8373e36b55d594848046145d41}\label{class_unity_1_1_visual_scripting_1_1_subgraph_unit_a58da4e8373e36b55d594848046145d41} 
+\index{Unity.VisualScripting.SubgraphUnit@{Unity.VisualScripting.SubgraphUnit}!SubgraphUnit@{SubgraphUnit}}
+\index{SubgraphUnit@{SubgraphUnit}!Unity.VisualScripting.SubgraphUnit@{Unity.VisualScripting.SubgraphUnit}}
+\doxysubsubsection{\texorpdfstring{SubgraphUnit()}{SubgraphUnit()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Unity.\+Visual\+Scripting.\+Subgraph\+Unit.\+Subgraph\+Unit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_script_graph_asset}{Script\+Graph\+Asset}}}]{macro }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_subgraph_unit_a6f9fe68be65305f755a688a75d8bc07a}\label{class_unity_1_1_visual_scripting_1_1_subgraph_unit_a6f9fe68be65305f755a688a75d8bc07a} 
+\index{Unity.VisualScripting.SubgraphUnit@{Unity.VisualScripting.SubgraphUnit}!AfterAdd@{AfterAdd}}
+\index{AfterAdd@{AfterAdd}!Unity.VisualScripting.SubgraphUnit@{Unity.VisualScripting.SubgraphUnit}}
+\doxysubsubsection{\texorpdfstring{AfterAdd()}{AfterAdd()}}
+{\footnotesize\ttfamily override void Unity.\+Visual\+Scripting.\+Subgraph\+Unit.\+After\+Add (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_notified_collection_item_ab5322d931c0c747f5d84d64acf456469}{Unity.\+Visual\+Scripting.\+INotified\+Collection\+Item}}.
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_subgraph_unit_a1583c3a8f695d78ca426158aad983a44}\label{class_unity_1_1_visual_scripting_1_1_subgraph_unit_a1583c3a8f695d78ca426158aad983a44} 
+\index{Unity.VisualScripting.SubgraphUnit@{Unity.VisualScripting.SubgraphUnit}!BeforeRemove@{BeforeRemove}}
+\index{BeforeRemove@{BeforeRemove}!Unity.VisualScripting.SubgraphUnit@{Unity.VisualScripting.SubgraphUnit}}
+\doxysubsubsection{\texorpdfstring{BeforeRemove()}{BeforeRemove()}}
+{\footnotesize\ttfamily override void Unity.\+Visual\+Scripting.\+Subgraph\+Unit.\+Before\+Remove (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_notified_collection_item_a3d19e653b21ed6661bf0f98e5907c5dd}{Unity.\+Visual\+Scripting.\+INotified\+Collection\+Item}}.
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_subgraph_unit_a9b385d7ea72801ae1e99b6cb14c34152}\label{class_unity_1_1_visual_scripting_1_1_subgraph_unit_a9b385d7ea72801ae1e99b6cb14c34152} 
+\index{Unity.VisualScripting.SubgraphUnit@{Unity.VisualScripting.SubgraphUnit}!CreateData@{CreateData}}
+\index{CreateData@{CreateData}!Unity.VisualScripting.SubgraphUnit@{Unity.VisualScripting.SubgraphUnit}}
+\doxysubsubsection{\texorpdfstring{CreateData()}{CreateData()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element_data}{IGraph\+Element\+Data}} Unity.\+Visual\+Scripting.\+Subgraph\+Unit.\+Create\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element_with_data_aa267495cfb85bf89f38058f0b718a512}{Unity.\+Visual\+Scripting.\+IGraph\+Element\+With\+Data}}.
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_subgraph_unit_ae711ac6671e990d4e5b5d6a5ab221303}\label{class_unity_1_1_visual_scripting_1_1_subgraph_unit_ae711ac6671e990d4e5b5d6a5ab221303} 
+\index{Unity.VisualScripting.SubgraphUnit@{Unity.VisualScripting.SubgraphUnit}!DefaultGraph@{DefaultGraph}}
+\index{DefaultGraph@{DefaultGraph}!Unity.VisualScripting.SubgraphUnit@{Unity.VisualScripting.SubgraphUnit}}
+\doxysubsubsection{\texorpdfstring{DefaultGraph()}{DefaultGraph()}}
+{\footnotesize\ttfamily override \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_flow_graph}{Flow\+Graph}} Unity.\+Visual\+Scripting.\+Subgraph\+Unit.\+Default\+Graph (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_subgraph_unit_a0e7e8f7b950bbe041fa724787318c6c1}\label{class_unity_1_1_visual_scripting_1_1_subgraph_unit_a0e7e8f7b950bbe041fa724787318c6c1} 
+\index{Unity.VisualScripting.SubgraphUnit@{Unity.VisualScripting.SubgraphUnit}!Definition@{Definition}}
+\index{Definition@{Definition}!Unity.VisualScripting.SubgraphUnit@{Unity.VisualScripting.SubgraphUnit}}
+\doxysubsubsection{\texorpdfstring{Definition()}{Definition()}}
+{\footnotesize\ttfamily override void Unity.\+Visual\+Scripting.\+Subgraph\+Unit.\+Definition (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_subgraph_unit_a2c7399ace00b1cf80870ba5c8d9e0873}\label{class_unity_1_1_visual_scripting_1_1_subgraph_unit_a2c7399ace00b1cf80870ba5c8d9e0873} 
+\index{Unity.VisualScripting.SubgraphUnit@{Unity.VisualScripting.SubgraphUnit}!IsListening@{IsListening}}
+\index{IsListening@{IsListening}!Unity.VisualScripting.SubgraphUnit@{Unity.VisualScripting.SubgraphUnit}}
+\doxysubsubsection{\texorpdfstring{IsListening()}{IsListening()}}
+{\footnotesize\ttfamily bool Unity.\+Visual\+Scripting.\+Subgraph\+Unit.\+Is\+Listening (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer}{Graph\+Pointer}}}]{pointer }\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_event_listener_a30162b5d92affca93f57cf5a36cf6cb0}{Unity.\+Visual\+Scripting.\+IGraph\+Event\+Listener}}.
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_subgraph_unit_a9f044c2738d11f235141d63e24525142}\label{class_unity_1_1_visual_scripting_1_1_subgraph_unit_a9f044c2738d11f235141d63e24525142} 
+\index{Unity.VisualScripting.SubgraphUnit@{Unity.VisualScripting.SubgraphUnit}!StartListening@{StartListening}}
+\index{StartListening@{StartListening}!Unity.VisualScripting.SubgraphUnit@{Unity.VisualScripting.SubgraphUnit}}
+\doxysubsubsection{\texorpdfstring{StartListening()}{StartListening()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+Subgraph\+Unit.\+Start\+Listening (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_stack}{Graph\+Stack}}}]{stack }\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_event_listener_ab3f011a11ecd93930a1292e5035ecd0e}{Unity.\+Visual\+Scripting.\+IGraph\+Event\+Listener}}.
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_subgraph_unit_a1f555df76290e49a1889a576e7fb2e3e}\label{class_unity_1_1_visual_scripting_1_1_subgraph_unit_a1f555df76290e49a1889a576e7fb2e3e} 
+\index{Unity.VisualScripting.SubgraphUnit@{Unity.VisualScripting.SubgraphUnit}!StopListening@{StopListening}}
+\index{StopListening@{StopListening}!Unity.VisualScripting.SubgraphUnit@{Unity.VisualScripting.SubgraphUnit}}
+\doxysubsubsection{\texorpdfstring{StopListening()}{StopListening()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+Subgraph\+Unit.\+Stop\+Listening (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_stack}{Graph\+Stack}}}]{stack }\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_event_listener_ae96fb097e8e8d9a6913df91df8c7ce88}{Unity.\+Visual\+Scripting.\+IGraph\+Event\+Listener}}.
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_subgraph_unit_a256de36e64e98d565fb81d58f6a73d81}\label{class_unity_1_1_visual_scripting_1_1_subgraph_unit_a256de36e64e98d565fb81d58f6a73d81} 
+\index{Unity.VisualScripting.SubgraphUnit@{Unity.VisualScripting.SubgraphUnit}!WithInputOutput@{WithInputOutput}}
+\index{WithInputOutput@{WithInputOutput}!Unity.VisualScripting.SubgraphUnit@{Unity.VisualScripting.SubgraphUnit}}
+\doxysubsubsection{\texorpdfstring{WithInputOutput()}{WithInputOutput()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_subgraph_unit}{Subgraph\+Unit}} Unity.\+Visual\+Scripting.\+Subgraph\+Unit.\+With\+Input\+Output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_subgraph_unit_a30bc48e1249d916ecf714f56926d2bf0}\label{class_unity_1_1_visual_scripting_1_1_subgraph_unit_a30bc48e1249d916ecf714f56926d2bf0} 
+\index{Unity.VisualScripting.SubgraphUnit@{Unity.VisualScripting.SubgraphUnit}!WithStartUpdate@{WithStartUpdate}}
+\index{WithStartUpdate@{WithStartUpdate}!Unity.VisualScripting.SubgraphUnit@{Unity.VisualScripting.SubgraphUnit}}
+\doxysubsubsection{\texorpdfstring{WithStartUpdate()}{WithStartUpdate()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_subgraph_unit}{Subgraph\+Unit}} Unity.\+Visual\+Scripting.\+Subgraph\+Unit.\+With\+Start\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Package\+Cache/com.\+unity.\+visualscripting@1.\+9.\+2/\+Runtime/\+Visual\+Scripting.\+Flow/\mbox{\hyperlink{_subgraph_unit_8cs}{Subgraph\+Unit.\+cs}}\end{DoxyCompactItemize}

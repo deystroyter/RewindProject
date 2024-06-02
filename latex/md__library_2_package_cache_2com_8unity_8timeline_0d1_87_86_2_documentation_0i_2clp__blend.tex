@@ -1,0 +1,45 @@
+\chapter{Blending clips}
+\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2clp__blend}{}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2clp__blend}\index{Blending clips@{Blending clips}}
+\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2clp__blend_autotoc_md1109}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2clp__blend_autotoc_md1109}%
+ Blend two clips on the same track to create a smooth transition between two Animation clips, two Audio clips, or two Playable clips. To blend two clips, select the Mix Clip Edit mode and position or trim one clip until it overlaps an adjacent clip.
+
+In a blend, the first clip is referred to as the {\bfseries{outgoing clip}} and the second clip is referred to as the {\bfseries{incoming clip}}. The area where the outgoing clip transitions to the incoming clip is referred to as the {\bfseries{blend area}}. The blend area sets the duration of the transition.
+
+
+
+{\itshape The blend area shows the transition between the outgoing clip and incoming clip}
+
+Although the Clips view represents a blend area as a single linear curve, the transition between clips is actually comprised of two blend curves. The blend curve for the outgoing clip is referred to as the {\bfseries{Blend Out}} curve. The blend curve for the incoming clip is referred to as the {\bfseries{Blend In}} curve. By default, each blend curve is automatically set to an ease-\/in and ease-\/out curve.
+
+
+
+{\itshape Use Blend Curves to customize the blend area}
+
+Use the {\bfseries{Blend Curves}} in the Inspector window to change the shape for either the Blend In or Blend Out curve of the selected clip. However, the Inspector window only allows you to edit the properties of one clip at a time. You cannot simultaneously customize both blend curves from the same blend area.
+
+To customize the {\bfseries{Blend Curves}} for the transition between two clips\+:
+
+
+\begin{DoxyEnumerate}
+\item Select the outgoing clip to customize its Blend Out curve (labelled {\bfseries{Out}}).
+\item Select the incoming clip to customize its Blend In curve (labelled {\bfseries{In}}).
+\end{DoxyEnumerate}
+
+To customize either the Blend Out curve or Blend In curve, use the drop-\/down menu to switch from {\bfseries{Auto}} to {\bfseries{Manual}}. With {\bfseries{Manual}} selected, the Inspector window shows a preview of the blend curve. Click the curve preview to open the Curve Editor below the Inspector window.
+
+
+
+{\itshape Select Manual and click the curve preview to open the Curve Editor}
+
+Use the Curve Editor to customize the shape of the blend curve. By default, the blend curve includes a key at the beginning of the curve and a key at the end of the curve. The Curve Editor provides the following different methods of modifying the blend curve\+:
+
+
+\begin{DoxyItemize}
+\item Select the key at the start or end of the blend curve and use the tangent handles to adjust the interpolation between keys.
+\item Add additional keys to change the shape of the blend curve by adding more interpolation points. Adding keys in the Curve Editor is the same as \doxysectlink{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2crv__keys__add}{adding keys in the Curves view}{0}.
+\item Right-\/click a key to delete or edit the key. Editing keys in the Curve Editor is the same as \doxysectlink{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2crv__keys__edit}{editing keys in the Curves view}{0}. Note that you cannot delete the first and last keys.
+\item Select a shape template from the bottom of the Curve Editor.
+\end{DoxyItemize}
+
+The Curve Editor also includes shape templates based on whether you are modifying the Blend In curve or the Blend Out curve. Select a shape template to change the blend curve to the selected shape template. 

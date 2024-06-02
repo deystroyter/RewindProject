@@ -1,0 +1,148 @@
+\doxysection{Unity.\+Visual\+Scripting.\+Graph\+Data\texorpdfstring{$<$}{<} TGraph \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_unity_1_1_visual_scripting_1_1_graph_data}{}\label{class_unity_1_1_visual_scripting_1_1_graph_data}\index{Unity.VisualScripting.GraphData$<$ TGraph $>$@{Unity.VisualScripting.GraphData$<$ TGraph $>$}}
+Inheritance diagram for Unity.\+Visual\+Scripting.\+Graph\+Data\texorpdfstring{$<$}{<} TGraph \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_1_1_visual_scripting_1_1_graph_data}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_data_a4de24633642ecff7d68acb93f6a8d58c}{Graph\+Data}} (TGraph \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_data_a614efe6ca1f1b42769ddd9aecc66cfd6}{definition}})
+\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_data_ae94cd80286490fc09ac86262ac8d8d38}{Try\+Get\+Element\+Data}} (\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element_with_data}{IGraph\+Element\+With\+Data}} element, out \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element_data}{IGraph\+Element\+Data}} data)
+\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_data_ae9535c0cebdf218c20e517b6cdc8b0c1}{Try\+Get\+Child\+Graph\+Data}} (\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_parent_element}{IGraph\+Parent\+Element}} element, out \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_data}{IGraph\+Data}} data)
+\item 
+\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element_data}{IGraph\+Element\+Data}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_data_a64873975fd5fb7627182e86ef3c32bd2}{Create\+Element\+Data}} (\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element_with_data}{IGraph\+Element\+With\+Data}} element)
+\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_data_a777562bc39dc6fa5600bd3a609048c00}{Free\+Element\+Data}} (\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element_with_data}{IGraph\+Element\+With\+Data}} element)
+\item 
+\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_data}{IGraph\+Data}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_data_a7f91a567a5f8a745f784eb86d96400ad}{Create\+Child\+Graph\+Data}} (\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_parent_element}{IGraph\+Parent\+Element}} element)
+\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_data_a7b3e5062ea416b97605927bc1d775679}{Free\+Child\+Graph\+Data}} (\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_parent_element}{IGraph\+Parent\+Element}} element)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+TGraph \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_data_a614efe6ca1f1b42769ddd9aecc66cfd6}{definition}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Dictionary$<$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element_with_data}{IGraph\+Element\+With\+Data}}, \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element_data}{IGraph\+Element\+Data}} $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_data_a70862aaa841b198e68de78758ff15b6d}{elements\+Data}} = new Dictionary$<$\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element_with_data}{IGraph\+Element\+With\+Data}}, \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element_data}{IGraph\+Element\+Data}}$>$()\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Dictionary$<$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_parent_element}{IGraph\+Parent\+Element}}, \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_data}{IGraph\+Data}} $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_data_a47078f90d17c3b338a55ba3ebae56d3b}{children\+Graphs\+Data}} = new Dictionary$<$\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_parent_element}{IGraph\+Parent\+Element}}, \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_data}{IGraph\+Data}}$>$()\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Dictionary$<$ Guid, \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element_data}{IGraph\+Element\+Data}} $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_data_a0892eb0ae3b46980e822224312552b30}{phantom\+Elements\+Data}} = new Dictionary$<$Guid, \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element_data}{IGraph\+Element\+Data}}$>$()\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Dictionary$<$ Guid, \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_data}{IGraph\+Data}} $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_data_a975cb70f5d70ece1e558d442519835f0}{phantom\+Children\+Graphs\+Data}} = new Dictionary$<$Guid, \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_data}{IGraph\+Data}}$>$()\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_data_a4de24633642ecff7d68acb93f6a8d58c}\label{class_unity_1_1_visual_scripting_1_1_graph_data_a4de24633642ecff7d68acb93f6a8d58c} 
+\index{Unity.VisualScripting.GraphData$<$ TGraph $>$@{Unity.VisualScripting.GraphData$<$ TGraph $>$}!GraphData@{GraphData}}
+\index{GraphData@{GraphData}!Unity.VisualScripting.GraphData$<$ TGraph $>$@{Unity.VisualScripting.GraphData$<$ TGraph $>$}}
+\doxysubsubsection{\texorpdfstring{GraphData()}{GraphData()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_data}{Unity.\+Visual\+Scripting.\+Graph\+Data}}$<$ TGraph $>$.\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_data}{Graph\+Data}} (\begin{DoxyParamCaption}\item[{TGraph}]{definition }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_data_a7f91a567a5f8a745f784eb86d96400ad}\label{class_unity_1_1_visual_scripting_1_1_graph_data_a7f91a567a5f8a745f784eb86d96400ad} 
+\index{Unity.VisualScripting.GraphData$<$ TGraph $>$@{Unity.VisualScripting.GraphData$<$ TGraph $>$}!CreateChildGraphData@{CreateChildGraphData}}
+\index{CreateChildGraphData@{CreateChildGraphData}!Unity.VisualScripting.GraphData$<$ TGraph $>$@{Unity.VisualScripting.GraphData$<$ TGraph $>$}}
+\doxysubsubsection{\texorpdfstring{CreateChildGraphData()}{CreateChildGraphData()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_data}{IGraph\+Data}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_data}{Unity.\+Visual\+Scripting.\+Graph\+Data}}$<$ TGraph $>$.Create\+Child\+Graph\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_parent_element}{IGraph\+Parent\+Element}}}]{element }\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_data_ab6474e4b1a44c02c6dc8c8601fa6cbb7}{Unity.\+Visual\+Scripting.\+IGraph\+Data}}.
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_data_a64873975fd5fb7627182e86ef3c32bd2}\label{class_unity_1_1_visual_scripting_1_1_graph_data_a64873975fd5fb7627182e86ef3c32bd2} 
+\index{Unity.VisualScripting.GraphData$<$ TGraph $>$@{Unity.VisualScripting.GraphData$<$ TGraph $>$}!CreateElementData@{CreateElementData}}
+\index{CreateElementData@{CreateElementData}!Unity.VisualScripting.GraphData$<$ TGraph $>$@{Unity.VisualScripting.GraphData$<$ TGraph $>$}}
+\doxysubsubsection{\texorpdfstring{CreateElementData()}{CreateElementData()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element_data}{IGraph\+Element\+Data}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_data}{Unity.\+Visual\+Scripting.\+Graph\+Data}}$<$ TGraph $>$.Create\+Element\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element_with_data}{IGraph\+Element\+With\+Data}}}]{element }\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_data_a717e88cedfb90cffbd550e0d90ed4056}{Unity.\+Visual\+Scripting.\+IGraph\+Data}}.
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_data_a7b3e5062ea416b97605927bc1d775679}\label{class_unity_1_1_visual_scripting_1_1_graph_data_a7b3e5062ea416b97605927bc1d775679} 
+\index{Unity.VisualScripting.GraphData$<$ TGraph $>$@{Unity.VisualScripting.GraphData$<$ TGraph $>$}!FreeChildGraphData@{FreeChildGraphData}}
+\index{FreeChildGraphData@{FreeChildGraphData}!Unity.VisualScripting.GraphData$<$ TGraph $>$@{Unity.VisualScripting.GraphData$<$ TGraph $>$}}
+\doxysubsubsection{\texorpdfstring{FreeChildGraphData()}{FreeChildGraphData()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_data}{Unity.\+Visual\+Scripting.\+Graph\+Data}}$<$ TGraph $>$.Free\+Child\+Graph\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_parent_element}{IGraph\+Parent\+Element}}}]{element }\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_data_a6d5f44590732fce31ee97c6ed9a49c8d}{Unity.\+Visual\+Scripting.\+IGraph\+Data}}.
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_data_a777562bc39dc6fa5600bd3a609048c00}\label{class_unity_1_1_visual_scripting_1_1_graph_data_a777562bc39dc6fa5600bd3a609048c00} 
+\index{Unity.VisualScripting.GraphData$<$ TGraph $>$@{Unity.VisualScripting.GraphData$<$ TGraph $>$}!FreeElementData@{FreeElementData}}
+\index{FreeElementData@{FreeElementData}!Unity.VisualScripting.GraphData$<$ TGraph $>$@{Unity.VisualScripting.GraphData$<$ TGraph $>$}}
+\doxysubsubsection{\texorpdfstring{FreeElementData()}{FreeElementData()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_data}{Unity.\+Visual\+Scripting.\+Graph\+Data}}$<$ TGraph $>$.Free\+Element\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element_with_data}{IGraph\+Element\+With\+Data}}}]{element }\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_data_a0a7a84eda5cb49f75fe2bac3bcfae7f5}{Unity.\+Visual\+Scripting.\+IGraph\+Data}}.
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_data_ae9535c0cebdf218c20e517b6cdc8b0c1}\label{class_unity_1_1_visual_scripting_1_1_graph_data_ae9535c0cebdf218c20e517b6cdc8b0c1} 
+\index{Unity.VisualScripting.GraphData$<$ TGraph $>$@{Unity.VisualScripting.GraphData$<$ TGraph $>$}!TryGetChildGraphData@{TryGetChildGraphData}}
+\index{TryGetChildGraphData@{TryGetChildGraphData}!Unity.VisualScripting.GraphData$<$ TGraph $>$@{Unity.VisualScripting.GraphData$<$ TGraph $>$}}
+\doxysubsubsection{\texorpdfstring{TryGetChildGraphData()}{TryGetChildGraphData()}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_data}{Unity.\+Visual\+Scripting.\+Graph\+Data}}$<$ TGraph $>$.Try\+Get\+Child\+Graph\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_parent_element}{IGraph\+Parent\+Element}}}]{element,  }\item[{out \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_data}{IGraph\+Data}}$<$ TGraph $>$}]{data }\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_data_a24ae50e58cf7e59858386eabc82224ae}{Unity.\+Visual\+Scripting.\+IGraph\+Data}}.
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_data_ae94cd80286490fc09ac86262ac8d8d38}\label{class_unity_1_1_visual_scripting_1_1_graph_data_ae94cd80286490fc09ac86262ac8d8d38} 
+\index{Unity.VisualScripting.GraphData$<$ TGraph $>$@{Unity.VisualScripting.GraphData$<$ TGraph $>$}!TryGetElementData@{TryGetElementData}}
+\index{TryGetElementData@{TryGetElementData}!Unity.VisualScripting.GraphData$<$ TGraph $>$@{Unity.VisualScripting.GraphData$<$ TGraph $>$}}
+\doxysubsubsection{\texorpdfstring{TryGetElementData()}{TryGetElementData()}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_data}{Unity.\+Visual\+Scripting.\+Graph\+Data}}$<$ TGraph $>$.Try\+Get\+Element\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element_with_data}{IGraph\+Element\+With\+Data}}}]{element,  }\item[{out \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element_data}{IGraph\+Element\+Data}}}]{data }\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_data_ac994fd93c171e0983400f5838367dcac}{Unity.\+Visual\+Scripting.\+IGraph\+Data}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_data_a47078f90d17c3b338a55ba3ebae56d3b}\label{class_unity_1_1_visual_scripting_1_1_graph_data_a47078f90d17c3b338a55ba3ebae56d3b} 
+\index{Unity.VisualScripting.GraphData$<$ TGraph $>$@{Unity.VisualScripting.GraphData$<$ TGraph $>$}!childrenGraphsData@{childrenGraphsData}}
+\index{childrenGraphsData@{childrenGraphsData}!Unity.VisualScripting.GraphData$<$ TGraph $>$@{Unity.VisualScripting.GraphData$<$ TGraph $>$}}
+\doxysubsubsection{\texorpdfstring{childrenGraphsData}{childrenGraphsData}}
+{\footnotesize\ttfamily Dictionary$<$\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_parent_element}{IGraph\+Parent\+Element}}, \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_data}{IGraph\+Data}}$>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_data}{Unity.\+Visual\+Scripting.\+Graph\+Data}}$<$ TGraph $>$.children\+Graphs\+Data = new Dictionary$<$\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_parent_element}{IGraph\+Parent\+Element}}, \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_data}{IGraph\+Data}}$>$()\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected]}}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_data_a614efe6ca1f1b42769ddd9aecc66cfd6}\label{class_unity_1_1_visual_scripting_1_1_graph_data_a614efe6ca1f1b42769ddd9aecc66cfd6} 
+\index{Unity.VisualScripting.GraphData$<$ TGraph $>$@{Unity.VisualScripting.GraphData$<$ TGraph $>$}!definition@{definition}}
+\index{definition@{definition}!Unity.VisualScripting.GraphData$<$ TGraph $>$@{Unity.VisualScripting.GraphData$<$ TGraph $>$}}
+\doxysubsubsection{\texorpdfstring{definition}{definition}}
+{\footnotesize\ttfamily TGraph \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_data}{Unity.\+Visual\+Scripting.\+Graph\+Data}}$<$ TGraph $>$.definition\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected]}}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_data_a70862aaa841b198e68de78758ff15b6d}\label{class_unity_1_1_visual_scripting_1_1_graph_data_a70862aaa841b198e68de78758ff15b6d} 
+\index{Unity.VisualScripting.GraphData$<$ TGraph $>$@{Unity.VisualScripting.GraphData$<$ TGraph $>$}!elementsData@{elementsData}}
+\index{elementsData@{elementsData}!Unity.VisualScripting.GraphData$<$ TGraph $>$@{Unity.VisualScripting.GraphData$<$ TGraph $>$}}
+\doxysubsubsection{\texorpdfstring{elementsData}{elementsData}}
+{\footnotesize\ttfamily Dictionary$<$\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element_with_data}{IGraph\+Element\+With\+Data}}, \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element_data}{IGraph\+Element\+Data}}$>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_data}{Unity.\+Visual\+Scripting.\+Graph\+Data}}$<$ TGraph $>$.elements\+Data = new Dictionary$<$\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element_with_data}{IGraph\+Element\+With\+Data}}, \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element_data}{IGraph\+Element\+Data}}$>$()\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected]}}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_data_a975cb70f5d70ece1e558d442519835f0}\label{class_unity_1_1_visual_scripting_1_1_graph_data_a975cb70f5d70ece1e558d442519835f0} 
+\index{Unity.VisualScripting.GraphData$<$ TGraph $>$@{Unity.VisualScripting.GraphData$<$ TGraph $>$}!phantomChildrenGraphsData@{phantomChildrenGraphsData}}
+\index{phantomChildrenGraphsData@{phantomChildrenGraphsData}!Unity.VisualScripting.GraphData$<$ TGraph $>$@{Unity.VisualScripting.GraphData$<$ TGraph $>$}}
+\doxysubsubsection{\texorpdfstring{phantomChildrenGraphsData}{phantomChildrenGraphsData}}
+{\footnotesize\ttfamily Dictionary$<$Guid, \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_data}{IGraph\+Data}}$>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_data}{Unity.\+Visual\+Scripting.\+Graph\+Data}}$<$ TGraph $>$.phantom\+Children\+Graphs\+Data = new Dictionary$<$Guid, \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_data}{IGraph\+Data}}$>$()\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected]}}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_data_a0892eb0ae3b46980e822224312552b30}\label{class_unity_1_1_visual_scripting_1_1_graph_data_a0892eb0ae3b46980e822224312552b30} 
+\index{Unity.VisualScripting.GraphData$<$ TGraph $>$@{Unity.VisualScripting.GraphData$<$ TGraph $>$}!phantomElementsData@{phantomElementsData}}
+\index{phantomElementsData@{phantomElementsData}!Unity.VisualScripting.GraphData$<$ TGraph $>$@{Unity.VisualScripting.GraphData$<$ TGraph $>$}}
+\doxysubsubsection{\texorpdfstring{phantomElementsData}{phantomElementsData}}
+{\footnotesize\ttfamily Dictionary$<$Guid, \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element_data}{IGraph\+Element\+Data}}$>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_data}{Unity.\+Visual\+Scripting.\+Graph\+Data}}$<$ TGraph $>$.phantom\+Elements\+Data = new Dictionary$<$Guid, \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element_data}{IGraph\+Element\+Data}}$>$()\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Package\+Cache/com.\+unity.\+visualscripting@1.\+9.\+2/\+Runtime/\+Visual\+Scripting.\+Core/\+Graphs/\mbox{\hyperlink{_graph_data_8cs}{Graph\+Data.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,69 @@
+\chapter{Quaternion\+Equality\+Comparer}
+\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-comparer-quaternion}{}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-comparer-quaternion}\index{QuaternionEqualityComparer@{QuaternionEqualityComparer}}
+\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-comparer-quaternion_autotoc_md623}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-comparer-quaternion_autotoc_md623}%
+ Use this utility to compare two \href{https://docs.unity3d.com/ScriptReference/Quaternion.html}{\texttt{ Quaternion}} objects for equality with \href{http://www.nunit.org/}{\texttt{ NUnit}} assertion constraints. Use the static instance {\ttfamily Quaternion\+Equality\+Comparer.\+Instance} to have the default calculation error value set to 0.\+00001f. For any other custom error value, use the one argument constructor.\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-comparer-quaternion_autotoc_md624}{}\doxysection{\texorpdfstring{Static properties}{Static properties}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-comparer-quaternion_autotoc_md624}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Syntax   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Syntax   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endhead
+{\ttfamily Instance}   &A comparer instance with the default error value 0.\+00001f.   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-comparer-quaternion_autotoc_md625}{}\doxysection{\texorpdfstring{Constructors}{Constructors}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-comparer-quaternion_autotoc_md625}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Syntax   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Syntax   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endhead
+{\ttfamily Quaternion\+Equality\+Comparer(float allowed\+Error)}   &Creates an instance of the comparer with a custom allowed error value.   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-comparer-quaternion_autotoc_md626}{}\doxysection{\texorpdfstring{Public methods}{Public methods}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-comparer-quaternion_autotoc_md626}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Syntax   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Syntax   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endhead
+{\ttfamily bool Equals(\+Quaternion expected, Quaternion actual)}   &Compares the {\ttfamily actual} and {\ttfamily expected} {\ttfamily Quaternion} objects for equality using the \href{https://docs.unity3d.com/ScriptReference/Quaternion.Dot.html}{\texttt{ Quaternion.\+Dot}} method.   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-comparer-quaternion_autotoc_md627}{}\doxysection{\texorpdfstring{Example}{Example}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-comparer-quaternion_autotoc_md627}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \#}}
+\DoxyCodeLine{[TestFixture]}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }QuaternionTest}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ [Test]}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ VerifyThat\_TwoQuaternionsAreEqual()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ var\ actual\ =\ \textcolor{keyword}{new}\ Quaternion(10f,\ 0f,\ 0f,\ 0f);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ var\ expected\ =\ \textcolor{keyword}{new}\ Quaternion(1f,\ 10f,\ 0f,\ 0f);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ var\ comparer\ =\ \textcolor{keyword}{new}\ QuaternionEqualityComparer(10e-\/6f);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ Assert.That(actual,\ Is.EqualTo(expected).Using(comparer));}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//Using\ default\ error\ 0.00001f}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ actual\ =\ \textcolor{keyword}{new}\ Quaternion(10f,\ 0f,\ 0.1f,\ 0f);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ expected\ =\ \textcolor{keyword}{new}\ Quaternion(1f,\ 10f,\ 0.1f,\ 0f);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ Assert.That(actual,\ Is.EqualTo(expected).Using(QuaternionEqualityComparer.Instance));}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 

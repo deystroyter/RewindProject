@@ -1,0 +1,150 @@
+\doxysection{Unity.\+Visual\+Scripting.\+Analyser\+Provider Class Reference}
+\hypertarget{class_unity_1_1_visual_scripting_1_1_analyser_provider}{}\label{class_unity_1_1_visual_scripting_1_1_analyser_provider}\index{Unity.VisualScripting.AnalyserProvider@{Unity.VisualScripting.AnalyserProvider}}
+Inheritance diagram for Unity.\+Visual\+Scripting.\+Analyser\+Provider\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_1_1_visual_scripting_1_1_analyser_provider}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_analyser_provider_a289b0196780cc8d38646b5a943a9a418}{Analyser\+Provider}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_analyser_provider_af21ac6a4a6125570e713ee2f18fffe5a}{reference}})
+\item 
+override bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_analyser_provider_a089abb5d414dbfe97809f2e7c5a5efa5}{Is\+Valid}} (object analyzed)
+\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_analyser_provider_a40006e3406ec29abc35c535d233a8219}{Analyze}} (object analyzed)
+\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_analyser_provider_acd0999c7ba6970492c1f5b492c816ac6}{Analyze\+All}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_single_decorator_provider}{Unity.\+Visual\+Scripting.\+Single\+Decorator\+Provider$<$ object, IAnalyser, Analyser\+Attribute $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_a199d29f5f40d13a33f45fa400382c363}{Has\+Decorator}} (Type decorated\+Type)
+\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_a53263c17f762827575ddee4661dcae60}{Try\+Get\+Decorator\+Type}} (Type decorated\+Type, out Type decorator\+Type)
+\item 
+Type \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_a8cf10df3592c6c5fc6973464a0bbb9af}{Get\+Decorator\+Type}} (Type decorated\+Type)
+\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_ab782c2fd5bb18b727d01710970ef6a09}{Is\+Valid}} (TDecorated decorated)
+\item 
+TDecorator \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_ab7911b5cd58b296b0a5830d50f4e1168}{Get\+Decorator}} (TDecorated decorated)
+\item 
+T \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_ac01da996d27b1948d8993868075a7f57}{Get\+Decorator$<$ T $>$}} (TDecorated decorated)
+\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_add4f6e4a90b977712cbf84916c1e2043}{Free}} (TDecorator decorator)
+\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_ae1ad7a0d3e3c895b1f990bef3892a2f5}{Free}} (IEnumerable$<$ TDecorator $>$ decorators)
+\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_a7a8eb5635c246bf869dea9c3f9ea755c}{Free\+Invalid}} ()
+\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_a808fa8a4089a22da142c5b6d0160bde7}{Free\+All}} ()
+\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_abc853cf811b6d9ed90e7bce0265b9279}{Renew$<$ TSpecific\+Decorator $>$}} (ref TSpecific\+Decorator decorator, TDecorated decorated, Func$<$ TDecorated, TSpecific\+Decorator $>$ constructor=null)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_analyser}{IAnalyser}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_analyser_provider_a10875f23eca84fd697c8eb1eda97a54f}{Create\+Decorator}} (Type decorator\+Type, object decorated)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_single_decorator_provider}{Unity.\+Visual\+Scripting.\+Single\+Decorator\+Provider$<$ object, IAnalyser, Analyser\+Attribute $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_aa6d179f56ff657b5cb5fe426d886e839}{Single\+Decorator\+Provider}} ()
+\item 
+virtual TDecorator \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_a1529618868845fcf411c4f2475c42513}{Create\+Decorator}} (Type decorator\+Type, TDecorated decorated)
+\item 
+virtual Type \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_a8872c610f65050770fb9ca5e5624680c}{Get\+Decorated\+Type}} (TDecorated decorated)
+\item 
+virtual Type \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_ade39cff68b506db519507225195e9c95}{Resolve\+Decorator\+Type}} (Type decorated\+Type)
+\item 
+Type \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_a347cd927570042a0ad509838ca29b50b}{Resolve\+Decorator\+Type\+By\+Hierarchy}} (Type decorated\+Type, bool inherit=true)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+override bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_analyser_provider_a417f0ea3278fe7a0bf1176ec75f7386d}{cache}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_analyser_provider_af21ac6a4a6125570e713ee2f18fffe5a}{reference}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_single_decorator_provider}{Unity.\+Visual\+Scripting.\+Single\+Decorator\+Provider$<$ object, IAnalyser, Analyser\+Attribute $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual IEnumerable$<$ Type $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_a9f4672f987410d732f0228c2ed0010ed}{typeset}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_a5ebf97c3baab8ffc0f933bdaae9dbb1d}{cache}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+virtual Time\+Span \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_a931ebf085fbbb95803be1dcfd1bd9b3e}{free\+Interval}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_single_decorator_provider}{Unity.\+Visual\+Scripting.\+Single\+Decorator\+Provider$<$ object, IAnalyser, Analyser\+Attribute $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+readonly object \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_a93cb4dfd48f0b669b6e078c01ce57043}{types\+Lock}}
+\item 
+readonly object \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_a4387652f7aa310679760834b959bff65}{instances\+Lock}}
+\item 
+readonly Dictionary$<$ Type, Type $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_a9dceecaa59603e531abe8a75ea000d11}{defined\+Decorator\+Types}}
+\item 
+readonly Dictionary$<$ Type, Type $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_a0561df73058958f37a5c24b7c28c8d49}{resolved\+Decorator\+Types}}
+\item 
+readonly Dictionary$<$ TDecorated, TDecorator $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_aeba1f343ff70c31d23ba04360c5d66c4}{decorators}}
+\item 
+readonly Dictionary$<$ TDecorator, TDecorated $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_single_decorator_provider_acef7c87725836c0cb02449400bdea362}{decorateds}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_analyser_provider_a289b0196780cc8d38646b5a943a9a418}\label{class_unity_1_1_visual_scripting_1_1_analyser_provider_a289b0196780cc8d38646b5a943a9a418} 
+\index{Unity.VisualScripting.AnalyserProvider@{Unity.VisualScripting.AnalyserProvider}!AnalyserProvider@{AnalyserProvider}}
+\index{AnalyserProvider@{AnalyserProvider}!Unity.VisualScripting.AnalyserProvider@{Unity.VisualScripting.AnalyserProvider}}
+\doxysubsubsection{\texorpdfstring{AnalyserProvider()}{AnalyserProvider()}}
+{\footnotesize\ttfamily Unity.\+Visual\+Scripting.\+Analyser\+Provider.\+Analyser\+Provider (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}}}]{reference }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_analyser_provider_a40006e3406ec29abc35c535d233a8219}\label{class_unity_1_1_visual_scripting_1_1_analyser_provider_a40006e3406ec29abc35c535d233a8219} 
+\index{Unity.VisualScripting.AnalyserProvider@{Unity.VisualScripting.AnalyserProvider}!Analyze@{Analyze}}
+\index{Analyze@{Analyze}!Unity.VisualScripting.AnalyserProvider@{Unity.VisualScripting.AnalyserProvider}}
+\doxysubsubsection{\texorpdfstring{Analyze()}{Analyze()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+Analyser\+Provider.\+Analyze (\begin{DoxyParamCaption}\item[{object}]{analyzed }\end{DoxyParamCaption})}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_analyser_provider_acd0999c7ba6970492c1f5b492c816ac6}\label{class_unity_1_1_visual_scripting_1_1_analyser_provider_acd0999c7ba6970492c1f5b492c816ac6} 
+\index{Unity.VisualScripting.AnalyserProvider@{Unity.VisualScripting.AnalyserProvider}!AnalyzeAll@{AnalyzeAll}}
+\index{AnalyzeAll@{AnalyzeAll}!Unity.VisualScripting.AnalyserProvider@{Unity.VisualScripting.AnalyserProvider}}
+\doxysubsubsection{\texorpdfstring{AnalyzeAll()}{AnalyzeAll()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+Analyser\+Provider.\+Analyze\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_analyser_provider_a10875f23eca84fd697c8eb1eda97a54f}\label{class_unity_1_1_visual_scripting_1_1_analyser_provider_a10875f23eca84fd697c8eb1eda97a54f} 
+\index{Unity.VisualScripting.AnalyserProvider@{Unity.VisualScripting.AnalyserProvider}!CreateDecorator@{CreateDecorator}}
+\index{CreateDecorator@{CreateDecorator}!Unity.VisualScripting.AnalyserProvider@{Unity.VisualScripting.AnalyserProvider}}
+\doxysubsubsection{\texorpdfstring{CreateDecorator()}{CreateDecorator()}}
+{\footnotesize\ttfamily override \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_analyser}{IAnalyser}} Unity.\+Visual\+Scripting.\+Analyser\+Provider.\+Create\+Decorator (\begin{DoxyParamCaption}\item[{Type}]{decorator\+Type,  }\item[{object}]{decorated }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_analyser_provider_a089abb5d414dbfe97809f2e7c5a5efa5}\label{class_unity_1_1_visual_scripting_1_1_analyser_provider_a089abb5d414dbfe97809f2e7c5a5efa5} 
+\index{Unity.VisualScripting.AnalyserProvider@{Unity.VisualScripting.AnalyserProvider}!IsValid@{IsValid}}
+\index{IsValid@{IsValid}!Unity.VisualScripting.AnalyserProvider@{Unity.VisualScripting.AnalyserProvider}}
+\doxysubsubsection{\texorpdfstring{IsValid()}{IsValid()}}
+{\footnotesize\ttfamily override bool Unity.\+Visual\+Scripting.\+Analyser\+Provider.\+Is\+Valid (\begin{DoxyParamCaption}\item[{object}]{analyzed }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_analyser_provider_a417f0ea3278fe7a0bf1176ec75f7386d}\label{class_unity_1_1_visual_scripting_1_1_analyser_provider_a417f0ea3278fe7a0bf1176ec75f7386d} 
+\index{Unity.VisualScripting.AnalyserProvider@{Unity.VisualScripting.AnalyserProvider}!cache@{cache}}
+\index{cache@{cache}!Unity.VisualScripting.AnalyserProvider@{Unity.VisualScripting.AnalyserProvider}}
+\doxysubsubsection{\texorpdfstring{cache}{cache}}
+{\footnotesize\ttfamily override bool Unity.\+Visual\+Scripting.\+Analyser\+Provider.\+cache\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected]}}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_analyser_provider_af21ac6a4a6125570e713ee2f18fffe5a}\label{class_unity_1_1_visual_scripting_1_1_analyser_provider_af21ac6a4a6125570e713ee2f18fffe5a} 
+\index{Unity.VisualScripting.AnalyserProvider@{Unity.VisualScripting.AnalyserProvider}!reference@{reference}}
+\index{reference@{reference}!Unity.VisualScripting.AnalyserProvider@{Unity.VisualScripting.AnalyserProvider}}
+\doxysubsubsection{\texorpdfstring{reference}{reference}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}} Unity.\+Visual\+Scripting.\+Analyser\+Provider.\+reference\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Package\+Cache/com.\+unity.\+visualscripting@1.\+9.\+2/\+Editor/\+Visual\+Scripting.\+Core/\+Analysis/\mbox{\hyperlink{_analyser_provider_8cs}{Analyser\+Provider.\+cs}}\end{DoxyCompactItemize}

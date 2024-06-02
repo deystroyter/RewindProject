@@ -1,0 +1,68 @@
+\chapter{About Unity Test Framework}
+\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2index}{}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2index}\index{About Unity Test Framework@{About Unity Test Framework}}
+\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2index_autotoc_md558}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2index_autotoc_md558}%
+ The \doxylink{namespace_unity}{Unity} Test Framework (UTF) enables \doxylink{namespace_unity}{Unity} users to test their code in both {\bfseries{Edit Mode}} and {\bfseries{Play Mode}}, and also on target platforms such as \href{https://docs.unity3d.com/Manual/Standalone.html}{\texttt{ Standalone}}, Android, i\+OS, etc.
+
+This package provides a standard test framework for users of \doxylink{namespace_unity}{Unity} and developers at \doxylink{namespace_unity}{Unity} so that both benefit from the same features and can write tests the same way.
+
+UTF uses a \doxylink{namespace_unity}{Unity} integration of NUnit library, which is an open-\/source unit testing library for .Net languages. UTF currently uses NUnit version 3.\+5. For more information about NUnit, see the \href{http://www.nunit.org/}{\texttt{ official NUnit website}} and the \href{https://docs.nunit.org/}{\texttt{ NUnit documentation}}.
+
+\begin{quote}
+{\bfseries{Note}}\+: UTF is not a new concept or toolset; it is an adjusted and more descriptive naming for the toolset otherwise known as \doxylink{namespace_unity}{Unity} Test Runner, which is now available as this package. \end{quote}
+\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2index_autotoc_md559}{}\doxysection{\texorpdfstring{Installing Unity Test Framework}{Installing Unity Test Framework}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2index_autotoc_md559}
+To install this package, follow the instructions in the \href{https://docs.unity3d.com/Packages/com.unity.package-manager-ui@latest/index.html}{\texttt{ Package Manager documentation}}.
+
+\begin{quote}
+{\bfseries{Note}}\+: Search for the Test Framework package. In \doxylink{namespace_unity}{Unity} 2019.\+2 and higher, you may need to enable the package before use. \end{quote}
+\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2index_autotoc_md560}{}\doxysection{\texorpdfstring{Using Unity Test Framework}{Using Unity Test Framework}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2index_autotoc_md560}
+To learn how to use the \doxylink{namespace_unity}{Unity} Test Framework package in your project, read the \doxysectlink{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2manual}{manual}{0}.\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2index_autotoc_md561}{}\doxysection{\texorpdfstring{Technical details}{Technical details}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2index_autotoc_md561}
+\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2index_autotoc_md562}{}\doxysubsection{\texorpdfstring{Requirements}{Requirements}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2index_autotoc_md562}
+This version of the \doxylink{namespace_unity}{Unity} Test Framework is compatible with the following versions of the \doxylink{namespace_unity}{Unity} Editor\+:
+
+
+\begin{DoxyItemize}
+\item 2019.\+2 and later.
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2index_autotoc_md563}{}\doxysubsection{\texorpdfstring{Known limitations}{Known limitations}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2index_autotoc_md563}
+\doxylink{namespace_unity}{Unity} Test Framework version 1.\+0.\+18 includes the following known limitations\+:
+
+
+\begin{DoxyItemize}
+\item The {\ttfamily Unity\+Test} attribute does not support WSA platform.
+\item The {\ttfamily Unity\+Test} attribute does not support \href{https://github.com/nunit/docs/wiki/Parameterized-Tests}{\texttt{ Parameterized tests}} (except for {\ttfamily Value\+Source}).
+\item The {\ttfamily Unity\+Test} attribute does not support the {\ttfamily NUnit} \href{https://github.com/nunit/docs/wiki/Repeat-Attribute}{\texttt{ Repeat}} attribute.
+\item Nested test fixture cannot run from the Editor UI.
+\item When using the {\ttfamily NUnit} \href{https://github.com/nunit/docs/wiki/Retry-Attribute}{\texttt{ Retry}} attribute in Play\+Mode tests, it throws {\ttfamily Invalid\+Cast\+Exception}.
+\item Async tests are not supported in the current version of UTF.
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2index_autotoc_md564}{}\doxysubsection{\texorpdfstring{Package contents}{Package contents}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2index_autotoc_md564}
+The following table indicates the root folders in the package where you can find useful resources\+:
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Location   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Location   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endhead
+\+\_\+/com.\+unity.\+test-\/framework/\+Documentation\texorpdfstring{$\sim$}{\string~}\+\_\+   &Contains the documentation for the package.   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2index_autotoc_md565}{}\doxysubsection{\texorpdfstring{Document revision history}{Document revision history}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2index_autotoc_md565}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Date   }&\cellcolor{\tableheadbgcolor}\textbf{ Reason    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Date   }&\cellcolor{\tableheadbgcolor}\textbf{ Reason    }\\\cline{1-2}
+\endhead
+February 4, 2021   &Applied user feedback to the documentation. Matches package version 1.\+1.\+22    \\\cline{1-2}
+August 23, 2019   &Applied feedback to the documentation    \\\cline{1-2}
+July 25, 2019   &Documentation updated to include features in version 1.\+1.\+0    \\\cline{1-2}
+July 11, 2019   &Documentation updated. Matches package version 1.\+0.\+18    \\\cline{1-2}
+May 27, 2019   &Documentation created. Matches package version 1.\+0.\+14   \\\cline{1-2}
+\end{longtabu}

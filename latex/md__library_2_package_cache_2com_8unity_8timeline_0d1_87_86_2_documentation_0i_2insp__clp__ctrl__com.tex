@@ -1,0 +1,45 @@
+\chapter{Control clip common properties}
+\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2insp__clp__ctrl__com}{}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2insp__clp__ctrl__com}\index{Control clip common properties@{Control clip common properties}}
+\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2insp__clp__ctrl__com_autotoc_md1172}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2insp__clp__ctrl__com_autotoc_md1172}%
+ Use the Inspector window to change the common properties of a Control clip. You can only create a Control clip in a Control track. A Control clip is a special clip that controls a nested \doxylink{namespace_timeline}{Timeline} instance, Particle System, Prefab instance, or ITime\+Control Script, depending on how you create the Control clip\+:
+
+
+\begin{DoxyItemize}
+\item If you create the Control clip from a Game\+Object with a Playable Director component associated with a \doxylink{namespace_timeline}{Timeline} Asset, then the Control clip controls a nested \doxylink{namespace_timeline}{Timeline} instance. If the Game\+Object parents other Game\+Objects associated with many \doxylink{namespace_timeline}{Timeline} Assets, then the Control clip controls multiple \doxylink{namespace_timeline}{Timeline} instances.
+\item If you create the Control clip from a Game\+Object with a Particle System component, then the Control clip controls a Particle System.
+\item If you create the Control clip from a Game\+Object linked to a Prefab, then the Control clip controls a Prefab instance.
+\item If you create the Control clip from a Game\+Object with a script that implements the ITime\+Control interface, then the Control clip controls an ITime\+Control Script.
+\end{DoxyItemize}
+
+The common properties of a Control clip include its name and Clip Timing properties. Not all common properties apply to all types of Control clips.
+
+
+
+{\itshape Inspector window when selecting a Control clip in the \doxylink{namespace_timeline}{Timeline} window}\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2insp__clp__ctrl__com_autotoc_md1173}{}\doxysection{\texorpdfstring{Display Name}{Display Name}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2insp__clp__ctrl__com_autotoc_md1173}
+The name of the Control clip shown in the \doxylink{namespace_timeline}{Timeline} window.\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2insp__clp__ctrl__com_autotoc_md1174}{}\doxysection{\texorpdfstring{Clip Timing properties}{Clip Timing properties}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2insp__clp__ctrl__com_autotoc_md1174}
+Use the {\bfseries{Clip Timing}} properties to position and change the duration of the Control clip.
+
+Most timing properties are expressed in both seconds (s) and frames (f). When specifying seconds, a {\bfseries{Clip Timing}} property accepts decimal values. When specifying frames, a property only accepts integer values. For example, if you attempt to enter 12.\+5 in a frames (f) field, the Inspector window sets the value to 12 frames.
+
+Depending on the \doxysectlink{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2clp__about}{selected Clip Edit mode}{0}, changing the {\bfseries{Start}}, {\bfseries{End}} or {\bfseries{Duration}} of a Control clip may create an insert or replace clips on the same track. You cannot create a blend between Control clips.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property\+:}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description\+:}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property\+:}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description\+:}}    }\\\cline{1-2}
+\endhead
+{\bfseries{Start}}   &The frame or time (in seconds) when the Control clip starts. Changing the Start changes the position of the Control clip on its track in the \doxylink{namespace_timeline}{Timeline} Asset.~\newline
+Changing the Start also affects the End. Changing the Start sets the End to the new Start value plus the Duration.    \\\cline{1-2}
+{\bfseries{End}}   &The frame or time (in seconds) when the Control clip ends.~\newline
+Changing the End also affects the Start. Changing the End sets the Start to the new End value minus the Duration.    \\\cline{1-2}
+{\bfseries{Duration}}   &The duration of the clip in frames or seconds.~\newline
+Changing the Duration also affects the End. Changing the Duration sets the End to the Start value plus the new Duration.    \\\cline{1-2}
+{\bfseries{Clip In}}   &Sets the offset of when the Control clip starts playing. The Clip In property only affects Particle Systems and nested \doxylink{namespace_timeline}{Timeline} instances.    \\\cline{1-2}
+{\bfseries{Speed Multiplier}}   &A speed multiplier that affects the playback speed of the Control clip. This value must be greater than 0. The Speed Multiplier property only affects Particle Systems and nested \doxylink{namespace_timeline}{Timeline} instances.   \\\cline{1-2}
+\end{longtabu}

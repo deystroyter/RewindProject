@@ -1,0 +1,14 @@
+\doxysection{Library/\+Package\+Cache/com.unity.\+test-\/framework@1.1.33/\+Unity\+Engine.Test\+Runner/\+NUnit\+Extensions/\+Attributes/\+Unity\+Test\+Attribute.cs File Reference}
+\hypertarget{_unity_test_attribute_8cs}{}\label{_unity_test_attribute_8cs}\index{Library/PackageCache/com.unity.test-\/framework"@1.1.33/UnityEngine.TestRunner/NUnitExtensions/Attributes/UnityTestAttribute.cs@{Library/PackageCache/com.unity.test-\/framework"@1.1.33/UnityEngine.TestRunner/NUnitExtensions/Attributes/UnityTestAttribute.cs}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_unity_test_attribute}{Unity\+Engine.\+Test\+Tools.\+Unity\+Test\+Attribute}}
+\begin{DoxyCompactList}\small\item\em {\ttfamily Unity\+Test} attribute is the main addition to the standard \href{http://www.nunit.org/}{\texttt{ NUnit}} library for the \doxylink{namespace_unity}{Unity} Test Framework. This type of unit test allows you to skip a frame from within a test (so background tasks can finish) or give certain commands to the \doxylink{namespace_unity}{Unity} {\bfseries{Editor}}, such as performing a domain reload or entering {\bfseries{Play Mode}} from an {\bfseries{Edit Mode}} test. In Play Mode, the {\ttfamily Unity\+Test} attribute runs as a \href{https://docs.unity3d.com/Manual/Coroutines.html}{\texttt{ coroutine}}. Whereas Edit Mode tests run in the \href{https://docs.unity3d.com/ScriptReference/EditorApplication-update.html}{\texttt{ Editor\+Application.\+update}} callback loop. The {\ttfamily Unity\+Test} attribute is, in fact, an alternative to the {\ttfamily NUnit} \href{https://github.com/nunit/docs/wiki/Test-Attribute}{\texttt{ Test attribute}}, which allows yielding instructions back to the framework. Once the instruction is complete, the test run continues. If you {\ttfamily yield return null}, you skip a frame. That might be necessary to ensure that some changes do happen on the next iteration of either the {\ttfamily Editor\+Application.\+update} loop or the \href{https://docs.unity3d.com/Manual/ExecutionOrder.html}{\texttt{ game loop}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_unity_engine}{Unity\+Engine}}
+\item 
+namespace \mbox{\hyperlink{namespace_unity_engine_1_1_test_tools}{Unity\+Engine.\+Test\+Tools}}
+\end{DoxyCompactItemize}

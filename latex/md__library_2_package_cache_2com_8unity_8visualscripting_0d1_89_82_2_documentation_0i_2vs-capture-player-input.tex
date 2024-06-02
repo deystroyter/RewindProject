@@ -1,0 +1,43 @@
+\chapter{Capture user input in an application}
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-capture-player-input}{}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-capture-player-input}\index{Capture user input in an application@{Capture user input in an application}}
+\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-capture-player-input_autotoc_md1693}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-capture-player-input_autotoc_md1693}%
+ You can capture input from a user\textquotesingle{}s input device to make your application interactive. Visual Scripting can use either the \href{https://docs.unity3d.com/Manual/class-InputManager.html}{\texttt{ Input Manager}} or the \href{https://docs.unity3d.com/Packages/com.unity.inputsystem@latest}{\texttt{ Input System package}} to capture input data in a Script Graph.\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-capture-player-input_autotoc_md1694}{}\doxysection{\texorpdfstring{Use the Input System package}{Use the Input System package}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-capture-player-input_autotoc_md1694}
+The Input System package captures input in \doxylink{namespace_unity}{Unity} applications. It uses any input device and replaces \doxylink{namespace_unity}{Unity}\textquotesingle{}s Input Manager.
+
+To install the Input System package, see the \href{https://docs.unity3d.com/Packages/com.unity.inputsystem@latest/index.html?subfolder=/manual/Installation.html}{\texttt{ Installation guide}} in the Input System package documentation.
+
+To check if the Input System package is installed, go to {\bfseries{Window}} \texorpdfstring{$>$}{>} {\bfseries{Package Manager}}.
+
+
+
+For more information on the Package Manager and managing packages in projects, see the \href{https://docs.unity3d.com/Manual/PackagesList.html}{\texttt{ Packages}} section in the \doxylink{namespace_unity}{Unity} User Manual.\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-capture-player-input_autotoc_md1695}{}\doxysubsection{\texorpdfstring{Input System package prerequisites}{Input System package prerequisites}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-capture-player-input_autotoc_md1695}
+To use the Input System package in a project, do the following\+:
+
+
+\begin{DoxyEnumerate}
+\item Install the package. For more information, see the \href{https://docs.unity3d.com/Manual/PackagesList.html}{\texttt{ Packages}} section in the User Manual.
+\item Regenerate your Node Library to include the Input System package nodes. For more information, \href{vs-configuration.md\#Regen}{\texttt{ Configure project settings}}.
+\item In your Player Project Settings, set {\bfseries{Active Input Handling}} to {\bfseries{Input System Package (New)}} or {\bfseries{Both}}. For more information on this setting, see \href{https://docs.unity3d.com/Manual/class-PlayerSettingsStandalone.html\#Configuration}{\texttt{ Standalone Player settings}} in the User Manual.
+\item Create an Input System settings asset. Go to {\bfseries{Edit}} \texorpdfstring{$>$}{>} {\bfseries{Project Settings}} and select {\bfseries{Input System Package}}, then select {\bfseries{Create Settings Asset}}. For more information on the available input settings, see \href{https://docs.unity3d.com/Packages/com.unity.inputsystem@latest/index.html?subfolder=/manual/Settings.html}{\texttt{ Input Settings}} in the Input System package documentation.
+\item Create a Game\+Object with a {\ttfamily Player\+Input} component and an Input Actions asset. For more information, see \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-capture-player-input-add-component}{Add and configure a Player\+Input component}{0}.
+\end{DoxyEnumerate}
+
+After you\textquotesingle{}ve configured your project, create a graph to \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-capturing-player-inputs-new}{Capture input with the Input System package}{0}.\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-capture-player-input_autotoc_md1696}{}\doxysection{\texorpdfstring{Use the Input Manager}{Use the Input Manager}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-capture-player-input_autotoc_md1696}
+The Input Manager is \doxylink{namespace_unity}{Unity}\textquotesingle{}s built-\/in system for input.
+
+Change the Input Manager\textquotesingle{}s settings to change how a project receives input. Go to {\bfseries{Edit}} \texorpdfstring{$>$}{>} {\bfseries{Project Settings}} and select {\bfseries{Input Manager}}.
+
+
+
+For more information on the available settings, see the \href{https://docs.unity3d.com/Documentation/Manual/class-InputManager.html}{\texttt{ Input Manager documentation}} in the User Manual.\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-capture-player-input_autotoc_md1697}{}\doxysubsection{\texorpdfstring{Input Manager prerequisites}{Input Manager prerequisites}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-capture-player-input_autotoc_md1697}
+To use the Input Manager in a project, in your Player Project Settings, set {\bfseries{Active Input Handling}} to {\bfseries{Input Manager (Old)}} or {\bfseries{Both}}. For more information on this setting, see \href{https://docs.unity3d.com/Manual/class-PlayerSettingsStandalone.html\#Configuration}{\texttt{ Standalone Player settings}} in the User Manual.
+
+After you’ve configured your Player Project Settings, create a graph to \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-capturing-player-inputs-old}{Capture input with the Input Manager}{0}.\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-capture-player-input_autotoc_md1698}{}\doxysection{\texorpdfstring{Additional resources}{Additional resources}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-capture-player-input_autotoc_md1698}
+
+\begin{DoxyItemize}
+\item \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-capture-player-input-add-component}{Add and configure a Player Input component}{0}
+\item \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-capturing-player-inputs-new}{Capture input with the Input System package}{0}
+\item \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-capturing-player-inputs-old}{Capture input with the Input Manager}{0}
+\item \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-input-nodes}{Input event nodes}{0} 
+\end{DoxyItemize}

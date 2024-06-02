@@ -1,0 +1,131 @@
+\doxysection{Unity.\+Visual\+Scripting.\+Multi\+Decorator\+Provider\texorpdfstring{$<$}{<} TDecorated, TDecorator, TAttribute \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_unity_1_1_visual_scripting_1_1_multi_decorator_provider}{}\label{class_unity_1_1_visual_scripting_1_1_multi_decorator_provider}\index{Unity.VisualScripting.MultiDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$@{Unity.VisualScripting.MultiDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+IEnumerable$<$ TDecorator $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_multi_decorator_provider_a0d874841589569715552d0071cdef6f7}{Get\+Decorators}} (TDecorated decorated)
+\item 
+IEnumerable$<$ TSpecific\+Decorator $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_multi_decorator_provider_a1ed112c4d8fad3dd6aa3c22f03d2b664}{Get\+Decorators$<$ TSpecific\+Decorator $>$}} (TDecorated decorated)
+\item 
+virtual void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_multi_decorator_provider_ae13a64a2597588b98f27932a792945a0}{Clear\+Cache}} ()
+\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_multi_decorator_provider_a2c22e44f4659c5210eefa33603aed71b}{Has\+Decorator}} (Type type)
+\item 
+IEnumerable$<$ Type $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_multi_decorator_provider_ab2d2a679a4848180e3a01781f3bdcf24}{Get\+Decorator\+Types}} (Type type)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_multi_decorator_provider_aba3ab25f91928794e5a20071e3f660b3}{Multi\+Decorator\+Provider}} ()
+\item 
+virtual IEnumerable$<$ TDecorator $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_multi_decorator_provider_a3eaa453be4f1230fef9615d39568c8c8}{Create\+Decorators}} (TDecorated decorated)
+\item 
+virtual bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_multi_decorator_provider_a640870c1da23a2e71f76814691c82f53}{Should\+Invalidate\+Decorators}} (TDecorated decorated)
+\item 
+virtual IEnumerable$<$ Type $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_multi_decorator_provider_add78a40b4014f6d84c66a3fa9ecb4ebc}{Resolve\+Decorator\+Types}} (Type type)
+\item 
+IEnumerable$<$ Type $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_multi_decorator_provider_a2c00f3720dd54026d49cedabbad296eb}{Resolve\+Decorator\+Types\+By\+Hierarchy}} (Type type, bool inherit)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+readonly Dictionary$<$ Type, Hash\+Set$<$ Type $>$ $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_multi_decorator_provider_a7fd1086b1b946d4226d3bd4b610457f7}{defined\+Decorator\+Types}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+virtual IEnumerable$<$ Type $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_multi_decorator_provider_a8e731f7d8e18b466d550a050a1fa7ba3}{typeset}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_multi_decorator_provider_aba3ab25f91928794e5a20071e3f660b3}\label{class_unity_1_1_visual_scripting_1_1_multi_decorator_provider_aba3ab25f91928794e5a20071e3f660b3} 
+\index{Unity.VisualScripting.MultiDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$@{Unity.VisualScripting.MultiDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$}!MultiDecoratorProvider@{MultiDecoratorProvider}}
+\index{MultiDecoratorProvider@{MultiDecoratorProvider}!Unity.VisualScripting.MultiDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$@{Unity.VisualScripting.MultiDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$}}
+\doxysubsubsection{\texorpdfstring{MultiDecoratorProvider()}{MultiDecoratorProvider()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_multi_decorator_provider}{Unity.\+Visual\+Scripting.\+Multi\+Decorator\+Provider}}$<$ TDecorated, TDecorator, TAttribute $>$.\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_multi_decorator_provider}{Multi\+Decorator\+Provider}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_multi_decorator_provider_ae13a64a2597588b98f27932a792945a0}\label{class_unity_1_1_visual_scripting_1_1_multi_decorator_provider_ae13a64a2597588b98f27932a792945a0} 
+\index{Unity.VisualScripting.MultiDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$@{Unity.VisualScripting.MultiDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$}!ClearCache@{ClearCache}}
+\index{ClearCache@{ClearCache}!Unity.VisualScripting.MultiDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$@{Unity.VisualScripting.MultiDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$}}
+\doxysubsubsection{\texorpdfstring{ClearCache()}{ClearCache()}}
+{\footnotesize\ttfamily virtual void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_multi_decorator_provider}{Unity.\+Visual\+Scripting.\+Multi\+Decorator\+Provider}}$<$ TDecorated, TDecorator, TAttribute $>$.Clear\+Cache (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_multi_decorator_provider_a3eaa453be4f1230fef9615d39568c8c8}\label{class_unity_1_1_visual_scripting_1_1_multi_decorator_provider_a3eaa453be4f1230fef9615d39568c8c8} 
+\index{Unity.VisualScripting.MultiDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$@{Unity.VisualScripting.MultiDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$}!CreateDecorators@{CreateDecorators}}
+\index{CreateDecorators@{CreateDecorators}!Unity.VisualScripting.MultiDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$@{Unity.VisualScripting.MultiDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$}}
+\doxysubsubsection{\texorpdfstring{CreateDecorators()}{CreateDecorators()}}
+{\footnotesize\ttfamily virtual IEnumerable$<$ TDecorator $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_multi_decorator_provider}{Unity.\+Visual\+Scripting.\+Multi\+Decorator\+Provider}}$<$ TDecorated, TDecorator, TAttribute $>$.Create\+Decorators (\begin{DoxyParamCaption}\item[{TDecorated}]{decorated }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_multi_decorator_provider_a0d874841589569715552d0071cdef6f7}\label{class_unity_1_1_visual_scripting_1_1_multi_decorator_provider_a0d874841589569715552d0071cdef6f7} 
+\index{Unity.VisualScripting.MultiDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$@{Unity.VisualScripting.MultiDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$}!GetDecorators@{GetDecorators}}
+\index{GetDecorators@{GetDecorators}!Unity.VisualScripting.MultiDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$@{Unity.VisualScripting.MultiDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$}}
+\doxysubsubsection{\texorpdfstring{GetDecorators()}{GetDecorators()}}
+{\footnotesize\ttfamily IEnumerable$<$ TDecorator $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_multi_decorator_provider}{Unity.\+Visual\+Scripting.\+Multi\+Decorator\+Provider}}$<$ TDecorated, TDecorator, TAttribute $>$.Get\+Decorators (\begin{DoxyParamCaption}\item[{TDecorated}]{decorated }\end{DoxyParamCaption})}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_multi_decorator_provider_a1ed112c4d8fad3dd6aa3c22f03d2b664}\label{class_unity_1_1_visual_scripting_1_1_multi_decorator_provider_a1ed112c4d8fad3dd6aa3c22f03d2b664} 
+\index{Unity.VisualScripting.MultiDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$@{Unity.VisualScripting.MultiDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$}!GetDecorators$<$ TSpecificDecorator $>$@{GetDecorators$<$ TSpecificDecorator $>$}}
+\index{GetDecorators$<$ TSpecificDecorator $>$@{GetDecorators$<$ TSpecificDecorator $>$}!Unity.VisualScripting.MultiDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$@{Unity.VisualScripting.MultiDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$}}
+\doxysubsubsection{\texorpdfstring{GetDecorators$<$ TSpecificDecorator $>$()}{GetDecorators< TSpecificDecorator >()}}
+{\footnotesize\ttfamily IEnumerable$<$ TSpecific\+Decorator $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_multi_decorator_provider}{Unity.\+Visual\+Scripting.\+Multi\+Decorator\+Provider}}$<$ TDecorated, TDecorator, TAttribute $>$.\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_multi_decorator_provider_a0d874841589569715552d0071cdef6f7}{Get\+Decorators}}$<$ TSpecific\+Decorator $>$ (\begin{DoxyParamCaption}\item[{TDecorated}]{decorated }\end{DoxyParamCaption})}
+
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em TSpecific\+Decorator} : {\em TDecorator}]\end{description}
+\end{Desc}
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_multi_decorator_provider_ab2d2a679a4848180e3a01781f3bdcf24}\label{class_unity_1_1_visual_scripting_1_1_multi_decorator_provider_ab2d2a679a4848180e3a01781f3bdcf24} 
+\index{Unity.VisualScripting.MultiDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$@{Unity.VisualScripting.MultiDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$}!GetDecoratorTypes@{GetDecoratorTypes}}
+\index{GetDecoratorTypes@{GetDecoratorTypes}!Unity.VisualScripting.MultiDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$@{Unity.VisualScripting.MultiDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$}}
+\doxysubsubsection{\texorpdfstring{GetDecoratorTypes()}{GetDecoratorTypes()}}
+{\footnotesize\ttfamily IEnumerable$<$ Type $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_multi_decorator_provider}{Unity.\+Visual\+Scripting.\+Multi\+Decorator\+Provider}}$<$ TDecorated, TDecorator, TAttribute $>$.Get\+Decorator\+Types (\begin{DoxyParamCaption}\item[{Type}]{type }\end{DoxyParamCaption})}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_multi_decorator_provider_a2c22e44f4659c5210eefa33603aed71b}\label{class_unity_1_1_visual_scripting_1_1_multi_decorator_provider_a2c22e44f4659c5210eefa33603aed71b} 
+\index{Unity.VisualScripting.MultiDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$@{Unity.VisualScripting.MultiDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$}!HasDecorator@{HasDecorator}}
+\index{HasDecorator@{HasDecorator}!Unity.VisualScripting.MultiDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$@{Unity.VisualScripting.MultiDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$}}
+\doxysubsubsection{\texorpdfstring{HasDecorator()}{HasDecorator()}}
+{\footnotesize\ttfamily bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_multi_decorator_provider}{Unity.\+Visual\+Scripting.\+Multi\+Decorator\+Provider}}$<$ TDecorated, TDecorator, TAttribute $>$.Has\+Decorator (\begin{DoxyParamCaption}\item[{Type}]{type }\end{DoxyParamCaption})}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_multi_decorator_provider_add78a40b4014f6d84c66a3fa9ecb4ebc}\label{class_unity_1_1_visual_scripting_1_1_multi_decorator_provider_add78a40b4014f6d84c66a3fa9ecb4ebc} 
+\index{Unity.VisualScripting.MultiDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$@{Unity.VisualScripting.MultiDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$}!ResolveDecoratorTypes@{ResolveDecoratorTypes}}
+\index{ResolveDecoratorTypes@{ResolveDecoratorTypes}!Unity.VisualScripting.MultiDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$@{Unity.VisualScripting.MultiDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$}}
+\doxysubsubsection{\texorpdfstring{ResolveDecoratorTypes()}{ResolveDecoratorTypes()}}
+{\footnotesize\ttfamily virtual IEnumerable$<$ Type $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_multi_decorator_provider}{Unity.\+Visual\+Scripting.\+Multi\+Decorator\+Provider}}$<$ TDecorated, TDecorator, TAttribute $>$.Resolve\+Decorator\+Types (\begin{DoxyParamCaption}\item[{Type}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_multi_decorator_provider_a2c00f3720dd54026d49cedabbad296eb}\label{class_unity_1_1_visual_scripting_1_1_multi_decorator_provider_a2c00f3720dd54026d49cedabbad296eb} 
+\index{Unity.VisualScripting.MultiDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$@{Unity.VisualScripting.MultiDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$}!ResolveDecoratorTypesByHierarchy@{ResolveDecoratorTypesByHierarchy}}
+\index{ResolveDecoratorTypesByHierarchy@{ResolveDecoratorTypesByHierarchy}!Unity.VisualScripting.MultiDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$@{Unity.VisualScripting.MultiDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$}}
+\doxysubsubsection{\texorpdfstring{ResolveDecoratorTypesByHierarchy()}{ResolveDecoratorTypesByHierarchy()}}
+{\footnotesize\ttfamily IEnumerable$<$ Type $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_multi_decorator_provider}{Unity.\+Visual\+Scripting.\+Multi\+Decorator\+Provider}}$<$ TDecorated, TDecorator, TAttribute $>$.Resolve\+Decorator\+Types\+By\+Hierarchy (\begin{DoxyParamCaption}\item[{Type}]{type,  }\item[{bool}]{inherit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_multi_decorator_provider_a640870c1da23a2e71f76814691c82f53}\label{class_unity_1_1_visual_scripting_1_1_multi_decorator_provider_a640870c1da23a2e71f76814691c82f53} 
+\index{Unity.VisualScripting.MultiDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$@{Unity.VisualScripting.MultiDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$}!ShouldInvalidateDecorators@{ShouldInvalidateDecorators}}
+\index{ShouldInvalidateDecorators@{ShouldInvalidateDecorators}!Unity.VisualScripting.MultiDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$@{Unity.VisualScripting.MultiDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$}}
+\doxysubsubsection{\texorpdfstring{ShouldInvalidateDecorators()}{ShouldInvalidateDecorators()}}
+{\footnotesize\ttfamily virtual bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_multi_decorator_provider}{Unity.\+Visual\+Scripting.\+Multi\+Decorator\+Provider}}$<$ TDecorated, TDecorator, TAttribute $>$.Should\+Invalidate\+Decorators (\begin{DoxyParamCaption}\item[{TDecorated}]{decorated }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_multi_decorator_provider_a7fd1086b1b946d4226d3bd4b610457f7}\label{class_unity_1_1_visual_scripting_1_1_multi_decorator_provider_a7fd1086b1b946d4226d3bd4b610457f7} 
+\index{Unity.VisualScripting.MultiDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$@{Unity.VisualScripting.MultiDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$}!definedDecoratorTypes@{definedDecoratorTypes}}
+\index{definedDecoratorTypes@{definedDecoratorTypes}!Unity.VisualScripting.MultiDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$@{Unity.VisualScripting.MultiDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$}}
+\doxysubsubsection{\texorpdfstring{definedDecoratorTypes}{definedDecoratorTypes}}
+{\footnotesize\ttfamily readonly Dictionary$<$Type, Hash\+Set$<$Type$>$ $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_multi_decorator_provider}{Unity.\+Visual\+Scripting.\+Multi\+Decorator\+Provider}}$<$ TDecorated, TDecorator, TAttribute $>$.defined\+Decorator\+Types\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_multi_decorator_provider_a8e731f7d8e18b466d550a050a1fa7ba3}\label{class_unity_1_1_visual_scripting_1_1_multi_decorator_provider_a8e731f7d8e18b466d550a050a1fa7ba3} 
+\index{Unity.VisualScripting.MultiDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$@{Unity.VisualScripting.MultiDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$}!typeset@{typeset}}
+\index{typeset@{typeset}!Unity.VisualScripting.MultiDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$@{Unity.VisualScripting.MultiDecoratorProvider$<$ TDecorated, TDecorator, TAttribute $>$}}
+\doxysubsubsection{\texorpdfstring{typeset}{typeset}}
+{\footnotesize\ttfamily virtual IEnumerable$<$Type$>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_multi_decorator_provider}{Unity.\+Visual\+Scripting.\+Multi\+Decorator\+Provider}}$<$ TDecorated, TDecorator, TAttribute $>$.typeset\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Package\+Cache/com.\+unity.\+visualscripting@1.\+9.\+2/\+Editor/\+Visual\+Scripting.\+Core/\+Decorators/\mbox{\hyperlink{_multi_decorator_provider_8cs}{Multi\+Decorator\+Provider.\+cs}}\end{DoxyCompactItemize}

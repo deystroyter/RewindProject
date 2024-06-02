@@ -1,0 +1,252 @@
+\chapter{Annotation marker sample}
+\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2smpl__custom__annotation}{}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2smpl__custom__annotation}\index{Annotation marker sample@{Annotation marker sample}}
+\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2smpl__custom__annotation_autotoc_md1200}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2smpl__custom__annotation_autotoc_md1200}%
+ The Annotation sample provides a marker that can be used as a bookmark for your timeline.
+
+
+
+Here are the options available on an annotation\+: \tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Field   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Field   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endhead
+Title   &The annotation\textquotesingle{}s title. This will be displayed as a tooltip, when hovering the mouse on the annotation.    \\\cline{1-2}
+Color   &The annotation\textquotesingle{}s color in the \doxylink{namespace_timeline}{Timeline} window.    \\\cline{1-2}
+Show line overlay   &Use this option to show a vertical line that spans the full height of the \doxylink{namespace_timeline}{Timeline} window.   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2smpl__custom__annotation_autotoc_md1201}{}\doxysection{\texorpdfstring{Custom marker workflow example}{Custom marker workflow example}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2smpl__custom__annotation_autotoc_md1201}
+This example will demonstrate how to\+:
+
+
+\begin{DoxyItemize}
+\item create a custom marker;
+\item customize a marker with {\ttfamily Marker\+Editor};
+\item use a custom USS style to draw a marker;
+\item add additional commands with {\ttfamily Actions};
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2smpl__custom__annotation_autotoc_md1202}{}\doxysubsection{\texorpdfstring{1. Create an annotation marker}{1. Create an annotation marker}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2smpl__custom__annotation_autotoc_md1202}
+A marker is an item that can be added to a \doxylink{namespace_timeline}{Timeline} Asset and is used to represent a point in time. Markers also have a specialization, just like clips (Activation clip, Audio clip, Animation clip, etc).
+
+In order to add a new type of marker, all we need to do is to create a class that inherits the {\ttfamily Marker} class\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ c\#}
+\DoxyCodeLine{public\ class\ AnnotationMarker\ :\ UnityEngine.Timeline.Marker\ \{\}}
+
+\end{DoxyCode}
+
+
+This custom marker can now be added to any track or on the timeline marker area\+:
+
+
+
+We can add a title, description and color to the annotation\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ c\#}
+\DoxyCodeLine{public\ class\ AnnotationMarker\ :\ Marker}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ public\ string\ title;}
+\DoxyCodeLine{\ \ \ \ public\ Color\ color;}
+\DoxyCodeLine{\ \ \ \ public\ string\ description;}
+\DoxyCodeLine{\ \ \ \ public\ bool\ showLineOverlay;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+The annotation marker itself is now complete. But the customization work is not done yet. \doxylink{namespace_timeline}{Timeline} offers many customization abilities.\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2smpl__custom__annotation_autotoc_md1203}{}\doxysection{\texorpdfstring{2. Customize the marker\textquotesingle{}s appearance}{2. Customize the marker\textquotesingle{}s appearance}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2smpl__custom__annotation_autotoc_md1203}
+A marker\textquotesingle{}s appearance can be customized using a USS style or with {\ttfamily Marker\+Editor}. Both paths have their advantages and drawbacks.\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2smpl__custom__annotation_autotoc_md1204}{}\doxysubsection{\texorpdfstring{Custom USS style}{Custom USS style}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2smpl__custom__annotation_autotoc_md1204}
+A marker can use a USS style to specify its appearance. For more information on how to create custom USS styles, see \doxysectlink{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2uss__styles}{how to define custom USS styles}{0}.
+
+The \href{xref:UnityEngine.Timeline.CustomStyleAttribute}{\texttt{ Custom\+Style}} attribute can be used to specify a style for a given marker\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ c\#}
+\DoxyCodeLine{[CustomStyle("{}AnnotationStyle"{})]}
+\DoxyCodeLine{public\ class\ AnnotationMarker\ :\ Marker}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ //...}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+{\ttfamily Annotation\+Style} is defined in a USS stylesheet and will be used when a marker is displayed on screen\+:
+
+
+
+USS styles are useful if the desired appearance is simple (i.\+e. when only using a texture icon). For more complex stuff (i.\+e. dynamically changing a marker\textquotesingle{}s color), a {\ttfamily Marker\+Editor} will be needed.\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2smpl__custom__annotation_autotoc_md1205}{}\doxysubsection{\texorpdfstring{Custom editor}{Custom editor}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2smpl__custom__annotation_autotoc_md1205}
+{\ttfamily Marker\+Editor} can be used to augment the capabilities of a marker in the editor. It works like a custom \href{https://docs.unity3d.com/ScriptReference/CustomEditor.html}{\texttt{ Inspector}}; the \href{xref:UnityEditor.Timeline.CustomTimelineEditorAttribute}{\texttt{ Custom\+Timeline\+Editor attribute}} is used to tell \doxylink{namespace_timeline}{Timeline} that a \href{xref:UnityEditor.Timeline.MarkerEditor}{\texttt{ Marker\+Editor}} class should be associated to a given marker.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ c\#}
+\DoxyCodeLine{[CustomTimelineEditor(typeof(AnnotationMarker))]}
+\DoxyCodeLine{public\ class\ AnnotationMarkerEditor\ :\ MarkerEditor}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ //...}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2smpl__custom__annotation_autotoc_md1206}{}\doxysubsubsection{\texorpdfstring{Marker information}{Marker information}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2smpl__custom__annotation_autotoc_md1206}
+{\ttfamily Marker\+Editor} lets us provide information about the marker by overriding the \href{xref:UnityEditor.Timeline.MarkerEditor\#UnityEditor_Timeline_MarkerEditor_GetMarkerOptions_UnityEngine_Timeline_IMarker_}{\texttt{ Get\+Marker\+Options}} method.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ c\#}
+\DoxyCodeLine{public\ override\ MarkerDrawOptions\ GetMarkerOptions(IMarker\ marker)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ var\ annotation\ =\ marker\ as\ AnnotationMarker;}
+\DoxyCodeLine{\ \ \ if\ (annotation\ !=\ null)}
+\DoxyCodeLine{\ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ return\ new\ MarkerDrawOptions\ \{\ tooltip\ =\ annotation.title\ \};}
+\DoxyCodeLine{\ \ \ \}}
+\DoxyCodeLine{\ \ \ return\ base.GetMarkerOptions(marker);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Here the tooltip of an {\ttfamily Annotation} has been set to use the annotation\textquotesingle{}s {\ttfamily title} variable.
+
+
+
+\href{xref:UnityEditor.Timeline.MarkerDrawOptions}{\texttt{ Marker\+Draw\+Options}} can also set the error text on a marker, which can be useful if a variable has been incorrectly set and needs attention.\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2smpl__custom__annotation_autotoc_md1207}{}\doxysubsubsection{\texorpdfstring{Overlay}{Overlay}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2smpl__custom__annotation_autotoc_md1207}
+An overlay can be drawn on top of a marker by overriding the \href{xref:UnityEditor.Timeline.MarkerEditor\#UnityEditor_Timeline_MarkerEditor_DrawOverlay_UnityEngine_Timeline_IMarker_UnityEditor_Timeline_MarkerUIStates_UnityEditor_Timeline_MarkerOverlayRegion_}{\texttt{ Draw\+Overlay}} method\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ c\#}
+\DoxyCodeLine{public\ override\ void\ DrawOverlay(IMarker\ marker,\ MarkerUIStates\ uiState,\ MarkerOverlayRegion\ region)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ var\ annotation\ =\ marker\ as\ AnnotationMarker;}
+\DoxyCodeLine{\ \ \ \ if\ (annotation\ !=\ null)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ //Draw\ overlay\ code...}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+An overlay is drawn on top of the marker; the \doxysectlink{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2uss__styles}{USS style}{0} is drawn first and {\ttfamily Draw\+Overlay} is called afterwards. For an {\ttfamily Annotation}, we can use {\ttfamily Draw\+Overlay} to change the color of the marker and to draw a line that spans the full \doxylink{namespace_timeline}{Timeline} window\textquotesingle{}s height. To do this, we can use the information given in {\ttfamily region}. Along with the visible time range, \href{xref:UnityEditor.Timeline.MarkerOverlayRegion}{\texttt{ Marker\+Overlay\+Region}} provides two rectangles that can be used to know where to draw\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily marker\+Region}
+\end{DoxyItemize}
+
+{\ttfamily marker\+Region} is the rectangle that encompasses the marker. This is useful to draw something directly on the marker itself. For {\ttfamily Annotation}, this rectangle is used to draw the color overlay.
+
+
+
+
+\begin{DoxyItemize}
+\item {\ttfamily timeline\+Region}
+\end{DoxyItemize}
+
+{\ttfamily timeline\+Region} is the rectangle that encompasses the clips and markers region of the timeline window. This is useful to draw something out of the marker\textquotesingle{}s region, like the {\ttfamily Annotation}\textquotesingle{}s line overlay.
+
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ c\#}
+\DoxyCodeLine{const\ float\ k\_LineOverlayWidth\ =\ 6.0f;}
+\DoxyCodeLine{float\ markerRegionCenter\ =\ markerRegion.xMin\ +\ (markerRegion.width\ -\/\ k\_LineOverlayWidth)\ /\ 2.0f;}
+\DoxyCodeLine{Rect\ lineRect\ =\ new\ Rect(markerRegionCenter,}
+\DoxyCodeLine{\ \ \ \ timelineRegion.y,}
+\DoxyCodeLine{\ \ \ \ k\_LineOverlayWidth,}
+\DoxyCodeLine{\ \ \ \ timelineRegion.height);}
+
+\end{DoxyCode}
+\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2smpl__custom__annotation_autotoc_md1208}{}\doxysection{\texorpdfstring{3. Create custom Actions}{3. Create custom Actions}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2smpl__custom__annotation_autotoc_md1208}
+\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2smpl__custom__annotation_autotoc_md1209}{}\doxysubsection{\texorpdfstring{Timeline Action}{Timeline Action}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2smpl__custom__annotation_autotoc_md1209}
+Actions can be used to add new menu entries in \doxylink{namespace_timeline}{Timeline}\textquotesingle{}s context menus. For an Annotation, we want to add a menu item available in all context menus to create an {\ttfamily Annotation} with the clipboard\textquotesingle{}s contents. To do this, a \href{xref:UnityEditor.Timeline.Actions.TimelineAction}{\texttt{ Timeline\+Action}} is needed, along with the \href{xref:UnityEditor.Timeline.Actions.MenuEntryAttribute}{\texttt{ Menu\+Entry attribute}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ c\#}
+\DoxyCodeLine{[MenuEntry("{}Create\ Annotation\ from\ clipboard\ contents"{})]}
+\DoxyCodeLine{public\ class\ CreateAnnotationFromClipboardContents\ :\ TimelineAction}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ //...}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+{\ttfamily Menu\+Entry} lets \doxylink{namespace_timeline}{Timeline} know that this action can be added in context menus. Classes inheriting from {\ttfamily Timeline\+Action} need to override two methods\+: {\ttfamily Execute} and {\ttfamily Validate}.\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2smpl__custom__annotation_autotoc_md1210}{}\doxysubsubsection{\texorpdfstring{Validate}{Validate}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2smpl__custom__annotation_autotoc_md1210}
+{\ttfamily Validate} is used to specify that the action\textquotesingle{}s prerequisites are fulfilled. In the case of {\ttfamily Create\+Annotation\+From\+Clipboard\+Contents}, the action is only valid if there actually is contents in the clipboard. {\ttfamily Action\+Validity} is used to describe the validity state of an action\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ c\#}
+\DoxyCodeLine{public\ override\ ActionValidity\ Validate(ActionContext\ context)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ if\ (!markers.All(marker\ =>\ marker\ is\ AnnotationMarker))}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ return\ ActionValidity.NotApplicable;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ string\ buffer\ =\ EditorGUIUtility.systemCopyBuffer;}
+\DoxyCodeLine{\ \ \ \ return\ buffer.Length\ ==\ 0\ ?\ \ ActionValidity.Invalid\ :\ ActionValidity.Valid;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyItemize}
+\item {\ttfamily Action\+Validity.\+Valid} \+: The action can be executed.
+\item {\ttfamily Action\+Validity.\+Invalid} \+: The action cannot be executed given the current context and will appear grayed out in context menus.
+\item {\ttfamily Action\+Validity.\+Not\+Applicable} \+: The action does not apply to the current context and will not show up in menus.
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2smpl__custom__annotation_autotoc_md1211}{}\doxysubsubsection{\texorpdfstring{Execute}{Execute}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2smpl__custom__annotation_autotoc_md1211}
+{\ttfamily Execute} should run the code necessary to execute the action\textquotesingle{}s purpose.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ c\#}
+\DoxyCodeLine{\ public\ override\ bool\ Execute(ActionContext\ context)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ string\ buffer\ =\ EditorGUIUtility.systemCopyBuffer;}
+\DoxyCodeLine{\ \ \ \ TrackAsset\ track\ =\ context.tracks.FirstOrDefault();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ if\ (buffer.Length\ !=\ 0)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ //\ Create\ the\ new\ annotation\ and\ add\ it\ to\ the\ track}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ //...}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ return\ true;}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ return\ false;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+The return value should specify if the execution succeeded or not.\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2smpl__custom__annotation_autotoc_md1212}{}\doxysubsection{\texorpdfstring{Marker Action}{Marker Action}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2smpl__custom__annotation_autotoc_md1212}
+It is also possible to write custom actions that apply only to markers, instead of all \doxylink{namespace_timeline}{Timeline} items. This is the purpose of the {\ttfamily Marker\+Editor} class. It works just like {\ttfamily Timeline\+Action}, except that action applies to a list of markers.
+
+A shortcut can also be assigned to an action. A static method with the {\ttfamily Timeline\+Shortcut} attribute is needed. {\ttfamily Invoker} can be used to easily execute a given action\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ c\#}
+\DoxyCodeLine{[TimelineShortcut("{}Replace\ annotation\ description\ with\ clipboard"{},\ KeyCode.G)]}
+\DoxyCodeLine{public\ static\ void\ InvokeAction()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ Invoker.InvokeWithSelectedMarkers<ReplaceAnnotationDescriptionAction>();}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2smpl__custom__annotation_autotoc_md1213}{}\doxysection{\texorpdfstring{Notes}{Notes}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2smpl__custom__annotation_autotoc_md1213}
+\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2smpl__custom__annotation_autotoc_md1214}{}\doxysection{\texorpdfstring{Runtime considerations}{Runtime considerations}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2smpl__custom__annotation_autotoc_md1214}
+{\ttfamily Annotation\+Marker} is available at runtime; it can be queried using, for example, {\ttfamily Track\+Asset.\+Get\+Markers()}. However, {\ttfamily Annotation\+Marker\+Editor} and custom actions are not available at runtime, since it depends on classes that are not part of the runtime assembly. 

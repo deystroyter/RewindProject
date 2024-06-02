@@ -1,0 +1,123 @@
+\doxysection{Unity\+Editor.\+Timeline.\+Timeline\+Editor\+Window Class Reference}
+\hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_editor_window}{}\label{class_unity_editor_1_1_timeline_1_1_timeline_editor_window}\index{UnityEditor.Timeline.TimelineEditorWindow@{UnityEditor.Timeline.TimelineEditorWindow}}
+
+
+Base class of the Timeline\+Window.  
+
+
+Inheritance diagram for Unity\+Editor.\+Timeline.\+Timeline\+Editor\+Window\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_unity_editor_1_1_timeline_1_1_timeline_editor_window}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_editor_window_a2b1762f4248bc4f5e43661773d6fe3c8}{Set\+Timeline}} (\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_asset}{Timeline\+Asset}} sequence)
+\begin{DoxyCompactList}\small\item\em Sets which Timeline\+Asset is shown in the Timeline\+Window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_editor_window_af8bd13f599b05491eaf9d385512fc504}{Set\+Timeline}} (Playable\+Director director)
+\begin{DoxyCompactList}\small\item\em Sets which Timeline\+Asset is shown in the Timeline\+Window based on the Playable\+Director. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_editor_window_af16c58fb3aabc78449029123ab787b02}{Clear\+Timeline}} ()
+\begin{DoxyCompactList}\small\item\em Clears the Timeline\+Asset that is shown in the Timeline\+Window. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_navigator}{Timeline\+Navigator}} \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_editor_window_a4d6a8201285f185e9205b853cd6f2f3c}{navigator}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Use this interface to navigate between Timelines and Sub-\/\+Timelines. (RO) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_playback_controls}{Timeline\+Playback\+Controls}} \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_editor_window_ad48264387bc250628fc9e167a1826f78}{playback\+Controls}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Use this interface to control the playback behaviour of the \doxylink{namespace_timeline}{Timeline} window. (RO) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_editor_window_a970e82eb61d9bc5efbba620ed66573d5}{locked}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Retrieves and sets the \doxylink{namespace_timeline}{Timeline} Window lock state. When disabled (false), the window focus follows the \doxylink{namespace_unity}{Unity} selection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class of the Timeline\+Window. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_editor_window_af16c58fb3aabc78449029123ab787b02}\label{class_unity_editor_1_1_timeline_1_1_timeline_editor_window_af16c58fb3aabc78449029123ab787b02} 
+\index{UnityEditor.Timeline.TimelineEditorWindow@{UnityEditor.Timeline.TimelineEditorWindow}!ClearTimeline@{ClearTimeline}}
+\index{ClearTimeline@{ClearTimeline}!UnityEditor.Timeline.TimelineEditorWindow@{UnityEditor.Timeline.TimelineEditorWindow}}
+\doxysubsubsection{\texorpdfstring{ClearTimeline()}{ClearTimeline()}}
+{\footnotesize\ttfamily void Unity\+Editor.\+Timeline.\+Timeline\+Editor\+Window.\+Clear\+Timeline (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+Clears the Timeline\+Asset that is shown in the Timeline\+Window. 
+
+You can use this method when the Timeline\+Window is locked.
+
+\texorpdfstring{$>$}{>} \Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_editor_window_af8bd13f599b05491eaf9d385512fc504}\label{class_unity_editor_1_1_timeline_1_1_timeline_editor_window_af8bd13f599b05491eaf9d385512fc504} 
+\index{UnityEditor.Timeline.TimelineEditorWindow@{UnityEditor.Timeline.TimelineEditorWindow}!SetTimeline@{SetTimeline}}
+\index{SetTimeline@{SetTimeline}!UnityEditor.Timeline.TimelineEditorWindow@{UnityEditor.Timeline.TimelineEditorWindow}}
+\doxysubsubsection{\texorpdfstring{SetTimeline()}{SetTimeline()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Unity\+Editor.\+Timeline.\+Timeline\+Editor\+Window.\+Set\+Timeline (\begin{DoxyParamCaption}\item[{Playable\+Director}]{director }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+Sets which Timeline\+Asset is shown in the Timeline\+Window based on the Playable\+Director. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em director} & The Playable\+Director associated with the Timeline\+Asset to show in the Timeline\+Window. Specify a null to clear the Timeline\+Window.\\
+\hline
+\end{DoxyParams}
+
+
+You can use this method when the Timeline\+Window is locked.\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_editor_window_a2b1762f4248bc4f5e43661773d6fe3c8}\label{class_unity_editor_1_1_timeline_1_1_timeline_editor_window_a2b1762f4248bc4f5e43661773d6fe3c8} 
+\index{UnityEditor.Timeline.TimelineEditorWindow@{UnityEditor.Timeline.TimelineEditorWindow}!SetTimeline@{SetTimeline}}
+\index{SetTimeline@{SetTimeline}!UnityEditor.Timeline.TimelineEditorWindow@{UnityEditor.Timeline.TimelineEditorWindow}}
+\doxysubsubsection{\texorpdfstring{SetTimeline()}{SetTimeline()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Unity\+Editor.\+Timeline.\+Timeline\+Editor\+Window.\+Set\+Timeline (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_asset}{Timeline\+Asset}}}]{sequence }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+Sets which Timeline\+Asset is shown in the Timeline\+Window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sequence} & The Timeline\+Asset to show. Specify a null to clear the Timeline\+Window.\\
+\hline
+\end{DoxyParams}
+
+
+When you call this method, the Timeline\+Window is placed in asset edit mode. This mode does not support all features. For example, bindings are not available and the timeline cannot be evaluated. You can use this method when the Timeline\+Window is locked.
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_editor_window_a970e82eb61d9bc5efbba620ed66573d5}\label{class_unity_editor_1_1_timeline_1_1_timeline_editor_window_a970e82eb61d9bc5efbba620ed66573d5} 
+\index{UnityEditor.Timeline.TimelineEditorWindow@{UnityEditor.Timeline.TimelineEditorWindow}!locked@{locked}}
+\index{locked@{locked}!UnityEditor.Timeline.TimelineEditorWindow@{UnityEditor.Timeline.TimelineEditorWindow}}
+\doxysubsubsection{\texorpdfstring{locked}{locked}}
+{\footnotesize\ttfamily bool Unity\+Editor.\+Timeline.\+Timeline\+Editor\+Window.\+locked\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}, {\ttfamily [abstract]}}
+
+
+
+Retrieves and sets the \doxylink{namespace_timeline}{Timeline} Window lock state. When disabled (false), the window focus follows the \doxylink{namespace_unity}{Unity} selection. 
+
+When the lock state transitions from true to false, the focused timeline is synchronized with the \doxylink{namespace_unity}{Unity} selection.
+
+\texorpdfstring{$>$}{>} \Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_editor_window_a4d6a8201285f185e9205b853cd6f2f3c}\label{class_unity_editor_1_1_timeline_1_1_timeline_editor_window_a4d6a8201285f185e9205b853cd6f2f3c} 
+\index{UnityEditor.Timeline.TimelineEditorWindow@{UnityEditor.Timeline.TimelineEditorWindow}!navigator@{navigator}}
+\index{navigator@{navigator}!UnityEditor.Timeline.TimelineEditorWindow@{UnityEditor.Timeline.TimelineEditorWindow}}
+\doxysubsubsection{\texorpdfstring{navigator}{navigator}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_navigator}{Timeline\+Navigator}} Unity\+Editor.\+Timeline.\+Timeline\+Editor\+Window.\+navigator\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [abstract]}}
+
+
+
+Use this interface to navigate between Timelines and Sub-\/\+Timelines. (RO) 
+
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_editor_window_ad48264387bc250628fc9e167a1826f78}\label{class_unity_editor_1_1_timeline_1_1_timeline_editor_window_ad48264387bc250628fc9e167a1826f78} 
+\index{UnityEditor.Timeline.TimelineEditorWindow@{UnityEditor.Timeline.TimelineEditorWindow}!playbackControls@{playbackControls}}
+\index{playbackControls@{playbackControls}!UnityEditor.Timeline.TimelineEditorWindow@{UnityEditor.Timeline.TimelineEditorWindow}}
+\doxysubsubsection{\texorpdfstring{playbackControls}{playbackControls}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_playback_controls}{Timeline\+Playback\+Controls}} Unity\+Editor.\+Timeline.\+Timeline\+Editor\+Window.\+playback\+Controls\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [abstract]}}
+
+
+
+Use this interface to control the playback behaviour of the \doxylink{namespace_timeline}{Timeline} window. (RO) 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+7.\+6/\+Editor/\+Window/\mbox{\hyperlink{_timeline_editor_window_8cs}{Timeline\+Editor\+Window.\+cs}}\end{DoxyCompactItemize}

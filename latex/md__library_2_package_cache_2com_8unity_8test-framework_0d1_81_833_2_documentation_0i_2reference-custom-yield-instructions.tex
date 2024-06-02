@@ -1,0 +1,77 @@
+\chapter{Custom yield instructions}
+\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-custom-yield-instructions}{}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-custom-yield-instructions}\index{Custom yield instructions@{Custom yield instructions}}
+\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-custom-yield-instructions_autotoc_md661}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-custom-yield-instructions_autotoc_md661}%
+ By implementing this interface below, you can define custom yield instructions in {\bfseries{Edit Mode}} tests.\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-custom-yield-instructions_autotoc_md662}{}\doxysection{\texorpdfstring{IEdit\+Mode\+Test\+Yield\+Instruction}{IEdit\+Mode\+Test\+Yield\+Instruction}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-custom-yield-instructions_autotoc_md662}
+In an Edit Mode test, you can use {\ttfamily IEdit\+Mode\+Test\+Yield\+Instruction} interface to implement your own instruction. There are also a couple of commonly used implementations available\+:
+
+
+\begin{DoxyItemize}
+\item Enter\+Play\+Mode
+\item Exit\+Play\+Mode
+\item \doxysectlink{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-recompile-scripts}{Recompile\+Scripts}{0}
+\item \doxysectlink{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-wait-for-domain-reload}{Wait\+For\+Domain\+Reload}{0}
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-custom-yield-instructions_autotoc_md663}{}\doxysection{\texorpdfstring{Example}{Example}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-custom-yield-instructions_autotoc_md663}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \#}}
+\DoxyCodeLine{[UnityTest]}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{public}\ IEnumerator\ PlayOnAwakeDisabled\_DoesntPlayWhenEnteringPlayMode()}
+\DoxyCodeLine{}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ var\ videoPlayer\ =\ PrefabUtility.InstantiatePrefab(m\_VideoPlayerPrefab.GetComponent<VideoPlayer>())\ as\ VideoPlayer;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ videoPlayer.playOnAwake\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ yield\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ EnterPlayMode();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ var\ videoPlayerGO\ =\ \mbox{\hyperlink{namespace_unity_editor_1_1_timeline_a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae}{GameObject}}.Find(m\_VideoPlayerPrefab.name);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ Assert.IsFalse(videoPlayerGO.GetComponent<VideoPlayer>().isPlaying);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ yield\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ ExitPlayMode();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{_t_m_pro___font_asset_creator_window_8cs_aef19bab18b9814edeef255c43e4f6bbc}{Object}}.DestroyImmediate(\mbox{\hyperlink{namespace_unity_editor_1_1_timeline_a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae}{GameObject}}.Find(m\_VideoPlayerPrefab.name));}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-custom-yield-instructions_autotoc_md664}{}\doxysection{\texorpdfstring{Properties}{Properties}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-custom-yield-instructions_autotoc_md664}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Syntax   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Syntax   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endhead
+{\ttfamily bool Expect\+Domain\+Reload}   &Returns {\ttfamily true} if the instruction expects a domain reload to occur.    \\\cline{1-2}
+{\ttfamily bool Expected\+Playmode\+State}   &Returns {\ttfamily true} if the instruction expects the \doxylink{namespace_unity}{Unity} Editor to be in {\bfseries{Play Mode}}.   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-custom-yield-instructions_autotoc_md665}{}\doxysection{\texorpdfstring{Methods}{Methods}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-custom-yield-instructions_autotoc_md665}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Syntax   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Syntax   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endhead
+{\ttfamily IEnumerator Perform()}   &Used to define multi-\/frame operations performed when instantiating a yield instruction.   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-custom-yield-instructions_autotoc_md666}{}\doxysection{\texorpdfstring{Enter\+Play\+Mode}{Enter\+Play\+Mode}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-custom-yield-instructions_autotoc_md666}
+
+\begin{DoxyItemize}
+\item Implements {\ttfamily IEdit\+Mode\+Test\+Yield\+Instruction}. Creates a yield instruction to enter Play Mode.
+\item When creating an Editor test that uses the {\ttfamily Unity\+Test} attribute, use this to trigger the Editor to enter Play Mode.
+\item Throws an exception if the Editor is already in Play Mode or if there is a \href{https://support.unity3d.com/hc/en-us/articles/205930539-How-do-I-interpret-a-compiler-error-}{\texttt{ script compilation error}}.
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-custom-yield-instructions_autotoc_md667}{}\doxysection{\texorpdfstring{Exit\+Play\+Mode}{Exit\+Play\+Mode}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-custom-yield-instructions_autotoc_md667}
+
+\begin{DoxyItemize}
+\item Implements {\ttfamily IEdit\+Mode\+Test\+Yield\+Instruction}. A new instance of the class is a yield instruction to exit Play Mode.
+\item Throws an exception if the Editor is not in Play Mode. 
+\end{DoxyItemize}

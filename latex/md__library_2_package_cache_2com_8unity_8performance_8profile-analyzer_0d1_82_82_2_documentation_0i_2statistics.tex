@@ -1,0 +1,41 @@
+\chapter{Statistics in the Profile Analyzer}
+\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2statistics}{}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2statistics}\index{Statistics in the Profile Analyzer@{Statistics in the Profile Analyzer}}
+\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2statistics_autotoc_md434}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2statistics_autotoc_md434}%
+ The Profile Analyzer displays a number of statistics about the data you\textquotesingle{}re analyzing in the Frame, Thread, and Marker Summary panes..\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2statistics_autotoc_md435}{}\doxysection{\texorpdfstring{Available statistics}{Available statistics}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2statistics_autotoc_md435}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Statistic}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Statistic}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-2}
+\endhead
+{\bfseries{Min}}   &Min represents the lowest (minimum) value for the marker or frame time.    \\\cline{1-2}
+{\bfseries{Max}}   &Max represents the largest (maximum) value for the marker or frame time.    \\\cline{1-2}
+{\bfseries{Median}}   &\href{https://en.wikipedia.org/wiki/Median}{\texttt{ Median}} is the middle value of a data set, and separates the higher half from the lower half of a data set.    \\\cline{1-2}
+{\bfseries{Mean}}   &\href{https://en.wikipedia.org/wiki/Arithmetic_mean}{\texttt{ Mean}} is the average value in a data set. It represents the sum of all of the values in the data set divided by the number of values in the data set.    \\\cline{1-2}
+{\bfseries{Lower and Upper Quartiles}}   &The lower \href{https://en.wikipedia.org/wiki/Quartile}{\texttt{ quartile}} is the middle number between the smallest number and the median of the data set. The upper quartile is the middle value between the median and the highest value of the data set.    \\\cline{1-2}
+{\bfseries{Interquartile Range}}   &The \href{https://en.wikipedia.org/wiki/Interquartile_range}{\texttt{ interquartile range}} shows the range of values in the central 50\% of the data. The range is equal to the difference between the upper and lower quartile values.   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2statistics_autotoc_md436}{}\doxysection{\texorpdfstring{How the statistics are represented}{How the statistics are represented}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2statistics_autotoc_md436}
+The statistics are displayed in several ways in the Profile Analyzer. In the Frame, Thread, and Marker summary panes, the statistics are displayed as raw numbers as well as in \href{https://en.wikipedia.org/wiki/Histogram}{\texttt{ histograms}} and \href{https://en.wikipedia.org/wiki/Box_plot}{\texttt{ box and whisker plots}} to give a visual representation of time distribution. The following section gives some examples of some common distributions you might find in your analysis.\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2statistics_autotoc_md437}{}\doxysection{\texorpdfstring{Single view}{Single view}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2statistics_autotoc_md437}
+\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2statistics_autotoc_md438}{}\doxysubsection{\texorpdfstring{Even distribution}{Even distribution}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2statistics_autotoc_md438}
+
+
+In this example, the graphs display a distribution of marker calls that range from 16.\+75ms to 17.\+26ms. The histogram on the left shows that a lot of the buckets are being hit at a fairly even amount. This is also evident in the box and whisker plot on the right where the box is large and is towards the middle of the upper and lower bounds.\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2statistics_autotoc_md439}{}\doxysubsection{\texorpdfstring{Outlier}{Outlier}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2statistics_autotoc_md439}
+
+
+In this example, the graphs display a distribution of marker calls that range from 0.\+67ms to 5.\+32ms. The histogram on the left shows that the lower end buckets are used the most and only some of the more expensive buckets are hit. This is also reflected in the box and whisker plot, where the box appears towards the bottom of the range but the whisker, or upper bound of the range, is high up.\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2statistics_autotoc_md440}{}\doxysection{\texorpdfstring{Compare view}{Compare view}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2statistics_autotoc_md440}
+\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2statistics_autotoc_md441}{}\doxysubsection{\texorpdfstring{Similar distribution}{Similar distribution}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2statistics_autotoc_md441}
+
+
+In this example, there are two distributions that are similar, and both the histogram and box and whisker plots show a very similar pattern. This shows that the marker activity in both sets is similar.\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2statistics_autotoc_md442}{}\doxysubsection{\texorpdfstring{Different distribution}{Different distribution}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2statistics_autotoc_md442}
+
+
+In this example, there are two distributions that are different; both the histogram and the box and whisker plots show that the marker in the left (blue) data set ran for longer. The histogram shows that the blue data set used more expensive buckets, and the box and whisker plot is drawn higher up on its range. This means that the marker activity in left (blue) data set is more costly and should be investigated further.\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2statistics_autotoc_md443}{}\doxysubsection{\texorpdfstring{Overlapping distributions}{Overlapping distributions}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2statistics_autotoc_md443}
+
+
+In this example, there are two distributions that are similar. Both data sets have the same lower bound and have some overlap in the middle of the range, but the right (orange) dataset uses some of the more expensive buckets and has a higher upper bound. This means that the activity in right (orange) data set is more costly or is being called more times and should be investigated further. 

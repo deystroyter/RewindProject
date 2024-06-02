@@ -1,0 +1,55 @@
+\chapter{Workflow\+: How to create a test}
+\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2workflow-create-test}{}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2workflow-create-test}\index{Workflow: How to create a test@{Workflow: How to create a test}}
+\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2workflow-create-test_autotoc_md727}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2workflow-create-test_autotoc_md727}%
+ To create a test, do the following\+:
+
+
+\begin{DoxyEnumerate}
+\item Create your {\itshape Test} \doxysectlink{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2workflow-create-test-assembly}{assembly folder}{0} and select it in the {\bfseries{Project}} window.
+\item Click the button {\bfseries{Create Test Script in current folder}} option in the {\bfseries{Test Runner}} window. 
+\item It creates a {\itshape New\+Test\+Script.\+cs} file in the {\itshape \doxylink{namespace_tests}{Tests}} folder. Change the name of the script, if necessary, and press Enter to accept it.
+\end{DoxyEnumerate}
+
+
+
+Now you’ll see two sample tests in the Test Runner window\+:
+
+
+
+Now you can open the tests in your favorite script editor.
+
+You can also create test scripts by navigating to {\bfseries{Assets}} \texorpdfstring{$>$}{>} {\bfseries{Create \texorpdfstring{$>$}{>} Testing}} \texorpdfstring{$>$}{>} {\bfseries{C\# Test Script}}, unless adding a test script would result in a compilation error.
+
+\begin{quote}
+{\bfseries{Note}}\+: \doxylink{namespace_unity}{Unity} does not include {\ttfamily Test\+Assemblies} (\href{http://www.nunit.org/}{\texttt{ NUnit}}, \doxylink{namespace_unity}{Unity} Test Framework, and user script assemblies) when using the normal build pipeline, but does include them when using {\bfseries{Run on \texorpdfstring{$<$}{<}Platform\texorpdfstring{$>$}{>}}} in the Test Runner window. \end{quote}
+\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2workflow-create-test_autotoc_md728}{}\doxysection{\texorpdfstring{Create additional tests}{Create additional tests}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2workflow-create-test_autotoc_md728}
+To create another set of tests\+:
+
+
+\begin{DoxyEnumerate}
+\item In the {\bfseries{Project}} window, select {\bfseries{Assets}}.
+\item Create a new test assembly folder (menu\+: {\bfseries{Assets \texorpdfstring{$>$}{>} Create\texorpdfstring{$>$}{>} Testing \texorpdfstring{$>$}{>} \doxylink{namespace_tests}{Tests} Assembly Folder}}).
+\item In the {\bfseries{Project}} window, select the new folder.
+\item Create a new test script in the folder (menu\+: {\bfseries{Assets \texorpdfstring{$>$}{>} Create \texorpdfstring{$>$}{>} Testing \texorpdfstring{$>$}{>} C\# Test Script}}).
+\end{DoxyEnumerate}
+
+The assembly definition is assigned the same name as your new asset. To rename it, change the {\bfseries{Name}} in the {\bfseries{Insepctor}} window. Assembly definition names must be unique.
+
+\begin{quote}
+{\bfseries{Note}}\+: Changing the file name of the assembly definition file does not affect the value of the {\bfseries{Name}} property in the file. Use the {\bfseries{Inspector}} window to make sure the name is properly changed. \end{quote}
+By default {\bfseries{Any Platform}} is preselected as the target platform for the new assembly, which means the test script appears as a Play\+Mode test in the \doxylink{namespace_test_runner}{Test\+Runner} window. To change it to an Edit\+Mode test, in the {\bfseries{Inspector}} window select {\bfseries{Editor}} only under {\bfseries{Platforms}}.
+
+New assemblies created through the {\bfseries{Assets}} menu should automatically include references to {\ttfamily \doxylink{namespace_unity_engine_1_1_test_runner}{Unity\+Engine.\+Test\+Runner}} and {\ttfamily \doxylink{namespace_unity_editor_1_1_test_runner}{Unity\+Editor.\+Test\+Runner}}. If these references are missing, add them in the {\bfseries{Inspector}} window under {\bfseries{Assembly Definition References}}\+:
+
+\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2workflow-create-test_autotoc_md729}{}\doxysection{\texorpdfstring{Filters}{Filters}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2workflow-create-test_autotoc_md729}
+If you have a lot of tests, and you only want to view/run a sub-\/set of them, you can filter them in three ways (see image above)\+:
+
+
+\begin{DoxyItemize}
+\item Type in the search box in the top left
+\item Click a test class or fixture (such as {\bfseries{New\+Test\+Script}} in the image above)
+\item Click one of the test result icon buttons in the top right
+\end{DoxyItemize}
+
+For more information, see \doxysectlink{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2edit-mode-vs-play-mode-tests}{Edit Mode vs. Play Mode tests}{0}. 

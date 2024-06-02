@@ -1,0 +1,53 @@
+\chapter{Messaging System}
+\hypertarget{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_messaging_system}{}\label{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_messaging_system}\index{Messaging System@{Messaging System}}
+\label{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_messaging_system_autotoc_md1338}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_messaging_system_autotoc_md1338}%
+ The new UI system uses a messaging system designed to replace Send\+Message. The system is pure C\# and aims to address some of the issues present with Send\+Message. The system works using custom interfaces that can be implemented on a Mono\+Behaviour to indicate that the component is capable of receiving a callback from the messaging system. When the call is made a target Game\+Object is specified; the call will be issued on all components of the Game\+Object that implement the specified interface that the call is to be issued against. The messaging system allows for custom user data to be passed, as well as how far through the Game\+Object hierarchy the event should propagate; that is should it just execute for the specified Game\+Object, or should it also execute on children and parents. In addition to this the messaging framework provides helper functions to search for and find Game\+Objects that implement a given messaging interface.
+
+The messaging system is generic and designed for use not just by the UI system but also by general game code. It is relatively trivial to add custom messaging events and they will work using the same framework that the UI system uses for all event handling.\hypertarget{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_messaging_system_autotoc_md1339}{}\doxysection{\texorpdfstring{Defining A Custom Message}{Defining A Custom Message}}\label{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_messaging_system_autotoc_md1339}
+If you wish to define a custom message it is relatively simple. In the \doxylink{namespace_unity_engine_1_1_event_systems}{Unity\+Engine.\+Event\+Systems} namespace there is a base interface called \textquotesingle{}IEvent\+System\+Handler\textquotesingle{}. Anything that extends from this can be considered as a target for receiving events via the messaging system.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{public\ interface\ ICustomMessageTarget\ :\ IEventSystemHandler}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ //\ functions\ that\ can\ be\ called\ via\ the\ messaging\ system}
+\DoxyCodeLine{\ \ \ \ void\ Message1();}
+\DoxyCodeLine{\ \ \ \ void\ Message2();}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Once this interface is defined then it can be implemented by a Mono\+Behaviour. When implemented it defines the functions that will be executed if the given message is issued against this Mono\+Behaviours Game\+Object.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{public\ class\ CustomMessageTarget\ :\ MonoBehaviour,\ ICustomMessageTarget}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ public\ void\ Message1()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ Debug.Log\ ("{}Message\ 1\ received"{});}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ public\ void\ Message2()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ Debug.Log\ ("{}Message\ 2\ received"{});}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Now that a script exists that can receive the message we need to issue the message. Normally this would be in response to some loosely coupled event that occurs. For example, in the UI system we issue events for such things as Pointer\+Enter and Pointer\+Exit, as well as a variety of other things that can happen in response to user input into the application.
+
+To send a message a static helper class exists to do this. As arguments it requires a target object for the message, some user specific data, and a functor that maps to the specific function in the message interface you wish to target.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ExecuteEvents.Execute<ICustomMessageTarget>(target,\ null,\ (x,y)=>x.Message1());}
+
+\end{DoxyCode}
+
+
+This code will execute the function Message1 on any components on the Game\+Object target that implement the ICustom\+Message\+Target interface. The scripting documentation for the Execute\+Events class covers other forms of the Execute functions, such as Executing in children or in parents. 

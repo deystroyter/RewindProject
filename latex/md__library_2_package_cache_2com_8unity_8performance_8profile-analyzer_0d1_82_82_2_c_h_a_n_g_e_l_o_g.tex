@@ -1,0 +1,278 @@
+\chapter{Changelog}
+\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g}{}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g}\index{Changelog@{Changelog}}
+\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md337}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md337}%
+All notable changes to this package will be documented in this file.
+
+The format is based on \href{http://keepachangelog.com/en/1.0.0/}{\texttt{ Keep a Changelog}} and this project adheres to \href{http://semver.org/spec/v2.0.0.html}{\texttt{ Semantic Versioning}}.\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md338}{}\doxysection{\texorpdfstring{\mbox{[}1.\+2.\+2\mbox{]} -\/ 2023-\/01-\/30}{\mbox{[}1.\+2.\+2\mbox{]} -\/ 2023-\/01-\/30}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md338}
+\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md339}{}\doxysubsection{\texorpdfstring{Fixed}{Fixed}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md339}
+
+\begin{DoxyItemize}
+\item Fixed exception thrown when removing marker.
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md340}{}\doxysection{\texorpdfstring{\mbox{[}1.\+2.\+1\mbox{]} -\/ 2023-\/01-\/02}{\mbox{[}1.\+2.\+1\mbox{]} -\/ 2023-\/01-\/02}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md340}
+\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md341}{}\doxysubsection{\texorpdfstring{Changed}{Changed}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md341}
+
+\begin{DoxyItemize}
+\item Updated What\textquotesingle{}s New page
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md342}{}\doxysection{\texorpdfstring{\mbox{[}1.\+2.\+0\mbox{]} -\/ 2023-\/01-\/02}{\mbox{[}1.\+2.\+0\mbox{]} -\/ 2023-\/01-\/02}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md342}
+\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md343}{}\doxysubsection{\texorpdfstring{Added}{Added}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md343}
+
+\begin{DoxyItemize}
+\item Added support for removing vsync time, so we can see actual CPU duration over multiple frames. A drop down has been added to \textquotesingle{}remove\textquotesingle{} a marker from the analysis and has entries for "{}\+FPS Wait"{}, "{}\+Present Wait"{} and "{}\+Custom"{} where you can select any marker from the table using the right click context menu to "{}\+Remove Marker"{}.
+\item Added optional standard deviation (SD) column into marker table (on single view) for sorting data based on variation of marker timings in over the frames.
+\item Added export of the comparison table as CSV.
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md344}{}\doxysubsection{\texorpdfstring{Changed}{Changed}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md344}
+
+\begin{DoxyItemize}
+\item Improved profile analysis performance.
+\item Updated minimal suppourted version to \doxylink{namespace_unity}{Unity} 2020.\+3.
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md345}{}\doxysubsection{\texorpdfstring{Fixed}{Fixed}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md345}
+
+\begin{DoxyItemize}
+\item Fixed bug when depth filter and marker vsync removal both applied.
+\item Fixed commas in CSV export file.
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md346}{}\doxysection{\texorpdfstring{\mbox{[}1.\+1.\+1\mbox{]} -\/ 2021-\/10-\/04}{\mbox{[}1.\+1.\+1\mbox{]} -\/ 2021-\/10-\/04}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md346}
+\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md347}{}\doxysubsection{\texorpdfstring{Fixed}{Fixed}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md347}
+
+\begin{DoxyItemize}
+\item Fixed pulling frame data from the Profiler to exclude first and last frames if their main thread profiler data is incomplete, so that they don\textquotesingle{}t skewer the analysis results \href{https://issuetracker.unity3d.com/product/unity/issues/guid/1359686/}{\texttt{ (case 1359686)}}.
+\item Fixed Index\+Out\+Of\+Range\+Exception thrown when using Profiler or selecting Profiler frames in Profile Analyzer. \href{https://issuetracker.unity3d.com/product/unity/issues/guid/1366931/}{\texttt{ (1366931)}}
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md348}{}\doxysection{\texorpdfstring{\mbox{[}1.\+1.\+0\mbox{]} -\/ 2021-\/07-\/23}{\mbox{[}1.\+1.\+0\mbox{]} -\/ 2021-\/07-\/23}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md348}
+\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md349}{}\doxysubsection{\texorpdfstring{Fixed}{Fixed}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md349}
+
+\begin{DoxyItemize}
+\item Fixed x axis display on frame time graph when capture doesn\textquotesingle{}t match \doxylink{namespace_unity}{Unity} Profiler contents.
+\item Fixed selected marker name to be updated even when Profiler fails to sync selection.
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md350}{}\doxysection{\texorpdfstring{\mbox{[}1.\+1.\+0-\/pre.\+2\mbox{]} -\/ 2021-\/04-\/16}{\mbox{[}1.\+1.\+0-\/pre.\+2\mbox{]} -\/ 2021-\/04-\/16}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md350}
+\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md351}{}\doxysubsection{\texorpdfstring{Changed}{Changed}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md351}
+
+\begin{DoxyItemize}
+\item Ensured forward compilation compatibility of Profiler\+Window API usage.
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md352}{}\doxysubsection{\texorpdfstring{Fixed}{Fixed}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md352}
+
+\begin{DoxyItemize}
+\item Fixed Frame View Dropdown not showing time in Microseconds when Microseconds are set as display unit type.
+\item Fixed Argurment\+Out\+Of\+Range exception on \textquotesingle{}Clear Selection\textquotesingle{} usage in Frame Control.
+\item Improved loading and analysis progressbar progression to be monotonously incremental and reflect actual stage correctly.
+\item Fixed the marked frame time overlay so that it works on loaded data (case 1327888).
+\item Fixed keyboard frame controls so that they do not play an error sound (case 1327931).
+\item Fixed Range\+Settings.\+Is\+Equal so that it doesn\textquotesingle{}t throw an exception when there is a different data\+View.\+selected\+Indices.
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md353}{}\doxysection{\texorpdfstring{\mbox{[}1.\+1.\+0-\/pre.\+1\mbox{]} -\/ 2021-\/02-\/22}{\mbox{[}1.\+1.\+0-\/pre.\+1\mbox{]} -\/ 2021-\/02-\/22}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md353}
+\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md354}{}\doxysubsection{\texorpdfstring{Changed}{Changed}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md354}
+
+\begin{DoxyItemize}
+\item Used the new {\ttfamily Editor\+Window.\+docked} API on 2020.\+1 and later to replace reflection usage. ~\newline
+
+\item Made the {\bfseries{Thread Selection}} window a utility window.
+\item Added a progress bar, which shows data loading progress.
+\item {\bfseries{All}} no longer collapses in the thread view because it was superfluous and held no discernible purpose.
+\item Added information to the frame summary tooltip to show the selected ranges.
+\item Selecting the {\bfseries{Frame}}, {\bfseries{Thread}}, and {\bfseries{Marker Summary}} title labels now also toggles their foldout.
+\item Timings in tooltips now display up to seven digits with a unit type change if below 0.\+01. This ensures the value is readable and correct.
+\item Frame Time Graph selection modifiers (Next, Previous, Grow, Shrink etc.) now work when multiple regions are selected.
+\item Added new (hidden) columns to the comparison tab for {\bfseries{Percentage Diff}} for each of the diff types
+\item The {\bfseries{Depth Slice}} drop-\/down is searchable and scrollable for \doxylink{namespace_unity}{Unity} versions 2019.\+1 or newer.
+\item Improved tooltips on the top 10 marker duration time.
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md355}{}\doxysubsection{\texorpdfstring{Fixed}{Fixed}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md355}
+
+\begin{DoxyItemize}
+\item The Thread Summary and Marker Summary views now correctly clip their contents when scrolling on 2018.\+4 and below.
+\item Marker detail bars are no longer drawn on top of the list\textquotesingle{}s headers when scrolling.
+\item Fixed an issue with saving when there is no data loaded, which previously caused a null reference exception.
+\item {\bfseries{Add to}} and {\bfseries{Remove from}} name filter is no longer case sensitive.
+\item Optimized frame selection with {\bfseries{Show Filtered Threads}} option enabled and {\bfseries{All Threads}} turned on.
+\item Fixed an issue where the {\bfseries{Upper Quartile of frame time}} option did not fit in the Graph scale dropdown in {\bfseries{Thread Summary}}.
+\item Improved the error message when the Profile Analyzer fails to load a .data file.
+\item Fixed an issue where changing the depth slice and right-\/clicking on a marker caused an error in 2018.\+4 and earlier.
+\item Fixed the automatic increase of an unsaved file counter in Single view.
+\item Improved the Marker Column mode so that it is separate for Single and Compare view.
+\item The tooltip of the frame graph\textquotesingle{}s scale control is now clearer and matches the documentation.
+\item Fixed an issue where a frame of \textquotesingle{}0\textquotesingle{} was incorrectly shown in the {\bfseries{Marker Summary}} when the marker had a duration of 0ms.
+\item Fixed an issue with {\bfseries{Selection Synchronization}} between Profiler Window and Profile Analyzer in \doxylink{namespace_unity}{Unity} 2021.\+1 or newer.
+\item Added a log message when the loading or analysis fails due to domain reload.
+\item Fixed an issue with the table context menu, where it was not disabled during data processing.
+\item Fixed an issue where exporting a marker table that contained markers with commas or quotation marks to the .csv format would break the format.
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md356}{}\doxysection{\texorpdfstring{\mbox{[}1.\+0.\+3\mbox{]} -\/ 2020-\/07-\/31}{\mbox{[}1.\+0.\+3\mbox{]} -\/ 2020-\/07-\/31}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md356}
+\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md357}{}\doxysubsection{\texorpdfstring{Fixes}{Fixes}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md357}
+
+\begin{DoxyItemize}
+\item Fixed warnings in code so package will not break \doxylink{namespace_unity}{Unity} projects that have warnings as errors enabled.
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md358}{}\doxysection{\texorpdfstring{\mbox{[}1.\+0.\+2\mbox{]} -\/ 2020-\/06-\/30}{\mbox{[}1.\+0.\+2\mbox{]} -\/ 2020-\/06-\/30}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md358}
+\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md359}{}\doxysubsection{\texorpdfstring{Fixes}{Fixes}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md359}
+
+\begin{DoxyItemize}
+\item Fixed issue where second profiler instance could appear after entering play mode when profile analyzer is open
+\item Improved performance of pulling data from \doxylink{namespace_unity}{Unity} profiler
+\item Pull Data button now enabled when profiler is recording. This will stop the recording for the duration of the action of pulling of data.
+\item Fixed Median sorting in Comparison mode when value missing from one data set, Missing values always sorted before 0 values.
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md360}{}\doxysection{\texorpdfstring{\mbox{[}1.\+0.\+1\mbox{]} -\/ 2020-\/06-\/16}{\mbox{[}1.\+0.\+1\mbox{]} -\/ 2020-\/06-\/16}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md360}
+\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md361}{}\doxysubsection{\texorpdfstring{Fixes}{Fixes}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md361}
+
+\begin{DoxyItemize}
+\item Fixed "{}median marker time (in currently selected frames)"{} in tooltip for \textquotesingle{}Top 10 markers\textquotesingle{}.
+\item Fixed profile analyzer 5.\+6 support
+\item Fixed minor visual artefact when no marker selection
+\item Fixed issue where frame time graph tooltips were not always appearing when hovering
+\item Marker Summary -\/ Count Values are now correctly sorted in descending order
+\item Hiding selected marker in comparison view if lacking 2 valid data sets
+\item Corrected bucketing of histogram data for counts. Display was fractionally incorrect
+\item Fixed sorting of frames (by time/count) to be more stable by providing a secondary sort by frame index
+\item Marker table export now orders by descending median time (to match the default UI sort option).
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md362}{}\doxysection{\texorpdfstring{\mbox{[}1.\+0.\+0\mbox{]} -\/ 2020-\/06-\/02}{\mbox{[}1.\+0.\+0\mbox{]} -\/ 2020-\/06-\/02}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md362}
+\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md363}{}\doxysubsection{\texorpdfstring{Changes}{Changes}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md363}
+
+\begin{DoxyItemize}
+\item Export window updates. Includes tooltips, better on screen positioning.
+\begin{DoxyItemize}
+\item If opened and then new data set loaded. New data set now correctly exported.
+\end{DoxyItemize}
+\item Frame Time graph now shows border when selected
+\begin{DoxyItemize}
+\item Keys 1 and 2 select the first or second frame time graph to take keyboard focus
+\end{DoxyItemize}
+\item Frame Time graph now shows highlighted when all frames selected, un highlighted when no frames selected.
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md364}{}\doxysubsection{\texorpdfstring{Fixes}{Fixes}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md364}
+
+\begin{DoxyItemize}
+\item Improved histogram display when 0 range.
+\item Widened frame index buttons when frame value large
+\item \textquotesingle{}total number of markers\textquotesingle{} value in Compare tab now corrected to use unfiltered count
+\item Improved error messages when jumpping to frame when profiler data doesn\textquotesingle{}t match profile analyzer data
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md365}{}\doxysection{\texorpdfstring{\mbox{[}0.\+7.\+0-\/preview.\+4\mbox{]} -\/ 2020-\/05-\/29}{\mbox{[}0.\+7.\+0-\/preview.\+4\mbox{]} -\/ 2020-\/05-\/29}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md365}
+\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md366}{}\doxysubsection{\texorpdfstring{Changes}{Changes}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md366}
+
+\begin{DoxyItemize}
+\item Thread selection window
+\begin{DoxyItemize}
+\item Now only applys thread selection changes when clicking \textquotesingle{}Apply\textquotesingle{}. Closing the window no longer applies the changes automatically.
+\item Now contains buttons to Reset to previous thread selection, Select just "{}\+Main Thread"{} or "{}\+Common"{} set selection (Main, Render and Jobs).
+\item Apply button is now greyed out while analysis is running.
+\item Group column enabled and used to split off group from thread name, default to by group first
+\item Re sorted when selection changed (so states sort correctly when sorting by state)
+\item Sort order preserved when buttons pressed and re-\/opening
+\item Fixed sort order for threads (10 after 9 rather than between 1 and 2)
+\end{DoxyItemize}
+\item Marker sorting
+\begin{DoxyItemize}
+\item Marker table column filtering now preserved when clicking Analyse or Compare or tab switching.
+\item Compare table bars to now sort by bar size (=delta value) rather than the left/right value.
+\item Marker table bars now start sorted by descending size which is more common usage.
+\end{DoxyItemize}
+\item Added depths columns into the comparison table and a \textquotesingle{}Depth\textquotesingle{} option in the Marker Columns dropdown
+\item Added thread count into thread summary area
+\item Added threads column into marker tables (threads the marker occurs on)
+\item Thread summary now contains thread count, unique count per data set and selection count
+\item Frame time area now allows adding to the selection by holding CTRL (or COMMAND on Mac)
+\item Frame range value now includes tooltip to give more detail about the selection
+\item Improved text string for depth filter status on the top marker display
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md367}{}\doxysubsection{\texorpdfstring{Fixes}{Fixes}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md367}
+
+\begin{DoxyItemize}
+\item Detected and ignored invalid frame markers (duration \texorpdfstring{$<$}{<} 0)
+\item Fixed/\+Removed warnings on loading data in compare view when selection active.
+\item Disabled "{}\+Analyze"{} button while analysis is already running
+\item Fixed Marker Summary \textquotesingle{}Top\textquotesingle{} dropdown selection text width
+\item Fixed thread selection window sort order
+\item Fixed tooltip on \textquotesingle{}count\textquotesingle{} bars to be scalar value (not a time unit)
+\item Clamped selected region shown when zoomed in on frame time graph
+\item Frame Control value no longer overlaps with drop-\/down list when Units are set to Microseconds
+\item Fixed thread count text when analysis completes after swapping single/compare tabs during analysis
+\item Fixed Frame View\textquotesingle{}s tooltip "{}total time"{} when rapidly changing frames
+\item Fixed overlapping text when selecting single frame when zoomed in
+\item Histogram frame count now lists "{}1 frame"{} when single frame rather than "{}1 frames"{}
+\item Mode\+: text in top bar now same size as rest of text.
+\item Clear Selection in marker right click context menu now only shown if a selection has been made
+\item Cut/\+Paste now supported in the include/exclude marker name filter
+\item Frame Time graph frame selection grow/shrink now keeps current selection in paired graph
+\item Fixed frame start/end display for "{}\+Select Frames that contain this marker (within whole data set)"{}
+\item Corrected bucketing of histogram data. Display was fractionally incorrect
+\item Histogram now shows non zero height bar if an item in the bucket
+\item Fixed right click "{}\+Remove from Included Filters"{} when using (quoted) markers with spaces in names
+\item Fixed data auto-\/load from Single to Compare tab when capturing after entering playmode
+\item Fixed auto right calculation to use most common difference
+\item Fixed auto right display to show + or -\/ and not both at the same time
+\item Fixed infinite analysis loop when auto right calculation was clamping to max depth in the other data set
+\item Auto right now clamps to min/max depth rather than reverting to \textquotesingle{}all\textquotesingle{}
+\item Fixed thread count bug when using comparison mode and loading data on top of existing data
+\item Selected marker refocused in marker list when table is regenerated (e.\+g. when selecting all frames containing the marker).
+\item Column by which the Marker Details is sorted by is now maintained when entering Play Mode
+\item Updated frame time graph context menu to make hotkeys more consistent with out \doxylink{namespace_unity}{Unity} UI layouts
+\item Percent symbol no longer cut off in Mean frame contribution when the value is 100\%
+\item Frame time graph now scales up when zooming when comparing data with different frame amounts
+\item Changing \textquotesingle{}Auto Right\textquotesingle{} tick box no longer causes re-\/analysis if depth settings unchanged
+\item Most tooltips now show values without rounding, so its more obvious when low values give non zero deltas.
+\item Fixed individual max tooltip
+\item Disabled \textquotesingle{}Pull data\textquotesingle{} button when \doxylink{namespace_unity}{Unity} profiler is still capturing data (as the pull would not complete).
+\item Fixed right frame index in exported comparison CSV file.
+\item Frame selection no longer changed when moving the cursor in the Filter text box with arrow keys
+\item Help text now continues to be shown after entering play mode, while no data set loaded/pulled
+\item Fixed frame index button heights when alternative (Verdana) font used.
+\item Fixed cache styles to be updated when changing theme (to fix text colour in filters area)
+\item Single click (without drag) now always single frame rather than the group of frames in the pixel wide area.
+\item Split frame range into start and end rows to display more information when values large
+\item Marker Summary comparison times are now limited to 5 digits to prevent text clipping off
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md368}{}\doxysubsection{\texorpdfstring{Enhancements}{Enhancements}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md368}
+
+\begin{DoxyItemize}
+\item Optimised filter processing for more responsive scrolling when a large marker filter list is supplied.
+\item Optimised thread name summary display
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md369}{}\doxysection{\texorpdfstring{\mbox{[}0.\+6.\+0-\/preview.\+1\mbox{]} -\/ 2020-\/02-\/04}{\mbox{[}0.\+6.\+0-\/preview.\+1\mbox{]} -\/ 2020-\/02-\/04}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md369}
+
+\begin{DoxyItemize}
+\item Fixed a crash with the thread selection API in \doxylink{namespace_unity}{Unity} 2020.\+1
+\item Fixed marker and thread scroll bars
+\item Added extra documentation for public API elements
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md370}{}\doxysection{\texorpdfstring{\mbox{[}0.\+5.\+0-\/preview.\+2\mbox{]} -\/ 2019-\/09-\/19}{\mbox{[}0.\+5.\+0-\/preview.\+2\mbox{]} -\/ 2019-\/09-\/19}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md370}
+
+\begin{DoxyItemize}
+\item Minor documentation update to fix the changelog formatting
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md371}{}\doxysection{\texorpdfstring{\mbox{[}0.\+5.\+0-\/preview.\+1\mbox{]} -\/ 2019-\/09-\/18}{\mbox{[}0.\+5.\+0-\/preview.\+1\mbox{]} -\/ 2019-\/09-\/18}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md371}
+\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md372}{}\doxysubsection{\texorpdfstring{Features}{Features}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md372}
+
+\begin{DoxyItemize}
+\item Added self time option to display \textquotesingle{}exclusive\textquotesingle{} time of markers excluding time in children.
+\item Added ability to filter to a parent marker to reduce the marker list to a part of the tree.
+\item Added option to filter the column list to set groups (including custom).
+\item Added column for total marker time over the frame
+\item Added copy to clipboard on table entries
+\item Added export option for marker table
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md373}{}\doxysubsection{\texorpdfstring{Enhancements}{Enhancements}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md373}
+
+\begin{DoxyItemize}
+\item Improved Top N Markers graph to make it clearer this is for the median frames of each data set.
+\item Added thread count display (next to marker count).
+\item Added frame index to more tooltips to improve clarity of the data values (marker table, frame and marker summary).
+\item Added additional visual bars for total and count diffs. Added abs count column.
+\item Improved performance of adding to include/exclude filter via the right click menu by only refreshing the table (and no longer rerunning full analysis)
+\item Improved performance for scrolling by caching strings for profile table and comparison table.
+\item Added unaccounted time into the Top N Markers graph when total is less than the median frame time
+\item Added grow/shrink selection hot keys and menu options
+\item Added tooltip info for frame time duration for selection range
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md374}{}\doxysubsection{\texorpdfstring{Fixes}{Fixes}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md374}
+
+\begin{DoxyItemize}
+\item Fixed issue with combined marker count when data sets have some unique markers.
+\item Fixed bars less than 1 pixel wide to clamp to min width of 1.
+\item Fixed help text for new editor skin in 2019.\+3
+\item Fixed bug with calculation of the auto right depth offset (see with 2017.\+4/2018.4 comparisons)
+\item Improved the frame offset times in the frame time and comparison frame time exports
+\item Fixed bug with missing first frame of data / frame offset incorrect when reloading .pdata
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md375}{}\doxysection{\texorpdfstring{\mbox{[}0.\+4.\+0-\/preview.\+5\mbox{]} -\/ 2019-\/04-\/02}{\mbox{[}0.\+4.\+0-\/preview.\+5\mbox{]} -\/ 2019-\/04-\/02}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md375}
+
+\begin{DoxyItemize}
+\item Updated package.\+json file to indicate this package is valid for all unity versions
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md376}{}\doxysection{\texorpdfstring{\mbox{[}0.\+4.\+0-\/preview.\+4\mbox{]} -\/ 2019-\/04-\/02}{\mbox{[}0.\+4.\+0-\/preview.\+4\mbox{]} -\/ 2019-\/04-\/02}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md376}
+
+\begin{DoxyItemize}
+\item Fixed issue in 2017.\+4 with unsupported analytics API and a GUI style.
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md377}{}\doxysection{\texorpdfstring{\mbox{[}0.\+4.\+0-\/preview.\+3\mbox{]} -\/ 2019-\/04-\/01}{\mbox{[}0.\+4.\+0-\/preview.\+3\mbox{]} -\/ 2019-\/04-\/01}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md377}
+
+\begin{DoxyItemize}
+\item First public release of Profile Analyzer.
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md378}{}\doxysection{\texorpdfstring{\mbox{[}0.\+1.\+0-\/preview\mbox{]} -\/ 2018-\/12-\/07}{\mbox{[}0.\+1.\+0-\/preview\mbox{]} -\/ 2018-\/12-\/07}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_c_h_a_n_g_e_l_o_g_autotoc_md378}
+
+\begin{DoxyItemize}
+\item This is the first beta release of Profile Analyzer
+\end{DoxyItemize}
+
+The profile analyzer tool augments the standard \doxylink{namespace_unity}{Unity} Profiler. It provides multi frame analysis of the profiling data. 

@@ -1,0 +1,105 @@
+\doxysection{Nested\+Canvas\+Maintains\+Correct\+Size Class Reference}
+\hypertarget{class_nested_canvas_maintains_correct_size}{}\label{class_nested_canvas_maintains_correct_size}\index{NestedCanvasMaintainsCorrectSize@{NestedCanvasMaintainsCorrectSize}}
+Inheritance diagram for Nested\+Canvas\+Maintains\+Correct\+Size\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_nested_canvas_maintains_correct_size}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_nested_canvas_maintains_correct_size_a61bf96acde2255f171635020ccc19799}{Setup}} ()
+\begin{DoxyCompactList}\small\item\em Implement this method to call actions automatically before the build process. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_nested_canvas_maintains_correct_size_a2a425496536403ba9b695057371eb945}{Test\+Setup}} ()
+\item 
+void \mbox{\hyperlink{class_nested_canvas_maintains_correct_size_a593781c817cb5c87052c94be4e61577d}{Nested\+Canvas\+Maintains\+Correct\+Size\+At\+Game\+Start}} ()
+\item 
+void \mbox{\hyperlink{class_nested_canvas_maintains_correct_size_a7481b5cb02a472077de26e43166121bd}{Tear\+Down}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_nested_canvas_maintains_correct_size_a593781c817cb5c87052c94be4e61577d}\label{class_nested_canvas_maintains_correct_size_a593781c817cb5c87052c94be4e61577d} 
+\index{NestedCanvasMaintainsCorrectSize@{NestedCanvasMaintainsCorrectSize}!NestedCanvasMaintainsCorrectSizeAtGameStart@{NestedCanvasMaintainsCorrectSizeAtGameStart}}
+\index{NestedCanvasMaintainsCorrectSizeAtGameStart@{NestedCanvasMaintainsCorrectSizeAtGameStart}!NestedCanvasMaintainsCorrectSize@{NestedCanvasMaintainsCorrectSize}}
+\doxysubsubsection{\texorpdfstring{NestedCanvasMaintainsCorrectSizeAtGameStart()}{NestedCanvasMaintainsCorrectSizeAtGameStart()}}
+{\footnotesize\ttfamily void Nested\+Canvas\+Maintains\+Correct\+Size.\+Nested\+Canvas\+Maintains\+Correct\+Size\+At\+Game\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_nested_canvas_maintains_correct_size_a61bf96acde2255f171635020ccc19799}\label{class_nested_canvas_maintains_correct_size_a61bf96acde2255f171635020ccc19799} 
+\index{NestedCanvasMaintainsCorrectSize@{NestedCanvasMaintainsCorrectSize}!Setup@{Setup}}
+\index{Setup@{Setup}!NestedCanvasMaintainsCorrectSize@{NestedCanvasMaintainsCorrectSize}}
+\doxysubsubsection{\texorpdfstring{Setup()}{Setup()}}
+{\footnotesize\ttfamily void Nested\+Canvas\+Maintains\+Correct\+Size.\+Setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Implement this method to call actions automatically before the build process. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{[TestFixture]}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }CreateSpriteTest\ :\ IPrebuildSetup}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ Texture2D\ m\_Texture;}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{namespace_t_m_pro_ab5662f47179bf1b81c575ecf80b24065a51f2b7b14433aa22c67d1f4fc18943cd}{Sprite}}\ m\_Sprite;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Setup()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#if\ UNITY\_EDITOR}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ var\ spritePath\ =\ \textcolor{stringliteral}{"{}Assets/Resources/Circle.png"{}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ var\ ti\ =\ \mbox{\hyperlink{namespace_unity_editor}{UnityEditor}}.AssetImporter.GetAtPath(spritePath)\ as\ \mbox{\hyperlink{namespace_unity_editor}{UnityEditor}}.TextureImporter;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ ti.textureCompression\ =\ \mbox{\hyperlink{namespace_unity_editor}{UnityEditor}}.TextureImporterCompression.Uncompressed;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ ti.SaveAndReimport();}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#endif}}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ [SetUp]}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ SetUpTest()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ m\_Texture\ =\ Resources.Load<Texture2D>(\textcolor{stringliteral}{"{}Circle"{}});}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ [Test]}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ WhenNullTextureIsPassed\_CreateShouldReturnNullSprite()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Check\ with\ Valid\ Texture.}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ LogAssert.Expect(LogType.Log,\ \textcolor{stringliteral}{"{}Circle\ Sprite\ Created"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_t_m_pro_ab5662f47179bf1b81c575ecf80b24065a51f2b7b14433aa22c67d1f4fc18943cd}{Sprite}}.Create(m\_Texture,\ \textcolor{keyword}{new}\ Rect(0,\ 0,\ m\_Texture.width,\ m\_Texture.height),\ \textcolor{keyword}{new}\ Vector2(0.5f,\ 0.5f));}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \mbox{\hyperlink{_editor_plugin_interop_8cs_a0100be52d45f14348918ea69ec09f959}{Debug}}.Log(\textcolor{stringliteral}{"{}Circle\ Sprite\ Created"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Check\ with\ NULL\ Texture.\ Should\ return\ NULL\ Sprite.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ m\_Sprite\ =\ \mbox{\hyperlink{namespace_t_m_pro_ab5662f47179bf1b81c575ecf80b24065a51f2b7b14433aa22c67d1f4fc18943cd}{Sprite}}.Create(\textcolor{keyword}{null},\ \textcolor{keyword}{new}\ Rect(0,\ 0,\ m\_Texture.width,\ m\_Texture.height),\ \textcolor{keyword}{new}\ Vector2(0.5f,\ 0.5f));}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ Assert.That(m\_Sprite,\ Is.Null,\ \textcolor{stringliteral}{"{}Sprite\ created\ with\ null\ texture\ should\ be\ null"{}});}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_prebuild_setup_a9a9eaa928efe50645e61412528e84309}{Unity\+Engine.\+Test\+Tools.\+IPrebuild\+Setup}}.
+
+\Hypertarget{class_nested_canvas_maintains_correct_size_a7481b5cb02a472077de26e43166121bd}\label{class_nested_canvas_maintains_correct_size_a7481b5cb02a472077de26e43166121bd} 
+\index{NestedCanvasMaintainsCorrectSize@{NestedCanvasMaintainsCorrectSize}!TearDown@{TearDown}}
+\index{TearDown@{TearDown}!NestedCanvasMaintainsCorrectSize@{NestedCanvasMaintainsCorrectSize}}
+\doxysubsubsection{\texorpdfstring{TearDown()}{TearDown()}}
+{\footnotesize\ttfamily void Nested\+Canvas\+Maintains\+Correct\+Size.\+Tear\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_nested_canvas_maintains_correct_size_a2a425496536403ba9b695057371eb945}\label{class_nested_canvas_maintains_correct_size_a2a425496536403ba9b695057371eb945} 
+\index{NestedCanvasMaintainsCorrectSize@{NestedCanvasMaintainsCorrectSize}!TestSetup@{TestSetup}}
+\index{TestSetup@{TestSetup}!NestedCanvasMaintainsCorrectSize@{NestedCanvasMaintainsCorrectSize}}
+\doxysubsubsection{\texorpdfstring{TestSetup()}{TestSetup()}}
+{\footnotesize\ttfamily void Nested\+Canvas\+Maintains\+Correct\+Size.\+Test\+Setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Tests/\+Runtime/\+Canvas/\mbox{\hyperlink{_nested_canvas_maintains_correct_size_8cs}{Nested\+Canvas\+Maintains\+Correct\+Size.\+cs}}\end{DoxyCompactItemize}

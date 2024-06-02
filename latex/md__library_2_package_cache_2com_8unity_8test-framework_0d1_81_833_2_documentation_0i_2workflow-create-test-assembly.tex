@@ -1,0 +1,19 @@
+\chapter{Workflow\+: \texorpdfstring{$<$}{<}strong\texorpdfstring{$>$}{>}How to create a new test assembly\texorpdfstring{$<$}{<}/strong\texorpdfstring{$>$}{>}}
+\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2workflow-create-test-assembly}{}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2workflow-create-test-assembly}\index{Workflow: $<$strong$>$How to create a new test assembly$<$/strong$>$@{Workflow: $<$strong$>$How to create a new test assembly$<$/strong$>$}}
+\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2workflow-create-test-assembly_autotoc_md726}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2workflow-create-test-assembly_autotoc_md726}%
+ \doxylink{namespace_unity}{Unity} Test Framework looks for a test inside any assembly that references \href{http://www.nunit.org/}{\texttt{ NUnit}}. We refer to such assemblies as {\ttfamily Test\+Assemblies}. The \doxysectlink{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2getting-started}{Test Runner}{0} UI can help you set up {\ttfamily Test\+Assemblies}. {\bfseries{Play Mode}} and {\bfseries{Edit Mode}} tests need to be in separate assemblies.
+
+In the {\bfseries{Test Runner}} window, you will see an {\bfseries{Edit\+Mode}} tab enabled by default, as well as a {\bfseries{Create Edit\+Mode Test Assembly Folder}} button.
+
+
+
+Click the button to create a {\itshape \doxylink{namespace_tests}{Tests}} folder with a respective .asmdef file by default. Change the name of the new \href{https://docs.unity3d.com/Manual/ScriptCompilationAssemblyDefinitionFiles.html}{\texttt{ Assembly Definition}}, if necessary, and press Enter to accept it.
+
+
+
+In the Inspector window, it should have references to {\bfseries{nunit.\+framework.\+dll\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*},\texorpdfstring{$\ast$}{*} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\+Unity\+Engine.\doxylink{namespace_test_runner}{Test\+Runner},}} and {\bfseries{\doxylink{namespace_unity_editor_1_1_test_runner}{Unity\+Editor.\+Test\+Runner}}} assemblies, as well as {\bfseries{Editor}} preselected as a target platform.
+
+\begin{quote}
+{\bfseries{Note}}\+: The {\bfseries{\doxylink{namespace_unity_editor_1_1_test_runner}{Unity\+Editor.\+Test\+Runner}}} reference is only available for \href{./edit-mode-vs-play-mode-tests.md\#edit-mode-tests}{\texttt{ Edit Mode tests}}. \end{quote}
+ 

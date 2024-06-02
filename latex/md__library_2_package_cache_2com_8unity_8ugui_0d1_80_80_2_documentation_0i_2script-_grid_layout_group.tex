@@ -1,0 +1,62 @@
+\chapter{Grid Layout Group}
+\hypertarget{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2script-_grid_layout_group}{}\label{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2script-_grid_layout_group}\index{Grid Layout Group@{Grid Layout Group}}
+\label{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2script-_grid_layout_group_autotoc_md1372}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2script-_grid_layout_group_autotoc_md1372}%
+ The Grid Layout Group component places its child layout elements in a grid.
+
+\hypertarget{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2script-_grid_layout_group_autotoc_md1373}{}\doxysection{\texorpdfstring{Properties}{Properties}}\label{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2script-_grid_layout_group_autotoc_md1373}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property\+:}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Function\+:}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property\+:}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Function\+:}}    }\\\cline{1-2}
+\endhead
+{\bfseries{Padding}}   &The padding inside the edges of the layout group.    \\\cline{1-2}
+{\bfseries{Cell Size}}   &The size to use for each layout element in the group.    \\\cline{1-2}
+{\bfseries{Spacing}}   &The spacing between the layout elements.    \\\cline{1-2}
+{\bfseries{Start Corner}}   &The corner where the first element is located.    \\\cline{1-2}
+{\bfseries{Start Axis}}   &Which primary axis to place elements along. Horizontal will fill an entire row before a new row is started. Vertical will fill an entire column before a new column is started.    \\\cline{1-2}
+{\bfseries{Child Alignment}}   &The alignment to use for the layout elements if they don\textquotesingle{}t fill out all the available space.    \\\cline{1-2}
+{\bfseries{Constraint}}   &Constraint the grid to a fixed number of rows or columns to aid the auto layout system.   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2script-_grid_layout_group_autotoc_md1374}{}\doxysection{\texorpdfstring{Description}{Description}}\label{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2script-_grid_layout_group_autotoc_md1374}
+Unlike other layout groups, the Grid Layout Group ignores the minimum, preferred, and flexible size properties of its contained layout elements and instead assigns a fixed size to all of them which is defined with the Cell Size property of the Grid Layout Group itself.\hypertarget{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2script-_grid_layout_group_autotoc_md1375}{}\doxysubsection{\texorpdfstring{Grid Layout Group and auto layout}{Grid Layout Group and auto layout}}\label{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2script-_grid_layout_group_autotoc_md1375}
+There are special considerations to be aware of when using the Grid Layout Group as part of an auto layout setup, such as using it with a \doxysectlink{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2script-_content_size_fitter}{Content Size Fitter}{0}.
+
+The auto layout system calculates the horizontal and vertical sizes independently. This can be at odds with the Grid Layout Group, where the number of rows depends on the number of columns and vice versa.
+
+For any given number of cells, there are different combinations of row count and column count that can make the grid fit its content. In order to aid the layout system, you can specify that you intent the table to have a fixed number of columns or rows by using the Constraint property.
+
+Here are suggested ways of using the Layout System with a Content Size Fitter\+:\hypertarget{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2script-_grid_layout_group_autotoc_md1376}{}\doxysubsubsection{\texorpdfstring{Flexible width and fixed height}{Flexible width and fixed height}}\label{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2script-_grid_layout_group_autotoc_md1376}
+To setup a grid with a flexible width and fixed height, where the grid expands horizontally as more elements are added, you can set these properties as follows\+:
+
+
+\begin{DoxyItemize}
+\item Grid Layout Group Constraint\+: Fixed Row Count
+\item Content Size Fitter Horizontal Fit\+: Preferred Size
+\item Content Size Fitter Vertical Fit\+: Preferred Size or Unconstrained
+\end{DoxyItemize}
+
+If unconstrained Vertical Fit is used, it\textquotesingle{}s up to you to give the grid a height that is big enough to fit the specified row count of cells.\hypertarget{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2script-_grid_layout_group_autotoc_md1377}{}\doxysubsubsection{\texorpdfstring{Fixed width and flexible height}{Fixed width and flexible height}}\label{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2script-_grid_layout_group_autotoc_md1377}
+To setup a grid with a fixed width and flexible height, where the grid expands vertically as more elements are added, you can set these properties as follows\+:
+
+
+\begin{DoxyItemize}
+\item Grid Layout Group Constraint\+: Fixed Column Count
+\item Content Size Fitter Horizontal Fit\+: Preferred Size or Unconstrained
+\item Content Size Fitter Vertical Fit\+: Preferred Size
+\end{DoxyItemize}
+
+If unconstrained Horizontal Fit is used, it\textquotesingle{}s up to you to give the grid a width that is big enough to fit the specified column count of cells.\hypertarget{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2script-_grid_layout_group_autotoc_md1378}{}\doxysubsubsection{\texorpdfstring{Both flexible width and height}{Both flexible width and height}}\label{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2script-_grid_layout_group_autotoc_md1378}
+If you want a grid with both a flexible width and height you can do that, but you will have no control over the specific number of rows and columns. The grid will attempt to make the row and column count approximately the same. You can set these properties as follows\+:
+
+
+\begin{DoxyItemize}
+\item Grid Layout Group Constraint\+: Flexible
+\item Content Size Fitter Horizontal Fit\+: Preferred Size
+\item Content Size Fitter Vertical Fit\+: Preferred Size 
+\end{DoxyItemize}

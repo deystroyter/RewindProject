@@ -1,0 +1,43 @@
+\chapter{Live edit during runtime}
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-live-edit-runtime}{}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-live-edit-runtime}\index{Live edit during runtime@{Live edit during runtime}}
+\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-live-edit-runtime_autotoc_md1903}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-live-edit-runtime_autotoc_md1903}%
+ Live editing in visual scripting goes beyond adjusting values in real-\/time. Live editing also includes the ability to add and remove nodes as well as connectors; you can code while the game is playing and immediately affect the gameplay.
+
+Remember that\+:
+
+
+\begin{DoxyItemize}
+\item Changes you make to embed graphs are {\bfseries{reverted}} when you exit play mode; they live inside components.
+\item Changes you make to graphs are {\bfseries{saved}} when you exit play mode; they live inside assets.
+\item Graph variables are saved when not in an embed graph.
+\item The following variables are not saved\+:
+\begin{DoxyItemize}
+\item Object
+\item Scene
+\item App
+\item Saved
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\begin{quote}
+\mbox{[}!\+NOTE\mbox{]} If you’ve used an embed graph and do not want to lose your modifications, copy all the changes you made to the embed graph before exiting Play mode. Paste them back in when in edit mode. You can’t do this for any changed variables. \end{quote}
+As a visual aid, connectors in Live mode display their execution flow with animated directional droplets going in the direction of execution. The speed and number of droplets does not represent the frequency or speed of execution.\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-live-edit-runtime_autotoc_md1904}{}\doxysection{\texorpdfstring{To adjust the graph during runtime}{To adjust the graph during runtime}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-live-edit-runtime_autotoc_md1904}
+With a graph open do any or all of the following\+:
+
+
+\begin{DoxyItemize}
+\item In the Inspector, click in any field to change a component’s value. The values are not persistent and won’t save when you leave Play mode.
+\item Right-\/click in an empty spot in the graph and add a node.
+\item Connect nodes.
+\item Delete any connectors.
+\item Add an extension.
+\item Add and link Debug nodes.
+\item Change values directly in a node.
+\end{DoxyItemize}
+
+\begin{quote}
+\mbox{[}!\+TIP\mbox{]} Select any Game\+Object that contains a script graph to see and work with the values of the selected Game\+Object during runtime. \end{quote}
+\begin{quote}
+\mbox{[}!\+NOTE\mbox{]} When you modify anything after a Start event during runtime you won’t get the update on the Game\+Object during that session. You need to restart the session for \doxylink{namespace_unity}{Unity} to execute the new logic after the start event. \end{quote}
+The changes you make to a graph are instantly shared across all instances of that saved graph asset. 

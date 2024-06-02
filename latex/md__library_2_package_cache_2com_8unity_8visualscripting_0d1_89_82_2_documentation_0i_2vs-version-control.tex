@@ -1,0 +1,121 @@
+\chapter{Version control systems}
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-version-control}{}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-version-control}\index{Version control systems@{Version control systems}}
+\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-version-control_autotoc_md2168}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-version-control_autotoc_md2168}%
+ To avoid any problems with automatically generated files, exclude some Visual Scripting files from your version control solution.
+
+To exclude files from version control, include a file or configure your settings to specify which files and folders to exclude\+:
+
+
+\begin{DoxyEnumerate}
+\item Create a new file at the root of your project directory.
+
+\texorpdfstring{$>$}{>}\mbox{[}!\+TIP\mbox{]} \begin{quote}
+The root of your project directory is at the level above your {\bfseries{Assets}} folder. \end{quote}
+
+\item Name the file based on your chosen version control system\+:
+\begin{DoxyItemize}
+\item {\bfseries{Git}}\+: {\ttfamily .gitignore}. For more information, see \href{https://git-scm.com/docs/gitignore}{\texttt{ Git\textquotesingle{}s documentation on gitignore}}.
+\item {\bfseries{\doxylink{namespace_unity}{Unity} Collab}}\+: {\ttfamily .collabignore}. For more information, see the \href{https://docs.unity3d.com/Manual/UnityCollaborateIgnoreFiles.html}{\texttt{ Unity User Manual}}.
+\item {\bfseries{Subversion}}\+: Ignore the files from your {\ttfamily svn\+:ignore} property or runtime configuration options. For more information, see Subversion\textquotesingle{}s documentation on \href{https://svnbook.red-bean.com/en/1.7/svn.advanced.props.special.ignore.html}{\texttt{ Ignoring Unversioned Items}}.
+\end{DoxyItemize}
+\item Open the file in a text editor.
+\item Add the appropriate files or file patterns to your ignore file or configuration. For an example and more information, see Ignore file template.
+\end{DoxyEnumerate}
+
+\begin{quote}
+\mbox{[}!\+NOTE\mbox{]} If you have an issue when you try to create a {\ttfamily .gitignore} file on Windows, refer to \doxylink{namespace_microsoft}{Microsoft}\textquotesingle{}s documentation on \href{https://docs.microsoft.com/en-us/azure/devops/repos/git/ignore-files?view=azure-devops&tabs=command-line\#create-a-gitignore}{\texttt{ how to create a .gitignore file from the command line}}. \end{quote}
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-version-control_autotoc_md2169}{}\doxysection{\texorpdfstring{Ignore file template}{Ignore file template}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-version-control_autotoc_md2169}
+The following template ignores all core Visual Scripting files, but preserves your project settings and variables. It also includes the standard \doxylink{namespace_unity}{Unity} ignore directives for files that you can exclude from version control. For more information, see the {\ttfamily Unity.\+gitignore} file included in \href{https://github.com/github/gitignore/blob/master/Unity.gitignore}{\texttt{ Git\+Hub\textquotesingle{}s gitignore template repository}}.
+
+Refer to the comments in the template for which lines to comment or remove.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\#\ Optionally\ exclude\ these\ transient\ (generated)\ files,\ }
+\DoxyCodeLine{\#\ because\ they\ can\ be\ easily\ re-\/generated\ by\ the\ package}
+\DoxyCodeLine{}
+\DoxyCodeLine{Assets/Unity.VisualScripting.Generated/VisualScripting.Flow/UnitOptions.db}
+\DoxyCodeLine{Assets/Unity.VisualScripting.Generated/VisualScripting.Flow/UnitOptions.db.meta}
+\DoxyCodeLine{Assets/Unity.VisualScripting.Generated/VisualScripting.Core/Property\ Providers}
+\DoxyCodeLine{Assets/Unity.VisualScripting.Generated/VisualScripting.Core/Property\ Providers.meta}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\#\ Unity}
+\DoxyCodeLine{\#\ From:\ https://github.com/github/gitignore/blob/master/Unity.gitignore}
+\DoxyCodeLine{}
+\DoxyCodeLine{/[Ll]ibrary/}
+\DoxyCodeLine{/[Tt]emp/}
+\DoxyCodeLine{/[Oo]bj/}
+\DoxyCodeLine{/[Bb]uild/}
+\DoxyCodeLine{/[Bb]uilds/}
+\DoxyCodeLine{/[Ll]ogs/}
+\DoxyCodeLine{/[Uu]ser[Ss]ettings/}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\ MemoryCaptures\ can\ get\ excessive\ in\ size.}
+\DoxyCodeLine{\#\ They\ also\ could\ contain\ extremely\ sensitive\ data}
+\DoxyCodeLine{/[Mm]emoryCaptures/}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\ Asset\ meta\ data\ should\ only\ be\ ignored\ when\ the\ corresponding\ asset\ is\ also\ ignored}
+\DoxyCodeLine{!/[Aa]ssets/**/*.meta}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\ Uncomment\ this\ line\ if\ you\ want\ to\ ignore\ the\ asset\ store\ tools\ plugin}
+\DoxyCodeLine{\#\ /[Aa]ssets/AssetStoreTools*}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\ Autogenerated\ Jetbrains\ Rider\ plugin}
+\DoxyCodeLine{/[Aa]ssets/Plugins/Editor/JetBrains*}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\ Visual\ Studio\ cache\ directory}
+\DoxyCodeLine{.vs/}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\ Gradle\ cache\ directory}
+\DoxyCodeLine{.gradle/}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\ Autogenerated\ VS/MD/Consulo\ solution\ and\ project\ files}
+\DoxyCodeLine{ExportedObj/}
+\DoxyCodeLine{.consulo/}
+\DoxyCodeLine{*.csproj}
+\DoxyCodeLine{*.unityproj}
+\DoxyCodeLine{*.sln}
+\DoxyCodeLine{*.suo}
+\DoxyCodeLine{*.tmp}
+\DoxyCodeLine{*.user}
+\DoxyCodeLine{*.userprefs}
+\DoxyCodeLine{*.pidb}
+\DoxyCodeLine{*.booproj}
+\DoxyCodeLine{*.svd}
+\DoxyCodeLine{*.pdb}
+\DoxyCodeLine{*.opendb}
+\DoxyCodeLine{*.VC.db}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\ Unity3D\ generated\ meta\ files}
+\DoxyCodeLine{*.pidb.meta}
+\DoxyCodeLine{*.pdb.meta}
+\DoxyCodeLine{*.mdb.meta}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\ Unity3D\ Generated\ File\ On\ Crash\ Reports}
+\DoxyCodeLine{sysinfo.txt}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\ Builds}
+\DoxyCodeLine{*.apk}
+\DoxyCodeLine{*.aab}
+\DoxyCodeLine{*.unitypackage}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\ Crashlytics\ generated\ file}
+\DoxyCodeLine{crashlytics-\/build.properties}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\ Packed\ Addressables}
+\DoxyCodeLine{/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*.*.bin*}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\ Temporary\ auto-\/generated\ Android\ Assets}
+\DoxyCodeLine{/[Aa]ssets/[Ss]treamingAssets/aa.meta}
+\DoxyCodeLine{/[Aa]ssets/[Ss]treamingAssets/aa/*}
+
+\end{DoxyCode}
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-version-control_autotoc_md2170}{}\doxysection{\texorpdfstring{Remove previously committed files}{Remove previously committed files}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-version-control_autotoc_md2170}
+If you committed any files to a version control solution that you want to exclude\+:
+
+
+\begin{DoxyItemize}
+\item See Git\textquotesingle{}s documentation on \href{https://git-scm.com/docs/git-rm}{\texttt{ the {\ttfamily git-\/rm} command}}.
+\item See Subversion\textquotesingle{}s documentation on \href{https://svnbook.red-bean.com/en/1.6/svn.ref.svn.c.delete.html}{\texttt{ the {\ttfamily svn delete} command}}. 
+\end{DoxyItemize}

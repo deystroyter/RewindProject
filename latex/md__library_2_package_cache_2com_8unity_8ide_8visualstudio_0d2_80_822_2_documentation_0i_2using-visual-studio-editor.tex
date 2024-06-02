@@ -1,0 +1,34 @@
+\chapter{Using the Visual Studio Editor package}
+\hypertarget{md__library_2_package_cache_2com_8unity_8ide_8visualstudio_0d2_80_822_2_documentation_0i_2using-visual-studio-editor}{}\label{md__library_2_package_cache_2com_8unity_8ide_8visualstudio_0d2_80_822_2_documentation_0i_2using-visual-studio-editor}\index{Using the Visual Studio Editor package@{Using the Visual Studio Editor package}}
+\label{md__library_2_package_cache_2com_8unity_8ide_8visualstudio_0d2_80_822_2_documentation_0i_2using-visual-studio-editor_autotoc_md313}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8ide_8visualstudio_0d2_80_822_2_documentation_0i_2using-visual-studio-editor_autotoc_md313}%
+ To use the package, go to {\bfseries{Edit}} \texorpdfstring{$>$}{>} {\bfseries{Preferences}} \texorpdfstring{$>$}{>} {\bfseries{External Tools}} \texorpdfstring{$>$}{>} {\bfseries{External Script Editor}} and select the version of {\bfseries{Visual Studio}} you have installed. When you select this option, the window reloads and displays settings that control production of .csproj files.
+
+\hypertarget{md__library_2_package_cache_2com_8unity_8ide_8visualstudio_0d2_80_822_2_documentation_0i_2using-visual-studio-editor_autotoc_md314}{}\doxysection{\texorpdfstring{Generate .csproj files}{Generate .csproj files}}\label{md__library_2_package_cache_2com_8unity_8ide_8visualstudio_0d2_80_822_2_documentation_0i_2using-visual-studio-editor_autotoc_md314}
+Each setting in the table below enables or disables the production of .csproj files for a different type of package.\+When you click {\bfseries{Regenerate project files}}, \doxylink{namespace_unity}{Unity} updates the existing .csproj files and creates the necessary new ones based on the settings you choose.
+
+These settings control whether to generate .csproj files for any installed packages. For more information on how to install packages, see \href{https://docs.unity3d.com/Manual/upm-ui-actions.html}{\texttt{ Adding and removing packages}}.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property}}   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-2}
+\endhead
+{\bfseries{Embedded packages}}   &Any package that appears under your project’s \doxylink{namespace_packages}{Packages} folder is an embedded package. An embedded package is not necessarily built-\/in; you can create your own packages and embed them inside your project. This setting is enabled by default.~\newline
+~\newline
+For more information on embedded packages, see \href{https://docs.unity3d.com/Manual/upm-embed.html}{\texttt{ Embedded dependencies}}.    \\\cline{1-2}
+{\bfseries{Local packages}}   &Any package that you install from a local repository stored on your machine, but from outside of your \doxylink{namespace_unity}{Unity} project. This setting is enabled by default.    \\\cline{1-2}
+{\bfseries{Registry packages}}   &Any package that you install from either the official \doxylink{namespace_unity}{Unity} registry or a custom registry. \doxylink{namespace_packages}{Packages} in the \doxylink{namespace_unity}{Unity} registry are available to install directly from the Package Manager. For more information about the \doxylink{namespace_unity}{Unity} package registry, see The Package Registry section of the \href{https://docs.unity3d.com/Packages/com.unity.package-manager-ui@1.8/manual/index.html\#PackManRegistry}{\texttt{ Unity Package Manager documentation}}. ~\newline
+~\newline
+For information on how to create and use custom registries in addition to the \doxylink{namespace_unity}{Unity} registry, see \href{https://docs.unity3d.com/Manual/upm-scoped.html}{\texttt{ Scoped package registries}}.    \\\cline{1-2}
+{\bfseries{Git packages}}   &Any package you install directly from a Git repository using a URL.    \\\cline{1-2}
+{\bfseries{Built-\/in packages}}   &Any package that is already installed as part of the default \doxylink{namespace_unity}{Unity} installation.    \\\cline{1-2}
+{\bfseries{Tarball packages}}   &Any package you install from a GZip tarball archive on the local machine, outside of your \doxylink{namespace_unity}{Unity} project.    \\\cline{1-2}
+{\bfseries{Unknown packages}}   &Any package which \doxylink{namespace_unity}{Unity} cannot determine an origin for. This could be because the package doesn’t list its origin, or that \doxylink{namespace_unity}{Unity} doesn’t recognize the origin listed.    \\\cline{1-2}
+{\bfseries{Player projects}}   &For each player project, generate an additional .csproj file named ‘original\+Project\+Name.\+Player.\+csproj’. This allows different project types to have their code included in Visual Studio’s systems, such as assembly definitions or testing suites.   \\\cline{1-2}
+\end{longtabu}

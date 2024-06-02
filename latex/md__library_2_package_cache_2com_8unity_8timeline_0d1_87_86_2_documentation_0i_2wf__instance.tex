@@ -1,0 +1,30 @@
+\chapter{Creating a Timeline Asset and Timeline instance}
+\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2wf__instance}{}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2wf__instance}\index{Creating a Timeline Asset and Timeline instance@{Creating a Timeline Asset and Timeline instance}}
+\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2wf__instance_autotoc_md1271}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2wf__instance_autotoc_md1271}%
+ To use a \doxylink{namespace_timeline}{Timeline} Asset in your Scene, associate the \doxylink{namespace_timeline}{Timeline} Asset with a Game\+Object using a \doxysectlink{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2play__director}{Playable Director}{0} component. Associating a \doxylink{namespace_timeline}{Timeline} Asset with a Playable Director component creates a \doxylink{namespace_timeline}{Timeline} instance and allows you to specify which objects in the Scene are animated by the \doxylink{namespace_timeline}{Timeline} Asset. To animate a Game\+Object, it must also have an \href{https://docs.unity3d.com/Manual/class-Animator.html}{\texttt{ Animator}} component.
+
+The \doxylink{namespace_timeline}{Timeline} window automatically creates a \doxylink{namespace_timeline}{Timeline} instance while creating a new \doxylink{namespace_timeline}{Timeline} Asset. The \doxylink{namespace_timeline}{Timeline} window also creates the necessary components.
+
+To create a new \doxylink{namespace_timeline}{Timeline} Asset and \doxylink{namespace_timeline}{Timeline} instance, follow these steps\+:
+
+
+\begin{DoxyEnumerate}
+\item In your Scene, select the Game\+Object that you want to use as the focus of your cinematic or other gameplay-\/based sequence.
+\item Open the \doxylink{namespace_timeline}{Timeline} window (menu\+: {\bfseries{Window}} \texorpdfstring{$>$}{>} {\bfseries{Sequencing}} \texorpdfstring{$>$}{>} {\bfseries{\doxylink{namespace_timeline}{Timeline}}}). If the Game\+Object does not yet have a Playable Director component attached to a \doxylink{namespace_timeline}{Timeline} Asset, a message in the \doxylink{namespace_timeline}{Timeline} window prompts you to click the {\bfseries{Create}} button.
+\item Click {\bfseries{Create}}. A dialog box prompts you for the name and location of the \doxylink{namespace_timeline}{Timeline} Asset you are creating. You can also specify tags to identify the \doxylink{namespace_timeline}{Timeline} Asset.
+\item Click {\bfseries{Save}}.
+\end{DoxyEnumerate}
+
+
+
+The \doxylink{namespace_timeline}{Timeline} window does the following\+:
+
+
+\begin{DoxyItemize}
+\item Saves a new \doxylink{namespace_timeline}{Timeline} Asset to the Assets directory of your Project. If you did not change the name and location of the \doxylink{namespace_timeline}{Timeline} Asset you are creating, the \doxylink{namespace_timeline}{Timeline} window creates a name based on the selected Game\+Object with the "{}\+Timeline"{} suffix. For example, selecting the Game\+Object called "{}\+Enemy"{} names the Asset "{}\+Enemy\+Timeline"{}.
+\item Adds an empty Animation track to the \doxylink{namespace_timeline}{Timeline} Asset.
+\item Adds a Playable Director component to the selected Game\+Object, and sets the {\bfseries{Playable}} property to the \doxylink{namespace_timeline}{Timeline} Asset. This creates a \doxylink{namespace_timeline}{Timeline} instance.
+\item Sets the binding on the Animation track in the Playable Director component to the selected Game\+Object. The Animation track does not have any clips, so the selected Game\+Object is not animated.
+\item Adds an Animator component to the selected Game\+Object. The Animator component animates the Game\+Object through the \doxylink{namespace_timeline}{Timeline} instance. The Game\+Object cannot be animated without an Animator component. 
+\end{DoxyItemize}

@@ -1,0 +1,76 @@
+\doxysection{Unity\+Editor.\+Timeline.\+Actions.\+Clip\+Action Class Reference}
+\hypertarget{class_unity_editor_1_1_timeline_1_1_actions_1_1_clip_action}{}\label{class_unity_editor_1_1_timeline_1_1_actions_1_1_clip_action}\index{UnityEditor.Timeline.Actions.ClipAction@{UnityEditor.Timeline.Actions.ClipAction}}
+
+
+Base class for a clip action. Inherit from this class to make an action that would react on selected clips after a menu click and/or a key shortcut.  
+
+
+Inheritance diagram for Unity\+Editor.\+Timeline.\+Actions.\+Clip\+Action\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{class_unity_editor_1_1_timeline_1_1_actions_1_1_clip_action}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_actions_1_1_clip_action_a177b8a381f245a5f4dd6f30b1a69732e}{Execute}} (IEnumerable$<$ \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}} $>$ clips)
+\begin{DoxyCompactList}\small\item\em Execute the action based on clips. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_unity_editor_1_1_timeline_1_1_actions_a2c89b6075e7eaef508bca0cbc6742a10}{Action\+Validity}} \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_actions_1_1_clip_action_a8a6006764dc8147fbb0d2710403a104c}{Validate}} (IEnumerable$<$ \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}} $>$ clips)
+\begin{DoxyCompactList}\small\item\em Defines the validity of an Action for a given set of clips. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class for a clip action. Inherit from this class to make an action that would react on selected clips after a menu click and/or a key shortcut. 
+
+Simple Clip Action example (with context menu and shortcut support).  
+
+To add an action as a menu item in the \doxylink{namespace_timeline}{Timeline} context menu, add Menu\+Entry\+Attribute on the action class. To make an action to react to a shortcut, use the Shortcut Manager API with Timeline\+Shortcut\+Attribute. \begin{DoxySeeAlso}{See also}
+Unity\+Editor.\+Shortcut\+Management.\+Shortcut\+Attribute
+
+
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_actions_1_1_clip_action_a177b8a381f245a5f4dd6f30b1a69732e}\label{class_unity_editor_1_1_timeline_1_1_actions_1_1_clip_action_a177b8a381f245a5f4dd6f30b1a69732e} 
+\index{UnityEditor.Timeline.Actions.ClipAction@{UnityEditor.Timeline.Actions.ClipAction}!Execute@{Execute}}
+\index{Execute@{Execute}!UnityEditor.Timeline.Actions.ClipAction@{UnityEditor.Timeline.Actions.ClipAction}}
+\doxysubsubsection{\texorpdfstring{Execute()}{Execute()}}
+{\footnotesize\ttfamily bool Unity\+Editor.\+Timeline.\+Actions.\+Clip\+Action.\+Execute (\begin{DoxyParamCaption}\item[{IEnumerable$<$ \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}} $>$}]{clips }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+Execute the action based on clips. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clips} & clips that the action will act on.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if the action has been correctly executed, false otherwise.
+\end{DoxyReturn}
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_actions_1_1_clip_action_a8a6006764dc8147fbb0d2710403a104c}\label{class_unity_editor_1_1_timeline_1_1_actions_1_1_clip_action_a8a6006764dc8147fbb0d2710403a104c} 
+\index{UnityEditor.Timeline.Actions.ClipAction@{UnityEditor.Timeline.Actions.ClipAction}!Validate@{Validate}}
+\index{Validate@{Validate}!UnityEditor.Timeline.Actions.ClipAction@{UnityEditor.Timeline.Actions.ClipAction}}
+\doxysubsubsection{\texorpdfstring{Validate()}{Validate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_unity_editor_1_1_timeline_1_1_actions_a2c89b6075e7eaef508bca0cbc6742a10}{Action\+Validity}} Unity\+Editor.\+Timeline.\+Actions.\+Clip\+Action.\+Validate (\begin{DoxyParamCaption}\item[{IEnumerable$<$ \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}} $>$}]{clips }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+Defines the validity of an Action for a given set of clips. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clips} & The clips that the action will act on.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The validity of the set of clips.
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+7.\+6/\+Editor/\+Actions/\mbox{\hyperlink{_clip_action_8cs}{Clip\+Action.\+cs}}\end{DoxyCompactItemize}

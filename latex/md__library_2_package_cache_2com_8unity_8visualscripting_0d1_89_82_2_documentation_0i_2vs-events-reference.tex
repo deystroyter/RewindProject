@@ -1,0 +1,114 @@
+\chapter{Events node}
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-events-reference}{}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-events-reference}\index{Events node@{Events node}}
+\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-events-reference_autotoc_md1861}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-events-reference_autotoc_md1861}%
+ \begin{quote}
+\mbox{[}!\+NOTE\mbox{]} For versions 2019/2020 LTS, download the Visual Scripting package from the \href{https://assetstore.unity.com/packages/tools/visual-bolt-163802}{\texttt{ Unity Asset Store}}. \end{quote}
+Scripting nodes listen for events. They are the starting point for all scripts and appear as special green nodes in graphs.
+
+There are many kinds of events, grouped in sub-\/categories under the root Events category \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}(fuzzy finder\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \texorpdfstring{$>$}{>} {\bfseries{Events}}).
+
+Two simple common events are Start and Update, both located under {\bfseries{Lifecycle}}. ~\newline
+
+
+
+\begin{DoxyItemize}
+\item Start is called once when the graph or event handler is first created.
+\item Update is called at every frame while the graph or event handler is active.
+\end{DoxyItemize}
+
+New script machines start with both these events by default.
+
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-events-reference_autotoc_md1862}{}\doxysection{\texorpdfstring{Inputs \& Outputs}{Inputs \& Outputs}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-events-reference_autotoc_md1862}
+All events have a single Trigger control output that starts the script when they are triggered.
+
+Value inputs are options that influence when the event is triggered. For example, some events have a Target setting that determines which object is listening to the event. Most often, you\textquotesingle{}ll leave this setting at its default value of Self.
+
+The value outputs on events are arguments that are passed from the event, giving you more information about what actually happened. For example, on the On Trigger Enter event, the other collider that is involved in the collision is an output.
+
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-events-reference_autotoc_md1863}{}\doxysection{\texorpdfstring{Custom Events}{Custom Events}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-events-reference_autotoc_md1863}
+There is a special type of event, the Custom Event that triggers custom events across graphs, along with their custom arguments.
+
+For example, to create a custom event called On Damage that gets called so the character loses health, the event should have one integer argument that indicates the amount of damage to inflict. Listen to the event by creating a Custom Event node (under Events). Set the name to On Damage. The set the argument count, below the name, to 1.
+
+
+
+\begin{quote}
+\mbox{[}!\+NOTE\mbox{]} Indices are zero-\/based, so the first argument is labeled Arg. 0. ~\newline
+ \end{quote}
+To trigger the event from elsewhere, use the Trigger Custom Event node, located right under the Custom Event node in the fuzzy finder. Enter the name of the event exactly as it is sensitive to case and whitespace. ~\newline
+
+
+For example, to create a script machine on a boulder that could hit the player, use the force of the impact as the damage.
+
+
+
+The collider that hit with the boulder is the target of our trigger; the On Damage event is triggered on all machines attached to that collider. Use the damage value to subtract health from the receiver object.
+
+
+
+Custom events do not require a receiver and do not cause an error if there isn\textquotesingle{}t a listener to handle them.\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-events-reference_autotoc_md1864}{}\doxysection{\texorpdfstring{Animation Events}{Animation Events}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-events-reference_autotoc_md1864}
+Use animation events to trigger Bolt graphs when you reach a certain point in your animation. Select an object with a machine and an animator. Then, from the animation window, add an animation event.
+
+
+
+With the event selected, choose Trigger\+Animation\+Event as the function from the inspector.
+
+
+
+Use any parameter from the inspector.
+
+
+
+In your script graph, add an Animation Event node (under {\bfseries{Events}} \texorpdfstring{$>$}{>}{\bfseries{Animation}}). ~\newline
+
+
+There are two types of events\+:
+
+
+\begin{DoxyItemize}
+\item a global animation event, and
+\item a named animation event.
+\end{DoxyItemize}
+
+
+
+The difference is that the first type listens to all animation events on the object and return the string parameter. The second type\textquotesingle{}s trigger is the string parameter that is equal to the specified name input.\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-events-reference_autotoc_md1865}{}\doxysection{\texorpdfstring{Unity Events}{Unity Events}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-events-reference_autotoc_md1865}
+Use \doxylink{namespace_unity}{Unity} Events to trigger events that have been setup from the inspector. These are commonly found in GUI components like buttons, but \href{https://docs.unity3d.com/ScriptReference/Events.UnityEvent.html}{\texttt{ they can also be created in your custom scripts}}.
+
+Configure them by selecting an object with a machine and select the Trigger \doxylink{namespace_unity}{Unity} Event method. In the string field, type the event name to listen to in the graph and in the graph, add a Unity\+Event node with a matching name.
+
+
+
+Additional arguments are not supported on \doxylink{namespace_unity}{Unity} events.\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-events-reference_autotoc_md1866}{}\doxysection{\texorpdfstring{Events API}{Events API}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-events-reference_autotoc_md1866}
+Visual scripting provides a simple API to trigger custom events from C\# script.
+
+Add the following usings to your C\# script to access the API.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{using\ Unity.VisualScripting}
+
+\end{DoxyCode}
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-events-reference_autotoc_md1867}{}\doxysubsection{\texorpdfstring{Triggering API}{Triggering API}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-events-reference_autotoc_md1867}
+A single method call is needed to trigger a custom event. Pass as many arguments as required.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{CustomEvent.Trigger(targetGameObject,\ argument1,\ argument2,\ ...)}
+
+\end{DoxyCode}
+
+
+For example, this custom event node\+:
+
+
+
+Can be triggered with this line of code.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{CustomEvent.Trigger(enemy,\ "{}Damage"{},\ 30);}
+
+\end{DoxyCode}
+ 

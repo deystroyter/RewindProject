@@ -1,0 +1,189 @@
+\doxysection{Unity\+Engine.\+UI.\+Toggle Class Reference}
+\hypertarget{class_unity_engine_1_1_u_i_1_1_toggle}{}\label{class_unity_engine_1_1_u_i_1_1_toggle}\index{UnityEngine.UI.Toggle@{UnityEngine.UI.Toggle}}
+
+
+A standard toggle that has an on / off state.  
+
+
+Inheritance diagram for Unity\+Engine.\+UI.\+Toggle\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.778157cm]{class_unity_engine_1_1_u_i_1_1_toggle}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle_1_1_toggle_event}{Toggle\+Event}}
+\begin{DoxyCompactList}\small\item\em Unity\+Event callback for when a toggle is toggled. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle_a731aa36a35bdf6d56719d4729e4696eb}{Toggle\+Transition}} \{ \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle_a731aa36a35bdf6d56719d4729e4696eba6adf97f83acf6453d4a6a4b1070f3754}{None}}
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle_a731aa36a35bdf6d56719d4729e4696eba04e0385c10aefee8e4681617d2f3ef40}{Fade}}
+ \}
+\begin{DoxyCompactList}\small\item\em Display settings for when a toggle is activated or deactivated. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle_a731aa36a35bdf6d56719d4729e4696eb}{Toggle\+Transition}} \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle_a786d8f8355acd97123f5451352c9dc19}{toggle\+Transition}} = \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle_a731aa36a35bdf6d56719d4729e4696eba04e0385c10aefee8e4681617d2f3ef40}{Toggle\+Transition.\+Fade}}
+\begin{DoxyCompactList}\small\item\em Transition mode for the toggle. \end{DoxyCompactList}\item 
+Graphic \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle_ae744ea1c7a3642f297ecdcae823f24f6}{graphic}}
+\begin{DoxyCompactList}\small\item\em Graphic the toggle should be working with. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle_group}{Toggle\+Group}} \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle_ae593bf2e88c25e359d84501d5cdcf7e3}{group}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Group the toggle belongs to. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_selectable}{Unity\+Engine.\+UI.\+Selectable}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_u_i_1_1_sprite_state}{Sprite\+State}} \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_selectable_a35a3bec2a64a37feee159003a09e82cf}{sprite\+State}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Copy of the array of all the selectable objects currently active in the scene. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_animation_triggers}{Animation\+Triggers}} \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_selectable_a30f30933362defcf850a05474828d1ab}{animation\+Triggers}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The Animation\+Triggers for this selectable object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_canvas_element}{Unity\+Engine.\+UI.\+ICanvas\+Element}}}
+\begin{DoxyCompactItemize}
+\item 
+Transform \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_canvas_element_afe4001ee5dddadf8b253270f5302d017}{transform}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Get the transform associated with the ICanvas\+Element. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour}{Unity\+Engine.\+Event\+Systems.\+UIBehaviour}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_ac3b9d503ad9eb607e691775b2c680d08}{Is\+Active}} ()
+\begin{DoxyCompactList}\small\item\em Returns true if the Game\+Object and the Component are active. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_a1b4d2b6956ce44150ae96433d1d15e8f}{Is\+Destroyed}} ()
+\begin{DoxyCompactList}\small\item\em Returns true if the native representation of the behaviour has been destroyed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interface_unity_engine_1_1_event_systems_1_1_i_pointer_down_handler}{Unity\+Engine.\+Event\+Systems.\+IPointer\+Down\+Handler}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interface_unity_engine_1_1_event_systems_1_1_i_pointer_down_handler_a18d183648f495d70fdcf81467f0c3715}{On\+Pointer\+Down}} (\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}} event\+Data)
+\begin{DoxyCompactList}\small\item\em Use this callback to detect pointer down events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interface_unity_engine_1_1_event_systems_1_1_i_pointer_up_handler}{Unity\+Engine.\+Event\+Systems.\+IPointer\+Up\+Handler}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interface_unity_engine_1_1_event_systems_1_1_i_pointer_up_handler_a7fec90b677f1ca9648351c0e226d2c05}{On\+Pointer\+Up}} (\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}} event\+Data)
+\begin{DoxyCompactList}\small\item\em Use this callback to detect pointer up events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interface_unity_engine_1_1_event_systems_1_1_i_pointer_enter_handler}{Unity\+Engine.\+Event\+Systems.\+IPointer\+Enter\+Handler}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interface_unity_engine_1_1_event_systems_1_1_i_pointer_enter_handler_a1f1655afc025835108734c39c6fa4502}{On\+Pointer\+Enter}} (\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}} event\+Data)
+\begin{DoxyCompactList}\small\item\em Use this callback to detect pointer enter events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interface_unity_engine_1_1_event_systems_1_1_i_pointer_exit_handler}{Unity\+Engine.\+Event\+Systems.\+IPointer\+Exit\+Handler}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interface_unity_engine_1_1_event_systems_1_1_i_pointer_exit_handler_a18f1534d07ff8c1fcac3e358c07c19e2}{On\+Pointer\+Exit}} (\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}} event\+Data)
+\begin{DoxyCompactList}\small\item\em Use this callback to detect pointer exit events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_canvas_element}{Unity\+Engine.\+UI.\+ICanvas\+Element}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_canvas_element_a50a9583739ecd91674db5a81da1f0bd5}{Rebuild}} (\mbox{\hyperlink{namespace_unity_engine_1_1_u_i_a76b804cb1978e6dc1162615deaa710e9}{Canvas\+Update}} executing)
+\begin{DoxyCompactList}\small\item\em Rebuild the element for the given stage. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_canvas_element_a5f507a968983077ca1be60142513ab1e}{Layout\+Complete}} ()
+\begin{DoxyCompactList}\small\item\em Callback sent when this ICanvas\+Element has completed layout. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_canvas_element_a6a89ea41d304c5a96c16c37decee168a}{Graphic\+Update\+Complete}} ()
+\begin{DoxyCompactList}\small\item\em Callback sent when this ICanvas\+Element has completed Graphic rebuild. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_canvas_element_ace7615de0f5825f86400662d1d9ef8ac}{Is\+Destroyed}} ()
+\begin{DoxyCompactList}\small\item\em Used if the native representation has been destroyed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour}{Unity\+Engine.\+Event\+Systems.\+UIBehaviour}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_a1235b9fe2fae01d3a2fc407166e0fa41}{Awake}} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_a50bb1d6a54cafd4e344fc4578fc7c322}{On\+Enable}} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_ad9097dfd9b409602fc182c1b790600ea}{Start}} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_ad7fc972dc923e760a4be478cf72de2f9}{On\+Disable}} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_a3eaa412ca986ca777a4d7b9654c1f3d4}{On\+Destroy}} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_acfb0bcf126b8ea0953525ebb20a87985}{On\+Rect\+Transform\+Dimensions\+Change}} ()
+\begin{DoxyCompactList}\small\item\em This callback is called when the dimensions of an associated Rect\+Transform change. It is always called before Awake, On\+Enable, or Start. The call is also made to all child Rect\+Transforms, regardless of whether their dimensions change (which depends on how they are anchored). \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_ac9eba6c0a20f81ea61f6e760b6df5d83}{On\+Before\+Transform\+Parent\+Changed}} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_a6ed51ea799aa1a343e0e847255dfd3cd}{On\+Transform\+Parent\+Changed}} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_a6ad4a13c8cc29c6620e56028e07d4c0e}{On\+Did\+Apply\+Animation\+Properties}} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_aa47d9812b94689b322fa7370fa47f5ca}{On\+Canvas\+Group\+Changed}} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_a73f180fef8560a44a756525ecfe3092f}{On\+Canvas\+Hierarchy\+Changed}} ()
+\begin{DoxyCompactList}\small\item\em Called when the state of the parent Canvas is changed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes inherited from \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_selectable}{Unity\+Engine.\+UI.\+Selectable}}}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_selectable}{Selectable}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_selectable_aed581958744a69ac1a36176c0dda008a}{s\+\_\+\+Selectables}} = new \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_selectable}{Selectable}}\mbox{[}10\mbox{]}
+\item 
+static int \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_selectable_aefd532adbeb7407701c46f57751f619c}{s\+\_\+\+Selectable\+Count}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A standard toggle that has an on / off state. 
+
+The toggle component is a Selectable that controls a child graphic which displays the on / off state. When a toggle event occurs a callback is sent to any registered listeners of UI.\+Toggle.\+\_\+on\+Value\+Changed. 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_unity_engine_1_1_u_i_1_1_toggle_a731aa36a35bdf6d56719d4729e4696eb}\label{class_unity_engine_1_1_u_i_1_1_toggle_a731aa36a35bdf6d56719d4729e4696eb} 
+\index{UnityEngine.UI.Toggle@{UnityEngine.UI.Toggle}!ToggleTransition@{ToggleTransition}}
+\index{ToggleTransition@{ToggleTransition}!UnityEngine.UI.Toggle@{UnityEngine.UI.Toggle}}
+\doxysubsubsection{\texorpdfstring{ToggleTransition}{ToggleTransition}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle_a731aa36a35bdf6d56719d4729e4696eb}{Unity\+Engine.\+UI.\+Toggle.\+Toggle\+Transition}}}
+
+
+
+Display settings for when a toggle is activated or deactivated. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{None@{None}!UnityEngine.UI.Toggle@{UnityEngine.UI.Toggle}}\index{UnityEngine.UI.Toggle@{UnityEngine.UI.Toggle}!None@{None}}}\Hypertarget{class_unity_engine_1_1_u_i_1_1_toggle_a731aa36a35bdf6d56719d4729e4696eba6adf97f83acf6453d4a6a4b1070f3754}\label{class_unity_engine_1_1_u_i_1_1_toggle_a731aa36a35bdf6d56719d4729e4696eba6adf97f83acf6453d4a6a4b1070f3754} 
+None&Show / hide the toggle instantly. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Fade@{Fade}!UnityEngine.UI.Toggle@{UnityEngine.UI.Toggle}}\index{UnityEngine.UI.Toggle@{UnityEngine.UI.Toggle}!Fade@{Fade}}}\Hypertarget{class_unity_engine_1_1_u_i_1_1_toggle_a731aa36a35bdf6d56719d4729e4696eba04e0385c10aefee8e4681617d2f3ef40}\label{class_unity_engine_1_1_u_i_1_1_toggle_a731aa36a35bdf6d56719d4729e4696eba04e0385c10aefee8e4681617d2f3ef40} 
+Fade&Fade the toggle in / out smoothly. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_unity_engine_1_1_u_i_1_1_toggle_ae744ea1c7a3642f297ecdcae823f24f6}\label{class_unity_engine_1_1_u_i_1_1_toggle_ae744ea1c7a3642f297ecdcae823f24f6} 
+\index{UnityEngine.UI.Toggle@{UnityEngine.UI.Toggle}!graphic@{graphic}}
+\index{graphic@{graphic}!UnityEngine.UI.Toggle@{UnityEngine.UI.Toggle}}
+\doxysubsubsection{\texorpdfstring{graphic}{graphic}}
+{\footnotesize\ttfamily Graphic Unity\+Engine.\+UI.\+Toggle.\+graphic}
+
+
+
+Graphic the toggle should be working with. 
+
+\Hypertarget{class_unity_engine_1_1_u_i_1_1_toggle_a786d8f8355acd97123f5451352c9dc19}\label{class_unity_engine_1_1_u_i_1_1_toggle_a786d8f8355acd97123f5451352c9dc19} 
+\index{UnityEngine.UI.Toggle@{UnityEngine.UI.Toggle}!toggleTransition@{toggleTransition}}
+\index{toggleTransition@{toggleTransition}!UnityEngine.UI.Toggle@{UnityEngine.UI.Toggle}}
+\doxysubsubsection{\texorpdfstring{toggleTransition}{toggleTransition}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle_a731aa36a35bdf6d56719d4729e4696eb}{Toggle\+Transition}} Unity\+Engine.\+UI.\+Toggle.\+toggle\+Transition = \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle_a731aa36a35bdf6d56719d4729e4696eba04e0385c10aefee8e4681617d2f3ef40}{Toggle\+Transition.\+Fade}}}
+
+
+
+Transition mode for the toggle. 
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_unity_engine_1_1_u_i_1_1_toggle_ae593bf2e88c25e359d84501d5cdcf7e3}\label{class_unity_engine_1_1_u_i_1_1_toggle_ae593bf2e88c25e359d84501d5cdcf7e3} 
+\index{UnityEngine.UI.Toggle@{UnityEngine.UI.Toggle}!group@{group}}
+\index{group@{group}!UnityEngine.UI.Toggle@{UnityEngine.UI.Toggle}}
+\doxysubsubsection{\texorpdfstring{group}{group}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle_group}{Toggle\+Group}} Unity\+Engine.\+UI.\+Toggle.\+group\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Group the toggle belongs to. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Runtime/\+UI/\+Core/\mbox{\hyperlink{_toggle_8cs}{Toggle.\+cs}}\end{DoxyCompactItemize}

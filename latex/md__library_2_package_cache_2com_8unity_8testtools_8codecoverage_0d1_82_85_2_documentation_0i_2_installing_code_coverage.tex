@@ -1,0 +1,39 @@
+\chapter{Installing Code Coverage}
+\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_installing_code_coverage}{}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_installing_code_coverage}\index{Installing Code Coverage@{Installing Code Coverage}}
+\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_installing_code_coverage_autotoc_md844}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_installing_code_coverage_autotoc_md844}%
+ Before you install the package, make sure you have no errors in the \href{https://docs.unity3d.com/Manual/Console.html}{\texttt{ Console}} window (in red text).\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_installing_code_coverage_autotoc_md845}{}\doxysection{\texorpdfstring{From the Unity Package Manager}{From the Unity Package Manager}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_installing_code_coverage_autotoc_md845}
+Use the \href{https://docs.unity3d.com/Packages/com.unity.package-manager-ui@latest}{\texttt{ Unity Package Manager}} to find and install the Code Coverage package.
+
+
+
+Alternatively, use the {\bfseries{Add (+)}} dropdown and select {\bfseries{Add package from git URL...}} or {\bfseries{Add package by name...}} and type {\ttfamily com.\+unity.\+testtools.\+codecoverage}.
+
+
+
+To verify that Code Coverage has been installed correctly, open the Code Coverage window (go to {\bfseries{Window}} \texorpdfstring{$>$}{>} {\bfseries{Analysis}} \texorpdfstring{$>$}{>} {\bfseries{Code Coverage}}). If you don\textquotesingle{}t see the {\bfseries{Code Coverage}} menu item, then Code Coverage did not install correctly.\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_installing_code_coverage_autotoc_md846}{}\doxysection{\texorpdfstring{Manually from the Package Manifest}{Manually from the Package Manifest}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_installing_code_coverage_autotoc_md846}
+You can also install the Code Coverage package manually. To do this, add a reference to Code Coverage in your project\textquotesingle{}s {\ttfamily Packages/manifest.\+json} file. There are two ways you can reference a specific version of the Code Coverage package, depending on how you use it.\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_installing_code_coverage_autotoc_md847}{}\doxysubsection{\texorpdfstring{Using a production version of the package}{Using a production version of the package}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_installing_code_coverage_autotoc_md847}
+You can point the Package Manager at a publicly available version. To do this manually, add it to {\ttfamily manifest.\+json}\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{"{}dependencies"{}:\ \{}
+\DoxyCodeLine{\ \ \ \ //...}
+\DoxyCodeLine{\ \ \ \ "{}com.unity.testtools.codecoverage"{}:"{}<full\ version\ number>"{}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_installing_code_coverage_autotoc_md848}{}\doxysubsection{\texorpdfstring{Using a local clone of the package}{Using a local clone of the package}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_installing_code_coverage_autotoc_md848}
+If you want to use a cloned version of the package, you can point the Package Manager at a local folder as the package location\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{"{}dependencies"{}:\ \{}
+\DoxyCodeLine{\ \ \ \ //...}
+\DoxyCodeLine{\ \ \ \ "{}com.unity.testtools.codecoverage"{}:"{}file:path/to/package/root"{}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+To verify that Code Coverage has been installed correctly, open the Code Coverage window (go to {\bfseries{Window}} \texorpdfstring{$>$}{>} {\bfseries{Analysis}} \texorpdfstring{$>$}{>} {\bfseries{Code Coverage}}). If you don\textquotesingle{}t see the {\bfseries{Code Coverage}} menu item, then Code Coverage did not install correctly. 

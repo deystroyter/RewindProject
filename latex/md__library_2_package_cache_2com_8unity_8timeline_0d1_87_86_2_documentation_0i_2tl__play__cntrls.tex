@@ -1,0 +1,91 @@
+\chapter{Timeline Playback Controls}
+\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__play__cntrls}{}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__play__cntrls}\index{Timeline Playback Controls@{Timeline Playback Controls}}
+\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__play__cntrls_autotoc_md1237}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__play__cntrls_autotoc_md1237}%
+ To play the \doxylink{namespace_timeline}{Timeline} instance and to control the location of the \doxylink{namespace_timeline}{Timeline} Playhead, use the \doxylink{namespace_timeline}{Timeline} Playback Controls.
+
+
+
+{\itshape \doxylink{namespace_timeline}{Timeline} Playback Controls}\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__play__cntrls_autotoc_md1238}{}\doxysection{\texorpdfstring{Timeline Start button}{Timeline Start button}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__play__cntrls_autotoc_md1238}
+
+
+To move the \doxylink{namespace_timeline}{Timeline} Playhead to the start of the \doxylink{namespace_timeline}{Timeline} instance, click the \doxylink{namespace_timeline}{Timeline} Start button, or hold Shift and press Comma (,).\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__play__cntrls_autotoc_md1239}{}\doxysection{\texorpdfstring{Previous Frame button}{Previous Frame button}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__play__cntrls_autotoc_md1239}
+
+
+To move the \doxylink{namespace_timeline}{Timeline} Playhead to the previous frame, click the Previous Frame button, or press Comma (,).
+
+\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__play__cntrls_playbutton}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__play__cntrls_playbutton}%
+ \hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__play__cntrls_autotoc_md1240}{}\doxysection{\texorpdfstring{Timeline Play button}{Timeline Play button}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__play__cntrls_autotoc_md1240}
+
+
+To preview the \doxylink{namespace_timeline}{Timeline} instance in \doxylink{namespace_timeline}{Timeline} Playback mode, click the \doxylink{namespace_timeline}{Timeline} Play button, or press the Spacebar. \doxylink{namespace_timeline}{Timeline} Playback mode does the following\+:
+
+
+\begin{DoxyItemize}
+\item Begins playback at the current location of the \doxylink{namespace_timeline}{Timeline} Playhead and continues to the end of the \doxylink{namespace_timeline}{Timeline} instance. If the Play Range button is enabled, playback is restricted to a specified time range.
+\item The \doxylink{namespace_timeline}{Timeline} Playhead position moves along the \doxylink{namespace_timeline}{Timeline} instance. The Playhead Location field shows the position of the \doxylink{namespace_timeline}{Timeline} Playhead in either frames, timecode or seconds, depending on the \doxysectlink{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__settings}{Timeline settings}{0}.
+\item To pause playback, click the \doxylink{namespace_timeline}{Timeline} Play button again, or press the Spacebar.
+\item When playback reaches the end of the \doxylink{namespace_timeline}{Timeline} instance, the Wrap Mode determines whether playback should hold, repeat, or do nothing. The Wrap Mode setting is a \doxysectlink{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2play__director}{Playable Director component}{0} property.
+\end{DoxyItemize}
+
+\doxylink{namespace_timeline}{Timeline} Playback mode provides a preview of the \doxylink{namespace_timeline}{Timeline} instance while in the \doxylink{namespace_timeline}{Timeline} window. \doxylink{namespace_timeline}{Timeline} Playback mode is only a simulation of \href{https://docs.unity3d.com/Manual/GameView.html}{\texttt{ Play Mode in the Game View}}.
+
+The \doxylink{namespace_timeline}{Timeline} Playback mode does not support audio playback. To preview a \doxylink{namespace_timeline}{Timeline} instance with audio, enable the Play on Awake option in the \doxysectlink{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2play__director}{Playable Director component}{0} and preview game play in Play Mode.\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__play__cntrls_autotoc_md1241}{}\doxysection{\texorpdfstring{Next Frame button}{Next Frame button}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__play__cntrls_autotoc_md1241}
+
+
+To move the \doxylink{namespace_timeline}{Timeline} Playhead to the next frame, click the Next Frame button, or press Period (.).\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__play__cntrls_autotoc_md1242}{}\doxysection{\texorpdfstring{Timeline End button}{Timeline End button}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__play__cntrls_autotoc_md1242}
+
+
+To move the \doxylink{namespace_timeline}{Timeline} Playhead to the end of the \doxylink{namespace_timeline}{Timeline} instance, click the \doxylink{namespace_timeline}{Timeline} End button, or hold Shift and press Period (.).
+
+\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__play__cntrls_playrange}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__play__cntrls_playrange}%
+ \hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__play__cntrls_autotoc_md1243}{}\doxysection{\texorpdfstring{Play Range button}{Play Range button}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__play__cntrls_autotoc_md1243}
+
+
+Enable the {\bfseries{Play Range}} button to restrict playback to a specific range of seconds or frames. You can only set a play range when previewing a \doxylink{namespace_timeline}{Timeline} instance within the \doxylink{namespace_timeline}{Timeline} window. \doxylink{namespace_unity}{Unity} ignores the play range in \href{https://docs.unity3d.com/Manual/GameView.html}{\texttt{ Play Mode}}.
+
+The \doxylink{namespace_timeline}{Timeline} ruler highlights the play range and indicates its start and end with white markers. To modify the play range, drag either marker.
+
+
+
+{\itshape Play Range (red circle) enabled with while markers and highlighted area defining range}
+
+\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__play__cntrls_playheadlocation}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__play__cntrls_playheadlocation}%
+ \hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__play__cntrls_autotoc_md1244}{}\doxysection{\texorpdfstring{Timeline Playhead and Playhead Location field}{Timeline Playhead and Playhead Location field}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__play__cntrls_autotoc_md1244}
+The \doxylink{namespace_timeline}{Timeline} Playhead indicates the exact point in time being previewed in the \doxylink{namespace_timeline}{Timeline} window. The Playhead Location field expresses the location of the \doxylink{namespace_timeline}{Timeline} Playhead in either frames or seconds.
+
+
+
+{\itshape Playhead Location field and \doxylink{namespace_timeline}{Timeline} Playhead (red). The \doxylink{namespace_timeline}{Timeline} Playhead also appears on the Zoombar (red arrow).}
+
+Use the \doxysectlink{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2clp__pan__zoom}{Zoombar to navigate, scroll, and zoom}{0} the Clips view. A white line indicates the location of the \doxylink{namespace_timeline}{Timeline} Playhead in relation to the entire \doxylink{namespace_timeline}{Timeline} instance.
+
+To jump the \doxylink{namespace_timeline}{Timeline} Playhead to a specific time, click the \doxylink{namespace_timeline}{Timeline} ruler. You can also enter the time value in the Playhead Location field and press Enter. When entering a value, frames are converted to seconds or seconds are converted to frames, based on the \doxylink{namespace_timeline}{Timeline} settings. For example, if the \doxylink{namespace_timeline}{Timeline} ruler is expressed as seconds with a frame rate of 30 frames per second, entering 180 in the Playhead Location field converts 180 frames to seconds and moves the \doxylink{namespace_timeline}{Timeline} Playhead to 6\+:00. To set the time format that the \doxylink{namespace_timeline}{Timeline} window uses, configure the \doxysectlink{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__settings}{Timeline Settings}{0}.\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__play__cntrls_autotoc_md1245}{}\doxysection{\texorpdfstring{Switching between Local and Global}{Switching between Local and Global}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__play__cntrls_autotoc_md1245}
+Use the Local or Global button to change the \doxylink{namespace_timeline}{Timeline} ruler from local time to global time. Local time and global time are only relevant when editing a nested \doxylink{namespace_timeline}{Timeline} instance.
+
+\doxysectlink{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2wf__nested}{To create a nested Timeline instance}{0}, drag a Game\+Object associated with a \doxylink{namespace_timeline}{Timeline} instance into another \doxylink{namespace_timeline}{Timeline} instance. The \doxylink{namespace_timeline}{Timeline} instance you are dragging into becomes the master \doxylink{namespace_timeline}{Timeline} instance. The \doxylink{namespace_timeline}{Timeline} instance associated with the Game\+Object becomes a nested \doxylink{namespace_timeline}{Timeline} instance.
+
+
+
+{\itshape A nested \doxylink{namespace_timeline}{Timeline} instance appears as a Control clip on a Control track (red arrow)}
+
+To edit a nested \doxylink{namespace_timeline}{Timeline} instance, double-\/click the Control clip that contains the nested \doxylink{namespace_timeline}{Timeline} instance. The \doxylink{namespace_timeline}{Timeline} window switches to the nested \doxylink{namespace_timeline}{Timeline} instance, indicated by the \doxylink{namespace_timeline}{Timeline} title which shows the name and Game\+Object of the master \doxylink{namespace_timeline}{Timeline} instance, followed by the name and Game\+Object of the nested \doxylink{namespace_timeline}{Timeline} instance.
+
+
+
+{\itshape The \doxylink{namespace_timeline}{Timeline} title indicates that you are editing a nested \doxylink{namespace_timeline}{Timeline} instance (red outline). The Global button (red arrow) indicates that the nested \doxylink{namespace_timeline}{Timeline} instance is shown using global time.}
+
+When editing a nested \doxylink{namespace_timeline}{Timeline} instance, click {\bfseries{Global}} to switch the \doxylink{namespace_timeline}{Timeline} ruler to Local time. Local time is relative to the nested \doxylink{namespace_timeline}{Timeline}. This means that the \doxylink{namespace_timeline}{Timeline} ruler starts at zero.
+
+
+
+{\itshape A nested \doxylink{namespace_timeline}{Timeline} instance in Local time.}
+
+Click {\bfseries{Local}} to view the \doxylink{namespace_timeline}{Timeline} ruler in relation to the placement of the nested \doxylink{namespace_timeline}{Timeline} in the master \doxylink{namespace_timeline}{Timeline} instance. This means that if, for example, if the Control clip is placed at frame 70 of the master \doxylink{namespace_timeline}{Timeline} then the \doxylink{namespace_timeline}{Timeline} ruler starts at 70 at the beginning of the nested \doxylink{namespace_timeline}{Timeline} instance.
+
+
+
+{\itshape A nested \doxylink{namespace_timeline}{Timeline} instance in Global time.} 

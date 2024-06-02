@@ -1,0 +1,177 @@
+\doxysection{Unity\+Engine.\+Test\+Tools.\+Recompile\+Scripts Class Reference}
+\hypertarget{class_unity_engine_1_1_test_tools_1_1_recompile_scripts}{}\label{class_unity_engine_1_1_test_tools_1_1_recompile_scripts}\index{UnityEngine.TestTools.RecompileScripts@{UnityEngine.TestTools.RecompileScripts}}
+
+
+{\ttfamily Recompile\+Scripts} is an IEdit\+Mode\+Test\+Yield\+Instruction that you can yield in Edit Mode tests. It lets you trigger a recompilation of scripts in the \doxylink{namespace_unity}{Unity} Editor.  
+
+
+Inheritance diagram for Unity\+Engine.\+Test\+Tools.\+Recompile\+Scripts\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_engine_1_1_test_tools_1_1_recompile_scripts}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_recompile_scripts_aa39f34a1e7ac1cd029e9569906e45b95}{Recompile\+Scripts}} ()
+\begin{DoxyCompactList}\small\item\em Creates a new instance of the {\ttfamily Recompile\+Scripts} yield instruction. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_recompile_scripts_a6228cc8ff9cdb6d053f2a81f011e3f92}{Recompile\+Scripts}} (bool expect\+Script\+Compilation)
+\begin{DoxyCompactList}\small\item\em Creates a new instance of the {\ttfamily Recompile\+Scripts} yield instruction. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_recompile_scripts_a4e35fd0111abe9abe3ea1863985866d3}{Recompile\+Scripts}} (bool expect\+Script\+Compilation, bool expect\+Script\+Compilation\+Success)
+\begin{DoxyCompactList}\small\item\em Creates a new instance of the {\ttfamily Recompile\+Scripts} yield instruction. \end{DoxyCompactList}\item 
+IEnumerator \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_recompile_scripts_acf12e80721614112b7b1e40876670384}{Perform}} ()
+\begin{DoxyCompactList}\small\item\em Perform the multi step instruction of triggering a recompilation of scripts and waiting for its completion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_recompile_scripts_a6e57b555d4c38817ae8cc61fc00a8c04}{Expect\+Domain\+Reload}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns true if the instruction expects a domain reload to occur. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_recompile_scripts_a2e863521754cc2a2d3d17ea1bd9f78d5}{Expected\+Playmode\+State}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns true if the instruction expects the \doxylink{namespace_unity}{Unity} Editor to be in {\bfseries{Play Mode}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_recompile_scripts_afcb43033aa38e639500251374201105c}{Expect\+Script\+Compilation}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates whether a script compilation is expected. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_recompile_scripts_ae2c8a92d27037c51ac8a9b8959d88fce}{Expect\+Script\+Compilation\+Success}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indicates whether the expected script compilation is expected to succeed. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_recompile_scripts}{Recompile\+Scripts}} \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_recompile_scripts_ad70b374129422f995ff7fcc199d17918}{Current}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The current active instance of the Recompile\+Scripts yield instruction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_edit_mode_test_yield_instruction}{Unity\+Engine.\+Test\+Tools.\+IEdit\+Mode\+Test\+Yield\+Instruction}}}
+
+
+\doxysubsection{Detailed Description}
+{\ttfamily Recompile\+Scripts} is an IEdit\+Mode\+Test\+Yield\+Instruction that you can yield in Edit Mode tests. It lets you trigger a recompilation of scripts in the \doxylink{namespace_unity}{Unity} Editor. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_unity_engine_1_1_test_tools_1_1_recompile_scripts_aa39f34a1e7ac1cd029e9569906e45b95}\label{class_unity_engine_1_1_test_tools_1_1_recompile_scripts_aa39f34a1e7ac1cd029e9569906e45b95} 
+\index{UnityEngine.TestTools.RecompileScripts@{UnityEngine.TestTools.RecompileScripts}!RecompileScripts@{RecompileScripts}}
+\index{RecompileScripts@{RecompileScripts}!UnityEngine.TestTools.RecompileScripts@{UnityEngine.TestTools.RecompileScripts}}
+\doxysubsubsection{\texorpdfstring{RecompileScripts()}{RecompileScripts()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Unity\+Engine.\+Test\+Tools.\+Recompile\+Scripts.\+Recompile\+Scripts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates a new instance of the {\ttfamily Recompile\+Scripts} yield instruction. 
+
+{\ttfamily  \mbox{[}Unity\+Set\+Up\mbox{]} public IEnumerator Set\+Up() \{ using (var file = File.\+Create\+Text("{}\+Assets/temp/my\+Script.\+cs"{})) \{ file.\+Write("{}public class ATemp\+Class \{  \}"{}); \} Asset\+Database.\+Refresh(); yield return new Recompile\+Scripts(); \} } \Hypertarget{class_unity_engine_1_1_test_tools_1_1_recompile_scripts_a6228cc8ff9cdb6d053f2a81f011e3f92}\label{class_unity_engine_1_1_test_tools_1_1_recompile_scripts_a6228cc8ff9cdb6d053f2a81f011e3f92} 
+\index{UnityEngine.TestTools.RecompileScripts@{UnityEngine.TestTools.RecompileScripts}!RecompileScripts@{RecompileScripts}}
+\index{RecompileScripts@{RecompileScripts}!UnityEngine.TestTools.RecompileScripts@{UnityEngine.TestTools.RecompileScripts}}
+\doxysubsubsection{\texorpdfstring{RecompileScripts()}{RecompileScripts()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Unity\+Engine.\+Test\+Tools.\+Recompile\+Scripts.\+Recompile\+Scripts (\begin{DoxyParamCaption}\item[{bool}]{expect\+Script\+Compilation }\end{DoxyParamCaption})}
+
+
+
+Creates a new instance of the {\ttfamily Recompile\+Scripts} yield instruction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em expect\+Script\+Compilation} & This parameter indicates if you expect a script compilation to start (defaults to true). If a script compilation does not start and {\ttfamily expect\+Script\+Compilation} is true, then it throws an exception.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_engine_1_1_test_tools_1_1_recompile_scripts_a4e35fd0111abe9abe3ea1863985866d3}\label{class_unity_engine_1_1_test_tools_1_1_recompile_scripts_a4e35fd0111abe9abe3ea1863985866d3} 
+\index{UnityEngine.TestTools.RecompileScripts@{UnityEngine.TestTools.RecompileScripts}!RecompileScripts@{RecompileScripts}}
+\index{RecompileScripts@{RecompileScripts}!UnityEngine.TestTools.RecompileScripts@{UnityEngine.TestTools.RecompileScripts}}
+\doxysubsubsection{\texorpdfstring{RecompileScripts()}{RecompileScripts()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Unity\+Engine.\+Test\+Tools.\+Recompile\+Scripts.\+Recompile\+Scripts (\begin{DoxyParamCaption}\item[{bool}]{expect\+Script\+Compilation,  }\item[{bool}]{expect\+Script\+Compilation\+Success }\end{DoxyParamCaption})}
+
+
+
+Creates a new instance of the {\ttfamily Recompile\+Scripts} yield instruction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em expect\+Script\+Compilation} & This parameter indicates if you expect a script compilation to start (defaults to true). If a script compilation does not start and {\ttfamily expect\+Script\+Compilation} is {\ttfamily true}, then it throws an exception.\\
+\hline
+{\em expect\+Script\+Compilation\+Success} & This parameter indicates if you expect a script compilation to succeed. If not succeeded then an exception will be thrown.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_test_tools_1_1_recompile_scripts_acf12e80721614112b7b1e40876670384}\label{class_unity_engine_1_1_test_tools_1_1_recompile_scripts_acf12e80721614112b7b1e40876670384} 
+\index{UnityEngine.TestTools.RecompileScripts@{UnityEngine.TestTools.RecompileScripts}!Perform@{Perform}}
+\index{Perform@{Perform}!UnityEngine.TestTools.RecompileScripts@{UnityEngine.TestTools.RecompileScripts}}
+\doxysubsubsection{\texorpdfstring{Perform()}{Perform()}}
+{\footnotesize\ttfamily IEnumerator Unity\+Engine.\+Test\+Tools.\+Recompile\+Scripts.\+Perform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Perform the multi step instruction of triggering a recompilation of scripts and waiting for its completion. 
+
+\begin{DoxyReturn}{Returns}
+An IEnumerator with the async steps.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & Throws an exception if the editor does not need to recompile scripts or if the script compilation failed when expected to succeed.\\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_edit_mode_test_yield_instruction_a4f785da8cc50e662bf8e4da01004c7fe}{Unity\+Engine.\+Test\+Tools.\+IEdit\+Mode\+Test\+Yield\+Instruction}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_unity_engine_1_1_test_tools_1_1_recompile_scripts_ad70b374129422f995ff7fcc199d17918}\label{class_unity_engine_1_1_test_tools_1_1_recompile_scripts_ad70b374129422f995ff7fcc199d17918} 
+\index{UnityEngine.TestTools.RecompileScripts@{UnityEngine.TestTools.RecompileScripts}!Current@{Current}}
+\index{Current@{Current}!UnityEngine.TestTools.RecompileScripts@{UnityEngine.TestTools.RecompileScripts}}
+\doxysubsubsection{\texorpdfstring{Current}{Current}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_recompile_scripts}{Recompile\+Scripts}} Unity\+Engine.\+Test\+Tools.\+Recompile\+Scripts.\+Current\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}
+
+
+
+The current active instance of the Recompile\+Scripts yield instruction. 
+
+\Hypertarget{class_unity_engine_1_1_test_tools_1_1_recompile_scripts_a6e57b555d4c38817ae8cc61fc00a8c04}\label{class_unity_engine_1_1_test_tools_1_1_recompile_scripts_a6e57b555d4c38817ae8cc61fc00a8c04} 
+\index{UnityEngine.TestTools.RecompileScripts@{UnityEngine.TestTools.RecompileScripts}!ExpectDomainReload@{ExpectDomainReload}}
+\index{ExpectDomainReload@{ExpectDomainReload}!UnityEngine.TestTools.RecompileScripts@{UnityEngine.TestTools.RecompileScripts}}
+\doxysubsubsection{\texorpdfstring{ExpectDomainReload}{ExpectDomainReload}}
+{\footnotesize\ttfamily bool Unity\+Engine.\+Test\+Tools.\+Recompile\+Scripts.\+Expect\+Domain\+Reload\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Returns true if the instruction expects a domain reload to occur. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_edit_mode_test_yield_instruction_a3cf7b174d1ecc9cdd26d231adcd4f3a9}{Unity\+Engine.\+Test\+Tools.\+IEdit\+Mode\+Test\+Yield\+Instruction}}.
+
+\Hypertarget{class_unity_engine_1_1_test_tools_1_1_recompile_scripts_a2e863521754cc2a2d3d17ea1bd9f78d5}\label{class_unity_engine_1_1_test_tools_1_1_recompile_scripts_a2e863521754cc2a2d3d17ea1bd9f78d5} 
+\index{UnityEngine.TestTools.RecompileScripts@{UnityEngine.TestTools.RecompileScripts}!ExpectedPlaymodeState@{ExpectedPlaymodeState}}
+\index{ExpectedPlaymodeState@{ExpectedPlaymodeState}!UnityEngine.TestTools.RecompileScripts@{UnityEngine.TestTools.RecompileScripts}}
+\doxysubsubsection{\texorpdfstring{ExpectedPlaymodeState}{ExpectedPlaymodeState}}
+{\footnotesize\ttfamily bool Unity\+Engine.\+Test\+Tools.\+Recompile\+Scripts.\+Expected\+Playmode\+State\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Returns true if the instruction expects the \doxylink{namespace_unity}{Unity} Editor to be in {\bfseries{Play Mode}}. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_edit_mode_test_yield_instruction_af28e01e066b7355ab048bcf78a24e9cd}{Unity\+Engine.\+Test\+Tools.\+IEdit\+Mode\+Test\+Yield\+Instruction}}.
+
+\Hypertarget{class_unity_engine_1_1_test_tools_1_1_recompile_scripts_afcb43033aa38e639500251374201105c}\label{class_unity_engine_1_1_test_tools_1_1_recompile_scripts_afcb43033aa38e639500251374201105c} 
+\index{UnityEngine.TestTools.RecompileScripts@{UnityEngine.TestTools.RecompileScripts}!ExpectScriptCompilation@{ExpectScriptCompilation}}
+\index{ExpectScriptCompilation@{ExpectScriptCompilation}!UnityEngine.TestTools.RecompileScripts@{UnityEngine.TestTools.RecompileScripts}}
+\doxysubsubsection{\texorpdfstring{ExpectScriptCompilation}{ExpectScriptCompilation}}
+{\footnotesize\ttfamily bool Unity\+Engine.\+Test\+Tools.\+Recompile\+Scripts.\+Expect\+Script\+Compilation\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Indicates whether a script compilation is expected. 
+
+\Hypertarget{class_unity_engine_1_1_test_tools_1_1_recompile_scripts_ae2c8a92d27037c51ac8a9b8959d88fce}\label{class_unity_engine_1_1_test_tools_1_1_recompile_scripts_ae2c8a92d27037c51ac8a9b8959d88fce} 
+\index{UnityEngine.TestTools.RecompileScripts@{UnityEngine.TestTools.RecompileScripts}!ExpectScriptCompilationSuccess@{ExpectScriptCompilationSuccess}}
+\index{ExpectScriptCompilationSuccess@{ExpectScriptCompilationSuccess}!UnityEngine.TestTools.RecompileScripts@{UnityEngine.TestTools.RecompileScripts}}
+\doxysubsubsection{\texorpdfstring{ExpectScriptCompilationSuccess}{ExpectScriptCompilationSuccess}}
+{\footnotesize\ttfamily bool Unity\+Engine.\+Test\+Tools.\+Recompile\+Scripts.\+Expect\+Script\+Compilation\+Success\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Indicates whether the expected script compilation is expected to succeed. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Package\+Cache/com.\+unity.\+test-\/framework@1.\+1.\+33/\+Unity\+Editor.\+Test\+Runner/\+Test\+Runner/\+Messages/\mbox{\hyperlink{_recompile_scripts_8cs}{Recompile\+Scripts.\+cs}}\end{DoxyCompactItemize}

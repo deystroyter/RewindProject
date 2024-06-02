@@ -1,0 +1,129 @@
+\chapter{Add ports to a Custom C\# node}
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create-custom-node-add-ports}{}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create-custom-node-add-ports}\index{Add ports to a Custom C\# node@{Add ports to a Custom C\# node}}
+\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create-custom-node-add-ports_autotoc_md1745}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create-custom-node-add-ports_autotoc_md1745}%
+ \begin{quote}
+\mbox{[}!\+NOTE\mbox{]} To add ports to your node, you must create the C\# file for the node. \mbox{[}!include\doxylink{custom-c-nodes_2vs-tasks-note-end_8md}{vs-\/tasks-\/note-\/end}\mbox{]} \end{quote}
+After you create a Custom C\# node, add ports to allow the node to send and receive data or trigger other nodes in a Script Graph.
+
+To add ports to a node\+:
+
+
+\begin{DoxyEnumerate}
+\item \mbox{[}!include\doxylink{vs-open-project-window_8md}{open-\/project-\/window}\mbox{]}
+\item \mbox{[}!include\doxylink{vs-open-existing-external-code_8md}{open-\/existing-\/external-\/code}\mbox{]}
+\end{DoxyEnumerate}\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create-custom-node-add-ports_autotoc_md1746}{}\doxysection{\texorpdfstring{Add control ports}{Add control ports}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create-custom-node-add-ports_autotoc_md1746}
+
+\begin{DoxyEnumerate}
+\item In your external editor, under the class definition for the node, add two public variables\+: one with a {\bfseries{Control\+Input}} type and one with a {\bfseries{Control\+Output}} type.
+\item In the {\ttfamily Definition} method for the node, use the variables to define the control ports, as shown below\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#}}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{using\ }Unity.VisualScripting;}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_unity_engine}{UnityEngine}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }MyNode\ :\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit}{Unit}}}
+\DoxyCodeLine{\ \ \ \{}
+\DoxyCodeLine{\ \ \ [DoNotSerialize]\ \textcolor{comment}{//\ No\ need\ to\ serialize\ ports.}}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_control_input}{ControlInput}}\ inputTrigger;\ \textcolor{comment}{//Adding\ the\ ControlInput\ port\ variable}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ [DoNotSerialize]\ \textcolor{comment}{//\ No\ need\ to\ serialize\ ports.}}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_control_output}{ControlOutput}}\ outputTrigger;\textcolor{comment}{//Adding\ the\ ControlOutput\ port\ variable.}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Definition()}
+\DoxyCodeLine{\ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \textcolor{comment}{//Making\ the\ ControlInput\ port\ visible,\ setting\ its\ key\ and\ running\ the\ anonymous\ action\ method\ to\ pass\ the\ flow\ to\ the\ outputTrigger\ port.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ inputTrigger\ =\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_control_input}{ControlInput}}(\textcolor{stringliteral}{"{}inputTrigger"{}},\ (flow)\ =>\ \{\ \textcolor{keywordflow}{return}\ outputTrigger;\ \});}
+\DoxyCodeLine{\ \ \ \ \ \ \ \textcolor{comment}{//Making\ the\ ControlOutput\ port\ visible\ and\ setting\ its\ key.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ outputTrigger\ =\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_control_output}{ControlOutput}}(\textcolor{stringliteral}{"{}outputTrigger"{}});}
+\DoxyCodeLine{\ \ \ \}}
+\DoxyCodeLine{\ \ \ \}}
+
+\end{DoxyCode}
+
+\item \mbox{[}!include\doxylink{vs-save-script_8md}{save-\/script}\mbox{]}
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item \mbox{[}!include\doxylink{vs-return-unity_8md}{return-\/unity}\mbox{]}
+\item Do one of the following\+:
+\begin{DoxyItemize}
+\item \mbox{[}!include\doxylink{vs-open-graph-w-node_8md}{open-\/graph-\/w-\/node}\mbox{]}.
+\item \mbox{[}!include\doxylink{vs-ff-add-node_8md}{ff-\/add-\/node}\mbox{]}
+\end{DoxyItemize}
+
+If you used the previous code sample, Visual Scripting adds input and output control ports to the node.
+
+
+\end{DoxyEnumerate}\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create-custom-node-add-ports_autotoc_md1747}{}\doxysection{\texorpdfstring{Add value ports}{Add value ports}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create-custom-node-add-ports_autotoc_md1747}
+
+\begin{DoxyEnumerate}
+\item In your external editor, under the class definition for the node, add any number of variables with either a {\bfseries{Generic}} or specific type value\+:
+\begin{DoxyItemize}
+\item {\bfseries{Generic}}\+: The port can receive or output any data type. Corresponds to \doxylink{namespace_unity}{Unity}\textquotesingle{}s {\bfseries{Object}} type.
+\item {\bfseries{Specific Type Value}}\+: The port can only receive or output a specific data type. For example, {\ttfamily string}, {\ttfamily float}, or {\ttfamily integer}.
+\end{DoxyItemize}
+
+For more information on types in Visual Scripting, see \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-types}{Object types}{0}.
+\item In the {\ttfamily Definition} method for the node, use the variables to define the value ports. In the example below, there are two input ports with a type value of {\ttfamily string}, and one {\ttfamily string} output port\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#}}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{using\ }Unity.VisualScripting;}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_unity_engine}{UnityEngine}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }MyNode\ :\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit}{Unit}}}
+\DoxyCodeLine{\ \ \ \{}
+\DoxyCodeLine{\ \ \ [DoNotSerialize]}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_control_input}{ControlInput}}\ inputTrigger;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ [DoNotSerialize]}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_control_output}{ControlOutput}}\ outputTrigger;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ [DoNotSerialize]\ \textcolor{comment}{//\ No\ need\ to\ serialize\ ports}}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_value_input}{ValueInput}}\ myValueA;\ \textcolor{comment}{//\ Adding\ the\ ValueInput\ variable\ for\ myValueA}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ [DoNotSerialize]\ \textcolor{comment}{//\ No\ need\ to\ serialize\ ports}}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_value_input}{ValueInput}}\ myValueB;\ \textcolor{comment}{//\ Adding\ the\ ValueInput\ variable\ for\ myValueB}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ [DoNotSerialize]\ \textcolor{comment}{//\ No\ need\ to\ serialize\ ports}}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_value_output}{ValueOutput}}\ result;\ \textcolor{comment}{//\ Adding\ the\ ValueOutput\ variable\ for\ result}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{string}\ resultValue;\ \textcolor{comment}{//\ Adding\ the\ string\ variable\ for\ the\ processed\ result\ value}}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Definition()}
+\DoxyCodeLine{\ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ inputTrigger\ =\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_control_input}{ControlInput}}(\textcolor{stringliteral}{"{}inputTrigger"{}},\ (flow)\ =>\ \{\ \textcolor{keywordflow}{return}\ outputTrigger;\ \});}
+\DoxyCodeLine{\ \ \ \ \ \ \ outputTrigger\ =\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_control_output}{ControlOutput}}(\textcolor{stringliteral}{"{}outputTrigger"{}});}
+\DoxyCodeLine{\ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \textcolor{comment}{//Making\ the\ myValueA\ input\ value\ port\ visible,\ setting\ the\ port\ label\ name\ to\ myValueA\ and\ setting\ its\ default\ value\ to\ Hello.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ myValueA\ =\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_value_input}{ValueInput<string>}}(\textcolor{stringliteral}{"{}myValueA"{}},\ \textcolor{stringliteral}{"{}Hello\ "{}});}
+\DoxyCodeLine{\ \ \ \ \ \ \ \textcolor{comment}{//Making\ the\ myValueB\ input\ value\ port\ visible,\ setting\ the\ port\ label\ name\ to\ myValueB\ and\ setting\ its\ default\ value\ to\ an\ empty\ string.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ myValueB\ =\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_value_input}{ValueInput<string>}}(\textcolor{stringliteral}{"{}myValueB"{}},\ \textcolor{keywordtype}{string}.Empty);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \textcolor{comment}{//Making\ the\ result\ output\ value\ port\ visible,\ setting\ the\ port\ label\ name\ to\ result\ and\ setting\ its\ default\ value\ to\ the\ resultValue\ variable.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ result\ =\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_value_output}{ValueOutput<string>}}(\textcolor{stringliteral}{"{}result"{}},\ (flow)\ =>\ \{\ \textcolor{keywordflow}{return}\ resultValue;\ \});}
+\DoxyCodeLine{\ \ \ \}}
+\DoxyCodeLine{\ \ \ \}}
+
+\end{DoxyCode}
+
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item \mbox{[}!include\doxylink{vs-save-script_8md}{save-\/script}\mbox{]}
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item \mbox{[}!include\doxylink{vs-return-unity_8md}{return-\/unity}\mbox{]}
+\item Do one of the following\+:
+\begin{DoxyItemize}
+\item \mbox{[}!include\doxylink{vs-open-graph-w-node_8md}{open-\/graph-\/w-\/node}\mbox{]}.
+\item \mbox{[}!include\doxylink{vs-ff-add-node_8md}{ff-\/add-\/node}\mbox{]}
+\end{DoxyItemize}
+
+If you used the previous code sample, Visual Scripting adds two input ports, {\bfseries{My Value A}} and {\bfseries{My Value B}}, and one output port, {\bfseries{Result}} to the node.
+
+
+\end{DoxyEnumerate}\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create-custom-node-add-ports_autotoc_md1748}{}\doxysection{\texorpdfstring{Next steps}{Next steps}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create-custom-node-add-ports_autotoc_md1748}
+After you add ports to a node, \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create-custom-node-add-logic}{add logic}{0} to tell the node what to do with the data it receives. 

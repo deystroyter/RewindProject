@@ -1,0 +1,72 @@
+\chapter{How to run tests programmatically}
+\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2extension-run-tests}{}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2extension-run-tests}\index{How to run tests programmatically@{How to run tests programmatically}}
+\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2extension-run-tests_autotoc_md548}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2extension-run-tests_autotoc_md548}%
+\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2extension-run-tests_autotoc_md549}{}\doxysection{\texorpdfstring{Filters}{Filters}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2extension-run-tests_autotoc_md549}
+Run tests by calling {\ttfamily Execute} on the \doxysectlink{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-test-runner-api}{Test\+Runner\+Api}{0}, and provide some execution settings that consists of a \doxysectlink{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-filter}{Filter}{0}. The {\ttfamily Filter} specifies what tests to run.\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2extension-run-tests_autotoc_md550}{}\doxysubsection{\texorpdfstring{Example}{Example}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2extension-run-tests_autotoc_md550}
+The following is an example of how to run all {\bfseries{Play Mode}} tests in a project\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ C\#}
+\DoxyCodeLine{var\ testRunnerApi\ =\ ScriptableObject.CreateInstance<TestRunnerApi>();}
+\DoxyCodeLine{var\ filter\ =\ new\ Filter()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ testMode\ =\ TestMode.PlayMode}
+\DoxyCodeLine{\};}
+\DoxyCodeLine{testRunnerApi.Execute(new\ ExecutionSettings(filter));}
+
+\end{DoxyCode}
+ \hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2extension-run-tests_autotoc_md551}{}\doxysection{\texorpdfstring{Multiple filter values}{Multiple filter values}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2extension-run-tests_autotoc_md551}
+It is possible to specify a more specific filter by filling out the fields on the {\ttfamily Filter} class in more detail.
+
+Many of the fields allow for multiple values. The runner tries to match tests against at least one of the values provided and then runs any tests that match.\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2extension-run-tests_autotoc_md552}{}\doxysubsection{\texorpdfstring{Example}{Example}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2extension-run-tests_autotoc_md552}
+In this example, the API runs tests with full names that fit either of the two names provided\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ C\#}
+\DoxyCodeLine{var\ api\ =\ ScriptableObject.CreateInstance<TestRunnerApi>();}
+\DoxyCodeLine{api.Execute(new\ ExecutionSettings(new\ Filter()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ testNames\ =\ new[]\ \{"{}MyTestClass.NameOfMyTest"{},\ "{}SpecificTestFixture.NameOfAnotherTest"{}\}}
+\DoxyCodeLine{\}));}
+
+\end{DoxyCode}
+ \hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2extension-run-tests_autotoc_md553}{}\doxysection{\texorpdfstring{Multiple filter fields}{Multiple filter fields}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2extension-run-tests_autotoc_md553}
+If using multiple different fields on the filter, then it matches against tests that fulfill all the different fields.\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2extension-run-tests_autotoc_md554}{}\doxysubsection{\texorpdfstring{Example}{Example}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2extension-run-tests_autotoc_md554}
+In this example, it runs any test that fits either of the two test names, and that also belongs to a test assembly that fits the given name.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ C\#}
+\DoxyCodeLine{var\ api\ =\ ScriptableObject.CreateInstance<TestRunnerApi>();}
+\DoxyCodeLine{api.Execute(new\ ExecutionSettings(new\ Filter()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ assemblyNames\ =\ new\ []\ \{"{}MyTestAssembly"{}\},}
+\DoxyCodeLine{\ \ \ \ testNames\ =\ new\ []\ \{"{}MyTestClass.NameOfMyTest"{},\ "{}MyTestClass.AnotherNameOfATest"{}\}}
+\DoxyCodeLine{\}));}
+
+\end{DoxyCode}
+ \hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2extension-run-tests_autotoc_md555}{}\doxysection{\texorpdfstring{Multiple constructor filters}{Multiple constructor filters}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2extension-run-tests_autotoc_md555}
+The execution settings take one or more filters in its constructor. If there is no filter provided, then it runs all {\bfseries{Edit Mode}} tests by default. If there are multiple filters provided, then a test runs if it matches any of the filters.\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2extension-run-tests_autotoc_md556}{}\doxysubsection{\texorpdfstring{Example}{Example}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2extension-run-tests_autotoc_md556}
+In this example, it runs any tests that are either in the assembly named {\ttfamily My\+Test\+Assembly} or if the full name of the test matches either of the two provided test names\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ C\#}
+\DoxyCodeLine{var\ api\ =\ ScriptableObject.CreateInstance<TestRunnerApi>();}
+\DoxyCodeLine{api.Execute(new\ ExecutionSettings(}
+\DoxyCodeLine{\ \ \ \ new\ Filter()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ assemblyNames\ =\ new[]\ \{"{}MyTestAssembly"{}\},}
+\DoxyCodeLine{\ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ new\ Filter()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ testNames\ =\ new[]\ \{"{}MyTestClass.NameOfMyTest"{},\ "{}MyTestClass.AnotherNameOfATest"{}\}}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{));}
+
+\end{DoxyCode}
+ \begin{quote}
+{\bfseries{Note}}\+: Specifying different test modes or platforms in each {\ttfamily Filter} is not currently supported. The test mode and platform is from the first {\ttfamily Filter} only and defaults to Edit Mode, if not supplied. \end{quote}

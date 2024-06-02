@@ -1,0 +1,161 @@
+\chapter{Control nodes}
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-control}{}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-control}\index{Control nodes@{Control nodes}}
+\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-control_autotoc_md1722}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-control_autotoc_md1722}%
+ \begin{quote}
+\mbox{[}!\+NOTE\mbox{]} For versions 2019/2020 LTS, download the Visual Scripting package from the \href{https://assetstore.unity.com/packages/tools/visual-bolt-163802}{\texttt{ Unity Asset Store}}. \end{quote}
+Control nodes branch, loop and merge the flow.\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-control_autotoc_md1723}{}\doxysection{\texorpdfstring{Branching}{Branching}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-control_autotoc_md1723}
+Branching nodes split the control flow based on a value.\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-control_autotoc_md1724}{}\doxysubsection{\texorpdfstring{If}{If}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-control_autotoc_md1724}
+The common if node uses a boolean condition. Consider them as an "{}if the condition is true, do something, otherwise, do something else."{}
+
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-control_autotoc_md1725}{}\doxysubsection{\texorpdfstring{Switch}{Switch}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-control_autotoc_md1725}
+Branch on the value of an enum, a string, or an integer. These nodes are called Switch nodes.
+
+To switch on an enum, decide on the type of the enum. The branch output ports appears.
+
+
+
+To switch on a string or number, create each branch option in the graph inspector.
+
+
+
+The node is updated with each output port.
+
+For strings, optionally choose to ignore the case of the selector.
+
+\begin{quote}
+\mbox{[}!\+NOTE\mbox{]} A Default port is always added. It is the path that the control flow should take if the input selector does not correspond to any other option. \end{quote}
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-control_autotoc_md1726}{}\doxysubsection{\texorpdfstring{Select}{Select}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-control_autotoc_md1726}
+Select nodes are the opposite of switch nodes. You can select a single value from a set of options based on a selector.
+
+For example, a Select On Integer node that chooses a color based on a player number.
+
+
+
+\texorpdfstring{$>$}{>}\mbox{[}!\+NOTE\mbox{]} \begin{quote}
+In the above example predictive debugging warns of a crash if player\+No is not within 1, 2, 3, or 4, because the Default port is not connected. \end{quote}
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-control_autotoc_md1727}{}\doxysection{\texorpdfstring{Looping}{Looping}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-control_autotoc_md1727}
+Loops repeats logic for a certain number of iterations before moving on.
+
+The logic to be repeated is called the body of the loop. After the loop is over, the exit port is called.
+
+\texorpdfstring{$>$}{>}\mbox{[}!\+NOTE\mbox{]} \begin{quote}
+The body of every loop is called synchronously, not over the course of multiple frames. Co-\/routine-\/like behaviours are achieved by listening to the update event manually. \end{quote}
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-control_autotoc_md1728}{}\doxysubsection{\texorpdfstring{While Loop}{While Loop}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-control_autotoc_md1728}
+The while loop is the simplest form of loop. It repeats its body while its condition remains true. Only when the condition becomes false does the loop terminate.
+
+For example, the following graph generates a new random name until the result isn\textquotesingle{}t contained in the names application variable.
+
+
+
+\begin{quote}
+\mbox{[}!\+WARNING\mbox{]} Do not create an infinite loop. If the condition is always true, the editor hangs. As loop bodies are synchronous, not parallel, there are few uses for while loops in visual scripting. \end{quote}
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-control_autotoc_md1729}{}\doxysubsection{\texorpdfstring{For Each Loop}{For Each Loop}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-control_autotoc_md1729}
+For Each iterates over every element of a collection. It outputs the current index and item that is being looped over.
+
+For example, the following graph outputs four messages to the console\+:
+
+
+\begin{DoxyItemize}
+\item {\itshape I love my cat}
+\item {\itshape I love my dog}
+\item {\itshape I love my bird}
+\item {\itshape I love my fish}
+\end{DoxyItemize}
+
+
+
+To access the key and value from dictionaries in the loop, check the Dictionary box.\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-control_autotoc_md1730}{}\doxysubsection{\texorpdfstring{For Loop}{For Loop}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-control_autotoc_md1730}
+For is a numeric loop and requires three integers\+: a start index, an end index, and a step. The loop starts at the first index, then increments towards the last index via increments of the step. It outputs the current index.
+
+For example, this graph counts to ten by skipping odd numbers because of its step. In other words, its output is 0, 2, 4, 6, then 8.
+
+
+
+The For loop can also be very useful when combined with the Get List Item and Count Items nodes.
+
+For example, the following graph is very similar to the last graph as the output to the console is "{}\+I like \{animal\}s"{}.
+
+Instead of using the For Each node that outputs each item, the graph outputs each item manually by its index in the list. This graph outputs the following messages\+:
+
+
+\begin{DoxyItemize}
+\item {\itshape I like cats}
+\item {\itshape I like dogs}
+\item {\itshape I like birds}
+\item {\itshape I like horses}
+\end{DoxyItemize}
+
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-control_autotoc_md1731}{}\doxysubsection{\texorpdfstring{Break Loop}{Break Loop}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-control_autotoc_md1731}
+A loop can finish early by using the Break Loop node. As soon as this node is entered, the exit port of the loop is called, no matter how many more iterations remain.
+
+For example, even though this for loop is supposed to count to 10, it stops at 5 because of the break. Its output is 0, 1, 2, 3, then 4.
+
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-control_autotoc_md1732}{}\doxysection{\texorpdfstring{Exception Handling}{Exception Handling}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-control_autotoc_md1732}
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-control_autotoc_md1733}{}\doxysubsection{\texorpdfstring{Try Catch}{Try Catch}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-control_autotoc_md1733}
+The Try Catch node handles \href{https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/exceptions/}{\texttt{ Exceptions}} that occur. It prevents your game from crashing in case you suspect some code might fail.
+
+Anything that gets executed in the Try branch is considered "{}safe"{}\+: the script continues from the Catch branch instead if it fails. The Exception port captures information about the failure when that happens. A common way of handling this is to log a warning with the exception message.
+
+
+
+\begin{quote}
+\mbox{[}!\+NOTE\mbox{]} By default, this node catches all exceptions. Be specific in your handling by changing the exception type in the dropdown. \end{quote}
+The Finally branch is optional. It is always called after Try or Catch, regardless of whether the operation succeeded or not. It is usually used to dispose or destroy any resources that must be freed. This port can be disconnected if there is no need to destroy any resources.\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-control_autotoc_md1734}{}\doxysubsection{\texorpdfstring{Throw}{Throw}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-control_autotoc_md1734}
+The Throw node allows you to raise your own exceptions that stop the flow. These are caught with Try Catch.
+
+It is good practice to "{}fail early"{} by throwing as soon as something unexpected happens. It helps catch bugs early in the chain, instead of letting them trickle down and have unexpected side effects that are hard to debug.
+
+For example, to ensure damage is positive before applying it\+:
+
+
+
+If the Custom checkbox is selected, you can pass a custom Exception object that contains more data than a simple message. Most often, this is not required. By default, the thrown exception is of type {\ttfamily System.\+Exception}.\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-control_autotoc_md1735}{}\doxysection{\texorpdfstring{Toggles}{Toggles}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-control_autotoc_md1735}
+Toggle nodes are similar in principle to light-\/switches\+: they can be turned on and off to impact either the script or values. Think of them as "{}gates"{} that can be opened and closed.\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-control_autotoc_md1736}{}\doxysubsection{\texorpdfstring{Toggle Flow}{Toggle Flow}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-control_autotoc_md1736}
+The Toggle Flow node gates the flow of control. When on, the flow passes through; when off, the flow does not.
+
+There are many inputs and outputs that allow fine grained control over the logic. In the previous example, Toggle is used to show how the same event (a keypress) turns the toggle on and off. Instead you can use On and Off with two different events to get the same results.
+
+On the output side, the Is On boolean port indicates the toggle status, that is turned on or off. The control outputs are triggered according to the table below\+: ~\newline
+
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Port   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Triggered When    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Port   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Triggered When    }\\\cline{1-2}
+\endhead
+On   &Flow enters the toggle via the unmarked input while it is on.    \\\cline{1-2}
+Off   &Flow enters the toggle via the unmarked input while it is off.    \\\cline{1-2}
+Turned On   &The toggle gets turned on, either via the On or Toggle inputs.    \\\cline{1-2}
+Turned Off   &The toggle gets turned off, either via the Off or Toggle inputs.   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-control_autotoc_md1737}{}\doxysubsection{\texorpdfstring{Toggle Value}{Toggle Value}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-control_autotoc_md1737}
+The Toggle Value node selects between two different input values depending on whether it is on or off. Its ports work exactly like the Toggle Flow node.
+
+Another way of implementing the same logic as the previous example\+: clicking Space toggles the object to move up. This time a value of 1 or 0 is provided as the vertical velocity.
+
+\begin{quote}
+\mbox{[}!\+NOTE\mbox{]} Turn on relations in the toolbar as a means to visualize the flow between the toggle ports. \end{quote}
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-control_autotoc_md1738}{}\doxysection{\texorpdfstring{Once}{Once}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-control_autotoc_md1738}
+The Once node executes different logic the first time it is traversed from any subsequent times.
+
+
+
+It can be reset by entering the Reset port.\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-control_autotoc_md1739}{}\doxysection{\texorpdfstring{Cache}{Cache}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-control_autotoc_md1739}
+The Cache node saves the result of an expensive operating and reuses it instead of fetching it again each time you need it.
+
+For example, using this graph, the formula is calculated twice\+:
+
+
+
+By using the Cache node, the result is saved and calculated only once, optimizing performance.
+
+
+
+\begin{quote}
+\mbox{[}!\+NOTE\mbox{]} It is important to note that caching only lasts within the scope of the current flow. The value of the cache is not shared or available from another event. \end{quote}

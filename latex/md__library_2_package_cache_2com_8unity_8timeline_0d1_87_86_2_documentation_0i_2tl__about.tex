@@ -1,0 +1,46 @@
+\chapter{Timeline overview}
+\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__about}{}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__about}\index{Timeline overview@{Timeline overview}}
+\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__about_autotoc_md1232}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__about_autotoc_md1232}%
+ Use the {\bfseries{\doxylink{namespace_timeline}{Timeline} window}} to create cut-\/scenes, cinematics, and game-\/play sequences by visually arranging tracks and clips linked to Game\+Objects in your Scene.
+
+
+
+{\itshape A cinematic sequence in the \doxylink{namespace_timeline}{Timeline} window.}
+
+For each cut-\/scene, cinematic, or game-\/play sequence, the \doxylink{namespace_timeline}{Timeline} window saves the following\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{\doxylink{namespace_timeline}{Timeline} Asset}}\+: Stores the tracks, clips, and recorded animations without links to the specific Game\+Objects being animated. The \doxylink{namespace_timeline}{Timeline} Asset is saved to the Project.
+\item {\bfseries{\doxylink{namespace_timeline}{Timeline} instance}}\+: Stores links to the specific Game\+Objects being animated or affected by the \doxylink{namespace_timeline}{Timeline} Asset. These links, referred to as {\bfseries{bindings}}, are saved to the Scene.
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__about_autotoc_md1233}{}\doxysection{\texorpdfstring{Timeline Asset}{Timeline Asset}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__about_autotoc_md1233}
+The \doxylink{namespace_timeline}{Timeline} window saves track and clip definitions as a {\bfseries{\doxylink{namespace_timeline}{Timeline} Asset}}. If you record key animations while creating your cinematic, cut-\/scene, or game-\/play sequence, the \doxylink{namespace_timeline}{Timeline} window saves the recorded clips as children of the \doxylink{namespace_timeline}{Timeline} Asset.
+
+
+
+{\itshape The \doxylink{namespace_timeline}{Timeline} Asset saves tracks and clips (red). \doxylink{namespace_timeline}{Timeline} saves recorded clips (blue) as children of the \doxylink{namespace_timeline}{Timeline} Asset.}\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__about_autotoc_md1234}{}\doxysection{\texorpdfstring{Timeline instance}{Timeline instance}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__about_autotoc_md1234}
+To animate a Game\+Object in your Scene with a \doxylink{namespace_timeline}{Timeline} Asset, you must create a {\bfseries{\doxylink{namespace_timeline}{Timeline} instance}}. A {\bfseries{\doxylink{namespace_timeline}{Timeline} instance}} associates a \doxylink{namespace_timeline}{Timeline} Asset with the Game\+Object in the Scene, through a \doxysectlink{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2play__director}{Playable Director}{0} component.
+
+When you select a Game\+Object in a Scene that has a Playable Director component, the \doxylink{namespace_timeline}{Timeline} instance appears in the \doxylink{namespace_timeline}{Timeline} window. The bindings appear in the \doxylink{namespace_timeline}{Timeline} window and in the Playable Director component (Inspector window).
+
+
+
+{\itshape The Playable Director component shows the \doxylink{namespace_timeline}{Timeline} Asset (blue) with its bound Game\+Objects (red). The \doxylink{namespace_timeline}{Timeline} window shows the same bindings (red) in the Track list.}
+
+The \doxylink{namespace_timeline}{Timeline} window provides an automated method of creating a \doxylink{namespace_timeline}{Timeline} instance while \doxysectlink{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2wf__instance}{creating a Timeline Asset}{0}.\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__about_autotoc_md1235}{}\doxysection{\texorpdfstring{Reusing Timeline Assets}{Reusing Timeline Assets}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2tl__about_autotoc_md1235}
+Because \doxylink{namespace_timeline}{Timeline} Assets and \doxylink{namespace_timeline}{Timeline} instances are separate, you can reuse the same \doxylink{namespace_timeline}{Timeline} Asset with many \doxylink{namespace_timeline}{Timeline} instances.
+
+For example, you could create a \doxylink{namespace_timeline}{Timeline} Asset named Victory\+TL with the animation, music, and particle effects that play when the main game character (Player) wins. To reuse the Victory\+TL \doxylink{namespace_timeline}{Timeline} Asset to animate another game character (Enemy) in the same Scene, you can create another \doxylink{namespace_timeline}{Timeline} instance for the secondary game character.
+
+
+
+{\itshape The Player Game\+Object (red) is attached to the Victory\+TL \doxylink{namespace_timeline}{Timeline} Asset\mbox{]}}
+
+
+
+{\itshape The Enemy Game\+Object (blue) is also attached to the Victory\+TL \doxylink{namespace_timeline}{Timeline} Asset\mbox{]}}
+
+Because you are reusing the \doxylink{namespace_timeline}{Timeline} Asset, any modification to the \doxylink{namespace_timeline}{Timeline} Asset in the \doxylink{namespace_timeline}{Timeline} window results in changes to all \doxylink{namespace_timeline}{Timeline} instances.
+
+For example, in the previous example, if you delete the Audio track while modifying the Player \doxylink{namespace_timeline}{Timeline} instance, the \doxylink{namespace_timeline}{Timeline} window removes the track from the Victory\+TL \doxylink{namespace_timeline}{Timeline} Asset. The \doxylink{namespace_timeline}{Timeline} window also removes the Audio track from all instances of the Victory\+TL \doxylink{namespace_timeline}{Timeline} Asset, including the Enemy \doxylink{namespace_timeline}{Timeline} instance. 

@@ -1,0 +1,449 @@
+\doxysection{Unity.\+Visual\+Scripting.\+Bolt\+Core\+Configuration Class Reference}
+\hypertarget{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration}{}\label{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration}\index{Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}}
+Inheritance diagram for Unity.\+Visual\+Scripting.\+Bolt\+Core\+Configuration\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.745819cm]{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_af329aae1239518e4d100788883ae355c}{Late\+Initialize}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_plugin_configuration}{Unity.\+Visual\+Scripting.\+Plugin\+Configuration}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_plugin_configuration_aae38e6aa83afeb26c70dd87a7f96ca56}{Initialize}} ()
+\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_plugin_configuration_af0287a8293dd9d56fb14e34b16c465ee}{Reset}} ()
+\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_plugin_configuration_a23ea84438c61aa23f27dc2117338332f}{Save}} ()
+\item 
+IEnumerator$<$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_plugin_configuration_item_metadata}{Plugin\+Configuration\+Item\+Metadata}} $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_plugin_configuration_a999987874a38969d801488ff346ebc5b}{Get\+Enumerator}} ()
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_plugin_configuration_item_metadata}{Plugin\+Configuration\+Item\+Metadata}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_plugin_configuration_a202decae67c7927cba645cc940f32226}{Get\+Metadata}} (string member\+Name)
+\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_plugin_configuration_ae55340d80b28ce9f3d0f1e0f8698b0c1}{Save\+Project\+Settings\+Asset}} (bool immediately=false)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+override string \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a03f8546a960d6d9c0b6689901e954b3d}{header}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a603f77ca2d5a2e15a74d031144a26d45}{dim\+Inactive\+Nodes}} = true\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether inactive graph nodes should be dimmed. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a222655fbfe09ab980c5100650a150f25}{dim\+Incompatible\+Nodes}} = true\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether incompatible graph nodes should be dimmed. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a3d5a8b7962cf660ef93527ae56748d2f}{show\+Variables\+Help}} = true\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether the header help panel should be shown in the variables window. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_ab83a97135b73edcf61411a751b354c4c}{create\+Scene\+Variables}} = true\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether the scene variables object should be created automatically. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_acc18fc8e05ec361278457cafd93ac79f}{show\+Grid}} = true\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether the graph window should show the background grid. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_aaad1f9ae03157e8e77a4946db4588938}{snap\+To\+Grid}} = false\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether graph elements should snap to grid. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a3816cd45536a68db8ebbe283d3a1b1e0}{pan\+Speed}} = 5\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The speed at which the mouse scroll pans the graph. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a44963005d558a0fddc4463752e7a63a4}{drag\+Pan\+Speed}} = 5\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The speed at which dragged elements pan the graph when at the edge. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_ab30c248c921e6389860b417bbd85d957}{zoom\+Speed}} = 0.\+025f\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The speed at which the mouse wheel zooms the graph. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a13ea5fc35e9c3bb645dc965bdd7d8c07}{overview\+Smoothing}} = 0.\+25f\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The duration for graph overview. Set to zero to disable smoothing. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a7d693e2489418f7cf491f5d8f3e62721}{carry\+Children}} = false\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether children of graph elements should be dragged alongside their parent. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a68e42f726fec1c59483995b42a184e59}{disable\+Playmode\+Tint}} = true\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether the playmode tint should be removed in the graph window. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a453d4e53457e857a42871924930a43d8}{debug}} = false\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether additional helpers should be shown in graphs for debugging. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_unity_1_1_visual_scripting_a67718b9b7fc6240ab3c5973b397df616}{Canvas\+Control\+Scheme}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a37acf28cc99dc7d05da257876090c54f}{control\+Scheme}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The control scheme to use for pan and zoom. Default\+: pan with \mbox{[}MMB\mbox{]}, zoom with \mbox{[}Ctrl + Scroll Wheel\mbox{]}. Alternate\+: pan with \mbox{[}MMB\mbox{]} or \mbox{[}Alt + LMB\mbox{]}, zoom with \mbox{[}Scroll Wheel\mbox{]}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_aeeaf03c95611929a7fec41d5658a7aba}{clear\+Graph\+Selection}} = false\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether the graph window and inspector should be cleared when the selection does not provide a graph. When disabled, the last graph will stay selected. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a55aaf4bdd9bf7d238b29bed43c4d4340}{human\+Naming}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether programming names should be converted into a more human-\/readable format. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a56ed8cb6a65802c6986c94f84596b9bc}{max\+Search\+Results}} = 100\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The maximum amount of search results to display. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_accfe47510d09648bc4ec9d99dbfb88c1}{group\+Inherited\+Members}} = true\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether inherited below should be grouped at the bottom of the options list. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_af1c374808ddd713a445057b906ceaf00}{limit\+Fuzzy\+Finder\+Height}} = true\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether the height of the fuzzy finder should be limited to the main editor window height. This is meant to fix Y offset issues on OSX, but will cut the fuzzy finder if this window is not maximized to the screen size. \end{DoxyCompactList}\item 
+new bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_ad6a80cf6e0c109ad0f5642b07ad56b1d}{developer\+Mode}} = false\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Enables additional options and logging for debugging purposes. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_aa2014aeb5be88e579d152c1acffb3a9d}{track\+Metadata\+State}} = false\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether the log should track metadata state. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_af680d9809a51a782c253a2f0150f0170}{debug\+Inspector\+GUI}} = false\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether additional helpers should be shown in the inspector for debugging and profiling. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a4d2a640a2157c241fa9cd62ec5c1e489}{aot\+Safe\+Mode}} = true\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether some types, including generics, should be filtered out when targetting AOT platforms. \end{DoxyCompactList}\item 
+Hash\+Set$<$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_member}{Member}} $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a3f25a6e4e1c708af3578f7102c60d4e4}{favorite\+Members}} = new Hash\+Set$<$\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_member}{Member}}$>$()\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+List$<$ bool $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_acf3a230cb03e8bfb68b6fcfcef9d9e77}{Linker\+Property\+Provider\+Settings}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+List$<$ \mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_loose_assembly_name}{Loose\+Assembly\+Name}} $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a53f70da4041c19c9dafc9597ed8a851d}{assembly\+Options}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The assemblies available for reflection. \end{DoxyCompactList}\item 
+List$<$ Type $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a9e6586b75b660c250e8185d62fcc5bf8}{type\+Options}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The list of types available in the inspector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_plugin_configuration}{Unity.\+Visual\+Scripting.\+Plugin\+Configuration}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_plugin}{Plugin}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_plugin_configuration_aa832af20d299a315d02874150c735d57}{plugin}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+virtual string \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_plugin_configuration_a08f5e91ca048a43d7b9ae36509fcd045}{header}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Read\+Only\+Collection$<$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_plugin_deprecated_saved_version_loader}{Plugin\+Deprecated\+Saved\+Version\+Loader}} $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_plugin_configuration_a2f6ca778489689dd895e3c7a815132d8}{deprecated\+Saved\+Version\+Loaders}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_plugin_configuration_a6ce8d83d8a2838931db841a6cc8dfe80}{project\+Setup\+Completed}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether the plugin was properly setup. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_plugin_configuration_a78f753ca6ba1ccef06b1992028406e11}{editor\+Setup\+Completed}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether the plugin was properly setup. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_semantic_version}{Semantic\+Version}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_plugin_configuration_af8041f948348cc35a5682239c32331b4}{saved\+Version}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The last version to which the plugin successfully upgraded. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_plugin_configuration_a58fa282e69640e1b3fe147207cdca5e9}{developer\+Mode}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_plugin_linked}{Unity.\+Visual\+Scripting.\+IPlugin\+Linked}}}
+\doxysubsubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+Action \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a1979a8add4f39898e06f0a24de755b20}{Control\+Scheme\+Changed}}
+\item 
+Action \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a5d846ee38d757f372ed260b136be0681}{naming\+Scheme\+Changed}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_plugin_configuration}{Unity.\+Visual\+Scripting.\+Plugin\+Configuration}}}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_plugin_configuration_a78a6a69479943634c20b1496dbb734e5}{Delete\+All\+Project\+Settings}} ()
+\item 
+static void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_plugin_configuration_a9496e91dd2c3fcda56b67ac6c10b493a}{Delete\+All\+Editor\+Prefs}} ()
+\item 
+static void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_plugin_configuration_a4ddbb671e4d278e75350700891d819a4}{Delete\+All\+Player\+Prefs}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_plugin_configuration}{Unity.\+Visual\+Scripting.\+Plugin\+Configuration}}}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_project_setting_metadata}{Project\+Setting\+Metadata}} $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_plugin_configuration_a602e93dad12ee301be18d1ce00e77eb0}{project\+Settings}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_plugin_configuration}{Unity.\+Visual\+Scripting.\+Plugin\+Configuration}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_plugin_configuration_adeb7d9d45cc75e21b2b52d80826207bb}{Plugin\+Configuration}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_plugin}{Plugin}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_plugin_configuration_aa832af20d299a315d02874150c735d57}{plugin}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_af329aae1239518e4d100788883ae355c}\label{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_af329aae1239518e4d100788883ae355c} 
+\index{Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}!LateInitialize@{LateInitialize}}
+\index{LateInitialize@{LateInitialize}!Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}}
+\doxysubsubsection{\texorpdfstring{LateInitialize()}{LateInitialize()}}
+{\footnotesize\ttfamily override void Unity.\+Visual\+Scripting.\+Bolt\+Core\+Configuration.\+Late\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_plugin_configuration_a2e54402730db82330b71845204228b42}{Unity.\+Visual\+Scripting.\+Plugin\+Configuration}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a4d2a640a2157c241fa9cd62ec5c1e489}\label{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a4d2a640a2157c241fa9cd62ec5c1e489} 
+\index{Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}!aotSafeMode@{aotSafeMode}}
+\index{aotSafeMode@{aotSafeMode}!Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}}
+\doxysubsubsection{\texorpdfstring{aotSafeMode}{aotSafeMode}}
+{\footnotesize\ttfamily bool Unity.\+Visual\+Scripting.\+Bolt\+Core\+Configuration.\+aot\+Safe\+Mode = true\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Whether some types, including generics, should be filtered out when targetting AOT platforms. 
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a53f70da4041c19c9dafc9597ed8a851d}\label{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a53f70da4041c19c9dafc9597ed8a851d} 
+\index{Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}!assemblyOptions@{assemblyOptions}}
+\index{assemblyOptions@{assemblyOptions}!Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}}
+\doxysubsubsection{\texorpdfstring{assemblyOptions}{assemblyOptions}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_loose_assembly_name}{Loose\+Assembly\+Name}}$>$ Unity.\+Visual\+Scripting.\+Bolt\+Core\+Configuration.\+assembly\+Options\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The assemblies available for reflection. 
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a7d693e2489418f7cf491f5d8f3e62721}\label{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a7d693e2489418f7cf491f5d8f3e62721} 
+\index{Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}!carryChildren@{carryChildren}}
+\index{carryChildren@{carryChildren}!Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}}
+\doxysubsubsection{\texorpdfstring{carryChildren}{carryChildren}}
+{\footnotesize\ttfamily bool Unity.\+Visual\+Scripting.\+Bolt\+Core\+Configuration.\+carry\+Children = false\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Whether children of graph elements should be dragged alongside their parent. 
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_aeeaf03c95611929a7fec41d5658a7aba}\label{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_aeeaf03c95611929a7fec41d5658a7aba} 
+\index{Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}!clearGraphSelection@{clearGraphSelection}}
+\index{clearGraphSelection@{clearGraphSelection}!Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}}
+\doxysubsubsection{\texorpdfstring{clearGraphSelection}{clearGraphSelection}}
+{\footnotesize\ttfamily bool Unity.\+Visual\+Scripting.\+Bolt\+Core\+Configuration.\+clear\+Graph\+Selection = false\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Whether the graph window and inspector should be cleared when the selection does not provide a graph. When disabled, the last graph will stay selected. 
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a37acf28cc99dc7d05da257876090c54f}\label{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a37acf28cc99dc7d05da257876090c54f} 
+\index{Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}!controlScheme@{controlScheme}}
+\index{controlScheme@{controlScheme}!Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}}
+\doxysubsubsection{\texorpdfstring{controlScheme}{controlScheme}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_unity_1_1_visual_scripting_a67718b9b7fc6240ab3c5973b397df616}{Canvas\+Control\+Scheme}} Unity.\+Visual\+Scripting.\+Bolt\+Core\+Configuration.\+control\+Scheme\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The control scheme to use for pan and zoom. Default\+: pan with \mbox{[}MMB\mbox{]}, zoom with \mbox{[}Ctrl + Scroll Wheel\mbox{]}. Alternate\+: pan with \mbox{[}MMB\mbox{]} or \mbox{[}Alt + LMB\mbox{]}, zoom with \mbox{[}Scroll Wheel\mbox{]}. 
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_ab83a97135b73edcf61411a751b354c4c}\label{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_ab83a97135b73edcf61411a751b354c4c} 
+\index{Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}!createSceneVariables@{createSceneVariables}}
+\index{createSceneVariables@{createSceneVariables}!Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}}
+\doxysubsubsection{\texorpdfstring{createSceneVariables}{createSceneVariables}}
+{\footnotesize\ttfamily bool Unity.\+Visual\+Scripting.\+Bolt\+Core\+Configuration.\+create\+Scene\+Variables = true\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Whether the scene variables object should be created automatically. 
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a453d4e53457e857a42871924930a43d8}\label{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a453d4e53457e857a42871924930a43d8} 
+\index{Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}!debug@{debug}}
+\index{debug@{debug}!Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}}
+\doxysubsubsection{\texorpdfstring{debug}{debug}}
+{\footnotesize\ttfamily bool Unity.\+Visual\+Scripting.\+Bolt\+Core\+Configuration.\+debug = false\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Whether additional helpers should be shown in graphs for debugging. 
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_af680d9809a51a782c253a2f0150f0170}\label{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_af680d9809a51a782c253a2f0150f0170} 
+\index{Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}!debugInspectorGUI@{debugInspectorGUI}}
+\index{debugInspectorGUI@{debugInspectorGUI}!Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}}
+\doxysubsubsection{\texorpdfstring{debugInspectorGUI}{debugInspectorGUI}}
+{\footnotesize\ttfamily bool Unity.\+Visual\+Scripting.\+Bolt\+Core\+Configuration.\+debug\+Inspector\+GUI = false\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Whether additional helpers should be shown in the inspector for debugging and profiling. 
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_ad6a80cf6e0c109ad0f5642b07ad56b1d}\label{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_ad6a80cf6e0c109ad0f5642b07ad56b1d} 
+\index{Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}!developerMode@{developerMode}}
+\index{developerMode@{developerMode}!Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}}
+\doxysubsubsection{\texorpdfstring{developerMode}{developerMode}}
+{\footnotesize\ttfamily new bool Unity.\+Visual\+Scripting.\+Bolt\+Core\+Configuration.\+developer\+Mode = false\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Enables additional options and logging for debugging purposes. 
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a603f77ca2d5a2e15a74d031144a26d45}\label{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a603f77ca2d5a2e15a74d031144a26d45} 
+\index{Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}!dimInactiveNodes@{dimInactiveNodes}}
+\index{dimInactiveNodes@{dimInactiveNodes}!Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}}
+\doxysubsubsection{\texorpdfstring{dimInactiveNodes}{dimInactiveNodes}}
+{\footnotesize\ttfamily bool Unity.\+Visual\+Scripting.\+Bolt\+Core\+Configuration.\+dim\+Inactive\+Nodes = true\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Whether inactive graph nodes should be dimmed. 
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a222655fbfe09ab980c5100650a150f25}\label{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a222655fbfe09ab980c5100650a150f25} 
+\index{Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}!dimIncompatibleNodes@{dimIncompatibleNodes}}
+\index{dimIncompatibleNodes@{dimIncompatibleNodes}!Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}}
+\doxysubsubsection{\texorpdfstring{dimIncompatibleNodes}{dimIncompatibleNodes}}
+{\footnotesize\ttfamily bool Unity.\+Visual\+Scripting.\+Bolt\+Core\+Configuration.\+dim\+Incompatible\+Nodes = true\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Whether incompatible graph nodes should be dimmed. 
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a68e42f726fec1c59483995b42a184e59}\label{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a68e42f726fec1c59483995b42a184e59} 
+\index{Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}!disablePlaymodeTint@{disablePlaymodeTint}}
+\index{disablePlaymodeTint@{disablePlaymodeTint}!Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}}
+\doxysubsubsection{\texorpdfstring{disablePlaymodeTint}{disablePlaymodeTint}}
+{\footnotesize\ttfamily bool Unity.\+Visual\+Scripting.\+Bolt\+Core\+Configuration.\+disable\+Playmode\+Tint = true\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Whether the playmode tint should be removed in the graph window. 
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a44963005d558a0fddc4463752e7a63a4}\label{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a44963005d558a0fddc4463752e7a63a4} 
+\index{Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}!dragPanSpeed@{dragPanSpeed}}
+\index{dragPanSpeed@{dragPanSpeed}!Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}}
+\doxysubsubsection{\texorpdfstring{dragPanSpeed}{dragPanSpeed}}
+{\footnotesize\ttfamily float Unity.\+Visual\+Scripting.\+Bolt\+Core\+Configuration.\+drag\+Pan\+Speed = 5\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The speed at which dragged elements pan the graph when at the edge. 
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a3f25a6e4e1c708af3578f7102c60d4e4}\label{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a3f25a6e4e1c708af3578f7102c60d4e4} 
+\index{Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}!favoriteMembers@{favoriteMembers}}
+\index{favoriteMembers@{favoriteMembers}!Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}}
+\doxysubsubsection{\texorpdfstring{favoriteMembers}{favoriteMembers}}
+{\footnotesize\ttfamily Hash\+Set$<$\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_member}{Member}}$>$ Unity.\+Visual\+Scripting.\+Bolt\+Core\+Configuration.\+favorite\+Members = new Hash\+Set$<$\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_member}{Member}}$>$()\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_accfe47510d09648bc4ec9d99dbfb88c1}\label{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_accfe47510d09648bc4ec9d99dbfb88c1} 
+\index{Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}!groupInheritedMembers@{groupInheritedMembers}}
+\index{groupInheritedMembers@{groupInheritedMembers}!Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}}
+\doxysubsubsection{\texorpdfstring{groupInheritedMembers}{groupInheritedMembers}}
+{\footnotesize\ttfamily bool Unity.\+Visual\+Scripting.\+Bolt\+Core\+Configuration.\+group\+Inherited\+Members = true\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Whether inherited below should be grouped at the bottom of the options list. 
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a03f8546a960d6d9c0b6689901e954b3d}\label{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a03f8546a960d6d9c0b6689901e954b3d} 
+\index{Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}!header@{header}}
+\index{header@{header}!Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}}
+\doxysubsubsection{\texorpdfstring{header}{header}}
+{\footnotesize\ttfamily override string Unity.\+Visual\+Scripting.\+Bolt\+Core\+Configuration.\+header\hspace{0.3cm}{\ttfamily [get]}}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a55aaf4bdd9bf7d238b29bed43c4d4340}\label{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a55aaf4bdd9bf7d238b29bed43c4d4340} 
+\index{Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}!humanNaming@{humanNaming}}
+\index{humanNaming@{humanNaming}!Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}}
+\doxysubsubsection{\texorpdfstring{humanNaming}{humanNaming}}
+{\footnotesize\ttfamily bool Unity.\+Visual\+Scripting.\+Bolt\+Core\+Configuration.\+human\+Naming\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Whether programming names should be converted into a more human-\/readable format. 
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_af1c374808ddd713a445057b906ceaf00}\label{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_af1c374808ddd713a445057b906ceaf00} 
+\index{Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}!limitFuzzyFinderHeight@{limitFuzzyFinderHeight}}
+\index{limitFuzzyFinderHeight@{limitFuzzyFinderHeight}!Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}}
+\doxysubsubsection{\texorpdfstring{limitFuzzyFinderHeight}{limitFuzzyFinderHeight}}
+{\footnotesize\ttfamily bool Unity.\+Visual\+Scripting.\+Bolt\+Core\+Configuration.\+limit\+Fuzzy\+Finder\+Height = true\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Whether the height of the fuzzy finder should be limited to the main editor window height. This is meant to fix Y offset issues on OSX, but will cut the fuzzy finder if this window is not maximized to the screen size. 
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_acf3a230cb03e8bfb68b6fcfcef9d9e77}\label{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_acf3a230cb03e8bfb68b6fcfcef9d9e77} 
+\index{Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}!LinkerPropertyProviderSettings@{LinkerPropertyProviderSettings}}
+\index{LinkerPropertyProviderSettings@{LinkerPropertyProviderSettings}!Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}}
+\doxysubsubsection{\texorpdfstring{LinkerPropertyProviderSettings}{LinkerPropertyProviderSettings}}
+{\footnotesize\ttfamily List$<$bool$>$ Unity.\+Visual\+Scripting.\+Bolt\+Core\+Configuration.\+Linker\+Property\+Provider\+Settings\hspace{0.3cm}{\ttfamily [get]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \textcolor{keyword}{new}\ List<bool>()}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{true},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{true},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{true}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a56ed8cb6a65802c6986c94f84596b9bc}\label{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a56ed8cb6a65802c6986c94f84596b9bc} 
+\index{Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}!maxSearchResults@{maxSearchResults}}
+\index{maxSearchResults@{maxSearchResults}!Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}}
+\doxysubsubsection{\texorpdfstring{maxSearchResults}{maxSearchResults}}
+{\footnotesize\ttfamily int Unity.\+Visual\+Scripting.\+Bolt\+Core\+Configuration.\+max\+Search\+Results = 100\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The maximum amount of search results to display. 
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a13ea5fc35e9c3bb645dc965bdd7d8c07}\label{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a13ea5fc35e9c3bb645dc965bdd7d8c07} 
+\index{Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}!overviewSmoothing@{overviewSmoothing}}
+\index{overviewSmoothing@{overviewSmoothing}!Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}}
+\doxysubsubsection{\texorpdfstring{overviewSmoothing}{overviewSmoothing}}
+{\footnotesize\ttfamily float Unity.\+Visual\+Scripting.\+Bolt\+Core\+Configuration.\+overview\+Smoothing = 0.\+25f\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The duration for graph overview. Set to zero to disable smoothing. 
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a3816cd45536a68db8ebbe283d3a1b1e0}\label{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a3816cd45536a68db8ebbe283d3a1b1e0} 
+\index{Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}!panSpeed@{panSpeed}}
+\index{panSpeed@{panSpeed}!Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}}
+\doxysubsubsection{\texorpdfstring{panSpeed}{panSpeed}}
+{\footnotesize\ttfamily float Unity.\+Visual\+Scripting.\+Bolt\+Core\+Configuration.\+pan\+Speed = 5\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The speed at which the mouse scroll pans the graph. 
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_acc18fc8e05ec361278457cafd93ac79f}\label{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_acc18fc8e05ec361278457cafd93ac79f} 
+\index{Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}!showGrid@{showGrid}}
+\index{showGrid@{showGrid}!Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}}
+\doxysubsubsection{\texorpdfstring{showGrid}{showGrid}}
+{\footnotesize\ttfamily bool Unity.\+Visual\+Scripting.\+Bolt\+Core\+Configuration.\+show\+Grid = true\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Whether the graph window should show the background grid. 
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a3d5a8b7962cf660ef93527ae56748d2f}\label{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a3d5a8b7962cf660ef93527ae56748d2f} 
+\index{Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}!showVariablesHelp@{showVariablesHelp}}
+\index{showVariablesHelp@{showVariablesHelp}!Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}}
+\doxysubsubsection{\texorpdfstring{showVariablesHelp}{showVariablesHelp}}
+{\footnotesize\ttfamily bool Unity.\+Visual\+Scripting.\+Bolt\+Core\+Configuration.\+show\+Variables\+Help = true\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Whether the header help panel should be shown in the variables window. 
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_aaad1f9ae03157e8e77a4946db4588938}\label{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_aaad1f9ae03157e8e77a4946db4588938} 
+\index{Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}!snapToGrid@{snapToGrid}}
+\index{snapToGrid@{snapToGrid}!Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}}
+\doxysubsubsection{\texorpdfstring{snapToGrid}{snapToGrid}}
+{\footnotesize\ttfamily bool Unity.\+Visual\+Scripting.\+Bolt\+Core\+Configuration.\+snap\+To\+Grid = false\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Whether graph elements should snap to grid. 
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_aa2014aeb5be88e579d152c1acffb3a9d}\label{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_aa2014aeb5be88e579d152c1acffb3a9d} 
+\index{Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}!trackMetadataState@{trackMetadataState}}
+\index{trackMetadataState@{trackMetadataState}!Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}}
+\doxysubsubsection{\texorpdfstring{trackMetadataState}{trackMetadataState}}
+{\footnotesize\ttfamily bool Unity.\+Visual\+Scripting.\+Bolt\+Core\+Configuration.\+track\+Metadata\+State = false\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Whether the log should track metadata state. 
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a9e6586b75b660c250e8185d62fcc5bf8}\label{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a9e6586b75b660c250e8185d62fcc5bf8} 
+\index{Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}!typeOptions@{typeOptions}}
+\index{typeOptions@{typeOptions}!Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}}
+\doxysubsubsection{\texorpdfstring{typeOptions}{typeOptions}}
+{\footnotesize\ttfamily List$<$Type$>$ Unity.\+Visual\+Scripting.\+Bolt\+Core\+Configuration.\+type\+Options\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The list of types available in the inspector. 
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_ab30c248c921e6389860b417bbd85d957}\label{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_ab30c248c921e6389860b417bbd85d957} 
+\index{Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}!zoomSpeed@{zoomSpeed}}
+\index{zoomSpeed@{zoomSpeed}!Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}}
+\doxysubsubsection{\texorpdfstring{zoomSpeed}{zoomSpeed}}
+{\footnotesize\ttfamily float Unity.\+Visual\+Scripting.\+Bolt\+Core\+Configuration.\+zoom\+Speed = 0.\+025f\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The speed at which the mouse wheel zooms the graph. 
+
+
+
+\doxysubsection{Event Documentation}
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a1979a8add4f39898e06f0a24de755b20}\label{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a1979a8add4f39898e06f0a24de755b20} 
+\index{Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}!ControlSchemeChanged@{ControlSchemeChanged}}
+\index{ControlSchemeChanged@{ControlSchemeChanged}!Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}}
+\doxysubsubsection{\texorpdfstring{ControlSchemeChanged}{ControlSchemeChanged}}
+{\footnotesize\ttfamily Action Unity.\+Visual\+Scripting.\+Bolt\+Core\+Configuration.\+Control\+Scheme\+Changed}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a5d846ee38d757f372ed260b136be0681}\label{class_unity_1_1_visual_scripting_1_1_bolt_core_configuration_a5d846ee38d757f372ed260b136be0681} 
+\index{Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}!namingSchemeChanged@{namingSchemeChanged}}
+\index{namingSchemeChanged@{namingSchemeChanged}!Unity.VisualScripting.BoltCoreConfiguration@{Unity.VisualScripting.BoltCoreConfiguration}}
+\doxysubsubsection{\texorpdfstring{namingSchemeChanged}{namingSchemeChanged}}
+{\footnotesize\ttfamily Action Unity.\+Visual\+Scripting.\+Bolt\+Core\+Configuration.\+naming\+Scheme\+Changed}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Package\+Cache/com.\+unity.\+visualscripting@1.\+9.\+2/\+Editor/\+Visual\+Scripting.\+Core/\+Plugin/\mbox{\hyperlink{_bolt_core_configuration_8cs}{Bolt\+Core\+Configuration.\+cs}}\end{DoxyCompactItemize}

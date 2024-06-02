@@ -1,0 +1,69 @@
+\chapter{Standalone Input Module}
+\hypertarget{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2script-_standalone_input_module}{}\label{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2script-_standalone_input_module}\index{Standalone Input Module@{Standalone Input Module}}
+\label{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2script-_standalone_input_module_autotoc_md1431}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2script-_standalone_input_module_autotoc_md1431}%
+ The module is designed to work as you would expect a controller / mouse input to work. Events for button presses, dragging, and similar are sent in response to input.
+
+The module sends pointer events to components as a mouse / input device is moved around, and uses the \doxysectlink{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2script-_graphic_raycaster}{Graphics Raycaster}{0} and \doxysectlink{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2script-_physics_raycaster}{Physics Raycaster}{0} to calculate which element is currently pointed at by a given pointer device. You can configure these raycasters to detect or ignore parts of your Scene, to suit your requirements.
+
+The module sends move events and submit / cancel events in response to Input tracked via the \href{https://docs.unity3d.com/Manual/class-InputManager.html}{\texttt{ Input}} window. This works for both keyboard and controller input. The tracked axis and keys can be configured in the module\textquotesingle{}s inspector.\hypertarget{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2script-_standalone_input_module_autotoc_md1432}{}\doxysection{\texorpdfstring{Properties}{Properties}}\label{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2script-_standalone_input_module_autotoc_md1432}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\+\_\+\+Property\+:\+\_\+\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}   }&\cellcolor{\tableheadbgcolor}\textbf{ \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\+\_\+\+Function\+:\+\_\+\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\+\_\+\+Property\+:\+\_\+\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}   }&\cellcolor{\tableheadbgcolor}\textbf{ \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\+\_\+\+Function\+:\+\_\+\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}    }\\\cline{1-2}
+\endhead
+{\bfseries{Horizontal Axis}}   &Type the desired manager name for the horizontal axis button.    \\\cline{1-2}
+{\bfseries{Vertical Axis}}   &Type the desired manager name for the vertical axis.    \\\cline{1-2}
+{\bfseries{Submit Button}}   &Type the desired manager name for the Submit button.    \\\cline{1-2}
+{\bfseries{Cancel Button}}   &Type the desired manager name for the Cancel button.    \\\cline{1-2}
+{\bfseries{Input Actions Per Second}}   &Number of keyboard/controller inputs allowed per second.    \\\cline{1-2}
+{\bfseries{Repeat Delay}}   &Delay in seconds before the input actions per second repeat rate takes effect.    \\\cline{1-2}
+{\bfseries{Force Module Active}}   &Enable this property to force this {\bfseries{Standalone Input Module}} to be active.   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2script-_standalone_input_module_autotoc_md1433}{}\doxysection{\texorpdfstring{Details}{Details}}\label{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2script-_standalone_input_module_autotoc_md1433}
+The module uses\+:
+
+
+\begin{DoxyItemize}
+\item Vertical / Horizontal axis for keyboard and controller navigation
+\item Submit / Cancel button for sending submit and cancel events
+\item Has a timeout between events to only allow a maximum number of events a second.
+\end{DoxyItemize}
+
+The flow for the module is as follows
+
+
+\begin{DoxyItemize}
+\item Send a Move event to the selected object if a valid axis from the Input window is entered
+\item Send a submit or cancel event to the selected object if a submit or cancel button is pressed
+\item Process Mouse input
+\begin{DoxyItemize}
+\item If it is a new press
+\begin{DoxyItemize}
+\item Send Pointer\+Enter event (sent to every object up the hierarchy that can handle it)
+\item Send Pointer\+Press event
+\item Cache the drag handler (first element in the hierarchy that can handle it)
+\item Send Begin\+Drag event to the drag handler
+\item Set the \textquotesingle{}Pressed\textquotesingle{} object as Selected in the event system
+\end{DoxyItemize}
+\item If this is a continuing press
+\begin{DoxyItemize}
+\item Process movment
+\item Send Drag\+Event to the cached drag handler
+\item Handle Pointer\+Enter and Pointer\+Exit events if touch moves between objects
+\end{DoxyItemize}
+\item If this is a release
+\begin{DoxyItemize}
+\item Send Pointer\+Up event to the object that received the Pointer\+Press
+\item If the current hover object is the same as the Pointer\+Press object send a Pointer\+Click event
+\item Send a Drop event if there was a drag handler cached
+\item Send a End\+Drag event to the cached drag handler
+\end{DoxyItemize}
+\item Process scroll wheel events 
+\end{DoxyItemize}
+\end{DoxyItemize}

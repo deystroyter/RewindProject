@@ -1,0 +1,115 @@
+\chapter{Add a Subgraph to a Script Graph}
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-add-subgraph}{}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-add-subgraph}\index{Add a Subgraph to a Script Graph@{Add a Subgraph to a Script Graph}}
+\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-add-subgraph_autotoc_md1913}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-add-subgraph_autotoc_md1913}%
+ A Subgraph is a Script Graph nested inside of another Script Graph. A Subgraph appears as a single node inside a parent Script Graph. For more information on the Subgraph node, see \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-subgraph-node}{Subgraph node}{0}.
+
+You can add a Subgraph to a Script Graph in two ways\+: create a new Script Graph, or add an existing Script Graph file.\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-add-subgraph_autotoc_md1914}{}\doxysection{\texorpdfstring{Add a new Subgraph to a Script Graph}{Add a new Subgraph to a Script Graph}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-add-subgraph_autotoc_md1914}
+To add a new blank Subgraph to an existing Script Graph\+:
+
+
+\begin{DoxyEnumerate}
+\item 
+
+\mbox{[}!include\doxylink{vs-with-graph-open-ff_8md}{with-\/graph-\/open-\/ff}\mbox{]}
+
+
+\item 
+
+Go to {\bfseries{Nesting}}.
+
+
+\item 
+
+Select {\bfseries{Subgraph}} to add a Subgraph node to the graph.
+
+
+\item 
+
+Open the \href{vs-interface-overview.md\#the-graph-inspector}{\texttt{ Graph Inspector}}.
+
+
+\item 
+
+In the Graph Inspector, choose the source for the Subgraph\+:
+
+
+\begin{DoxyItemize}
+\item 
+
+{\bfseries{Embed}}\+: The Subgraph only exists on the Subgraph node. You can only change the Subgraph from the node in its parent graph.
+
+
+\item 
+
+{\bfseries{Graph}}\+: The Subgraph exists in a separate file. You can change the Subgraph outside of its parent graph and reuse the graph in other areas of an application.
+
+
+\end{DoxyItemize}
+\item 
+
+If you chose {\bfseries{Graph}}\+:
+
+
+\begin{DoxyEnumerate}[label=\enumalphalphcnt*]
+
+\item 
+
+In the Graph Inspector, select {\bfseries{New}}.
+
+
+\item 
+
+Enter a name for the graph file.
+
+
+\item 
+
+Choose where you want to save the graph file in the project.
+
+
+\item 
+
+Select {\bfseries{Save}}.
+
+
+\end{DoxyEnumerate}
+\end{DoxyEnumerate}
+
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-add-subgraph_autotoc_md1915}{}\doxysection{\texorpdfstring{Add an existing Script Graph as a Subgraph}{Add an existing Script Graph as a Subgraph}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-add-subgraph_autotoc_md1915}
+To add an existing graph file as a Subgraph in a Script Graph\+:
+
+\begin{quote}
+\mbox{[}!\+NOTE\mbox{]} You can\textquotesingle{}t nest a Script Graph as a Subgraph in its own graph file. \end{quote}
+
+\begin{DoxyEnumerate}
+\item \mbox{[}!include\doxylink{vs-with-graph-open-ff_8md}{with-\/graph-\/open-\/ff}\mbox{]}
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item Go to {\bfseries{Nesting}}.
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item Select {\bfseries{Subgraph}} to add the Subgraph node to the graph.
+\item Open the \href{vs-interface-overview.md\#the-graph-inspector}{\texttt{ Graph Inspector}}.
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item In the Graph Inspector, set the {\bfseries{Source}} to {\bfseries{Graph}}.
+\item Do one of the following\+:
+\begin{DoxyItemize}
+\item In the {\bfseries{Graph}} field, select the object picker (circle icon) and choose a compatible Script Graph from the project.
+\item Click and drag a Script Graph file from the Project window and release on the {\bfseries{Graph}} field.
+\end{DoxyItemize}
+\end{DoxyEnumerate}
+
+
+
+\begin{quote}
+\mbox{[}!\+TIP\mbox{]} For a faster way to add a Script Graph as a Subgraph\+:
+\begin{DoxyItemize}
+\item Click and drag a Script Graph asset from the Project window into the Graph Editor to automatically create a Subgraph node.
+\item Right-\/click to open the fuzzy finder. Go to {\bfseries{Graphs}} and select a graph file. 
+\end{DoxyItemize}\end{quote}
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-add-subgraph_autotoc_md1916}{}\doxysection{\texorpdfstring{Next steps}{Next steps}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-add-subgraph_autotoc_md1916}
+To open the new Subgraph and edit the graph, select {\bfseries{Edit Graph}}.
+
+After you\textquotesingle{}ve added a Subgraph to a Script Graph, define its ports. For more information, see \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-add-triggers-data-graph}{Add a Trigger or Data port to a Script Graph}{0}. 

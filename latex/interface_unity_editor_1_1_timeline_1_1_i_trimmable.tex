@@ -1,0 +1,92 @@
+\doxysection{Unity\+Editor.\+Timeline.\+ITrimmable Interface Reference}
+\hypertarget{interface_unity_editor_1_1_timeline_1_1_i_trimmable}{}\label{interface_unity_editor_1_1_timeline_1_1_i_trimmable}\index{UnityEditor.Timeline.ITrimmable@{UnityEditor.Timeline.ITrimmable}}
+Inheritance diagram for Unity\+Editor.\+Timeline.\+ITrimmable\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{interface_unity_editor_1_1_timeline_1_1_i_trimmable}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_trimmable_a35e0c6cd598d48bc339e024f4cd08442}{Set\+Start}} (double time, bool affect\+Time\+Scale)
+\item 
+void \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_trimmable_a12959d34bd51a975c947b947e2d48a9f}{Set\+End}} (double time, bool affect\+Time\+Scale)
+\item 
+void \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_trimmable_a06e63618871cc0229e450070177cf37e}{Trim\+Start}} (double time)
+\item 
+void \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_trimmable_af76e77e48c8e39886c414220d9ebff40}{Trim\+End}} (double time)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_timeline_item}{Unity\+Editor.\+Timeline.\+ITimeline\+Item}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_timeline_item_aba9cae6da8b53da7c75cd72f76d37111}{Is\+Compatible\+With\+Track}} (\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} track)
+\item 
+void \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_timeline_item_a6c6203fce91f1245252ac182f96ea783}{Delete}} ()
+\item 
+\mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_timeline_item}{ITimeline\+Item}} \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_timeline_item_adaea39c753471ddee08bef2d3fb7599a}{Clone\+To}} (\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} parent, double time)
+\item 
+void \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_timeline_item_a0d2590757d30c0c6e40e6714b4ca8dcc}{Push\+Undo}} (string operation)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_timeline_item}{Unity\+Editor.\+Timeline.\+ITimeline\+Item}}}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_timeline_item_a4694088d0315d924289d8cb6f0cba19c}{start}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+double \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_timeline_item_a2360a302ec3e02a47f638654ed1c81fb}{end}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+double \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_timeline_item_aedb7985b559b1a7f7e32c8c912ced93d}{duration}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_timeline_item_a2511e28018fb64596b5b6ff038309c3b}{parent\+Track}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_item_g_u_i}{Timeline\+Item\+GUI}} \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_timeline_item_a92081b07a6a9ecc7e9b958f4e74227d8}{gui}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interface_unity_editor_1_1_timeline_1_1_i_trimmable_a12959d34bd51a975c947b947e2d48a9f}\label{interface_unity_editor_1_1_timeline_1_1_i_trimmable_a12959d34bd51a975c947b947e2d48a9f} 
+\index{UnityEditor.Timeline.ITrimmable@{UnityEditor.Timeline.ITrimmable}!SetEnd@{SetEnd}}
+\index{SetEnd@{SetEnd}!UnityEditor.Timeline.ITrimmable@{UnityEditor.Timeline.ITrimmable}}
+\doxysubsubsection{\texorpdfstring{SetEnd()}{SetEnd()}}
+{\footnotesize\ttfamily void Unity\+Editor.\+Timeline.\+ITrimmable.\+Set\+End (\begin{DoxyParamCaption}\item[{double}]{time,  }\item[{bool}]{affect\+Time\+Scale }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_clip_item_aa8d08ef326450aff1bdec3f5a4ec6f86}{Unity\+Editor.\+Timeline.\+Clip\+Item}}.
+
+\Hypertarget{interface_unity_editor_1_1_timeline_1_1_i_trimmable_a35e0c6cd598d48bc339e024f4cd08442}\label{interface_unity_editor_1_1_timeline_1_1_i_trimmable_a35e0c6cd598d48bc339e024f4cd08442} 
+\index{UnityEditor.Timeline.ITrimmable@{UnityEditor.Timeline.ITrimmable}!SetStart@{SetStart}}
+\index{SetStart@{SetStart}!UnityEditor.Timeline.ITrimmable@{UnityEditor.Timeline.ITrimmable}}
+\doxysubsubsection{\texorpdfstring{SetStart()}{SetStart()}}
+{\footnotesize\ttfamily void Unity\+Editor.\+Timeline.\+ITrimmable.\+Set\+Start (\begin{DoxyParamCaption}\item[{double}]{time,  }\item[{bool}]{affect\+Time\+Scale }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_clip_item_a15226168bd6e55ce302a25ef7388019e}{Unity\+Editor.\+Timeline.\+Clip\+Item}}.
+
+\Hypertarget{interface_unity_editor_1_1_timeline_1_1_i_trimmable_af76e77e48c8e39886c414220d9ebff40}\label{interface_unity_editor_1_1_timeline_1_1_i_trimmable_af76e77e48c8e39886c414220d9ebff40} 
+\index{UnityEditor.Timeline.ITrimmable@{UnityEditor.Timeline.ITrimmable}!TrimEnd@{TrimEnd}}
+\index{TrimEnd@{TrimEnd}!UnityEditor.Timeline.ITrimmable@{UnityEditor.Timeline.ITrimmable}}
+\doxysubsubsection{\texorpdfstring{TrimEnd()}{TrimEnd()}}
+{\footnotesize\ttfamily void Unity\+Editor.\+Timeline.\+ITrimmable.\+Trim\+End (\begin{DoxyParamCaption}\item[{double}]{time }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_clip_item_a17ed1d3f4f544b6d0083fae6e62029a9}{Unity\+Editor.\+Timeline.\+Clip\+Item}}.
+
+\Hypertarget{interface_unity_editor_1_1_timeline_1_1_i_trimmable_a06e63618871cc0229e450070177cf37e}\label{interface_unity_editor_1_1_timeline_1_1_i_trimmable_a06e63618871cc0229e450070177cf37e} 
+\index{UnityEditor.Timeline.ITrimmable@{UnityEditor.Timeline.ITrimmable}!TrimStart@{TrimStart}}
+\index{TrimStart@{TrimStart}!UnityEditor.Timeline.ITrimmable@{UnityEditor.Timeline.ITrimmable}}
+\doxysubsubsection{\texorpdfstring{TrimStart()}{TrimStart()}}
+{\footnotesize\ttfamily void Unity\+Editor.\+Timeline.\+ITrimmable.\+Trim\+Start (\begin{DoxyParamCaption}\item[{double}]{time }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_clip_item_a366dd8bc13274f384efac1292761467f}{Unity\+Editor.\+Timeline.\+Clip\+Item}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+7.\+6/\+Editor/\+Items/\mbox{\hyperlink{_i_timeline_item_8cs}{ITimeline\+Item.\+cs}}\end{DoxyCompactItemize}

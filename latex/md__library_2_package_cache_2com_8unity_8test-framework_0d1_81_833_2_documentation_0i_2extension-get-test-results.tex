@@ -1,0 +1,50 @@
+\chapter{How to get test results}
+\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2extension-get-test-results}{}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2extension-get-test-results}\index{How to get test results@{How to get test results}}
+\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2extension-get-test-results_autotoc_md544}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2extension-get-test-results_autotoc_md544}%
+You can receive callbacks when the active test run, or individual tests, starts and finishes. You can register callbacks by invoking {\ttfamily Register\+Callbacks} on the \doxysectlink{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-test-runner-api}{Test\+Runner\+Api}{0} with an instance of a class that implements \doxysectlink{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-icallbacks}{ICallbacks}{0}. There are four {\ttfamily ICallbacks} methods for the start and finish of both the whole run and each level of the test tree.\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2extension-get-test-results_autotoc_md545}{}\doxysection{\texorpdfstring{Example}{Example}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2extension-get-test-results_autotoc_md545}
+An example of how listeners can be set up\+:
+
+\begin{quote}
+{\bfseries{Note}}\+: Listeners receive callbacks from all test runs, regardless of the registered {\ttfamily Test\+Runner\+Api} for that instance. \end{quote}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ C\#}
+\DoxyCodeLine{public\ void\ SetupListeners()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ var\ api\ =\ ScriptableObject.CreateInstance<TestRunnerApi>();}
+\DoxyCodeLine{\ \ \ api.RegisterCallbacks(new\ MyCallbacks());}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{private\ class\ MyCallbacks\ :\ ICallbacks}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ public\ void\ RunStarted(ITestAdaptor\ testsToRun)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ public\ void\ RunFinished(ITestResultAdaptor\ result)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ public\ void\ TestStarted(ITestAdaptor\ test)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ public\ void\ TestFinished(ITestResultAdaptor\ result)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ if\ (!result.HasChildren\ \&\&\ result.ResultState\ !=\ "{}Passed"{})}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ Debug.Log(string.Format("{}Test\ \{0\}\ \{1\}"{},\ result.Test.Name,\ result.ResultState));}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+\begin{quote}
+{\bfseries{Note}}\+: The registered callbacks are not persisted on domain reloads. So it is necessary to re-\/register the callback after a domain reloads, usually with \href{https://docs.unity3d.com/Manual/RunningEditorCodeOnLaunch.html}{\texttt{ Initialize\+On\+Load}}. \end{quote}
+It is possible to provide a {\ttfamily priority} as an integer as the second argument when registering a callback. This influences the invocation order of different callbacks. The default value is zero. It is also possible to provide {\ttfamily Register\+Callbacks} with a class instance that implements \doxysectlink{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-ierror-callbacks}{IError\+Callbacks}{0} that is an extended version of {\ttfamily ICallbacks}. {\ttfamily IError\+Callbacks} also has a callback method for {\ttfamily On\+Error} that invokes if the run fails to start, for example, due to compilation errors or if an \doxysectlink{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-setup-and-cleanup}{IPrebuild\+Setup}{0} throws an exception. 

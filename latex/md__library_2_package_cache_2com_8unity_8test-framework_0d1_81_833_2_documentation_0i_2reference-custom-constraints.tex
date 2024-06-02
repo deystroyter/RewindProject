@@ -1,0 +1,37 @@
+\chapter{Custom constraints}
+\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-custom-constraints}{}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-custom-constraints}\index{Custom constraints@{Custom constraints}}
+\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-custom-constraints_autotoc_md653}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-custom-constraints_autotoc_md653}%
+ {\ttfamily NUnit} allows you to write test assertions in a more descriptive and human readable way using the \href{https://github.com/nunit/docs/wiki/Assertions}{\texttt{ Assert.\+That}} mechanism, where the first parameter is an object under test and the second parameter describes conditions that the object has to meet.\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-custom-constraints_autotoc_md654}{}\doxysection{\texorpdfstring{Is}{Is}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-custom-constraints_autotoc_md654}
+We’ve extended {\ttfamily NUnit} API with a custom constraint type and declared an overlay {\ttfamily Is} class. To resolve ambiguity between the original implementation and the custom one you must explicitly declare it with a using statement or via addressing through the full type name {\ttfamily \doxylink{class_unity_engine_1_1_test_tools_1_1_constraints_1_1_is}{Unity\+Engine.\+Test\+Tools.\+Constraints.\+Is}}.\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-custom-constraints_autotoc_md655}{}\doxysubsection{\texorpdfstring{Static Methods}{Static Methods}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-custom-constraints_autotoc_md655}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Syntax   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Syntax   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endhead
+{\ttfamily Allocating\+GCMemory}   &A constraint type that invokes the delegate you provide as the parameter of {\ttfamily Assert.\+That} and checks whether it causes any GC memory allocations. It passes if any GC memory is allocated and fails if not.   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-custom-constraints_autotoc_md656}{}\doxysection{\texorpdfstring{Example}{Example}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-custom-constraints_autotoc_md656}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \#}}
+\DoxyCodeLine{\textcolor{keyword}{using\ }Is\ =\ \mbox{\hyperlink{namespace_unity_engine}{UnityEngine}}.\mbox{\hyperlink{namespace_unity_engine_1_1_test_tools}{TestTools}}.\mbox{\hyperlink{namespace_unity_engine_1_1_test_tools_1_1_constraints}{Constraints}}.\mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_constraints_1_1_is}{Is}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{class\ }MyTestClass}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ [Test]}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ MyTest()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ Assert.That(()\ =>\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ var\ i\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[500];}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \},\ Is.AllocatingGCMemory());}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 

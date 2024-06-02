@@ -1,0 +1,83 @@
+\doxysection{Unity\+Editor.\+Settings\+Management.\+User\+Settings\+Provider Class Reference}
+\hypertarget{class_unity_editor_1_1_settings_management_1_1_user_settings_provider}{}\label{class_unity_editor_1_1_settings_management_1_1_user_settings_provider}\index{UnityEditor.SettingsManagement.UserSettingsProvider@{UnityEditor.SettingsManagement.UserSettingsProvider}}
+
+
+A Unity\+Editor.\+Settings\+Provider implementation that creates an interface from settings reflected from a collection of assemblies.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_settings_provider_a0ad267a19e7da966ff65439059fbaee0}{User\+Settings\+Provider}} (\mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_settings}{Settings}} settings, Assembly\mbox{[}$\,$\mbox{]} assemblies)
+\begin{DoxyCompactList}\small\item\em Initializes and returns a new {\ttfamily User\+Settings\+Provider} instance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_settings_provider_aa3e7cf1537da63a7321321d348b406fa}{On\+GUI}} (string search\+Context)
+\begin{DoxyCompactList}\small\item\em Called when the Settings window opens in the Editor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const string \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_settings_provider_a22d25dc4510595be55decf4f271db82b}{developer\+Mode\+Category}} = "{}Developer Mode"{}
+\begin{DoxyCompactList}\small\item\em Category string constant to check whether \doxylink{namespace_unity}{Unity} is running in developer (internal) mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A Unity\+Editor.\+Settings\+Provider implementation that creates an interface from settings reflected from a collection of assemblies. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_unity_editor_1_1_settings_management_1_1_user_settings_provider_a0ad267a19e7da966ff65439059fbaee0}\label{class_unity_editor_1_1_settings_management_1_1_user_settings_provider_a0ad267a19e7da966ff65439059fbaee0} 
+\index{UnityEditor.SettingsManagement.UserSettingsProvider@{UnityEditor.SettingsManagement.UserSettingsProvider}!UserSettingsProvider@{UserSettingsProvider}}
+\index{UserSettingsProvider@{UserSettingsProvider}!UnityEditor.SettingsManagement.UserSettingsProvider@{UnityEditor.SettingsManagement.UserSettingsProvider}}
+\doxysubsubsection{\texorpdfstring{UserSettingsProvider()}{UserSettingsProvider()}}
+{\footnotesize\ttfamily Unity\+Editor.\+Settings\+Management.\+User\+Settings\+Provider.\+User\+Settings\+Provider (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_settings}{Settings}}}]{settings,  }\item[{Assembly\mbox{[}$\,$\mbox{]}}]{assemblies }\end{DoxyParamCaption})}
+
+
+
+Initializes and returns a new {\ttfamily User\+Settings\+Provider} instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em settings} & The Settings instance that this provider is inspecting.\\
+\hline
+{\em assemblies} & A collection of assemblies to scan for User\+Setting\+Attribute and User\+Setting\+Block\+Attribute attributes.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_editor_1_1_settings_management_1_1_user_settings_provider_aa3e7cf1537da63a7321321d348b406fa}\label{class_unity_editor_1_1_settings_management_1_1_user_settings_provider_aa3e7cf1537da63a7321321d348b406fa} 
+\index{UnityEditor.SettingsManagement.UserSettingsProvider@{UnityEditor.SettingsManagement.UserSettingsProvider}!OnGUI@{OnGUI}}
+\index{OnGUI@{OnGUI}!UnityEditor.SettingsManagement.UserSettingsProvider@{UnityEditor.SettingsManagement.UserSettingsProvider}}
+\doxysubsubsection{\texorpdfstring{OnGUI()}{OnGUI()}}
+{\footnotesize\ttfamily void Unity\+Editor.\+Settings\+Management.\+User\+Settings\+Provider.\+On\+GUI (\begin{DoxyParamCaption}\item[{string}]{search\+Context }\end{DoxyParamCaption})}
+
+
+
+Called when the Settings window opens in the Editor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em search\+Context} & Search context in the search box on the \href{https://docs.unity3d.com/Manual/comp-ManagerGroup.html}{\texttt{ Settings}} window. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+Unity\+Editor.\+Settings\+Provider.\+On\+GUI
+
+
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_unity_editor_1_1_settings_management_1_1_user_settings_provider_a22d25dc4510595be55decf4f271db82b}\label{class_unity_editor_1_1_settings_management_1_1_user_settings_provider_a22d25dc4510595be55decf4f271db82b} 
+\index{UnityEditor.SettingsManagement.UserSettingsProvider@{UnityEditor.SettingsManagement.UserSettingsProvider}!developerModeCategory@{developerModeCategory}}
+\index{developerModeCategory@{developerModeCategory}!UnityEditor.SettingsManagement.UserSettingsProvider@{UnityEditor.SettingsManagement.UserSettingsProvider}}
+\doxysubsubsection{\texorpdfstring{developerModeCategory}{developerModeCategory}}
+{\footnotesize\ttfamily const string Unity\+Editor.\+Settings\+Management.\+User\+Settings\+Provider.\+developer\+Mode\+Category = "{}Developer Mode"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Category string constant to check whether \doxylink{namespace_unity}{Unity} is running in developer (internal) mode. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Package\+Cache/com.\+unity.\+settings-\/manager@2.\+0.\+1/\+Editor/\mbox{\hyperlink{_user_settings_provider_8cs}{User\+Settings\+Provider.\+cs}}\end{DoxyCompactItemize}

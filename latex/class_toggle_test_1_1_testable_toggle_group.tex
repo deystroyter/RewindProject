@@ -1,0 +1,94 @@
+\doxysection{Toggle\+Test.\+Testable\+Toggle\+Group Class Reference}
+\hypertarget{class_toggle_test_1_1_testable_toggle_group}{}\label{class_toggle_test_1_1_testable_toggle_group}\index{ToggleTest.TestableToggleGroup@{ToggleTest.TestableToggleGroup}}
+Inheritance diagram for Toggle\+Test.\+Testable\+Toggle\+Group\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_toggle_test_1_1_testable_toggle_group}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_toggle_test_1_1_testable_toggle_group_a8df33b22a27480e3eaabc38657f917fe}{Toggle\+List\+Contains}} (\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle}{Toggle}} toggle)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle_group}{Unity\+Engine.\+UI.\+Toggle\+Group}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle_group_a68bf1d1f68cadb784797c93f9894cf88}{Notify\+Toggle\+On}} (\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle}{Toggle}} toggle, bool send\+Callback=true)
+\begin{DoxyCompactList}\small\item\em Notify the group that the given toggle is enabled. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle_group_ae692eeabbc572358840a02b1630f2309}{Unregister\+Toggle}} (\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle}{Toggle}} toggle)
+\begin{DoxyCompactList}\small\item\em Unregister a toggle from the group. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle_group_a464a704999fd046b057c6668744b66bc}{Register\+Toggle}} (\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle}{Toggle}} toggle)
+\begin{DoxyCompactList}\small\item\em Register a toggle with the toggle group so it is watched for changes and notified if another toggle in the group changes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle_group_a135c5a4b893fac7ab99b3f8ccc34fb22}{Ensure\+Valid\+State}} ()
+\begin{DoxyCompactList}\small\item\em Ensure that the toggle group still has a valid state. This is only relevant when a Toggle\+Group is Started or a Toggle has been deleted from the group. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle_group_a6043a7b489a71fc5908ee5827a0aba9b}{Any\+Toggles\+On}} ()
+\begin{DoxyCompactList}\small\item\em Are any of the toggles on? \end{DoxyCompactList}\item 
+IEnumerable$<$ \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle}{Toggle}} $>$ \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle_group_aa4b1d7d085fb2101f4f6b000694ff862}{Active\+Toggles}} ()
+\begin{DoxyCompactList}\small\item\em Returns the toggles in this group that are active. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle}{Toggle}} \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle_group_ac1005ce10a4784b460071c3e5d822366}{Get\+First\+Active\+Toggle}} ()
+\begin{DoxyCompactList}\small\item\em Returns the toggle that is the first in the list of active toggles. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle_group_af3ec0ddccc8c9e409e76edd4d0b799c0}{Set\+All\+Toggles\+Off}} (bool send\+Callback=true)
+\begin{DoxyCompactList}\small\item\em Switch all toggles off. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour}{Unity\+Engine.\+Event\+Systems.\+UIBehaviour}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_ac3b9d503ad9eb607e691775b2c680d08}{Is\+Active}} ()
+\begin{DoxyCompactList}\small\item\em Returns true if the Game\+Object and the Component are active. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_a1b4d2b6956ce44150ae96433d1d15e8f}{Is\+Destroyed}} ()
+\begin{DoxyCompactList}\small\item\em Returns true if the native representation of the behaviour has been destroyed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle_group}{Unity\+Engine.\+UI.\+Toggle\+Group}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle_group_a622de5b30a7e1779dd3904ff727c9cbb}{Toggle\+Group}} ()
+\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle_group_a2248d6cf8726b4240010543a4f861ca5}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Because all the Toggles have registered themselves in the On\+Enabled, Start should check to make sure at least one Toggle is active in groups that do not Allow\+Switch\+Off. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle_group_aeeffdcede367f72e9d7e46e74044d54d}{On\+Enable}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour}{Unity\+Engine.\+Event\+Systems.\+UIBehaviour}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_a1235b9fe2fae01d3a2fc407166e0fa41}{Awake}} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_ad7fc972dc923e760a4be478cf72de2f9}{On\+Disable}} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_a3eaa412ca986ca777a4d7b9654c1f3d4}{On\+Destroy}} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_acfb0bcf126b8ea0953525ebb20a87985}{On\+Rect\+Transform\+Dimensions\+Change}} ()
+\begin{DoxyCompactList}\small\item\em This callback is called when the dimensions of an associated Rect\+Transform change. It is always called before Awake, On\+Enable, or Start. The call is also made to all child Rect\+Transforms, regardless of whether their dimensions change (which depends on how they are anchored). \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_ac9eba6c0a20f81ea61f6e760b6df5d83}{On\+Before\+Transform\+Parent\+Changed}} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_a6ed51ea799aa1a343e0e847255dfd3cd}{On\+Transform\+Parent\+Changed}} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_a6ad4a13c8cc29c6620e56028e07d4c0e}{On\+Did\+Apply\+Animation\+Properties}} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_aa47d9812b94689b322fa7370fa47f5ca}{On\+Canvas\+Group\+Changed}} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_a73f180fef8560a44a756525ecfe3092f}{On\+Canvas\+Hierarchy\+Changed}} ()
+\begin{DoxyCompactList}\small\item\em Called when the state of the parent Canvas is changed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle_group}{Unity\+Engine.\+UI.\+Toggle\+Group}}}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle}{Toggle}} $>$ \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle_group_abab0008adf7c88f4513ed62eec136c66}{m\+\_\+\+Toggles}} = new List$<$\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle}{Toggle}}$>$()
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle_group}{Unity\+Engine.\+UI.\+Toggle\+Group}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle_group_abd3d40a3068f691acb80e0a24fc5e04f}{allow\+Switch\+Off}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Is it allowed that no toggle is switched on? \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_toggle_test_1_1_testable_toggle_group_a8df33b22a27480e3eaabc38657f917fe}\label{class_toggle_test_1_1_testable_toggle_group_a8df33b22a27480e3eaabc38657f917fe} 
+\index{ToggleTest.TestableToggleGroup@{ToggleTest.TestableToggleGroup}!ToggleListContains@{ToggleListContains}}
+\index{ToggleListContains@{ToggleListContains}!ToggleTest.TestableToggleGroup@{ToggleTest.TestableToggleGroup}}
+\doxysubsubsection{\texorpdfstring{ToggleListContains()}{ToggleListContains()}}
+{\footnotesize\ttfamily bool Toggle\+Test.\+Testable\+Toggle\+Group.\+Toggle\+List\+Contains (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_toggle}{Toggle}}}]{toggle }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Tests/\+Runtime/\+Toggle/\mbox{\hyperlink{_testable_toggle_group_8cs}{Testable\+Toggle\+Group.\+cs}}\end{DoxyCompactItemize}

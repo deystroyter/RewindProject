@@ -1,0 +1,93 @@
+\doxysection{Unity.\+Visual\+Scripting.\+IGraph\+With\+Variables Interface Reference}
+\hypertarget{interface_unity_1_1_visual_scripting_1_1_i_graph_with_variables}{}\label{interface_unity_1_1_visual_scripting_1_1_i_graph_with_variables}\index{Unity.VisualScripting.IGraphWithVariables@{Unity.VisualScripting.IGraphWithVariables}}
+Inheritance diagram for Unity.\+Visual\+Scripting.\+IGraph\+With\+Variables\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.602231cm]{interface_unity_1_1_visual_scripting_1_1_i_graph_with_variables}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+IEnumerable$<$ string $>$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_with_variables_a42b1c5d1996d0c80a2efb50862fa39a1}{Get\+Dynamic\+Variable\+Names}} (\mbox{\hyperlink{namespace_unity_1_1_visual_scripting_a84f7f8b69a898cf472e2c285c1b943b3}{Variable\+Kind}} kind, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}} reference)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph}{Unity.\+Visual\+Scripting.\+IGraph}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_data}{IGraph\+Data}} \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_a3019a2127f56a59e67230f4adf161b61}{Create\+Data}} ()
+\item 
+\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_debug_data}{IGraph\+Debug\+Data}} \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_aa55b4c04d8d30d94ec25fcf6fce9f0d2}{Create\+Debug\+Data}} ()
+\item 
+void \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_af6b90505c77cb6e20b4022596a1bafc6}{Instantiate}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}} instance)
+\item 
+void \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_a88ff630ea7f9e14cd557915cdade2bcb}{Uninstantiate}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}} instance)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_prewarmable}{Unity.\+Visual\+Scripting.\+IPrewarmable}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_prewarmable_a1692968cffe8e3a858df423dbef32c81}{Prewarm}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_aot_stubbable}{Unity.\+Visual\+Scripting.\+IAot\+Stubbable}}}
+\begin{DoxyCompactItemize}
+\item 
+IEnumerable$<$ object $>$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_aot_stubbable_ac1b9801f8e0740a9d910f745985a9db6}{Get\+Aot\+Stubs}} (Hash\+Set$<$ object $>$ visited)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_serialization_depender}{Unity.\+Visual\+Scripting.\+ISerialization\+Depender}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_serialization_depender_af4c5373a0680c80bb6236a1e22c0b24b}{On\+After\+Dependencies\+Deserialized}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_variable_declarations}{Variable\+Declarations}} \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_with_variables_a07a83bc4795705a02888386ae4d35d66}{variables}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph}{Unity.\+Visual\+Scripting.\+IGraph}}}
+\begin{DoxyCompactItemize}
+\item 
+Vector2 \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_a028d4becbcb6628da8de83441d55d33d}{pan}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+float \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_a48a5e81f40bdc92e948204f57c82878c}{zoom}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_merged_graph_element_collection}{Merged\+Graph\+Element\+Collection}} \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_a386985bd74ba0ba698d81e96895de2cb}{elements}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+string \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_a5efff6f23b33052bd71108b78f39db3d}{title}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+string \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_abbe3981891a583962aee5db3b0cf79e0}{summary}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_serialization_depender}{Unity.\+Visual\+Scripting.\+ISerialization\+Depender}}}
+\begin{DoxyCompactItemize}
+\item 
+IEnumerable$<$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_serialization_dependency}{ISerialization\+Dependency}} $>$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_serialization_depender_a7d6e5e7fb303ac105b6f31cd2bc0e476}{deserialization\+Dependencies}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_graph_with_variables_a42b1c5d1996d0c80a2efb50862fa39a1}\label{interface_unity_1_1_visual_scripting_1_1_i_graph_with_variables_a42b1c5d1996d0c80a2efb50862fa39a1} 
+\index{Unity.VisualScripting.IGraphWithVariables@{Unity.VisualScripting.IGraphWithVariables}!GetDynamicVariableNames@{GetDynamicVariableNames}}
+\index{GetDynamicVariableNames@{GetDynamicVariableNames}!Unity.VisualScripting.IGraphWithVariables@{Unity.VisualScripting.IGraphWithVariables}}
+\doxysubsubsection{\texorpdfstring{GetDynamicVariableNames()}{GetDynamicVariableNames()}}
+{\footnotesize\ttfamily IEnumerable$<$ string $>$ Unity.\+Visual\+Scripting.\+IGraph\+With\+Variables.\+Get\+Dynamic\+Variable\+Names (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_unity_1_1_visual_scripting_a84f7f8b69a898cf472e2c285c1b943b3}{Variable\+Kind}}}]{kind,  }\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}}}]{reference }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_flow_graph_a074c18ce91329ecc406108e023aadd26}{Unity.\+Visual\+Scripting.\+Flow\+Graph}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_graph_with_variables_a07a83bc4795705a02888386ae4d35d66}\label{interface_unity_1_1_visual_scripting_1_1_i_graph_with_variables_a07a83bc4795705a02888386ae4d35d66} 
+\index{Unity.VisualScripting.IGraphWithVariables@{Unity.VisualScripting.IGraphWithVariables}!variables@{variables}}
+\index{variables@{variables}!Unity.VisualScripting.IGraphWithVariables@{Unity.VisualScripting.IGraphWithVariables}}
+\doxysubsubsection{\texorpdfstring{variables}{variables}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_variable_declarations}{Variable\+Declarations}} Unity.\+Visual\+Scripting.\+IGraph\+With\+Variables.\+variables\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_flow_graph_a997be1f5486db407a967e1f1414a9913}{Unity.\+Visual\+Scripting.\+Flow\+Graph}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Package\+Cache/com.\+unity.\+visualscripting@1.\+9.\+2/\+Runtime/\+Visual\+Scripting.\+Core/\+Variables/\mbox{\hyperlink{_i_graph_with_variables_8cs}{IGraph\+With\+Variables.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,45 @@
+\chapter{Refactor a C\# script with Visual Scripting}
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-refactoring}{}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-refactoring}\index{Refactor a C\# script with Visual Scripting@{Refactor a C\# script with Visual Scripting}}
+\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-refactoring_autotoc_md2065}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-refactoring_autotoc_md2065}%
+ Visual Scripting creates nodes from methods, fields, and properties from C\# script in your project. Visual Scripting creates these nodes after you \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-configuration}{regenerate your Node Library}{0} and \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-add-remove-type-options}{add any relevant types to your Type Options}{0}.
+
+For example, Visual Scripting created the following Take Damage node from a custom C\# script that defines the {\ttfamily Player} class.
+
+
+
+Visual Scripting generated the node with the following code, which creates a {\ttfamily Player} class with a {\ttfamily Take\+Damage} member.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{C\#\ }
+\DoxyCodeLine{\ \ \ using\ UnityEngine;\ }
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ public\ class\ Player\ :\ MonoBehaviour}
+\DoxyCodeLine{\ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ public\ void\ TakeDamage(int\ damage)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ //...}
+\DoxyCodeLine{\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \}}
+
+\end{DoxyCode}
+
+
+\begin{quote}
+\mbox{[}!\+TIP\mbox{]} You can \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create-custom-node}{create your own custom node}{0} or \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-custom-events}{create a custom event}{0} to customize the ports and information displayed on your nodes. \end{quote}
+If you change the name of the {\ttfamily Take\+Damage} member in the C\# script, Visual Scripting displays an error in Script Graphs that use the Take Damage node.
+
+\texorpdfstring{$<$}{<}img src="{}images/vs-\/refactoring-\/script-\/node-\/error-\/example.\+png"{} alt="{}\+An image of the Graph window, that displays the Take Damage node and the Graph Inspector. The node is red, its ports no longer display, and the Graph Inspector states that "{}No matching member found."{}"{}/\texorpdfstring{$>$}{>}
+
+To rename a member, type, class, struct, enum, or other API element that a Visual Scripting node uses in a project, add the {\ttfamily \mbox{[}Renamed\+From\mbox{]}} attribute to the relevant API element in the script file. To avoid issues with \doxylink{namespace_unity}{Unity}\textquotesingle{}s serialization, the {\ttfamily \mbox{[}Renamed\+From\mbox{]}} attribute tells Visual Scripting that an API or one of its elements has been renamed.
+
+For more information on how to add the {\ttfamily \mbox{[}Renamed\+From\mbox{]}} attribute to a C\# script, see \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-refactor-add-attribute}{Add the Renamed\+From attribute to a C\# script}{0}.\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-refactoring_autotoc_md2066}{}\doxysection{\texorpdfstring{Additional resources}{Additional resources}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-refactoring_autotoc_md2066}
+
+\begin{DoxyItemize}
+\item \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-refactor-add-attribute}{Add the Renamed\+From attribute to a C\# script}{0}
+\item \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-configuration}{Configure project settings}{0}
+\item \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-add-remove-type-options}{Add or remove types from your Type Options}{0}
+\item \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create-custom-node}{Custom C\# nodes}{0}
+\item \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-custom-events}{Custom events}{0} 
+\end{DoxyItemize}

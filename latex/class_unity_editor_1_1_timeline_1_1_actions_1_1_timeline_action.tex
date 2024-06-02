@@ -1,0 +1,76 @@
+\doxysection{Unity\+Editor.\+Timeline.\+Actions.\+Timeline\+Action Class Reference}
+\hypertarget{class_unity_editor_1_1_timeline_1_1_actions_1_1_timeline_action}{}\label{class_unity_editor_1_1_timeline_1_1_actions_1_1_timeline_action}\index{UnityEditor.Timeline.Actions.TimelineAction@{UnityEditor.Timeline.Actions.TimelineAction}}
+
+
+Base class for a timeline action. Inherit from this class to make an action on a timeline after a menu click and/or a key shortcut.  
+
+
+Inheritance diagram for Unity\+Editor.\+Timeline.\+Actions.\+Timeline\+Action\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{class_unity_editor_1_1_timeline_1_1_actions_1_1_timeline_action}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_actions_1_1_timeline_action_a7c581b166b6eb637395ff80103a14c32}{Execute}} (\mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_actions_1_1_action_context}{Action\+Context}} context)
+\begin{DoxyCompactList}\small\item\em Execute the action. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_unity_editor_1_1_timeline_1_1_actions_a2c89b6075e7eaef508bca0cbc6742a10}{Action\+Validity}} \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_actions_1_1_timeline_action_aa1db43ce025277c68e01072573f55bf0}{Validate}} (\mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_actions_1_1_action_context}{Action\+Context}} context)
+\begin{DoxyCompactList}\small\item\em Defines the validity of an Action based on the context. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class for a timeline action. Inherit from this class to make an action on a timeline after a menu click and/or a key shortcut. 
+
+To add an action as a menu item in the \doxylink{namespace_timeline}{Timeline} context menu, add Menu\+Entry\+Attribute on the action class. To make an action to react to a shortcut, use the Shortcut Manager API with Timeline\+Shortcut\+Attribute. \begin{DoxySeeAlso}{See also}
+Unity\+Editor.\+Shortcut\+Management.\+Shortcut\+Attribute, Active\+In\+Mode\+Attribute
+
+
+\end{DoxySeeAlso}
+
+
+Simple \doxylink{namespace_timeline}{Timeline} Action example (with context menu and shortcut support).  
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_actions_1_1_timeline_action_a7c581b166b6eb637395ff80103a14c32}\label{class_unity_editor_1_1_timeline_1_1_actions_1_1_timeline_action_a7c581b166b6eb637395ff80103a14c32} 
+\index{UnityEditor.Timeline.Actions.TimelineAction@{UnityEditor.Timeline.Actions.TimelineAction}!Execute@{Execute}}
+\index{Execute@{Execute}!UnityEditor.Timeline.Actions.TimelineAction@{UnityEditor.Timeline.Actions.TimelineAction}}
+\doxysubsubsection{\texorpdfstring{Execute()}{Execute()}}
+{\footnotesize\ttfamily bool Unity\+Editor.\+Timeline.\+Actions.\+Timeline\+Action.\+Execute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_actions_1_1_action_context}{Action\+Context}}}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+Execute the action. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Context for the action.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the action has been executed. false otherwise
+\end{DoxyReturn}
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_actions_1_1_timeline_action_aa1db43ce025277c68e01072573f55bf0}\label{class_unity_editor_1_1_timeline_1_1_actions_1_1_timeline_action_aa1db43ce025277c68e01072573f55bf0} 
+\index{UnityEditor.Timeline.Actions.TimelineAction@{UnityEditor.Timeline.Actions.TimelineAction}!Validate@{Validate}}
+\index{Validate@{Validate}!UnityEditor.Timeline.Actions.TimelineAction@{UnityEditor.Timeline.Actions.TimelineAction}}
+\doxysubsubsection{\texorpdfstring{Validate()}{Validate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_unity_editor_1_1_timeline_1_1_actions_a2c89b6075e7eaef508bca0cbc6742a10}{Action\+Validity}} Unity\+Editor.\+Timeline.\+Actions.\+Timeline\+Action.\+Validate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_actions_1_1_action_context}{Action\+Context}}}]{context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+Defines the validity of an Action based on the context. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Context for the action.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Visual state of the menu for the action.
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+7.\+6/\+Editor/\+Actions/\mbox{\hyperlink{_timeline_action_8cs}{Timeline\+Action.\+cs}}\end{DoxyCompactItemize}

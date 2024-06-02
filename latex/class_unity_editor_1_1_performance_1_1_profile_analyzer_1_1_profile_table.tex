@@ -1,0 +1,334 @@
+\doxysection{Unity\+Editor.\+Performance.\+Profile\+Analyzer.\+Profile\+Table Class Reference}
+\hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table}{}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table}\index{UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}}
+Inheritance diagram for Unity\+Editor.\+Performance.\+Profile\+Analyzer.\+Profile\+Table\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Styles}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0}{My\+Columns}} \{ \newline
+\mbox{\hyperlink{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0a49ee3087348e8d44e1feda1917443987}{Name}}
+, \mbox{\hyperlink{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0a46a2a41cc6e552044816a2d04634545d}{State}}
+, \mbox{\hyperlink{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0a675056ad1441b6375b2c5abd48c27ef1}{Depth}}
+, \mbox{\hyperlink{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0a66851a3adec6655a7bd563743e4a55a2}{Median}}
+, \newline
+\mbox{\hyperlink{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0a7f34b296b51c4bba322f900a90f070a3}{Median\+Bar}}
+, \mbox{\hyperlink{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0a3d6c9ac08ada31c184094bbc67afe00d}{Mean}}
+, \mbox{\hyperlink{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0a690ab5004e5e4913a865cbc8ed6a53b4}{Standard\+Deviation}}
+, \mbox{\hyperlink{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0a78d811e98514cd165dda532286610fd2}{Min}}
+, \newline
+\mbox{\hyperlink{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0a6a061313d22e51e0f25b7cd4dc065233}{Max}}
+, \mbox{\hyperlink{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0a87ba2ecc8b6915e8bd6f5089918229fd}{Range}}
+, \mbox{\hyperlink{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0ae93f994f01c537c4e2f7d8528c3eb5e9}{Count}}
+, \mbox{\hyperlink{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0a40a8bb522facf2bd43accb1551b5ce89}{Count\+Bar}}
+, \newline
+\mbox{\hyperlink{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0adbfe95df6c66aade67cf2b00038b74aa}{Count\+Mean}}
+, \mbox{\hyperlink{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0a21feb6a27565924f7031c10c4d84eb9b}{Count\+Mean\+Bar}}
+, \mbox{\hyperlink{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0abd6e8832b0cc79db69f6be0a473878ac}{Count\+Standard\+Deviation}}
+, \mbox{\hyperlink{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0ac8296b4bb3bb8b41f7da8d165c4c56cf}{First\+Frame}}
+, \newline
+\mbox{\hyperlink{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0a94e271a0d128e04296cb26a7b6a09072}{At\+Median}}
+, \mbox{\hyperlink{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0a96b0141273eabab320119c467cdcaf17}{Total}}
+, \mbox{\hyperlink{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0a0106564916e051e765be806e081e8656}{Total\+Bar}}
+, \mbox{\hyperlink{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0a03bfaee27b3b5cfb28deef84a0f416e5}{Threads}}
+ \}
+\item 
+enum \mbox{\hyperlink{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2ecb93a3fc2c35a92aad9023b50f45d2}{Sort\+Option}} \{ \newline
+\mbox{\hyperlink{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2ecb93a3fc2c35a92aad9023b50f45d2a49ee3087348e8d44e1feda1917443987}{Name}}
+, \mbox{\hyperlink{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2ecb93a3fc2c35a92aad9023b50f45d2a46a2a41cc6e552044816a2d04634545d}{State}}
+, \mbox{\hyperlink{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2ecb93a3fc2c35a92aad9023b50f45d2a675056ad1441b6375b2c5abd48c27ef1}{Depth}}
+, \mbox{\hyperlink{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2ecb93a3fc2c35a92aad9023b50f45d2a66851a3adec6655a7bd563743e4a55a2}{Median}}
+, \newline
+\mbox{\hyperlink{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2ecb93a3fc2c35a92aad9023b50f45d2a3d6c9ac08ada31c184094bbc67afe00d}{Mean}}
+, \mbox{\hyperlink{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2ecb93a3fc2c35a92aad9023b50f45d2a78d811e98514cd165dda532286610fd2}{Min}}
+, \mbox{\hyperlink{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2ecb93a3fc2c35a92aad9023b50f45d2a6a061313d22e51e0f25b7cd4dc065233}{Max}}
+, \mbox{\hyperlink{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2ecb93a3fc2c35a92aad9023b50f45d2a690ab5004e5e4913a865cbc8ed6a53b4}{Standard\+Deviation}}
+, \newline
+\mbox{\hyperlink{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2ecb93a3fc2c35a92aad9023b50f45d2a87ba2ecc8b6915e8bd6f5089918229fd}{Range}}
+, \mbox{\hyperlink{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2ecb93a3fc2c35a92aad9023b50f45d2ae93f994f01c537c4e2f7d8528c3eb5e9}{Count}}
+, \mbox{\hyperlink{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2ecb93a3fc2c35a92aad9023b50f45d2adbfe95df6c66aade67cf2b00038b74aa}{Count\+Mean}}
+, \mbox{\hyperlink{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2ecb93a3fc2c35a92aad9023b50f45d2abd6e8832b0cc79db69f6be0a473878ac}{Count\+Standard\+Deviation}}
+, \newline
+\mbox{\hyperlink{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2ecb93a3fc2c35a92aad9023b50f45d2ac8296b4bb3bb8b41f7da8d165c4c56cf}{First\+Frame}}
+, \mbox{\hyperlink{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2ecb93a3fc2c35a92aad9023b50f45d2a94e271a0d128e04296cb26a7b6a09072}{At\+Median}}
+, \mbox{\hyperlink{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2ecb93a3fc2c35a92aad9023b50f45d2a96b0141273eabab320119c467cdcaf17}{Total}}
+, \mbox{\hyperlink{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2ecb93a3fc2c35a92aad9023b50f45d2a03bfaee27b3b5cfb28deef84a0f416e5}{Threads}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2d3858045059609eddc1592199e06a38}{Profile\+Table}} (Tree\+View\+State state, Multi\+Column\+Header multicolumn\+Header, Profile\+Data\+View data\+View, bool hide\+Removed\+Markers, \mbox{\hyperlink{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_analyzer_window}{Profile\+Analyzer\+Window}} profile\+Analyzer\+Window, Draw2D draw2D, Color bar\+Color)
+\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a76b026ece63614a0ffb148796d8a2dd2}{Set\+Mode}} (Marker\+Column\+Filter mode\+Filter)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Multi\+Column\+Header\+State \mbox{\hyperlink{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_aaf6fbfd10aaab1c83ed2a68cd55c26d3}{Create\+Default\+Multi\+Column\+Header\+State}} (Marker\+Column\+Filter mode\+Filter)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override Tree\+View\+Item \mbox{\hyperlink{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_ad4d0879849c9aca8a0c8ccb8314cd2e5}{Build\+Root}} ()
+\item 
+override IList$<$ Tree\+View\+Item $>$ \mbox{\hyperlink{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a243cd5eeea6dbc68978e2f8bf5a2f79e}{Build\+Rows}} (Tree\+View\+Item root)
+\item 
+virtual void \mbox{\hyperlink{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a4b5fc1028eebff5b62b2cd62363c3926}{On\+Visible\+Columns\+Changed}} (Multi\+Column\+Header multi\+Column\+Header)
+\item 
+override void \mbox{\hyperlink{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a40739b9927040a4e363a5b9638238609}{Row\+GUI}} (Row\+GUIArgs args)
+\item 
+override bool \mbox{\hyperlink{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_ab2602f884afae7b9fa847dfcbed7f192}{Can\+Multi\+Select}} (Tree\+View\+Item item)
+\item 
+override void \mbox{\hyperlink{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a52f0810f8cf1836d08db9c41364e501b}{Selection\+Changed}} (IList$<$ int $>$ selected\+Ids)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2d6af5e78b3f8bda6334005046c0ee21}{Showing\+Horizontal\+Scroll}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0} 
+\index{UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}!MyColumns@{MyColumns}}
+\index{MyColumns@{MyColumns}!UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}}
+\doxysubsubsection{\texorpdfstring{MyColumns}{MyColumns}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0}{Unity\+Editor.\+Performance.\+Profile\+Analyzer.\+Profile\+Table.\+My\+Columns}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Name@{Name}!UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}}\index{UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}!Name@{Name}}}\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0a49ee3087348e8d44e1feda1917443987}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0a49ee3087348e8d44e1feda1917443987} 
+Name&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{State@{State}!UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}}\index{UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}!State@{State}}}\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0a46a2a41cc6e552044816a2d04634545d}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0a46a2a41cc6e552044816a2d04634545d} 
+State&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Depth@{Depth}!UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}}\index{UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}!Depth@{Depth}}}\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0a675056ad1441b6375b2c5abd48c27ef1}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0a675056ad1441b6375b2c5abd48c27ef1} 
+Depth&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Median@{Median}!UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}}\index{UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}!Median@{Median}}}\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0a66851a3adec6655a7bd563743e4a55a2}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0a66851a3adec6655a7bd563743e4a55a2} 
+Median&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MedianBar@{MedianBar}!UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}}\index{UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}!MedianBar@{MedianBar}}}\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0a7f34b296b51c4bba322f900a90f070a3}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0a7f34b296b51c4bba322f900a90f070a3} 
+Median\+Bar&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Mean@{Mean}!UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}}\index{UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}!Mean@{Mean}}}\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0a3d6c9ac08ada31c184094bbc67afe00d}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0a3d6c9ac08ada31c184094bbc67afe00d} 
+Mean&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{StandardDeviation@{StandardDeviation}!UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}}\index{UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}!StandardDeviation@{StandardDeviation}}}\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0a690ab5004e5e4913a865cbc8ed6a53b4}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0a690ab5004e5e4913a865cbc8ed6a53b4} 
+Standard\+Deviation&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Min@{Min}!UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}}\index{UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}!Min@{Min}}}\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0a78d811e98514cd165dda532286610fd2}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0a78d811e98514cd165dda532286610fd2} 
+Min&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Max@{Max}!UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}}\index{UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}!Max@{Max}}}\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0a6a061313d22e51e0f25b7cd4dc065233}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0a6a061313d22e51e0f25b7cd4dc065233} 
+Max&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Range@{Range}!UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}}\index{UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}!Range@{Range}}}\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0a87ba2ecc8b6915e8bd6f5089918229fd}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0a87ba2ecc8b6915e8bd6f5089918229fd} 
+Range&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Count@{Count}!UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}}\index{UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}!Count@{Count}}}\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0ae93f994f01c537c4e2f7d8528c3eb5e9}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0ae93f994f01c537c4e2f7d8528c3eb5e9} 
+Count&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CountBar@{CountBar}!UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}}\index{UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}!CountBar@{CountBar}}}\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0a40a8bb522facf2bd43accb1551b5ce89}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0a40a8bb522facf2bd43accb1551b5ce89} 
+Count\+Bar&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CountMean@{CountMean}!UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}}\index{UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}!CountMean@{CountMean}}}\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0adbfe95df6c66aade67cf2b00038b74aa}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0adbfe95df6c66aade67cf2b00038b74aa} 
+Count\+Mean&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CountMeanBar@{CountMeanBar}!UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}}\index{UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}!CountMeanBar@{CountMeanBar}}}\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0a21feb6a27565924f7031c10c4d84eb9b}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0a21feb6a27565924f7031c10c4d84eb9b} 
+Count\+Mean\+Bar&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CountStandardDeviation@{CountStandardDeviation}!UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}}\index{UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}!CountStandardDeviation@{CountStandardDeviation}}}\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0abd6e8832b0cc79db69f6be0a473878ac}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0abd6e8832b0cc79db69f6be0a473878ac} 
+Count\+Standard\+Deviation&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FirstFrame@{FirstFrame}!UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}}\index{UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}!FirstFrame@{FirstFrame}}}\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0ac8296b4bb3bb8b41f7da8d165c4c56cf}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0ac8296b4bb3bb8b41f7da8d165c4c56cf} 
+First\+Frame&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AtMedian@{AtMedian}!UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}}\index{UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}!AtMedian@{AtMedian}}}\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0a94e271a0d128e04296cb26a7b6a09072}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0a94e271a0d128e04296cb26a7b6a09072} 
+At\+Median&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Total@{Total}!UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}}\index{UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}!Total@{Total}}}\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0a96b0141273eabab320119c467cdcaf17}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0a96b0141273eabab320119c467cdcaf17} 
+Total&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TotalBar@{TotalBar}!UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}}\index{UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}!TotalBar@{TotalBar}}}\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0a0106564916e051e765be806e081e8656}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0a0106564916e051e765be806e081e8656} 
+Total\+Bar&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Threads@{Threads}!UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}}\index{UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}!Threads@{Threads}}}\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0a03bfaee27b3b5cfb28deef84a0f416e5}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_af1b65350ca05418d1b14809e93b6d4d0a03bfaee27b3b5cfb28deef84a0f416e5} 
+Threads&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2ecb93a3fc2c35a92aad9023b50f45d2}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2ecb93a3fc2c35a92aad9023b50f45d2} 
+\index{UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}!SortOption@{SortOption}}
+\index{SortOption@{SortOption}!UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}}
+\doxysubsubsection{\texorpdfstring{SortOption}{SortOption}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2ecb93a3fc2c35a92aad9023b50f45d2}{Unity\+Editor.\+Performance.\+Profile\+Analyzer.\+Profile\+Table.\+Sort\+Option}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Name@{Name}!UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}}\index{UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}!Name@{Name}}}\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2ecb93a3fc2c35a92aad9023b50f45d2a49ee3087348e8d44e1feda1917443987}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2ecb93a3fc2c35a92aad9023b50f45d2a49ee3087348e8d44e1feda1917443987} 
+Name&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{State@{State}!UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}}\index{UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}!State@{State}}}\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2ecb93a3fc2c35a92aad9023b50f45d2a46a2a41cc6e552044816a2d04634545d}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2ecb93a3fc2c35a92aad9023b50f45d2a46a2a41cc6e552044816a2d04634545d} 
+State&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Depth@{Depth}!UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}}\index{UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}!Depth@{Depth}}}\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2ecb93a3fc2c35a92aad9023b50f45d2a675056ad1441b6375b2c5abd48c27ef1}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2ecb93a3fc2c35a92aad9023b50f45d2a675056ad1441b6375b2c5abd48c27ef1} 
+Depth&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Median@{Median}!UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}}\index{UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}!Median@{Median}}}\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2ecb93a3fc2c35a92aad9023b50f45d2a66851a3adec6655a7bd563743e4a55a2}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2ecb93a3fc2c35a92aad9023b50f45d2a66851a3adec6655a7bd563743e4a55a2} 
+Median&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Mean@{Mean}!UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}}\index{UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}!Mean@{Mean}}}\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2ecb93a3fc2c35a92aad9023b50f45d2a3d6c9ac08ada31c184094bbc67afe00d}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2ecb93a3fc2c35a92aad9023b50f45d2a3d6c9ac08ada31c184094bbc67afe00d} 
+Mean&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Min@{Min}!UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}}\index{UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}!Min@{Min}}}\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2ecb93a3fc2c35a92aad9023b50f45d2a78d811e98514cd165dda532286610fd2}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2ecb93a3fc2c35a92aad9023b50f45d2a78d811e98514cd165dda532286610fd2} 
+Min&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Max@{Max}!UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}}\index{UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}!Max@{Max}}}\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2ecb93a3fc2c35a92aad9023b50f45d2a6a061313d22e51e0f25b7cd4dc065233}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2ecb93a3fc2c35a92aad9023b50f45d2a6a061313d22e51e0f25b7cd4dc065233} 
+Max&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{StandardDeviation@{StandardDeviation}!UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}}\index{UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}!StandardDeviation@{StandardDeviation}}}\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2ecb93a3fc2c35a92aad9023b50f45d2a690ab5004e5e4913a865cbc8ed6a53b4}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2ecb93a3fc2c35a92aad9023b50f45d2a690ab5004e5e4913a865cbc8ed6a53b4} 
+Standard\+Deviation&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Range@{Range}!UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}}\index{UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}!Range@{Range}}}\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2ecb93a3fc2c35a92aad9023b50f45d2a87ba2ecc8b6915e8bd6f5089918229fd}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2ecb93a3fc2c35a92aad9023b50f45d2a87ba2ecc8b6915e8bd6f5089918229fd} 
+Range&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Count@{Count}!UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}}\index{UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}!Count@{Count}}}\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2ecb93a3fc2c35a92aad9023b50f45d2ae93f994f01c537c4e2f7d8528c3eb5e9}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2ecb93a3fc2c35a92aad9023b50f45d2ae93f994f01c537c4e2f7d8528c3eb5e9} 
+Count&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CountMean@{CountMean}!UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}}\index{UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}!CountMean@{CountMean}}}\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2ecb93a3fc2c35a92aad9023b50f45d2adbfe95df6c66aade67cf2b00038b74aa}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2ecb93a3fc2c35a92aad9023b50f45d2adbfe95df6c66aade67cf2b00038b74aa} 
+Count\+Mean&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CountStandardDeviation@{CountStandardDeviation}!UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}}\index{UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}!CountStandardDeviation@{CountStandardDeviation}}}\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2ecb93a3fc2c35a92aad9023b50f45d2abd6e8832b0cc79db69f6be0a473878ac}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2ecb93a3fc2c35a92aad9023b50f45d2abd6e8832b0cc79db69f6be0a473878ac} 
+Count\+Standard\+Deviation&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FirstFrame@{FirstFrame}!UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}}\index{UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}!FirstFrame@{FirstFrame}}}\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2ecb93a3fc2c35a92aad9023b50f45d2ac8296b4bb3bb8b41f7da8d165c4c56cf}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2ecb93a3fc2c35a92aad9023b50f45d2ac8296b4bb3bb8b41f7da8d165c4c56cf} 
+First\+Frame&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AtMedian@{AtMedian}!UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}}\index{UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}!AtMedian@{AtMedian}}}\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2ecb93a3fc2c35a92aad9023b50f45d2a94e271a0d128e04296cb26a7b6a09072}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2ecb93a3fc2c35a92aad9023b50f45d2a94e271a0d128e04296cb26a7b6a09072} 
+At\+Median&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Total@{Total}!UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}}\index{UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}!Total@{Total}}}\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2ecb93a3fc2c35a92aad9023b50f45d2a96b0141273eabab320119c467cdcaf17}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2ecb93a3fc2c35a92aad9023b50f45d2a96b0141273eabab320119c467cdcaf17} 
+Total&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Threads@{Threads}!UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}}\index{UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}!Threads@{Threads}}}\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2ecb93a3fc2c35a92aad9023b50f45d2a03bfaee27b3b5cfb28deef84a0f416e5}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2ecb93a3fc2c35a92aad9023b50f45d2a03bfaee27b3b5cfb28deef84a0f416e5} 
+Threads&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2d3858045059609eddc1592199e06a38}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2d3858045059609eddc1592199e06a38} 
+\index{UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}!ProfileTable@{ProfileTable}}
+\index{ProfileTable@{ProfileTable}!UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}}
+\doxysubsubsection{\texorpdfstring{ProfileTable()}{ProfileTable()}}
+{\footnotesize\ttfamily Unity\+Editor.\+Performance.\+Profile\+Analyzer.\+Profile\+Table.\+Profile\+Table (\begin{DoxyParamCaption}\item[{Tree\+View\+State}]{state,  }\item[{Multi\+Column\+Header}]{multicolumn\+Header,  }\item[{Profile\+Data\+View}]{data\+View,  }\item[{bool}]{hide\+Removed\+Markers,  }\item[{\mbox{\hyperlink{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_analyzer_window}{Profile\+Analyzer\+Window}}}]{profile\+Analyzer\+Window,  }\item[{Draw2D}]{draw2D,  }\item[{Color}]{bar\+Color }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_ad4d0879849c9aca8a0c8ccb8314cd2e5}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_ad4d0879849c9aca8a0c8ccb8314cd2e5} 
+\index{UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}!BuildRoot@{BuildRoot}}
+\index{BuildRoot@{BuildRoot}!UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}}
+\doxysubsubsection{\texorpdfstring{BuildRoot()}{BuildRoot()}}
+{\footnotesize\ttfamily override Tree\+View\+Item Unity\+Editor.\+Performance.\+Profile\+Analyzer.\+Profile\+Table.\+Build\+Root (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a243cd5eeea6dbc68978e2f8bf5a2f79e}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a243cd5eeea6dbc68978e2f8bf5a2f79e} 
+\index{UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}!BuildRows@{BuildRows}}
+\index{BuildRows@{BuildRows}!UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}}
+\doxysubsubsection{\texorpdfstring{BuildRows()}{BuildRows()}}
+{\footnotesize\ttfamily override IList$<$ Tree\+View\+Item $>$ Unity\+Editor.\+Performance.\+Profile\+Analyzer.\+Profile\+Table.\+Build\+Rows (\begin{DoxyParamCaption}\item[{Tree\+View\+Item}]{root }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_ab2602f884afae7b9fa847dfcbed7f192}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_ab2602f884afae7b9fa847dfcbed7f192} 
+\index{UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}!CanMultiSelect@{CanMultiSelect}}
+\index{CanMultiSelect@{CanMultiSelect}!UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}}
+\doxysubsubsection{\texorpdfstring{CanMultiSelect()}{CanMultiSelect()}}
+{\footnotesize\ttfamily override bool Unity\+Editor.\+Performance.\+Profile\+Analyzer.\+Profile\+Table.\+Can\+Multi\+Select (\begin{DoxyParamCaption}\item[{Tree\+View\+Item}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_aaf6fbfd10aaab1c83ed2a68cd55c26d3}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_aaf6fbfd10aaab1c83ed2a68cd55c26d3} 
+\index{UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}!CreateDefaultMultiColumnHeaderState@{CreateDefaultMultiColumnHeaderState}}
+\index{CreateDefaultMultiColumnHeaderState@{CreateDefaultMultiColumnHeaderState}!UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}}
+\doxysubsubsection{\texorpdfstring{CreateDefaultMultiColumnHeaderState()}{CreateDefaultMultiColumnHeaderState()}}
+{\footnotesize\ttfamily static Multi\+Column\+Header\+State Unity\+Editor.\+Performance.\+Profile\+Analyzer.\+Profile\+Table.\+Create\+Default\+Multi\+Column\+Header\+State (\begin{DoxyParamCaption}\item[{Marker\+Column\+Filter}]{mode\+Filter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a4b5fc1028eebff5b62b2cd62363c3926}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a4b5fc1028eebff5b62b2cd62363c3926} 
+\index{UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}!OnVisibleColumnsChanged@{OnVisibleColumnsChanged}}
+\index{OnVisibleColumnsChanged@{OnVisibleColumnsChanged}!UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}}
+\doxysubsubsection{\texorpdfstring{OnVisibleColumnsChanged()}{OnVisibleColumnsChanged()}}
+{\footnotesize\ttfamily virtual void Unity\+Editor.\+Performance.\+Profile\+Analyzer.\+Profile\+Table.\+On\+Visible\+Columns\+Changed (\begin{DoxyParamCaption}\item[{Multi\+Column\+Header}]{multi\+Column\+Header }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a40739b9927040a4e363a5b9638238609}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a40739b9927040a4e363a5b9638238609} 
+\index{UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}!RowGUI@{RowGUI}}
+\index{RowGUI@{RowGUI}!UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}}
+\doxysubsubsection{\texorpdfstring{RowGUI()}{RowGUI()}}
+{\footnotesize\ttfamily override void Unity\+Editor.\+Performance.\+Profile\+Analyzer.\+Profile\+Table.\+Row\+GUI (\begin{DoxyParamCaption}\item[{Row\+GUIArgs}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a52f0810f8cf1836d08db9c41364e501b}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a52f0810f8cf1836d08db9c41364e501b} 
+\index{UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}!SelectionChanged@{SelectionChanged}}
+\index{SelectionChanged@{SelectionChanged}!UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}}
+\doxysubsubsection{\texorpdfstring{SelectionChanged()}{SelectionChanged()}}
+{\footnotesize\ttfamily override void Unity\+Editor.\+Performance.\+Profile\+Analyzer.\+Profile\+Table.\+Selection\+Changed (\begin{DoxyParamCaption}\item[{IList$<$ int $>$}]{selected\+Ids }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a76b026ece63614a0ffb148796d8a2dd2}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a76b026ece63614a0ffb148796d8a2dd2} 
+\index{UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}!SetMode@{SetMode}}
+\index{SetMode@{SetMode}!UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}}
+\doxysubsubsection{\texorpdfstring{SetMode()}{SetMode()}}
+{\footnotesize\ttfamily void Unity\+Editor.\+Performance.\+Profile\+Analyzer.\+Profile\+Table.\+Set\+Mode (\begin{DoxyParamCaption}\item[{Marker\+Column\+Filter}]{mode\+Filter }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2d6af5e78b3f8bda6334005046c0ee21}\label{class_unity_editor_1_1_performance_1_1_profile_analyzer_1_1_profile_table_a2d6af5e78b3f8bda6334005046c0ee21} 
+\index{UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}!ShowingHorizontalScroll@{ShowingHorizontalScroll}}
+\index{ShowingHorizontalScroll@{ShowingHorizontalScroll}!UnityEditor.Performance.ProfileAnalyzer.ProfileTable@{UnityEditor.Performance.ProfileAnalyzer.ProfileTable}}
+\doxysubsubsection{\texorpdfstring{ShowingHorizontalScroll}{ShowingHorizontalScroll}}
+{\footnotesize\ttfamily bool Unity\+Editor.\+Performance.\+Profile\+Analyzer.\+Profile\+Table.\+Showing\+Horizontal\+Scroll\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Package\+Cache/com.\+unity.\+performance.\+profile-\/analyzer@1.\+2.\+2/\+Editor/\mbox{\hyperlink{_profile_table_8cs}{Profile\+Table.\+cs}}\end{DoxyCompactItemize}

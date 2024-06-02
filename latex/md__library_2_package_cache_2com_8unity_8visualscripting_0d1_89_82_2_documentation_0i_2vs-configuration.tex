@@ -1,0 +1,79 @@
+\chapter{Configure project settings}
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-configuration}{}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-configuration}\index{Configure project settings@{Configure project settings}}
+\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-configuration_autotoc_md1703}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-configuration_autotoc_md1703}%
+ \begin{quote}
+\mbox{[}!\+NOTE\mbox{]} To use Visual Scripting in a project for the first time, you must \doxylink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-configuration_Initialize}{initialize it} from the Editor\textquotesingle{}s \href{https://docs.unity3d.com/Manual/comp-ManagerGroup.html}{\texttt{ Project Settings}} window. \end{quote}
+Use the Project Settings window with Visual Scripting to manage backups, node assemblies, type options, and regenerate your Node Library.
+
+To open your Project Settings\+:
+
+
+\begin{DoxyEnumerate}
+\item \mbox{[}!include\doxylink{vs-open-project-settings_8md}{open-\/project-\/settings}\mbox{]}
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item Select {\bfseries{Visual Scripting}}. ~\newline
+
+\end{DoxyEnumerate}
+
+You can find the following configuration options in your Visual Scripting Project Settings. To use Visual Scripting in a project for the first time, you must \doxylink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-configuration_Regen}{regenerate your Node Library}, as described in the table below.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Option}} }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Option}} }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endhead
+{\bfseries{\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-configuration_Initialize}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-configuration_Initialize}%
+Initialize Visual Scripting}} &You must select {\bfseries{Initialize Visual Scripting}} the first time you use Visual Scripting in a project. Initialize Visual Scripting to parse all assemblies and types for the Visual Scripting Node Library. After you initialize Visual Scripting, regenerate your Node Library. See {\bfseries{\href{\#Regen}{\texttt{ Regenerate Nodes}}}}, below.  \\\cline{1-2}
+{\bfseries{Type Options}} &Use the Type Options list to add or remove types for your node inputs and outputs. After you add or remove a type, you must regenerate your Node Library. See {\bfseries{\href{\#Regen}{\texttt{ Regenerate Nodes}}}}, below. ~\newline
+For more information on how to add or remove types, see \href{vs-add-remove-type-options.md}{\texttt{ Add or remove types}}.  \\\cline{1-2}
+{\bfseries{Node Library}} &Use the Node Library list to add or remove nodes and their assemblies in Visual Scripting. You must add any new types to your Type Options after you add new nodes to Visual Scripting. You must also regenerate your Node Library after you add or remove nodes. See \href{\#Regen}{\texttt{ {\bfseries{Regenerate Nodes}}}}, below. ~\newline
+For more information on how to add or remove nodes from your Node Library, see \href{vs-add-remove-node-library.md}{\texttt{ Add or remove available nodes}}.  \\\cline{1-2}
+{\bfseries{\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-configuration_Regen}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-configuration_Regen}%
+Regenerate Nodes}} &Regenerate your Node Library to make all nodes available for use in a project. ~\newline
+To use Visual Scripting for the first time in a project, you must {\bfseries{\href{\#Initialize}{\texttt{ Initialize Visual Scripting}}}} and regenerate your Node Library. ~\newline
+To regenerate your Node Library\+: 
+\begin{DoxyEnumerate}
+\item 
+
+Select {\bfseries{Regenerate Nodes}}.
+
+
+\item 
+
+Select {\bfseries{OK}}.
+
+
+\end{DoxyEnumerate}\doxysubparagraph*{NOTE}
+
+
+
+You must regenerate your Node Library in the following circumstances\+: 
+\begin{DoxyItemize}
+\item Before you use Visual Scripting in your project for the first time. 
+\item After you add or remove nodes from your Node Library. 
+\item After you add or remove types from your Type Options. 
+\item After you change the inputs or outputs for a Custom C\# node. 
+\end{DoxyItemize}
+
+  \\\cline{1-2}
+{\bfseries{Generate}} &To generate required property provider scripts for custom drawers, select {\bfseries{Generate}}. ~\newline
+These scripts are necessary for \doxylink{namespace_unity}{Unity} to use custom drawers for custom classes and script variables inside Visual Scripting. To assign a default value to a custom variable type through the \doxylink{namespace_unity}{Unity} Editor’s Inspector, you must either have access to the source code for the class, or provide a custom Property\+Drawer. For more information, see \href{vs-custom-types.md}{\texttt{ Custom types}}.  \\\cline{1-2}
+{\bfseries{Create Backup}} &To create a new backup of your Visual Scripting graphs and settings, select {\bfseries{Create Backup}}. ~\newline
+ For more information about backups, see \href{vs-create-restore-backups.md}{\texttt{ Create or restore a backup}}.  \\\cline{1-2}
+{\bfseries{Restore Backup}} &To open the folder where Visual Scripting stores your backups, select {\bfseries{Restore Backup}}. ~\newline
+For more information about backups, see \href{vs-create-restore-backups.md}{\texttt{ Create or restore a backup}}.  \\\cline{1-2}
+{\bfseries{Fix Missing Scripts}} &To correct any issues that might occur after migration from the \doxylink{namespace_unity}{Unity} Asset Store version of Visual Scripting to the package version, select {\bfseries{Fix Missing Scripts}}. This resolves any missing references to Visual Scripting Script Graphs and State Graphs in Script Machine or State Machine components.   \\\cline{1-2}
+\end{longtabu}
+
+
+\texorpdfstring{$>$}{>}\mbox{[}!\+NOTE\mbox{]} \begin{quote}
+If your settings don\textquotesingle{}t apply after you make a change, \href{https://unity3d.com/unity/qa/bug-reporting}{\texttt{ report a bug through the Unity Editor}}. \end{quote}

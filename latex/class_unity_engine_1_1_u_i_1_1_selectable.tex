@@ -1,0 +1,234 @@
+\doxysection{Unity\+Engine.\+UI.\+Selectable Class Reference}
+\hypertarget{class_unity_engine_1_1_u_i_1_1_selectable}{}\label{class_unity_engine_1_1_u_i_1_1_selectable}\index{UnityEngine.UI.Selectable@{UnityEngine.UI.Selectable}}
+
+
+Simple selectable object -\/ derived from to create a selectable control.  
+
+
+Inheritance diagram for Unity\+Engine.\+UI.\+Selectable\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{class_unity_engine_1_1_u_i_1_1_selectable}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_selectable}{Selectable}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_selectable_aed581958744a69ac1a36176c0dda008a}{s\+\_\+\+Selectables}} = new \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_selectable}{Selectable}}\mbox{[}10\mbox{]}
+\item 
+static int \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_selectable_aefd532adbeb7407701c46f57751f619c}{s\+\_\+\+Selectable\+Count}} = 0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_unity_engine_1_1_u_i_1_1_sprite_state}{Sprite\+State}} \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_selectable_a35a3bec2a64a37feee159003a09e82cf}{sprite\+State}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Copy of the array of all the selectable objects currently active in the scene. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_animation_triggers}{Animation\+Triggers}} \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_selectable_a30f30933362defcf850a05474828d1ab}{animation\+Triggers}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The Animation\+Triggers for this selectable object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour}{Unity\+Engine.\+Event\+Systems.\+UIBehaviour}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_ac3b9d503ad9eb607e691775b2c680d08}{Is\+Active}} ()
+\begin{DoxyCompactList}\small\item\em Returns true if the Game\+Object and the Component are active. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_a1b4d2b6956ce44150ae96433d1d15e8f}{Is\+Destroyed}} ()
+\begin{DoxyCompactList}\small\item\em Returns true if the native representation of the behaviour has been destroyed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interface_unity_engine_1_1_event_systems_1_1_i_pointer_down_handler}{Unity\+Engine.\+Event\+Systems.\+IPointer\+Down\+Handler}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interface_unity_engine_1_1_event_systems_1_1_i_pointer_down_handler_a18d183648f495d70fdcf81467f0c3715}{On\+Pointer\+Down}} (\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}} event\+Data)
+\begin{DoxyCompactList}\small\item\em Use this callback to detect pointer down events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interface_unity_engine_1_1_event_systems_1_1_i_pointer_up_handler}{Unity\+Engine.\+Event\+Systems.\+IPointer\+Up\+Handler}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interface_unity_engine_1_1_event_systems_1_1_i_pointer_up_handler_a7fec90b677f1ca9648351c0e226d2c05}{On\+Pointer\+Up}} (\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}} event\+Data)
+\begin{DoxyCompactList}\small\item\em Use this callback to detect pointer up events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interface_unity_engine_1_1_event_systems_1_1_i_pointer_enter_handler}{Unity\+Engine.\+Event\+Systems.\+IPointer\+Enter\+Handler}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interface_unity_engine_1_1_event_systems_1_1_i_pointer_enter_handler_a1f1655afc025835108734c39c6fa4502}{On\+Pointer\+Enter}} (\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}} event\+Data)
+\begin{DoxyCompactList}\small\item\em Use this callback to detect pointer enter events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interface_unity_engine_1_1_event_systems_1_1_i_pointer_exit_handler}{Unity\+Engine.\+Event\+Systems.\+IPointer\+Exit\+Handler}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interface_unity_engine_1_1_event_systems_1_1_i_pointer_exit_handler_a18f1534d07ff8c1fcac3e358c07c19e2}{On\+Pointer\+Exit}} (\mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_pointer_event_data}{Pointer\+Event\+Data}} event\+Data)
+\begin{DoxyCompactList}\small\item\em Use this callback to detect pointer exit events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour}{Unity\+Engine.\+Event\+Systems.\+UIBehaviour}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_a1235b9fe2fae01d3a2fc407166e0fa41}{Awake}} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_a50bb1d6a54cafd4e344fc4578fc7c322}{On\+Enable}} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_ad9097dfd9b409602fc182c1b790600ea}{Start}} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_ad7fc972dc923e760a4be478cf72de2f9}{On\+Disable}} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_a3eaa412ca986ca777a4d7b9654c1f3d4}{On\+Destroy}} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_acfb0bcf126b8ea0953525ebb20a87985}{On\+Rect\+Transform\+Dimensions\+Change}} ()
+\begin{DoxyCompactList}\small\item\em This callback is called when the dimensions of an associated Rect\+Transform change. It is always called before Awake, On\+Enable, or Start. The call is also made to all child Rect\+Transforms, regardless of whether their dimensions change (which depends on how they are anchored). \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_ac9eba6c0a20f81ea61f6e760b6df5d83}{On\+Before\+Transform\+Parent\+Changed}} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_a6ed51ea799aa1a343e0e847255dfd3cd}{On\+Transform\+Parent\+Changed}} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_a6ad4a13c8cc29c6620e56028e07d4c0e}{On\+Did\+Apply\+Animation\+Properties}} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_aa47d9812b94689b322fa7370fa47f5ca}{On\+Canvas\+Group\+Changed}} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_a73f180fef8560a44a756525ecfe3092f}{On\+Canvas\+Hierarchy\+Changed}} ()
+\begin{DoxyCompactList}\small\item\em Called when the state of the parent Canvas is changed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Simple selectable object -\/ derived from to create a selectable control. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_unity_engine_1_1_u_i_1_1_selectable_aefd532adbeb7407701c46f57751f619c}\label{class_unity_engine_1_1_u_i_1_1_selectable_aefd532adbeb7407701c46f57751f619c} 
+\index{UnityEngine.UI.Selectable@{UnityEngine.UI.Selectable}!s\_SelectableCount@{s\_SelectableCount}}
+\index{s\_SelectableCount@{s\_SelectableCount}!UnityEngine.UI.Selectable@{UnityEngine.UI.Selectable}}
+\doxysubsubsection{\texorpdfstring{s\_SelectableCount}{s\_SelectableCount}}
+{\footnotesize\ttfamily int Unity\+Engine.\+UI.\+Selectable.\+s\+\_\+\+Selectable\+Count = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\Hypertarget{class_unity_engine_1_1_u_i_1_1_selectable_aed581958744a69ac1a36176c0dda008a}\label{class_unity_engine_1_1_u_i_1_1_selectable_aed581958744a69ac1a36176c0dda008a} 
+\index{UnityEngine.UI.Selectable@{UnityEngine.UI.Selectable}!s\_Selectables@{s\_Selectables}}
+\index{s\_Selectables@{s\_Selectables}!UnityEngine.UI.Selectable@{UnityEngine.UI.Selectable}}
+\doxysubsubsection{\texorpdfstring{s\_Selectables}{s\_Selectables}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_selectable}{Selectable}} \mbox{[}$\,$\mbox{]} Unity\+Engine.\+UI.\+Selectable.\+s\+\_\+\+Selectables = new \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_selectable}{Selectable}}\mbox{[}10\mbox{]}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_unity_engine_1_1_u_i_1_1_selectable_a30f30933362defcf850a05474828d1ab}\label{class_unity_engine_1_1_u_i_1_1_selectable_a30f30933362defcf850a05474828d1ab} 
+\index{UnityEngine.UI.Selectable@{UnityEngine.UI.Selectable}!animationTriggers@{animationTriggers}}
+\index{animationTriggers@{animationTriggers}!UnityEngine.UI.Selectable@{UnityEngine.UI.Selectable}}
+\doxysubsubsection{\texorpdfstring{animationTriggers}{animationTriggers}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_animation_triggers}{Animation\+Triggers}} Unity\+Engine.\+UI.\+Selectable.\+animation\+Triggers\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The Animation\+Triggers for this selectable object. 
+
+Modifications will not be visible if transition is not Animation. \Hypertarget{class_unity_engine_1_1_u_i_1_1_selectable_a35a3bec2a64a37feee159003a09e82cf}\label{class_unity_engine_1_1_u_i_1_1_selectable_a35a3bec2a64a37feee159003a09e82cf} 
+\index{UnityEngine.UI.Selectable@{UnityEngine.UI.Selectable}!spriteState@{spriteState}}
+\index{spriteState@{spriteState}!UnityEngine.UI.Selectable@{UnityEngine.UI.Selectable}}
+\doxysubsubsection{\texorpdfstring{spriteState}{spriteState}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_unity_engine_1_1_u_i_1_1_sprite_state}{Sprite\+State}} Unity\+Engine.\+UI.\+Selectable.\+sprite\+State\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Copy of the array of all the selectable objects currently active in the scene. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_unity_engine}{UnityEngine}};}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{using\ }System.Collections;}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_unity_engine_1_1_u_i}{UnityEngine.UI}};\ \textcolor{comment}{//\ required\ when\ using\ UI\ elements\ in\ scripts}}
+\DoxyCodeLine{\ \ \ }
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }Example\ :\ MonoBehaviour}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//Displays\ the\ names\ of\ all\ selectable\ elements\ in\ the\ scene}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ GetNames()}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_selectable}{Selectable}}\ selectableUI\ \textcolor{keywordflow}{in}\ \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_selectable}{Selectable}}.allSelectablesArray)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_editor_plugin_interop_8cs_a0100be52d45f14348918ea69ec09f959}{Debug}}.Log(selectableUI.name);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ }
+\DoxyCodeLine{\ \ \ \ /code>}
+\DoxyCodeLine{\ \ \ \ </example>\ */}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_selectable}{Selectable}}[]\ allSelectablesArray}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{get}}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_selectable}{Selectable}}[]\ temp\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_selectable}{Selectable}}[s\_SelectableCount];}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ Array.Copy(s\_Selectables,\ temp,\ s\_SelectableCount);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ temp;}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ allSelectableCount\ \{\ \textcolor{keyword}{get}\ \{\ \textcolor{keywordflow}{return}\ s\_SelectableCount;\ \}\ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{[Obsolete(\textcolor{stringliteral}{"{}Replaced\ with\ allSelectablesArray\ to\ have\ better\ performance\ when\ disabling\ a\ element"{}},\ \textcolor{keyword}{false})]}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{static}\ List<Selectable>\ allSelectables}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{get}}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ List<Selectable>(allSelectablesArray);}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ AllSelectablesNoAlloc(\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_selectable}{Selectable}}[]\ selectables)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{int}\ copyCount\ =\ selectables.Length\ <\ s\_SelectableCount\ ?\ selectables.Length\ :\ s\_SelectableCount;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ Array.Copy(s\_Selectables,\ selectables,\ copyCount);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ copyCount;}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Navigation\ information.}}
+\DoxyCodeLine{[FormerlySerializedAs(\textcolor{stringliteral}{"{}navigation"{}})]}
+\DoxyCodeLine{[SerializeField]}
+\DoxyCodeLine{\textcolor{keyword}{private}\ \mbox{\hyperlink{struct_unity_engine_1_1_u_i_1_1_navigation}{Navigation}}\ m\_Navigation\ =\ \mbox{\hyperlink{struct_unity_engine_1_1_u_i_1_1_navigation}{Navigation}}.defaultNavigation;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{enum}\ Transition}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ None,}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ ColorTint,}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ SpriteSwap,}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ Animation}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Type\ of\ the\ transition\ that\ occurs\ when\ the\ button\ state\ changes.}}
+\DoxyCodeLine{[FormerlySerializedAs(\textcolor{stringliteral}{"{}transition"{}})]}
+\DoxyCodeLine{[SerializeField]}
+\DoxyCodeLine{\textcolor{keyword}{private}\ Transition\ m\_Transition\ =\ Transition.ColorTint;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Colors\ used\ for\ a\ color\ tint-\/based\ transition.}}
+\DoxyCodeLine{[FormerlySerializedAs(\textcolor{stringliteral}{"{}colors"{}})]}
+\DoxyCodeLine{[SerializeField]}
+\DoxyCodeLine{\textcolor{keyword}{private}\ \mbox{\hyperlink{struct_unity_engine_1_1_u_i_1_1_color_block}{ColorBlock}}\ m\_Colors\ =\ \mbox{\hyperlink{struct_unity_engine_1_1_u_i_1_1_color_block}{ColorBlock}}.defaultColorBlock;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Sprites\ used\ for\ a\ Image\ swap-\/based\ transition.}}
+\DoxyCodeLine{[FormerlySerializedAs(\textcolor{stringliteral}{"{}spriteState"{}})]}
+\DoxyCodeLine{[SerializeField]}
+\DoxyCodeLine{\textcolor{keyword}{private}\ \mbox{\hyperlink{struct_unity_engine_1_1_u_i_1_1_sprite_state}{SpriteState}}\ m\_SpriteState;}
+\DoxyCodeLine{}
+\DoxyCodeLine{[FormerlySerializedAs(\textcolor{stringliteral}{"{}animationTriggers"{}})]}
+\DoxyCodeLine{[SerializeField]}
+\DoxyCodeLine{\textcolor{keyword}{private}\ \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_animation_triggers}{AnimationTriggers}}\ m\_AnimationTriggers\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_animation_triggers}{AnimationTriggers}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{[Tooltip(\textcolor{stringliteral}{"{}Can\ the\ Selectable\ be\ interacted\ with?"{}})]}
+\DoxyCodeLine{[SerializeField]}
+\DoxyCodeLine{\textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ m\_Interactable\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Graphic\ that\ will\ be\ colored.}}
+\DoxyCodeLine{[FormerlySerializedAs(\textcolor{stringliteral}{"{}highlightGraphic"{}})]}
+\DoxyCodeLine{[FormerlySerializedAs(\textcolor{stringliteral}{"{}m\_HighlightGraphic"{}})]}
+\DoxyCodeLine{[SerializeField]}
+\DoxyCodeLine{\textcolor{keyword}{private}\ Graphic\ m\_TargetGraphic;}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ m\_GroupsAllowInteraction\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\textcolor{keyword}{protected}\ \textcolor{keywordtype}{int}\ m\_CurrentIndex\ =\ -\/1;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \mbox{\hyperlink{struct_unity_engine_1_1_u_i_1_1_navigation}{Navigation}}\ \ \ \ \ \ \ \ navigation\ \ \ \ \ \ \ \ \{\ \textcolor{keyword}{get}\ \{\ \textcolor{keywordflow}{return}\ m\_Navigation;\ \}\ \textcolor{keyword}{set}\ \{\ \textcolor{keywordflow}{if}\ (SetPropertyUtility.SetStruct(ref\ m\_Navigation,\ value))\ \ \ \ \ \ \ \ OnSetProperty();\ \}\ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{public}\ Transition\ \ \ \ \ \ \ \ transition\ \ \ \ \ \ \ \ \{\ \textcolor{keyword}{get}\ \{\ \textcolor{keywordflow}{return}\ m\_Transition;\ \}\ \textcolor{keyword}{set}\ \{\ \textcolor{keywordflow}{if}\ (SetPropertyUtility.SetStruct(ref\ m\_Transition,\ value))\ \ \ \ \ \ \ \ OnSetProperty();\ \}\ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \mbox{\hyperlink{struct_unity_engine_1_1_u_i_1_1_color_block}{ColorBlock}}\ \ \ \ \ \ \ \ colors\ \ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{keyword}{get}\ \{\ \textcolor{keywordflow}{return}\ m\_Colors;\ \}\ \textcolor{keyword}{set}\ \{\ \textcolor{keywordflow}{if}\ (SetPropertyUtility.SetStruct(ref\ m\_Colors,\ value))\ \ \ \ \ \ \ \ \ \ \ \ OnSetProperty();\ \}\ \}}
+\DoxyCodeLine{}
+
+\end{DoxyCode}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Runtime/\+UI/\+Core/\mbox{\hyperlink{_selectable_8cs}{Selectable.\+cs}}\end{DoxyCompactItemize}

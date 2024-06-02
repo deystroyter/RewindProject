@@ -1,0 +1,170 @@
+\chapter{Creating Screen Transitions}
+\hypertarget{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_h_o_w_t_o-_u_i_screen_transition}{}\label{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_h_o_w_t_o-_u_i_screen_transition}\index{Creating Screen Transitions@{Creating Screen Transitions}}
+\label{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_h_o_w_t_o-_u_i_screen_transition_autotoc_md1324}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_h_o_w_t_o-_u_i_screen_transition_autotoc_md1324}%
+ The need to transition between multiple UI screens is fairly common. In this page we will explore a simple way to create and manage those transitions using animation and State Machines to drive and control each screen.\hypertarget{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_h_o_w_t_o-_u_i_screen_transition_autotoc_md1325}{}\doxysection{\texorpdfstring{Overview}{Overview}}\label{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_h_o_w_t_o-_u_i_screen_transition_autotoc_md1325}
+The high-\/level idea is that each of our screens will have an \href{https://docs.unity3d.com/Manual/class-AnimatorController.html}{\texttt{ Animator Controller}} with two \href{https://docs.unity3d.com/Manual/class-State.html}{\texttt{ states}} (Open and Closed) and a boolean \href{https://docs.unity3d.com/Manual/AnimationParameters.html}{\texttt{ Parameter}} (Open). To transition between screens you will only need to close the currently open Screen and open the desired one. To make this process easier we will create a small Class Screen\+Manager that will keep track and take care of closing any already open Screen for us. The button that triggers the transition will only have to ask the Screen\+Manager to open the desired screen.\hypertarget{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_h_o_w_t_o-_u_i_screen_transition_autotoc_md1326}{}\doxysubsection{\texorpdfstring{Thinking about Navigation}{Thinking about Navigation}}\label{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_h_o_w_t_o-_u_i_screen_transition_autotoc_md1326}
+If you plan to support controller/keyboard navigation of UI elements, then it\textquotesingle{}s important to have a few things in mind. It\textquotesingle{}s important to avoid having Selectable elements outside the screen since that would enable players to select offscreen elements, we can do that by deactivating any off-\/screen hierarchy. We also need to make sure when a new screen is shown we set a element from it as selected, otherwise the player would not be able to navigate to the new screen. We will take care of all that in the Screen\+Manager class below.\hypertarget{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_h_o_w_t_o-_u_i_screen_transition_autotoc_md1327}{}\doxysection{\texorpdfstring{Setting up the Animator Controller}{Setting up the Animator Controller}}\label{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_h_o_w_t_o-_u_i_screen_transition_autotoc_md1327}
+Let\textquotesingle{}s take a look at the most common and minimal setup for the Animation Controller to do a Screen transition. The controller will need a boolean parameter (Open) and two states (Open and Closed), each state should have an animation with only one keyframe, this way we let the State Machine do the transition blending for us.
+
+
+
+
+
+Now we need to create the \href{https://docs.unity3d.com/Manual/class-Transition.html}{\texttt{ transition}} between both states, let\textquotesingle{}s start with the transition from Open to Closed and let\textquotesingle{}s set the condition properly, we want to go from Open to Closed when the parameter Open is set to false. Now we create the transition from Closed to Open and set the condition to go from Closed to Open when the parameter Open is true.
+
+
+
+\hypertarget{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_h_o_w_t_o-_u_i_screen_transition_autotoc_md1328}{}\doxysection{\texorpdfstring{Managing the screens}{Managing the screens}}\label{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_h_o_w_t_o-_u_i_screen_transition_autotoc_md1328}
+With all the above set up, the only thing missing is for us to set the parameter Open to true on the screens Animator we want to transition to and Open to false on the currently open screens Animator. To do that, we will create a small script\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{using\ UnityEngine;}
+\DoxyCodeLine{using\ UnityEngine.UI;}
+\DoxyCodeLine{using\ UnityEngine.EventSystems;}
+\DoxyCodeLine{using\ System.Collections;}
+\DoxyCodeLine{using\ System.Collections.Generic;}
+\DoxyCodeLine{}
+\DoxyCodeLine{public\ class\ ScreenManager\ :\ MonoBehaviour\ \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ //Screen\ to\ open\ automatically\ at\ the\ start\ of\ the\ Scene}
+\DoxyCodeLine{\ \ \ \ public\ Animator\ initiallyOpen;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ //Currently\ Open\ Screen}
+\DoxyCodeLine{\ \ \ \ private\ Animator\ m\_Open;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ //Hash\ of\ the\ parameter\ we\ use\ to\ control\ the\ transitions.}
+\DoxyCodeLine{\ \ \ \ private\ int\ m\_OpenParameterId;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ //The\ GameObject\ Selected\ before\ we\ opened\ the\ current\ Screen.}
+\DoxyCodeLine{\ \ \ \ //Used\ when\ closing\ a\ Screen,\ so\ we\ can\ go\ back\ to\ the\ button\ that\ opened\ it.}
+\DoxyCodeLine{\ \ \ \ private\ GameObject\ m\_PreviouslySelected;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ //Animator\ State\ and\ Transition\ names\ we\ need\ to\ check\ against.}
+\DoxyCodeLine{\ \ \ \ const\ string\ k\_OpenTransitionName\ =\ "{}Open"{};}
+\DoxyCodeLine{\ \ \ \ const\ string\ k\_ClosedStateName\ =\ "{}Closed"{};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ public\ void\ OnEnable()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ //We\ cache\ the\ Hash\ to\ the\ "{}Open"{}\ Parameter,\ so\ we\ can\ feed\ to\ Animator.SetBool.}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ m\_OpenParameterId\ =\ Animator.StringToHash\ (k\_OpenTransitionName);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ //If\ set,\ open\ the\ initial\ Screen\ now.}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ if\ (initiallyOpen\ ==\ null)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ return;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ OpenPanel(initiallyOpen);}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ //Closes\ the\ currently\ open\ panel\ and\ opens\ the\ provided\ one.}
+\DoxyCodeLine{\ \ \ \ //It\ also\ takes\ care\ of\ handling\ the\ navigation,\ setting\ the\ new\ Selected\ element.}
+\DoxyCodeLine{\ \ \ \ public\ void\ OpenPanel\ (Animator\ anim)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ if\ (m\_Open\ ==\ anim)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ return;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ //Activate\ the\ new\ Screen\ hierarchy\ so\ we\ can\ animate\ it.}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ anim.gameObject.SetActive(true);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ //Save\ the\ currently\ selected\ button\ that\ was\ used\ to\ open\ this\ Screen.\ (CloseCurrent\ will\ modify\ it)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ var\ newPreviouslySelected\ =\ EventSystem.current.currentSelectedGameObject;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ //Move\ the\ Screen\ to\ front.}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ anim.transform.SetAsLastSibling();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ CloseCurrent();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ m\_PreviouslySelected\ =\ newPreviouslySelected;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ //Set\ the\ new\ Screen\ as\ then\ open\ one.}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ m\_Open\ =\ anim;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ //Start\ the\ open\ animation}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ m\_Open.SetBool(m\_OpenParameterId,\ true);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ //Set\ an\ element\ in\ the\ new\ screen\ as\ the\ new\ Selected\ one.}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ GameObject\ go\ =\ FindFirstEnabledSelectable(anim.gameObject);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ SetSelected(go);}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ //Finds\ the\ first\ Selectable\ element\ in\ the\ providade\ hierarchy.}
+\DoxyCodeLine{\ \ \ \ static\ GameObject\ FindFirstEnabledSelectable\ (GameObject\ gameObject)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ GameObject\ go\ =\ null;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ var\ selectables\ =\ gameObject.GetComponentsInChildren<Selectable>\ (true);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ foreach\ (var\ selectable\ in\ selectables)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ if\ (selectable.IsActive\ ()\ \&\&\ selectable.IsInteractable\ ())\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ go\ =\ selectable.gameObject;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ break;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ return\ go;}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ //Closes\ the\ currently\ open\ Screen}
+\DoxyCodeLine{\ \ \ \ //It\ also\ takes\ care\ of\ navigation.}
+\DoxyCodeLine{\ \ \ \ //Reverting\ selection\ to\ the\ Selectable\ used\ before\ opening\ the\ current\ screen.}
+\DoxyCodeLine{\ \ \ \ public\ void\ CloseCurrent()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ if\ (m\_Open\ ==\ null)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ return;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ //Start\ the\ close\ animation.}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ m\_Open.SetBool(m\_OpenParameterId,\ false);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ //Reverting\ selection\ to\ the\ Selectable\ used\ before\ opening\ the\ current\ screen.}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ SetSelected(m\_PreviouslySelected);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ //Start\ Coroutine\ to\ disable\ the\ hierarchy\ when\ closing\ animation\ finishes.}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ StartCoroutine(DisablePanelDeleyed(m\_Open));}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ //No\ screen\ open.}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ m\_Open\ =\ null;}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ //Coroutine\ that\ will\ detect\ when\ the\ Closing\ animation\ is\ finished\ and\ it\ will\ deactivate\ the}
+\DoxyCodeLine{\ \ \ \ //hierarchy.}
+\DoxyCodeLine{\ \ \ \ IEnumerator\ DisablePanelDeleyed(Animator\ anim)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ bool\ closedStateReached\ =\ false;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ bool\ wantToClose\ =\ true;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ while\ (!closedStateReached\ \&\&\ wantToClose)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ if\ (!anim.IsInTransition(0))}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ closedStateReached\ =\ anim.GetCurrentAnimatorStateInfo(0).IsName(k\_ClosedStateName);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ wantToClose\ =\ !anim.GetBool(m\_OpenParameterId);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ yield\ return\ new\ WaitForEndOfFrame();}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ if\ (wantToClose)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ anim.gameObject.SetActive(false);}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ //Make\ the\ provided\ GameObject\ selected}
+\DoxyCodeLine{\ \ \ \ //When\ using\ the\ mouse/touch\ we\ actually\ want\ to\ set\ it\ as\ the\ previously\ selected\ and}
+\DoxyCodeLine{\ \ \ \ //set\ nothing\ as\ selected\ for\ now.}
+\DoxyCodeLine{\ \ \ \ private\ void\ SetSelected(GameObject\ go)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ //Select\ the\ GameObject.}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ EventSystem.current.SetSelectedGameObject(go);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ //If\ we\ are\ using\ the\ keyboard\ right\ now,\ that's\ all\ we\ need\ to\ do.}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ var\ standaloneInputModule\ =\ EventSystem.current.currentInputModule\ as\ StandaloneInputModule;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ if\ (standaloneInputModule\ !=\ null)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ return;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ //Since\ we\ are\ using\ a\ pointer\ device,\ we\ don't\ want\ anything\ selected.}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ //But\ if\ the\ user\ switches\ to\ the\ keyboard,\ we\ want\ to\ start\ the\ navigation\ from\ the\ provided\ game\ object.}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ //So\ here\ we\ set\ the\ current\ Selected\ to\ null,\ so\ the\ provided\ gameObject\ becomes\ the\ Last\ Selected\ in\ the\ EventSystem.}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ EventSystem.current.SetSelectedGameObject(null);}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Let\textquotesingle{}s hook up this script, we do this by creating a new Game\+Object, we can rename it "{}\+Screen\+Manager"{} for instance, and add the component above to it. You can assign an initial screen to it, this screen will be open at the start of your scene.
+
+Now for the final part, let\textquotesingle{}s make the \doxysectlink{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2script-_button}{UI buttons}{0} work. Select the button that should trigger the screen transition and add a new action under the {\bfseries{On Click ()}} list in the Inspector. Drag the Screen\+Manager Game\+Object we just created to the Object\+Field, on the dropdown select {\bfseries{Screen\+Manager-\/\texorpdfstring{$>$}{>}Open\+Panel (Animator)}} and drag and drop the panel you want to open when the user clicks the button to the las Object\+Field.
+
+\hypertarget{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_h_o_w_t_o-_u_i_screen_transition_autotoc_md1329}{}\doxysection{\texorpdfstring{Notes}{Notes}}\label{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_h_o_w_t_o-_u_i_screen_transition_autotoc_md1329}
+This technique only requires each screen to have an Animator\+Controller with an Open parameter and a Closed state to work -\/ it doesn\textquotesingle{}t matter how your screen or State Machine are constructed. This technique also works well with nested screens, meaning you only need one Screen\+Manager for each nested level.
+
+The State Machine we set up above has the default state of Closed, so all of the screens that use this controller start as closed. The Screen\+Manager provides an initially\+Open property so you can specify which screen is shown first. 

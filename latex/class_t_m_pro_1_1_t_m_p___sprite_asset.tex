@@ -1,0 +1,262 @@
+\doxysection{TMPro.\+TMP\+\_\+\+Sprite\+Asset Class Reference}
+\hypertarget{class_t_m_pro_1_1_t_m_p___sprite_asset}{}\label{class_t_m_pro_1_1_t_m_p___sprite_asset}\index{TMPro.TMP\_SpriteAsset@{TMPro.TMP\_SpriteAsset}}
+Inheritance diagram for TMPro.\+TMP\+\_\+\+Sprite\+Asset\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_t_m_pro_1_1_t_m_p___sprite_asset}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___sprite_asset_ac0d576c7ae191d74887684c5388ca32a}{Update\+Lookup\+Tables}} ()
+\begin{DoxyCompactList}\small\item\em Function to update the sprite name and unicode lookup tables. This function should be called when a sprite\textquotesingle{}s name or unicode value changes or when a new sprite is added. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___sprite_asset_a9913527431a09b1d82e42f8365b2533c}{Get\+Sprite\+Index\+From\+Hashcode}} (int \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___asset_a63f177ff7028859d2b431789737d8ccc}{hash\+Code}})
+\begin{DoxyCompactList}\small\item\em Function which returns the sprite index using the hashcode of the name. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___sprite_asset_a8ee6b1fc6a39a615005fe6b53c2906a2}{Get\+Sprite\+Index\+From\+Unicode}} (uint unicode)
+\begin{DoxyCompactList}\small\item\em Returns the index of the sprite for the given unicode value. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___sprite_asset_afa0139e3dcab964f9cfcf1fc634caad2}{Get\+Sprite\+Index\+From\+Name}} (string name)
+\begin{DoxyCompactList}\small\item\em Returns the index of the sprite for the given name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___sprite_asset_adc3f51befb0e4bcea7459f8249507732}{Sort\+Glyph\+Table}} ()
+\begin{DoxyCompactList}\small\item\em Sort the sprite glyph table by glyph index. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___sprite_asset}{TMP\+\_\+\+Sprite\+Asset}} \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___sprite_asset_a606dd23e1463ec7eb3214a75167cc323}{Search\+For\+Sprite\+By\+Unicode}} (\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___sprite_asset}{TMP\+\_\+\+Sprite\+Asset}} sprite\+Asset, uint unicode, bool include\+Fallbacks, out int sprite\+Index)
+\begin{DoxyCompactList}\small\item\em Search through the given sprite asset and its fallbacks for the specified sprite matching the given unicode character. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___sprite_asset}{TMP\+\_\+\+Sprite\+Asset}} \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___sprite_asset_a0a140b6024a1c437a950681c7c9f4212}{Search\+For\+Sprite\+By\+Hash\+Code}} (\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___sprite_asset}{TMP\+\_\+\+Sprite\+Asset}} sprite\+Asset, int \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___asset_a63f177ff7028859d2b431789737d8ccc}{hash\+Code}}, bool include\+Fallbacks, out int sprite\+Index)
+\begin{DoxyCompactList}\small\item\em Search the given sprite asset and fallbacks for a sprite whose hash code value of its name matches the target hash code. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Texture \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___sprite_asset_ad58008ac004e19c361192d6159f34367}{sprite\+Sheet}}
+\item 
+List$<$ \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___sprite}{TMP\+\_\+\+Sprite}} $>$ \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___sprite_asset_a6770844be35fbf6d455eadbc9a528372}{sprite\+Info\+List}}
+\item 
+List$<$ \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___sprite_asset}{TMP\+\_\+\+Sprite\+Asset}} $>$ \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___sprite_asset_a417cdcac52c66835dcdb3ef8fdf15b3c}{fallback\+Sprite\+Assets}}
+\begin{DoxyCompactList}\small\item\em List which contains the Fallback font assets for this font. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___asset}{TMPro.\+TMP\+\_\+\+Asset}}}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___asset_a63f177ff7028859d2b431789737d8ccc}{hash\+Code}}
+\begin{DoxyCompactList}\small\item\em Hash\+Code based on the name of the asset. \end{DoxyCompactList}\item 
+Material \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___asset_a8dcd405969e8c3aaa441c0fe3b0b6eaa}{material}}
+\begin{DoxyCompactList}\small\item\em The material used by this asset. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___asset_a55abe9aef1cf6d3e49fec1257abd152c}{material\+Hash\+Code}}
+\begin{DoxyCompactList}\small\item\em Hash\+Code based on the name of the material assigned to this asset. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___sprite_asset_a20913ff681de8a5b31d69d32e846f94f}{version}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The version of the sprite asset class. Version 1.\+1.\+0 updates the asset data structure to be compatible with new font asset structure. \end{DoxyCompactList}\item 
+Face\+Info \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___sprite_asset_a4b04a301622697d3f1520527d4c8115c}{face\+Info}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Information about the sprite asset\textquotesingle{}s face. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___sprite_character}{TMP\+\_\+\+Sprite\+Character}} $>$ \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___sprite_asset_a6baf2b46d5fe0a56c994ec428bb4164e}{sprite\+Character\+Table}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+Dictionary$<$ uint, \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___sprite_character}{TMP\+\_\+\+Sprite\+Character}} $>$ \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___sprite_asset_a95dcb20347260f28973573d6da503503}{sprite\+Character\+Lookup\+Table}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Dictionary used to lookup sprite characters by their unicode value. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___sprite_glyph}{TMP\+\_\+\+Sprite\+Glyph}} $>$ \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___sprite_asset_a04cbed06c2462ca3ece4b80b53b5ab09}{sprite\+Glyph\+Table}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___asset}{TMPro.\+TMP\+\_\+\+Asset}}}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___asset_a0fbb5487ea011ce242ffa862fe9677fb}{instance\+ID}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Instance ID of the TMP Asset. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_t_m_pro_1_1_t_m_p___sprite_asset_a9913527431a09b1d82e42f8365b2533c}\label{class_t_m_pro_1_1_t_m_p___sprite_asset_a9913527431a09b1d82e42f8365b2533c} 
+\index{TMPro.TMP\_SpriteAsset@{TMPro.TMP\_SpriteAsset}!GetSpriteIndexFromHashcode@{GetSpriteIndexFromHashcode}}
+\index{GetSpriteIndexFromHashcode@{GetSpriteIndexFromHashcode}!TMPro.TMP\_SpriteAsset@{TMPro.TMP\_SpriteAsset}}
+\doxysubsubsection{\texorpdfstring{GetSpriteIndexFromHashcode()}{GetSpriteIndexFromHashcode()}}
+{\footnotesize\ttfamily int TMPro.\+TMP\+\_\+\+Sprite\+Asset.\+Get\+Sprite\+Index\+From\+Hashcode (\begin{DoxyParamCaption}\item[{int}]{hash\+Code }\end{DoxyParamCaption})}
+
+
+
+Function which returns the sprite index using the hashcode of the name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hash\+Code} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_t_m_pro_1_1_t_m_p___sprite_asset_afa0139e3dcab964f9cfcf1fc634caad2}\label{class_t_m_pro_1_1_t_m_p___sprite_asset_afa0139e3dcab964f9cfcf1fc634caad2} 
+\index{TMPro.TMP\_SpriteAsset@{TMPro.TMP\_SpriteAsset}!GetSpriteIndexFromName@{GetSpriteIndexFromName}}
+\index{GetSpriteIndexFromName@{GetSpriteIndexFromName}!TMPro.TMP\_SpriteAsset@{TMPro.TMP\_SpriteAsset}}
+\doxysubsubsection{\texorpdfstring{GetSpriteIndexFromName()}{GetSpriteIndexFromName()}}
+{\footnotesize\ttfamily int TMPro.\+TMP\+\_\+\+Sprite\+Asset.\+Get\+Sprite\+Index\+From\+Name (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+
+
+Returns the index of the sprite for the given name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_t_m_pro_1_1_t_m_p___sprite_asset_a8ee6b1fc6a39a615005fe6b53c2906a2}\label{class_t_m_pro_1_1_t_m_p___sprite_asset_a8ee6b1fc6a39a615005fe6b53c2906a2} 
+\index{TMPro.TMP\_SpriteAsset@{TMPro.TMP\_SpriteAsset}!GetSpriteIndexFromUnicode@{GetSpriteIndexFromUnicode}}
+\index{GetSpriteIndexFromUnicode@{GetSpriteIndexFromUnicode}!TMPro.TMP\_SpriteAsset@{TMPro.TMP\_SpriteAsset}}
+\doxysubsubsection{\texorpdfstring{GetSpriteIndexFromUnicode()}{GetSpriteIndexFromUnicode()}}
+{\footnotesize\ttfamily int TMPro.\+TMP\+\_\+\+Sprite\+Asset.\+Get\+Sprite\+Index\+From\+Unicode (\begin{DoxyParamCaption}\item[{uint}]{unicode }\end{DoxyParamCaption})}
+
+
+
+Returns the index of the sprite for the given unicode value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unicode} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_t_m_pro_1_1_t_m_p___sprite_asset_a0a140b6024a1c437a950681c7c9f4212}\label{class_t_m_pro_1_1_t_m_p___sprite_asset_a0a140b6024a1c437a950681c7c9f4212} 
+\index{TMPro.TMP\_SpriteAsset@{TMPro.TMP\_SpriteAsset}!SearchForSpriteByHashCode@{SearchForSpriteByHashCode}}
+\index{SearchForSpriteByHashCode@{SearchForSpriteByHashCode}!TMPro.TMP\_SpriteAsset@{TMPro.TMP\_SpriteAsset}}
+\doxysubsubsection{\texorpdfstring{SearchForSpriteByHashCode()}{SearchForSpriteByHashCode()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___sprite_asset}{TMP\+\_\+\+Sprite\+Asset}} TMPro.\+TMP\+\_\+\+Sprite\+Asset.\+Search\+For\+Sprite\+By\+Hash\+Code (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___sprite_asset}{TMP\+\_\+\+Sprite\+Asset}}}]{sprite\+Asset,  }\item[{int}]{hash\+Code,  }\item[{bool}]{include\+Fallbacks,  }\item[{out int}]{sprite\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Search the given sprite asset and fallbacks for a sprite whose hash code value of its name matches the target hash code. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sprite\+Asset} & The Sprite Asset to search for the given sprite whose name matches the hashcode value\\
+\hline
+{\em hash\+Code} & The hash code value matching the name of the sprite\\
+\hline
+{\em include\+Fallbacks} & Include fallback sprite assets in the search\\
+\hline
+{\em sprite\+Index} & The index of the sprite matching the provided hash code\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The Sprite Asset that contains the sprite
+\end{DoxyReturn}
+\Hypertarget{class_t_m_pro_1_1_t_m_p___sprite_asset_a606dd23e1463ec7eb3214a75167cc323}\label{class_t_m_pro_1_1_t_m_p___sprite_asset_a606dd23e1463ec7eb3214a75167cc323} 
+\index{TMPro.TMP\_SpriteAsset@{TMPro.TMP\_SpriteAsset}!SearchForSpriteByUnicode@{SearchForSpriteByUnicode}}
+\index{SearchForSpriteByUnicode@{SearchForSpriteByUnicode}!TMPro.TMP\_SpriteAsset@{TMPro.TMP\_SpriteAsset}}
+\doxysubsubsection{\texorpdfstring{SearchForSpriteByUnicode()}{SearchForSpriteByUnicode()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___sprite_asset}{TMP\+\_\+\+Sprite\+Asset}} TMPro.\+TMP\+\_\+\+Sprite\+Asset.\+Search\+For\+Sprite\+By\+Unicode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___sprite_asset}{TMP\+\_\+\+Sprite\+Asset}}}]{sprite\+Asset,  }\item[{uint}]{unicode,  }\item[{bool}]{include\+Fallbacks,  }\item[{out int}]{sprite\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Search through the given sprite asset and its fallbacks for the specified sprite matching the given unicode character. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sprite\+Asset} & The font asset to search for the given character.\\
+\hline
+{\em unicode} & The character to find.\\
+\hline
+{\em glyph} & out parameter containing the glyph for the specified character (if found).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{class_t_m_pro_1_1_t_m_p___sprite_asset_adc3f51befb0e4bcea7459f8249507732}\label{class_t_m_pro_1_1_t_m_p___sprite_asset_adc3f51befb0e4bcea7459f8249507732} 
+\index{TMPro.TMP\_SpriteAsset@{TMPro.TMP\_SpriteAsset}!SortGlyphTable@{SortGlyphTable}}
+\index{SortGlyphTable@{SortGlyphTable}!TMPro.TMP\_SpriteAsset@{TMPro.TMP\_SpriteAsset}}
+\doxysubsubsection{\texorpdfstring{SortGlyphTable()}{SortGlyphTable()}}
+{\footnotesize\ttfamily void TMPro.\+TMP\+\_\+\+Sprite\+Asset.\+Sort\+Glyph\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sort the sprite glyph table by glyph index. 
+
+\Hypertarget{class_t_m_pro_1_1_t_m_p___sprite_asset_ac0d576c7ae191d74887684c5388ca32a}\label{class_t_m_pro_1_1_t_m_p___sprite_asset_ac0d576c7ae191d74887684c5388ca32a} 
+\index{TMPro.TMP\_SpriteAsset@{TMPro.TMP\_SpriteAsset}!UpdateLookupTables@{UpdateLookupTables}}
+\index{UpdateLookupTables@{UpdateLookupTables}!TMPro.TMP\_SpriteAsset@{TMPro.TMP\_SpriteAsset}}
+\doxysubsubsection{\texorpdfstring{UpdateLookupTables()}{UpdateLookupTables()}}
+{\footnotesize\ttfamily void TMPro.\+TMP\+\_\+\+Sprite\+Asset.\+Update\+Lookup\+Tables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function to update the sprite name and unicode lookup tables. This function should be called when a sprite\textquotesingle{}s name or unicode value changes or when a new sprite is added. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_t_m_pro_1_1_t_m_p___sprite_asset_a417cdcac52c66835dcdb3ef8fdf15b3c}\label{class_t_m_pro_1_1_t_m_p___sprite_asset_a417cdcac52c66835dcdb3ef8fdf15b3c} 
+\index{TMPro.TMP\_SpriteAsset@{TMPro.TMP\_SpriteAsset}!fallbackSpriteAssets@{fallbackSpriteAssets}}
+\index{fallbackSpriteAssets@{fallbackSpriteAssets}!TMPro.TMP\_SpriteAsset@{TMPro.TMP\_SpriteAsset}}
+\doxysubsubsection{\texorpdfstring{fallbackSpriteAssets}{fallbackSpriteAssets}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___sprite_asset}{TMP\+\_\+\+Sprite\+Asset}}$>$ TMPro.\+TMP\+\_\+\+Sprite\+Asset.\+fallback\+Sprite\+Assets}
+
+
+
+List which contains the Fallback font assets for this font. 
+
+\Hypertarget{class_t_m_pro_1_1_t_m_p___sprite_asset_a6770844be35fbf6d455eadbc9a528372}\label{class_t_m_pro_1_1_t_m_p___sprite_asset_a6770844be35fbf6d455eadbc9a528372} 
+\index{TMPro.TMP\_SpriteAsset@{TMPro.TMP\_SpriteAsset}!spriteInfoList@{spriteInfoList}}
+\index{spriteInfoList@{spriteInfoList}!TMPro.TMP\_SpriteAsset@{TMPro.TMP\_SpriteAsset}}
+\doxysubsubsection{\texorpdfstring{spriteInfoList}{spriteInfoList}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___sprite}{TMP\+\_\+\+Sprite}}$>$ TMPro.\+TMP\+\_\+\+Sprite\+Asset.\+sprite\+Info\+List}
+
+\Hypertarget{class_t_m_pro_1_1_t_m_p___sprite_asset_ad58008ac004e19c361192d6159f34367}\label{class_t_m_pro_1_1_t_m_p___sprite_asset_ad58008ac004e19c361192d6159f34367} 
+\index{TMPro.TMP\_SpriteAsset@{TMPro.TMP\_SpriteAsset}!spriteSheet@{spriteSheet}}
+\index{spriteSheet@{spriteSheet}!TMPro.TMP\_SpriteAsset@{TMPro.TMP\_SpriteAsset}}
+\doxysubsubsection{\texorpdfstring{spriteSheet}{spriteSheet}}
+{\footnotesize\ttfamily Texture TMPro.\+TMP\+\_\+\+Sprite\+Asset.\+sprite\+Sheet}
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_t_m_pro_1_1_t_m_p___sprite_asset_a4b04a301622697d3f1520527d4c8115c}\label{class_t_m_pro_1_1_t_m_p___sprite_asset_a4b04a301622697d3f1520527d4c8115c} 
+\index{TMPro.TMP\_SpriteAsset@{TMPro.TMP\_SpriteAsset}!faceInfo@{faceInfo}}
+\index{faceInfo@{faceInfo}!TMPro.TMP\_SpriteAsset@{TMPro.TMP\_SpriteAsset}}
+\doxysubsubsection{\texorpdfstring{faceInfo}{faceInfo}}
+{\footnotesize\ttfamily Face\+Info TMPro.\+TMP\+\_\+\+Sprite\+Asset.\+face\+Info\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Information about the sprite asset\textquotesingle{}s face. 
+
+\Hypertarget{class_t_m_pro_1_1_t_m_p___sprite_asset_a95dcb20347260f28973573d6da503503}\label{class_t_m_pro_1_1_t_m_p___sprite_asset_a95dcb20347260f28973573d6da503503} 
+\index{TMPro.TMP\_SpriteAsset@{TMPro.TMP\_SpriteAsset}!spriteCharacterLookupTable@{spriteCharacterLookupTable}}
+\index{spriteCharacterLookupTable@{spriteCharacterLookupTable}!TMPro.TMP\_SpriteAsset@{TMPro.TMP\_SpriteAsset}}
+\doxysubsubsection{\texorpdfstring{spriteCharacterLookupTable}{spriteCharacterLookupTable}}
+{\footnotesize\ttfamily Dictionary$<$uint, \mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___sprite_character}{TMP\+\_\+\+Sprite\+Character}}$>$ TMPro.\+TMP\+\_\+\+Sprite\+Asset.\+sprite\+Character\+Lookup\+Table\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Dictionary used to lookup sprite characters by their unicode value. 
+
+\Hypertarget{class_t_m_pro_1_1_t_m_p___sprite_asset_a6baf2b46d5fe0a56c994ec428bb4164e}\label{class_t_m_pro_1_1_t_m_p___sprite_asset_a6baf2b46d5fe0a56c994ec428bb4164e} 
+\index{TMPro.TMP\_SpriteAsset@{TMPro.TMP\_SpriteAsset}!spriteCharacterTable@{spriteCharacterTable}}
+\index{spriteCharacterTable@{spriteCharacterTable}!TMPro.TMP\_SpriteAsset@{TMPro.TMP\_SpriteAsset}}
+\doxysubsubsection{\texorpdfstring{spriteCharacterTable}{spriteCharacterTable}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___sprite_character}{TMP\+\_\+\+Sprite\+Character}}$>$ TMPro.\+TMP\+\_\+\+Sprite\+Asset.\+sprite\+Character\+Table\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\Hypertarget{class_t_m_pro_1_1_t_m_p___sprite_asset_a04cbed06c2462ca3ece4b80b53b5ab09}\label{class_t_m_pro_1_1_t_m_p___sprite_asset_a04cbed06c2462ca3ece4b80b53b5ab09} 
+\index{TMPro.TMP\_SpriteAsset@{TMPro.TMP\_SpriteAsset}!spriteGlyphTable@{spriteGlyphTable}}
+\index{spriteGlyphTable@{spriteGlyphTable}!TMPro.TMP\_SpriteAsset@{TMPro.TMP\_SpriteAsset}}
+\doxysubsubsection{\texorpdfstring{spriteGlyphTable}{spriteGlyphTable}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{class_t_m_pro_1_1_t_m_p___sprite_glyph}{TMP\+\_\+\+Sprite\+Glyph}}$>$ TMPro.\+TMP\+\_\+\+Sprite\+Asset.\+sprite\+Glyph\+Table\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\Hypertarget{class_t_m_pro_1_1_t_m_p___sprite_asset_a20913ff681de8a5b31d69d32e846f94f}\label{class_t_m_pro_1_1_t_m_p___sprite_asset_a20913ff681de8a5b31d69d32e846f94f} 
+\index{TMPro.TMP\_SpriteAsset@{TMPro.TMP\_SpriteAsset}!version@{version}}
+\index{version@{version}!TMPro.TMP\_SpriteAsset@{TMPro.TMP\_SpriteAsset}}
+\doxysubsubsection{\texorpdfstring{version}{version}}
+{\footnotesize\ttfamily string TMPro.\+TMP\+\_\+\+Sprite\+Asset.\+version\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The version of the sprite asset class. Version 1.\+1.\+0 updates the asset data structure to be compatible with new font asset structure. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Package\+Cache/com.\+unity.\+textmeshpro@3.\+0.\+6/\+Scripts/\+Runtime/\mbox{\hyperlink{_t_m_p___sprite_asset_8cs}{TMP\+\_\+\+Sprite\+Asset.\+cs}}\end{DoxyCompactItemize}

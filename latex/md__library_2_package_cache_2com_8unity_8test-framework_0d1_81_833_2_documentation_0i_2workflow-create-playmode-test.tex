@@ -1,0 +1,34 @@
+\chapter{Workflow\+: How to create a Play Mode test}
+\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2workflow-create-playmode-test}{}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2workflow-create-playmode-test}\index{Workflow: How to create a Play Mode test@{Workflow: How to create a Play Mode test}}
+\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2workflow-create-playmode-test_autotoc_md723}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2workflow-create-playmode-test_autotoc_md723}%
+ To create a {\bfseries{Play Mode}} test, you can follow a similar process as when you want to create an {\bfseries{Edit Mode}} test.
+
+
+\begin{DoxyEnumerate}
+\item Start with switching to the {\bfseries{Play\+Mode}} tab in the {\bfseries{Test Runner}} window.
+\item Create a test assembly folder (see \doxysectlink{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2workflow-create-test-assembly}{How to create a new test assembly)}{0}. The folder name is {\itshape \doxylink{namespace_tests}{Tests}} by default (or {\itshape \doxylink{namespace_tests}{Tests} 1}, {\itshape \doxylink{namespace_tests}{Tests} 2}, etc. if the preceding name is already in use).
+\end{DoxyEnumerate}
+
+
+
+\begin{quote}
+{\bfseries{Note}}\+: If you don’t see the {\bfseries{Create Play Mode Test Assembly Folder}} button enabled, make sure that in the Project window you navigate out of a folder with another .asmdef (such as one for Edit Mode tests). \end{quote}
+
+\begin{DoxyEnumerate}
+\item When you have your Play Mode test assembly folder ready, then \doxysectlink{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2workflow-create-test}{create your Play Mode test}{0}.
+\end{DoxyEnumerate}
+
+\begin{quote}
+{\bfseries{Note}}\+: \href{https://docs.unity3d.com/Manual/ScriptCompileOrderFolders.html}{\texttt{ Pre-\/defined Unity assemblies}} (such as {\itshape Assembly-\/\+CSharp.\+dll}) do not reference your new assembly. \end{quote}
+\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2workflow-create-playmode-test_autotoc_md724}{}\doxysection{\texorpdfstring{References and builds}{References and builds}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2workflow-create-playmode-test_autotoc_md724}
+\doxylink{namespace_unity}{Unity} Test Framework adds a reference to {\ttfamily Test\+Assemblies} in the Assembly Definition file but does not include any other references (e.\+g., to other scripting assemblies within the \doxylink{namespace_unity}{Unity} project). To test other assemblies, you need to add them to the assembly definition yourself. For how to add assembly references, see \href{https://docs.unity3d.com/Manual/ScriptCompilationAssemblyDefinitionFiles.html}{\texttt{ Assembly Definition}}. We recommend putting tests into separate assemblies and using assembly definitions files. This way you will have more control over which assemblies need to reference test related dlls.\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2workflow-create-playmode-test_autotoc_md725}{}\doxysubsubsection{\texorpdfstring{Playmode build with Tests\+Assemblies}{Playmode build with Tests\+Assemblies}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2workflow-create-playmode-test_autotoc_md725}
+\begin{quote}
+{\bfseries{Note}}\+: {\bfseries{Enabling Play Mode tests for all assemblies}} includes additional assemblies in your project build, which can increase the project’s size as well as the build time.
+
+\end{quote}
+The supported workflow is to exclude {\ttfamily Test\+Assemblies} from Player builds. You can choose to enable playmode tests for all assemblies to run your tests inside the Editor, but this should be disabled again before building the Player to prevent build failures.
+
+To enable play mode tests for all assemblies you need to set the flag {\ttfamily play\+Mode\+Test\+Runner\+Enabled} to 1 inside the {\ttfamily Project\+Settings/\+Project\+Setting.\+asset} file in your project. Before building the Player you must disable it again, either by setting the flag back to 0 or by clicking on {\ttfamily Disable playmode tests for all assemblies} in the dropdown menu, accessed by right-\/clicking on the Test Runner window tab. 
+
+For more information, see \doxysectlink{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2edit-mode-vs-play-mode-tests}{Edit Mode vs. Play Mode tests}{0}. 

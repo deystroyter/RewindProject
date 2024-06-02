@@ -1,0 +1,284 @@
+\chapter{Using Code Coverage in batchmode}
+\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_coverage_batchmode}{}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_coverage_batchmode}\index{Using Code Coverage in batchmode@{Using Code Coverage in batchmode}}
+\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_coverage_batchmode_autotoc_md813}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_coverage_batchmode_autotoc_md813}%
+ You can pass the following arguments in batchmode\+:
+
+{\bfseries{-\/enable\+Code\+Coverage}}, to enable code coverage. ~\newline
+ {\bfseries{-\/coverage\+Results\+Path}} (optional), to set the location where the coverage results and report are saved to. The default location is the project\textquotesingle{}s path. ~\newline
+ {\bfseries{-\/coverage\+History\+Path}} (optional), to set the location where the coverage report history is saved to. The default location is the project\textquotesingle{}s path. ~\newline
+ {\bfseries{-\/coverage\+Options}} (optional), to pass extra options. Options are separated by semicolon. Some shells use semicolons to separate commands. Therefore, to ensure that coverage options are parsed correctly, enclose them in quotation marks.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Coverage Option   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Coverage Option   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endhead
+{\ttfamily generate\+Html\+Report}   &Add this to generate a coverage \doxysectlink{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_how_to_interpret_results}{HTML report}{0}.    \\\cline{1-2}
+{\ttfamily generate\+Html\+Report\+History}   &Add this to generate and include the coverage history in the HTML report.    \\\cline{1-2}
+{\ttfamily generate\+Additional\+Reports}   &Add this to generate \href{https://docs.sonarqube.org/latest/analysis/generic-test}{\texttt{ Sonar\+Qube}}, \href{https://cobertura.github.io/cobertura}{\texttt{ Cobertura}} and \href{https://github.com/linux-test-project/lcov}{\texttt{ LCOV}} reports.    \\\cline{1-2}
+{\ttfamily generate\+Badge\+Report}   &Add this to generate coverage summary badges in SVG and PNG format.    \\\cline{1-2}
+{\ttfamily generate\+Additional\+Metrics}   &Add this to generate and include additional metrics in the HTML report. These currently include Cyclomatic Complexity and Crap Score calculations for each method. See the \href{HowToInterpretResults.md\#risk-hotspots}{\texttt{ Risk Hotspots}} section for more information.    \\\cline{1-2}
+{\ttfamily generate\+Test\+References}   &Add this to include test references to the generated coverage results and enable the \href{HowToInterpretResults.md\#coverage-by-test-methods}{\texttt{ Coverage by test methods}} section in the HTML report. This shows how each test contributes to the overall coverage.    \\\cline{1-2}
+{\ttfamily verbosity}   &Add this to set the verbosity level for the editor and console logs. The default value is {\ttfamily info}.~\newline
+{\bfseries{Values\+:}} {\ttfamily verbose}, {\ttfamily info}, {\ttfamily warning}, {\ttfamily error}, {\ttfamily off}    \\\cline{1-2}
+{\ttfamily use\+Project\+Settings}   &Add this to use the settings specified in {\ttfamily Project\+Settings/\+Packages/com.\+unity.\+testtools.\+codecoverage/\+Settings.json} instead. Any options passed in the command line will override this. This option can only be used in batchmode and it does not take effect when running the editor from the command line in non-\/batchmode.    \\\cline{1-2}
+{\ttfamily dont\+Clear}   &Add this to allow coverage results to be accumulated after every code coverage session. If not passed the results are cleared before a new session. For more information see Generate combined report from Edit\+Mode and Play\+Mode tests.    \\\cline{1-2}
+{\ttfamily source\+Paths}   &Add this to specify the source directories which contain the corresponding source code. The source directories are used by the report generator when the path information of classes cannot be determined. This is a comma separated string. Globbing is not supported.~\newline
+~\newline
+{\bfseries{Example\+:}} See Generate combined report from separate projects.    \\\cline{1-2}
+{\ttfamily assembly\+Filters}   &Add this to specify the assemblies to include or exclude in the coverage calculation and/or report. This is a comma-\/separated string. Prefix assemblies with {\ttfamily +} to include them or with {\ttfamily -\/} to exclude them. Globbing can be used to filter the assemblies.~\newline
+~\newline
+{\bfseries{Available aliases\+:}}~\newline
+~\newline
+{\ttfamily \texorpdfstring{$<$}{<}all\texorpdfstring{$>$}{>}} maps to all the assemblies in the project.~\newline
+{\ttfamily \texorpdfstring{$<$}{<}assets\texorpdfstring{$>$}{>}} maps to the assemblies under the {\ttfamily Assets} folder.~\newline
+{\ttfamily \texorpdfstring{$<$}{<}packages\texorpdfstring{$>$}{>}} maps to the \doxylink{namespace_packages}{Packages}\textquotesingle{} assemblies in the project, including the built-\/in packages.~\newline
+~\newline
+{\bfseries{By default, if there are no included assemblies specified, only the assemblies under the {\ttfamily Assets} folder will be included.}}~\newline
+~\newline
+{\bfseries{Examples\+:}}~\newline
+~\newline
+{\ttfamily assembly\+Filters\+:+\texorpdfstring{$<$}{<}all\texorpdfstring{$>$}{>}} will include code from all the assemblies in the project.~\newline
+{\ttfamily assembly\+Filters\+:+my.\+assembly} will only include code from the assembly called {\ttfamily my.\+assembly}.~\newline
+{\ttfamily assembly\+Filters\+:+unity.\texorpdfstring{$\ast$}{*}} will include code from any assembly whose name starts with {\ttfamily unity.}~\newline
+{\ttfamily assembly\+Filters\+:-\/\texorpdfstring{$\ast$}{*}unity\texorpdfstring{$\ast$}{*}} will exclude code from all assemblies that contain the word {\ttfamily unity} in their names.~\newline
+{\ttfamily assembly\+Filters\+:+my.\+assembly.\texorpdfstring{$\ast$}{*},-\/my.\+assembly.\+tests} will include code from any assembly whose name starts with {\ttfamily my.\+assembly.}, but will explicitly exclude code from the assembly called {\ttfamily my.\+assembly.\+tests}.~\newline
+{\ttfamily assembly\+Filters\+:+my.\+locale.??} will only include code from assemblies whose names match this format, e.\+g. {\ttfamily my.\+locale.\+en}, {\ttfamily my.\+locale.\+99}, etc.~\newline
+{\ttfamily assembly\+Filters\+:+my.\+assembly.\mbox{[}a-\/z\mbox{]}\mbox{[}0-\/9\mbox{]}} will only include code from assemblies whose names match this format, e.\+g. {\ttfamily my.\+assembly.\+a1}, {\ttfamily my.\+assembly.\+q7}, etc.    \\\cline{1-2}
+{\ttfamily path\+Filters}   &Add this to specify the paths that should be included or excluded in the coverage calculation and/or report. This is a comma-\/separated string. Prefix paths with {\ttfamily +} to include them and with {\ttfamily -\/} to exclude them. Globbing can be used to filter the paths.~\newline
+~\newline
+Both absolute and relative paths are supported. Absolute paths can be shortened using globbing e.\+g. {\ttfamily \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}/\+Assets/\+Scripts/}. Relative paths require the {\ttfamily source\+Paths} option to be set. See Using relative paths in path filters.~\newline
+~\newline
+{\bfseries{Note\+:}} If {\ttfamily path\+Filters} are specified and there are no included assemblies specified in {\ttfamily assembly\+Filters}, then all the assemblies in the project are included in order for {\ttfamily path filtering} to take precedence over {\ttfamily assembly filtering}.~\newline
+~\newline
+~\newline
+{\bfseries{Examples\+:}}~\newline
+~\newline
+{\ttfamily path\+Filters\+:+C\+:/\+My\+Project/\+Assets/\+My\+Class.cs} will only include the {\ttfamily My\+Class.\+cs} file.~\newline
+{\ttfamily path\+Filters\+:+C\+:/\+My\+Project/\+Assets/\+Scripts/\texorpdfstring{$\ast$}{*}} will include all files in the {\ttfamily C\+:/\+My\+Project/\+Assets/\+Scripts} folder. Files in subfolders will not be included.~\newline
+{\ttfamily path\+Filters\+:-\/C\+:/\+My\+Project/\+Assets/\+Auto\+Generated/\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}} will exclude all files under the {\ttfamily C\+:/\+My\+Project/\+Assets/\+Auto\+Generated} folder and any of its subfolders.~\newline
+{\ttfamily path\+Filters\+:+\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}/\+Assets/\+Editor/\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}} will include just the files that have {\ttfamily /\+Assets/\+Editor/} in their path.~\newline
+{\ttfamily path\+Filters\+:+C\+:/\+My\+Project/\+Assets/\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}/\+My\+Class.cs} will include any file named {\ttfamily My\+Class.\+cs} that is under the {\ttfamily C\+:/\+My\+Project/\+Assets} folder and any of its subfolders.~\newline
+{\ttfamily path\+Filters\+:+C\+:/\+My\+Project/\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*},-\/\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}/\+Packages/\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}} will only include files under {\ttfamily C\+:/\+My\+Project/} folder and exclude all files under any {\ttfamily \doxylink{namespace_packages}{Packages}} folder.~\newline
+{\ttfamily path\+Filters\+:+\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}/\+My\+Generated\+Class\+\_\+??.cs} will include only files with filenames that match this format, i.\+e. {\ttfamily My\+Generated\+Class\+\_\+01.\+cs}, {\ttfamily My\+Generated\+Class\+\_\+\+AB.\+cs}, etc.~\newline
+{\ttfamily path\+Filters\+:+\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}/\+My\+Class\+\_\+\mbox{[}A-\/Z\mbox{]}\mbox{[}0-\/9\mbox{]}.cs} will include only files with filenames that match this format, i.\+e. {\ttfamily My\+Class\+\_\+\+A1.\+cs}, {\ttfamily My\+Class\+\_\+\+Q7.\+cs}, etc.    \\\cline{1-2}
+{\ttfamily path\+Filters\+From\+File}   &Add this to specify the file to read path filtering rules from. Instead of defining all path filtering rules directly in the command line, as you would with the {\ttfamily path\+Filters} option, this allows you to store them in a separate file, making your commands clearer and easier to manage.~\newline
+~\newline
+Like with the {\ttfamily path\+Filters} option, {\ttfamily path\+Filters\+From\+File} also supports relative paths. See Using relative paths in path filters.~\newline
+~\newline
+{\bfseries{Examples\+:}}~\newline
+~\newline
+{\ttfamily path\+Filters\+From\+File\+:C\+:/\+My\+Project/\+Filtering\+Rules.txt} will read rules from a file located in {\ttfamily C\+:/\+My\+Project/\+Filtering\+Rules.txt}~\newline
+{\ttfamily path\+Filters\+From\+File\+:Filtering\+Rules.\+txt} will read rules from {\ttfamily Filtering\+Rules.\+txt} located in the root of your project.~\newline
+~\newline
+Syntax of the rules is the same as with the {\ttfamily path\+Filters} option, however, rules should be listed in separate lines in the file.~\newline
+~\newline
+{\bfseries{File example\+:}}~\newline
+~\newline
+This will include all the files in the {\ttfamily Scripts} folder and exclude all the files in the {\ttfamily Scripts/\+Generated} folder
+\begin{DoxyPre}{\ttfamily +**/Scripts/**~\newline
+-\/**/Scripts/Generated/**}\end{DoxyPre}
+~\newline
+{\bfseries{Note\+:}} The {\ttfamily path\+Filters\+From\+File} option will be deprecated in the next package major release. Please use the {\ttfamily filters\+From\+File} option instead.    \\\cline{1-2}
+{\ttfamily filters\+From\+File}   &Add this to specify the json file to read path and assembly filtering rules from. Instead of defining all filtering rules directly in the command line, as you would with {\ttfamily path\+Filters} and {\ttfamily assembly\+Filters} options, this allows you to store them in a separate file, making your commands clearer and easier to manage.~\newline
+~\newline
+Like with the {\ttfamily path\+Filters} option, {\ttfamily filters\+From\+File} also supports relative paths. See Using relative paths in path filters.~\newline
+~\newline
+{\bfseries{Examples\+:}}~\newline
+~\newline
+{\ttfamily filters\+Fromfile\+:C\+:/\+My\+Project/\+Filtering\+Rules.json} will read rules from a file located in {\ttfamily C\+:/\+My\+Project/\+Filtering\+Rules.json}.~\newline
+{\ttfamily filters\+From\+File\+:Filtering\+Rules.\+json} will read rules from {\ttfamily Filtering\+Rules.\+json} located in the root of your project.~\newline
+~\newline
+{\bfseries{File example\+:}}~\newline
+~\newline
+This will include the {\ttfamily my.\+included.\+assembly}, exclude {\ttfamily my.\+excluded.\+assembly} and all assemblies with {\ttfamily unity} in their name. It will also include all files in the {\ttfamily Scripts} folder, and exclude all files in the {\ttfamily Scripts/\+Generated} folder
+\begin{DoxyPre}{\ttfamily \{~\newline
+    "{}assembliesInclude"{}: [~\newline
+        "{}my.included.assembly"{}~\newline
+    ],~\newline
+    "{}assembliesExclude"{}: [~\newline
+        "{}my.excluded.assembly"{},~\newline
+        "{}*unity*"{}~\newline
+    ],~\newline
+    "{}pathsInclude"{}: [~\newline
+        "{}**/Scripts/**"{}~\newline
+    ],~\newline
+    "{}pathsExclude"{}: [~\newline
+        "{}**/Scripts/Generated/**"{}~\newline
+    ]\}}~\newline
+{\bfseries{Note:}} The {\ttfamily pathFiltersFromFile} option will be deprecated in the next package major release. Please use the {\ttfamily filtersFromFile} option instead.    
+\end{DoxyPre}
+\\\cline{1-2}
+
+\begin{DoxyPre} {\ttfamily pathReplacePatterns}      \end{DoxyPre}
+&
+\begin{DoxyPre} Add this to replace specific sections from the paths that are stored in the coverage results xml files. This is a comma separated string and requires elements to be passed in pairs i.e. {\ttfamily pathReplacePatterns:from,to,from,to}. Globbing is supported.~\newline
+~\newline
+You can change the file paths in the coverage results xml to relative paths so that coverage data generated on different machines can be merged into a single report. Use the {\ttfamily pathReplacePatterns} option in conjunction with the {\ttfamily sourcePaths} option to specify the source directories which contain the corresponding source code. For more information see Generate combined report from separate projects.~\newline
+~\newline
+{\bfseries{Note:}} The \href{https://github.com/OpenCover/opencover}{\texttt{ OpenCover}} results xml format specifies file paths as absolute paths ({\ttfamily fullPath}). Changing these paths to relative paths will invalidate the \doxylink{namespace_open_cover}{OpenCover} standard format. When the results xml files are fed into other tools, these may not work as expected if the paths are relative.~\newline
+~\newline
+{\bfseries{Examples:}}~\newline
+~\newline
+{\ttfamily pathReplacePatterns:C:/MyProject,C:/MyOtherProject} will store the path as {\ttfamily C:/MyOtherProject/Assets/Scripts/MyScript.cs}, when the original path is {\ttfamily C:/MyProject/Assets/Scripts/MyScript.cs}~\newline
+{\ttfamily pathReplacePatterns:@*,,**/PackageCache/,Packages/} will store the path as {\ttfamily Packages/com.unity.my.package/Editor/MyScript.cs}, when the original path is {\ttfamily C:/Project/Library/PackageCache/com.unity.my.package@12345/Editor/MyScript.cs}~\newline
+{\ttfamily pathReplacePatterns:C:/MyProject/,} will store the path as {\ttfamily Assets/Scripts/MyScript.cs}, when the original path is {\ttfamily C:/MyProject/Assets/Scripts/MyScript.cs}~\newline
+{\ttfamily pathReplacePatterns:**Assets/,} will store the path as {\ttfamily Scripts/MyScript.cs}, when the original path is {\ttfamily C:/MyProject/Assets/Scripts/MyScript.cs}~\newline
+{\ttfamily pathReplacePatterns:C:/*/Assets/,} will store the path as {\ttfamily Scripts/MyScript.cs}, when the original path is {\ttfamily C:/MyProject/Assets/Scripts/MyScript.cs}~\newline
+{\ttfamily pathReplacePatterns:C:/MyProject??/,} will store the path as {\ttfamily Assets/Scripts/MyScript.cs}, when the original path is {\ttfamily C:/MyProject01/Assets/Scripts/MyScript.cs}~\newline
+{\ttfamily pathReplacePatterns:**/MyProject[A-\/Z][0-\/9]/,} will store the path as {\ttfamily Assets/Scripts/MyScript.cs}, when the original path is {\ttfamily C:/MyProjectA1/Assets/Scripts/MyScript.cs}    \end{DoxyPre}
+\\\cline{1-2}
+\end{longtabu}
+
+
+
+\begin{DoxyPre}\end{DoxyPre}
+\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_coverage_batchmode_autotoc_md814}{}\doxysection{\texorpdfstring{
+\begin{DoxyPre}Example\end{DoxyPre}
+}{
+\begin{DoxyPre}Example\end{DoxyPre}
+}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_coverage_batchmode_autotoc_md814}
+
+\begin{DoxyPre}\end{DoxyPre}
+
+
+
+\begin{DoxyPre}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Unity.exe\ -\/projectPath\ <path-\/to-\/project>\ -\/batchmode\ -\/testPlatform\ editmode\ -\/runTests\ -\/testResults}
+\DoxyCodeLine{<path-\/to-\/results-\/xml>\ -\/debugCodeOptimization\ }
+\DoxyCodeLine{-\/enableCodeCoverage}
+\DoxyCodeLine{-\/coverageResultsPath\ <path-\/to-\/coverage-\/results>}
+\DoxyCodeLine{-\/coverageHistoryPath\ <path-\/to-\/coverage-\/history>}
+\DoxyCodeLine{-\/coverageOptions\ "{}generateAdditionalMetrics;generateHtmlReport;generateHtmlReportHistory;generateBadgeReport;}
+\DoxyCodeLine{assemblyFilters:+my.assembly.*,+<packages>;}
+\DoxyCodeLine{pathFilters:-\/**/Tests/**,-\/**/BuiltInPackages/**"{}}
+
+\end{DoxyCode}
+ 
+The example above opens the project at {\ttfamily \textbackslash{}<path-\/to-\/project\textbackslash{}>}, runs the {\ttfamily EditMode} tests and produces an HTML coverage report and coverage summary badges in {\ttfamily \textbackslash{}<path-\/to-\/coverage-\/results\textbackslash{}>}. The report includes the coverage history, Cyclomatic Complexity and Crap Score calculations. The coverage history files are saved in {\ttfamily \textbackslash{}<path-\/to-\/coverage-\/history\textbackslash{}>}.\end{DoxyPre}
+
+
+
+\begin{DoxyPre}Additionally, the report includes code from any assembly whose name starts with {\ttfamily my.assembly.}, and includes code from all the \doxylink{namespace_packages}{Packages}' assemblies. It excludes files that have {\ttfamily /Tests/} in their path (i.e. all the files under the \doxylink{namespace_tests}{Tests} folder) and also excludes files that have {\ttfamily /BuiltInPackages/} in their path (i.e. all the built-\/in packages).\end{DoxyPre}
+
+
+
+\begin{DoxyPre}{\bfseries{Note:}} {\ttfamily -\/debugCodeOptimization} is passed above to ensure Code optimization is set to Debug mode. See \href{UsingCodeCoverage.md\#using-code-coverage-with-code-optimization}{\texttt{ Using Code Coverage with Code Optimization}}.\end{DoxyPre}
+
+
+
+\begin{DoxyPre}\end{DoxyPre}
+\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_coverage_batchmode_autotoc_md815}{}\doxysection{\texorpdfstring{
+\begin{DoxyPre}Generate combined report from EditMode and PlayMode tests\end{DoxyPre}
+}{
+\begin{DoxyPre}Generate combined report from EditMode and PlayMode tests\end{DoxyPre}
+}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_coverage_batchmode_autotoc_md815}
+
+\begin{DoxyPre}\end{DoxyPre}
+
+
+
+\begin{DoxyPre}To get coverage information for both EditMode and PlayMode tests, run the editor three times as shown in the example below:
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Unity.exe\ -\/projectPath\ <path-\/to-\/project>\ -\/batchmode\ -\/testPlatform\ editmode\ -\/runTests\ -\/debugCodeOptimization\ -\/enableCodeCoverage\ -\/coverageResultsPath\ <path-\/to-\/coverage-\/results>}
+\DoxyCodeLine{-\/coverageOptions\ "{}generateAdditionalMetrics;assemblyFilters:+my.assembly.*;dontClear"{}}
+\DoxyCodeLine{}
+\DoxyCodeLine{Unity.exe\ -\/projectPath\ <path-\/to-\/project>\ -\/batchmode\ -\/testPlatform\ playmode\ -\/runTests\ -\/debugCodeOptimization\ -\/enableCodeCoverage\ -\/coverageResultsPath\ <path-\/to-\/coverage-\/results>}
+\DoxyCodeLine{-\/coverageOptions\ "{}generateAdditionalMetrics;assemblyFilters:+my.assembly.*;dontClear"{}}
+\DoxyCodeLine{}
+\DoxyCodeLine{Unity.exe\ -\/projectPath\ <path-\/to-\/project>\ -\/batchmode\ -\/debugCodeOptimization\ -\/enableCodeCoverage\ -\/coverageResultsPath\ <path-\/to-\/coverage-\/results>}
+\DoxyCodeLine{-\/coverageOptions\ "{}generateHtmlReport;generateBadgeReport;assemblyFilters:+my.assembly.*"{}\ -\/quit}
+
+\end{DoxyCode}
+ 
+The first generates the coverage results for the EditMode tests, the second generates the coverage results for the PlayMode tests and the third generates the coverage report and summary badges based on both coverage results.~\newline
+~\newline
+{\bfseries{Note:}} In \href{https://docs.unity3d.com/Packages/com.unity.test-framework@2.0}{\texttt{ Unity Test Framework 2.0}} and above the coverage results from both the EditMode and PlayMode test runs are stored in the {\ttfamily Automated} folder. In this example, passing the {\ttfamily dontClear} coverage option ensures that the results from the EditMode test run are not cleared during the PlayMode test run.\end{DoxyPre}
+
+
+
+\begin{DoxyPre}\end{DoxyPre}
+\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_coverage_batchmode_autotoc_md816}{}\doxysection{\texorpdfstring{
+\begin{DoxyPre}Generate combined report from separate projects\end{DoxyPre}
+}{
+\begin{DoxyPre}Generate combined report from separate projects\end{DoxyPre}
+}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_coverage_batchmode_autotoc_md816}
+
+\begin{DoxyPre}\end{DoxyPre}
+
+
+
+\begin{DoxyPre}To get a coverage report for your shared code which is used on separate projects, run the tests for each project making sure the {\ttfamily -\/coverageResultsPath} points to a separate location inside a shared root folder as shown in the example below:
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Unity.exe\ -\/projectPath\ C:/MyProject\ -\/batchmode\ -\/testPlatform\ playmode\ -\/runTests\ -\/debugCodeOptimization\ -\/enableCodeCoverage\ -\/coverageResultsPath\ C:/CoverageResults/MyProject}
+\DoxyCodeLine{-\/coverageOptions\ "{}generateAdditionalMetrics;assemblyFilters:+my.assembly.*;pathReplacePatterns:C:/MyProject/,"{}}
+\DoxyCodeLine{}
+\DoxyCodeLine{Unity.exe\ -\/projectPath\ C:/MyOtherProject\ -\/batchmode\ -\/testPlatform\ playmode\ -\/runTests\ -\/debugCodeOptimization\ -\/enableCodeCoverage\ -\/coverageResultsPath\ C:/CoverageResults/MyOtherProject}
+\DoxyCodeLine{-\/coverageOptions\ "{}generateAdditionalMetrics;assemblyFilters:+my.assembly.*;pathReplacePatterns:C:/MyOtherProject/,"{}}
+\DoxyCodeLine{}
+\DoxyCodeLine{Unity.exe\ -\/projectPath\ C:/MyProject\ -\/batchmode\ -\/debugCodeOptimization\ -\/enableCodeCoverage\ -\/coverageResultsPath\ C:/CoverageResults}
+\DoxyCodeLine{-\/coverageOptions\ "{}generateHtmlReport;generateBadgeReport;assemblyFilters:+my.assembly.*;sourcePaths:C:/MyProject"{}\ -\/quit}
+
+\end{DoxyCode}
+ 
+The first run generates the coverage results for the PlayMode tests for {\ttfamily MyProject} and stores these in {\ttfamily C:/CoverageResults/MyProject}. The second run generates the coverage results for the PlayMode tests for {\ttfamily MyOtherProject} and stores these in {\ttfamily C:/CoverageResults/MyOtherProject}. The third run generates the coverage report and summary badges based on the results found under the common {\ttfamily C:/CoverageResults} folder.\end{DoxyPre}
+
+
+
+\begin{DoxyPre}\end{DoxyPre}
+\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_coverage_batchmode_autotoc_md817}{}\doxysection{\texorpdfstring{
+\begin{DoxyPre}Using relative paths in path filters\end{DoxyPre}
+}{
+\begin{DoxyPre}Using relative paths in path filters\end{DoxyPre}
+}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_coverage_batchmode_autotoc_md817}
+
+\begin{DoxyPre}\end{DoxyPre}
+
+
+
+\begin{DoxyPre}When the {\ttfamily sourcePaths} option is specified, the path filtering rules set by the {\ttfamily pathFilters}, {\ttfamily pathFiltersFromFile} and {\ttfamily filtersFromFile} options can be defined as relative paths.\end{DoxyPre}
+
+
+
+\begin{DoxyPre}{\bfseries{Example:}}\end{DoxyPre}
+
+
+
+\begin{DoxyPre}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Unity.exe\ -\/projectPath\ C:/MyProject\ -\/batchmode\ -\/testPlatform\ playmode\ -\/runTests\ -\/debugCodeOptimization\ -\/enableCodeCoverage\ -\/coverageResultsPath\ C:/CoverageResults/MyProject}
+\DoxyCodeLine{-\/coverageOptions\ "{}generateHtmlReport;generateAdditionalMetrics;assemblyFilters:+<all>;pathFiltersFromFile:FilteringRules.txt;sourcePaths:C:/MyProject/Assets"{}}
+
+\end{DoxyCode}
+\end{DoxyPre}
+
+
+
+\begin{DoxyPre}{\ttfamily FilteringRules.txt}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{+Scripts/Animation/**}
+\DoxyCodeLine{-\/**/Generated/**}
+\DoxyCodeLine{+C:/MyPackages/com.my.company.mypackage/**}
+
+\end{DoxyCode}
+\end{DoxyPre}
+
+
+
+\begin{DoxyPre}This example contains three rules:
+\begin{DoxyItemize}
+\item {\ttfamily +Scripts/Animation/**} -\/ because the {\ttfamily sourcePaths} option was set and this is a relative path, this rule will include all the scripts in the {\ttfamily C:/MyProject/Assets/Scripts/Animation} folder and its subfolders.
+\item {\ttfamily -\/**/Generated/**} -\/ excludes all the files that have {\ttfamily /Generated/} in their path. This is not a relative path so the {\ttfamily sourcePaths} option has no effect.
+\item {\ttfamily +C:/MyPackages/com.my.company.mypackage/**} -\/ includes all the scripts located in the package outside of the project. This is an absolute path so the {\ttfamily sourcePaths} option has no effect. 
+
+\end{DoxyItemize}\end{DoxyPre}

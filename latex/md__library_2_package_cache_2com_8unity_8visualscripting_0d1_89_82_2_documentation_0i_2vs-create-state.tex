@@ -1,0 +1,251 @@
+\chapter{Create a new state}
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create-state}{}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create-state}\index{Create a new state@{Create a new state}}
+\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create-state_autotoc_md1802}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create-state_autotoc_md1802}%
+ You can create three types of State nodes in a State Graph\+: Script States, Any States, and Super States. For more information on the types of State nodes, see State Graphs in \href{vs-graph-types.md\#state-graphs}{\texttt{ Graphs}}.
+
+You can also add a \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-sticky-notes}{Sticky Note}{0} to add comments to a graph.\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create-state_autotoc_md1803}{}\doxysection{\texorpdfstring{Create a Script State}{Create a Script State}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create-state_autotoc_md1803}
+To create a new blank Script State\+:
+
+
+\begin{DoxyEnumerate}
+\item 
+
+\mbox{[}!include\doxylink{vs-open-state-menu_8md}{open-\/state-\/menu}\mbox{]}
+
+
+\item 
+
+Select {\bfseries{Create Script State}}. ~\newline
+Visual Scripting creates a new Script State node.
+
+
+\item 
+
+Open the \href{vs-interface-overview.md\#the-graph-inspector}{\texttt{ Graph Inspector}}.
+
+
+\item 
+
+In the Graph Inspector, choose a source for the Script State node\+:
+
+
+\begin{DoxyItemize}
+\item 
+
+{\bfseries{Embed}}\+: The graph only exists on the Script State node. You can only modify the graph from the node in its parent State Graph.
+
+
+\item 
+
+{\bfseries{Graph}}\+: The graph exists in a separate file. You can modify the graph outside of its parent State Graph and reuse the graph in other areas of your application.
+
+
+\end{DoxyItemize}
+\item 
+
+If you chose {\bfseries{Graph}}\+:
+
+
+\begin{DoxyEnumerate}[label=\enumalphalphcnt*]
+
+\item 
+
+Select {\bfseries{New}}.
+
+
+\item 
+
+Enter a name for the graph file.
+
+
+\item 
+
+Choose where you want to save the new graph.
+
+
+\item 
+
+Select {\bfseries{Save}}.
+
+
+\end{DoxyEnumerate}
+\end{DoxyEnumerate}
+
+
+
+To create a Script State from an existing Script Graph\+:
+
+
+\begin{DoxyEnumerate}
+\item 
+
+\mbox{[}!include\doxylink{vs-open-state-menu_8md}{open-\/state-\/menu}\mbox{]}
+
+
+\item 
+
+Select {\bfseries{Create Script State}}. ~\newline
+Visual Scripting creates a new Script State node.
+
+
+\item 
+
+Open the \href{vs-interface-overview.md\#the-graph-inspector}{\texttt{ Graph Inspector}}.
+
+
+\item 
+
+In the Graph Inspector, set the source for the Script State node to {\bfseries{Graph}}.
+
+
+\item 
+
+Do one of the following\+:
+
+
+\begin{DoxyItemize}
+\item 
+
+Select the object picker (circle icon) and choose a compatible Script Graph from your project.
+
+
+\item 
+
+Click and drag a Script Graph file from your Project window and release on the {\bfseries{Graph}} field.
+
+
+\end{DoxyItemize}
+\end{DoxyEnumerate}
+
+
+
+\begin{quote}
+\mbox{[}!\+TIP\mbox{]} Click and drag the Script Graph from your Project window into the Graph Editor to automatically create a Script State node. \end{quote}
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create-state_autotoc_md1804}{}\doxysection{\texorpdfstring{Create an Any State}{Create an Any State}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create-state_autotoc_md1804}
+To create a new Any State node\+:
+
+
+\begin{DoxyEnumerate}
+\item \mbox{[}!include\doxylink{vs-open-state-menu_8md}{open-\/state-\/menu}\mbox{]}
+\item Select {\bfseries{Create Any State}}.
+\end{DoxyEnumerate}
+
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create-state_autotoc_md1805}{}\doxysection{\texorpdfstring{Create a Super State}{Create a Super State}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create-state_autotoc_md1805}
+To create a new blank Super State\+:
+
+
+\begin{DoxyEnumerate}
+\item 
+
+\mbox{[}!include\doxylink{vs-open-state-menu_8md}{open-\/state-\/menu}\mbox{]}
+
+
+\item 
+
+Select {\bfseries{Create Super State}}. ~\newline
+Visual Scripting creates a new Super State node.
+
+
+\item 
+
+Open the \href{vs-interface-overview.md\#the-graph-inspector}{\texttt{ Graph Inspector}}.
+
+
+\item 
+
+In the Graph Inspector, choose a source for the Super State node\+:
+
+
+\begin{DoxyItemize}
+\item 
+
+{\bfseries{Embed}}\+: The graph only exists on the Super State node. You can only modify the graph from the node in its parent State Graph.
+
+
+\item 
+
+{\bfseries{Graph}}\+: The graph exists in a separate file. You can modify the graph outside of its parent State Graph and reuse the graph in other areas of your application.
+
+
+\end{DoxyItemize}
+\item 
+
+If you chose {\bfseries{Graph}}\+:
+
+
+\begin{DoxyEnumerate}[label=\enumalphalphcnt*]
+
+\item 
+
+Select {\bfseries{New}}.
+
+
+\item 
+
+Enter a name for the graph file.
+
+
+\item 
+
+Choose where you want to save the new graph.
+
+
+\item 
+
+Select {\bfseries{Save}}.
+
+
+\end{DoxyEnumerate}
+\end{DoxyEnumerate}
+
+
+
+To create a Super State from an existing State Graph\+:
+
+
+\begin{DoxyEnumerate}
+\item 
+
+\mbox{[}!include\doxylink{vs-open-state-menu_8md}{open-\/state-\/menu}\mbox{]}
+
+
+\item 
+
+Select {\bfseries{Create Super State}}. ~\newline
+Visual Scripting creates a new Super State node.
+
+
+\item 
+
+Open the \href{vs-interface-overview.md\#the-graph-inspector}{\texttt{ Graph Inspector}}.
+
+
+\item 
+
+In the Graph Inspector, set the source for the Super State node to {\bfseries{Graph}}.
+
+
+\item 
+
+Do one of the following\+:
+
+
+\begin{DoxyItemize}
+\item 
+
+Select the object picker (circle icon) and choose a compatible State Graph from your project.
+
+
+\item 
+
+Click and drag a State Graph file from your Project window and release on the {\bfseries{Graph}} field.
+
+
+\end{DoxyItemize}
+\end{DoxyEnumerate}
+
+
+
+\begin{quote}
+\mbox{[}!\+TIP\mbox{]} Click and drag the State Graph from your Project window into the Graph Editor to automatically create a Super State node. \end{quote}

@@ -1,0 +1,28 @@
+\chapter{About the Profile Analyzer package}
+\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2index}{}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2index}\index{About the Profile Analyzer package@{About the Profile Analyzer package}}
+\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2index_autotoc_md410}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2index_autotoc_md410}%
+ The Profile Analyzer aggregates and visualizes frame and marker data from a set of \href{https://docs.unity3d.com/Manual/Profiler.html}{\texttt{ Unity Profiler}} frames to help you understand their behavior. You can use the Profile Analyzer to compare two sets of data side-\/by-\/side, which complements the single frame analysis already available in the \doxylink{namespace_unity}{Unity} Profiler.
+
+For information on how to use the Profile Analyzer, see the documentation on the \doxysectlink{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2profile-analyzer-window}{Profile Analyzer window}{0}
+
+~\newline
+{\itshape The Profile Analyzer window, with two sets of data loaded}\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2index_autotoc_md411}{}\doxysection{\texorpdfstring{Installing the Profile Analyzer}{Installing the Profile Analyzer}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2index_autotoc_md411}
+To install this package into versions of \doxylink{namespace_unity}{Unity} that support the package manager follow the instructions in the \href{https://docs.unity3d.com/Packages/com.unity.package-manager-ui@latest/index.html}{\texttt{ Package Manager documentation}}.
+
+When using any \doxylink{namespace_unity}{Unity} version newer than 2021.\+2.\+0a5, you can just click {\bfseries{\href{com.unity3d.kharma:upmpackage/com.unity.performance.profile-analyzer}{\texttt{ this link to install it by name}}}}.\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2index_autotoc_md412}{}\doxysubsection{\texorpdfstring{Earlier versions of Unity}{Earlier versions of Unity}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2index_autotoc_md412}
+For earlier versions, follow this link to the Profile Analyzer \href{https://download.packages.unity.com/com.unity.performance.profile-analyzer/-/com.unity.performance.profile-analyzer-1.1.1.tgz}{\texttt{ download}} and place the contents into your Project\textquotesingle{}s Assets folder.\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2index_autotoc_md413}{}\doxysection{\texorpdfstring{Requirements}{Requirements}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2index_autotoc_md413}
+This version of the Profile Analyzer is compatible with the following versions of the \doxylink{namespace_unity}{Unity} Editor\+:
+
+
+\begin{DoxyItemize}
+\item 5.\+6 and later
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2index_autotoc_md414}{}\doxysection{\texorpdfstring{Known limitations}{Known limitations}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2index_autotoc_md414}
+The Profile Analyzer has the following known limitations\+:
+
+
+\begin{DoxyItemize}
+\item The original Profile data is not saved in the Profile Analyzer .pdata file. Therefore, you should store both the \doxylink{namespace_unity}{Unity} Profiler .data file (or the .raw file exported from a stand alone player) along with the .pdata file.
+\item When you click on a marker, the Profile Analyzer attempts to jump to the same marker in the \doxylink{namespace_unity}{Unity} Profiler if the same data is loaded. You must make a selection in the \doxylink{namespace_unity}{Unity} Profiler beforehand for this to work. In the \doxylink{namespace_unity}{Unity} Profiler in the UI view, the vertical height is not correct.
+\item On \doxylink{namespace_unity}{Unity} 5.\+6 and 2017.\+4, the Thread Select Window allows you to collapse the \textquotesingle{}All\textquotesingle{} threads item, which has no purpose. 
+\end{DoxyItemize}

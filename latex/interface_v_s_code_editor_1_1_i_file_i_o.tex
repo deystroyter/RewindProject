@@ -1,0 +1,79 @@
+\doxysection{VSCode\+Editor.\+IFile\+IO Interface Reference}
+\hypertarget{interface_v_s_code_editor_1_1_i_file_i_o}{}\label{interface_v_s_code_editor_1_1_i_file_i_o}\index{VSCodeEditor.IFileIO@{VSCodeEditor.IFileIO}}
+Inheritance diagram for VSCode\+Editor.\+IFile\+IO\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_v_s_code_editor_1_1_i_file_i_o}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{interface_v_s_code_editor_1_1_i_file_i_o_a88e6a5be332b31ca5059a429486d0521}{Exists}} (string file\+Name)
+\item 
+string \mbox{\hyperlink{interface_v_s_code_editor_1_1_i_file_i_o_ae1c58d92884cd9e4b536a0cf3bc7c04b}{Read\+All\+Text}} (string file\+Name)
+\item 
+void \mbox{\hyperlink{interface_v_s_code_editor_1_1_i_file_i_o_a19a0ca80a930285f8d7802468233ef7a}{Write\+All\+Text}} (string file\+Name, string content)
+\item 
+void \mbox{\hyperlink{interface_v_s_code_editor_1_1_i_file_i_o_acb910fd708be664fc120456f20f8f9dd}{Create\+Directory}} (string path\+Name)
+\item 
+string \mbox{\hyperlink{interface_v_s_code_editor_1_1_i_file_i_o_ae44884ff22e07438401f0e407cffc238}{Escaped\+Relative\+Path\+For}} (string file, string project\+Directory)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interface_v_s_code_editor_1_1_i_file_i_o_acb910fd708be664fc120456f20f8f9dd}\label{interface_v_s_code_editor_1_1_i_file_i_o_acb910fd708be664fc120456f20f8f9dd} 
+\index{VSCodeEditor.IFileIO@{VSCodeEditor.IFileIO}!CreateDirectory@{CreateDirectory}}
+\index{CreateDirectory@{CreateDirectory}!VSCodeEditor.IFileIO@{VSCodeEditor.IFileIO}}
+\doxysubsubsection{\texorpdfstring{CreateDirectory()}{CreateDirectory()}}
+{\footnotesize\ttfamily void VSCode\+Editor.\+IFile\+IO.\+Create\+Directory (\begin{DoxyParamCaption}\item[{string}]{path\+Name }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_v_s_code_editor_1_1_file_i_o_provider_af5e4a08f416419927db985253ee42827}{VSCode\+Editor.\+File\+IOProvider}}.
+
+\Hypertarget{interface_v_s_code_editor_1_1_i_file_i_o_ae44884ff22e07438401f0e407cffc238}\label{interface_v_s_code_editor_1_1_i_file_i_o_ae44884ff22e07438401f0e407cffc238} 
+\index{VSCodeEditor.IFileIO@{VSCodeEditor.IFileIO}!EscapedRelativePathFor@{EscapedRelativePathFor}}
+\index{EscapedRelativePathFor@{EscapedRelativePathFor}!VSCodeEditor.IFileIO@{VSCodeEditor.IFileIO}}
+\doxysubsubsection{\texorpdfstring{EscapedRelativePathFor()}{EscapedRelativePathFor()}}
+{\footnotesize\ttfamily string VSCode\+Editor.\+IFile\+IO.\+Escaped\+Relative\+Path\+For (\begin{DoxyParamCaption}\item[{string}]{file,  }\item[{string}]{project\+Directory }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_v_s_code_editor_1_1_file_i_o_provider_af0ae860a07c3dfc90714fbe6d461b6b4}{VSCode\+Editor.\+File\+IOProvider}}.
+
+\Hypertarget{interface_v_s_code_editor_1_1_i_file_i_o_a88e6a5be332b31ca5059a429486d0521}\label{interface_v_s_code_editor_1_1_i_file_i_o_a88e6a5be332b31ca5059a429486d0521} 
+\index{VSCodeEditor.IFileIO@{VSCodeEditor.IFileIO}!Exists@{Exists}}
+\index{Exists@{Exists}!VSCodeEditor.IFileIO@{VSCodeEditor.IFileIO}}
+\doxysubsubsection{\texorpdfstring{Exists()}{Exists()}}
+{\footnotesize\ttfamily bool VSCode\+Editor.\+IFile\+IO.\+Exists (\begin{DoxyParamCaption}\item[{string}]{file\+Name }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_v_s_code_editor_1_1_file_i_o_provider_a0d686ee1d521f029b3d926df45d2e216}{VSCode\+Editor.\+File\+IOProvider}}.
+
+\Hypertarget{interface_v_s_code_editor_1_1_i_file_i_o_ae1c58d92884cd9e4b536a0cf3bc7c04b}\label{interface_v_s_code_editor_1_1_i_file_i_o_ae1c58d92884cd9e4b536a0cf3bc7c04b} 
+\index{VSCodeEditor.IFileIO@{VSCodeEditor.IFileIO}!ReadAllText@{ReadAllText}}
+\index{ReadAllText@{ReadAllText}!VSCodeEditor.IFileIO@{VSCodeEditor.IFileIO}}
+\doxysubsubsection{\texorpdfstring{ReadAllText()}{ReadAllText()}}
+{\footnotesize\ttfamily string VSCode\+Editor.\+IFile\+IO.\+Read\+All\+Text (\begin{DoxyParamCaption}\item[{string}]{file\+Name }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_v_s_code_editor_1_1_file_i_o_provider_af7a2b045c3e3d22c016c9e6f442055e5}{VSCode\+Editor.\+File\+IOProvider}}.
+
+\Hypertarget{interface_v_s_code_editor_1_1_i_file_i_o_a19a0ca80a930285f8d7802468233ef7a}\label{interface_v_s_code_editor_1_1_i_file_i_o_a19a0ca80a930285f8d7802468233ef7a} 
+\index{VSCodeEditor.IFileIO@{VSCodeEditor.IFileIO}!WriteAllText@{WriteAllText}}
+\index{WriteAllText@{WriteAllText}!VSCodeEditor.IFileIO@{VSCodeEditor.IFileIO}}
+\doxysubsubsection{\texorpdfstring{WriteAllText()}{WriteAllText()}}
+{\footnotesize\ttfamily void VSCode\+Editor.\+IFile\+IO.\+Write\+All\+Text (\begin{DoxyParamCaption}\item[{string}]{file\+Name,  }\item[{string}]{content }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_v_s_code_editor_1_1_file_i_o_provider_aca190e3118d8c1aab416f17bb3408383}{VSCode\+Editor.\+File\+IOProvider}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Package\+Cache/com.\+unity.\+ide.\+vscode@1.\+2.\+5/\+Editor/\+Project\+Generation/\mbox{\hyperlink{_file_i_o_8cs}{File\+IO.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,233 @@
+\doxysection{Unity\+Editor.\+Timeline.\+Timeline\+Track\+Base\+GUI Class Reference}
+\hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i}{}\label{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i}\index{UnityEditor.Timeline.TimelineTrackBaseGUI@{UnityEditor.Timeline.TimelineTrackBaseGUI}}
+Inheritance diagram for Unity\+Editor.\+Timeline.\+Timeline\+Track\+Base\+GUI\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual float \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_a63c9a5cb746eaeec97cadc049fa3e1b4}{Get\+Vertical\+Spacing\+Between\+Tracks}} ()
+\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_a87c94eecc807b2e6dc1d250b20eaed8f}{Draw}} (Rect header\+Rect, Rect content\+Rect, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_window_state}{Window\+State}} state)
+\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_ac2e5c20edd6124a23d53450405f1041d}{On\+Graph\+Rebuilt}} ()
+\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_a9335656752618b3d9d809f747960d2a8}{Draw\+Insertion\+Markers}} (Rect row\+Rect\+With\+Indent)
+\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_a52332836b87db0c9f41304e55af26bf1}{Clear\+Draw\+Flags}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i}{Timeline\+Track\+Base\+GUI}} \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_a2612eb18f50fec4b14da748f87a47699}{Find\+GUITrack}} (\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_a4907df580e1956c8aad31d2190231b96}{track}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_aac70ceec23be0222df9cf2704660f36e}{Timeline\+Track\+Base\+GUI}} (int id, int depth, Tree\+View\+Item parent, string display\+Name, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} track\+Asset, Tree\+View\+Controller tv, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_tree_view_g_u_i}{Timeline\+Tree\+View\+GUI}} tvgui)
+\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_a3083d956f452a068e3e4d3740980c798}{Draw\+Track\+State}} (Rect track\+Rect, Rect expanded\+Rect, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_a4907df580e1956c8aad31d2190231b96}{track}})
+\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_a7a125e4b435287e85d98024aebaa9803}{Draw\+Mute\+Button}} (Rect rect, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_window_state}{Window\+State}} state)
+\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_adb976aff153d7646b6642edcc83fc40f}{Draw\+Lock\+Button}} (Rect rect, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_window_state}{Window\+State}} state)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_abcd4b4b12aaba7acfab4e18f54a9bf20}{m\+\_\+\+Is\+Root}} = false
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+Vector2 \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_a10e6839f51237c79417a13941c0b6f5e}{tree\+View\+To\+Window\+Transformation}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_af43c5f776b62ad74723d8f2960054586}{is\+Expanded}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_a6d4289f8dffe891f62079196d2a8eae4}{is\+Drop\+Target}}\hspace{0.3cm}{\ttfamily  \mbox{[}protected get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_a4907df580e1956c8aad31d2190231b96}{track}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_window}{Timeline\+Window}} \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_a62d2254638748b118a7b3c9430413e4a}{Timeline\+Window}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_track_drawer}{Track\+Drawer}} \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_a8cd3a23fd4c957b08c3f9d69937ae9b2}{drawer}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_aa50e074547d0adf23139934b015a02bc}{visible\+Row}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_ae961f87954c3d8bb1638d7d71c0f419e}{visible\+Expanded}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_a4c770b4522732c87762cb7deb0229d45}{draw\+Insertion\+Marker\+Before}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_a076090921ac2a257628516383988dded}{draw\+Insertion\+Marker\+After}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+Rect \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_afa814612f6f371c2e2e7010eecd32da8}{bounding\+Rect}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_a51319129c1e686d45dfa1d2523745c55}{expandable}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_bounds}{Unity\+Editor.\+Timeline.\+IBounds}}}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_aac70ceec23be0222df9cf2704660f36e}\label{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_aac70ceec23be0222df9cf2704660f36e} 
+\index{UnityEditor.Timeline.TimelineTrackBaseGUI@{UnityEditor.Timeline.TimelineTrackBaseGUI}!TimelineTrackBaseGUI@{TimelineTrackBaseGUI}}
+\index{TimelineTrackBaseGUI@{TimelineTrackBaseGUI}!UnityEditor.Timeline.TimelineTrackBaseGUI@{UnityEditor.Timeline.TimelineTrackBaseGUI}}
+\doxysubsubsection{\texorpdfstring{TimelineTrackBaseGUI()}{TimelineTrackBaseGUI()}}
+{\footnotesize\ttfamily Unity\+Editor.\+Timeline.\+Timeline\+Track\+Base\+GUI.\+Timeline\+Track\+Base\+GUI (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{int}]{depth,  }\item[{Tree\+View\+Item}]{parent,  }\item[{string}]{display\+Name,  }\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}}}]{track\+Asset,  }\item[{Tree\+View\+Controller}]{tv,  }\item[{\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_tree_view_g_u_i}{Timeline\+Tree\+View\+GUI}}}]{tvgui }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_a52332836b87db0c9f41304e55af26bf1}\label{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_a52332836b87db0c9f41304e55af26bf1} 
+\index{UnityEditor.Timeline.TimelineTrackBaseGUI@{UnityEditor.Timeline.TimelineTrackBaseGUI}!ClearDrawFlags@{ClearDrawFlags}}
+\index{ClearDrawFlags@{ClearDrawFlags}!UnityEditor.Timeline.TimelineTrackBaseGUI@{UnityEditor.Timeline.TimelineTrackBaseGUI}}
+\doxysubsubsection{\texorpdfstring{ClearDrawFlags()}{ClearDrawFlags()}}
+{\footnotesize\ttfamily void Unity\+Editor.\+Timeline.\+Timeline\+Track\+Base\+GUI.\+Clear\+Draw\+Flags (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_a87c94eecc807b2e6dc1d250b20eaed8f}\label{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_a87c94eecc807b2e6dc1d250b20eaed8f} 
+\index{UnityEditor.Timeline.TimelineTrackBaseGUI@{UnityEditor.Timeline.TimelineTrackBaseGUI}!Draw@{Draw}}
+\index{Draw@{Draw}!UnityEditor.Timeline.TimelineTrackBaseGUI@{UnityEditor.Timeline.TimelineTrackBaseGUI}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Unity\+Editor.\+Timeline.\+Timeline\+Track\+Base\+GUI.\+Draw (\begin{DoxyParamCaption}\item[{Rect}]{header\+Rect,  }\item[{Rect}]{content\+Rect,  }\item[{\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_window_state}{Window\+State}}}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_a9335656752618b3d9d809f747960d2a8}\label{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_a9335656752618b3d9d809f747960d2a8} 
+\index{UnityEditor.Timeline.TimelineTrackBaseGUI@{UnityEditor.Timeline.TimelineTrackBaseGUI}!DrawInsertionMarkers@{DrawInsertionMarkers}}
+\index{DrawInsertionMarkers@{DrawInsertionMarkers}!UnityEditor.Timeline.TimelineTrackBaseGUI@{UnityEditor.Timeline.TimelineTrackBaseGUI}}
+\doxysubsubsection{\texorpdfstring{DrawInsertionMarkers()}{DrawInsertionMarkers()}}
+{\footnotesize\ttfamily void Unity\+Editor.\+Timeline.\+Timeline\+Track\+Base\+GUI.\+Draw\+Insertion\+Markers (\begin{DoxyParamCaption}\item[{Rect}]{row\+Rect\+With\+Indent }\end{DoxyParamCaption})}
+
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_adb976aff153d7646b6642edcc83fc40f}\label{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_adb976aff153d7646b6642edcc83fc40f} 
+\index{UnityEditor.Timeline.TimelineTrackBaseGUI@{UnityEditor.Timeline.TimelineTrackBaseGUI}!DrawLockButton@{DrawLockButton}}
+\index{DrawLockButton@{DrawLockButton}!UnityEditor.Timeline.TimelineTrackBaseGUI@{UnityEditor.Timeline.TimelineTrackBaseGUI}}
+\doxysubsubsection{\texorpdfstring{DrawLockButton()}{DrawLockButton()}}
+{\footnotesize\ttfamily void Unity\+Editor.\+Timeline.\+Timeline\+Track\+Base\+GUI.\+Draw\+Lock\+Button (\begin{DoxyParamCaption}\item[{Rect}]{rect,  }\item[{\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_window_state}{Window\+State}}}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_a7a125e4b435287e85d98024aebaa9803}\label{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_a7a125e4b435287e85d98024aebaa9803} 
+\index{UnityEditor.Timeline.TimelineTrackBaseGUI@{UnityEditor.Timeline.TimelineTrackBaseGUI}!DrawMuteButton@{DrawMuteButton}}
+\index{DrawMuteButton@{DrawMuteButton}!UnityEditor.Timeline.TimelineTrackBaseGUI@{UnityEditor.Timeline.TimelineTrackBaseGUI}}
+\doxysubsubsection{\texorpdfstring{DrawMuteButton()}{DrawMuteButton()}}
+{\footnotesize\ttfamily void Unity\+Editor.\+Timeline.\+Timeline\+Track\+Base\+GUI.\+Draw\+Mute\+Button (\begin{DoxyParamCaption}\item[{Rect}]{rect,  }\item[{\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_window_state}{Window\+State}}}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_a3083d956f452a068e3e4d3740980c798}\label{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_a3083d956f452a068e3e4d3740980c798} 
+\index{UnityEditor.Timeline.TimelineTrackBaseGUI@{UnityEditor.Timeline.TimelineTrackBaseGUI}!DrawTrackState@{DrawTrackState}}
+\index{DrawTrackState@{DrawTrackState}!UnityEditor.Timeline.TimelineTrackBaseGUI@{UnityEditor.Timeline.TimelineTrackBaseGUI}}
+\doxysubsubsection{\texorpdfstring{DrawTrackState()}{DrawTrackState()}}
+{\footnotesize\ttfamily void Unity\+Editor.\+Timeline.\+Timeline\+Track\+Base\+GUI.\+Draw\+Track\+State (\begin{DoxyParamCaption}\item[{Rect}]{track\+Rect,  }\item[{Rect}]{expanded\+Rect,  }\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}}}]{track }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_a2612eb18f50fec4b14da748f87a47699}\label{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_a2612eb18f50fec4b14da748f87a47699} 
+\index{UnityEditor.Timeline.TimelineTrackBaseGUI@{UnityEditor.Timeline.TimelineTrackBaseGUI}!FindGUITrack@{FindGUITrack}}
+\index{FindGUITrack@{FindGUITrack}!UnityEditor.Timeline.TimelineTrackBaseGUI@{UnityEditor.Timeline.TimelineTrackBaseGUI}}
+\doxysubsubsection{\texorpdfstring{FindGUITrack()}{FindGUITrack()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i}{Timeline\+Track\+Base\+GUI}} Unity\+Editor.\+Timeline.\+Timeline\+Track\+Base\+GUI.\+Find\+GUITrack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}}}]{track }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_a63c9a5cb746eaeec97cadc049fa3e1b4}\label{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_a63c9a5cb746eaeec97cadc049fa3e1b4} 
+\index{UnityEditor.Timeline.TimelineTrackBaseGUI@{UnityEditor.Timeline.TimelineTrackBaseGUI}!GetVerticalSpacingBetweenTracks@{GetVerticalSpacingBetweenTracks}}
+\index{GetVerticalSpacingBetweenTracks@{GetVerticalSpacingBetweenTracks}!UnityEditor.Timeline.TimelineTrackBaseGUI@{UnityEditor.Timeline.TimelineTrackBaseGUI}}
+\doxysubsubsection{\texorpdfstring{GetVerticalSpacingBetweenTracks()}{GetVerticalSpacingBetweenTracks()}}
+{\footnotesize\ttfamily virtual float Unity\+Editor.\+Timeline.\+Timeline\+Track\+Base\+GUI.\+Get\+Vertical\+Spacing\+Between\+Tracks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_track_g_u_i_a2fbfb5a9b41003b8c8d5dffb394bfd6b}{Unity\+Editor.\+Timeline.\+Timeline\+Track\+GUI}}.
+
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_ac2e5c20edd6124a23d53450405f1041d}\label{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_ac2e5c20edd6124a23d53450405f1041d} 
+\index{UnityEditor.Timeline.TimelineTrackBaseGUI@{UnityEditor.Timeline.TimelineTrackBaseGUI}!OnGraphRebuilt@{OnGraphRebuilt}}
+\index{OnGraphRebuilt@{OnGraphRebuilt}!UnityEditor.Timeline.TimelineTrackBaseGUI@{UnityEditor.Timeline.TimelineTrackBaseGUI}}
+\doxysubsubsection{\texorpdfstring{OnGraphRebuilt()}{OnGraphRebuilt()}}
+{\footnotesize\ttfamily void Unity\+Editor.\+Timeline.\+Timeline\+Track\+Base\+GUI.\+On\+Graph\+Rebuilt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_abcd4b4b12aaba7acfab4e18f54a9bf20}\label{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_abcd4b4b12aaba7acfab4e18f54a9bf20} 
+\index{UnityEditor.Timeline.TimelineTrackBaseGUI@{UnityEditor.Timeline.TimelineTrackBaseGUI}!m\_IsRoot@{m\_IsRoot}}
+\index{m\_IsRoot@{m\_IsRoot}!UnityEditor.Timeline.TimelineTrackBaseGUI@{UnityEditor.Timeline.TimelineTrackBaseGUI}}
+\doxysubsubsection{\texorpdfstring{m\_IsRoot}{m\_IsRoot}}
+{\footnotesize\ttfamily bool Unity\+Editor.\+Timeline.\+Timeline\+Track\+Base\+GUI.\+m\+\_\+\+Is\+Root = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_afa814612f6f371c2e2e7010eecd32da8}\label{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_afa814612f6f371c2e2e7010eecd32da8} 
+\index{UnityEditor.Timeline.TimelineTrackBaseGUI@{UnityEditor.Timeline.TimelineTrackBaseGUI}!boundingRect@{boundingRect}}
+\index{boundingRect@{boundingRect}!UnityEditor.Timeline.TimelineTrackBaseGUI@{UnityEditor.Timeline.TimelineTrackBaseGUI}}
+\doxysubsubsection{\texorpdfstring{boundingRect}{boundingRect}}
+{\footnotesize\ttfamily Rect Unity\+Editor.\+Timeline.\+Timeline\+Track\+Base\+GUI.\+bounding\+Rect\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [abstract]}}
+
+
+
+Implements \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_bounds_a6e65a603c40aaebc56ebb4f7763f7296}{Unity\+Editor.\+Timeline.\+IBounds}}.
+
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_a8cd3a23fd4c957b08c3f9d69937ae9b2}\label{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_a8cd3a23fd4c957b08c3f9d69937ae9b2} 
+\index{UnityEditor.Timeline.TimelineTrackBaseGUI@{UnityEditor.Timeline.TimelineTrackBaseGUI}!drawer@{drawer}}
+\index{drawer@{drawer}!UnityEditor.Timeline.TimelineTrackBaseGUI@{UnityEditor.Timeline.TimelineTrackBaseGUI}}
+\doxysubsubsection{\texorpdfstring{drawer}{drawer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_track_drawer}{Track\+Drawer}} Unity\+Editor.\+Timeline.\+Timeline\+Track\+Base\+GUI.\+drawer\hspace{0.3cm}{\ttfamily [get]}}
+
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_a076090921ac2a257628516383988dded}\label{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_a076090921ac2a257628516383988dded} 
+\index{UnityEditor.Timeline.TimelineTrackBaseGUI@{UnityEditor.Timeline.TimelineTrackBaseGUI}!drawInsertionMarkerAfter@{drawInsertionMarkerAfter}}
+\index{drawInsertionMarkerAfter@{drawInsertionMarkerAfter}!UnityEditor.Timeline.TimelineTrackBaseGUI@{UnityEditor.Timeline.TimelineTrackBaseGUI}}
+\doxysubsubsection{\texorpdfstring{drawInsertionMarkerAfter}{drawInsertionMarkerAfter}}
+{\footnotesize\ttfamily bool Unity\+Editor.\+Timeline.\+Timeline\+Track\+Base\+GUI.\+draw\+Insertion\+Marker\+After\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_a4c770b4522732c87762cb7deb0229d45}\label{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_a4c770b4522732c87762cb7deb0229d45} 
+\index{UnityEditor.Timeline.TimelineTrackBaseGUI@{UnityEditor.Timeline.TimelineTrackBaseGUI}!drawInsertionMarkerBefore@{drawInsertionMarkerBefore}}
+\index{drawInsertionMarkerBefore@{drawInsertionMarkerBefore}!UnityEditor.Timeline.TimelineTrackBaseGUI@{UnityEditor.Timeline.TimelineTrackBaseGUI}}
+\doxysubsubsection{\texorpdfstring{drawInsertionMarkerBefore}{drawInsertionMarkerBefore}}
+{\footnotesize\ttfamily bool Unity\+Editor.\+Timeline.\+Timeline\+Track\+Base\+GUI.\+draw\+Insertion\+Marker\+Before\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_a51319129c1e686d45dfa1d2523745c55}\label{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_a51319129c1e686d45dfa1d2523745c55} 
+\index{UnityEditor.Timeline.TimelineTrackBaseGUI@{UnityEditor.Timeline.TimelineTrackBaseGUI}!expandable@{expandable}}
+\index{expandable@{expandable}!UnityEditor.Timeline.TimelineTrackBaseGUI@{UnityEditor.Timeline.TimelineTrackBaseGUI}}
+\doxysubsubsection{\texorpdfstring{expandable}{expandable}}
+{\footnotesize\ttfamily bool Unity\+Editor.\+Timeline.\+Timeline\+Track\+Base\+GUI.\+expandable\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [abstract]}}
+
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_a6d4289f8dffe891f62079196d2a8eae4}\label{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_a6d4289f8dffe891f62079196d2a8eae4} 
+\index{UnityEditor.Timeline.TimelineTrackBaseGUI@{UnityEditor.Timeline.TimelineTrackBaseGUI}!isDropTarget@{isDropTarget}}
+\index{isDropTarget@{isDropTarget}!UnityEditor.Timeline.TimelineTrackBaseGUI@{UnityEditor.Timeline.TimelineTrackBaseGUI}}
+\doxysubsubsection{\texorpdfstring{isDropTarget}{isDropTarget}}
+{\footnotesize\ttfamily bool Unity\+Editor.\+Timeline.\+Timeline\+Track\+Base\+GUI.\+is\+Drop\+Target\hspace{0.3cm}{\ttfamily [protected get]}, {\ttfamily [set]}}
+
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_af43c5f776b62ad74723d8f2960054586}\label{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_af43c5f776b62ad74723d8f2960054586} 
+\index{UnityEditor.Timeline.TimelineTrackBaseGUI@{UnityEditor.Timeline.TimelineTrackBaseGUI}!isExpanded@{isExpanded}}
+\index{isExpanded@{isExpanded}!UnityEditor.Timeline.TimelineTrackBaseGUI@{UnityEditor.Timeline.TimelineTrackBaseGUI}}
+\doxysubsubsection{\texorpdfstring{isExpanded}{isExpanded}}
+{\footnotesize\ttfamily bool Unity\+Editor.\+Timeline.\+Timeline\+Track\+Base\+GUI.\+is\+Expanded\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_a62d2254638748b118a7b3c9430413e4a}\label{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_a62d2254638748b118a7b3c9430413e4a} 
+\index{UnityEditor.Timeline.TimelineTrackBaseGUI@{UnityEditor.Timeline.TimelineTrackBaseGUI}!TimelineWindow@{TimelineWindow}}
+\index{TimelineWindow@{TimelineWindow}!UnityEditor.Timeline.TimelineTrackBaseGUI@{UnityEditor.Timeline.TimelineTrackBaseGUI}}
+\doxysubsubsection{\texorpdfstring{TimelineWindow}{TimelineWindow}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_window}{Timeline\+Window}} Unity\+Editor.\+Timeline.\+Timeline\+Track\+Base\+GUI.\+Timeline\+Window\hspace{0.3cm}{\ttfamily [get]}}
+
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_a4907df580e1956c8aad31d2190231b96}\label{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_a4907df580e1956c8aad31d2190231b96} 
+\index{UnityEditor.Timeline.TimelineTrackBaseGUI@{UnityEditor.Timeline.TimelineTrackBaseGUI}!track@{track}}
+\index{track@{track}!UnityEditor.Timeline.TimelineTrackBaseGUI@{UnityEditor.Timeline.TimelineTrackBaseGUI}}
+\doxysubsubsection{\texorpdfstring{track}{track}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} Unity\+Editor.\+Timeline.\+Timeline\+Track\+Base\+GUI.\+track\hspace{0.3cm}{\ttfamily [get]}}
+
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_a10e6839f51237c79417a13941c0b6f5e}\label{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_a10e6839f51237c79417a13941c0b6f5e} 
+\index{UnityEditor.Timeline.TimelineTrackBaseGUI@{UnityEditor.Timeline.TimelineTrackBaseGUI}!treeViewToWindowTransformation@{treeViewToWindowTransformation}}
+\index{treeViewToWindowTransformation@{treeViewToWindowTransformation}!UnityEditor.Timeline.TimelineTrackBaseGUI@{UnityEditor.Timeline.TimelineTrackBaseGUI}}
+\doxysubsubsection{\texorpdfstring{treeViewToWindowTransformation}{treeViewToWindowTransformation}}
+{\footnotesize\ttfamily Vector2 Unity\+Editor.\+Timeline.\+Timeline\+Track\+Base\+GUI.\+tree\+View\+To\+Window\+Transformation\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_ae961f87954c3d8bb1638d7d71c0f419e}\label{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_ae961f87954c3d8bb1638d7d71c0f419e} 
+\index{UnityEditor.Timeline.TimelineTrackBaseGUI@{UnityEditor.Timeline.TimelineTrackBaseGUI}!visibleExpanded@{visibleExpanded}}
+\index{visibleExpanded@{visibleExpanded}!UnityEditor.Timeline.TimelineTrackBaseGUI@{UnityEditor.Timeline.TimelineTrackBaseGUI}}
+\doxysubsubsection{\texorpdfstring{visibleExpanded}{visibleExpanded}}
+{\footnotesize\ttfamily bool Unity\+Editor.\+Timeline.\+Timeline\+Track\+Base\+GUI.\+visible\+Expanded\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_aa50e074547d0adf23139934b015a02bc}\label{class_unity_editor_1_1_timeline_1_1_timeline_track_base_g_u_i_aa50e074547d0adf23139934b015a02bc} 
+\index{UnityEditor.Timeline.TimelineTrackBaseGUI@{UnityEditor.Timeline.TimelineTrackBaseGUI}!visibleRow@{visibleRow}}
+\index{visibleRow@{visibleRow}!UnityEditor.Timeline.TimelineTrackBaseGUI@{UnityEditor.Timeline.TimelineTrackBaseGUI}}
+\doxysubsubsection{\texorpdfstring{visibleRow}{visibleRow}}
+{\footnotesize\ttfamily bool Unity\+Editor.\+Timeline.\+Timeline\+Track\+Base\+GUI.\+visible\+Row\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+7.\+6/\+Editor/treeview/\+Track\+Gui/\mbox{\hyperlink{_timeline_track_base_g_u_i_8cs}{Timeline\+Track\+Base\+GUI.\+cs}}\end{DoxyCompactItemize}

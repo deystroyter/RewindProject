@@ -1,0 +1,52 @@
+\chapter{Control clip Playable Asset properties}
+\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2insp__clp__ctrl__plyb}{}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2insp__clp__ctrl__plyb}\index{Control clip Playable Asset properties@{Control clip Playable Asset properties}}
+\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2insp__clp__ctrl__plyb_autotoc_md1175}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2insp__clp__ctrl__plyb_autotoc_md1175}%
+ Use the Inspector window to change the playable asset properties of a Control clip. To view the playable asset properties for a Control clip, select a Control clip in the \doxylink{namespace_timeline}{Timeline} window and expand {\bfseries{Control Playable Asset}} in the Inspector window.
+
+
+
+{\itshape Inspector window showing the {\bfseries{Control Playable Asset}} properties for the selected Control clip}\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2insp__clp__ctrl__plyb_autotoc_md1176}{}\doxysection{\texorpdfstring{Source Game Object}{Source Game Object}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2insp__clp__ctrl__plyb_autotoc_md1176}
+Use {\bfseries{Source Game Object}} to select the Game\+Object with the Particle System, nested \doxylink{namespace_timeline}{Timeline} instance, or ITime\+Control Script for the selected Control clip. Changing the {\bfseries{Source Game Object}} changes what the Control clip controls.\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2insp__clp__ctrl__plyb_autotoc_md1177}{}\doxysection{\texorpdfstring{Prefab}{Prefab}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2insp__clp__ctrl__plyb_autotoc_md1177}
+Use {\bfseries{Prefab}} to select a Prefab to instantiate when the \doxylink{namespace_timeline}{Timeline} instance plays in Play Mode. When a Prefab is selected, the label of the {\bfseries{Source Game Object}} property changes to {\bfseries{Parent Object}}.
+
+When in Play Mode, the Prefab is instantiated as a child of the {\bfseries{Parent Object}}. Although the Prefab is instantiated at the start of the \doxylink{namespace_timeline}{Timeline} instance, the Prefab is only activated during the Control clip. When the Control clip ends, the Prefab instance is deactivated.\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2insp__clp__ctrl__plyb_autotoc_md1178}{}\doxysection{\texorpdfstring{Control Activation}{Control Activation}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2insp__clp__ctrl__plyb_autotoc_md1178}
+Enable {\bfseries{Control Activation}} to activate the {\bfseries{Source Game Object}} while the Control clip plays. Disable this property to activate the {\bfseries{Source Game Object}} during the entire \doxylink{namespace_timeline}{Timeline} instance.
+
+The {\bfseries{Control Activation}} property only affects Control clips that control a nested \doxylink{namespace_timeline}{Timeline} instance or a Particle System.\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2insp__clp__ctrl__plyb_autotoc_md1179}{}\doxysection{\texorpdfstring{Post Playback}{Post Playback}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2insp__clp__ctrl__plyb_autotoc_md1179}
+When {\bfseries{Control Activation}} is enabled, use the {\bfseries{Post Playback}} property to set the activation state for the nested \doxylink{namespace_timeline}{Timeline} instance when the main \doxylink{namespace_timeline}{Timeline} stops playing. The {\bfseries{Post Playback}} property only affects nested \doxylink{namespace_timeline}{Timeline} instances.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Post-\/\+Playback State}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Post-\/\+Playback State}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-2}
+\endhead
+{\bfseries{Active}}   &Activates the Source Game Object after the nested \doxylink{namespace_timeline}{Timeline} instance finishes playing.    \\\cline{1-2}
+{\bfseries{Inactive}}   &Deactivates the Source Game Object after the nested \doxylink{namespace_timeline}{Timeline} instance finishes playing.    \\\cline{1-2}
+{\bfseries{Revert}}   &Reverts the Source Game Object to its activation state before the nested \doxylink{namespace_timeline}{Timeline} instance began playing.   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2insp__clp__ctrl__plyb_autotoc_md1180}{}\doxysection{\texorpdfstring{Advanced properties}{Advanced properties}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2insp__clp__ctrl__plyb_autotoc_md1180}
+Use the Advanced properties to select additional functionality based on whether the Control clip controls a Playable Director, Particle System, or ITime\+Control Script. The Advanced properties do not apply to all Control clips.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-2}
+\endhead
+{\bfseries{Control Playable Directors}}   &Enable this property if the Source Game Object is attached to a Playable Director and you want the Control clip to control the nested \doxylink{namespace_timeline}{Timeline} instance associated with this Playable Director.    \\\cline{1-2}
+{\bfseries{Control Particle Systems}}   &Enable this property when the Control clip includes a Particle System. Set the value of the Random Seed property to create a unique, repeatable effect.    \\\cline{1-2}
+{\bfseries{Control ITime\+Control}}   &Enable this property to control ITime\+Control scripts on the Source Game\+Object. To use this feature, the Source Game Object must have a script that implements the ITime\+Control interface.    \\\cline{1-2}
+{\bfseries{Control Children}}   &Enable this property if the Source Game Object has a child Game\+Object with either a Playable Director, Particle System, or ITime\+Control Script, and you want the Control clip to control this child component.~\newline
+~\newline
+For example, if the Source Game Object is a Game\+Object that parents another Game\+Object with a Particle System, enable this property to make the Control clip control the Particle system on the child Game\+Object.   \\\cline{1-2}
+\end{longtabu}

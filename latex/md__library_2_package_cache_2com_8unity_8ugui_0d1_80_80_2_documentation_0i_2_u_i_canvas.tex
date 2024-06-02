@@ -1,0 +1,24 @@
+\chapter{Canvas}
+\hypertarget{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_u_i_canvas}{}\label{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_u_i_canvas}\index{Canvas@{Canvas}}
+\label{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_u_i_canvas_autotoc_md1485}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_u_i_canvas_autotoc_md1485}%
+ The {\bfseries{Canvas}} is the area that all UI elements should be inside. The Canvas is a Game Object with a Canvas component on it, and all UI elements must be children of such a Canvas.
+
+Creating a new UI element, such as an Image using the menu {\bfseries{Game\+Object \texorpdfstring{$>$}{>} UI \texorpdfstring{$>$}{>} Image}}, automatically creates a Canvas, if there isn\textquotesingle{}t already a Canvas in the scene. The UI element is created as a child to this Canvas.
+
+The Canvas area is shown as a rectangle in the Scene View. This makes it easy to position UI elements without needing to have the Game View visible at all times.
+
+{\bfseries{Canvas}} uses the Event\+System object to help the Messaging System.\hypertarget{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_u_i_canvas_autotoc_md1486}{}\doxysection{\texorpdfstring{Draw order of elements}{Draw order of elements}}\label{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_u_i_canvas_autotoc_md1486}
+UI elements in the Canvas are drawn in the same order they appear in the Hierarchy. The first child is drawn first, the second child next, and so on. If two UI elements overlap, the later one will appear on top of the earlier one.
+
+To change which element appear on top of other elements, simply reorder the elements in the Hierarchy by dragging them. The order can also be controlled from scripting by using these methods on the Transform component\+: Set\+As\+First\+Sibling, Set\+As\+Last\+Sibling, and Set\+Sibling\+Index.\hypertarget{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_u_i_canvas_autotoc_md1487}{}\doxysection{\texorpdfstring{Render Modes}{Render Modes}}\label{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_u_i_canvas_autotoc_md1487}
+The Canvas has a {\bfseries{Render Mode}} setting which can be used to make it render in screen space or world space.\hypertarget{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_u_i_canvas_autotoc_md1488}{}\doxysubsection{\texorpdfstring{Screen Space -\/ Overlay}{Screen Space -\/ Overlay}}\label{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_u_i_canvas_autotoc_md1488}
+This render mode places UI elements on the screen rendered on top of the scene. If the screen is resized or changes resolution, the Canvas will automatically change size to match this.
+
+\hypertarget{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_u_i_canvas_autotoc_md1489}{}\doxysubsection{\texorpdfstring{Screen Space -\/ Camera}{Screen Space -\/ Camera}}\label{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_u_i_canvas_autotoc_md1489}
+This is similar to {\bfseries{Screen Space -\/ Overlay}}, but in this render mode the Canvas is placed a given distance in front of a specified {\bfseries{Camera}}. The UI elements are rendered by this camera, which means that the Camera settings affect the appearance of the UI. If the Camera is set to {\bfseries{Perspective}}, the UI elements will be rendered with perspective, and the amount of perspective distortion can be controlled by the Camera {\bfseries{Field of View}}. If the screen is resized, changes resolution, or the camera frustum changes, the Canvas will automatically change size to match as well.
+
+\hypertarget{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_u_i_canvas_autotoc_md1490}{}\doxysubsection{\texorpdfstring{World Space}{World Space}}\label{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_u_i_canvas_autotoc_md1490}
+In this render mode, the Canvas will behave as any other object in the scene. The size of the Canvas can be set manually using its Rect Transform, and UI elements will render in front of or behind other objects in the scene based on 3D placement. This is useful for UIs that are meant to be a part of the world. This is also known as a "{}diegetic interface"{}.
+
+ 

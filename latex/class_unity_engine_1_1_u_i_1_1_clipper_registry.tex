@@ -1,0 +1,121 @@
+\doxysection{Unity\+Engine.\+UI.\+Clipper\+Registry Class Reference}
+\hypertarget{class_unity_engine_1_1_u_i_1_1_clipper_registry}{}\label{class_unity_engine_1_1_u_i_1_1_clipper_registry}\index{UnityEngine.UI.ClipperRegistry@{UnityEngine.UI.ClipperRegistry}}
+
+
+Registry class to keep track of all IClippers that exist in the scene.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_clipper_registry_a0bff23e1d0c258032f5205b9da487a3a}{Cull}} ()
+\begin{DoxyCompactList}\small\item\em Perform the clipping on all registered IClipper. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_clipper_registry_a31e1a8a3c4e736e6d7e1319ba756d7a6}{Register}} (\mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_clipper}{IClipper}} c)
+\begin{DoxyCompactList}\small\item\em Register a unique IClipper element. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_clipper_registry_abd86ee2a08c750a7b3e0902d424be3cf}{Unregister}} (\mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_clipper}{IClipper}} c)
+\begin{DoxyCompactList}\small\item\em Un\+Register a IClipper element. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_clipper_registry_a47da89943f63ff4a19481950593c3385}{Disable}} (\mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_clipper}{IClipper}} c)
+\begin{DoxyCompactList}\small\item\em Disable a IClipper element. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_clipper_registry_a83359380a530e8172dee1ac117efbcfd}{Clipper\+Registry}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_clipper_registry}{Clipper\+Registry}} \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_clipper_registry_a3761f9d6bfed2282d02625eb3305cae0}{instance}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The singleton instance of the clipper registry. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Registry class to keep track of all IClippers that exist in the scene. 
+
+This is used during the Canvas\+Update loop to cull clippable elements. The clipping is called after layout, but before Graphic update. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_unity_engine_1_1_u_i_1_1_clipper_registry_a83359380a530e8172dee1ac117efbcfd}\label{class_unity_engine_1_1_u_i_1_1_clipper_registry_a83359380a530e8172dee1ac117efbcfd} 
+\index{UnityEngine.UI.ClipperRegistry@{UnityEngine.UI.ClipperRegistry}!ClipperRegistry@{ClipperRegistry}}
+\index{ClipperRegistry@{ClipperRegistry}!UnityEngine.UI.ClipperRegistry@{UnityEngine.UI.ClipperRegistry}}
+\doxysubsubsection{\texorpdfstring{ClipperRegistry()}{ClipperRegistry()}}
+{\footnotesize\ttfamily Unity\+Engine.\+UI.\+Clipper\+Registry.\+Clipper\+Registry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_u_i_1_1_clipper_registry_a0bff23e1d0c258032f5205b9da487a3a}\label{class_unity_engine_1_1_u_i_1_1_clipper_registry_a0bff23e1d0c258032f5205b9da487a3a} 
+\index{UnityEngine.UI.ClipperRegistry@{UnityEngine.UI.ClipperRegistry}!Cull@{Cull}}
+\index{Cull@{Cull}!UnityEngine.UI.ClipperRegistry@{UnityEngine.UI.ClipperRegistry}}
+\doxysubsubsection{\texorpdfstring{Cull()}{Cull()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+UI.\+Clipper\+Registry.\+Cull (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Perform the clipping on all registered IClipper. 
+
+\Hypertarget{class_unity_engine_1_1_u_i_1_1_clipper_registry_a47da89943f63ff4a19481950593c3385}\label{class_unity_engine_1_1_u_i_1_1_clipper_registry_a47da89943f63ff4a19481950593c3385} 
+\index{UnityEngine.UI.ClipperRegistry@{UnityEngine.UI.ClipperRegistry}!Disable@{Disable}}
+\index{Disable@{Disable}!UnityEngine.UI.ClipperRegistry@{UnityEngine.UI.ClipperRegistry}}
+\doxysubsubsection{\texorpdfstring{Disable()}{Disable()}}
+{\footnotesize\ttfamily static void Unity\+Engine.\+UI.\+Clipper\+Registry.\+Disable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_clipper}{IClipper}}}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Disable a IClipper element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & The Element to try and disable.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_engine_1_1_u_i_1_1_clipper_registry_a31e1a8a3c4e736e6d7e1319ba756d7a6}\label{class_unity_engine_1_1_u_i_1_1_clipper_registry_a31e1a8a3c4e736e6d7e1319ba756d7a6} 
+\index{UnityEngine.UI.ClipperRegistry@{UnityEngine.UI.ClipperRegistry}!Register@{Register}}
+\index{Register@{Register}!UnityEngine.UI.ClipperRegistry@{UnityEngine.UI.ClipperRegistry}}
+\doxysubsubsection{\texorpdfstring{Register()}{Register()}}
+{\footnotesize\ttfamily static void Unity\+Engine.\+UI.\+Clipper\+Registry.\+Register (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_clipper}{IClipper}}}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Register a unique IClipper element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & The clipper element to add\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_unity_engine_1_1_u_i_1_1_clipper_registry_abd86ee2a08c750a7b3e0902d424be3cf}\label{class_unity_engine_1_1_u_i_1_1_clipper_registry_abd86ee2a08c750a7b3e0902d424be3cf} 
+\index{UnityEngine.UI.ClipperRegistry@{UnityEngine.UI.ClipperRegistry}!Unregister@{Unregister}}
+\index{Unregister@{Unregister}!UnityEngine.UI.ClipperRegistry@{UnityEngine.UI.ClipperRegistry}}
+\doxysubsubsection{\texorpdfstring{Unregister()}{Unregister()}}
+{\footnotesize\ttfamily static void Unity\+Engine.\+UI.\+Clipper\+Registry.\+Unregister (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_clipper}{IClipper}}}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Un\+Register a IClipper element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & The Element to try and remove.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_unity_engine_1_1_u_i_1_1_clipper_registry_a3761f9d6bfed2282d02625eb3305cae0}\label{class_unity_engine_1_1_u_i_1_1_clipper_registry_a3761f9d6bfed2282d02625eb3305cae0} 
+\index{UnityEngine.UI.ClipperRegistry@{UnityEngine.UI.ClipperRegistry}!instance@{instance}}
+\index{instance@{instance}!UnityEngine.UI.ClipperRegistry@{UnityEngine.UI.ClipperRegistry}}
+\doxysubsubsection{\texorpdfstring{instance}{instance}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_clipper_registry}{Clipper\+Registry}} Unity\+Engine.\+UI.\+Clipper\+Registry.\+instance\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}
+
+
+
+The singleton instance of the clipper registry. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Runtime/\+UI/\+Core/\+Culling/\mbox{\hyperlink{_clipper_registry_8cs}{Clipper\+Registry.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,158 @@
+\doxysection{Unity.\+Visual\+Scripting.\+Dependencies.\+Sqlite Namespace Reference}
+\hypertarget{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite}{}\label{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite}\index{Unity.VisualScripting.Dependencies.Sqlite@{Unity.VisualScripting.Dependencies.Sqlite}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_auto_increment_attribute}{Auto\+Increment\+Attribute}}
+\item 
+class \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_base_table_query}{Base\+Table\+Query}}
+\item 
+class \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_collation_attribute}{Collation\+Attribute}}
+\item 
+class \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_column_attribute}{Column\+Attribute}}
+\item 
+class \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_ignore_attribute}{Ignore\+Attribute}}
+\item 
+class \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_indexed_attribute}{Indexed\+Attribute}}
+\item 
+class \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_max_length_attribute}{Max\+Length\+Attribute}}
+\item 
+class \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_not_null_attribute}{Not\+Null\+Attribute}}
+\item 
+class \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_not_null_constraint_violation_exception}{Not\+Null\+Constraint\+Violation\+Exception}}
+\item 
+class {\bfseries Orm}
+\item 
+class \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_prepared_sql_lite_insert_command}{Prepared\+Sql\+Lite\+Insert\+Command}}
+\begin{DoxyCompactList}\small\item\em Since the insert never changed, we only need to prepare once. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_primary_key_attribute}{Primary\+Key\+Attribute}}
+\item 
+class {\bfseries SQLite3}
+\item 
+class \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_command}{SQLite\+Command}}
+\item 
+class \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection}{SQLite\+Connection}}
+\begin{DoxyCompactList}\small\item\em Represents an open connection to a SQLite database. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_connection_string}{SQLite\+Connection\+String}}
+\begin{DoxyCompactList}\small\item\em Represents a parsed connection string. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_s_q_lite_exception}{SQLite\+Exception}}
+\item 
+class \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_table_attribute}{Table\+Attribute}}
+\item 
+class \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_table_mapping}{Table\+Mapping}}
+\item 
+class \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_table_query}{Table\+Query}}
+\item 
+class \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_1_1_unique_attribute}{Unique\+Attribute}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_ad982c4a110e49feca45206b238ba7ec9}{SQLite\+Open\+Flags}} \{ \newline
+\mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_ad982c4a110e49feca45206b238ba7ec9a131fb182a881796e7606ed6da27f1197}{Read\+Only}} = 1
+, \mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_ad982c4a110e49feca45206b238ba7ec9a70a2a84088d405a2e3f1e3accaa16723}{Read\+Write}} = 2
+, \mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_ad982c4a110e49feca45206b238ba7ec9a686e697538050e4664636337cc3b834f}{Create}} = 4
+, \mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_ad982c4a110e49feca45206b238ba7ec9aed897a216de36c7c934c4baa02b4fea7}{No\+Mutex}} = 0x8000
+, \newline
+\mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_ad982c4a110e49feca45206b238ba7ec9a3322fce9aa781563c086ffd3c13da8b4}{Full\+Mutex}} = 0x10000
+, \mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_ad982c4a110e49feca45206b238ba7ec9add8141c2dbba4f369c304f748a6badf6}{Shared\+Cache}} = 0x20000
+, \mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_ad982c4a110e49feca45206b238ba7ec9a54f0a906e1d7cbe43867c40793c22c91}{Private\+Cache}} = 0x40000
+, \mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_ad982c4a110e49feca45206b238ba7ec9af6b459b732ab3369bd8fb1b31d3d019d}{Protection\+Complete}} = 0x00100000
+, \newline
+\mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_ad982c4a110e49feca45206b238ba7ec9ae16febbf8611e3d5db7ed971e2bcb0f7}{Protection\+Complete\+Unless\+Open}} = 0x00200000
+, \mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_ad982c4a110e49feca45206b238ba7ec9ad729bc99ed371feb5cc190b05f417172}{Protection\+Complete\+Until\+First\+User\+Authentication}} = 0x00300000
+, \mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_ad982c4a110e49feca45206b238ba7ec9a3c2d862f4536788c6b00eb3bbdcd81bf}{Protection\+None}} = 0x00400000
+ \}
+\item 
+enum \mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_a1156aeef73a71c38bd8584d9836aad64}{Create\+Flags}} \{ \newline
+\mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_a1156aeef73a71c38bd8584d9836aad64a6adf97f83acf6453d4a6a4b1070f3754}{None}} = 0
+, \mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_a1156aeef73a71c38bd8584d9836aad64a7f37680f54478a209ab2d2ccd6ee9a2f}{Implicit\+PK}} = 1
+, \mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_a1156aeef73a71c38bd8584d9836aad64a902eaf6e2e4abeeeb1e901d147777700}{Implicit\+Index}} = 2
+, \mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_a1156aeef73a71c38bd8584d9836aad64aba757689dfce5eb6b5e58418eb82e91b}{All\+Implicit}} = 3
+, \newline
+\mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_a1156aeef73a71c38bd8584d9836aad64aa909006e74071f73d0bf5d2ba878234c}{Auto\+Inc\+PK}} = 4
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_a1156aeef73a71c38bd8584d9836aad64}\label{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_a1156aeef73a71c38bd8584d9836aad64} 
+\index{Unity.VisualScripting.Dependencies.Sqlite@{Unity.VisualScripting.Dependencies.Sqlite}!CreateFlags@{CreateFlags}}
+\index{CreateFlags@{CreateFlags}!Unity.VisualScripting.Dependencies.Sqlite@{Unity.VisualScripting.Dependencies.Sqlite}}
+\doxysubsubsection{\texorpdfstring{CreateFlags}{CreateFlags}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_a1156aeef73a71c38bd8584d9836aad64}{Unity.\+Visual\+Scripting.\+Dependencies.\+Sqlite.\+Create\+Flags}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{None@{None}!Unity.VisualScripting.Dependencies.Sqlite@{Unity.VisualScripting.Dependencies.Sqlite}}\index{Unity.VisualScripting.Dependencies.Sqlite@{Unity.VisualScripting.Dependencies.Sqlite}!None@{None}}}\Hypertarget{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_a1156aeef73a71c38bd8584d9836aad64a6adf97f83acf6453d4a6a4b1070f3754}\label{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_a1156aeef73a71c38bd8584d9836aad64a6adf97f83acf6453d4a6a4b1070f3754} 
+None&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ImplicitPK@{ImplicitPK}!Unity.VisualScripting.Dependencies.Sqlite@{Unity.VisualScripting.Dependencies.Sqlite}}\index{Unity.VisualScripting.Dependencies.Sqlite@{Unity.VisualScripting.Dependencies.Sqlite}!ImplicitPK@{ImplicitPK}}}\Hypertarget{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_a1156aeef73a71c38bd8584d9836aad64a7f37680f54478a209ab2d2ccd6ee9a2f}\label{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_a1156aeef73a71c38bd8584d9836aad64a7f37680f54478a209ab2d2ccd6ee9a2f} 
+Implicit\+PK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ImplicitIndex@{ImplicitIndex}!Unity.VisualScripting.Dependencies.Sqlite@{Unity.VisualScripting.Dependencies.Sqlite}}\index{Unity.VisualScripting.Dependencies.Sqlite@{Unity.VisualScripting.Dependencies.Sqlite}!ImplicitIndex@{ImplicitIndex}}}\Hypertarget{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_a1156aeef73a71c38bd8584d9836aad64a902eaf6e2e4abeeeb1e901d147777700}\label{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_a1156aeef73a71c38bd8584d9836aad64a902eaf6e2e4abeeeb1e901d147777700} 
+Implicit\+Index&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AllImplicit@{AllImplicit}!Unity.VisualScripting.Dependencies.Sqlite@{Unity.VisualScripting.Dependencies.Sqlite}}\index{Unity.VisualScripting.Dependencies.Sqlite@{Unity.VisualScripting.Dependencies.Sqlite}!AllImplicit@{AllImplicit}}}\Hypertarget{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_a1156aeef73a71c38bd8584d9836aad64aba757689dfce5eb6b5e58418eb82e91b}\label{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_a1156aeef73a71c38bd8584d9836aad64aba757689dfce5eb6b5e58418eb82e91b} 
+All\+Implicit&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AutoIncPK@{AutoIncPK}!Unity.VisualScripting.Dependencies.Sqlite@{Unity.VisualScripting.Dependencies.Sqlite}}\index{Unity.VisualScripting.Dependencies.Sqlite@{Unity.VisualScripting.Dependencies.Sqlite}!AutoIncPK@{AutoIncPK}}}\Hypertarget{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_a1156aeef73a71c38bd8584d9836aad64aa909006e74071f73d0bf5d2ba878234c}\label{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_a1156aeef73a71c38bd8584d9836aad64aa909006e74071f73d0bf5d2ba878234c} 
+Auto\+Inc\+PK&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_ad982c4a110e49feca45206b238ba7ec9}\label{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_ad982c4a110e49feca45206b238ba7ec9} 
+\index{Unity.VisualScripting.Dependencies.Sqlite@{Unity.VisualScripting.Dependencies.Sqlite}!SQLiteOpenFlags@{SQLiteOpenFlags}}
+\index{SQLiteOpenFlags@{SQLiteOpenFlags}!Unity.VisualScripting.Dependencies.Sqlite@{Unity.VisualScripting.Dependencies.Sqlite}}
+\doxysubsubsection{\texorpdfstring{SQLiteOpenFlags}{SQLiteOpenFlags}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_ad982c4a110e49feca45206b238ba7ec9}{Unity.\+Visual\+Scripting.\+Dependencies.\+Sqlite.\+SQLite\+Open\+Flags}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ReadOnly@{ReadOnly}!Unity.VisualScripting.Dependencies.Sqlite@{Unity.VisualScripting.Dependencies.Sqlite}}\index{Unity.VisualScripting.Dependencies.Sqlite@{Unity.VisualScripting.Dependencies.Sqlite}!ReadOnly@{ReadOnly}}}\Hypertarget{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_ad982c4a110e49feca45206b238ba7ec9a131fb182a881796e7606ed6da27f1197}\label{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_ad982c4a110e49feca45206b238ba7ec9a131fb182a881796e7606ed6da27f1197} 
+Read\+Only&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ReadWrite@{ReadWrite}!Unity.VisualScripting.Dependencies.Sqlite@{Unity.VisualScripting.Dependencies.Sqlite}}\index{Unity.VisualScripting.Dependencies.Sqlite@{Unity.VisualScripting.Dependencies.Sqlite}!ReadWrite@{ReadWrite}}}\Hypertarget{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_ad982c4a110e49feca45206b238ba7ec9a70a2a84088d405a2e3f1e3accaa16723}\label{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_ad982c4a110e49feca45206b238ba7ec9a70a2a84088d405a2e3f1e3accaa16723} 
+Read\+Write&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Create@{Create}!Unity.VisualScripting.Dependencies.Sqlite@{Unity.VisualScripting.Dependencies.Sqlite}}\index{Unity.VisualScripting.Dependencies.Sqlite@{Unity.VisualScripting.Dependencies.Sqlite}!Create@{Create}}}\Hypertarget{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_ad982c4a110e49feca45206b238ba7ec9a686e697538050e4664636337cc3b834f}\label{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_ad982c4a110e49feca45206b238ba7ec9a686e697538050e4664636337cc3b834f} 
+Create&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NoMutex@{NoMutex}!Unity.VisualScripting.Dependencies.Sqlite@{Unity.VisualScripting.Dependencies.Sqlite}}\index{Unity.VisualScripting.Dependencies.Sqlite@{Unity.VisualScripting.Dependencies.Sqlite}!NoMutex@{NoMutex}}}\Hypertarget{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_ad982c4a110e49feca45206b238ba7ec9aed897a216de36c7c934c4baa02b4fea7}\label{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_ad982c4a110e49feca45206b238ba7ec9aed897a216de36c7c934c4baa02b4fea7} 
+No\+Mutex&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FullMutex@{FullMutex}!Unity.VisualScripting.Dependencies.Sqlite@{Unity.VisualScripting.Dependencies.Sqlite}}\index{Unity.VisualScripting.Dependencies.Sqlite@{Unity.VisualScripting.Dependencies.Sqlite}!FullMutex@{FullMutex}}}\Hypertarget{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_ad982c4a110e49feca45206b238ba7ec9a3322fce9aa781563c086ffd3c13da8b4}\label{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_ad982c4a110e49feca45206b238ba7ec9a3322fce9aa781563c086ffd3c13da8b4} 
+Full\+Mutex&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SharedCache@{SharedCache}!Unity.VisualScripting.Dependencies.Sqlite@{Unity.VisualScripting.Dependencies.Sqlite}}\index{Unity.VisualScripting.Dependencies.Sqlite@{Unity.VisualScripting.Dependencies.Sqlite}!SharedCache@{SharedCache}}}\Hypertarget{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_ad982c4a110e49feca45206b238ba7ec9add8141c2dbba4f369c304f748a6badf6}\label{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_ad982c4a110e49feca45206b238ba7ec9add8141c2dbba4f369c304f748a6badf6} 
+Shared\+Cache&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PrivateCache@{PrivateCache}!Unity.VisualScripting.Dependencies.Sqlite@{Unity.VisualScripting.Dependencies.Sqlite}}\index{Unity.VisualScripting.Dependencies.Sqlite@{Unity.VisualScripting.Dependencies.Sqlite}!PrivateCache@{PrivateCache}}}\Hypertarget{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_ad982c4a110e49feca45206b238ba7ec9a54f0a906e1d7cbe43867c40793c22c91}\label{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_ad982c4a110e49feca45206b238ba7ec9a54f0a906e1d7cbe43867c40793c22c91} 
+Private\+Cache&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ProtectionComplete@{ProtectionComplete}!Unity.VisualScripting.Dependencies.Sqlite@{Unity.VisualScripting.Dependencies.Sqlite}}\index{Unity.VisualScripting.Dependencies.Sqlite@{Unity.VisualScripting.Dependencies.Sqlite}!ProtectionComplete@{ProtectionComplete}}}\Hypertarget{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_ad982c4a110e49feca45206b238ba7ec9af6b459b732ab3369bd8fb1b31d3d019d}\label{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_ad982c4a110e49feca45206b238ba7ec9af6b459b732ab3369bd8fb1b31d3d019d} 
+Protection\+Complete&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ProtectionCompleteUnlessOpen@{ProtectionCompleteUnlessOpen}!Unity.VisualScripting.Dependencies.Sqlite@{Unity.VisualScripting.Dependencies.Sqlite}}\index{Unity.VisualScripting.Dependencies.Sqlite@{Unity.VisualScripting.Dependencies.Sqlite}!ProtectionCompleteUnlessOpen@{ProtectionCompleteUnlessOpen}}}\Hypertarget{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_ad982c4a110e49feca45206b238ba7ec9ae16febbf8611e3d5db7ed971e2bcb0f7}\label{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_ad982c4a110e49feca45206b238ba7ec9ae16febbf8611e3d5db7ed971e2bcb0f7} 
+Protection\+Complete\+Unless\+Open&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ProtectionCompleteUntilFirstUserAuthentication@{ProtectionCompleteUntilFirstUserAuthentication}!Unity.VisualScripting.Dependencies.Sqlite@{Unity.VisualScripting.Dependencies.Sqlite}}\index{Unity.VisualScripting.Dependencies.Sqlite@{Unity.VisualScripting.Dependencies.Sqlite}!ProtectionCompleteUntilFirstUserAuthentication@{ProtectionCompleteUntilFirstUserAuthentication}}}\Hypertarget{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_ad982c4a110e49feca45206b238ba7ec9ad729bc99ed371feb5cc190b05f417172}\label{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_ad982c4a110e49feca45206b238ba7ec9ad729bc99ed371feb5cc190b05f417172} 
+Protection\+Complete\+Until\+First\+User\+Authentication&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ProtectionNone@{ProtectionNone}!Unity.VisualScripting.Dependencies.Sqlite@{Unity.VisualScripting.Dependencies.Sqlite}}\index{Unity.VisualScripting.Dependencies.Sqlite@{Unity.VisualScripting.Dependencies.Sqlite}!ProtectionNone@{ProtectionNone}}}\Hypertarget{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_ad982c4a110e49feca45206b238ba7ec9a3c2d862f4536788c6b00eb3bbdcd81bf}\label{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_sqlite_ad982c4a110e49feca45206b238ba7ec9a3c2d862f4536788c6b00eb3bbdcd81bf} 
+Protection\+None&\\
+\hline
+
+\end{DoxyEnumFields}

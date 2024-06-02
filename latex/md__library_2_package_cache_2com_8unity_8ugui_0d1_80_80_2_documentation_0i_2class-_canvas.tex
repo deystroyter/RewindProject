@@ -1,0 +1,48 @@
+\chapter{Canvas}
+\hypertarget{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2class-_canvas}{}\label{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2class-_canvas}\index{Canvas@{Canvas}}
+\label{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2class-_canvas_autotoc_md1282}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2class-_canvas_autotoc_md1282}%
+ The {\bfseries{Canvas}} component represents the abstract space in which the UI is laid out and rendered. All UI elements must be children of a Game\+Object that has a Canvas component attached. When you create a UI element object from the menu ({\bfseries{Game\+Object \texorpdfstring{$>$}{>} Create UI}}), a Canvas object will be created automatically if there isn\textquotesingle{}t one in the scene already.
+
+
+
+
+
+\hypertarget{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2class-_canvas_autotoc_md1283}{}\doxysection{\texorpdfstring{Properties}{Properties}}\label{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2class-_canvas_autotoc_md1283}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property\+:}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Function\+:}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property\+:}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Function\+:}}    }\\\cline{1-2}
+\endhead
+{\bfseries{Render Mode}}   &The way the UI is rendered to the screen or as an object in 3D space (see below). The options are {\itshape Screen Space -\/ Overlay}, {\itshape Screen Space -\/ Camera} and {\itshape World Space}.    \\\cline{1-2}
+{\bfseries{Pixel Perfect ({\itshape Screen Space} modes only)}}   &Should the UI be rendered without antialiasing for precision?    \\\cline{1-2}
+{\bfseries{Render Camera ({\itshape Screen Space -\/ Camera} mode only)}}   &The camera to which the UI should be rendered (see below).    \\\cline{1-2}
+{\bfseries{Plane Distance ({\itshape Screen Space -\/ Camera} mode only)}}   &The distance at which the UI plane should be placed in front of the camera.    \\\cline{1-2}
+{\bfseries{Event Camera ({\itshape World Space} mode only)}}   &The camera that will be used to process UI events.    \\\cline{1-2}
+{\bfseries{Receives Events}}   &Are UI events processed by this Canvas?   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2class-_canvas_autotoc_md1284}{}\doxysection{\texorpdfstring{Details}{Details}}\label{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2class-_canvas_autotoc_md1284}
+A single Canvas for all UI elements is sufficient but multiple Canvases in the scene is possible. It is also possible use nested Canvases, where one Canvas is placed as a child of another for optimization purposes. A nested Canvas uses the same Render Mode as its parent.
+
+Traditionally, UIs are rendered as if they were simple graphic designs drawn directly on the screen. That is to say, they have no concept of a 3D space being viewed by a camera. \doxylink{namespace_unity}{Unity} supports this kind of screen space rendering but also allows UIs to rendered as objects in the scene, depending on the value of the {\itshape Render Mode} property. The modes available are {\bfseries{Screen Space -\/ Overlay}}, {\bfseries{Screen Space -\/ Camera}} and {\bfseries{World Space}}.\hypertarget{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2class-_canvas_autotoc_md1285}{}\doxysubsection{\texorpdfstring{Screen Space -\/ Overlay}{Screen Space -\/ Overlay}}\label{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2class-_canvas_autotoc_md1285}
+In this mode, the Canvas is scaled to fit the screen and then rendered directly without reference to the scene or a camera (the UI will be rendered even if there is no camera in the scene at all). If the screen\textquotesingle{}s size or resolution are changed then the UI will automatically rescale to fit. The UI will be drawn over any other graphics such as the camera view.
+
+
+
+Note\+: The Screen Space -\/ Overlay canvas needs to be stored at the top level of the hierarchy. If this is not used then the UI may disappear from the view. This is a built-\/in limitation. Keep the Screen Space -\/ Overlay canvas at the top level of the hierarchy to get expected results.\hypertarget{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2class-_canvas_autotoc_md1286}{}\doxysubsection{\texorpdfstring{Screen Space -\/ Camera}{Screen Space -\/ Camera}}\label{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2class-_canvas_autotoc_md1286}
+In this mode, the Canvas is rendered as if it were drawn on a plane object some distance in front of a given camera. The onscreen size of the UI does not vary with the distance since it is always rescaled to fit exactly within the \href{https://docs.unity3d.com/Manual/FrustumSizeAtDistance.html}{\texttt{ camera frustum}}. If the screen\textquotesingle{}s size or resolution or the camera frustum are changed then the UI will automatically rescale to fit. Any 3D objects in the scene that are closer to the camera than the UI plane will be rendered in front of the UI, while objects behind the plane will be obscured.
+
+\hypertarget{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2class-_canvas_autotoc_md1287}{}\doxysubsection{\texorpdfstring{World Space}{World Space}}\label{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2class-_canvas_autotoc_md1287}
+This mode renders the UI as if it were a plane object in the scene. Unlike {\itshape Screen Space -\/ Camera} mode, however, the plane need not face the camera and can be oriented however you like. The size of the Canvas can be set using its Rect Transform but its onscreen size will depend on the viewing angle and distance of the camera. Other scene objects can pass behind, through or in front of the Canvas.
+
+\hypertarget{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2class-_canvas_autotoc_md1288}{}\doxysection{\texorpdfstring{Hints}{Hints}}\label{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2class-_canvas_autotoc_md1288}
+
+\begin{DoxyItemize}
+\item Read more about setting up a World Space Canvas on the \doxysectlink{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_h_o_w_t_o-_u_i_world_space}{Creating a World Space UI}{0} page.
+\item For information about making your Canvas and UI scale to different resolutions or aspect ratios, see the \doxysectlink{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_h_o_w_t_o-_u_i_multi_resolution}{Designing UI for Multiple Resolutions}{0} page as well as the \doxysectlink{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2script-_canvas_scaler}{Canvas Scaler}{0} page. 
+\end{DoxyItemize}

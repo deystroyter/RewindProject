@@ -1,0 +1,102 @@
+\doxysection{Unity\+Editor.\+Settings\+Management.\+User\+Setting\+Attribute Class Reference}
+\hypertarget{class_unity_editor_1_1_settings_management_1_1_user_setting_attribute}{}\label{class_unity_editor_1_1_settings_management_1_1_user_setting_attribute}\index{UnityEditor.SettingsManagement.UserSettingAttribute@{UnityEditor.SettingsManagement.UserSettingAttribute}}
+
+
+A custom attribute for registering a static field of type IUser\+Setting for the User\+Settings\+Provider window.  
+
+
+Inheritance diagram for Unity\+Editor.\+Settings\+Management.\+User\+Setting\+Attribute\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_editor_1_1_settings_management_1_1_user_setting_attribute}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting_attribute_ad4c763b9459b7d6ac10f0488aebdbae5}{User\+Setting\+Attribute}} ()
+\begin{DoxyCompactList}\small\item\em Registers a static field as a setting. Fields must be of a type that implements IUser\+Setting. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting_attribute_a4e0c005c1d838396545c77d362505eaa}{User\+Setting\+Attribute}} (string \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting_attribute_aefb8301945276ef469d88f96b2bb0e72}{category}}, string \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting_attribute_a09d2c56b9bf00f9da674ebe5b13434e2}{title}}, string tooltip=null)
+\begin{DoxyCompactList}\small\item\em Registers a static field as a setting and creates an entry in the UI. The field must be of a type that implements IUser\+Setting. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting_attribute_aefb8301945276ef469d88f96b2bb0e72}{category}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the name of the group (category) to assign this settings value to. When \doxylink{namespace_unity}{Unity} finds settings values in assemblies, it displays them in groups, organized by category. \end{DoxyCompactList}\item 
+GUIContent \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting_attribute_a09d2c56b9bf00f9da674ebe5b13434e2}{title}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the label to show for this setting. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting_attribute_a1e15da76e9fc1fdc05aa09c0c127fa9c}{visible\+In\+Settings\+Provider}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em True to show this field in the User\+Settings\+Provider interface; false if not. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A custom attribute for registering a static field of type IUser\+Setting for the User\+Settings\+Provider window. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_unity_editor_1_1_settings_management_1_1_user_setting_attribute_ad4c763b9459b7d6ac10f0488aebdbae5}\label{class_unity_editor_1_1_settings_management_1_1_user_setting_attribute_ad4c763b9459b7d6ac10f0488aebdbae5} 
+\index{UnityEditor.SettingsManagement.UserSettingAttribute@{UnityEditor.SettingsManagement.UserSettingAttribute}!UserSettingAttribute@{UserSettingAttribute}}
+\index{UserSettingAttribute@{UserSettingAttribute}!UnityEditor.SettingsManagement.UserSettingAttribute@{UnityEditor.SettingsManagement.UserSettingAttribute}}
+\doxysubsubsection{\texorpdfstring{UserSettingAttribute()}{UserSettingAttribute()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Unity\+Editor.\+Settings\+Management.\+User\+Setting\+Attribute.\+User\+Setting\+Attribute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Registers a static field as a setting. Fields must be of a type that implements IUser\+Setting. 
+
+\Hypertarget{class_unity_editor_1_1_settings_management_1_1_user_setting_attribute_a4e0c005c1d838396545c77d362505eaa}\label{class_unity_editor_1_1_settings_management_1_1_user_setting_attribute_a4e0c005c1d838396545c77d362505eaa} 
+\index{UnityEditor.SettingsManagement.UserSettingAttribute@{UnityEditor.SettingsManagement.UserSettingAttribute}!UserSettingAttribute@{UserSettingAttribute}}
+\index{UserSettingAttribute@{UserSettingAttribute}!UnityEditor.SettingsManagement.UserSettingAttribute@{UnityEditor.SettingsManagement.UserSettingAttribute}}
+\doxysubsubsection{\texorpdfstring{UserSettingAttribute()}{UserSettingAttribute()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Unity\+Editor.\+Settings\+Management.\+User\+Setting\+Attribute.\+User\+Setting\+Attribute (\begin{DoxyParamCaption}\item[{string}]{category,  }\item[{string}]{title,  }\item[{string}]{tooltip = {\ttfamily null} }\end{DoxyParamCaption})}
+
+
+
+Registers a static field as a setting and creates an entry in the UI. The field must be of a type that implements IUser\+Setting. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em category} & The category to assign this setting to.\\
+\hline
+{\em title} & The display text for this setting in the UI.\\
+\hline
+{\em tooltip} & Optional. The tooltip for this setting.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_unity_editor_1_1_settings_management_1_1_user_setting_attribute_aefb8301945276ef469d88f96b2bb0e72}\label{class_unity_editor_1_1_settings_management_1_1_user_setting_attribute_aefb8301945276ef469d88f96b2bb0e72} 
+\index{UnityEditor.SettingsManagement.UserSettingAttribute@{UnityEditor.SettingsManagement.UserSettingAttribute}!category@{category}}
+\index{category@{category}!UnityEditor.SettingsManagement.UserSettingAttribute@{UnityEditor.SettingsManagement.UserSettingAttribute}}
+\doxysubsubsection{\texorpdfstring{category}{category}}
+{\footnotesize\ttfamily string Unity\+Editor.\+Settings\+Management.\+User\+Setting\+Attribute.\+category\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the name of the group (category) to assign this settings value to. When \doxylink{namespace_unity}{Unity} finds settings values in assemblies, it displays them in groups, organized by category. 
+
+The group or category where this setting appears in the UI.\Hypertarget{class_unity_editor_1_1_settings_management_1_1_user_setting_attribute_a09d2c56b9bf00f9da674ebe5b13434e2}\label{class_unity_editor_1_1_settings_management_1_1_user_setting_attribute_a09d2c56b9bf00f9da674ebe5b13434e2} 
+\index{UnityEditor.SettingsManagement.UserSettingAttribute@{UnityEditor.SettingsManagement.UserSettingAttribute}!title@{title}}
+\index{title@{title}!UnityEditor.SettingsManagement.UserSettingAttribute@{UnityEditor.SettingsManagement.UserSettingAttribute}}
+\doxysubsubsection{\texorpdfstring{title}{title}}
+{\footnotesize\ttfamily GUIContent Unity\+Editor.\+Settings\+Management.\+User\+Setting\+Attribute.\+title\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the label to show for this setting. 
+
+The label that appears beside this setting in the UI.\Hypertarget{class_unity_editor_1_1_settings_management_1_1_user_setting_attribute_a1e15da76e9fc1fdc05aa09c0c127fa9c}\label{class_unity_editor_1_1_settings_management_1_1_user_setting_attribute_a1e15da76e9fc1fdc05aa09c0c127fa9c} 
+\index{UnityEditor.SettingsManagement.UserSettingAttribute@{UnityEditor.SettingsManagement.UserSettingAttribute}!visibleInSettingsProvider@{visibleInSettingsProvider}}
+\index{visibleInSettingsProvider@{visibleInSettingsProvider}!UnityEditor.SettingsManagement.UserSettingAttribute@{UnityEditor.SettingsManagement.UserSettingAttribute}}
+\doxysubsubsection{\texorpdfstring{visibleInSettingsProvider}{visibleInSettingsProvider}}
+{\footnotesize\ttfamily bool Unity\+Editor.\+Settings\+Management.\+User\+Setting\+Attribute.\+visible\+In\+Settings\+Provider\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+True to show this field in the User\+Settings\+Provider interface; false if not. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Package\+Cache/com.\+unity.\+settings-\/manager@2.\+0.\+1/\+Editor/\mbox{\hyperlink{_attributes_8cs}{Attributes.\+cs}}\end{DoxyCompactItemize}

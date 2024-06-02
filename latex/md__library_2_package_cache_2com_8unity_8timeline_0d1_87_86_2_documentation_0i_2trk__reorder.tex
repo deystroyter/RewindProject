@@ -1,0 +1,19 @@
+\chapter{Reordering tracks and rendering priority}
+\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2trk__reorder}{}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2trk__reorder}\index{Reordering tracks and rendering priority@{Reordering tracks and rendering priority}}
+\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2trk__reorder_autotoc_md1262}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2trk__reorder_autotoc_md1262}%
+ In the \doxylink{namespace_timeline}{Timeline} window, the rendering and animation priority is from the last track to the first track, where the last track takes priority. You can reorder tracks to change their rendering or animation priority.
+
+For example, a \doxylink{namespace_timeline}{Timeline} instance has four Animation tracks, where the second and fourth Animation tracks animate the same Game\+Object. The fourth track overrides the animation on any of the preceding tracks. This animation priority is the reason why Animation Override tracks are added as child tracks, under Animation tracks.
+
+
+
+{\itshape The second track (red arrow) and fourth track (selected, green arrow) animate the same Game\+Object (Green\+Cube). The fourth track has priority and overrides the second track.)}
+
+To reorder tracks, select one or more tracks and drag until a white insert line appears between tracks in the Track list. The white insert line indicates the destination of the tracks you are dragging. The last selected track type displays beside the cursor. Release the mouse button to reorder tracks.
+
+
+
+{\itshape For example, the white insert line indicates that the Control track (Storm) will be placed between the first track (Ground) and second track (Audio Src)}
+
+An Animation Override track is bound to the same Game\+Object as its parent Animation track. Reordering an Animation Override track converts it to an Animation track and resets its binding to none. 

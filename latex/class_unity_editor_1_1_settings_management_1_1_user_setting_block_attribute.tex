@@ -1,0 +1,64 @@
+\doxysection{Unity\+Editor.\+Settings\+Management.\+User\+Setting\+Block\+Attribute Class Reference}
+\hypertarget{class_unity_editor_1_1_settings_management_1_1_user_setting_block_attribute}{}\label{class_unity_editor_1_1_settings_management_1_1_user_setting_block_attribute}\index{UnityEditor.SettingsManagement.UserSettingBlockAttribute@{UnityEditor.SettingsManagement.UserSettingBlockAttribute}}
+
+
+A custom attribute for adding a section of settings to a category.  
+
+
+Inheritance diagram for Unity\+Editor.\+Settings\+Management.\+User\+Setting\+Block\+Attribute\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_editor_1_1_settings_management_1_1_user_setting_block_attribute}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting_block_attribute_a4553b530fba2274b15c40046e975edf7}{User\+Setting\+Block\+Attribute}} (string \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting_block_attribute_ab02f00b6592ff3d92c67b6a33c54a278}{category}})
+\begin{DoxyCompactList}\small\item\em Registers a static method for a callback in the User\+Settings\+Provider Editor window under a category. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_unity_editor_1_1_settings_management_1_1_user_setting_block_attribute_ab02f00b6592ff3d92c67b6a33c54a278}{category}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the title for the settings group. When \doxylink{namespace_unity}{Unity} finds settings values in assemblies, it displays them in groups, organized by category. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A custom attribute for adding a section of settings to a category. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_unity_editor_1_1_settings_management_1_1_user_setting_block_attribute_a4553b530fba2274b15c40046e975edf7}\label{class_unity_editor_1_1_settings_management_1_1_user_setting_block_attribute_a4553b530fba2274b15c40046e975edf7} 
+\index{UnityEditor.SettingsManagement.UserSettingBlockAttribute@{UnityEditor.SettingsManagement.UserSettingBlockAttribute}!UserSettingBlockAttribute@{UserSettingBlockAttribute}}
+\index{UserSettingBlockAttribute@{UserSettingBlockAttribute}!UnityEditor.SettingsManagement.UserSettingBlockAttribute@{UnityEditor.SettingsManagement.UserSettingBlockAttribute}}
+\doxysubsubsection{\texorpdfstring{UserSettingBlockAttribute()}{UserSettingBlockAttribute()}}
+{\footnotesize\ttfamily Unity\+Editor.\+Settings\+Management.\+User\+Setting\+Block\+Attribute.\+User\+Setting\+Block\+Attribute (\begin{DoxyParamCaption}\item[{string}]{category }\end{DoxyParamCaption})}
+
+
+
+Registers a static method for a callback in the User\+Settings\+Provider Editor window under a category. 
+
+{\ttfamily  \mbox{[}User\+Setting\+Block("{}\+General"{})\mbox{]} static void General\+Settings(string\mbox{[}$\,$\mbox{]} search\+Context) \{\} }
+
+
+\begin{DoxyParams}{Parameters}
+{\em category} & Specify the title of the group of settings under which this setting appears in the UI.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_unity_editor_1_1_settings_management_1_1_user_setting_block_attribute_ab02f00b6592ff3d92c67b6a33c54a278}\label{class_unity_editor_1_1_settings_management_1_1_user_setting_block_attribute_ab02f00b6592ff3d92c67b6a33c54a278} 
+\index{UnityEditor.SettingsManagement.UserSettingBlockAttribute@{UnityEditor.SettingsManagement.UserSettingBlockAttribute}!category@{category}}
+\index{category@{category}!UnityEditor.SettingsManagement.UserSettingBlockAttribute@{UnityEditor.SettingsManagement.UserSettingBlockAttribute}}
+\doxysubsubsection{\texorpdfstring{category}{category}}
+{\footnotesize\ttfamily string Unity\+Editor.\+Settings\+Management.\+User\+Setting\+Block\+Attribute.\+category\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Returns the title for the settings group. When \doxylink{namespace_unity}{Unity} finds settings values in assemblies, it displays them in groups, organized by category. 
+
+The group or category where this setting appears in the UI.
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Package\+Cache/com.\+unity.\+settings-\/manager@2.\+0.\+1/\+Editor/\mbox{\hyperlink{_attributes_8cs}{Attributes.\+cs}}\end{DoxyCompactItemize}

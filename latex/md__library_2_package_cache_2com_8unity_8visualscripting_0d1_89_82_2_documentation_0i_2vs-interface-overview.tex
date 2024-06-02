@@ -1,0 +1,120 @@
+\chapter{The interface}
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-interface-overview}{}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-interface-overview}\index{The interface@{The interface}}
+\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-interface-overview_autotoc_md1897}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-interface-overview_autotoc_md1897}%
+ Visual Scripting\textquotesingle{}s main window is the Graph window.
+
+
+
+The Graph window has five main elements\+:
+
+
+\begin{DoxyItemize}
+\item The \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\+Graph Editor\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}, where you create, arrange, and connect nodes.
+\item The \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}fuzzy finder\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}, which you can use to find nodes and add them to your graph.
+\item The \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\+Graph toolbar\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}, where you can change settings specific to your view in the Graph Editor and perform some common layout operations.
+\item The \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\+Graph Inspector\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}, where you can view detailed information about your nodes and configure additional settings for your graph.
+\item The \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\+Blackboard\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}, where you can define and edit variables to use in your graphs. ~\newline
+
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-interface-overview_autotoc_md1898}{}\doxysection{\texorpdfstring{The Graph Editor}{The Graph Editor}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-interface-overview_autotoc_md1898}
+The Graph Editor is the center editing area of the Graph window.
+
+
+
+You can use the Graph Editor to create your Visual Scripting graphs. You can create nodes and connect them with edges.
+
+You can change some default shortcuts and behaviors in the Graph Editor through your control scheme. For more information on the available control schemes in Visual Scripting, see \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-control-schemes}{Choose a control scheme}{0}.\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-interface-overview_autotoc_md1899}{}\doxysection{\texorpdfstring{The fuzzy finder}{The fuzzy finder}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-interface-overview_autotoc_md1899}
+The fuzzy finder is a searchable menu that lists every node available in Visual Scripting. Right-\/click anywhere in the Graph Editor to open the fuzzy finder.
+
+
+
+Search for a node by name with the Search bar, or open a category from the list to view related nodes. For example, nodes related to the creation or manipulation of variables are in the {\bfseries{Variables}} category.
+
+You can add new nodes to Visual Scripting from your own code, from other packages, or from other \doxylink{namespace_unity}{Unity} features. For more information on how to add nodes to the fuzzy finder, see \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-configuration}{Configure project settings}{0}.\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-interface-overview_autotoc_md1900}{}\doxysection{\texorpdfstring{The Graph toolbar}{The Graph toolbar}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-interface-overview_autotoc_md1900}
+The Graph toolbar lets you display or hide the Graph Inspector and Blackboard. The Graph toolbar also includes a breadcrumb trail for navigation through nested graphs that displays your current location. Select a graph from the trail to return to that graph file.
+
+You can also configure some additional settings that control how nodes display in the Graph Editor.
+
+
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property}} }&\multicolumn{2}{l|}{\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }}\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property}} }&\multicolumn{2}{l|}{\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }}\\\cline{1-3}
+\endhead
+{\bfseries{Lock}} &\multicolumn{2}{l|}{Lock the current Script Graph or State Graph to the Graph window. Visual Scripting keeps the current graph open, even if you select another Game\+Object with a graph file in the \href{https://docs.unity3d.com/Manual/Hierarchy.html}{\texttt{ Hierarchy window}}.  }\\\cline{1-3}
+{\bfseries{Graph Inspector}} &\multicolumn{2}{l|}{Display or hide \href{\#the-graph-inspector}{\texttt{ the Graph Inspector}}.  }\\\cline{1-3}
+{\bfseries{Blackboard}} &\multicolumn{2}{l|}{Display or hide \href{\#the-blackboard}{\texttt{ the Blackboard}}.  }\\\cline{1-3}
+{\bfseries{Breadcrumb Location}} &\multicolumn{2}{l|}{Displays the name of the current graph. If you open a \href{vs-nesting-subgraphs-state-units.md}{\texttt{ Subgraph or State Unit}}, or a \href{vs-graph-types.md\#state-graphs}{\texttt{ State node}} inside a State Graph, use the breadcrumbs to navigate back to the parent graph.  }\\\cline{1-3}
+{\bfseries{Zoom}} &\multicolumn{2}{l|}{Set a zoom level for your view of the Graph Editor.  }\\\cline{1-3}
+{\bfseries{Relations}} &\multicolumn{2}{l|}{Enable {\bfseries{Relations}} to display inner flow connections for Script Graph nodes. For example, on a standard {\ttfamily Multiply} node, the {\bfseries{Relations}} setting draws a line from each input port that merges into a single line on the output port. The lines display the flow of data inside the node. ~\newline
+Disable {\bfseries{Relations}} to hide these inner connections.  }\\\cline{1-3}
+{\bfseries{Values}} &\multicolumn{2}{l|}{Enable {\bfseries{Values}} to display the input and output values sent between nodes while the \doxylink{namespace_unity}{Unity} Editor is in Play mode. This can make it easier to debug your scripts. ~\newline
+Disable {\bfseries{Values}} to hide input and output values while in Play mode. ~\newline
+For more information on Play mode, see \href{https://docs.unity3d.com/Manual/GameView.html}{\texttt{ The Game view}} in the \doxylink{namespace_unity}{Unity} User Manual. \doxysubparagraph*{NOTE}
+
+
+
+This setting corresponds to the {\bfseries{Show Connection Values}} setting in the Preferences window for Visual Scripting. For more information on this preference, see \href{vs-set-preferences.md\#script-graphs-preferences}{\texttt{ Configure your preferences}}.
+
+  }\\\cline{1-3}
+{\bfseries{Dim}} &\multicolumn{2}{l|}{Enable {\bfseries{Dim}} to dim any nodes in the Graph Editor that aren\textquotesingle{}t yet connected to the control flow in your graph. The {\bfseries{Dim}} setting provides you with a visual cue that a node isn\textquotesingle{}t used in the current configuration of your graph. ~\newline
+Disable {\bfseries{Dim}} to display all nodes as active regardless of their connection state. \doxysubparagraph*{NOTE}
+
+
+
+This setting corresponds to the {\bfseries{Dim Inactive Nodes}} setting in the Preferences window for Visual Scripting. For more information on this preference, see \href{vs-set-preferences.md\#core-preferences}{\texttt{ Configure your preferences}}.
+
+  }\\\cline{1-3}
+{\bfseries{Carry}} &\multicolumn{2}{l|}{Enable {\bfseries{Carry}} to move all connected child nodes when you move a parent node. Disable {\bfseries{Carry}} to only move the currently selected node.\doxysubparagraph*{NOTE}
+
+
+
+This setting corresponds to the {\bfseries{Carry Children}} setting in the Preferences window for Visual Scripting. For more information on this preference, see \href{vs-set-preferences.md\#core-preferences}{\texttt{ Configure your preferences}}.
+
+  }\\\cline{1-3}
+\multirow{7}{*}{{\bfseries{Align}} }&\multicolumn{2}{l|}{Choose an alignment option to align any nodes in your current selection.  }\\\cline{2-3}
+&{\bfseries{Align Left Edges}} &Align all nodes in the selection based on their left edge.  \\\cline{2-3}
+&{\bfseries{Align Centers}} &Align all nodes in the selection based on their vertical centers.  \\\cline{2-3}
+&{\bfseries{Align Right Edges}} &Align all nodes in the selection based on their right edges.  \\\cline{2-3}
+&{\bfseries{Align Top Edges}} &Align all nodes in the selection based on their top edges.  \\\cline{2-3}
+&{\bfseries{Align Middles}} &Align all nodes in the selection based on their horizontal middles.  \\\cline{2-3}
+&{\bfseries{Align Bottom Edges}} &Align all nodes in the selection based on their bottom edges.  \\\cline{1-3}
+\multirow{9}{*}{{\bfseries{Distribute}} }&\multicolumn{2}{l|}{Choose a distribution option to evenly distribute space between any nodes in your current selection.  }\\\cline{2-3}
+&{\bfseries{Distribute Left Edges}} &Distribute all nodes in the selection to leave an equal distance between the left edges of each node.  \\\cline{2-3}
+&{\bfseries{Distribute Centers}} &Distribute all nodes in the selection to leave an equal distance between the vertical centers of each node.  \\\cline{2-3}
+&{\bfseries{Distribute Right Edges}} &Distribute all nodes in the selection to leave an equal distance between the right edges of each node.  \\\cline{2-3}
+&{\bfseries{Distribute Horizontal Gaps}} &Distribute all nodes in the selection to leave an equal-\/sized horizontal gap between each node. This distribution affects the space between the left and right edges of nodes.  \\\cline{2-3}
+&{\bfseries{Distribute Top Edges}} &Distribute all nodes in the selection to leave an equal distance between the top edges of each node.  \\\cline{2-3}
+&{\bfseries{Distribute Middles}} &Distribute all nodes in the selection to leave an equal distance between the horizontal middles of each node.  \\\cline{2-3}
+&{\bfseries{Distribute Bottom Edges}} &Distribute all nodes in the selection to leave an equal distance between the bottom edges of each node.  \\\cline{2-3}
+&{\bfseries{Distribute Vertical Gaps}} &Distribute all nodes in the selection to leave an equal-\/sized vertical gap between each node. This distribution affects the space between the top and bottom edges of nodes.  \\\cline{1-3}
+{\bfseries{Overview}} &\multicolumn{2}{l|}{Select {\bfseries{Overview}} to automatically pan and zoom to fit all elements of your current graph within the Graph Editor.  }\\\cline{1-3}
+{\bfseries{Full Screen}} &\multicolumn{2}{l|}{Select {\bfseries{Full Screen}} when the Graph window is docked in the \doxylink{namespace_unity}{Unity} Editor to maximize the Graph window to the full size of the Editor window.   }\\\cline{1-3}
+\end{longtabu}
+
+
+Your Visual Scripting preferences can change some settings in the Graph toolbar or change how these settings behave. For example, you can control how fast the Graph Editor zooms in and out when you set a zoom level. For more information, see \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-set-preferences}{Configure your preferences}{0}.\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-interface-overview_autotoc_md1901}{}\doxysection{\texorpdfstring{The Graph Inspector}{The Graph Inspector}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-interface-overview_autotoc_md1901}
+The Graph Inspector provides additional information about an open graph, or about any node you select in the Graph Editor.
+
+
+
+If a node requires additional configuration, you can use the Graph Inspector to set these values.
+
+To display or hide the Graph Inspector, select {\bfseries{Graph Inspector}} (\texorpdfstring{$<$}{<}img src="{}images\textbackslash{}vs-\/graph-\/inspector-\/icon.\+png"{} alt="{}\+The Graph Inspector icon, of a grey circle with a black, lower case letter "{}i"{} in the center."{}/\texorpdfstring{$>$}{>}) from the toolbar.
+
+To move the Graph Inspector to the other side of the Graph window, select either {\bfseries{Dock Right}} () or {\bfseries{Dock Left}} ().\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-interface-overview_autotoc_md1902}{}\doxysection{\texorpdfstring{The Blackboard}{The Blackboard}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-interface-overview_autotoc_md1902}
+The Blackboard provides options to configure and manage variables in a graph. The Blackboard divides variables into five distinct scopes, across five tabs\+: {\bfseries{Graph}}, {\bfseries{Object}}, {\bfseries{Scene}}, {\bfseries{App}}, and {\bfseries{Saved}}.
+
+
+
+For more information on the available variable scopes in Visual Scripting, see \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-variables}{Variables}{0}.
+
+To display or hide the Blackboard, select {\bfseries{Blackboard}} (\texorpdfstring{$<$}{<}img src="{}images\textbackslash{}vs-\/blackboard-\/icon.\+png"{} alt="{}\+The Blackboard icon. A letter "{}x"{} is surrounded by angled brackets."{}/\texorpdfstring{$>$}{>}) from the toolbar.
+
+To move the Blackboard to the other side of the Graph window, select either {\bfseries{Dock Right}} () or {\bfseries{Dock Left}} (). 

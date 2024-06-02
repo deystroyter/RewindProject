@@ -1,0 +1,99 @@
+\chapter{Running tests from the command line}
+\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-command-line}{}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-command-line}\index{Running tests from the command line@{Running tests from the command line}}
+\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-command-line_autotoc_md591}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-command-line_autotoc_md591}%
+ It’s pretty simple to run a test project from the command line. Here is an example in Windows\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Unity.exe\ -\/runTests\ -\/batchmode\ -\/projectPath\ PATH\_TO\_YOUR\_PROJECT\ -\/testResults\ C:\(\backslash\)temp\(\backslash\)results.xml\ -\/testPlatform\ PS4}
+
+\end{DoxyCode}
+
+
+\begin{quote}
+{\bfseries{Note}}\+: Use the {\ttfamily -\/batchmode} option when running tests on the command line to remove the need for manual user inputs. For more information, see \doxylink{namespace_unity}{Unity} \href{https://docs.unity3d.com/Manual/CommandLineArguments.html}{\texttt{ Command line arguments}}. \end{quote}
+\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-command-line_autotoc_md592}{}\doxysection{\texorpdfstring{Test Framework command line arguments}{Test Framework command line arguments}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-command-line_autotoc_md592}
+\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-command-line_autotoc_md593}{}\doxysubsection{\texorpdfstring{forget\+Project\+Path}{forget\+Project\+Path}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-command-line_autotoc_md593}
+Don\textquotesingle{}t save your current {\bfseries{Project}} into the \doxylink{namespace_unity}{Unity} launcher/hub history.\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-command-line_autotoc_md594}{}\doxysubsection{\texorpdfstring{run\+Tests}{run\+Tests}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-command-line_autotoc_md594}
+Runs tests in the Project.\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-command-line_autotoc_md595}{}\doxysubsection{\texorpdfstring{test\+Category}{test\+Category}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-command-line_autotoc_md595}
+A semicolon-\/separated list of test categories to include in the run. A semi-\/colon separated list should be formatted as a string enclosed in quotation marks, e.\+g. {\ttfamily test\+Category "{}first\+Category;second\+Category"{}}. If using both {\ttfamily test\+Filter} and {\ttfamily test\+Category}, then only tests that match both are run. This argument supports negation using \textquotesingle{}!\textquotesingle{}. If using \textquotesingle{}!\+My\+Category\textquotesingle{} then no tests with the \textquotesingle{}My\+Category\textquotesingle{} category will be included in the run.\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-command-line_autotoc_md596}{}\doxysubsection{\texorpdfstring{test\+Filter}{test\+Filter}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-command-line_autotoc_md596}
+A semicolon-\/separated list of test names to run, or a regular expression pattern to match tests by their full name. A semi-\/colon separated list should be formatted as a string enclosed in quotation marks, e.\+g. {\ttfamily test\+Filter "{}\+Low;\+Medium"{}}. This argument supports negation using \textquotesingle{}!\textquotesingle{}. If using the test filter \textquotesingle{}!\+My\+Namespace.Something.\+My\+Test\textquotesingle{}, then all tests except that test will be run.\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-command-line_autotoc_md597}{}\doxysubsection{\texorpdfstring{test\+Platform}{test\+Platform}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-command-line_autotoc_md597}
+The platform to run tests on. Accepted values\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Edit\+Mode}}
+\begin{DoxyItemize}
+\item Edit Mode tests. Equivalent to running tests from the Edit\+Mode tab of the Test Runner window.
+\end{DoxyItemize}
+\item {\bfseries{Play\+Mode}}
+\begin{DoxyItemize}
+\item Play Mode tests that run in the Editor. Equivalent to running tests from the Play\+Mode tab of the Test Runner window.
+\end{DoxyItemize}
+\item Any value from the \href{https://docs.unity3d.com/ScriptReference/BuildTarget.html}{\texttt{ Build\+Target}} enum.
+\begin{DoxyItemize}
+\item Play Mode tests that run on a player built for the specified platform. Equivalent to using the \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\+Run all tests ({\ttfamily \texorpdfstring{$<$}{<}target\+\_\+platform\texorpdfstring{$>$}{>}})\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} dropdown in the Play\+Mode tab of the Test Runner window.
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\begin{quote}
+{\bfseries{Note}}\+: If no value is specified for this argument, tests run in Edit Mode. \end{quote}
+\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-command-line_autotoc_md598}{}\doxysubsection{\texorpdfstring{assembly\+Names}{assembly\+Names}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-command-line_autotoc_md598}
+A semicolon-\/separated list of test assemblies to include in the run. A semi-\/colon separated list should be formatted as a string enclosed in quotation marks, e.\+g. {\ttfamily assembly\+Names "{}first\+Assembly;second\+Assembly"{}}.\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-command-line_autotoc_md599}{}\doxysubsection{\texorpdfstring{test\+Results}{test\+Results}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-command-line_autotoc_md599}
+The path where \doxylink{namespace_unity}{Unity} should save the result file. By default, \doxylink{namespace_unity}{Unity} saves it in the Project’s root folder. Test results follow the XML format as defined by NUnit, see the \href{https://docs.nunit.org/articles/nunit/technical-notes/usage/Test-Result-XML-Format.html}{\texttt{ NUnit documentation}}. There is currently no common definition for exit codes reported by individual \doxylink{namespace_unity}{Unity} components under test. The best way to understand the source of a problem is the content of error messages and stack traces.\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-command-line_autotoc_md600}{}\doxysubsection{\texorpdfstring{player\+Heartbeat\+Timeout}{player\+Heartbeat\+Timeout}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-command-line_autotoc_md600}
+The time, in seconds, the editor should wait for heartbeats after starting a test run on a player. This defaults to 10 minutes.\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-command-line_autotoc_md601}{}\doxysubsection{\texorpdfstring{run\+Synchronously}{run\+Synchronously}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-command-line_autotoc_md601}
+If included, the test run will run tests synchronously, guaranteeing that all tests runs in one editor update call. Note that this is only supported for Edit\+Mode tests, and that tests which take multiple frames (i.\+e. {\ttfamily \mbox{[}Unity\+Test\mbox{]}} tests, or tests with {\ttfamily \mbox{[}Unity\+Set\+Up\mbox{]}} or {\ttfamily \mbox{[}Unity\+Tear\+Down\mbox{]}} scaffolding) will be filtered out.\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-command-line_autotoc_md602}{}\doxysubsection{\texorpdfstring{test\+Settings\+File}{test\+Settings\+File}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-command-line_autotoc_md602}
+Path to a {\itshape Test\+Settings.\+json} file that allows you to set up extra options for your test run. An example of the {\itshape Test\+Settings.\+json} file could look like this\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ "{}scriptingBackend"{}:"{}WinRTDotNET"{},}
+\DoxyCodeLine{\ \ "{}Architecture"{}:null,}
+\DoxyCodeLine{\ \ "{}apiProfile"{}:0}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-command-line_autotoc_md603}{}\doxysubsubsection{\texorpdfstring{api\+Profile}{api\+Profile}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-command-line_autotoc_md603}
+The .Net compatibility level. Set to one of the following values\+: ~\newline
+
+
+
+\begin{DoxyItemize}
+\item 1 -\/ .Net 2.\+0
+\item 2 -\/ .Net 2.\+0 Subset
+\item 3 -\/ .Net 4.\+6
+\item 5 -\/ .Net micro profile (used by \doxylink{namespace_mono}{Mono} scripting backend if {\bfseries{Stripping Level}} is set to {\bfseries{Use micro mscorlib}})
+\item 6 -\/ .Net Standard 2.\+0
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-command-line_autotoc_md604}{}\doxysubsubsection{\texorpdfstring{apple\+Enable\+Automatic\+Signing}{apple\+Enable\+Automatic\+Signing}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-command-line_autotoc_md604}
+Sets option for automatic signing of Apple devices.\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-command-line_autotoc_md605}{}\doxysubsubsection{\texorpdfstring{apple\+Developer\+Team\+ID}{apple\+Developer\+Team\+ID}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-command-line_autotoc_md605}
+Sets the team ID for the apple developer account.\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-command-line_autotoc_md606}{}\doxysubsubsection{\texorpdfstring{architecture}{architecture}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-command-line_autotoc_md606}
+Target architecture for Android. Set to one of the following values\+:
+
+
+\begin{DoxyItemize}
+\item None = 0
+\item ARMv7 = 1
+\item ARM64 = 2
+\item X86 = 4
+\item All = 4294967295
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-command-line_autotoc_md607}{}\doxysubsubsection{\texorpdfstring{i\+OSManual\+Provisioning\+Profile\+Type}{i\+OSManual\+Provisioning\+Profile\+Type}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-command-line_autotoc_md607}
+Set to one of the following values\+:
+
+
+\begin{DoxyItemize}
+\item 0 -\/ Automatic
+\item 1 -\/ Development
+\item 2 -\/ Distribution i\+OSManual\+Provisioning\+Profile\+ID
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-command-line_autotoc_md608}{}\doxysubsubsection{\texorpdfstring{scripting\+Backend}{scripting\+Backend}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-command-line_autotoc_md608}
+Set to one of the following values, which should be given as a string literal enclosed in quotes\+:
+
+
+\begin{DoxyItemize}
+\item Mono2x
+\item IL2\+CPP
+\item Win\+RTDot\+NET
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-command-line_autotoc_md609}{}\doxysubsubsection{\texorpdfstring{player\+Graphics\+API}{player\+Graphics\+API}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-command-line_autotoc_md609}
+Set graphics API that will be used during test execution in the player. Value can be any \href{https://docs.unity3d.com/ScriptReference/Rendering.GraphicsDeviceType.html}{\texttt{ Graphics\+Device\+Type}} as a string literal enclosed in quotes. Value will only be set if it is supported on the target platform.\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-command-line_autotoc_md610}{}\doxysubsection{\texorpdfstring{android\+Build\+App\+Bundle}{android\+Build\+App\+Bundle}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-command-line_autotoc_md610}
+A boolean setting that allows to build an Android App Bundle (AAB) instead of APK for tests. 

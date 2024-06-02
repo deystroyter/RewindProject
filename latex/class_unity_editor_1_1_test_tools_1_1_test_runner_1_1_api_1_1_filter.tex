@@ -1,0 +1,93 @@
+\doxysection{Unity\+Editor.\+Test\+Tools.\+Test\+Runner.\+Api.\+Filter Class Reference}
+\hypertarget{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_filter}{}\label{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_filter}\index{UnityEditor.TestTools.TestRunner.Api.Filter@{UnityEditor.TestTools.TestRunner.Api.Filter}}
+
+
+The filter class provides the Test\+Runner\+Api with a specification of what tests to run when \href{https://docs.unity3d.com/Packages/com.unity.test-framework@1.1/manual/extension-run-tests.html}{\texttt{ running tests programmatically}}.  
+
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_af169988e2317e7edb0f1b09d920412e9}{Test\+Mode}} \mbox{\hyperlink{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_filter_a25e1162d8bfd582b0eebf8b838c1e8c4}{test\+Mode}}
+\begin{DoxyCompactList}\small\item\em An enum flag that specifies if Edit Mode or Play Mode tests should run. /summary\texorpdfstring{$>$}{>} \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_filter_aff544949b5efbf2290c49de2c4338a67}{test\+Names}}
+\begin{DoxyCompactList}\small\item\em The full name of the tests to match the filter. This is usually in the format Fixture\+Name.\+Test\+Name. If the test has test arguments, then include them in parenthesis. E.\+g. My\+Test\+Class2.\+My\+Test\+With\+Multiple\+Values(1). \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_filter_a35db71bcd0a304693fb54a6535b29219}{group\+Names}}
+\begin{DoxyCompactList}\small\item\em The same as test\+Names, except that it allows for Regex. This is useful for running specific fixtures or namespaces. E.\+g. "{}\texorpdfstring{$^\wedge$}{\string^}\+My\+Namespace\textbackslash{}\textbackslash{}."{} Runs any tests where the top namespace is My\+Namespace. \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_filter_a5797772bb8f0645efb331fba178b3721}{category\+Names}}
+\begin{DoxyCompactList}\small\item\em The name of a \href{https://nunit.org/docs/2.2.7/category.html}{\texttt{ Category}} to include in the run. Any test or fixtures runs that have a Category matching the string. \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_filter_aa013f38c00335342fc96dc6f5259ba73}{assembly\+Names}}
+\begin{DoxyCompactList}\small\item\em The name of assemblies included in the run. That is the assembly name, without the .dll file extension. E.\+g., My\+Test\+Assembly. \end{DoxyCompactList}\item 
+Build\+Target? \mbox{\hyperlink{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_filter_a62552ef77c3eee948b69048b3ee06961}{target\+Platform}}
+\begin{DoxyCompactList}\small\item\em The Build\+Target platform to run the test on. If set to null, then the Editor is the target for the tests. Obsolete. Use the target\+Platform property on the Execution\+Settings. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The filter class provides the Test\+Runner\+Api with a specification of what tests to run when \href{https://docs.unity3d.com/Packages/com.unity.test-framework@1.1/manual/extension-run-tests.html}{\texttt{ running tests programmatically}}. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_filter_aa013f38c00335342fc96dc6f5259ba73}\label{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_filter_aa013f38c00335342fc96dc6f5259ba73} 
+\index{UnityEditor.TestTools.TestRunner.Api.Filter@{UnityEditor.TestTools.TestRunner.Api.Filter}!assemblyNames@{assemblyNames}}
+\index{assemblyNames@{assemblyNames}!UnityEditor.TestTools.TestRunner.Api.Filter@{UnityEditor.TestTools.TestRunner.Api.Filter}}
+\doxysubsubsection{\texorpdfstring{assemblyNames}{assemblyNames}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Unity\+Editor.\+Test\+Tools.\+Test\+Runner.\+Api.\+Filter.\+assembly\+Names}
+
+
+
+The name of assemblies included in the run. That is the assembly name, without the .dll file extension. E.\+g., My\+Test\+Assembly. 
+
+\Hypertarget{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_filter_a5797772bb8f0645efb331fba178b3721}\label{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_filter_a5797772bb8f0645efb331fba178b3721} 
+\index{UnityEditor.TestTools.TestRunner.Api.Filter@{UnityEditor.TestTools.TestRunner.Api.Filter}!categoryNames@{categoryNames}}
+\index{categoryNames@{categoryNames}!UnityEditor.TestTools.TestRunner.Api.Filter@{UnityEditor.TestTools.TestRunner.Api.Filter}}
+\doxysubsubsection{\texorpdfstring{categoryNames}{categoryNames}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Unity\+Editor.\+Test\+Tools.\+Test\+Runner.\+Api.\+Filter.\+category\+Names}
+
+
+
+The name of a \href{https://nunit.org/docs/2.2.7/category.html}{\texttt{ Category}} to include in the run. Any test or fixtures runs that have a Category matching the string. 
+
+\Hypertarget{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_filter_a35db71bcd0a304693fb54a6535b29219}\label{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_filter_a35db71bcd0a304693fb54a6535b29219} 
+\index{UnityEditor.TestTools.TestRunner.Api.Filter@{UnityEditor.TestTools.TestRunner.Api.Filter}!groupNames@{groupNames}}
+\index{groupNames@{groupNames}!UnityEditor.TestTools.TestRunner.Api.Filter@{UnityEditor.TestTools.TestRunner.Api.Filter}}
+\doxysubsubsection{\texorpdfstring{groupNames}{groupNames}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Unity\+Editor.\+Test\+Tools.\+Test\+Runner.\+Api.\+Filter.\+group\+Names}
+
+
+
+The same as test\+Names, except that it allows for Regex. This is useful for running specific fixtures or namespaces. E.\+g. "{}\texorpdfstring{$^\wedge$}{\string^}\+My\+Namespace\textbackslash{}\textbackslash{}."{} Runs any tests where the top namespace is My\+Namespace. 
+
+\Hypertarget{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_filter_a62552ef77c3eee948b69048b3ee06961}\label{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_filter_a62552ef77c3eee948b69048b3ee06961} 
+\index{UnityEditor.TestTools.TestRunner.Api.Filter@{UnityEditor.TestTools.TestRunner.Api.Filter}!targetPlatform@{targetPlatform}}
+\index{targetPlatform@{targetPlatform}!UnityEditor.TestTools.TestRunner.Api.Filter@{UnityEditor.TestTools.TestRunner.Api.Filter}}
+\doxysubsubsection{\texorpdfstring{targetPlatform}{targetPlatform}}
+{\footnotesize\ttfamily Build\+Target? Unity\+Editor.\+Test\+Tools.\+Test\+Runner.\+Api.\+Filter.\+target\+Platform}
+
+
+
+The Build\+Target platform to run the test on. If set to null, then the Editor is the target for the tests. Obsolete. Use the target\+Platform property on the Execution\+Settings. 
+
+\Hypertarget{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_filter_a25e1162d8bfd582b0eebf8b838c1e8c4}\label{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_filter_a25e1162d8bfd582b0eebf8b838c1e8c4} 
+\index{UnityEditor.TestTools.TestRunner.Api.Filter@{UnityEditor.TestTools.TestRunner.Api.Filter}!testMode@{testMode}}
+\index{testMode@{testMode}!UnityEditor.TestTools.TestRunner.Api.Filter@{UnityEditor.TestTools.TestRunner.Api.Filter}}
+\doxysubsubsection{\texorpdfstring{testMode}{testMode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_af169988e2317e7edb0f1b09d920412e9}{Test\+Mode}} Unity\+Editor.\+Test\+Tools.\+Test\+Runner.\+Api.\+Filter.\+test\+Mode}
+
+
+
+An enum flag that specifies if Edit Mode or Play Mode tests should run. /summary\texorpdfstring{$>$}{>} 
+
+\Hypertarget{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_filter_aff544949b5efbf2290c49de2c4338a67}\label{class_unity_editor_1_1_test_tools_1_1_test_runner_1_1_api_1_1_filter_aff544949b5efbf2290c49de2c4338a67} 
+\index{UnityEditor.TestTools.TestRunner.Api.Filter@{UnityEditor.TestTools.TestRunner.Api.Filter}!testNames@{testNames}}
+\index{testNames@{testNames}!UnityEditor.TestTools.TestRunner.Api.Filter@{UnityEditor.TestTools.TestRunner.Api.Filter}}
+\doxysubsubsection{\texorpdfstring{testNames}{testNames}}
+{\footnotesize\ttfamily string \mbox{[}$\,$\mbox{]} Unity\+Editor.\+Test\+Tools.\+Test\+Runner.\+Api.\+Filter.\+test\+Names}
+
+
+
+The full name of the tests to match the filter. This is usually in the format Fixture\+Name.\+Test\+Name. If the test has test arguments, then include them in parenthesis. E.\+g. My\+Test\+Class2.\+My\+Test\+With\+Multiple\+Values(1). 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Package\+Cache/com.\+unity.\+test-\/framework@1.\+1.\+33/\+Unity\+Editor.\+Test\+Runner/\+Api/\mbox{\hyperlink{_filter_8cs}{Filter.\+cs}}\end{DoxyCompactItemize}

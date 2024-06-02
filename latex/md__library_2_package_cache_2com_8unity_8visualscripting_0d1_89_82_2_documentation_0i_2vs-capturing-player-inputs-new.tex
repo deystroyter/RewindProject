@@ -1,0 +1,69 @@
+\chapter{Capture input with the Input System package}
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-capturing-player-inputs-new}{}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-capturing-player-inputs-new}\index{Capture input with the Input System package@{Capture input with the Input System package}}
+\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-capturing-player-inputs-new_autotoc_md1699}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-capturing-player-inputs-new_autotoc_md1699}%
+ \begin{quote}
+\mbox{[}!\+IMPORTANT\mbox{]} If you don\textquotesingle{}t complete the prerequisite configuration for your project, you can\textquotesingle{}t use the Input System package with Visual Scripting. For more information, see \href{vs-capture-player-input.md\#input-system-package-prerequisites}{\texttt{ Input System package prerequisites}}. \end{quote}
+To use the Input System package with Visual Scripting to capture input in your project\+:
+
+
+\begin{DoxyEnumerate}
+\item \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-open-graph-edit}{Open}{0} or \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create-graph}{create}{0} a Script Graph attached to the Game\+Object that you want your users to move.
+\item \mbox{[}!include\doxylink{vs-open-fuzzy-finder_8md}{open-\/fuzzy-\/finder}\mbox{]}
+\item Go to {\bfseries{Events}} \texorpdfstring{$>$}{>} {\bfseries{Input}} or search for {\bfseries{On Input System Event}}.
+\item Select an Input System Event node. In this example, select the {\bfseries{On Input System Event Vector 2}} node to add it to the graph.
+\item Set the {\bfseries{On Input System Event Vector 2}} node\textquotesingle{}s {\bfseries{Input Action Change Type}} control to {\bfseries{On Hold}}\+:
+
+
+\item In the {\bfseries{Input Action}} list on the {\bfseries{On Input System Event Vector 2}} node, select an Input Action to trigger the node. In this example, select {\bfseries{Move}}.
+\end{DoxyEnumerate}
+
+\begin{quote}
+\mbox{[}!\+NOTE\mbox{]} By default, Visual Scripting displays all Input Actions from the Input Action asset attached to your current Game\+Object\textquotesingle{}s Player Input component. \end{quote}
+
+\begin{DoxyEnumerate}
+\item \mbox{[}!include\doxylink{vs-open-fuzzy-finder_8md}{open-\/fuzzy-\/finder}\mbox{]}
+\end{DoxyEnumerate}
+
+\begin{quote}
+\mbox{[}!\+TIP\mbox{]} If a context menu appears when you right-\/click, select {\bfseries{Add Node}} to open the fuzzy finder. \end{quote}
+
+\begin{DoxyEnumerate}
+\item Go to {\bfseries{Codebase}} \texorpdfstring{$>$}{>} {\bfseries{\doxylink{namespace_unity}{Unity} Engine}} \texorpdfstring{$>$}{>} {\bfseries{Vector 3}} or search for {\bfseries{Vector 3 Get X}}.
+\item Select {\bfseries{Get X}} to add the {\bfseries{Vector 3 Get X}} node to the graph. ~\newline
+
+\item \mbox{[}!include\doxylink{vs-open-fuzzy-finder_8md}{open-\/fuzzy-\/finder}\mbox{]}
+\item Go to {\bfseries{Codebase}} \texorpdfstring{$>$}{>} {\bfseries{\doxylink{namespace_unity}{Unity} Engine}} \texorpdfstring{$>$}{>} {\bfseries{Vector 3}} or search for {\bfseries{Vector 3 Get Z}}.
+\item Select {\bfseries{Get Z}} to add the {\bfseries{Vector 3 Get Z}} node to the graph.
+\item Select the {\bfseries{Vector 2 Value}} output port on the {\bfseries{On Input System Event Vector 2}} node.
+\item \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-creating-connections}{Make a connection}{0} to the {\bfseries{Target}} input port on the {\bfseries{Vector 3 Get X}} node\+:
+
+
+\item Select the {\bfseries{Vector 2 Value}} output port.
+\item \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-creating-connections}{Make a connection}{0} to the {\bfseries{Target}} port on the {\bfseries{Vector 3 Get Z}} node.
+\item \mbox{[}!include\doxylink{vs-open-fuzzy-finder_8md}{open-\/fuzzy-\/finder}\mbox{]}
+\item Go to {\bfseries{Codebase}} \texorpdfstring{$>$}{>} {\bfseries{\doxylink{namespace_unity}{Unity} Engine}} \texorpdfstring{$>$}{>} {\bfseries{Transform}} or search for {\bfseries{Translate}}.
+\item Select {\bfseries{Transform\+: Translate (X, Y, Z)}} to add the Translate node to the graph.
+\item Select the {\bfseries{Value\+: Float}} output port on the {\bfseries{Vector 3 Get X}} node.
+\item \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-creating-connections}{Make a connection}{0} to the {\bfseries{X}} float input port on the {\bfseries{Translate}} node.
+\item Select the {\bfseries{Value\+: Float}} output port on the {\bfseries{Vector 3 Get X}} node.
+\item \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-creating-connections}{Make a connection}{0} to the {\bfseries{Z}} float input port on the {\bfseries{Translate}} node.
+
+The finished graph looks similar to the following image\+:
+
+
+\item To enter Play mode, select {\bfseries{Play}} from \href{https://docs.unity3d.com/Manual/Toolbar.html}{\texttt{ the Unity Editor\textquotesingle{}s Toolbar}}.
+\item While in the \href{https://docs.unity3d.com/Manual/GameView.html}{\texttt{ Game view}}, press a key defined under the Input Actions asset for {\bfseries{Move}} in the {\bfseries{Player}} Action Map.
+\end{DoxyEnumerate}
+
+The Game\+Object moves along the X or Z axis in the Game view, based on the key pressed and the Input Actions asset.
+
+For more information on how to define Input Actions, see \href{https://docs.unity3d.com/Packages/com.unity.inputsystem@latest/index.html?subfolder=/manual/ActionAssets.html}{\texttt{ Input Action Assets}} in the Input System package documentation.\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-capturing-player-inputs-new_autotoc_md1700}{}\doxysection{\texorpdfstring{Additional resources}{Additional resources}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-capturing-player-inputs-new_autotoc_md1700}
+
+\begin{DoxyItemize}
+\item \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-capture-player-input}{Capture user input in an application}{0}
+\item \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-capture-player-input-add-component}{Add and configure a Player Input component}{0}
+\item \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nodes-events-input-system-button}{On Input System Event Button node}{0}
+\item \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nodes-events-input-system-float}{On Input System Event Float node}{0}
+\item \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nodes-events-input-system-vector2}{On Input System Event Vector 2 node}{0} 
+\end{DoxyItemize}

@@ -1,0 +1,43 @@
+\chapter{Add the Inspectable attribute to a custom type}
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-add-in236feef24f71ab25a6e4653d6791c5ef}{}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-add-in236feef24f71ab25a6e4653d6791c5ef}\index{Add the Inspectable attribute to a custom type@{Add the Inspectable attribute to a custom type}}
+\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-add-in236feef24f71ab25a6e4653d6791c5ef_autotoc_md1654}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-add-in236feef24f71ab25a6e4653d6791c5ef_autotoc_md1654}%
+ If you have access to the source code for a custom type, add the {\ttfamily \mbox{[}Inspectable\mbox{]}} attribute to its fields and classes. The {\ttfamily \mbox{[}Inspectable\mbox{]}} attribute makes these fields and classes accessible to the \href{https://docs.unity3d.com/Manual/UsingTheInspector.html}{\texttt{ Inspector window}} in the \doxylink{namespace_unity}{Unity} Editor. You don\textquotesingle{}t need to create a \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create-custom-drawer}{custom Property\+Drawer}{0} as \doxylink{namespace_unity}{Unity} generates a basic UI for the custom type.
+
+For more information about how to use custom types in Visual Scripting, see \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-using-custom-types}{Use a custom type}{0} or \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-custom-types}{Custom types}{0}
+
+To add the {\ttfamily \mbox{[}Inspectable\mbox{]}} attribute to the source code for a custom type\+:
+
+
+\begin{DoxyEnumerate}
+\item \mbox{[}!include\doxylink{vs-open-existing-external-code_8md}{open-\/existing-\/external-\/code}\mbox{]}
+\item In your external editor, on a line above your {\ttfamily public class} definition, add the {\ttfamily \mbox{[}Inspectable\mbox{]}} attribute.
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item On a line above the properties you want to have available in the \doxylink{namespace_unity}{Unity} Inspector, add the {\ttfamily \mbox{[}Inspectable\mbox{]}} attribute.
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item \mbox{[}!include\doxylink{vs-regen-node-library_8md}{regen-\/node-\/library}\mbox{]}
+\end{DoxyEnumerate}
+
+The following is an example of a public class, with fields {\ttfamily name} and {\ttfamily amount} that are accessible and can be modified through \doxylink{namespace_unity}{Unity}\textquotesingle{}s Inspector window. \begin{DoxyVerb}```csharp
+
+using System;
+using UnityEngine; 
+using Unity.VisualScripting;
+
+[Inspectable]
+public class MyClass
+{
+    [Inspectable]
+    public string name;
+
+    [Inspectable]
+    public int amount;
+
+    public string dontShowThis;
+}
+
+```
+\end{DoxyVerb}
+ 

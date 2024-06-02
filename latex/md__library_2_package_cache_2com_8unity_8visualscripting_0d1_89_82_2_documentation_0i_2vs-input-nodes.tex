@@ -1,0 +1,54 @@
+\chapter{Input Event nodes}
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-input-nodes}{}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-input-nodes}\index{Input Event nodes@{Input Event nodes}}
+\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-input-nodes_autotoc_md1893}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-input-nodes_autotoc_md1893}%
+ Input nodes are an Event node type that can read input from \doxylink{namespace_unity}{Unity}\textquotesingle{}s \href{https://docs.unity3d.com/Manual/class-InputManager.html}{\texttt{ Input Manager}} or \href{https://docs.unity3d.com/Packages/com.unity.inputsystem@latest}{\texttt{ Input System package}} for use in a Script Graph.
+
+For more information about how to read and capture input in Visual Scripting, see \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-capture-player-input}{Capture user input in an application}{0}.\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-input-nodes_autotoc_md1894}{}\doxysection{\texorpdfstring{Input System package nodes}{Input System package nodes}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-input-nodes_autotoc_md1894}
+The following nodes read and interact with Events from the Input System package\+:
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Node}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Node}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-2}
+\endhead
+\doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nodes-events-input-system-button}{{\bfseries{On Input System Event Button}}}{0}   &The On Input System Event Button node listens for a specific Input Action from a Player Input component. It doesn\textquotesingle{}t send or read any other data.    \\\cline{1-2}
+\doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nodes-events-input-system-float}{{\bfseries{On Input System Event Float}}}{0}   &The On Input System Event Float node listens for a specific Input Action from a Player Input component. The node can output a {\bfseries{single float value}}.    \\\cline{1-2}
+\doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nodes-events-input-system-vector2}{{\bfseries{On Input System Event Vector 2}}}{0}   &The On Input System Event Vector 2 node listens for a specific Input Action from a Player Input component. The node can output {\bfseries{two values as a Vector 2}}.   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-input-nodes_autotoc_md1895}{}\doxysection{\texorpdfstring{Input Manager nodes}{Input Manager nodes}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-input-nodes_autotoc_md1895}
+The following nodes read and interact with Events from \doxylink{namespace_unity}{Unity}\textquotesingle{}s Input Manager\+:
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Node}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Node}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-2}
+\endhead
+\doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nodes-events-on-button-input}{{\bfseries{On Button Input}}}{0}   &The On Button Input node listens for a specified action on a virtual button from your Input Manager configuration.    \\\cline{1-2}
+\doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nodes-events-on-keyboard-input}{{\bfseries{On Keyboard Input}}}{0}   &The On Keyboard Input node listens for a specified action on a keyboard key.    \\\cline{1-2}
+\doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nodes-events-on-mouse-down}{{\bfseries{On Mouse Down}}}{0}   &The On Mouse Down node listens for a mouse click action on a specific Game\+Object in your application.    \\\cline{1-2}
+\doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nodes-events-on-mouse-drag}{{\bfseries{On Mouse Drag}}}{0}   &The On Mouse Drag node listens for a mouse click and hold on a specific Game\+Object in your application. It triggers the next node connected to it as long as the mouse button is held down on that Game\+Object.    \\\cline{1-2}
+\doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nodes-events-on-mouse-enter}{{\bfseries{On Mouse Enter}}}{0}   &The On Mouse Enter node listens for the user\textquotesingle{}s mouse pointer location to enter the Collider of a specified Game\+Object. When the mouse enters the Collider or GUI element, the node triggers the next node connected to it.    \\\cline{1-2}
+\doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nodes-events-on-mouse-exit}{{\bfseries{On Mouse Exit}}}{0}   &The On Mouse Exit node listens for the user\textquotesingle{}s mouse pointer location to exit the Collider of a specified Game\+Object. When the mouse exits the Collider or GUI element, the node triggers the next node connected to it.    \\\cline{1-2}
+\doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nodes-events-on-mouse-input}{{\bfseries{On Mouse Input}}}{0}   &The On Mouse Input node listens for a specific action on a user\textquotesingle{}s mouse. The action doesn\textquotesingle{}t need to happen on a specific Game\+Object\textquotesingle{}s Collider.    \\\cline{1-2}
+\doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nodes-events-on-mouse-over}{{\bfseries{On Mouse Over}}}{0}   &The On Mouse Over node listens for a user\textquotesingle{}s mouse to land over a specified Game\+Object\textquotesingle{}s Collider. While the user\textquotesingle{}s mouse is over the Collider, it triggers the next node connected to it once every frame.    \\\cline{1-2}
+\doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nodes-events-on-mouse-up-button}{{\bfseries{On Mouse Up As Button}}}{0}   &The On Mouse Up As Button node listens for a user to release their mouse button after they click a Collider in your application. To trigger the On Mouse Up As Button node, the user must release their mouse button over the same Collider they clicked.    \\\cline{1-2}
+\doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nodes-events-on-mouse-up}{{\bfseries{On Mouse Up}}}{0}   &The On Mouse Up node listens for a user to release their mouse button after they click a Collider in your application. The user can release their mouse button anywhere in your application to trigger the On Mouse Up node.   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-input-nodes_autotoc_md1896}{}\doxysection{\texorpdfstring{Additional resources}{Additional resources}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-input-nodes_autotoc_md1896}
+
+\begin{DoxyItemize}
+\item \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-capture-player-input}{Capturing input in your application}{0}
+\item \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-capturing-player-inputs-new}{Capture input using the Input System package}{0}
+\item \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-capturing-player-inputs-old}{Capture input using the Input Manager}{0} 
+\end{DoxyItemize}

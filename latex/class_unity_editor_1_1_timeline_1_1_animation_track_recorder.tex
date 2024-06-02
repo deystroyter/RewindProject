@@ -1,0 +1,92 @@
+\doxysection{Unity\+Editor.\+Timeline.\+Animation\+Track\+Recorder Class Reference}
+\hypertarget{class_unity_editor_1_1_timeline_1_1_animation_track_recorder}{}\label{class_unity_editor_1_1_timeline_1_1_animation_track_recorder}\index{UnityEditor.Timeline.AnimationTrackRecorder@{UnityEditor.Timeline.AnimationTrackRecorder}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_animation_track_recorder_a2d2764001dad52299c201dd2d9b5be48}{Prepare\+For\+Record}} (\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_window_state}{Window\+State}} state)
+\item 
+Animation\+Clip \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_animation_track_recorder_aaa1833fd02ef8ae07e3ed534f155e97d}{Prepare\+Track}} (\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} track, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_window_state}{Window\+State}} state, \mbox{\hyperlink{namespace_unity_editor_1_1_timeline_a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae}{Game\+Object}} game\+Object, out double start\+Time)
+\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_animation_track_recorder_a4ba1e227acdfa447fd6dd5b0dce91c4d}{Finialize\+Track}} (\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} track, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_window_state}{Window\+State}} state)
+\item 
+void \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_animation_track_recorder_a380c9200939121de63d86333cd1a6ebb}{Finalize\+Recording}} (\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_window_state}{Window\+State}} state)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static string \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_animation_track_recorder_a025d52cd573004d95ad0daec992f0194}{Get\+Unique\+Recorded\+Clip\+Name}} (\mbox{\hyperlink{_t_m_pro___font_asset_creator_window_8cs_aef19bab18b9814edeef255c43e4f6bbc}{Object}} owner, string name)
+\item 
+static \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}} \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_animation_track_recorder_ae9a7eb659ce6f6bf1b2dacdb659d7bb7}{Add\+Recordable\+Clip}} (\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} parent\+Track, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_window_state}{Window\+State}} state, double at\+Time)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static readonly string \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_animation_track_recorder_ad8e97dcfd08e50707d84228b1a555e65}{k\+Record\+Clip\+Default\+Name}} = L10n.\+Tr("{}Recorded"{})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}} \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_animation_track_recorder_a28c872bbbe76c800cfa9db5696ae1590}{record\+Clip}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_animation_track_recorder_ae9a7eb659ce6f6bf1b2dacdb659d7bb7}\label{class_unity_editor_1_1_timeline_1_1_animation_track_recorder_ae9a7eb659ce6f6bf1b2dacdb659d7bb7} 
+\index{UnityEditor.Timeline.AnimationTrackRecorder@{UnityEditor.Timeline.AnimationTrackRecorder}!AddRecordableClip@{AddRecordableClip}}
+\index{AddRecordableClip@{AddRecordableClip}!UnityEditor.Timeline.AnimationTrackRecorder@{UnityEditor.Timeline.AnimationTrackRecorder}}
+\doxysubsubsection{\texorpdfstring{AddRecordableClip()}{AddRecordableClip()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}} Unity\+Editor.\+Timeline.\+Animation\+Track\+Recorder.\+Add\+Recordable\+Clip (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}}}]{parent\+Track,  }\item[{\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_window_state}{Window\+State}}}]{state,  }\item[{double}]{at\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_animation_track_recorder_a380c9200939121de63d86333cd1a6ebb}\label{class_unity_editor_1_1_timeline_1_1_animation_track_recorder_a380c9200939121de63d86333cd1a6ebb} 
+\index{UnityEditor.Timeline.AnimationTrackRecorder@{UnityEditor.Timeline.AnimationTrackRecorder}!FinalizeRecording@{FinalizeRecording}}
+\index{FinalizeRecording@{FinalizeRecording}!UnityEditor.Timeline.AnimationTrackRecorder@{UnityEditor.Timeline.AnimationTrackRecorder}}
+\doxysubsubsection{\texorpdfstring{FinalizeRecording()}{FinalizeRecording()}}
+{\footnotesize\ttfamily void Unity\+Editor.\+Timeline.\+Animation\+Track\+Recorder.\+Finalize\+Recording (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_window_state}{Window\+State}}}]{state }\end{DoxyParamCaption})}
+
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_animation_track_recorder_a4ba1e227acdfa447fd6dd5b0dce91c4d}\label{class_unity_editor_1_1_timeline_1_1_animation_track_recorder_a4ba1e227acdfa447fd6dd5b0dce91c4d} 
+\index{UnityEditor.Timeline.AnimationTrackRecorder@{UnityEditor.Timeline.AnimationTrackRecorder}!FinializeTrack@{FinializeTrack}}
+\index{FinializeTrack@{FinializeTrack}!UnityEditor.Timeline.AnimationTrackRecorder@{UnityEditor.Timeline.AnimationTrackRecorder}}
+\doxysubsubsection{\texorpdfstring{FinializeTrack()}{FinializeTrack()}}
+{\footnotesize\ttfamily void Unity\+Editor.\+Timeline.\+Animation\+Track\+Recorder.\+Finialize\+Track (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}}}]{track,  }\item[{\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_window_state}{Window\+State}}}]{state }\end{DoxyParamCaption})}
+
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_animation_track_recorder_a025d52cd573004d95ad0daec992f0194}\label{class_unity_editor_1_1_timeline_1_1_animation_track_recorder_a025d52cd573004d95ad0daec992f0194} 
+\index{UnityEditor.Timeline.AnimationTrackRecorder@{UnityEditor.Timeline.AnimationTrackRecorder}!GetUniqueRecordedClipName@{GetUniqueRecordedClipName}}
+\index{GetUniqueRecordedClipName@{GetUniqueRecordedClipName}!UnityEditor.Timeline.AnimationTrackRecorder@{UnityEditor.Timeline.AnimationTrackRecorder}}
+\doxysubsubsection{\texorpdfstring{GetUniqueRecordedClipName()}{GetUniqueRecordedClipName()}}
+{\footnotesize\ttfamily static string Unity\+Editor.\+Timeline.\+Animation\+Track\+Recorder.\+Get\+Unique\+Recorded\+Clip\+Name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_t_m_pro___font_asset_creator_window_8cs_aef19bab18b9814edeef255c43e4f6bbc}{Object}}}]{owner,  }\item[{string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_animation_track_recorder_a2d2764001dad52299c201dd2d9b5be48}\label{class_unity_editor_1_1_timeline_1_1_animation_track_recorder_a2d2764001dad52299c201dd2d9b5be48} 
+\index{UnityEditor.Timeline.AnimationTrackRecorder@{UnityEditor.Timeline.AnimationTrackRecorder}!PrepareForRecord@{PrepareForRecord}}
+\index{PrepareForRecord@{PrepareForRecord}!UnityEditor.Timeline.AnimationTrackRecorder@{UnityEditor.Timeline.AnimationTrackRecorder}}
+\doxysubsubsection{\texorpdfstring{PrepareForRecord()}{PrepareForRecord()}}
+{\footnotesize\ttfamily void Unity\+Editor.\+Timeline.\+Animation\+Track\+Recorder.\+Prepare\+For\+Record (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_window_state}{Window\+State}}}]{state }\end{DoxyParamCaption})}
+
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_animation_track_recorder_aaa1833fd02ef8ae07e3ed534f155e97d}\label{class_unity_editor_1_1_timeline_1_1_animation_track_recorder_aaa1833fd02ef8ae07e3ed534f155e97d} 
+\index{UnityEditor.Timeline.AnimationTrackRecorder@{UnityEditor.Timeline.AnimationTrackRecorder}!PrepareTrack@{PrepareTrack}}
+\index{PrepareTrack@{PrepareTrack}!UnityEditor.Timeline.AnimationTrackRecorder@{UnityEditor.Timeline.AnimationTrackRecorder}}
+\doxysubsubsection{\texorpdfstring{PrepareTrack()}{PrepareTrack()}}
+{\footnotesize\ttfamily Animation\+Clip Unity\+Editor.\+Timeline.\+Animation\+Track\+Recorder.\+Prepare\+Track (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}}}]{track,  }\item[{\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_window_state}{Window\+State}}}]{state,  }\item[{\mbox{\hyperlink{namespace_unity_editor_1_1_timeline_a834283c802e55ced7c6c64c4a2d094a6a3d164a4fbbdd103bddb596268f741bae}{Game\+Object}}}]{game\+Object,  }\item[{out double}]{start\+Time }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_animation_track_recorder_ad8e97dcfd08e50707d84228b1a555e65}\label{class_unity_editor_1_1_timeline_1_1_animation_track_recorder_ad8e97dcfd08e50707d84228b1a555e65} 
+\index{UnityEditor.Timeline.AnimationTrackRecorder@{UnityEditor.Timeline.AnimationTrackRecorder}!kRecordClipDefaultName@{kRecordClipDefaultName}}
+\index{kRecordClipDefaultName@{kRecordClipDefaultName}!UnityEditor.Timeline.AnimationTrackRecorder@{UnityEditor.Timeline.AnimationTrackRecorder}}
+\doxysubsubsection{\texorpdfstring{kRecordClipDefaultName}{kRecordClipDefaultName}}
+{\footnotesize\ttfamily readonly string Unity\+Editor.\+Timeline.\+Animation\+Track\+Recorder.\+k\+Record\+Clip\+Default\+Name = L10n.\+Tr("{}Recorded"{})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_animation_track_recorder_a28c872bbbe76c800cfa9db5696ae1590}\label{class_unity_editor_1_1_timeline_1_1_animation_track_recorder_a28c872bbbe76c800cfa9db5696ae1590} 
+\index{UnityEditor.Timeline.AnimationTrackRecorder@{UnityEditor.Timeline.AnimationTrackRecorder}!recordClip@{recordClip}}
+\index{recordClip@{recordClip}!UnityEditor.Timeline.AnimationTrackRecorder@{UnityEditor.Timeline.AnimationTrackRecorder}}
+\doxysubsubsection{\texorpdfstring{recordClip}{recordClip}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}} Unity\+Editor.\+Timeline.\+Animation\+Track\+Recorder.\+record\+Clip\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+7.\+6/\+Editor/\+Recording/\mbox{\hyperlink{_animation_track_recorder_8cs}{Animation\+Track\+Recorder.\+cs}}\end{DoxyCompactItemize}

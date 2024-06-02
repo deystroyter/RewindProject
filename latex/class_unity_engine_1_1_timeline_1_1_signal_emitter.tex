@@ -1,0 +1,85 @@
+\doxysection{Unity\+Engine.\+Timeline.\+Signal\+Emitter Class Reference}
+\hypertarget{class_unity_engine_1_1_timeline_1_1_signal_emitter}{}\label{class_unity_engine_1_1_timeline_1_1_signal_emitter}\index{UnityEngine.Timeline.SignalEmitter@{UnityEngine.Timeline.SignalEmitter}}
+
+
+Marker that emits a signal to a Signal\+Receiver.  
+
+
+Inheritance diagram for Unity\+Engine.\+Timeline.\+Signal\+Emitter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.433447cm]{class_unity_engine_1_1_timeline_1_1_signal_emitter}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_emitter_adb87fcbefc3b59459719f73ee268c90e}{retroactive}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Use retroactive to emit the signal if playback starts after the Signal\+Emitter time. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_emitter_a39fa198ad958e655d4bd4f10da00cac4}{emit\+Once}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Use emit\+Once to emit this signal once during loops. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_asset}{Signal\+Asset}} \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_emitter_ad9d9fe892c82da506b947ac7b39401d6}{asset}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Asset representing the signal being emitted. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_marker}{Unity\+Engine.\+Timeline.\+Marker}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_marker_a8c9b00642512a8eb3a6a67366f64cc72}{parent}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The track that contains the marker. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_marker_a86f5ea6442136518e307259509335aa7}{time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_marker}{Unity\+Engine.\+Timeline.\+IMarker}}}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_notification_option_provider}{Unity\+Engine.\+Timeline.\+INotification\+Option\+Provider}}}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_marker}{Unity\+Engine.\+Timeline.\+Marker}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_marker_ad93edf93b9cfee9a793c98deccb6d153}{On\+Initialize}} (\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} a\+Pent)
+\begin{DoxyCompactList}\small\item\em Override this method to receive a callback when the marker is initialized. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Marker that emits a signal to a Signal\+Receiver. 
+
+A Signal\+Emitter emits a notification through the playable system. A Signal\+Emitter is used with a Signal\+Receiver and a Signal\+Asset. \begin{DoxySeeAlso}{See also}
+\doxylink{class_unity_engine_1_1_timeline_1_1_signal_asset}{Unity\+Engine.\+Timeline.\+Signal\+Asset}, \doxylink{class_unity_engine_1_1_timeline_1_1_signal_receiver}{Unity\+Engine.\+Timeline.\+Signal\+Receiver}, \doxylink{class_unity_engine_1_1_timeline_1_1_marker}{Unity\+Engine.\+Timeline.\+Marker}
+
+
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_unity_engine_1_1_timeline_1_1_signal_emitter_ad9d9fe892c82da506b947ac7b39401d6}\label{class_unity_engine_1_1_timeline_1_1_signal_emitter_ad9d9fe892c82da506b947ac7b39401d6} 
+\index{UnityEngine.Timeline.SignalEmitter@{UnityEngine.Timeline.SignalEmitter}!asset@{asset}}
+\index{asset@{asset}!UnityEngine.Timeline.SignalEmitter@{UnityEngine.Timeline.SignalEmitter}}
+\doxysubsubsection{\texorpdfstring{asset}{asset}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_signal_asset}{Signal\+Asset}} Unity\+Engine.\+Timeline.\+Signal\+Emitter.\+asset\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Asset representing the signal being emitted. 
+
+\Hypertarget{class_unity_engine_1_1_timeline_1_1_signal_emitter_a39fa198ad958e655d4bd4f10da00cac4}\label{class_unity_engine_1_1_timeline_1_1_signal_emitter_a39fa198ad958e655d4bd4f10da00cac4} 
+\index{UnityEngine.Timeline.SignalEmitter@{UnityEngine.Timeline.SignalEmitter}!emitOnce@{emitOnce}}
+\index{emitOnce@{emitOnce}!UnityEngine.Timeline.SignalEmitter@{UnityEngine.Timeline.SignalEmitter}}
+\doxysubsubsection{\texorpdfstring{emitOnce}{emitOnce}}
+{\footnotesize\ttfamily bool Unity\+Engine.\+Timeline.\+Signal\+Emitter.\+emit\+Once\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Use emit\+Once to emit this signal once during loops. 
+
+\Hypertarget{class_unity_engine_1_1_timeline_1_1_signal_emitter_adb87fcbefc3b59459719f73ee268c90e}\label{class_unity_engine_1_1_timeline_1_1_signal_emitter_adb87fcbefc3b59459719f73ee268c90e} 
+\index{UnityEngine.Timeline.SignalEmitter@{UnityEngine.Timeline.SignalEmitter}!retroactive@{retroactive}}
+\index{retroactive@{retroactive}!UnityEngine.Timeline.SignalEmitter@{UnityEngine.Timeline.SignalEmitter}}
+\doxysubsubsection{\texorpdfstring{retroactive}{retroactive}}
+{\footnotesize\ttfamily bool Unity\+Engine.\+Timeline.\+Signal\+Emitter.\+retroactive\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Use retroactive to emit the signal if playback starts after the Signal\+Emitter time. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+7.\+6/\+Runtime/\+Events/\+Signals/\mbox{\hyperlink{_signal_emitter_8cs}{Signal\+Emitter.\+cs}}\end{DoxyCompactItemize}

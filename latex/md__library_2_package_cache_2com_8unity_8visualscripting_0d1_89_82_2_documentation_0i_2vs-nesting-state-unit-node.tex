@@ -1,0 +1,58 @@
+\chapter{State Unit node}
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-state-unit-node}{}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-state-unit-node}\index{State Unit node@{State Unit node}}
+\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-state-unit-node_autotoc_md1932}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-state-unit-node_autotoc_md1932}%
+ Use a State Unit node like a Subgraph. The node references and triggers a State Graph inside a Script Graph.
+
+
+
+A State Unit node\+:
+
+
+\begin{DoxyItemize}
+\item Can\textquotesingle{}t send or receive any data from ports.
+\item Can only trigger its associated State Graph or other nodes inside its parent Script Graph.
+\item Can\textquotesingle{}t change its number or type of ports.
+\end{DoxyItemize}
+
+For more information on Subgraphs and State Units, see \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-subgraphs-state-units}{Subgraphs and State Units}{0}. For more information on State Graphs and Script Graphs, see \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-graph-types}{Graphs}{0}.\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-state-unit-node_autotoc_md1933}{}\doxysection{\texorpdfstring{Fuzzy finder category}{Fuzzy finder category}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-state-unit-node_autotoc_md1933}
+The State Unit node is in the {\bfseries{Nesting}} category in the fuzzy finder.
+
+You can go to the {\bfseries{Graphs}} category and select any State Graph to create a State Unit node. For more information on how to create a State Unit node, see \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-add-state-unit}{Add a State Unit to a Script Graph}{0}.\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-state-unit-node_autotoc_md1934}{}\doxysection{\texorpdfstring{Inputs}{Inputs}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-state-unit-node_autotoc_md1934}
+The State Unit \mbox{[}!include\doxylink{nodes-inputs_8md}{nodes-\/inputs}\mbox{]}
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Name}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Type}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Name}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Type}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-3}
+\endhead
+{\bfseries{Start}}   &Input Trigger   &The first execution Input Trigger for the node. The connection made to this port indicates when Visual Scripting runs the nested State Graph. Visual Scripting makes all states marked as Start States in the State Graph active.    \\\cline{1-3}
+{\bfseries{Stop}}   &Input Trigger   &The second execution Input Trigger for the node. The connection made to this port indicates when Visual Scripting stops the nested State Graph. Visual Scripting makes all states and transitions in the State Graph inactive.   \\\cline{1-3}
+\end{longtabu}
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-state-unit-node_autotoc_md1935}{}\doxysection{\texorpdfstring{Outputs}{Outputs}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-state-unit-node_autotoc_md1935}
+The State Unit \mbox{[}!include\doxylink{nodes-outputs_8md}{nodes-\/outputs}\mbox{]}
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Name}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Type}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Name}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Type}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-3}
+\endhead
+{\bfseries{Started}}   &Output Trigger   &The first execution Output Trigger for the node. The connection made to this port indicates what Visual Scripting runs after the nested State Graph starts.    \\\cline{1-3}
+{\bfseries{Stopped}}   &Output Trigger   &The second execution Output Trigger for the node. The connection made to this port indicates what Visual Scripting runs after the nested State Graph stops.   \\\cline{1-3}
+\end{longtabu}
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-state-unit-node_autotoc_md1936}{}\doxysection{\texorpdfstring{Example graph usage}{Example graph usage}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-state-unit-node_autotoc_md1936}
+\begin{quote}
+\mbox{[}!\+TIP\mbox{]} A State Unit node can use a new blank State Graph or an existing State Graph from a project. For more information, see \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-add-state-unit}{Add a State Unit to a Script Graph}{0}. \end{quote}
+In the following example, a State Unit node triggers when the Script Graph\textquotesingle{}s Game\+Object enters a specific Collider marked as a trigger. After the State Unit node starts, the Script Graph uses a Debug Log node to log {\ttfamily Started new state!} to the console. When the Game\+Object leaves the Collider, the State Unit node stops, and the Script Graph uses another Debug Log node to log {\ttfamily Exited state} to the console.
+
+\texorpdfstring{$<$}{<}img src="{}images/vs-\/state-\/unit-\/node-\/script-\/graph-\/example.\+png"{} alt="{}\+An image of the Graph window. The Output Trigger port from an On Trigger Enter Event node connects to the Start port on the New State Graph State Unit node. The Output Trigger port from an On Trigger Exit Event node connects to the Stop port on the New State Graph State Unit node. The Started Output Trigger port on the State unit node connects to the Input Trigger port on a Debug Log node. A String Literal node with a message of "{}Started new state!"{} connects to the Message input port on the Debug Log node. The Stopped Output Trigger port on the State Unit node connects to the Input Trigger port on another Debug Log node. Another String Literal node with a message of "{}Exited state"{} connects to the Message port on the second Debug Log node."{}/\texorpdfstring{$>$}{>} 

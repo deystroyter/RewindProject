@@ -1,0 +1,117 @@
+\chapter{Outer\+Unity\+Test\+Action}
+\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-outerunitytestaction}{}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-outerunitytestaction}\index{OuterUnityTestAction@{OuterUnityTestAction}}
+\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-outerunitytestaction_autotoc_md685}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-outerunitytestaction_autotoc_md685}%
+ {\ttfamily Outer\+Unity\+Test\+Action} is a wrapper outside of the tests, which allows for any tests with this attribute to run code before and after the tests. This method allows for yielding commands in the same way as {\ttfamily Unity\+Test}. The attribute must inherit the {\ttfamily NUnit} attribute and implement {\ttfamily IOuter\+Unity\+Test\+Action}.\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-outerunitytestaction_autotoc_md686}{}\doxysection{\texorpdfstring{Outer\+Unity\+Test\+Action Example}{Outer\+Unity\+Test\+Action Example}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-outerunitytestaction_autotoc_md686}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \#}}
+\DoxyCodeLine{\textcolor{keyword}{using\ }System.Collections;}
+\DoxyCodeLine{\textcolor{keyword}{using\ }NUnit.Framework;}
+\DoxyCodeLine{\textcolor{keyword}{using\ }NUnit.Framework.Interfaces;}
+\DoxyCodeLine{\textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_unity_engine}{UnityEngine}};}
+\DoxyCodeLine{\textcolor{keyword}{using\ }UnityEngine.TestTools;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }MyTestClass}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ [UnityTest,\ MyOuterActionAttribute]}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ IEnumerator\ MyTestInsidePlaymode()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ Assert.IsTrue(\mbox{\hyperlink{namespace_unity_1_1_visual_scripting_a84f7f8b69a898cf472e2c285c1b943b3ae498749f3c42246d50b15c81c101d988}{Application}}.isPlaying);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ yield\ \textcolor{keywordflow}{return}\ null;}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }MyOuterActionAttribute\ :\ NUnitAttribute,\ \mbox{\hyperlink{interface_unity_engine_1_1_test_tools_1_1_i_outer_unity_test_action}{IOuterUnityTestAction}}}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ IEnumerator\ BeforeTest(ITest\ test)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ yield\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_enter_play_mode}{EnterPlayMode}}();}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ IEnumerator\ AfterTest(ITest\ test)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ yield\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_exit_play_mode}{ExitPlayMode}}();}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-outerunitytestaction_autotoc_md687}{}\doxysection{\texorpdfstring{Execution order}{Execution order}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-outerunitytestaction_autotoc_md687}
+\doxylink{namespace_unity}{Unity} outer test action is not rerun on domain reload but non-\/\+Unity action attributes are\+:
+
+
+
+\begin{quote}
+{\bfseries{Note}}\+: Some browsers do not support SVG image files. If the image above does not display properly (for example, if you cannot see any text), please try another browser, such as \href{https://www.google.com/chrome/}{\texttt{ Google Chrome}} or \href{https://www.mozilla.org}{\texttt{ Mozilla Firefox}}. \end{quote}
+\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-outerunitytestaction_autotoc_md688}{}\doxysubsection{\texorpdfstring{Test actions with domain reload example}{Test actions with domain reload example}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-outerunitytestaction_autotoc_md688}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{using\ }NUnit.Framework.Interfaces;}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }TestActionOnSuiteAttribute\ :\ NUnitAttribute,\ ITestAction}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ BeforeTest(ITest\ test)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \mbox{\hyperlink{_editor_plugin_interop_8cs_a0100be52d45f14348918ea69ec09f959}{Debug}}.Log(\textcolor{stringliteral}{"{}TestAction\ OnSuite\ BeforeTest"{}});}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ AfterTest(ITest\ test)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ ActionTargets\ Targets\ \{\ \textcolor{keyword}{get}\ \{\ \textcolor{keywordflow}{return}\ ActionTargets.Suite;\ \}\ \}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }TestActionOnTestAttribute\ :\ NUnitAttribute,\ ITestAction}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ BeforeTest(ITest\ test)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \mbox{\hyperlink{_editor_plugin_interop_8cs_a0100be52d45f14348918ea69ec09f959}{Debug}}.Log(\textcolor{stringliteral}{"{}TestAction\ OnTest\ BeforeTest"{}});}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ AfterTest(ITest\ test)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \mbox{\hyperlink{_editor_plugin_interop_8cs_a0100be52d45f14348918ea69ec09f959}{Debug}}.Log(\textcolor{stringliteral}{"{}TestAction\ OnTest\ AfterTest"{}});}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ ActionTargets\ Targets\ \{\ \textcolor{keyword}{get}\ \{\ \textcolor{keywordflow}{return}\ ActionTargets.Test;\ \}\ \}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }OuterTestAttribute\ :\ NUnitAttribute,\ IOuterUnityTestAction}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ IEnumerator\ BeforeTest(ITest\ test)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \mbox{\hyperlink{_editor_plugin_interop_8cs_a0100be52d45f14348918ea69ec09f959}{Debug}}.Log(\textcolor{stringliteral}{"{}OuterTestAttribute\ BeforeTest"{}});}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ yield\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ IEnumerator\ AfterTest(ITest\ test)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \mbox{\hyperlink{_editor_plugin_interop_8cs_a0100be52d45f14348918ea69ec09f959}{Debug}}.Log(\textcolor{stringliteral}{"{}OuterTestAttribute\ AfterTest"{}});}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ yield\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{[TestActionOnSuite]}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }ActionOrderTestBase}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ [Test,\ OuterTest,\ TestActionOnTest]\ \ \ }
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ UnitTest()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \mbox{\hyperlink{_editor_plugin_interop_8cs_a0100be52d45f14348918ea69ec09f959}{Debug}}.Log(\textcolor{stringliteral}{"{}Test"{}});}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ [UnityTest,\ OuterTest,\ TestActionOnTest]}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ IEnumerator\ UnityTestWithDomainReload()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ Log(\textcolor{stringliteral}{"{}Test\ part\ 1"{}});}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ yield\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ EnterPlayMode();\ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//Domain\ reload}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ yield\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ ExitPlayMode();}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ Log(\textcolor{stringliteral}{"{}Test\ part\ 2"{}});}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 

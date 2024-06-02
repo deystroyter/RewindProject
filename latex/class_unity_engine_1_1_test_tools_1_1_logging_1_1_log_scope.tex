@@ -1,0 +1,173 @@
+\doxysection{Unity\+Engine.\+Test\+Tools.\+Logging.\+Log\+Scope Class Reference}
+\hypertarget{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope}{}\label{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope}\index{UnityEngine.TestTools.Logging.LogScope@{UnityEngine.TestTools.Logging.LogScope}}
+
+
+Inherits Unity\+Engine.\+Test\+Tools.\+Logging.\+ILog\+Scope.
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a5985fbc3ddd3f922802ad6f57e5e3b44}{Log\+Scope}} ()
+\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_ad2407467c3df8379e723ec00ae45610f}{Add\+Log}} (string message, string stacktrace, Log\+Type type)
+\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_acc4a06157d968648607a0c20226a7d2c}{Dispose}} ()
+\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a54f3f911329608ab448c2145ddae51bb}{Any\+Failing\+Logs}} ()
+\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_ad163985c57c926bc97d1a06967a25d63}{Evaluate\+Log\+Scope}} (bool end\+Of\+Scope\+Check)
+\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_aa3a79260f9c661ea876c83c2fe2db0d4}{Process\+Expected\+Logs}} ()
+\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a2f4224b64cb8367ed0037c9b0a717cbd}{No\+Unexpected\+Received}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_ac3e2f042f2063eb187e22c31379a0713}{Has\+Current\+Log\+Scope}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+Queue$<$ Log\+Match $>$ \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a0edd3277db8450ec2f683bda4f3525c3}{Expected\+Logs}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+List$<$ Log\+Event $>$ \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a684d506afa788dc6fc5e6d5e825614ea}{All\+Logs}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+List$<$ Log\+Event $>$ \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a29362b05459b92d6511170bdf7d3a078}{Failing\+Logs}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_afb4fd81fd49f385c71a987499965dd16}{Ignore\+Failing\+Messages}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a21eca13f4121ad10ac7b91af09d079d0}{Is\+NUnit\+Exception}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_acd5db2df5e31fc5945c3de458fd52e1f}{Is\+NUnit\+Success\+Exception}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_af9838674497b653e18fccbc69e80a7d3}{Is\+NUnit\+Inconclusive\+Exception}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a3fcb9fcfa8207d816a054bd95cb1ead2}{Is\+NUnit\+Ignore\+Exception}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a4679ea78aaf665c823d4383e417e3d2c}{NUnit\+Exception\+Message}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+static \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope}{Log\+Scope}} \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_ad85c26f65b99666d125ec65ceabe25a2}{Current}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a5985fbc3ddd3f922802ad6f57e5e3b44}\label{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a5985fbc3ddd3f922802ad6f57e5e3b44} 
+\index{UnityEngine.TestTools.Logging.LogScope@{UnityEngine.TestTools.Logging.LogScope}!LogScope@{LogScope}}
+\index{LogScope@{LogScope}!UnityEngine.TestTools.Logging.LogScope@{UnityEngine.TestTools.Logging.LogScope}}
+\doxysubsubsection{\texorpdfstring{LogScope()}{LogScope()}}
+{\footnotesize\ttfamily Unity\+Engine.\+Test\+Tools.\+Logging.\+Log\+Scope.\+Log\+Scope (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_ad2407467c3df8379e723ec00ae45610f}\label{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_ad2407467c3df8379e723ec00ae45610f} 
+\index{UnityEngine.TestTools.Logging.LogScope@{UnityEngine.TestTools.Logging.LogScope}!AddLog@{AddLog}}
+\index{AddLog@{AddLog}!UnityEngine.TestTools.Logging.LogScope@{UnityEngine.TestTools.Logging.LogScope}}
+\doxysubsubsection{\texorpdfstring{AddLog()}{AddLog()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+Test\+Tools.\+Logging.\+Log\+Scope.\+Add\+Log (\begin{DoxyParamCaption}\item[{string}]{message,  }\item[{string}]{stacktrace,  }\item[{Log\+Type}]{type }\end{DoxyParamCaption})}
+
+\Hypertarget{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a54f3f911329608ab448c2145ddae51bb}\label{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a54f3f911329608ab448c2145ddae51bb} 
+\index{UnityEngine.TestTools.Logging.LogScope@{UnityEngine.TestTools.Logging.LogScope}!AnyFailingLogs@{AnyFailingLogs}}
+\index{AnyFailingLogs@{AnyFailingLogs}!UnityEngine.TestTools.Logging.LogScope@{UnityEngine.TestTools.Logging.LogScope}}
+\doxysubsubsection{\texorpdfstring{AnyFailingLogs()}{AnyFailingLogs()}}
+{\footnotesize\ttfamily bool Unity\+Engine.\+Test\+Tools.\+Logging.\+Log\+Scope.\+Any\+Failing\+Logs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_acc4a06157d968648607a0c20226a7d2c}\label{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_acc4a06157d968648607a0c20226a7d2c} 
+\index{UnityEngine.TestTools.Logging.LogScope@{UnityEngine.TestTools.Logging.LogScope}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!UnityEngine.TestTools.Logging.LogScope@{UnityEngine.TestTools.Logging.LogScope}}
+\doxysubsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+Test\+Tools.\+Logging.\+Log\+Scope.\+Dispose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_ad163985c57c926bc97d1a06967a25d63}\label{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_ad163985c57c926bc97d1a06967a25d63} 
+\index{UnityEngine.TestTools.Logging.LogScope@{UnityEngine.TestTools.Logging.LogScope}!EvaluateLogScope@{EvaluateLogScope}}
+\index{EvaluateLogScope@{EvaluateLogScope}!UnityEngine.TestTools.Logging.LogScope@{UnityEngine.TestTools.Logging.LogScope}}
+\doxysubsubsection{\texorpdfstring{EvaluateLogScope()}{EvaluateLogScope()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+Test\+Tools.\+Logging.\+Log\+Scope.\+Evaluate\+Log\+Scope (\begin{DoxyParamCaption}\item[{bool}]{end\+Of\+Scope\+Check }\end{DoxyParamCaption})}
+
+\Hypertarget{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_ac3e2f042f2063eb187e22c31379a0713}\label{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_ac3e2f042f2063eb187e22c31379a0713} 
+\index{UnityEngine.TestTools.Logging.LogScope@{UnityEngine.TestTools.Logging.LogScope}!HasCurrentLogScope@{HasCurrentLogScope}}
+\index{HasCurrentLogScope@{HasCurrentLogScope}!UnityEngine.TestTools.Logging.LogScope@{UnityEngine.TestTools.Logging.LogScope}}
+\doxysubsubsection{\texorpdfstring{HasCurrentLogScope()}{HasCurrentLogScope()}}
+{\footnotesize\ttfamily static bool Unity\+Engine.\+Test\+Tools.\+Logging.\+Log\+Scope.\+Has\+Current\+Log\+Scope (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a2f4224b64cb8367ed0037c9b0a717cbd}\label{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a2f4224b64cb8367ed0037c9b0a717cbd} 
+\index{UnityEngine.TestTools.Logging.LogScope@{UnityEngine.TestTools.Logging.LogScope}!NoUnexpectedReceived@{NoUnexpectedReceived}}
+\index{NoUnexpectedReceived@{NoUnexpectedReceived}!UnityEngine.TestTools.Logging.LogScope@{UnityEngine.TestTools.Logging.LogScope}}
+\doxysubsubsection{\texorpdfstring{NoUnexpectedReceived()}{NoUnexpectedReceived()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+Test\+Tools.\+Logging.\+Log\+Scope.\+No\+Unexpected\+Received (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_aa3a79260f9c661ea876c83c2fe2db0d4}\label{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_aa3a79260f9c661ea876c83c2fe2db0d4} 
+\index{UnityEngine.TestTools.Logging.LogScope@{UnityEngine.TestTools.Logging.LogScope}!ProcessExpectedLogs@{ProcessExpectedLogs}}
+\index{ProcessExpectedLogs@{ProcessExpectedLogs}!UnityEngine.TestTools.Logging.LogScope@{UnityEngine.TestTools.Logging.LogScope}}
+\doxysubsubsection{\texorpdfstring{ProcessExpectedLogs()}{ProcessExpectedLogs()}}
+{\footnotesize\ttfamily void Unity\+Engine.\+Test\+Tools.\+Logging.\+Log\+Scope.\+Process\+Expected\+Logs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a684d506afa788dc6fc5e6d5e825614ea}\label{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a684d506afa788dc6fc5e6d5e825614ea} 
+\index{UnityEngine.TestTools.Logging.LogScope@{UnityEngine.TestTools.Logging.LogScope}!AllLogs@{AllLogs}}
+\index{AllLogs@{AllLogs}!UnityEngine.TestTools.Logging.LogScope@{UnityEngine.TestTools.Logging.LogScope}}
+\doxysubsubsection{\texorpdfstring{AllLogs}{AllLogs}}
+{\footnotesize\ttfamily List$<$Log\+Event$>$ Unity\+Engine.\+Test\+Tools.\+Logging.\+Log\+Scope.\+All\+Logs\hspace{0.3cm}{\ttfamily [get]}}
+
+\Hypertarget{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_ad85c26f65b99666d125ec65ceabe25a2}\label{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_ad85c26f65b99666d125ec65ceabe25a2} 
+\index{UnityEngine.TestTools.Logging.LogScope@{UnityEngine.TestTools.Logging.LogScope}!Current@{Current}}
+\index{Current@{Current}!UnityEngine.TestTools.Logging.LogScope@{UnityEngine.TestTools.Logging.LogScope}}
+\doxysubsubsection{\texorpdfstring{Current}{Current}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope}{Log\+Scope}} Unity\+Engine.\+Test\+Tools.\+Logging.\+Log\+Scope.\+Current\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}
+
+\Hypertarget{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a0edd3277db8450ec2f683bda4f3525c3}\label{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a0edd3277db8450ec2f683bda4f3525c3} 
+\index{UnityEngine.TestTools.Logging.LogScope@{UnityEngine.TestTools.Logging.LogScope}!ExpectedLogs@{ExpectedLogs}}
+\index{ExpectedLogs@{ExpectedLogs}!UnityEngine.TestTools.Logging.LogScope@{UnityEngine.TestTools.Logging.LogScope}}
+\doxysubsubsection{\texorpdfstring{ExpectedLogs}{ExpectedLogs}}
+{\footnotesize\ttfamily Queue$<$Log\+Match$>$ Unity\+Engine.\+Test\+Tools.\+Logging.\+Log\+Scope.\+Expected\+Logs\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\Hypertarget{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a29362b05459b92d6511170bdf7d3a078}\label{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a29362b05459b92d6511170bdf7d3a078} 
+\index{UnityEngine.TestTools.Logging.LogScope@{UnityEngine.TestTools.Logging.LogScope}!FailingLogs@{FailingLogs}}
+\index{FailingLogs@{FailingLogs}!UnityEngine.TestTools.Logging.LogScope@{UnityEngine.TestTools.Logging.LogScope}}
+\doxysubsubsection{\texorpdfstring{FailingLogs}{FailingLogs}}
+{\footnotesize\ttfamily List$<$Log\+Event$>$ Unity\+Engine.\+Test\+Tools.\+Logging.\+Log\+Scope.\+Failing\+Logs\hspace{0.3cm}{\ttfamily [get]}}
+
+\Hypertarget{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_afb4fd81fd49f385c71a987499965dd16}\label{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_afb4fd81fd49f385c71a987499965dd16} 
+\index{UnityEngine.TestTools.Logging.LogScope@{UnityEngine.TestTools.Logging.LogScope}!IgnoreFailingMessages@{IgnoreFailingMessages}}
+\index{IgnoreFailingMessages@{IgnoreFailingMessages}!UnityEngine.TestTools.Logging.LogScope@{UnityEngine.TestTools.Logging.LogScope}}
+\doxysubsubsection{\texorpdfstring{IgnoreFailingMessages}{IgnoreFailingMessages}}
+{\footnotesize\ttfamily bool Unity\+Engine.\+Test\+Tools.\+Logging.\+Log\+Scope.\+Ignore\+Failing\+Messages\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\Hypertarget{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a21eca13f4121ad10ac7b91af09d079d0}\label{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a21eca13f4121ad10ac7b91af09d079d0} 
+\index{UnityEngine.TestTools.Logging.LogScope@{UnityEngine.TestTools.Logging.LogScope}!IsNUnitException@{IsNUnitException}}
+\index{IsNUnitException@{IsNUnitException}!UnityEngine.TestTools.Logging.LogScope@{UnityEngine.TestTools.Logging.LogScope}}
+\doxysubsubsection{\texorpdfstring{IsNUnitException}{IsNUnitException}}
+{\footnotesize\ttfamily bool Unity\+Engine.\+Test\+Tools.\+Logging.\+Log\+Scope.\+Is\+NUnit\+Exception\hspace{0.3cm}{\ttfamily [get]}}
+
+\Hypertarget{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a3fcb9fcfa8207d816a054bd95cb1ead2}\label{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a3fcb9fcfa8207d816a054bd95cb1ead2} 
+\index{UnityEngine.TestTools.Logging.LogScope@{UnityEngine.TestTools.Logging.LogScope}!IsNUnitIgnoreException@{IsNUnitIgnoreException}}
+\index{IsNUnitIgnoreException@{IsNUnitIgnoreException}!UnityEngine.TestTools.Logging.LogScope@{UnityEngine.TestTools.Logging.LogScope}}
+\doxysubsubsection{\texorpdfstring{IsNUnitIgnoreException}{IsNUnitIgnoreException}}
+{\footnotesize\ttfamily bool Unity\+Engine.\+Test\+Tools.\+Logging.\+Log\+Scope.\+Is\+NUnit\+Ignore\+Exception\hspace{0.3cm}{\ttfamily [get]}}
+
+\Hypertarget{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_af9838674497b653e18fccbc69e80a7d3}\label{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_af9838674497b653e18fccbc69e80a7d3} 
+\index{UnityEngine.TestTools.Logging.LogScope@{UnityEngine.TestTools.Logging.LogScope}!IsNUnitInconclusiveException@{IsNUnitInconclusiveException}}
+\index{IsNUnitInconclusiveException@{IsNUnitInconclusiveException}!UnityEngine.TestTools.Logging.LogScope@{UnityEngine.TestTools.Logging.LogScope}}
+\doxysubsubsection{\texorpdfstring{IsNUnitInconclusiveException}{IsNUnitInconclusiveException}}
+{\footnotesize\ttfamily bool Unity\+Engine.\+Test\+Tools.\+Logging.\+Log\+Scope.\+Is\+NUnit\+Inconclusive\+Exception\hspace{0.3cm}{\ttfamily [get]}}
+
+\Hypertarget{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_acd5db2df5e31fc5945c3de458fd52e1f}\label{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_acd5db2df5e31fc5945c3de458fd52e1f} 
+\index{UnityEngine.TestTools.Logging.LogScope@{UnityEngine.TestTools.Logging.LogScope}!IsNUnitSuccessException@{IsNUnitSuccessException}}
+\index{IsNUnitSuccessException@{IsNUnitSuccessException}!UnityEngine.TestTools.Logging.LogScope@{UnityEngine.TestTools.Logging.LogScope}}
+\doxysubsubsection{\texorpdfstring{IsNUnitSuccessException}{IsNUnitSuccessException}}
+{\footnotesize\ttfamily bool Unity\+Engine.\+Test\+Tools.\+Logging.\+Log\+Scope.\+Is\+NUnit\+Success\+Exception\hspace{0.3cm}{\ttfamily [get]}}
+
+\Hypertarget{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a4679ea78aaf665c823d4383e417e3d2c}\label{class_unity_engine_1_1_test_tools_1_1_logging_1_1_log_scope_a4679ea78aaf665c823d4383e417e3d2c} 
+\index{UnityEngine.TestTools.Logging.LogScope@{UnityEngine.TestTools.Logging.LogScope}!NUnitExceptionMessage@{NUnitExceptionMessage}}
+\index{NUnitExceptionMessage@{NUnitExceptionMessage}!UnityEngine.TestTools.Logging.LogScope@{UnityEngine.TestTools.Logging.LogScope}}
+\doxysubsubsection{\texorpdfstring{NUnitExceptionMessage}{NUnitExceptionMessage}}
+{\footnotesize\ttfamily string Unity\+Engine.\+Test\+Tools.\+Logging.\+Log\+Scope.\+NUnit\+Exception\+Message\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Package\+Cache/com.\+unity.\+test-\/framework@1.\+1.\+33/\+Unity\+Engine.\+Test\+Runner/\+Assertions/\+Log\+Scope/\mbox{\hyperlink{_log_scope_8cs}{Log\+Scope.\+cs}}\end{DoxyCompactItemize}

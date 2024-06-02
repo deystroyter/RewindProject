@@ -1,0 +1,37 @@
+\chapter{Test\+Runner\+Api}
+\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-test-runner-api}{}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-test-runner-api}\index{TestRunnerApi@{TestRunnerApi}}
+\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-test-runner-api_autotoc_md700}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-test-runner-api_autotoc_md700}%
+The {\ttfamily Test\+Runner\+Api} retrieves and runs tests programmatically from code inside the project, or inside other packages. {\ttfamily Test\+Runner\+Api} is a \href{https://docs.unity3d.com/ScriptReference/ScriptableObject.html}{\texttt{ Scriptable\+Object}}.
+
+You can initialize the API like this\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \#}}
+\DoxyCodeLine{var\ testRunnerApi\ =\ ScriptableObject.CreateInstance<TestRunnerApi>();}
+
+\end{DoxyCode}
+ \begin{quote}
+{\bfseries{Note}}\+: You can subscribe and receive test results in one instance of the API, even if the run starts from another instance. \end{quote}
+The {\ttfamily Test\+Runner\+Api} supports the following workflows\+:
+\begin{DoxyItemize}
+\item \doxysectlink{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2extension-run-tests}{How to run tests programmatically}{0}
+\item \doxysectlink{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2extension-get-test-results}{How to get test results}{0}
+\item \doxysectlink{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2extension-retrieve-test-list}{How to retrieve the list of tests}{0}
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-test-runner-api_autotoc_md701}{}\doxysection{\texorpdfstring{Public methods}{Public methods}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-test-runner-api_autotoc_md701}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Syntax   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Syntax   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endhead
+{\ttfamily void Execute(\+Execution\+Settings execution\+Settings)}   &Starts a test run with a given set of \doxysectlink{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-execution-settings}{Execution\+Settings}{0}.    \\\cline{1-2}
+{\ttfamily void Register\+Callbacks(ICallbacks test\+Callbacks, int priority = 0)}   &Sets up a given instance of \doxysectlink{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-icallbacks}{ICallbacks}{0} to be invoked on test runs.    \\\cline{1-2}
+{\ttfamily void Unregister\+Callbacks(\+ICallbacks test\+Callbacks)}   &Unregisters an instance of ICallbacks to no longer receive callbacks from test runs.    \\\cline{1-2}
+{\ttfamily void Retrieve\+Test\+List(Test\+Mode test\+Mode, Action\texorpdfstring{$<$}{<}ITest\+Adaptor\texorpdfstring{$>$}{>} callback)}   &Retrieve the full test tree as \doxysectlink{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-itest-adaptor}{ITest\+Adaptor}{0} for a given test mode.   \\\cline{1-2}
+\end{longtabu}

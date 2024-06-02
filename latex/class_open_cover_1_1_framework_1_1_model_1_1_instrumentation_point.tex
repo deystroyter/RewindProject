@@ -1,0 +1,181 @@
+\doxysection{Open\+Cover.\+Framework.\+Model.\+Instrumentation\+Point Class Reference}
+\hypertarget{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point}{}\label{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point}\index{OpenCover.Framework.Model.InstrumentationPoint@{OpenCover.Framework.Model.InstrumentationPoint}}
+
+
+An instrumentable point.  
+
+
+Inheritance diagram for Open\+Cover.\+Framework.\+Model.\+Instrumentation\+Point\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.818182cm]{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_abf1f5a759b83e6e53faf6df722638d2f}{Instrumentation\+Point}} ()
+\begin{DoxyCompactList}\small\item\em Initialise. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_a0309325ad6e8a6cca6e91be50a70e7f3}{Get\+Visit\+Count}} (uint spid)
+\begin{DoxyCompactList}\small\item\em Get the number of recorded visit points for this identifier. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_ae8579039c5c75e23d4474d62a2457f49}{Add\+Visit\+Count}} (uint spid, uint tracked\+Method\+Id, int amount)
+\begin{DoxyCompactList}\small\item\em Add a number of recorded visit ppints against this identifier. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_a58da9ea8b8216c1f387828821a5a5e8d}{Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Return the number of visit points. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_a8befcc5b4f17fa901cbbe057c771b410}{Visit\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Store the number of visits. \end{DoxyCompactList}\item 
+UInt32 \mbox{\hyperlink{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_a43fa72171a5b99352c5af799a85595fe}{Unique\+Sequence\+Point}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em A unique number. \end{DoxyCompactList}\item 
+UInt32 \mbox{\hyperlink{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_a9b258958e63c3850857464195a8b9ba1}{Ordinal}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em An order of the point within the method. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_adf03c9429e2cf5afcdaf68d2acdaee8a}{Offset}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The IL offset of the point. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_aa54aac19e730cb255497bcc43df833e9}{Is\+Skipped}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Used to hide an instrumentation point. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_open_cover_1_1_framework_1_1_model_1_1_tracked_method_ref}{Tracked\+Method\+Ref}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_a8b2df392a97df855a87ae7ab3da51ef4}{Tracked\+Method\+Refs}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The list of tracked methods. \end{DoxyCompactList}\item 
+UInt32 \mbox{\hyperlink{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_adcdd02513b3388e7a1e810345136c401}{Orig\+Sequence\+Point}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An instrumentable point. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_abf1f5a759b83e6e53faf6df722638d2f}\label{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_abf1f5a759b83e6e53faf6df722638d2f} 
+\index{OpenCover.Framework.Model.InstrumentationPoint@{OpenCover.Framework.Model.InstrumentationPoint}!InstrumentationPoint@{InstrumentationPoint}}
+\index{InstrumentationPoint@{InstrumentationPoint}!OpenCover.Framework.Model.InstrumentationPoint@{OpenCover.Framework.Model.InstrumentationPoint}}
+\doxysubsubsection{\texorpdfstring{InstrumentationPoint()}{InstrumentationPoint()}}
+{\footnotesize\ttfamily Open\+Cover.\+Framework.\+Model.\+Instrumentation\+Point.\+Instrumentation\+Point (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialise. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_ae8579039c5c75e23d4474d62a2457f49}\label{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_ae8579039c5c75e23d4474d62a2457f49} 
+\index{OpenCover.Framework.Model.InstrumentationPoint@{OpenCover.Framework.Model.InstrumentationPoint}!AddVisitCount@{AddVisitCount}}
+\index{AddVisitCount@{AddVisitCount}!OpenCover.Framework.Model.InstrumentationPoint@{OpenCover.Framework.Model.InstrumentationPoint}}
+\doxysubsubsection{\texorpdfstring{AddVisitCount()}{AddVisitCount()}}
+{\footnotesize\ttfamily static bool Open\+Cover.\+Framework.\+Model.\+Instrumentation\+Point.\+Add\+Visit\+Count (\begin{DoxyParamCaption}\item[{uint}]{spid,  }\item[{uint}]{tracked\+Method\+Id,  }\item[{int}]{amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Add a number of recorded visit ppints against this identifier. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spid} & the sequence point identifier -\/ NOTE 0 is not used\\
+\hline
+{\em tracked\+Method\+Id} & the id of a tracked method -\/ Note 0 means no method currently tracking\\
+\hline
+{\em amount} & the number of visit points to add\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_a0309325ad6e8a6cca6e91be50a70e7f3}\label{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_a0309325ad6e8a6cca6e91be50a70e7f3} 
+\index{OpenCover.Framework.Model.InstrumentationPoint@{OpenCover.Framework.Model.InstrumentationPoint}!GetVisitCount@{GetVisitCount}}
+\index{GetVisitCount@{GetVisitCount}!OpenCover.Framework.Model.InstrumentationPoint@{OpenCover.Framework.Model.InstrumentationPoint}}
+\doxysubsubsection{\texorpdfstring{GetVisitCount()}{GetVisitCount()}}
+{\footnotesize\ttfamily static int Open\+Cover.\+Framework.\+Model.\+Instrumentation\+Point.\+Get\+Visit\+Count (\begin{DoxyParamCaption}\item[{uint}]{spid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the number of recorded visit points for this identifier. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spid} & the sequence point identifier -\/ NOTE 0 is not used\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_a58da9ea8b8216c1f387828821a5a5e8d}\label{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_a58da9ea8b8216c1f387828821a5a5e8d} 
+\index{OpenCover.Framework.Model.InstrumentationPoint@{OpenCover.Framework.Model.InstrumentationPoint}!Count@{Count}}
+\index{Count@{Count}!OpenCover.Framework.Model.InstrumentationPoint@{OpenCover.Framework.Model.InstrumentationPoint}}
+\doxysubsubsection{\texorpdfstring{Count}{Count}}
+{\footnotesize\ttfamily int Open\+Cover.\+Framework.\+Model.\+Instrumentation\+Point.\+Count\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}
+
+
+
+Return the number of visit points. 
+
+\Hypertarget{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_aa54aac19e730cb255497bcc43df833e9}\label{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_aa54aac19e730cb255497bcc43df833e9} 
+\index{OpenCover.Framework.Model.InstrumentationPoint@{OpenCover.Framework.Model.InstrumentationPoint}!IsSkipped@{IsSkipped}}
+\index{IsSkipped@{IsSkipped}!OpenCover.Framework.Model.InstrumentationPoint@{OpenCover.Framework.Model.InstrumentationPoint}}
+\doxysubsubsection{\texorpdfstring{IsSkipped}{IsSkipped}}
+{\footnotesize\ttfamily bool Open\+Cover.\+Framework.\+Model.\+Instrumentation\+Point.\+Is\+Skipped\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Used to hide an instrumentation point. 
+
+\Hypertarget{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_adf03c9429e2cf5afcdaf68d2acdaee8a}\label{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_adf03c9429e2cf5afcdaf68d2acdaee8a} 
+\index{OpenCover.Framework.Model.InstrumentationPoint@{OpenCover.Framework.Model.InstrumentationPoint}!Offset@{Offset}}
+\index{Offset@{Offset}!OpenCover.Framework.Model.InstrumentationPoint@{OpenCover.Framework.Model.InstrumentationPoint}}
+\doxysubsubsection{\texorpdfstring{Offset}{Offset}}
+{\footnotesize\ttfamily int Open\+Cover.\+Framework.\+Model.\+Instrumentation\+Point.\+Offset\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The IL offset of the point. 
+
+\Hypertarget{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_a9b258958e63c3850857464195a8b9ba1}\label{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_a9b258958e63c3850857464195a8b9ba1} 
+\index{OpenCover.Framework.Model.InstrumentationPoint@{OpenCover.Framework.Model.InstrumentationPoint}!Ordinal@{Ordinal}}
+\index{Ordinal@{Ordinal}!OpenCover.Framework.Model.InstrumentationPoint@{OpenCover.Framework.Model.InstrumentationPoint}}
+\doxysubsubsection{\texorpdfstring{Ordinal}{Ordinal}}
+{\footnotesize\ttfamily UInt32 Open\+Cover.\+Framework.\+Model.\+Instrumentation\+Point.\+Ordinal\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+An order of the point within the method. 
+
+\Hypertarget{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_adcdd02513b3388e7a1e810345136c401}\label{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_adcdd02513b3388e7a1e810345136c401} 
+\index{OpenCover.Framework.Model.InstrumentationPoint@{OpenCover.Framework.Model.InstrumentationPoint}!OrigSequencePoint@{OrigSequencePoint}}
+\index{OrigSequencePoint@{OrigSequencePoint}!OpenCover.Framework.Model.InstrumentationPoint@{OpenCover.Framework.Model.InstrumentationPoint}}
+\doxysubsubsection{\texorpdfstring{OrigSequencePoint}{OrigSequencePoint}}
+{\footnotesize\ttfamily UInt32 Open\+Cover.\+Framework.\+Model.\+Instrumentation\+Point.\+Orig\+Sequence\+Point\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\Hypertarget{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_a8b2df392a97df855a87ae7ab3da51ef4}\label{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_a8b2df392a97df855a87ae7ab3da51ef4} 
+\index{OpenCover.Framework.Model.InstrumentationPoint@{OpenCover.Framework.Model.InstrumentationPoint}!TrackedMethodRefs@{TrackedMethodRefs}}
+\index{TrackedMethodRefs@{TrackedMethodRefs}!OpenCover.Framework.Model.InstrumentationPoint@{OpenCover.Framework.Model.InstrumentationPoint}}
+\doxysubsubsection{\texorpdfstring{TrackedMethodRefs}{TrackedMethodRefs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_open_cover_1_1_framework_1_1_model_1_1_tracked_method_ref}{Tracked\+Method\+Ref}} \mbox{[}$\,$\mbox{]} Open\+Cover.\+Framework.\+Model.\+Instrumentation\+Point.\+Tracked\+Method\+Refs\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The list of tracked methods. 
+
+\Hypertarget{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_a43fa72171a5b99352c5af799a85595fe}\label{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_a43fa72171a5b99352c5af799a85595fe} 
+\index{OpenCover.Framework.Model.InstrumentationPoint@{OpenCover.Framework.Model.InstrumentationPoint}!UniqueSequencePoint@{UniqueSequencePoint}}
+\index{UniqueSequencePoint@{UniqueSequencePoint}!OpenCover.Framework.Model.InstrumentationPoint@{OpenCover.Framework.Model.InstrumentationPoint}}
+\doxysubsubsection{\texorpdfstring{UniqueSequencePoint}{UniqueSequencePoint}}
+{\footnotesize\ttfamily UInt32 Open\+Cover.\+Framework.\+Model.\+Instrumentation\+Point.\+Unique\+Sequence\+Point\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+A unique number. 
+
+\Hypertarget{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_a8befcc5b4f17fa901cbbe057c771b410}\label{class_open_cover_1_1_framework_1_1_model_1_1_instrumentation_point_a8befcc5b4f17fa901cbbe057c771b410} 
+\index{OpenCover.Framework.Model.InstrumentationPoint@{OpenCover.Framework.Model.InstrumentationPoint}!VisitCount@{VisitCount}}
+\index{VisitCount@{VisitCount}!OpenCover.Framework.Model.InstrumentationPoint@{OpenCover.Framework.Model.InstrumentationPoint}}
+\doxysubsubsection{\texorpdfstring{VisitCount}{VisitCount}}
+{\footnotesize\ttfamily int Open\+Cover.\+Framework.\+Model.\+Instrumentation\+Point.\+Visit\+Count\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Store the number of visits. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Package\+Cache/com.\+unity.\+testtools.\+codecoverage@1.\+2.\+5/\+Editor/\+Coverage\+Formats/\+Open\+Cover/\+Model/\mbox{\hyperlink{_instrumentation_point_8cs}{Instrumentation\+Point.\+cs}}\end{DoxyCompactItemize}

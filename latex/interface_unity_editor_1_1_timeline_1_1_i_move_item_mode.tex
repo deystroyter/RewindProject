@@ -1,0 +1,139 @@
+\doxysection{Unity\+Editor.\+Timeline.\+IMove\+Item\+Mode Interface Reference}
+\hypertarget{interface_unity_editor_1_1_timeline_1_1_i_move_item_mode}{}\label{interface_unity_editor_1_1_timeline_1_1_i_move_item_mode}\index{UnityEditor.Timeline.IMoveItemMode@{UnityEditor.Timeline.IMoveItemMode}}
+Inheritance diagram for Unity\+Editor.\+Timeline.\+IMove\+Item\+Mode\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.398252cm]{interface_unity_editor_1_1_timeline_1_1_i_move_item_mode}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_move_item_mode_a0e5e7a480ca73559980f1d4486d17d11}{On\+Track\+Detach}} (IEnumerable$<$ \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_items_per_track}{Items\+Per\+Track}} $>$ items\+Groups)
+\item 
+void \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_move_item_mode_a7d52a6c12598b464fcc8cb6805892920}{Handle\+Track\+Switch}} (IEnumerable$<$ \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_items_per_track}{Items\+Per\+Track}} $>$ items\+Groups)
+\item 
+bool \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_move_item_mode_af62cf58c0128b04a5f1e06f7a8463bb8}{Allow\+Track\+Switch}} ()
+\item 
+double \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_move_item_mode_a9765cfe72c01dc70b84634779f88ae4e}{Adjust\+Start\+Time}} (\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_window_state}{Window\+State}} state, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_items_per_track}{Items\+Per\+Track}} items\+Group, double time)
+\item 
+void \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_move_item_mode_a6c20ec6131e4d254dfcfb596dd1d8cb3}{On\+Mode\+Clutch\+Enter}} (IEnumerable$<$ \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_items_per_track}{Items\+Per\+Track}} $>$ items\+Groups)
+\item 
+void \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_move_item_mode_a6fd5df8795122f938a64f585bd49913c}{On\+Mode\+Clutch\+Exit}} (IEnumerable$<$ \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_items_per_track}{Items\+Per\+Track}} $>$ items\+Groups)
+\item 
+void \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_move_item_mode_ab58fd4e65167a0532c91b167d7dbc489}{Begin\+Move}} (IEnumerable$<$ \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_items_per_track}{Items\+Per\+Track}} $>$ items\+Groups)
+\item 
+void \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_move_item_mode_a4db1d603942501e2830e1e735e6696a8}{Update\+Move}} (IEnumerable$<$ \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_items_per_track}{Items\+Per\+Track}} $>$ items\+Groups)
+\item 
+void \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_move_item_mode_a0737369dedc22fab9c9e7d318a24579b}{Finish\+Move}} (IEnumerable$<$ \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_items_per_track}{Items\+Per\+Track}} $>$ items\+Groups)
+\item 
+bool \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_move_item_mode_ac5d4037b688390e9731e82fc124f2a40}{Validate\+Move}} (\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_items_per_track}{Items\+Per\+Track}} items\+Group)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interface_unity_editor_1_1_timeline_1_1_i_move_item_mode_a9765cfe72c01dc70b84634779f88ae4e}\label{interface_unity_editor_1_1_timeline_1_1_i_move_item_mode_a9765cfe72c01dc70b84634779f88ae4e} 
+\index{UnityEditor.Timeline.IMoveItemMode@{UnityEditor.Timeline.IMoveItemMode}!AdjustStartTime@{AdjustStartTime}}
+\index{AdjustStartTime@{AdjustStartTime}!UnityEditor.Timeline.IMoveItemMode@{UnityEditor.Timeline.IMoveItemMode}}
+\doxysubsubsection{\texorpdfstring{AdjustStartTime()}{AdjustStartTime()}}
+{\footnotesize\ttfamily double Unity\+Editor.\+Timeline.\+IMove\+Item\+Mode.\+Adjust\+Start\+Time (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_window_state}{Window\+State}}}]{state,  }\item[{\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_items_per_track}{Items\+Per\+Track}}}]{items\+Group,  }\item[{double}]{time }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_move_item_mode_mix_a52904b28d8a32f1dd38d4b842717933f}{Unity\+Editor.\+Timeline.\+Move\+Item\+Mode\+Mix}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_move_item_mode_replace_a4e3e044cf8233b743ba71bbc22fa1e2c}{Unity\+Editor.\+Timeline.\+Move\+Item\+Mode\+Replace}}, and \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_move_item_mode_ripple_afb561fc8b2f3d81b4e1994b8e014cc62}{Unity\+Editor.\+Timeline.\+Move\+Item\+Mode\+Ripple}}.
+
+\Hypertarget{interface_unity_editor_1_1_timeline_1_1_i_move_item_mode_af62cf58c0128b04a5f1e06f7a8463bb8}\label{interface_unity_editor_1_1_timeline_1_1_i_move_item_mode_af62cf58c0128b04a5f1e06f7a8463bb8} 
+\index{UnityEditor.Timeline.IMoveItemMode@{UnityEditor.Timeline.IMoveItemMode}!AllowTrackSwitch@{AllowTrackSwitch}}
+\index{AllowTrackSwitch@{AllowTrackSwitch}!UnityEditor.Timeline.IMoveItemMode@{UnityEditor.Timeline.IMoveItemMode}}
+\doxysubsubsection{\texorpdfstring{AllowTrackSwitch()}{AllowTrackSwitch()}}
+{\footnotesize\ttfamily bool Unity\+Editor.\+Timeline.\+IMove\+Item\+Mode.\+Allow\+Track\+Switch (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_move_item_mode_mix_a485140a8b7794583b11477452e26e00a}{Unity\+Editor.\+Timeline.\+Move\+Item\+Mode\+Mix}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_move_item_mode_replace_ae1ce8c3a325497ce43bd138ecca5e2a0}{Unity\+Editor.\+Timeline.\+Move\+Item\+Mode\+Replace}}, and \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_move_item_mode_ripple_acb8f810e9a2dbce5a853db2ae6c2b247}{Unity\+Editor.\+Timeline.\+Move\+Item\+Mode\+Ripple}}.
+
+\Hypertarget{interface_unity_editor_1_1_timeline_1_1_i_move_item_mode_ab58fd4e65167a0532c91b167d7dbc489}\label{interface_unity_editor_1_1_timeline_1_1_i_move_item_mode_ab58fd4e65167a0532c91b167d7dbc489} 
+\index{UnityEditor.Timeline.IMoveItemMode@{UnityEditor.Timeline.IMoveItemMode}!BeginMove@{BeginMove}}
+\index{BeginMove@{BeginMove}!UnityEditor.Timeline.IMoveItemMode@{UnityEditor.Timeline.IMoveItemMode}}
+\doxysubsubsection{\texorpdfstring{BeginMove()}{BeginMove()}}
+{\footnotesize\ttfamily void Unity\+Editor.\+Timeline.\+IMove\+Item\+Mode.\+Begin\+Move (\begin{DoxyParamCaption}\item[{IEnumerable$<$ \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_items_per_track}{Items\+Per\+Track}} $>$}]{items\+Groups }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_move_item_mode_mix_a08f29bf2ea8ab6e67c77cc938644734c}{Unity\+Editor.\+Timeline.\+Move\+Item\+Mode\+Mix}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_move_item_mode_replace_a186bdbd53153365ef25e2f2ca9b4c7d8}{Unity\+Editor.\+Timeline.\+Move\+Item\+Mode\+Replace}}, and \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_move_item_mode_ripple_a0580c3650c3e4cb0ed56061ae42381de}{Unity\+Editor.\+Timeline.\+Move\+Item\+Mode\+Ripple}}.
+
+\Hypertarget{interface_unity_editor_1_1_timeline_1_1_i_move_item_mode_a0737369dedc22fab9c9e7d318a24579b}\label{interface_unity_editor_1_1_timeline_1_1_i_move_item_mode_a0737369dedc22fab9c9e7d318a24579b} 
+\index{UnityEditor.Timeline.IMoveItemMode@{UnityEditor.Timeline.IMoveItemMode}!FinishMove@{FinishMove}}
+\index{FinishMove@{FinishMove}!UnityEditor.Timeline.IMoveItemMode@{UnityEditor.Timeline.IMoveItemMode}}
+\doxysubsubsection{\texorpdfstring{FinishMove()}{FinishMove()}}
+{\footnotesize\ttfamily void Unity\+Editor.\+Timeline.\+IMove\+Item\+Mode.\+Finish\+Move (\begin{DoxyParamCaption}\item[{IEnumerable$<$ \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_items_per_track}{Items\+Per\+Track}} $>$}]{items\+Groups }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_move_item_mode_mix_abf6c88bc3aa3e33ed751be43a8dd580b}{Unity\+Editor.\+Timeline.\+Move\+Item\+Mode\+Mix}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_move_item_mode_replace_a1146bc34f0d87a3a9551bae06c1eeb79}{Unity\+Editor.\+Timeline.\+Move\+Item\+Mode\+Replace}}, and \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_move_item_mode_ripple_ae6b1576c65a36ee60b94ebb63d47d017}{Unity\+Editor.\+Timeline.\+Move\+Item\+Mode\+Ripple}}.
+
+\Hypertarget{interface_unity_editor_1_1_timeline_1_1_i_move_item_mode_a7d52a6c12598b464fcc8cb6805892920}\label{interface_unity_editor_1_1_timeline_1_1_i_move_item_mode_a7d52a6c12598b464fcc8cb6805892920} 
+\index{UnityEditor.Timeline.IMoveItemMode@{UnityEditor.Timeline.IMoveItemMode}!HandleTrackSwitch@{HandleTrackSwitch}}
+\index{HandleTrackSwitch@{HandleTrackSwitch}!UnityEditor.Timeline.IMoveItemMode@{UnityEditor.Timeline.IMoveItemMode}}
+\doxysubsubsection{\texorpdfstring{HandleTrackSwitch()}{HandleTrackSwitch()}}
+{\footnotesize\ttfamily void Unity\+Editor.\+Timeline.\+IMove\+Item\+Mode.\+Handle\+Track\+Switch (\begin{DoxyParamCaption}\item[{IEnumerable$<$ \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_items_per_track}{Items\+Per\+Track}} $>$}]{items\+Groups }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_move_item_mode_mix_a6924ec95a472adb0c4d147b2dbcfc631}{Unity\+Editor.\+Timeline.\+Move\+Item\+Mode\+Mix}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_move_item_mode_replace_a504f257adff992ae84e611db3949e48b}{Unity\+Editor.\+Timeline.\+Move\+Item\+Mode\+Replace}}, and \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_move_item_mode_ripple_a958d74df9d2191cdecfe3a080a516bdf}{Unity\+Editor.\+Timeline.\+Move\+Item\+Mode\+Ripple}}.
+
+\Hypertarget{interface_unity_editor_1_1_timeline_1_1_i_move_item_mode_a6c20ec6131e4d254dfcfb596dd1d8cb3}\label{interface_unity_editor_1_1_timeline_1_1_i_move_item_mode_a6c20ec6131e4d254dfcfb596dd1d8cb3} 
+\index{UnityEditor.Timeline.IMoveItemMode@{UnityEditor.Timeline.IMoveItemMode}!OnModeClutchEnter@{OnModeClutchEnter}}
+\index{OnModeClutchEnter@{OnModeClutchEnter}!UnityEditor.Timeline.IMoveItemMode@{UnityEditor.Timeline.IMoveItemMode}}
+\doxysubsubsection{\texorpdfstring{OnModeClutchEnter()}{OnModeClutchEnter()}}
+{\footnotesize\ttfamily void Unity\+Editor.\+Timeline.\+IMove\+Item\+Mode.\+On\+Mode\+Clutch\+Enter (\begin{DoxyParamCaption}\item[{IEnumerable$<$ \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_items_per_track}{Items\+Per\+Track}} $>$}]{items\+Groups }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_move_item_mode_mix_a044c8fd9e0d8afc8e18e2d46d9b34f41}{Unity\+Editor.\+Timeline.\+Move\+Item\+Mode\+Mix}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_move_item_mode_replace_a332278aeada3be091d86f84f2ffc8905}{Unity\+Editor.\+Timeline.\+Move\+Item\+Mode\+Replace}}, and \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_move_item_mode_ripple_ac237c7c726ca5705dac6d7d9ed79c772}{Unity\+Editor.\+Timeline.\+Move\+Item\+Mode\+Ripple}}.
+
+\Hypertarget{interface_unity_editor_1_1_timeline_1_1_i_move_item_mode_a6fd5df8795122f938a64f585bd49913c}\label{interface_unity_editor_1_1_timeline_1_1_i_move_item_mode_a6fd5df8795122f938a64f585bd49913c} 
+\index{UnityEditor.Timeline.IMoveItemMode@{UnityEditor.Timeline.IMoveItemMode}!OnModeClutchExit@{OnModeClutchExit}}
+\index{OnModeClutchExit@{OnModeClutchExit}!UnityEditor.Timeline.IMoveItemMode@{UnityEditor.Timeline.IMoveItemMode}}
+\doxysubsubsection{\texorpdfstring{OnModeClutchExit()}{OnModeClutchExit()}}
+{\footnotesize\ttfamily void Unity\+Editor.\+Timeline.\+IMove\+Item\+Mode.\+On\+Mode\+Clutch\+Exit (\begin{DoxyParamCaption}\item[{IEnumerable$<$ \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_items_per_track}{Items\+Per\+Track}} $>$}]{items\+Groups }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_move_item_mode_mix_af90a4a00838239e212ec8666d2452fcb}{Unity\+Editor.\+Timeline.\+Move\+Item\+Mode\+Mix}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_move_item_mode_replace_ad536aef71089d1334b0de94971616c50}{Unity\+Editor.\+Timeline.\+Move\+Item\+Mode\+Replace}}, and \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_move_item_mode_ripple_a76d36d5118242425a0607ef4a06ebf7d}{Unity\+Editor.\+Timeline.\+Move\+Item\+Mode\+Ripple}}.
+
+\Hypertarget{interface_unity_editor_1_1_timeline_1_1_i_move_item_mode_a0e5e7a480ca73559980f1d4486d17d11}\label{interface_unity_editor_1_1_timeline_1_1_i_move_item_mode_a0e5e7a480ca73559980f1d4486d17d11} 
+\index{UnityEditor.Timeline.IMoveItemMode@{UnityEditor.Timeline.IMoveItemMode}!OnTrackDetach@{OnTrackDetach}}
+\index{OnTrackDetach@{OnTrackDetach}!UnityEditor.Timeline.IMoveItemMode@{UnityEditor.Timeline.IMoveItemMode}}
+\doxysubsubsection{\texorpdfstring{OnTrackDetach()}{OnTrackDetach()}}
+{\footnotesize\ttfamily void Unity\+Editor.\+Timeline.\+IMove\+Item\+Mode.\+On\+Track\+Detach (\begin{DoxyParamCaption}\item[{IEnumerable$<$ \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_items_per_track}{Items\+Per\+Track}} $>$}]{items\+Groups }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_move_item_mode_mix_a142c625cf28109e2f3c7d9a66439abdd}{Unity\+Editor.\+Timeline.\+Move\+Item\+Mode\+Mix}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_move_item_mode_replace_ad73067d434e543f555ec2061a2f8383f}{Unity\+Editor.\+Timeline.\+Move\+Item\+Mode\+Replace}}, and \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_move_item_mode_ripple_a439c031130165d4c131023f28e22a9e1}{Unity\+Editor.\+Timeline.\+Move\+Item\+Mode\+Ripple}}.
+
+\Hypertarget{interface_unity_editor_1_1_timeline_1_1_i_move_item_mode_a4db1d603942501e2830e1e735e6696a8}\label{interface_unity_editor_1_1_timeline_1_1_i_move_item_mode_a4db1d603942501e2830e1e735e6696a8} 
+\index{UnityEditor.Timeline.IMoveItemMode@{UnityEditor.Timeline.IMoveItemMode}!UpdateMove@{UpdateMove}}
+\index{UpdateMove@{UpdateMove}!UnityEditor.Timeline.IMoveItemMode@{UnityEditor.Timeline.IMoveItemMode}}
+\doxysubsubsection{\texorpdfstring{UpdateMove()}{UpdateMove()}}
+{\footnotesize\ttfamily void Unity\+Editor.\+Timeline.\+IMove\+Item\+Mode.\+Update\+Move (\begin{DoxyParamCaption}\item[{IEnumerable$<$ \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_items_per_track}{Items\+Per\+Track}} $>$}]{items\+Groups }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_move_item_mode_mix_a38086a25754d755fe3b4c3a7c5a21433}{Unity\+Editor.\+Timeline.\+Move\+Item\+Mode\+Mix}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_move_item_mode_replace_a4251dafd48975e0d1ac7e015e7ed41e7}{Unity\+Editor.\+Timeline.\+Move\+Item\+Mode\+Replace}}, and \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_move_item_mode_ripple_a206bcedad3790cadd33d725954d00156}{Unity\+Editor.\+Timeline.\+Move\+Item\+Mode\+Ripple}}.
+
+\Hypertarget{interface_unity_editor_1_1_timeline_1_1_i_move_item_mode_ac5d4037b688390e9731e82fc124f2a40}\label{interface_unity_editor_1_1_timeline_1_1_i_move_item_mode_ac5d4037b688390e9731e82fc124f2a40} 
+\index{UnityEditor.Timeline.IMoveItemMode@{UnityEditor.Timeline.IMoveItemMode}!ValidateMove@{ValidateMove}}
+\index{ValidateMove@{ValidateMove}!UnityEditor.Timeline.IMoveItemMode@{UnityEditor.Timeline.IMoveItemMode}}
+\doxysubsubsection{\texorpdfstring{ValidateMove()}{ValidateMove()}}
+{\footnotesize\ttfamily bool Unity\+Editor.\+Timeline.\+IMove\+Item\+Mode.\+Validate\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_items_per_track}{Items\+Per\+Track}}}]{items\+Group }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_move_item_mode_mix_a8e835ace3efafb43b491b92a6084586c}{Unity\+Editor.\+Timeline.\+Move\+Item\+Mode\+Mix}}, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_move_item_mode_replace_a35d63e2bfe434967adc791b0260681b2}{Unity\+Editor.\+Timeline.\+Move\+Item\+Mode\+Replace}}, and \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_move_item_mode_ripple_aa269be02151fa3e021efb66617b2fb04}{Unity\+Editor.\+Timeline.\+Move\+Item\+Mode\+Ripple}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+7.\+6/\+Editor/\+Manipulators/\+Move/\mbox{\hyperlink{_i_move_item_mode_8cs}{IMove\+Item\+Mode.\+cs}}\end{DoxyCompactItemize}

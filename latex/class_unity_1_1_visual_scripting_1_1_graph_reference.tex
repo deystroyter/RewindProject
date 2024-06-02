@@ -1,0 +1,312 @@
+\doxysection{Unity.\+Visual\+Scripting.\+Graph\+Reference Class Reference}
+\hypertarget{class_unity_1_1_visual_scripting_1_1_graph_reference}{}\label{class_unity_1_1_visual_scripting_1_1_graph_reference}\index{Unity.VisualScripting.GraphReference@{Unity.VisualScripting.GraphReference}}
+Inheritance diagram for Unity.\+Visual\+Scripting.\+Graph\+Reference\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_1_1_visual_scripting_1_1_graph_reference}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference_a6e544243c9e383b408be7ef886c3fd7d}{Copy\+From}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer}{Graph\+Pointer}} other)
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference_a573c0a634e3b7093f545858352fdeedc}{Clone}} ()
+\item 
+override \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference_a5180b6f43665e27330ba874a597c9259}{As\+Reference}} ()
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_stack}{Graph\+Stack}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference_a7432650de9cc16ee196fcda462a429c3}{To\+Stack\+Pooled}} ()
+\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference_a1eedcd3609d468fd30fac4b155e3ebd0}{Create\+Graph\+Data}} ()
+\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference_a911924121691d293f0f92112301251c1}{Free\+Graph\+Data}} ()
+\item 
+override bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference_a1b01fc4a62be4277ee32af02bb38ced1}{Equals}} (object obj)
+\item 
+override int \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference_a5aae9e2f83a4b26489aa3c21371333bf}{Get\+Hash\+Code}} ()
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference_ae1c371f366a08f35e67ea21323d01063}{Parent\+Reference}} (bool ensure\+Valid)
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference_a8dfc356f110f4ce39939eb22cfe9b676}{Child\+Reference}} (\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_parent_element}{IGraph\+Parent\+Element}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_ab250b31a08d3ddeba3679bca543126d4}{parent\+Element}}, bool ensure\+Valid, int? max\+Recursion\+Depth=null)
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference_a8d4ae2b4872bac6ea0c9de41999e1606}{Revalidate}} (bool ensure\+Valid)
+\item 
+IEnumerable$<$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}} $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference_a5eca954e6aaddf5da53c73568d5ad9f3}{Get\+Breadcrumbs}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer}{Unity.\+Visual\+Scripting.\+Graph\+Pointer}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_a4928393de4d6b34d1b0553c602e29e0f}{As\+Reference}} ()
+\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_af27ec34c3b49fe33786be8bec99b9434}{Ensure\+Depth\+Valid}} (int \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_adc4b2d32e2a86c70392d107ae0983b23}{depth}})
+\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_a8c1b92b3c2576a987bbcd5921142b60b}{Ensure\+Child}} ()
+\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_a99e67e4d38ff70f027aecffb56efea93}{Is\+Within$<$ T $>$}} ()
+\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_a7f79e9d7738de27b4794db967d9dfe79}{Ensure\+Within$<$ T $>$}} ()
+\item 
+T \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_a13ce21491b138d4272a0f2b437867b2e}{Get\+Parent$<$ T $>$}} ()
+\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_a735ba7d77159efdd94e4f637025b5a83}{Ensure\+Data\+Available}} ()
+\item 
+T \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_aadceab53842ae8998cc047864d6a9320}{Get\+Graph\+Data$<$ T $>$}} ()
+\item 
+T \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_a6f4c572067b3876b08b792fef699fc83}{Get\+Element\+Data$<$ T $>$}} (\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element_with_data}{IGraph\+Element\+With\+Data}} element)
+\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_a41cb2863c89f5655d7f9ee85d4ad7954}{Ensure\+Debug\+Data\+Available}} ()
+\item 
+T \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_acb11fd9f75e3b3d5bcf51d25cde5c3a0}{Get\+Graph\+Debug\+Data$<$ T $>$}} ()
+\item 
+T \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_a15262f123cd7374cc0912d8cb479f71a}{Get\+Element\+Debug\+Data$<$ T $>$}} (\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_element_with_debug_data}{IGraph\+Element\+With\+Debug\+Data}} element)
+\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_a3ea7a000390456ffa95269b7e2edfa0b}{Ensure\+Valid}} ()
+\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_a3e7bc8852ff942983abf048c29830f18}{Instance\+Equals}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer}{Graph\+Pointer}} other)
+\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_a93b4c0de63491fa6b9abc1e0bf5b24ba}{Definition\+Equals}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer}{Graph\+Pointer}} other)
+\item 
+int \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_a45874027805fe6c1495d1f8e9682eeeb}{Compute\+Hash\+Code}} ()
+\item 
+override string \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_a549ef9083bea96464224bf2a5557ac36}{To\+String}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference_a4d9906666492d9e6cecd870d15f21d79}{New}} (\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_root}{IGraph\+Root}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_a1639fa99d14a1370ab405725c2876fcb}{root}}, bool ensure\+Valid)
+\item 
+static \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference_a6bcb11ba418925527d4b48ca9cb2fc1b}{New}} (\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_root}{IGraph\+Root}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_a1639fa99d14a1370ab405725c2876fcb}{root}}, IEnumerable$<$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_parent_element}{IGraph\+Parent\+Element}} $>$ parent\+Elements, bool ensure\+Valid)
+\item 
+static \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference_a56dc9d991eca600ac28ffc7aa74c55b7}{New}} (\mbox{\hyperlink{_curves_proxy_8cs_a324f8dae84ead9019a250b472ca1b436}{Unity\+Object}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_a772e2a0429672c2efdb1cc78e08a8c83}{root\+Object}}, IEnumerable$<$ Guid $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_a30a8d1b50786857a94c229806ab33c12}{parent\+Element\+Guids}}, bool ensure\+Valid)
+\item 
+static bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference_a59cc820d5cfdbf86197f3021f5777f8c}{operator==}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}} x, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}} y)
+\item 
+static bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference_aa368a8e8ddef5cd344c673b9b75d7fec}{operator!=}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}} x, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}} y)
+\item 
+static \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference_a38668584c09bbbf249cdf83758934edc}{Intern}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer}{Graph\+Pointer}} pointer)
+\item 
+static void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference_a14870723aab382c0934be6ebfc581734}{Free\+Invalid\+Interns}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer}{Unity.\+Visual\+Scripting.\+Graph\+Pointer}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_a73ac7c749139f323b1af35b2d6ee5f4d}{Initialize}} (\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_root}{IGraph\+Root}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_a1639fa99d14a1370ab405725c2876fcb}{root}})
+\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_a72055618abac7140a2567a60bdfb2a2a}{Initialize}} (\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_root}{IGraph\+Root}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_a1639fa99d14a1370ab405725c2876fcb}{root}}, IEnumerable$<$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_parent_element}{IGraph\+Parent\+Element}} $>$ parent\+Elements, bool ensure\+Valid)
+\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_aced4505da506e18ae603d1e5be5c75a2}{Initialize}} (\mbox{\hyperlink{_curves_proxy_8cs_a324f8dae84ead9019a250b472ca1b436}{Unity\+Object}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_a772e2a0429672c2efdb1cc78e08a8c83}{root\+Object}}, IEnumerable$<$ Guid $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_a30a8d1b50786857a94c229806ab33c12}{parent\+Element\+Guids}}, bool ensure\+Valid)
+\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_a02d1c613117e4b82f72ff6295a2bcbeb}{Try\+Enter\+Parent\+Element}} (Guid parent\+Element\+Guid, out string error, int? max\+Recursion\+Depth=null)
+\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_a9fdf19fcac84ff740409c4a54360bd65}{Try\+Enter\+Parent\+Element}} (\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_parent_element}{IGraph\+Parent\+Element}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_ab250b31a08d3ddeba3679bca543126d4}{parent\+Element}}, out string error, int? max\+Recursion\+Depth=null, bool skip\+Contains\+Check=false)
+\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_a64823f545e6038a745cc3b4069dbb728}{Enter\+Parent\+Element}} (\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_parent_element}{IGraph\+Parent\+Element}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_ab250b31a08d3ddeba3679bca543126d4}{parent\+Element}})
+\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_acbeb103c88fb68c3da146c97d353ba70}{Enter\+Parent\+Element}} (Guid parent\+Element\+Guid)
+\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_a9700f24ca23952236d053b3cc2a15dfc}{Exit\+Parent\+Element}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions inherited from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer}{Unity.\+Visual\+Scripting.\+Graph\+Pointer}}}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_a00437da9ba7dd7733fe7661c5eb3d604}{Is\+Valid\+Root}} (\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_root}{IGraph\+Root}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_a1639fa99d14a1370ab405725c2876fcb}{root}})
+\item 
+static bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_ac1390ca73a81067b2ee8508ab24bd287}{Is\+Valid\+Root}} (\mbox{\hyperlink{_curves_proxy_8cs_a324f8dae84ead9019a250b472ca1b436}{Unity\+Object}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_a772e2a0429672c2efdb1cc78e08a8c83}{root\+Object}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer}{Unity.\+Visual\+Scripting.\+Graph\+Pointer}}}
+\begin{DoxyCompactItemize}
+\item 
+readonly List$<$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_parent}{IGraph\+Parent}} $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_ab97f26287465133ddbb74b53ab91db5a}{parent\+Stack}} = new List$<$\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_parent}{IGraph\+Parent}}$>$()
+\item 
+readonly List$<$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_parent_element}{IGraph\+Parent\+Element}} $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_ad64e1a096fa791e2223209ca80527a32}{parent\+Element\+Stack}} = new List$<$\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_parent_element}{IGraph\+Parent\+Element}}$>$()
+\item 
+readonly List$<$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph}{IGraph}} $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_a560d3becb28551a7c31bc157b9839548}{graph\+Stack}} = new List$<$\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph}{IGraph}}$>$()
+\item 
+readonly List$<$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_data}{IGraph\+Data}} $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_af73cab92062fafb0e8b826728b0de220}{data\+Stack}} = new List$<$\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_data}{IGraph\+Data}}$>$()
+\item 
+readonly List$<$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_debug_data}{IGraph\+Debug\+Data}} $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_a84b49e235fd765041784dbf2fe62f264}{debug\+Data\+Stack}} = new List$<$\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_debug_data}{IGraph\+Debug\+Data}}$>$()
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer}{Unity.\+Visual\+Scripting.\+Graph\+Pointer}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_root}{IGraph\+Root}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_a1639fa99d14a1370ab405725c2876fcb}{root}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\item 
+\mbox{\hyperlink{_curves_proxy_8cs_a324f8dae84ead9019a250b472ca1b436}{Unity\+Object}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_a772e2a0429672c2efdb1cc78e08a8c83}{root\+Object}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_machine}{IMachine}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_a5f461b1834dbb6fe1bf8b1addf22b909}{machine}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_macro}{IMacro}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_aed8c6bf964d2b8e61b18295d0dce5818}{macro}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Mono\+Behaviour \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_a8418c0c4efcd93a3c0dbf4e33ee8a400}{component}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{namespace_unity_1_1_visual_scripting_a9a02833da37d71c881ccab5b557ec86ca3d164a4fbbdd103bddb596268f741bae}{Game\+Object}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_a98ad623449565ec56ec6e004640e933b}{game\+Object}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{namespace_unity_1_1_visual_scripting_a9a02833da37d71c881ccab5b557ec86ca3d164a4fbbdd103bddb596268f741bae}{Game\+Object}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_a0606741e936dc436f97f1c0f3ca578df}{self}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Scriptable\+Object \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_a619c8fd557f3f0fc462e213f07c8b6f4}{scriptable\+Object}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{namespace_unity_1_1_visual_scripting_a84f7f8b69a898cf472e2c285c1b943b3a9ead0d38e06ec253ca0ecbf6ea56e59b}{Scene}}? \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_a735aa7d30f5dcef99a3b9f08d3c3a41e}{scene}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{_curves_proxy_8cs_a324f8dae84ead9019a250b472ca1b436}{Unity\+Object}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_a67a7bd6071a22e73ada4de0153ca6a9e}{serialized\+Object}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+IEnumerable$<$ Guid $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_a30a8d1b50786857a94c229806ab33c12}{parent\+Element\+Guids}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+int \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_adc4b2d32e2a86c70392d107ae0983b23}{depth}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_a8cca120bfae7c026a92534431eab1f89}{is\+Root}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_a82892a26647712a87838793ee2f1b420}{is\+Child}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_parent}{IGraph\+Parent}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_a71aa4daefa1ded316fb910eff1aeb84e}{parent}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_parent_element}{IGraph\+Parent\+Element}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_ab250b31a08d3ddeba3679bca543126d4}{parent\+Element}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph}{IGraph}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_a6b22fb61391d0f002693c0426dec4731}{root\+Graph}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph}{IGraph}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_ab80fadaa5b6ba8b30ab19705d02b13b5}{graph}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_data}{IGraph\+Data}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_ae67e9936f252716b1e99b85d5dce7679}{\+\_\+data}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_data}{IGraph\+Data}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_ae24e331f703a5e34698acfd3d5e8a83e}{data}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_data}{IGraph\+Data}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_a50540cd5a938d00a1163400b1e1cb3db}{\+\_\+parent\+Data}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_a42b89ce6e9987c925f183938d06486ae}{has\+Data}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+static Func$<$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_root}{IGraph\+Root}}, \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_debug_data}{IGraph\+Debug\+Data}} $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_af26557a684f154cd33bd2d12eeddc6f1}{fetch\+Root\+Debug\+Data\+Binding}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_ac7070b5f6c54438b2e9625a0017d0a8d}{has\+Debug\+Data}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_debug_data}{IGraph\+Debug\+Data}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_aab5d5e721e26bb2f1b3c1a237705d1f6}{\+\_\+debug\+Data}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_debug_data}{IGraph\+Debug\+Data}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_ace2774e578a02e99adefcec67cabe737}{debug\+Data}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_a3c45e07e53572da0416ebc0f9d59bd9b}{is\+Valid}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_reference_a5180b6f43665e27330ba874a597c9259}\label{class_unity_1_1_visual_scripting_1_1_graph_reference_a5180b6f43665e27330ba874a597c9259} 
+\index{Unity.VisualScripting.GraphReference@{Unity.VisualScripting.GraphReference}!AsReference@{AsReference}}
+\index{AsReference@{AsReference}!Unity.VisualScripting.GraphReference@{Unity.VisualScripting.GraphReference}}
+\doxysubsubsection{\texorpdfstring{AsReference()}{AsReference()}}
+{\footnotesize\ttfamily override \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}} Unity.\+Visual\+Scripting.\+Graph\+Reference.\+As\+Reference (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_reference_a8dfc356f110f4ce39939eb22cfe9b676}\label{class_unity_1_1_visual_scripting_1_1_graph_reference_a8dfc356f110f4ce39939eb22cfe9b676} 
+\index{Unity.VisualScripting.GraphReference@{Unity.VisualScripting.GraphReference}!ChildReference@{ChildReference}}
+\index{ChildReference@{ChildReference}!Unity.VisualScripting.GraphReference@{Unity.VisualScripting.GraphReference}}
+\doxysubsubsection{\texorpdfstring{ChildReference()}{ChildReference()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}} Unity.\+Visual\+Scripting.\+Graph\+Reference.\+Child\+Reference (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_parent_element}{IGraph\+Parent\+Element}}}]{parent\+Element,  }\item[{bool}]{ensure\+Valid,  }\item[{int?}]{max\+Recursion\+Depth = {\ttfamily null} }\end{DoxyParamCaption})}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_reference_a573c0a634e3b7093f545858352fdeedc}\label{class_unity_1_1_visual_scripting_1_1_graph_reference_a573c0a634e3b7093f545858352fdeedc} 
+\index{Unity.VisualScripting.GraphReference@{Unity.VisualScripting.GraphReference}!Clone@{Clone}}
+\index{Clone@{Clone}!Unity.VisualScripting.GraphReference@{Unity.VisualScripting.GraphReference}}
+\doxysubsubsection{\texorpdfstring{Clone()}{Clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}} Unity.\+Visual\+Scripting.\+Graph\+Reference.\+Clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_reference_a6e544243c9e383b408be7ef886c3fd7d}\label{class_unity_1_1_visual_scripting_1_1_graph_reference_a6e544243c9e383b408be7ef886c3fd7d} 
+\index{Unity.VisualScripting.GraphReference@{Unity.VisualScripting.GraphReference}!CopyFrom@{CopyFrom}}
+\index{CopyFrom@{CopyFrom}!Unity.VisualScripting.GraphReference@{Unity.VisualScripting.GraphReference}}
+\doxysubsubsection{\texorpdfstring{CopyFrom()}{CopyFrom()}}
+{\footnotesize\ttfamily override void Unity.\+Visual\+Scripting.\+Graph\+Reference.\+Copy\+From (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer}{Graph\+Pointer}}}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer_a72264fbc9c9342d46210c1e9638769aa}{Unity.\+Visual\+Scripting.\+Graph\+Pointer}}.
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_reference_a1eedcd3609d468fd30fac4b155e3ebd0}\label{class_unity_1_1_visual_scripting_1_1_graph_reference_a1eedcd3609d468fd30fac4b155e3ebd0} 
+\index{Unity.VisualScripting.GraphReference@{Unity.VisualScripting.GraphReference}!CreateGraphData@{CreateGraphData}}
+\index{CreateGraphData@{CreateGraphData}!Unity.VisualScripting.GraphReference@{Unity.VisualScripting.GraphReference}}
+\doxysubsubsection{\texorpdfstring{CreateGraphData()}{CreateGraphData()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+Graph\+Reference.\+Create\+Graph\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_reference_a1b01fc4a62be4277ee32af02bb38ced1}\label{class_unity_1_1_visual_scripting_1_1_graph_reference_a1b01fc4a62be4277ee32af02bb38ced1} 
+\index{Unity.VisualScripting.GraphReference@{Unity.VisualScripting.GraphReference}!Equals@{Equals}}
+\index{Equals@{Equals}!Unity.VisualScripting.GraphReference@{Unity.VisualScripting.GraphReference}}
+\doxysubsubsection{\texorpdfstring{Equals()}{Equals()}}
+{\footnotesize\ttfamily override bool Unity.\+Visual\+Scripting.\+Graph\+Reference.\+Equals (\begin{DoxyParamCaption}\item[{object}]{obj }\end{DoxyParamCaption})}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_reference_a911924121691d293f0f92112301251c1}\label{class_unity_1_1_visual_scripting_1_1_graph_reference_a911924121691d293f0f92112301251c1} 
+\index{Unity.VisualScripting.GraphReference@{Unity.VisualScripting.GraphReference}!FreeGraphData@{FreeGraphData}}
+\index{FreeGraphData@{FreeGraphData}!Unity.VisualScripting.GraphReference@{Unity.VisualScripting.GraphReference}}
+\doxysubsubsection{\texorpdfstring{FreeGraphData()}{FreeGraphData()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+Graph\+Reference.\+Free\+Graph\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_reference_a14870723aab382c0934be6ebfc581734}\label{class_unity_1_1_visual_scripting_1_1_graph_reference_a14870723aab382c0934be6ebfc581734} 
+\index{Unity.VisualScripting.GraphReference@{Unity.VisualScripting.GraphReference}!FreeInvalidInterns@{FreeInvalidInterns}}
+\index{FreeInvalidInterns@{FreeInvalidInterns}!Unity.VisualScripting.GraphReference@{Unity.VisualScripting.GraphReference}}
+\doxysubsubsection{\texorpdfstring{FreeInvalidInterns()}{FreeInvalidInterns()}}
+{\footnotesize\ttfamily static void Unity.\+Visual\+Scripting.\+Graph\+Reference.\+Free\+Invalid\+Interns (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_reference_a5eca954e6aaddf5da53c73568d5ad9f3}\label{class_unity_1_1_visual_scripting_1_1_graph_reference_a5eca954e6aaddf5da53c73568d5ad9f3} 
+\index{Unity.VisualScripting.GraphReference@{Unity.VisualScripting.GraphReference}!GetBreadcrumbs@{GetBreadcrumbs}}
+\index{GetBreadcrumbs@{GetBreadcrumbs}!Unity.VisualScripting.GraphReference@{Unity.VisualScripting.GraphReference}}
+\doxysubsubsection{\texorpdfstring{GetBreadcrumbs()}{GetBreadcrumbs()}}
+{\footnotesize\ttfamily IEnumerable$<$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}} $>$ Unity.\+Visual\+Scripting.\+Graph\+Reference.\+Get\+Breadcrumbs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_reference_a5aae9e2f83a4b26489aa3c21371333bf}\label{class_unity_1_1_visual_scripting_1_1_graph_reference_a5aae9e2f83a4b26489aa3c21371333bf} 
+\index{Unity.VisualScripting.GraphReference@{Unity.VisualScripting.GraphReference}!GetHashCode@{GetHashCode}}
+\index{GetHashCode@{GetHashCode}!Unity.VisualScripting.GraphReference@{Unity.VisualScripting.GraphReference}}
+\doxysubsubsection{\texorpdfstring{GetHashCode()}{GetHashCode()}}
+{\footnotesize\ttfamily override int Unity.\+Visual\+Scripting.\+Graph\+Reference.\+Get\+Hash\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_reference_a38668584c09bbbf249cdf83758934edc}\label{class_unity_1_1_visual_scripting_1_1_graph_reference_a38668584c09bbbf249cdf83758934edc} 
+\index{Unity.VisualScripting.GraphReference@{Unity.VisualScripting.GraphReference}!Intern@{Intern}}
+\index{Intern@{Intern}!Unity.VisualScripting.GraphReference@{Unity.VisualScripting.GraphReference}}
+\doxysubsubsection{\texorpdfstring{Intern()}{Intern()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}} Unity.\+Visual\+Scripting.\+Graph\+Reference.\+Intern (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_pointer}{Graph\+Pointer}}}]{pointer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_reference_a4d9906666492d9e6cecd870d15f21d79}\label{class_unity_1_1_visual_scripting_1_1_graph_reference_a4d9906666492d9e6cecd870d15f21d79} 
+\index{Unity.VisualScripting.GraphReference@{Unity.VisualScripting.GraphReference}!New@{New}}
+\index{New@{New}!Unity.VisualScripting.GraphReference@{Unity.VisualScripting.GraphReference}}
+\doxysubsubsection{\texorpdfstring{New()}{New()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}} Unity.\+Visual\+Scripting.\+Graph\+Reference.\+New (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_root}{IGraph\+Root}}}]{root,  }\item[{bool}]{ensure\+Valid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_reference_a6bcb11ba418925527d4b48ca9cb2fc1b}\label{class_unity_1_1_visual_scripting_1_1_graph_reference_a6bcb11ba418925527d4b48ca9cb2fc1b} 
+\index{Unity.VisualScripting.GraphReference@{Unity.VisualScripting.GraphReference}!New@{New}}
+\index{New@{New}!Unity.VisualScripting.GraphReference@{Unity.VisualScripting.GraphReference}}
+\doxysubsubsection{\texorpdfstring{New()}{New()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}} Unity.\+Visual\+Scripting.\+Graph\+Reference.\+New (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_root}{IGraph\+Root}}}]{root,  }\item[{IEnumerable$<$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_graph_parent_element}{IGraph\+Parent\+Element}} $>$}]{parent\+Elements,  }\item[{bool}]{ensure\+Valid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_reference_a56dc9d991eca600ac28ffc7aa74c55b7}\label{class_unity_1_1_visual_scripting_1_1_graph_reference_a56dc9d991eca600ac28ffc7aa74c55b7} 
+\index{Unity.VisualScripting.GraphReference@{Unity.VisualScripting.GraphReference}!New@{New}}
+\index{New@{New}!Unity.VisualScripting.GraphReference@{Unity.VisualScripting.GraphReference}}
+\doxysubsubsection{\texorpdfstring{New()}{New()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}} Unity.\+Visual\+Scripting.\+Graph\+Reference.\+New (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_curves_proxy_8cs_a324f8dae84ead9019a250b472ca1b436}{Unity\+Object}}}]{root\+Object,  }\item[{IEnumerable$<$ Guid $>$}]{parent\+Element\+Guids,  }\item[{bool}]{ensure\+Valid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_reference_aa368a8e8ddef5cd344c673b9b75d7fec}\label{class_unity_1_1_visual_scripting_1_1_graph_reference_aa368a8e8ddef5cd344c673b9b75d7fec} 
+\index{Unity.VisualScripting.GraphReference@{Unity.VisualScripting.GraphReference}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Unity.VisualScripting.GraphReference@{Unity.VisualScripting.GraphReference}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily static bool Unity.\+Visual\+Scripting.\+Graph\+Reference.\+operator!= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}}}]{x,  }\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}}}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_reference_a59cc820d5cfdbf86197f3021f5777f8c}\label{class_unity_1_1_visual_scripting_1_1_graph_reference_a59cc820d5cfdbf86197f3021f5777f8c} 
+\index{Unity.VisualScripting.GraphReference@{Unity.VisualScripting.GraphReference}!operator==@{operator==}}
+\index{operator==@{operator==}!Unity.VisualScripting.GraphReference@{Unity.VisualScripting.GraphReference}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily static bool Unity.\+Visual\+Scripting.\+Graph\+Reference.\+operator== (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}}}]{x,  }\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}}}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_reference_ae1c371f366a08f35e67ea21323d01063}\label{class_unity_1_1_visual_scripting_1_1_graph_reference_ae1c371f366a08f35e67ea21323d01063} 
+\index{Unity.VisualScripting.GraphReference@{Unity.VisualScripting.GraphReference}!ParentReference@{ParentReference}}
+\index{ParentReference@{ParentReference}!Unity.VisualScripting.GraphReference@{Unity.VisualScripting.GraphReference}}
+\doxysubsubsection{\texorpdfstring{ParentReference()}{ParentReference()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}} Unity.\+Visual\+Scripting.\+Graph\+Reference.\+Parent\+Reference (\begin{DoxyParamCaption}\item[{bool}]{ensure\+Valid }\end{DoxyParamCaption})}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_reference_a8d4ae2b4872bac6ea0c9de41999e1606}\label{class_unity_1_1_visual_scripting_1_1_graph_reference_a8d4ae2b4872bac6ea0c9de41999e1606} 
+\index{Unity.VisualScripting.GraphReference@{Unity.VisualScripting.GraphReference}!Revalidate@{Revalidate}}
+\index{Revalidate@{Revalidate}!Unity.VisualScripting.GraphReference@{Unity.VisualScripting.GraphReference}}
+\doxysubsubsection{\texorpdfstring{Revalidate()}{Revalidate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_reference}{Graph\+Reference}} Unity.\+Visual\+Scripting.\+Graph\+Reference.\+Revalidate (\begin{DoxyParamCaption}\item[{bool}]{ensure\+Valid }\end{DoxyParamCaption})}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_graph_reference_a7432650de9cc16ee196fcda462a429c3}\label{class_unity_1_1_visual_scripting_1_1_graph_reference_a7432650de9cc16ee196fcda462a429c3} 
+\index{Unity.VisualScripting.GraphReference@{Unity.VisualScripting.GraphReference}!ToStackPooled@{ToStackPooled}}
+\index{ToStackPooled@{ToStackPooled}!Unity.VisualScripting.GraphReference@{Unity.VisualScripting.GraphReference}}
+\doxysubsubsection{\texorpdfstring{ToStackPooled()}{ToStackPooled()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_graph_stack}{Graph\+Stack}} Unity.\+Visual\+Scripting.\+Graph\+Reference.\+To\+Stack\+Pooled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Package\+Cache/com.\+unity.\+visualscripting@1.\+9.\+2/\+Runtime/\+Visual\+Scripting.\+Core/\+Graphs/\mbox{\hyperlink{_graph_reference_8cs}{Graph\+Reference.\+cs}}\end{DoxyCompactItemize}

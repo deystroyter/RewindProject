@@ -1,0 +1,38 @@
+\chapter{Audio clip properties}
+\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2insp__clp__aud}{}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2insp__clp__aud}\index{Audio clip properties@{Audio clip properties}}
+\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2insp__clp__aud_autotoc_md1167}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2insp__clp__aud_autotoc_md1167}%
+ Use the Inspector window to change the properties of an Audio clip. These properties include the name, timing, play speed, blend properties, audio media, and loop option.
+
+
+
+{\itshape Inspector window when selecting an Audio clip in the \doxylink{namespace_timeline}{Timeline} window}\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2insp__clp__aud_autotoc_md1168}{}\doxysection{\texorpdfstring{Display Name}{Display Name}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2insp__clp__aud_autotoc_md1168}
+The name of the Audio clip shown in the \doxylink{namespace_timeline}{Timeline} window. This is not the name of the audio file that \doxylink{namespace_unity}{Unity} uses for the waveform. For information on audio file properties, see {\bfseries{Audio Playable Asset}} below.\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2insp__clp__aud_autotoc_md1169}{}\doxysection{\texorpdfstring{Clip Timing properties}{Clip Timing properties}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2insp__clp__aud_autotoc_md1169}
+Use the {\bfseries{Clip Timing}} properties to position, change the duration, change the ease-\/in and ease-\/out duration, and adjust the play speed of the Audio clip.
+
+Most timing properties are expressed in both seconds (s) and frames (f). When specifying seconds, a {\bfseries{Clip Timing}} property accepts decimal values. When specifying frames, a property only accepts integer values. For example, if you attempt to enter 12.\+5 in a frames (f) field, the Inspector window sets the value to 12 frames.
+
+Depending on \doxysectlink{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2clp__about}{the selected Clip Edit mode}{0}, changing the {\bfseries{Start}}, {\bfseries{End}}, or {\bfseries{Duration}} may blend, ripple, or replace Audio clips on the same track.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Description}}    }\\\cline{1-2}
+\endhead
+{\bfseries{Start}}   &The frame or time (in seconds) when the clip starts. Changing the Start property changes the position of the clip on its track in the \doxylink{namespace_timeline}{Timeline} Asset.~\newline
+Changing the Start also affects the End. Changing the Start sets the End to the new Start value plus the Duration.    \\\cline{1-2}
+{\bfseries{End}}   &The frame or time (in seconds) when the clip ends.~\newline
+Changing the End also affects the Start. Changing the End sets the Start to the new End value minus the Duration.    \\\cline{1-2}
+{\bfseries{Duration}}   &The duration of the clip in frames or seconds.~\newline
+Changing the Duration also affects the End. Changing the Duration sets the End to the Start value plus the new Duration.   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2insp__clp__aud_autotoc_md1170}{}\doxysection{\texorpdfstring{Blend Curves}{Blend Curves}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2insp__clp__aud_autotoc_md1170}
+Use the {\bfseries{Blend Curves}} to customize the fade-\/in and fade-\/out between the outgoing and incoming Audio clips. See \doxysectlink{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2clp__blend}{Blending clips}{0} for details on how to blend clips and customize blend curves.
+
+When easing-\/in or easing-\/out Audio clips, use the {\bfseries{Blend Curves}} to customize the curve that fades-\/in or fades-\/out an Audio clip. See \doxysectlink{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2clp__ease}{Easing-\/in and Easing-\/out clips}{0} for details.\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2insp__clp__aud_autotoc_md1171}{}\doxysection{\texorpdfstring{Audio Playable Asset}{Audio Playable Asset}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2insp__clp__aud_autotoc_md1171}
+Use the {\bfseries{Audio Playable Asset}} properties to select the Audio file used by the Audio clip and to set whether the selected Audio clip loops ({\bfseries{Loop}} enabled) or plays once ({\bfseries{Loop}} disabled). 

@@ -1,0 +1,34 @@
+\chapter{Recompile\+Scripts}
+\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-recompile-scripts}{}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-recompile-scripts}\index{RecompileScripts@{RecompileScripts}}
+\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-recompile-scripts_autotoc_md689}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-recompile-scripts_autotoc_md689}%
+{\ttfamily Recompile\+Scripts} is an \doxysectlink{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-custom-yield-instructions}{IEdit\+Mode\+Test\+Yield\+Instruction}{0} that you can yield in Edit Mode tests. It lets you trigger a recompilation of scripts in the \doxylink{namespace_unity}{Unity} Editor.\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-recompile-scripts_autotoc_md690}{}\doxysection{\texorpdfstring{Constructors}{Constructors}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-recompile-scripts_autotoc_md690}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Syntax   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Syntax   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endhead
+{\ttfamily Recompile\+Scripts(bool expect\+Script\+Compilation = true, bool expect\+Script\+Compilation\+Success = true)}   &Creates a new instance of the {\ttfamily Recompile\+Scripts} yield instruction. The parameter {\ttfamily expect\+Script\+Compilation} indicates if you expect a script compilation to start (defaults to true). If a script compilation does not start and {\ttfamily expect\+Script\+Compilation} is {\ttfamily true}, then it throws an exception.   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-recompile-scripts_autotoc_md691}{}\doxysection{\texorpdfstring{Example}{Example}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-recompile-scripts_autotoc_md691}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ C@}
+\DoxyCodeLine{[UnitySetUp]}
+\DoxyCodeLine{public\ IEnumerator\ SetUp()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ using\ (var\ file\ =\ File.CreateText("{}Assets/temp/myScript.cs"{}))}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ file.Write("{}public\ class\ ATempClass\ \{\ \ \}"{});}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \ AssetDatabase.Refresh();}
+\DoxyCodeLine{\ \ \ \ yield\ return\ new\ RecompileScripts();}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 

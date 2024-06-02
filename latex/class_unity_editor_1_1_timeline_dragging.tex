@@ -1,0 +1,133 @@
+\doxysection{Unity\+Editor.\+Timeline\+Dragging Class Reference}
+\hypertarget{class_unity_editor_1_1_timeline_dragging}{}\label{class_unity_editor_1_1_timeline_dragging}\index{UnityEditor.TimelineDragging@{UnityEditor.TimelineDragging}}
+Inheritance diagram for Unity\+Editor.\+Timeline\+Dragging\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_editor_1_1_timeline_dragging}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+delegate bool \mbox{\hyperlink{class_unity_editor_1_1_timeline_dragging_a26891e76fe659669b06318ec633472cf}{Type\+Resolver}} (IEnumerable$<$ Type $>$ types, Action$<$ Type $>$ on\+Complete, string format)
+\item 
+\mbox{\hyperlink{class_unity_editor_1_1_timeline_dragging_a49aa8453019d09bab2eb96ba1cc2d748}{Timeline\+Dragging}} (Tree\+View\+Controller tree\+View, \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_window}{Timeline\+Window}} window, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_asset}{Timeline\+Asset}} data)
+\item 
+override bool \mbox{\hyperlink{class_unity_editor_1_1_timeline_dragging_afc34f8ecac13a7e9bcaa03abccd6a05e}{Can\+Start\+Drag}} (Tree\+View\+Item target\+Item, List$<$ int $>$ dragged\+Item\+IDs, Vector2 mouse\+Down\+Position)
+\item 
+override void \mbox{\hyperlink{class_unity_editor_1_1_timeline_dragging_a700b56cf3ab296134e03ecb65fe52548}{Start\+Drag}} (Tree\+View\+Item dragged\+Node, List$<$ int $>$ dragged\+Item\+IDs)
+\item 
+override bool \mbox{\hyperlink{class_unity_editor_1_1_timeline_dragging_accfe75f5ed0c9312c7faceb63c34fcef}{Drag\+Element}} (Tree\+View\+Item target\+Item, Rect target\+Item\+Rect, int row)
+\item 
+override Drag\+And\+Drop\+Visual\+Mode \mbox{\hyperlink{class_unity_editor_1_1_timeline_dragging_a4553779d4ca17b6903d161bccec38193}{Do\+Drag}} (Tree\+View\+Item parent\+Item, Tree\+View\+Item target\+Item, bool perform, Drop\+Position drop\+Pos)
+\item 
+Drag\+And\+Drop\+Visual\+Mode \mbox{\hyperlink{class_unity_editor_1_1_timeline_dragging_a171a4bff35b807a16cd43d20030e907c}{Handle\+Track\+Drop}} (Tree\+View\+Item parent\+Item, Tree\+View\+Item target\+Item, bool perform, Drop\+Position drop\+Pos)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_unity_editor_1_1_timeline_dragging_a70fa06925d28c9026db00e39bb9bf5cb}{Resolve\+Type}} (IEnumerable$<$ System.\+Type $>$ types, Action$<$ Type $>$ on\+Complete, string format\+String)
+\item 
+static Drag\+And\+Drop\+Visual\+Mode \mbox{\hyperlink{class_unity_editor_1_1_timeline_dragging_a687c347694a64d20d8211ae692d0f18e}{Handle\+Hierarchy\+Pane\+Drag\+And\+Drop}} (IEnumerable$<$ \mbox{\hyperlink{_curves_proxy_8cs_a324f8dae84ead9019a250b472ca1b436}{Unity\+Object}} $>$ objects\+Being\+Dropped, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} target\+Track, bool perform, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_asset}{Timeline\+Asset}} timeline, Playable\+Director director, \mbox{\hyperlink{class_unity_editor_1_1_timeline_dragging_a26891e76fe659669b06318ec633472cf}{Type\+Resolver}} type\+Resolver, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} insert\+Before=null)
+\item 
+static Drag\+And\+Drop\+Visual\+Mode \mbox{\hyperlink{class_unity_editor_1_1_timeline_dragging_a1b8c0988cdfedd8d75c509d2dd2e75ea}{Handle\+Clip\+Pane\+Object\+Drag\+And\+Drop}} (IEnumerable$<$ \mbox{\hyperlink{_curves_proxy_8cs_a324f8dae84ead9019a250b472ca1b436}{Unity\+Object}} $>$ objects\+Being\+Dropped, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} target\+Track, bool perform, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_asset}{Timeline\+Asset}} timeline, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} parent, Playable\+Director director, double candidate\+Time, \mbox{\hyperlink{class_unity_editor_1_1_timeline_dragging_a26891e76fe659669b06318ec633472cf}{Type\+Resolver}} type\+Resolver, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} insert\+Before=null)
+\item 
+static Drag\+And\+Drop\+Visual\+Mode \mbox{\hyperlink{class_unity_editor_1_1_timeline_dragging_ab77ca13bf7a8e96a13d3c6c5c188fc47}{Handle\+Clip\+Pane\+Mono\+Script\+Drag\+And\+Drop}} (IEnumerable$<$ Mono\+Script $>$ scripts\+Being\+Dropped, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} target\+Track, bool perform, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_asset}{Timeline\+Asset}} timeline, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} parent, Playable\+Director director, double candidate\+Time)
+\begin{DoxyCompactList}\small\item\em Handles drag and drop of a mono script. \end{DoxyCompactList}\item 
+static Drag\+And\+Drop\+Visual\+Mode \mbox{\hyperlink{class_unity_editor_1_1_timeline_dragging_a5b8832c7ce70e10bbf74df506b4c216b}{Handle\+Clip\+Pane\+Playable\+Asset\+Drag\+And\+Drop}} (IEnumerable$<$ IPlayable\+Asset $>$ assets\+Being\+Dropped, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} target\+Track, bool perform, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_asset}{Timeline\+Asset}} timeline, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} parent, Playable\+Director director, double candidate\+Time, \mbox{\hyperlink{class_unity_editor_1_1_timeline_dragging_a26891e76fe659669b06318ec633472cf}{Type\+Resolver}} type\+Resolver)
+\item 
+static void \mbox{\hyperlink{class_unity_editor_1_1_timeline_dragging_af9bfefb2a649c3ad348dd30003879a9b}{On\+Track\+Binding\+Drag\+Update}} (\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} drop\+Target)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_unity_editor_1_1_timeline_dragging_a49aa8453019d09bab2eb96ba1cc2d748}\label{class_unity_editor_1_1_timeline_dragging_a49aa8453019d09bab2eb96ba1cc2d748} 
+\index{UnityEditor.TimelineDragging@{UnityEditor.TimelineDragging}!TimelineDragging@{TimelineDragging}}
+\index{TimelineDragging@{TimelineDragging}!UnityEditor.TimelineDragging@{UnityEditor.TimelineDragging}}
+\doxysubsubsection{\texorpdfstring{TimelineDragging()}{TimelineDragging()}}
+{\footnotesize\ttfamily Unity\+Editor.\+Timeline\+Dragging.\+Timeline\+Dragging (\begin{DoxyParamCaption}\item[{Tree\+View\+Controller}]{tree\+View,  }\item[{\mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_timeline_window}{Timeline\+Window}}}]{window,  }\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_asset}{Timeline\+Asset}}}]{data }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_editor_1_1_timeline_dragging_afc34f8ecac13a7e9bcaa03abccd6a05e}\label{class_unity_editor_1_1_timeline_dragging_afc34f8ecac13a7e9bcaa03abccd6a05e} 
+\index{UnityEditor.TimelineDragging@{UnityEditor.TimelineDragging}!CanStartDrag@{CanStartDrag}}
+\index{CanStartDrag@{CanStartDrag}!UnityEditor.TimelineDragging@{UnityEditor.TimelineDragging}}
+\doxysubsubsection{\texorpdfstring{CanStartDrag()}{CanStartDrag()}}
+{\footnotesize\ttfamily override bool Unity\+Editor.\+Timeline\+Dragging.\+Can\+Start\+Drag (\begin{DoxyParamCaption}\item[{Tree\+View\+Item}]{target\+Item,  }\item[{List$<$ int $>$}]{dragged\+Item\+IDs,  }\item[{Vector2}]{mouse\+Down\+Position }\end{DoxyParamCaption})}
+
+\Hypertarget{class_unity_editor_1_1_timeline_dragging_a4553779d4ca17b6903d161bccec38193}\label{class_unity_editor_1_1_timeline_dragging_a4553779d4ca17b6903d161bccec38193} 
+\index{UnityEditor.TimelineDragging@{UnityEditor.TimelineDragging}!DoDrag@{DoDrag}}
+\index{DoDrag@{DoDrag}!UnityEditor.TimelineDragging@{UnityEditor.TimelineDragging}}
+\doxysubsubsection{\texorpdfstring{DoDrag()}{DoDrag()}}
+{\footnotesize\ttfamily override Drag\+And\+Drop\+Visual\+Mode Unity\+Editor.\+Timeline\+Dragging.\+Do\+Drag (\begin{DoxyParamCaption}\item[{Tree\+View\+Item}]{parent\+Item,  }\item[{Tree\+View\+Item}]{target\+Item,  }\item[{bool}]{perform,  }\item[{Drop\+Position}]{drop\+Pos }\end{DoxyParamCaption})}
+
+\Hypertarget{class_unity_editor_1_1_timeline_dragging_accfe75f5ed0c9312c7faceb63c34fcef}\label{class_unity_editor_1_1_timeline_dragging_accfe75f5ed0c9312c7faceb63c34fcef} 
+\index{UnityEditor.TimelineDragging@{UnityEditor.TimelineDragging}!DragElement@{DragElement}}
+\index{DragElement@{DragElement}!UnityEditor.TimelineDragging@{UnityEditor.TimelineDragging}}
+\doxysubsubsection{\texorpdfstring{DragElement()}{DragElement()}}
+{\footnotesize\ttfamily override bool Unity\+Editor.\+Timeline\+Dragging.\+Drag\+Element (\begin{DoxyParamCaption}\item[{Tree\+View\+Item}]{target\+Item,  }\item[{Rect}]{target\+Item\+Rect,  }\item[{int}]{row }\end{DoxyParamCaption})}
+
+\Hypertarget{class_unity_editor_1_1_timeline_dragging_ab77ca13bf7a8e96a13d3c6c5c188fc47}\label{class_unity_editor_1_1_timeline_dragging_ab77ca13bf7a8e96a13d3c6c5c188fc47} 
+\index{UnityEditor.TimelineDragging@{UnityEditor.TimelineDragging}!HandleClipPaneMonoScriptDragAndDrop@{HandleClipPaneMonoScriptDragAndDrop}}
+\index{HandleClipPaneMonoScriptDragAndDrop@{HandleClipPaneMonoScriptDragAndDrop}!UnityEditor.TimelineDragging@{UnityEditor.TimelineDragging}}
+\doxysubsubsection{\texorpdfstring{HandleClipPaneMonoScriptDragAndDrop()}{HandleClipPaneMonoScriptDragAndDrop()}}
+{\footnotesize\ttfamily static Drag\+And\+Drop\+Visual\+Mode Unity\+Editor.\+Timeline\+Dragging.\+Handle\+Clip\+Pane\+Mono\+Script\+Drag\+And\+Drop (\begin{DoxyParamCaption}\item[{IEnumerable$<$ Mono\+Script $>$}]{scripts\+Being\+Dropped,  }\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}}}]{target\+Track,  }\item[{bool}]{perform,  }\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_asset}{Timeline\+Asset}}}]{timeline,  }\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}}}]{parent,  }\item[{Playable\+Director}]{director,  }\item[{double}]{candidate\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Handles drag and drop of a mono script. 
+
+\Hypertarget{class_unity_editor_1_1_timeline_dragging_a1b8c0988cdfedd8d75c509d2dd2e75ea}\label{class_unity_editor_1_1_timeline_dragging_a1b8c0988cdfedd8d75c509d2dd2e75ea} 
+\index{UnityEditor.TimelineDragging@{UnityEditor.TimelineDragging}!HandleClipPaneObjectDragAndDrop@{HandleClipPaneObjectDragAndDrop}}
+\index{HandleClipPaneObjectDragAndDrop@{HandleClipPaneObjectDragAndDrop}!UnityEditor.TimelineDragging@{UnityEditor.TimelineDragging}}
+\doxysubsubsection{\texorpdfstring{HandleClipPaneObjectDragAndDrop()}{HandleClipPaneObjectDragAndDrop()}}
+{\footnotesize\ttfamily static Drag\+And\+Drop\+Visual\+Mode Unity\+Editor.\+Timeline\+Dragging.\+Handle\+Clip\+Pane\+Object\+Drag\+And\+Drop (\begin{DoxyParamCaption}\item[{IEnumerable$<$ \mbox{\hyperlink{_curves_proxy_8cs_a324f8dae84ead9019a250b472ca1b436}{Unity\+Object}} $>$}]{objects\+Being\+Dropped,  }\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}}}]{target\+Track,  }\item[{bool}]{perform,  }\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_asset}{Timeline\+Asset}}}]{timeline,  }\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}}}]{parent,  }\item[{Playable\+Director}]{director,  }\item[{double}]{candidate\+Time,  }\item[{\mbox{\hyperlink{class_unity_editor_1_1_timeline_dragging_a26891e76fe659669b06318ec633472cf}{Type\+Resolver}}}]{type\+Resolver,  }\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}}}]{insert\+Before = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_unity_editor_1_1_timeline_dragging_a5b8832c7ce70e10bbf74df506b4c216b}\label{class_unity_editor_1_1_timeline_dragging_a5b8832c7ce70e10bbf74df506b4c216b} 
+\index{UnityEditor.TimelineDragging@{UnityEditor.TimelineDragging}!HandleClipPanePlayableAssetDragAndDrop@{HandleClipPanePlayableAssetDragAndDrop}}
+\index{HandleClipPanePlayableAssetDragAndDrop@{HandleClipPanePlayableAssetDragAndDrop}!UnityEditor.TimelineDragging@{UnityEditor.TimelineDragging}}
+\doxysubsubsection{\texorpdfstring{HandleClipPanePlayableAssetDragAndDrop()}{HandleClipPanePlayableAssetDragAndDrop()}}
+{\footnotesize\ttfamily static Drag\+And\+Drop\+Visual\+Mode Unity\+Editor.\+Timeline\+Dragging.\+Handle\+Clip\+Pane\+Playable\+Asset\+Drag\+And\+Drop (\begin{DoxyParamCaption}\item[{IEnumerable$<$ IPlayable\+Asset $>$}]{assets\+Being\+Dropped,  }\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}}}]{target\+Track,  }\item[{bool}]{perform,  }\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_asset}{Timeline\+Asset}}}]{timeline,  }\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}}}]{parent,  }\item[{Playable\+Director}]{director,  }\item[{double}]{candidate\+Time,  }\item[{\mbox{\hyperlink{class_unity_editor_1_1_timeline_dragging_a26891e76fe659669b06318ec633472cf}{Type\+Resolver}}}]{type\+Resolver }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_unity_editor_1_1_timeline_dragging_a687c347694a64d20d8211ae692d0f18e}\label{class_unity_editor_1_1_timeline_dragging_a687c347694a64d20d8211ae692d0f18e} 
+\index{UnityEditor.TimelineDragging@{UnityEditor.TimelineDragging}!HandleHierarchyPaneDragAndDrop@{HandleHierarchyPaneDragAndDrop}}
+\index{HandleHierarchyPaneDragAndDrop@{HandleHierarchyPaneDragAndDrop}!UnityEditor.TimelineDragging@{UnityEditor.TimelineDragging}}
+\doxysubsubsection{\texorpdfstring{HandleHierarchyPaneDragAndDrop()}{HandleHierarchyPaneDragAndDrop()}}
+{\footnotesize\ttfamily static Drag\+And\+Drop\+Visual\+Mode Unity\+Editor.\+Timeline\+Dragging.\+Handle\+Hierarchy\+Pane\+Drag\+And\+Drop (\begin{DoxyParamCaption}\item[{IEnumerable$<$ \mbox{\hyperlink{_curves_proxy_8cs_a324f8dae84ead9019a250b472ca1b436}{Unity\+Object}} $>$}]{objects\+Being\+Dropped,  }\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}}}]{target\+Track,  }\item[{bool}]{perform,  }\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_asset}{Timeline\+Asset}}}]{timeline,  }\item[{Playable\+Director}]{director,  }\item[{\mbox{\hyperlink{class_unity_editor_1_1_timeline_dragging_a26891e76fe659669b06318ec633472cf}{Type\+Resolver}}}]{type\+Resolver,  }\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}}}]{insert\+Before = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_unity_editor_1_1_timeline_dragging_a171a4bff35b807a16cd43d20030e907c}\label{class_unity_editor_1_1_timeline_dragging_a171a4bff35b807a16cd43d20030e907c} 
+\index{UnityEditor.TimelineDragging@{UnityEditor.TimelineDragging}!HandleTrackDrop@{HandleTrackDrop}}
+\index{HandleTrackDrop@{HandleTrackDrop}!UnityEditor.TimelineDragging@{UnityEditor.TimelineDragging}}
+\doxysubsubsection{\texorpdfstring{HandleTrackDrop()}{HandleTrackDrop()}}
+{\footnotesize\ttfamily Drag\+And\+Drop\+Visual\+Mode Unity\+Editor.\+Timeline\+Dragging.\+Handle\+Track\+Drop (\begin{DoxyParamCaption}\item[{Tree\+View\+Item}]{parent\+Item,  }\item[{Tree\+View\+Item}]{target\+Item,  }\item[{bool}]{perform,  }\item[{Drop\+Position}]{drop\+Pos }\end{DoxyParamCaption})}
+
+\Hypertarget{class_unity_editor_1_1_timeline_dragging_af9bfefb2a649c3ad348dd30003879a9b}\label{class_unity_editor_1_1_timeline_dragging_af9bfefb2a649c3ad348dd30003879a9b} 
+\index{UnityEditor.TimelineDragging@{UnityEditor.TimelineDragging}!OnTrackBindingDragUpdate@{OnTrackBindingDragUpdate}}
+\index{OnTrackBindingDragUpdate@{OnTrackBindingDragUpdate}!UnityEditor.TimelineDragging@{UnityEditor.TimelineDragging}}
+\doxysubsubsection{\texorpdfstring{OnTrackBindingDragUpdate()}{OnTrackBindingDragUpdate()}}
+{\footnotesize\ttfamily static void Unity\+Editor.\+Timeline\+Dragging.\+On\+Track\+Binding\+Drag\+Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}}}]{drop\+Target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_unity_editor_1_1_timeline_dragging_a70fa06925d28c9026db00e39bb9bf5cb}\label{class_unity_editor_1_1_timeline_dragging_a70fa06925d28c9026db00e39bb9bf5cb} 
+\index{UnityEditor.TimelineDragging@{UnityEditor.TimelineDragging}!ResolveType@{ResolveType}}
+\index{ResolveType@{ResolveType}!UnityEditor.TimelineDragging@{UnityEditor.TimelineDragging}}
+\doxysubsubsection{\texorpdfstring{ResolveType()}{ResolveType()}}
+{\footnotesize\ttfamily static bool Unity\+Editor.\+Timeline\+Dragging.\+Resolve\+Type (\begin{DoxyParamCaption}\item[{IEnumerable$<$ System\+::\+Type $>$}]{types,  }\item[{Action$<$ Type $>$}]{on\+Complete,  }\item[{string}]{format\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_unity_editor_1_1_timeline_dragging_a700b56cf3ab296134e03ecb65fe52548}\label{class_unity_editor_1_1_timeline_dragging_a700b56cf3ab296134e03ecb65fe52548} 
+\index{UnityEditor.TimelineDragging@{UnityEditor.TimelineDragging}!StartDrag@{StartDrag}}
+\index{StartDrag@{StartDrag}!UnityEditor.TimelineDragging@{UnityEditor.TimelineDragging}}
+\doxysubsubsection{\texorpdfstring{StartDrag()}{StartDrag()}}
+{\footnotesize\ttfamily override void Unity\+Editor.\+Timeline\+Dragging.\+Start\+Drag (\begin{DoxyParamCaption}\item[{Tree\+View\+Item}]{dragged\+Node,  }\item[{List$<$ int $>$}]{dragged\+Item\+IDs }\end{DoxyParamCaption})}
+
+\Hypertarget{class_unity_editor_1_1_timeline_dragging_a26891e76fe659669b06318ec633472cf}\label{class_unity_editor_1_1_timeline_dragging_a26891e76fe659669b06318ec633472cf} 
+\index{UnityEditor.TimelineDragging@{UnityEditor.TimelineDragging}!TypeResolver@{TypeResolver}}
+\index{TypeResolver@{TypeResolver}!UnityEditor.TimelineDragging@{UnityEditor.TimelineDragging}}
+\doxysubsubsection{\texorpdfstring{TypeResolver()}{TypeResolver()}}
+{\footnotesize\ttfamily delegate bool Unity\+Editor.\+Timeline\+Dragging.\+Type\+Resolver (\begin{DoxyParamCaption}\item[{IEnumerable$<$ Type $>$}]{types,  }\item[{Action$<$ Type $>$}]{on\+Complete,  }\item[{string}]{format }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+7.\+6/\+Editor/treeview/\mbox{\hyperlink{_timeline_dragging_8cs}{Timeline\+Dragging.\+cs}}\end{DoxyCompactItemize}

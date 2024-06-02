@@ -1,0 +1,54 @@
+\chapter{Create a new simple Custom C\# node}
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create-custom-node-empty}{}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create-custom-node-empty}\index{Create a new simple Custom C\# node@{Create a new simple Custom C\# node}}
+\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create-custom-node-empty_autotoc_md1761}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create-custom-node-empty_autotoc_md1761}%
+ You can create a Custom C\# node to run your own custom logic in a Script Graph. For more information on Custom C\# nodes, see \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create-custom-node}{Custom C\# nodes}{0}.
+
+To create a new simple Custom C\# node\+:
+
+
+\begin{DoxyEnumerate}
+\item \mbox{[}!include\doxylink{vs-open-project-window_8md}{open-\/project-\/window}\mbox{]}
+\item Right-\/click a folder in the Project window\textquotesingle{}s folder list, or anywhere in the Project window\textquotesingle{}s preview pane, and go to {\bfseries{Create}} \texorpdfstring{$>$}{>} {\bfseries{C\# Script}}.
+\item Enter a name, such as {\ttfamily My\+Node}, for the new script file.
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item Press Enter.
+\item \mbox{[}!include\doxylink{vs-open-new-external-code_8md}{open-\/new-\/external-\/code}\mbox{]}
+\item In your external editor, copy and paste the following code into your C\# script\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#}}
+\DoxyCodeLine{\ \ \textcolor{keyword}{using\ }Unity.VisualScripting;}
+\DoxyCodeLine{\ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_unity_engine}{UnityEngine}};}
+\DoxyCodeLine{\ \ }
+\DoxyCodeLine{\ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }MyNode\ :\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit}{Unit}}}
+\DoxyCodeLine{\ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Definition()\ \textcolor{comment}{//The\ method\ to\ set\ what\ our\ node\ will\ be\ doing.}}
+\DoxyCodeLine{\ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \}}
+
+\end{DoxyCode}
+
+\item \mbox{[}!include\doxylink{vs-save-script_8md}{save-\/script}\mbox{]}
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item \mbox{[}!include\doxylink{vs-return-unity_8md}{return-\/unity}\mbox{]}
+\item \mbox{[}!include\doxylink{vs-regen-node-library_8md}{regen-\/node-\/library}\mbox{]}
+\end{DoxyEnumerate}
+
+\begin{quote}
+\mbox{[}!\+NOTE\mbox{]} If you don\textquotesingle{}t regenerate your Node Library, the node won\textquotesingle{}t appear in Visual Scripting\textquotesingle{}s fuzzy finder. \end{quote}
+
+\begin{DoxyEnumerate}
+\item \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-open-graph-edit}{Open a Script Graph}{0} where you want to add your new node.
+\item \mbox{[}!include\doxylink{vs-open-fuzzy-finder_8md}{open-\/fuzzy-\/finder}\mbox{]}
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item The node appears as {\ttfamily My Node} at the end of the fuzzy finder list. Select the node to add it to your graph.
+
+
+\end{DoxyEnumerate}\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create-custom-node-empty_autotoc_md1762}{}\doxysection{\texorpdfstring{Next steps}{Next steps}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create-custom-node-empty_autotoc_md1762}
+After you create the basic start to a node and add it to Visual Scripting\textquotesingle{}s fuzzy finder, \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create-custom-node-add-ports}{add ports}{0} so your node can send and receive data. 

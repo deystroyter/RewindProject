@@ -1,0 +1,168 @@
+\doxysection{Unity.\+Visual\+Scripting.\+Dependencies.\+NCalc.\+Expression Class Reference}
+\hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression}{}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression}\index{Unity.VisualScripting.Dependencies.NCalc.Expression@{Unity.VisualScripting.Dependencies.NCalc.Expression}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_a8a7b66f08c1750faef51e50579529b01}{Expression}} (string expression, \mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_a1265e363a208b7ea365cc48907010393}{Evaluate\+Options}} options=Evaluate\+Options.\+None)
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_a114816538a5e54a509050417530881d0}{Expression}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_logical_expression}{Logical\+Expression}} expression, \mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_a1265e363a208b7ea365cc48907010393}{Evaluate\+Options}} options=Evaluate\+Options.\+None)
+\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_a916552486e7ed317ec672b2d7fe9657e}{Update\+Unity\+Time\+Parameters}} ()
+\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_aeed2b7e84471a77ffec2f78466c17780}{Has\+Errors}} ()
+\begin{DoxyCompactList}\small\item\em Pre-\/compiles the expression in order to check syntax errors. If errors are detected, the Error property contains the message. \end{DoxyCompactList}\item 
+object \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_a776e921549f4175b9af86af3f049295b}{Evaluate}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_flow}{Flow}} flow)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_logical_expression}{Logical\+Expression}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_ae2677bd76874c64fae0fbce8a7f5b7ec}{Compile}} (string expression, bool no\+Cache)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+readonly string \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_a098c3f0d764c989f8628fd7184952a07}{Original\+Expression}}
+\begin{DoxyCompactList}\small\item\em Textual representation of the expression to evaluate. \end{DoxyCompactList}\item 
+Dictionary$<$ string, IEnumerator $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_a5c18acb0478934afd7d25c469149ce41}{Parameter\+Enumerators}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_a1265e363a208b7ea365cc48907010393}{Evaluate\+Options}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_a5e871290cafaf7ae09b5324f1661e8e5}{Options}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_ac9f12a8e36a08999a2c476293d148977}{Error}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_logical_expression}{Logical\+Expression}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_a5b02f5779b57b1a73eded322734330fe}{Parsed\+Expression}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Dictionary$<$ string, object $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_af5dfa5d7fd6ac292fbebf4eb733b9637}{Parameters}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+static bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_a28baab5536ab85e95869109705b8e12f}{Cache\+Enabled}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+Evaluate\+Function\+Handler \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_a35e4dc0e93c20115682a2ad69aa08a03}{Evaluate\+Function}}
+\item 
+Evaluate\+Parameter\+Handler \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_a81d08097608118d081b0b450d9f4ac1a}{Evaluate\+Parameter}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_a8a7b66f08c1750faef51e50579529b01}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_a8a7b66f08c1750faef51e50579529b01} 
+\index{Unity.VisualScripting.Dependencies.NCalc.Expression@{Unity.VisualScripting.Dependencies.NCalc.Expression}!Expression@{Expression}}
+\index{Expression@{Expression}!Unity.VisualScripting.Dependencies.NCalc.Expression@{Unity.VisualScripting.Dependencies.NCalc.Expression}}
+\doxysubsubsection{\texorpdfstring{Expression()}{Expression()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Unity.\+Visual\+Scripting.\+Dependencies.\+NCalc.\+Expression.\+Expression (\begin{DoxyParamCaption}\item[{string}]{expression,  }\item[{\mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_a1265e363a208b7ea365cc48907010393}{Evaluate\+Options}}}]{options = {\ttfamily EvaluateOptions\+:\+:None} }\end{DoxyParamCaption})}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_a114816538a5e54a509050417530881d0}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_a114816538a5e54a509050417530881d0} 
+\index{Unity.VisualScripting.Dependencies.NCalc.Expression@{Unity.VisualScripting.Dependencies.NCalc.Expression}!Expression@{Expression}}
+\index{Expression@{Expression}!Unity.VisualScripting.Dependencies.NCalc.Expression@{Unity.VisualScripting.Dependencies.NCalc.Expression}}
+\doxysubsubsection{\texorpdfstring{Expression()}{Expression()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Unity.\+Visual\+Scripting.\+Dependencies.\+NCalc.\+Expression.\+Expression (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_logical_expression}{Logical\+Expression}}}]{expression,  }\item[{\mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_a1265e363a208b7ea365cc48907010393}{Evaluate\+Options}}}]{options = {\ttfamily EvaluateOptions\+:\+:None} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_ae2677bd76874c64fae0fbce8a7f5b7ec}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_ae2677bd76874c64fae0fbce8a7f5b7ec} 
+\index{Unity.VisualScripting.Dependencies.NCalc.Expression@{Unity.VisualScripting.Dependencies.NCalc.Expression}!Compile@{Compile}}
+\index{Compile@{Compile}!Unity.VisualScripting.Dependencies.NCalc.Expression@{Unity.VisualScripting.Dependencies.NCalc.Expression}}
+\doxysubsubsection{\texorpdfstring{Compile()}{Compile()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_logical_expression}{Logical\+Expression}} Unity.\+Visual\+Scripting.\+Dependencies.\+NCalc.\+Expression.\+Compile (\begin{DoxyParamCaption}\item[{string}]{expression,  }\item[{bool}]{no\+Cache }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_a776e921549f4175b9af86af3f049295b}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_a776e921549f4175b9af86af3f049295b} 
+\index{Unity.VisualScripting.Dependencies.NCalc.Expression@{Unity.VisualScripting.Dependencies.NCalc.Expression}!Evaluate@{Evaluate}}
+\index{Evaluate@{Evaluate}!Unity.VisualScripting.Dependencies.NCalc.Expression@{Unity.VisualScripting.Dependencies.NCalc.Expression}}
+\doxysubsubsection{\texorpdfstring{Evaluate()}{Evaluate()}}
+{\footnotesize\ttfamily object Unity.\+Visual\+Scripting.\+Dependencies.\+NCalc.\+Expression.\+Evaluate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_flow}{Flow}}}]{flow }\end{DoxyParamCaption})}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_aeed2b7e84471a77ffec2f78466c17780}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_aeed2b7e84471a77ffec2f78466c17780} 
+\index{Unity.VisualScripting.Dependencies.NCalc.Expression@{Unity.VisualScripting.Dependencies.NCalc.Expression}!HasErrors@{HasErrors}}
+\index{HasErrors@{HasErrors}!Unity.VisualScripting.Dependencies.NCalc.Expression@{Unity.VisualScripting.Dependencies.NCalc.Expression}}
+\doxysubsubsection{\texorpdfstring{HasErrors()}{HasErrors()}}
+{\footnotesize\ttfamily bool Unity.\+Visual\+Scripting.\+Dependencies.\+NCalc.\+Expression.\+Has\+Errors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Pre-\/compiles the expression in order to check syntax errors. If errors are detected, the Error property contains the message. 
+
+\begin{DoxyReturn}{Returns}
+True if the expression syntax is correct, otherwise false
+\end{DoxyReturn}
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_a916552486e7ed317ec672b2d7fe9657e}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_a916552486e7ed317ec672b2d7fe9657e} 
+\index{Unity.VisualScripting.Dependencies.NCalc.Expression@{Unity.VisualScripting.Dependencies.NCalc.Expression}!UpdateUnityTimeParameters@{UpdateUnityTimeParameters}}
+\index{UpdateUnityTimeParameters@{UpdateUnityTimeParameters}!Unity.VisualScripting.Dependencies.NCalc.Expression@{Unity.VisualScripting.Dependencies.NCalc.Expression}}
+\doxysubsubsection{\texorpdfstring{UpdateUnityTimeParameters()}{UpdateUnityTimeParameters()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+Dependencies.\+NCalc.\+Expression.\+Update\+Unity\+Time\+Parameters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_a098c3f0d764c989f8628fd7184952a07}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_a098c3f0d764c989f8628fd7184952a07} 
+\index{Unity.VisualScripting.Dependencies.NCalc.Expression@{Unity.VisualScripting.Dependencies.NCalc.Expression}!OriginalExpression@{OriginalExpression}}
+\index{OriginalExpression@{OriginalExpression}!Unity.VisualScripting.Dependencies.NCalc.Expression@{Unity.VisualScripting.Dependencies.NCalc.Expression}}
+\doxysubsubsection{\texorpdfstring{OriginalExpression}{OriginalExpression}}
+{\footnotesize\ttfamily readonly string Unity.\+Visual\+Scripting.\+Dependencies.\+NCalc.\+Expression.\+Original\+Expression\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Textual representation of the expression to evaluate. 
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_a5c18acb0478934afd7d25c469149ce41}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_a5c18acb0478934afd7d25c469149ce41} 
+\index{Unity.VisualScripting.Dependencies.NCalc.Expression@{Unity.VisualScripting.Dependencies.NCalc.Expression}!ParameterEnumerators@{ParameterEnumerators}}
+\index{ParameterEnumerators@{ParameterEnumerators}!Unity.VisualScripting.Dependencies.NCalc.Expression@{Unity.VisualScripting.Dependencies.NCalc.Expression}}
+\doxysubsubsection{\texorpdfstring{ParameterEnumerators}{ParameterEnumerators}}
+{\footnotesize\ttfamily Dictionary$<$string, IEnumerator$>$ Unity.\+Visual\+Scripting.\+Dependencies.\+NCalc.\+Expression.\+Parameter\+Enumerators\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_a28baab5536ab85e95869109705b8e12f}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_a28baab5536ab85e95869109705b8e12f} 
+\index{Unity.VisualScripting.Dependencies.NCalc.Expression@{Unity.VisualScripting.Dependencies.NCalc.Expression}!CacheEnabled@{CacheEnabled}}
+\index{CacheEnabled@{CacheEnabled}!Unity.VisualScripting.Dependencies.NCalc.Expression@{Unity.VisualScripting.Dependencies.NCalc.Expression}}
+\doxysubsubsection{\texorpdfstring{CacheEnabled}{CacheEnabled}}
+{\footnotesize\ttfamily bool Unity.\+Visual\+Scripting.\+Dependencies.\+NCalc.\+Expression.\+Cache\+Enabled\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_ac9f12a8e36a08999a2c476293d148977}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_ac9f12a8e36a08999a2c476293d148977} 
+\index{Unity.VisualScripting.Dependencies.NCalc.Expression@{Unity.VisualScripting.Dependencies.NCalc.Expression}!Error@{Error}}
+\index{Error@{Error}!Unity.VisualScripting.Dependencies.NCalc.Expression@{Unity.VisualScripting.Dependencies.NCalc.Expression}}
+\doxysubsubsection{\texorpdfstring{Error}{Error}}
+{\footnotesize\ttfamily string Unity.\+Visual\+Scripting.\+Dependencies.\+NCalc.\+Expression.\+Error\hspace{0.3cm}{\ttfamily [get]}}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_a5e871290cafaf7ae09b5324f1661e8e5}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_a5e871290cafaf7ae09b5324f1661e8e5} 
+\index{Unity.VisualScripting.Dependencies.NCalc.Expression@{Unity.VisualScripting.Dependencies.NCalc.Expression}!Options@{Options}}
+\index{Options@{Options}!Unity.VisualScripting.Dependencies.NCalc.Expression@{Unity.VisualScripting.Dependencies.NCalc.Expression}}
+\doxysubsubsection{\texorpdfstring{Options}{Options}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_a1265e363a208b7ea365cc48907010393}{Evaluate\+Options}} Unity.\+Visual\+Scripting.\+Dependencies.\+NCalc.\+Expression.\+Options\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_af5dfa5d7fd6ac292fbebf4eb733b9637}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_af5dfa5d7fd6ac292fbebf4eb733b9637} 
+\index{Unity.VisualScripting.Dependencies.NCalc.Expression@{Unity.VisualScripting.Dependencies.NCalc.Expression}!Parameters@{Parameters}}
+\index{Parameters@{Parameters}!Unity.VisualScripting.Dependencies.NCalc.Expression@{Unity.VisualScripting.Dependencies.NCalc.Expression}}
+\doxysubsubsection{\texorpdfstring{Parameters}{Parameters}}
+{\footnotesize\ttfamily Dictionary$<$string, object$>$ Unity.\+Visual\+Scripting.\+Dependencies.\+NCalc.\+Expression.\+Parameters\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_a5b02f5779b57b1a73eded322734330fe}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_a5b02f5779b57b1a73eded322734330fe} 
+\index{Unity.VisualScripting.Dependencies.NCalc.Expression@{Unity.VisualScripting.Dependencies.NCalc.Expression}!ParsedExpression@{ParsedExpression}}
+\index{ParsedExpression@{ParsedExpression}!Unity.VisualScripting.Dependencies.NCalc.Expression@{Unity.VisualScripting.Dependencies.NCalc.Expression}}
+\doxysubsubsection{\texorpdfstring{ParsedExpression}{ParsedExpression}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_logical_expression}{Logical\+Expression}} Unity.\+Visual\+Scripting.\+Dependencies.\+NCalc.\+Expression.\+Parsed\+Expression\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+\doxysubsection{Event Documentation}
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_a35e4dc0e93c20115682a2ad69aa08a03}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_a35e4dc0e93c20115682a2ad69aa08a03} 
+\index{Unity.VisualScripting.Dependencies.NCalc.Expression@{Unity.VisualScripting.Dependencies.NCalc.Expression}!EvaluateFunction@{EvaluateFunction}}
+\index{EvaluateFunction@{EvaluateFunction}!Unity.VisualScripting.Dependencies.NCalc.Expression@{Unity.VisualScripting.Dependencies.NCalc.Expression}}
+\doxysubsubsection{\texorpdfstring{EvaluateFunction}{EvaluateFunction}}
+{\footnotesize\ttfamily Evaluate\+Function\+Handler Unity.\+Visual\+Scripting.\+Dependencies.\+NCalc.\+Expression.\+Evaluate\+Function}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_a81d08097608118d081b0b450d9f4ac1a}\label{class_unity_1_1_visual_scripting_1_1_dependencies_1_1_n_calc_1_1_expression_a81d08097608118d081b0b450d9f4ac1a} 
+\index{Unity.VisualScripting.Dependencies.NCalc.Expression@{Unity.VisualScripting.Dependencies.NCalc.Expression}!EvaluateParameter@{EvaluateParameter}}
+\index{EvaluateParameter@{EvaluateParameter}!Unity.VisualScripting.Dependencies.NCalc.Expression@{Unity.VisualScripting.Dependencies.NCalc.Expression}}
+\doxysubsubsection{\texorpdfstring{EvaluateParameter}{EvaluateParameter}}
+{\footnotesize\ttfamily Evaluate\+Parameter\+Handler Unity.\+Visual\+Scripting.\+Dependencies.\+NCalc.\+Expression.\+Evaluate\+Parameter}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Package\+Cache/com.\+unity.\+visualscripting@1.\+9.\+2/\+Runtime/\+Visual\+Scripting.\+Flow/\+Dependencies/\+NCalc/\mbox{\hyperlink{_expression_8cs}{Expression.\+cs}}\end{DoxyCompactItemize}

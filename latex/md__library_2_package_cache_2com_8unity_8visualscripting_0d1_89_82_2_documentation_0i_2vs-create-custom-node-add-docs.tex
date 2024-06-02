@@ -1,0 +1,87 @@
+\chapter{Add documentation to a Custom C\# node}
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create-custom-node-add-docs}{}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create-custom-node-add-docs}\index{Add documentation to a Custom C\# node@{Add documentation to a Custom C\# node}}
+\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create-custom-node-add-docs_autotoc_md1741}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create-custom-node-add-docs_autotoc_md1741}%
+ You can also add \href{vs-interface-overview.md\#the-graph-inspector}{\texttt{ Graph Inspector}} documentation to a Custom C\# node. Visual Scripting displays the documentation in the Graph Inspector when you select a node in a Script Graph. The documentation isn\textquotesingle{}t required to use the node, but can help your users understand the purpose and usage of a node.
+
+To add documentation to a node\+:
+
+
+\begin{DoxyEnumerate}
+\item \mbox{[}!include\doxylink{vs-open-project-window_8md}{open-\/project-\/window}\mbox{]}
+\end{DoxyEnumerate}
+
+\begin{quote}
+\mbox{[}!\+NOTE\mbox{]} If you already have an {\bfseries{Editor}} folder in your project, you can skip Steps 2-\/3. \end{quote}
+
+\begin{DoxyEnumerate}
+\item Right-\/click your {\bfseries{Assets}} folder or select {\bfseries{Add}} (+), then select {\bfseries{Folder}}.
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item Name the folder {\bfseries{Editor}}.
+\item Do one of the following\+:
+\begin{DoxyItemize}
+\item Right-\/click your {\bfseries{Editor}} folder in the Project window\textquotesingle{}s folder list.
+\item Right-\/click anywhere in the Project window\textquotesingle{}s preview pane with your {\bfseries{Editor}} folder selected.
+\end{DoxyItemize}
+\item \mbox{[}!include\doxylink{vs-create-c-script-project_8md}{create-\/c-\/script}\mbox{]}
+\item Enter a name, such as {\ttfamily My\+Node\+Descriptor} for the new script file.
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item Press Enter.
+\item \mbox{[}!include\doxylink{vs-open-new-external-code_8md}{open-\/new-\/external-\/code}\mbox{]}
+\item In your external editor, copy and paste the following code into the C\# script\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#}}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{using\ }Unity.VisualScripting;}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_unity_engine}{UnityEngine}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ [\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_descriptor}{Descriptor}}(typeof(MyNode))]}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }MyNodeDescriptor\ :\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit_descriptor}{UnitDescriptor}}<MyNode>}
+\DoxyCodeLine{\ \ \ \{}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{public}\ MyNodeDescriptor(MyNode\ unit)\ :\ base(unit)\ \{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ DefinedPort(\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit_port}{IUnitPort}}\ port,\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit_port_description}{UnitPortDescription}}\ description)}
+\DoxyCodeLine{\ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ base.DefinedPort(port,\ description);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (port.\mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_unit_port_a8a8be5cf6dcf54240f55d840924372eb}{key}})}
+\DoxyCodeLine{\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}inputTrigger"{}}:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ description.\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit_port_description_a2f10ae277a5cc91c54f6922c7645c88d}{summary}}\ =\ \textcolor{stringliteral}{"{}Trigger\ the\ concatenation\ of\ two\ strings,\ myValueA\ and\ myValueB,\ and\ return\ the\ result\ string\ on\ the\ Result\ port."{}};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}myValueA"{}}:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ description.\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit_port_description_a2f10ae277a5cc91c54f6922c7645c88d}{summary}}\ =\ \textcolor{stringliteral}{"{}First\ string\ value."{}};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}myValueB"{}}:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ description.\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit_port_description_a2f10ae277a5cc91c54f6922c7645c88d}{summary}}\ =\ \textcolor{stringliteral}{"{}Second\ string\ value."{}};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}outputTrigger"{}}:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ description.\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit_port_description_a2f10ae277a5cc91c54f6922c7645c88d}{summary}}\ =\ \textcolor{stringliteral}{"{}Execute\ the\ next\ action\ in\ the\ Script\ Graph\ after\ concatenating\ myValueA\ and\ myValueB."{}};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}result"{}}:}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ description.\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit_port_description_a2f10ae277a5cc91c54f6922c7645c88d}{summary}}\ =\ \textcolor{stringliteral}{"{}The\ result\ string\ obtained\ from\ concatenating\ myValueA\ and\ myValueB."{}};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\ \ \ \}}
+\DoxyCodeLine{\ \ \ \}}
+
+\end{DoxyCode}
+ You can modify the script to suit the specifics of your own node.~\newline
+
+\item \mbox{[}!include\doxylink{vs-save-script_8md}{save-\/script}\mbox{]}
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item \mbox{[}!include\doxylink{vs-return-unity_8md}{return-\/unity}\mbox{]}
+\item Do one of the following\+:
+\begin{DoxyItemize}
+\item \mbox{[}!include\doxylink{vs-open-graph-w-node_8md}{open-\/graph-\/w-\/node}\mbox{]}.
+\item \mbox{[}!include\doxylink{vs-ff-add-node_8md}{ff-\/add-\/node}\mbox{]}
+\end{DoxyItemize}
+\item Select the node and open the \href{vs-interface-overview.md\#the-graph-inspector}{\texttt{ Graph Inspector}} to view your documentation.
+
+
+\end{DoxyEnumerate}\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create-custom-node-add-docs_autotoc_md1742}{}\doxysection{\texorpdfstring{Next steps}{Next steps}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create-custom-node-add-docs_autotoc_md1742}
+After you add documentation to a node, you can choose to further customize the node with \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create3336f87366c0cc1e970200c966432893}{node class and port attributes}{0}. 

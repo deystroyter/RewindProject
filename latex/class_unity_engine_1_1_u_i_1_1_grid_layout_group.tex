@@ -1,0 +1,439 @@
+\doxysection{Unity\+Engine.\+UI.\+Grid\+Layout\+Group Class Reference}
+\hypertarget{class_unity_engine_1_1_u_i_1_1_grid_layout_group}{}\label{class_unity_engine_1_1_u_i_1_1_grid_layout_group}\index{UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}}
+
+
+Layout class to arrange child elements in a grid format.  
+
+
+Inheritance diagram for Unity\+Engine.\+UI.\+Grid\+Layout\+Group\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.085400cm]{class_unity_engine_1_1_u_i_1_1_grid_layout_group}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_a403b6d1136f718693406cf233877a281}{Corner}} \{ \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_a403b6d1136f718693406cf233877a281a6f43ca0793e0c68184761673278f4ca4}{Upper\+Left}} = 0
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_a403b6d1136f718693406cf233877a281a894d4b94cedce8501ff5165b6863ea3a}{Upper\+Right}} = 1
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_a403b6d1136f718693406cf233877a281aa8594fd8be60c94e1a2607fa0fa50fae}{Lower\+Left}} = 2
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_a403b6d1136f718693406cf233877a281a5ef0d4d135d5f2814b07feaf13fda653}{Lower\+Right}} = 3
+ \}
+\begin{DoxyCompactList}\small\item\em Which corner is the starting corner for the grid. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_ab52ffd043796d5519fff65130ad5b116}{Axis}} \{ \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_ab52ffd043796d5519fff65130ad5b116ac1b5fa03ecdb95d4a45dd1c40b02527f}{Horizontal}} = 0
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_ab52ffd043796d5519fff65130ad5b116a06ce2a25e5d12c166a36f654dbea6012}{Vertical}} = 1
+ \}
+\begin{DoxyCompactList}\small\item\em The grid axis we are looking at. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_abdfdea9128841742ea93a1587e947fb4}{Constraint}} \{ \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_abdfdea9128841742ea93a1587e947fb4a13b303a6c0d90897b5375ce901acc445}{Flexible}} = 0
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_abdfdea9128841742ea93a1587e947fb4ab59c8d36a44032abe1b976f25662e904}{Fixed\+Column\+Count}} = 1
+, \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_abdfdea9128841742ea93a1587e947fb4a5ef56f0da4ec25a54efa897a25842174}{Fixed\+Row\+Count}} = 2
+ \}
+\begin{DoxyCompactList}\small\item\em Constraint type on either the number of columns or rows. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_ad4bd80df4950d497ccc9476f09d08e5b}{Calculate\+Layout\+Input\+Horizontal}} ()
+\begin{DoxyCompactList}\small\item\em Called by the layout system to calculate the horizontal layout size. Also see ILayout\+Element. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_ab28466e280164bcde2a2eb046c088911}{Calculate\+Layout\+Input\+Vertical}} ()
+\begin{DoxyCompactList}\small\item\em Called by the layout system to calculate the vertical layout size. Also see ILayout\+Element. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_a1cdba1355d46027c7398f5b40b20cc02}{Set\+Layout\+Horizontal}} ()
+\begin{DoxyCompactList}\small\item\em Called by the layout system Also see ILayout\+Element. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_aa639a03a0ea5812aef0b7299bfe7bcd0}{Set\+Layout\+Vertical}} ()
+\begin{DoxyCompactList}\small\item\em Called by the layout system Also see ILayout\+Element. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group}{Unity\+Engine.\+UI.\+Layout\+Group}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_a9b22d72d7a3cd770bc1f26022aca48f2}{Calculate\+Layout\+Input\+Vertical}} ()
+\begin{DoxyCompactList}\small\item\em After this method is invoked, layout vertical input properties should return up-\/to-\/date values. Children will already have up-\/to-\/date layout vertical inputs when this methods is called. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_a590df4922b26f194def6dbc75f56e22e}{Set\+Layout\+Horizontal}} ()
+\begin{DoxyCompactList}\small\item\em Callback invoked by the auto layout system which handles horizontal aspects of the layout. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_a638a7ae8955ee4a04aac31a6763d2b42}{Set\+Layout\+Vertical}} ()
+\begin{DoxyCompactList}\small\item\em Callback invoked by the auto layout system which handles vertical aspects of the layout. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour}{Unity\+Engine.\+Event\+Systems.\+UIBehaviour}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_ac3b9d503ad9eb607e691775b2c680d08}{Is\+Active}} ()
+\begin{DoxyCompactList}\small\item\em Returns true if the Game\+Object and the Component are active. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_a1b4d2b6956ce44150ae96433d1d15e8f}{Is\+Destroyed}} ()
+\begin{DoxyCompactList}\small\item\em Returns true if the native representation of the behaviour has been destroyed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_ab092f09938c4bc9d57f4704e61444c80}{Grid\+Layout\+Group}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group}{Unity\+Engine.\+UI.\+Layout\+Group}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_a83b898a4daeaa4b60d0ea164f4fcd6ad}{Layout\+Group}} ()
+\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_a34b80e4e9d2a4e0fbfe0a10b8dfac007}{On\+Enable}} ()
+\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_a8275e09ae52cf114f2eea250c7d814e2}{On\+Disable}} ()
+\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_af2dbb52ea3181cf869ae9cf8e4d37b8e}{On\+Did\+Apply\+Animation\+Properties}} ()
+\begin{DoxyCompactList}\small\item\em Callback for when properties have been changed by animation. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_a0a51f38c2ba128840a0beaeb075d6562}{Get\+Total\+Min\+Size}} (int axis)
+\begin{DoxyCompactList}\small\item\em The min size for the layout group on the given axis. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_af466b9e643828030937bbac84077b1b3}{Get\+Total\+Preferred\+Size}} (int axis)
+\begin{DoxyCompactList}\small\item\em The preferred size for the layout group on the given axis. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_a44d0491c06cb47c5db7020b2cd93224f}{Get\+Total\+Flexible\+Size}} (int axis)
+\begin{DoxyCompactList}\small\item\em The flexible size for the layout group on the given axis. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_a6e6b2d5488ac9d3a0023e2328260efcf}{Get\+Start\+Offset}} (int axis, float required\+Space\+Without\+Padding)
+\begin{DoxyCompactList}\small\item\em Returns the calculated position of the first child layout element along the given axis. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_a3c425bc59e53bca743a5e50ef494b92a}{Get\+Alignment\+On\+Axis}} (int axis)
+\begin{DoxyCompactList}\small\item\em Returns the alignment on the specified axis as a fraction where 0 is left/top, 0.\+5 is middle, and 1 is right/bottom. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_a6a091521efd71c3a4cfb82e42ea4a713}{Set\+Layout\+Input\+For\+Axis}} (float total\+Min, float total\+Preferred, float total\+Flexible, int axis)
+\begin{DoxyCompactList}\small\item\em Used to set the calculated layout properties for the given axis. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_a3c48c66c95d94ae8328dc71ee65344c0}{Set\+Child\+Along\+Axis}} (Rect\+Transform rect, int axis, float pos)
+\begin{DoxyCompactList}\small\item\em Set the position and size of a child layout element along the given axis. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_ad23548e64198cd88fb65f6c00e58d032}{Set\+Child\+Along\+Axis\+With\+Scale}} (Rect\+Transform rect, int axis, float pos, float scale\+Factor)
+\begin{DoxyCompactList}\small\item\em Set the position and size of a child layout element along the given axis. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_a5d2a30293dfce8a007ae6904e692a415}{Set\+Child\+Along\+Axis}} (Rect\+Transform rect, int axis, float pos, float size)
+\begin{DoxyCompactList}\small\item\em Set the position and size of a child layout element along the given axis. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_ab95ad26a490bbc0c79685058c07290e1}{Set\+Child\+Along\+Axis\+With\+Scale}} (Rect\+Transform rect, int axis, float pos, float size, float scale\+Factor)
+\begin{DoxyCompactList}\small\item\em Set the position and size of a child layout element along the given axis. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_a6219a761156aec0bc5a2bd240b04eb19}{On\+Rect\+Transform\+Dimensions\+Change}} ()
+\begin{DoxyCompactList}\small\item\em This callback is called when the dimensions of an associated Rect\+Transform change. It is always called before Awake, On\+Enable, or Start. The call is also made to all child Rect\+Transforms, regardless of whether their dimensions change (which depends on how they are anchored). \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_ad3c6a58cbb4ba1998c275d516bfa12e1}{On\+Transform\+Children\+Changed}} ()
+\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_adf54836016cf119d6ab5f4a478464534}{Set\+Property$<$ T $>$}} (ref T current\+Value, T new\+Value)
+\begin{DoxyCompactList}\small\item\em Helper method used to set a given property if it has changed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_a76d1c0ccf54705406e0f27f49f8fd8bd}{Set\+Dirty}} ()
+\begin{DoxyCompactList}\small\item\em Mark the Layout\+Group as dirty. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour}{Unity\+Engine.\+Event\+Systems.\+UIBehaviour}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_a1235b9fe2fae01d3a2fc407166e0fa41}{Awake}} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_ad9097dfd9b409602fc182c1b790600ea}{Start}} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_a3eaa412ca986ca777a4d7b9654c1f3d4}{On\+Destroy}} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_ac9eba6c0a20f81ea61f6e760b6df5d83}{On\+Before\+Transform\+Parent\+Changed}} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_a6ed51ea799aa1a343e0e847255dfd3cd}{On\+Transform\+Parent\+Changed}} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_aa47d9812b94689b322fa7370fa47f5ca}{On\+Canvas\+Group\+Changed}} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_engine_1_1_event_systems_1_1_u_i_behaviour_a73f180fef8560a44a756525ecfe3092f}{On\+Canvas\+Hierarchy\+Changed}} ()
+\begin{DoxyCompactList}\small\item\em Called when the state of the parent Canvas is changed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_a403b6d1136f718693406cf233877a281}{Corner}} \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_a245a67434e0bd06503bfec893da5abd5}{m\+\_\+\+Start\+Corner}} = \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_a403b6d1136f718693406cf233877a281a6f43ca0793e0c68184761673278f4ca4}{Corner.\+Upper\+Left}}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_ab52ffd043796d5519fff65130ad5b116}{Axis}} \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_ae6b6d383c9ab78df9eed41bf5e362ae3}{m\+\_\+\+Start\+Axis}} = \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_ab52ffd043796d5519fff65130ad5b116ac1b5fa03ecdb95d4a45dd1c40b02527f}{Axis.\+Horizontal}}
+\item 
+Vector2 \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_a5f75042dc62fb6698eede21bcf614d65}{m\+\_\+\+Cell\+Size}} = new Vector2(100, 100)
+\item 
+Vector2 \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_a1bbd36d3f744f122e0548d49ec75b173}{m\+\_\+\+Spacing}} = Vector2.\+zero
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_abdfdea9128841742ea93a1587e947fb4}{Constraint}} \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_a145bd6f60abf3649721ec4b3c6193e14}{m\+\_\+\+Constraint}} = \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_abdfdea9128841742ea93a1587e947fb4a13b303a6c0d90897b5375ce901acc445}{Constraint.\+Flexible}}
+\item 
+int \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_a66550014f93f29d474b86e40837a72c9}{m\+\_\+\+Constraint\+Count}} = 2
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group}{Unity\+Engine.\+UI.\+Layout\+Group}}}
+\begin{DoxyCompactItemize}
+\item 
+Rect\+Offset \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_a781b67e0f8db6891bdb9593a8934637a}{m\+\_\+\+Padding}} = new Rect\+Offset()
+\item 
+Text\+Anchor \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_aa092e21c757918101de0a1b87f096e20}{m\+\_\+\+Child\+Alignment}} = Text\+Anchor.\+Upper\+Left
+\item 
+Driven\+Rect\+Transform\+Tracker \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_ad93dbccd6f5b29f14f3ec4756480fc10}{m\+\_\+\+Tracker}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_a403b6d1136f718693406cf233877a281}{Corner}} \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_a5f50abcee38f65050d634d77ae8b48ed}{start\+Corner}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Which corner should the first cell be placed in? \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_ab52ffd043796d5519fff65130ad5b116}{Axis}} \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_a4b93ebc93dfef735d64191a1c76bc437}{start\+Axis}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Which axis should cells be placed along first. \end{DoxyCompactList}\item 
+Vector2 \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_ad58d410409f40df9f497853212f5ad5d}{cell\+Size}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The size to use for each cell in the grid. \end{DoxyCompactList}\item 
+Vector2 \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_a5bf9bded68121bfcf61b03c2d5810c0e}{spacing}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The spacing to use between layout elements in the grid on both axises. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_abdfdea9128841742ea93a1587e947fb4}{Constraint}} \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_ad6ae0f9a06c2dad4c1566c917f8a1f68}{constraint}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Which constraint to use for the Grid\+Layout\+Group. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_a684f0a3e93b74740509d63107d9edbcf}{constraint\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em How many cells there should be along the constrained axis. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group}{Unity\+Engine.\+UI.\+Layout\+Group}}}
+\begin{DoxyCompactItemize}
+\item 
+Rect\+Offset \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_a6293eec9fc0c79bea5e512a80f7f3467}{padding}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The padding to add around the child layout elements. \end{DoxyCompactList}\item 
+Text\+Anchor \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_a01a59b5b0b0fb8af0811a0805f0bd646}{child\+Alignment}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The alignment to use for the child layout elements in the layout group. \end{DoxyCompactList}\item 
+Rect\+Transform \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_a24ab4ac4fda631d0e8f1a8b9293e1a07}{rect\+Transform}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+List$<$ Rect\+Transform $>$ \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_a1144491073344d23005cf2490ec3ad21}{rect\+Children}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+virtual float \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_ab56f77c9aa4fc69d2addca446d0cf8a0}{min\+Width}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em See Layout\+Element.\+min\+Width. \end{DoxyCompactList}\item 
+virtual float \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_a5e6333a178f52de8a99c3cfb63a4a50c}{preferred\+Width}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em See Layout\+Element.\+preferred\+Width. \end{DoxyCompactList}\item 
+virtual float \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_a90da1287a15ea77bf893ccb634dbbdd0}{flexible\+Width}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em See Layout\+Element.\+flexible\+Width. \end{DoxyCompactList}\item 
+virtual float \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_a44c5189a988c93a8706a404c33470435}{min\+Height}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em See Layout\+Element.\+min\+Height. \end{DoxyCompactList}\item 
+virtual float \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_ac6d61ed614db1f11aeef16a67c7a1ab4}{preferred\+Height}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em See Layout\+Element.\+preferred\+Height. \end{DoxyCompactList}\item 
+virtual float \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_a114825432b1eeb0a490b4eeb266881a1}{flexible\+Height}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em See Layout\+Element.\+flexible\+Height. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_a9faa8f52026a2db90605b307e53849c8}{layout\+Priority}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em See Layout\+Element.\+layout\+Priority. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element}{Unity\+Engine.\+UI.\+ILayout\+Element}}}
+
+
+\doxysubsection{Detailed Description}
+Layout class to arrange child elements in a grid format. 
+
+The Grid\+Layout\+Group component is used to layout child layout elements in a uniform grid where all cells have the same size. The size and the spacing between cells is controlled by the Grid\+Layout\+Group itself. The children have no influence on their sizes. 
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_unity_engine_1_1_u_i_1_1_grid_layout_group_ab52ffd043796d5519fff65130ad5b116}\label{class_unity_engine_1_1_u_i_1_1_grid_layout_group_ab52ffd043796d5519fff65130ad5b116} 
+\index{UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}!Axis@{Axis}}
+\index{Axis@{Axis}!UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}}
+\doxysubsubsection{\texorpdfstring{Axis}{Axis}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_ab52ffd043796d5519fff65130ad5b116}{Unity\+Engine.\+UI.\+Grid\+Layout\+Group.\+Axis}}}
+
+
+
+The grid axis we are looking at. 
+
+As the storage is a \mbox{[}\mbox{]}\mbox{[}\mbox{]} we make access easier by passing a axis. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Horizontal@{Horizontal}!UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}}\index{UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}!Horizontal@{Horizontal}}}\Hypertarget{class_unity_engine_1_1_u_i_1_1_grid_layout_group_ab52ffd043796d5519fff65130ad5b116ac1b5fa03ecdb95d4a45dd1c40b02527f}\label{class_unity_engine_1_1_u_i_1_1_grid_layout_group_ab52ffd043796d5519fff65130ad5b116ac1b5fa03ecdb95d4a45dd1c40b02527f} 
+Horizontal&Horizontal axis. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Vertical@{Vertical}!UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}}\index{UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}!Vertical@{Vertical}}}\Hypertarget{class_unity_engine_1_1_u_i_1_1_grid_layout_group_ab52ffd043796d5519fff65130ad5b116a06ce2a25e5d12c166a36f654dbea6012}\label{class_unity_engine_1_1_u_i_1_1_grid_layout_group_ab52ffd043796d5519fff65130ad5b116a06ce2a25e5d12c166a36f654dbea6012} 
+Vertical&Vertical axis. \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{class_unity_engine_1_1_u_i_1_1_grid_layout_group_abdfdea9128841742ea93a1587e947fb4}\label{class_unity_engine_1_1_u_i_1_1_grid_layout_group_abdfdea9128841742ea93a1587e947fb4} 
+\index{UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}!Constraint@{Constraint}}
+\index{Constraint@{Constraint}!UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}}
+\doxysubsubsection{\texorpdfstring{Constraint}{Constraint}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_abdfdea9128841742ea93a1587e947fb4}{Unity\+Engine.\+UI.\+Grid\+Layout\+Group.\+Constraint}}}
+
+
+
+Constraint type on either the number of columns or rows. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Flexible@{Flexible}!UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}}\index{UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}!Flexible@{Flexible}}}\Hypertarget{class_unity_engine_1_1_u_i_1_1_grid_layout_group_abdfdea9128841742ea93a1587e947fb4a13b303a6c0d90897b5375ce901acc445}\label{class_unity_engine_1_1_u_i_1_1_grid_layout_group_abdfdea9128841742ea93a1587e947fb4a13b303a6c0d90897b5375ce901acc445} 
+Flexible&Don\textquotesingle{}t constrain the number of rows or columns. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FixedColumnCount@{FixedColumnCount}!UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}}\index{UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}!FixedColumnCount@{FixedColumnCount}}}\Hypertarget{class_unity_engine_1_1_u_i_1_1_grid_layout_group_abdfdea9128841742ea93a1587e947fb4ab59c8d36a44032abe1b976f25662e904}\label{class_unity_engine_1_1_u_i_1_1_grid_layout_group_abdfdea9128841742ea93a1587e947fb4ab59c8d36a44032abe1b976f25662e904} 
+Fixed\+Column\+Count&Constrain the number of columns to a specified number. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FixedRowCount@{FixedRowCount}!UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}}\index{UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}!FixedRowCount@{FixedRowCount}}}\Hypertarget{class_unity_engine_1_1_u_i_1_1_grid_layout_group_abdfdea9128841742ea93a1587e947fb4a5ef56f0da4ec25a54efa897a25842174}\label{class_unity_engine_1_1_u_i_1_1_grid_layout_group_abdfdea9128841742ea93a1587e947fb4a5ef56f0da4ec25a54efa897a25842174} 
+Fixed\+Row\+Count&Constraint the number of rows to a specified number. \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{class_unity_engine_1_1_u_i_1_1_grid_layout_group_a403b6d1136f718693406cf233877a281}\label{class_unity_engine_1_1_u_i_1_1_grid_layout_group_a403b6d1136f718693406cf233877a281} 
+\index{UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}!Corner@{Corner}}
+\index{Corner@{Corner}!UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}}
+\doxysubsubsection{\texorpdfstring{Corner}{Corner}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_a403b6d1136f718693406cf233877a281}{Unity\+Engine.\+UI.\+Grid\+Layout\+Group.\+Corner}}}
+
+
+
+Which corner is the starting corner for the grid. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UpperLeft@{UpperLeft}!UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}}\index{UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}!UpperLeft@{UpperLeft}}}\Hypertarget{class_unity_engine_1_1_u_i_1_1_grid_layout_group_a403b6d1136f718693406cf233877a281a6f43ca0793e0c68184761673278f4ca4}\label{class_unity_engine_1_1_u_i_1_1_grid_layout_group_a403b6d1136f718693406cf233877a281a6f43ca0793e0c68184761673278f4ca4} 
+Upper\+Left&Upper Left corner. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UpperRight@{UpperRight}!UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}}\index{UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}!UpperRight@{UpperRight}}}\Hypertarget{class_unity_engine_1_1_u_i_1_1_grid_layout_group_a403b6d1136f718693406cf233877a281a894d4b94cedce8501ff5165b6863ea3a}\label{class_unity_engine_1_1_u_i_1_1_grid_layout_group_a403b6d1136f718693406cf233877a281a894d4b94cedce8501ff5165b6863ea3a} 
+Upper\+Right&Upper Right corner. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LowerLeft@{LowerLeft}!UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}}\index{UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}!LowerLeft@{LowerLeft}}}\Hypertarget{class_unity_engine_1_1_u_i_1_1_grid_layout_group_a403b6d1136f718693406cf233877a281aa8594fd8be60c94e1a2607fa0fa50fae}\label{class_unity_engine_1_1_u_i_1_1_grid_layout_group_a403b6d1136f718693406cf233877a281aa8594fd8be60c94e1a2607fa0fa50fae} 
+Lower\+Left&Lower Left corner. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LowerRight@{LowerRight}!UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}}\index{UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}!LowerRight@{LowerRight}}}\Hypertarget{class_unity_engine_1_1_u_i_1_1_grid_layout_group_a403b6d1136f718693406cf233877a281a5ef0d4d135d5f2814b07feaf13fda653}\label{class_unity_engine_1_1_u_i_1_1_grid_layout_group_a403b6d1136f718693406cf233877a281a5ef0d4d135d5f2814b07feaf13fda653} 
+Lower\+Right&Lower Right corner. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_unity_engine_1_1_u_i_1_1_grid_layout_group_ab092f09938c4bc9d57f4704e61444c80}\label{class_unity_engine_1_1_u_i_1_1_grid_layout_group_ab092f09938c4bc9d57f4704e61444c80} 
+\index{UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}!GridLayoutGroup@{GridLayoutGroup}}
+\index{GridLayoutGroup@{GridLayoutGroup}!UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}}
+\doxysubsubsection{\texorpdfstring{GridLayoutGroup()}{GridLayoutGroup()}}
+{\footnotesize\ttfamily Unity\+Engine.\+UI.\+Grid\+Layout\+Group.\+Grid\+Layout\+Group (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_engine_1_1_u_i_1_1_grid_layout_group_ad4bd80df4950d497ccc9476f09d08e5b}\label{class_unity_engine_1_1_u_i_1_1_grid_layout_group_ad4bd80df4950d497ccc9476f09d08e5b} 
+\index{UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}!CalculateLayoutInputHorizontal@{CalculateLayoutInputHorizontal}}
+\index{CalculateLayoutInputHorizontal@{CalculateLayoutInputHorizontal}!UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}}
+\doxysubsubsection{\texorpdfstring{CalculateLayoutInputHorizontal()}{CalculateLayoutInputHorizontal()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+UI.\+Grid\+Layout\+Group.\+Calculate\+Layout\+Input\+Horizontal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called by the layout system to calculate the horizontal layout size. Also see ILayout\+Element. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_layout_group_acaff989057730feb143801736840ee05}{Unity\+Engine.\+UI.\+Layout\+Group}}.
+
+\Hypertarget{class_unity_engine_1_1_u_i_1_1_grid_layout_group_ab28466e280164bcde2a2eb046c088911}\label{class_unity_engine_1_1_u_i_1_1_grid_layout_group_ab28466e280164bcde2a2eb046c088911} 
+\index{UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}!CalculateLayoutInputVertical@{CalculateLayoutInputVertical}}
+\index{CalculateLayoutInputVertical@{CalculateLayoutInputVertical}!UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}}
+\doxysubsubsection{\texorpdfstring{CalculateLayoutInputVertical()}{CalculateLayoutInputVertical()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+UI.\+Grid\+Layout\+Group.\+Calculate\+Layout\+Input\+Vertical (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Called by the layout system to calculate the vertical layout size. Also see ILayout\+Element. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_element_a1e0f42ff8a350a7996b1ebfacdac2b0b}{Unity\+Engine.\+UI.\+ILayout\+Element}}.
+
+\Hypertarget{class_unity_engine_1_1_u_i_1_1_grid_layout_group_a1cdba1355d46027c7398f5b40b20cc02}\label{class_unity_engine_1_1_u_i_1_1_grid_layout_group_a1cdba1355d46027c7398f5b40b20cc02} 
+\index{UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}!SetLayoutHorizontal@{SetLayoutHorizontal}}
+\index{SetLayoutHorizontal@{SetLayoutHorizontal}!UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}}
+\doxysubsubsection{\texorpdfstring{SetLayoutHorizontal()}{SetLayoutHorizontal()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+UI.\+Grid\+Layout\+Group.\+Set\+Layout\+Horizontal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Called by the layout system Also see ILayout\+Element. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_controller_a95b624c7b7e9cc77de533391420aef66}{Unity\+Engine.\+UI.\+ILayout\+Controller}}.
+
+\Hypertarget{class_unity_engine_1_1_u_i_1_1_grid_layout_group_aa639a03a0ea5812aef0b7299bfe7bcd0}\label{class_unity_engine_1_1_u_i_1_1_grid_layout_group_aa639a03a0ea5812aef0b7299bfe7bcd0} 
+\index{UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}!SetLayoutVertical@{SetLayoutVertical}}
+\index{SetLayoutVertical@{SetLayoutVertical}!UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}}
+\doxysubsubsection{\texorpdfstring{SetLayoutVertical()}{SetLayoutVertical()}}
+{\footnotesize\ttfamily override void Unity\+Engine.\+UI.\+Grid\+Layout\+Group.\+Set\+Layout\+Vertical (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Called by the layout system Also see ILayout\+Element. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_u_i_1_1_i_layout_controller_a3a661d763b5fd014a3b5bb05c133eb77}{Unity\+Engine.\+UI.\+ILayout\+Controller}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_unity_engine_1_1_u_i_1_1_grid_layout_group_a5f75042dc62fb6698eede21bcf614d65}\label{class_unity_engine_1_1_u_i_1_1_grid_layout_group_a5f75042dc62fb6698eede21bcf614d65} 
+\index{UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}!m\_CellSize@{m\_CellSize}}
+\index{m\_CellSize@{m\_CellSize}!UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}}
+\doxysubsubsection{\texorpdfstring{m\_CellSize}{m\_CellSize}}
+{\footnotesize\ttfamily Vector2 Unity\+Engine.\+UI.\+Grid\+Layout\+Group.\+m\+\_\+\+Cell\+Size = new Vector2(100, 100)\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_unity_engine_1_1_u_i_1_1_grid_layout_group_a145bd6f60abf3649721ec4b3c6193e14}\label{class_unity_engine_1_1_u_i_1_1_grid_layout_group_a145bd6f60abf3649721ec4b3c6193e14} 
+\index{UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}!m\_Constraint@{m\_Constraint}}
+\index{m\_Constraint@{m\_Constraint}!UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}}
+\doxysubsubsection{\texorpdfstring{m\_Constraint}{m\_Constraint}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_abdfdea9128841742ea93a1587e947fb4}{Constraint}} Unity\+Engine.\+UI.\+Grid\+Layout\+Group.\+m\+\_\+\+Constraint = \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_abdfdea9128841742ea93a1587e947fb4a13b303a6c0d90897b5375ce901acc445}{Constraint.\+Flexible}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_unity_engine_1_1_u_i_1_1_grid_layout_group_a66550014f93f29d474b86e40837a72c9}\label{class_unity_engine_1_1_u_i_1_1_grid_layout_group_a66550014f93f29d474b86e40837a72c9} 
+\index{UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}!m\_ConstraintCount@{m\_ConstraintCount}}
+\index{m\_ConstraintCount@{m\_ConstraintCount}!UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}}
+\doxysubsubsection{\texorpdfstring{m\_ConstraintCount}{m\_ConstraintCount}}
+{\footnotesize\ttfamily int Unity\+Engine.\+UI.\+Grid\+Layout\+Group.\+m\+\_\+\+Constraint\+Count = 2\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_unity_engine_1_1_u_i_1_1_grid_layout_group_a1bbd36d3f744f122e0548d49ec75b173}\label{class_unity_engine_1_1_u_i_1_1_grid_layout_group_a1bbd36d3f744f122e0548d49ec75b173} 
+\index{UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}!m\_Spacing@{m\_Spacing}}
+\index{m\_Spacing@{m\_Spacing}!UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}}
+\doxysubsubsection{\texorpdfstring{m\_Spacing}{m\_Spacing}}
+{\footnotesize\ttfamily Vector2 Unity\+Engine.\+UI.\+Grid\+Layout\+Group.\+m\+\_\+\+Spacing = Vector2.\+zero\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_unity_engine_1_1_u_i_1_1_grid_layout_group_ae6b6d383c9ab78df9eed41bf5e362ae3}\label{class_unity_engine_1_1_u_i_1_1_grid_layout_group_ae6b6d383c9ab78df9eed41bf5e362ae3} 
+\index{UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}!m\_StartAxis@{m\_StartAxis}}
+\index{m\_StartAxis@{m\_StartAxis}!UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}}
+\doxysubsubsection{\texorpdfstring{m\_StartAxis}{m\_StartAxis}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_ab52ffd043796d5519fff65130ad5b116}{Axis}} Unity\+Engine.\+UI.\+Grid\+Layout\+Group.\+m\+\_\+\+Start\+Axis = \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_ab52ffd043796d5519fff65130ad5b116ac1b5fa03ecdb95d4a45dd1c40b02527f}{Axis.\+Horizontal}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_unity_engine_1_1_u_i_1_1_grid_layout_group_a245a67434e0bd06503bfec893da5abd5}\label{class_unity_engine_1_1_u_i_1_1_grid_layout_group_a245a67434e0bd06503bfec893da5abd5} 
+\index{UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}!m\_StartCorner@{m\_StartCorner}}
+\index{m\_StartCorner@{m\_StartCorner}!UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}}
+\doxysubsubsection{\texorpdfstring{m\_StartCorner}{m\_StartCorner}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_a403b6d1136f718693406cf233877a281}{Corner}} Unity\+Engine.\+UI.\+Grid\+Layout\+Group.\+m\+\_\+\+Start\+Corner = \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_a403b6d1136f718693406cf233877a281a6f43ca0793e0c68184761673278f4ca4}{Corner.\+Upper\+Left}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_unity_engine_1_1_u_i_1_1_grid_layout_group_ad58d410409f40df9f497853212f5ad5d}\label{class_unity_engine_1_1_u_i_1_1_grid_layout_group_ad58d410409f40df9f497853212f5ad5d} 
+\index{UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}!cellSize@{cellSize}}
+\index{cellSize@{cellSize}!UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}}
+\doxysubsubsection{\texorpdfstring{cellSize}{cellSize}}
+{\footnotesize\ttfamily Vector2 Unity\+Engine.\+UI.\+Grid\+Layout\+Group.\+cell\+Size\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The size to use for each cell in the grid. 
+
+\Hypertarget{class_unity_engine_1_1_u_i_1_1_grid_layout_group_ad6ae0f9a06c2dad4c1566c917f8a1f68}\label{class_unity_engine_1_1_u_i_1_1_grid_layout_group_ad6ae0f9a06c2dad4c1566c917f8a1f68} 
+\index{UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}!constraint@{constraint}}
+\index{constraint@{constraint}!UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}}
+\doxysubsubsection{\texorpdfstring{constraint}{constraint}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_abdfdea9128841742ea93a1587e947fb4}{Constraint}} Unity\+Engine.\+UI.\+Grid\+Layout\+Group.\+constraint\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Which constraint to use for the Grid\+Layout\+Group. 
+
+Specifying a constraint can make the Grid\+Layout\+Group work better in conjunction with a \mbox{[}\mbox{[}Content\+Size\+Fitter\mbox{]}\mbox{]} component. When Grid\+Layout\+Group is used on a Rect\+Transform with a manually specified size, there\textquotesingle{}s no need to specify a constraint. \Hypertarget{class_unity_engine_1_1_u_i_1_1_grid_layout_group_a684f0a3e93b74740509d63107d9edbcf}\label{class_unity_engine_1_1_u_i_1_1_grid_layout_group_a684f0a3e93b74740509d63107d9edbcf} 
+\index{UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}!constraintCount@{constraintCount}}
+\index{constraintCount@{constraintCount}!UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}}
+\doxysubsubsection{\texorpdfstring{constraintCount}{constraintCount}}
+{\footnotesize\ttfamily int Unity\+Engine.\+UI.\+Grid\+Layout\+Group.\+constraint\+Count\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+How many cells there should be along the constrained axis. 
+
+\Hypertarget{class_unity_engine_1_1_u_i_1_1_grid_layout_group_a5bf9bded68121bfcf61b03c2d5810c0e}\label{class_unity_engine_1_1_u_i_1_1_grid_layout_group_a5bf9bded68121bfcf61b03c2d5810c0e} 
+\index{UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}!spacing@{spacing}}
+\index{spacing@{spacing}!UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}}
+\doxysubsubsection{\texorpdfstring{spacing}{spacing}}
+{\footnotesize\ttfamily Vector2 Unity\+Engine.\+UI.\+Grid\+Layout\+Group.\+spacing\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The spacing to use between layout elements in the grid on both axises. 
+
+\Hypertarget{class_unity_engine_1_1_u_i_1_1_grid_layout_group_a4b93ebc93dfef735d64191a1c76bc437}\label{class_unity_engine_1_1_u_i_1_1_grid_layout_group_a4b93ebc93dfef735d64191a1c76bc437} 
+\index{UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}!startAxis@{startAxis}}
+\index{startAxis@{startAxis}!UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}}
+\doxysubsubsection{\texorpdfstring{startAxis}{startAxis}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_ab52ffd043796d5519fff65130ad5b116}{Axis}} Unity\+Engine.\+UI.\+Grid\+Layout\+Group.\+start\+Axis\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Which axis should cells be placed along first. 
+
+When start\+Axis is set to horizontal, an entire row will be filled out before proceeding to the next row. When set to vertical, an entire column will be filled out before proceeding to the next column. \Hypertarget{class_unity_engine_1_1_u_i_1_1_grid_layout_group_a5f50abcee38f65050d634d77ae8b48ed}\label{class_unity_engine_1_1_u_i_1_1_grid_layout_group_a5f50abcee38f65050d634d77ae8b48ed} 
+\index{UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}!startCorner@{startCorner}}
+\index{startCorner@{startCorner}!UnityEngine.UI.GridLayoutGroup@{UnityEngine.UI.GridLayoutGroup}}
+\doxysubsubsection{\texorpdfstring{startCorner}{startCorner}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_engine_1_1_u_i_1_1_grid_layout_group_a403b6d1136f718693406cf233877a281}{Corner}} Unity\+Engine.\+UI.\+Grid\+Layout\+Group.\+start\+Corner\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Which corner should the first cell be placed in? 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Package\+Cache/com.\+unity.\+ugui@1.\+0.\+0/\+Runtime/\+UI/\+Core/\+Layout/\mbox{\hyperlink{_grid_layout_group_8cs}{Grid\+Layout\+Group.\+cs}}\end{DoxyCompactItemize}

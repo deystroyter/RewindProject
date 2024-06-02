@@ -1,0 +1,62 @@
+\doxysection{Library/\+Package\+Cache/com.unity.\+ide.\+visualstudio@2.0.22/\+Editor/\+COMIntegration/\+COMIntegration\texorpdfstring{$\sim$}{\string~}/\+COMIntegration.cpp File Reference}
+\hypertarget{_c_o_m_integration_8cpp}{}\label{_c_o_m_integration_8cpp}\index{Library/PackageCache/com.unity.ide.visualstudio"@2.0.22/Editor/COMIntegration/COMIntegration\texorpdfstring{$\sim$}{\string~}/COMIntegration.cpp@{Library/PackageCache/com.unity.ide.visualstudio"@2.0.22/Editor/COMIntegration/COMIntegration\texorpdfstring{$\sim$}{\string~}/COMIntegration.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$filesystem$>$}\newline
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include $<$shlwapi.\+h$>$}\newline
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \#include $<$io.\+h$>$}\newline
+{\ttfamily \#include "{}BStr\+Holder.\+h"{}}\newline
+{\ttfamily \#include "{}Com\+Ptr.\+h"{}}\newline
+{\ttfamily \#include "{}dte80a.\+tlh"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_c_retry_message_filter}{CRetry\+Message\+Filter}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::wstring \mbox{\hyperlink{_c_o_m_integration_8cpp_a762debc6c60f4ebb8562e7c5cbd0586a}{Quote\+String}} (const std\+::wstring \&str)
+\item 
+int \mbox{\hyperlink{_c_o_m_integration_8cpp_ae1325efcce4a4b1b4ea52247f0a0a0c1}{wmain}} (int argc, wchar\+\_\+t \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr int \mbox{\hyperlink{_c_o_m_integration_8cpp_aa9e4d2f07afef3c2269315f9aebcdfbe}{RETRY\+\_\+\+INTERVAL\+\_\+\+MS}} = 150
+\item 
+constexpr int \mbox{\hyperlink{_c_o_m_integration_8cpp_a3ba39dd2e759bb75ccb5787bca51a590}{TIMEOUT\+\_\+\+MS}} = 10000
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_c_o_m_integration_8cpp_a762debc6c60f4ebb8562e7c5cbd0586a}\label{_c_o_m_integration_8cpp_a762debc6c60f4ebb8562e7c5cbd0586a} 
+\index{COMIntegration.cpp@{COMIntegration.cpp}!QuoteString@{QuoteString}}
+\index{QuoteString@{QuoteString}!COMIntegration.cpp@{COMIntegration.cpp}}
+\doxysubsubsection{\texorpdfstring{QuoteString()}{QuoteString()}}
+{\footnotesize\ttfamily const std\+::wstring Quote\+String (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{str }\end{DoxyParamCaption})}
+
+\Hypertarget{_c_o_m_integration_8cpp_ae1325efcce4a4b1b4ea52247f0a0a0c1}\label{_c_o_m_integration_8cpp_ae1325efcce4a4b1b4ea52247f0a0a0c1} 
+\index{COMIntegration.cpp@{COMIntegration.cpp}!wmain@{wmain}}
+\index{wmain@{wmain}!COMIntegration.cpp@{COMIntegration.cpp}}
+\doxysubsubsection{\texorpdfstring{wmain()}{wmain()}}
+{\footnotesize\ttfamily int wmain (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{wchar\+\_\+t \texorpdfstring{$\ast$}{*}}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{_c_o_m_integration_8cpp_aa9e4d2f07afef3c2269315f9aebcdfbe}\label{_c_o_m_integration_8cpp_aa9e4d2f07afef3c2269315f9aebcdfbe} 
+\index{COMIntegration.cpp@{COMIntegration.cpp}!RETRY\_INTERVAL\_MS@{RETRY\_INTERVAL\_MS}}
+\index{RETRY\_INTERVAL\_MS@{RETRY\_INTERVAL\_MS}!COMIntegration.cpp@{COMIntegration.cpp}}
+\doxysubsubsection{\texorpdfstring{RETRY\_INTERVAL\_MS}{RETRY\_INTERVAL\_MS}}
+{\footnotesize\ttfamily constexpr int RETRY\+\_\+\+INTERVAL\+\_\+\+MS = 150\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\Hypertarget{_c_o_m_integration_8cpp_a3ba39dd2e759bb75ccb5787bca51a590}\label{_c_o_m_integration_8cpp_a3ba39dd2e759bb75ccb5787bca51a590} 
+\index{COMIntegration.cpp@{COMIntegration.cpp}!TIMEOUT\_MS@{TIMEOUT\_MS}}
+\index{TIMEOUT\_MS@{TIMEOUT\_MS}!COMIntegration.cpp@{COMIntegration.cpp}}
+\doxysubsubsection{\texorpdfstring{TIMEOUT\_MS}{TIMEOUT\_MS}}
+{\footnotesize\ttfamily constexpr int TIMEOUT\+\_\+\+MS = 10000\hspace{0.3cm}{\ttfamily [constexpr]}}
+

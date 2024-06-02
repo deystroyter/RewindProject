@@ -1,0 +1,25 @@
+\chapter{Profile Analyzer}
+\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_r_e_a_d_m_e}{}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_r_e_a_d_m_e}\index{Profile Analyzer@{Profile Analyzer}}
+\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_r_e_a_d_m_e_autotoc_md449}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_r_e_a_d_m_e_autotoc_md449}%
+ \hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_r_e_a_d_m_e_autotoc_md450}{}\doxysection{\texorpdfstring{What Is This}{What Is This}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_r_e_a_d_m_e_autotoc_md450}
+The Profile Analyzer aggregates and visualises frame and marker data from a set of \doxylink{namespace_unity}{Unity} Profiler frames to help you reason about their behaviour over a number of frames, complementing the single frame analysis already available in the \doxylink{namespace_unity}{Unity} Profiler.
+
+Features\+:
+\begin{DoxyItemize}
+\item Multi frame analysis of a single scan
+\begin{DoxyItemize}
+\item Each marker is shown with its median, min, max values over all frames, including histogram and box and whisker plots to view the distribution
+\item Various filtering options are available to limit the markers displayed by thread, call depth and name substrings.
+\item Data can be sorted for each of the displayed values.
+\end{DoxyItemize}
+\item Comparison of two multi frame profile scans
+\begin{DoxyItemize}
+\item Each marker is shown with the difference in values between the scans, including with a visualisation to help quickly identify the key differences.
+\item Supports comparison of scans from two different \doxylink{namespace_unity}{Unity} versions, or before and after an optimization is applied.
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_r_e_a_d_m_e_autotoc_md451}{}\doxysection{\texorpdfstring{How To Run}{How To Run}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_r_e_a_d_m_e_autotoc_md451}
+Add the Profile Analyzer folder to your \doxylink{namespace_unity}{Unity} project or install as a package. The \textquotesingle{}Profile Analyzer\textquotesingle{} tool is opened via the menu item below the \textquotesingle{}Window/\+Analysis\textquotesingle{} Menu in the \doxylink{namespace_unity}{Unity} menu bar (or just in the \textquotesingle{}Window\textquotesingle{} menu prior to 2018.\+1).\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_r_e_a_d_m_e_autotoc_md452}{}\doxysection{\texorpdfstring{Capturing Data}{Capturing Data}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_r_e_a_d_m_e_autotoc_md452}
+Use the standard \doxylink{namespace_unity}{Unity} Profiler to record profiling data from your application. In the Profile Analyzer pull the profiler data from the \doxylink{namespace_unity}{Unity} Profiler. The profile data will be analyzed and appear in the single view along with both sides of the Compare View. This capture can be saved as a .pdata file for later comparision or sharing with others.\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_r_e_a_d_m_e_autotoc_md453}{}\doxysection{\texorpdfstring{Comparing Two Data Sets}{Comparing Two Data Sets}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_r_e_a_d_m_e_autotoc_md453}
+Pull data or load a previous .pdata file into the Left and Right slots to compare the two sets, comparison results will instantly appear.\hypertarget{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_r_e_a_d_m_e_autotoc_md454}{}\doxysection{\texorpdfstring{More Information}{More Information}}\label{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_r_e_a_d_m_e_autotoc_md454}
+For more information on the UI and common workflows please see the \doxysectlink{md__library_2_package_cache_2com_8unity_8performance_8profile-analyzer_0d1_82_82_2_documentation_0i_2index}{full documentation}{0}. 

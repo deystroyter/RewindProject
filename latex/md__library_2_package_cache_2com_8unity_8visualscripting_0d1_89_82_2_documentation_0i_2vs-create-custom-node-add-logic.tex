@@ -1,0 +1,71 @@
+\chapter{Add logic to a Custom C\# node}
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create-custom-node-add-logic}{}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create-custom-node-add-logic}\index{Add logic to a Custom C\# node@{Add logic to a Custom C\# node}}
+\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create-custom-node-add-logic_autotoc_md1743}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create-custom-node-add-logic_autotoc_md1743}%
+ \begin{quote}
+\mbox{[}!\+NOTE\mbox{]} To add logic to a node, you must create a Custom C\# node and add ports. \mbox{[}!include\doxylink{custom-c-nodes_2vs-tasks-note-end_8md}{vs-\/tasks-\/note-\/end}\mbox{]} \end{quote}
+After you create a Custom C\# node and \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create-custom-node-add-ports}{add ports}{0}, you can add logic to a node. Add logic to tell Visual Scripting what the node does with any data it receives from its ports.
+
+To add logic to a node\+:
+
+
+\begin{DoxyEnumerate}
+\item \mbox{[}!include\doxylink{vs-open-project-window_8md}{open-\/project-\/window}\mbox{]}
+\item \mbox{[}!include\doxylink{vs-open-existing-external-code_8md}{open-\/existing-\/external-\/code}\mbox{]}
+\item In your external editor, add any logic for the node within the lambda expression that handles the assignment of the {\ttfamily input\+Trigger}. For example, you can take the values of the \href{vs-create-custom-node-add-ports.md\#add-value-ports}{\texttt{ two {\ttfamily string} input ports added in the previous example}} and concatenate them, as shown in the following code\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#}}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{using\ }Unity.VisualScripting;}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_unity_engine}{UnityEngine}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }MyNode\ :\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit}{Unit}}}
+\DoxyCodeLine{\ \ \ \{}
+\DoxyCodeLine{\ \ \ [DoNotSerialize]}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_control_input}{ControlInput}}\ inputTrigger;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ [DoNotSerialize]}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_control_output}{ControlOutput}}\ outputTrigger;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ [DoNotSerialize]}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_value_input}{ValueInput}}\ myValueA;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ [DoNotSerialize]}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_value_input}{ValueInput}}\ myValueB;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ [DoNotSerialize]}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_value_output}{ValueOutput}}\ result;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{string}\ resultValue;}
+\DoxyCodeLine{\ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Definition()}
+\DoxyCodeLine{\ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \textcolor{comment}{//The\ lambda\ to\ execute\ our\ node\ action\ when\ the\ inputTrigger\ port\ is\ triggered.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ inputTrigger\ =\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_control_input}{ControlInput}}(\textcolor{stringliteral}{"{}inputTrigger"{}},\ (flow)\ =>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Making\ the\ resultValue\ equal\ to\ the\ input\ value\ from\ myValueA\ concatenating\ it\ with\ myValueB.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ resultValue\ =\ flow.GetValue<\textcolor{keywordtype}{string}>(myValueA)\ +\ flow.GetValue<\textcolor{keywordtype}{string}>(myValueB)\ +\ \textcolor{stringliteral}{"{}!!!"{}};}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ outputTrigger;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\ \ \ \ \ \ \ outputTrigger\ =\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_control_output}{ControlOutput}}(\textcolor{stringliteral}{"{}outputTrigger"{}});}
+\DoxyCodeLine{\ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ myValueA\ =\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_value_input}{ValueInput<string>}}(\textcolor{stringliteral}{"{}myValueA"{}},\ \textcolor{stringliteral}{"{}Hello\ "{}});}
+\DoxyCodeLine{\ \ \ \ \ \ \ myValueB\ =\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_value_input}{ValueInput<string>}}(\textcolor{stringliteral}{"{}myValueB"{}},\ String.Empty);}
+\DoxyCodeLine{\ \ \ \ \ \ \ result\ =\ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_value_output}{ValueOutput<string>}}(\textcolor{stringliteral}{"{}result"{}},\ (flow)\ =>\ resultValue);}
+\DoxyCodeLine{\ \ \ \}}
+\DoxyCodeLine{\ \ \ \}}
+
+\end{DoxyCode}
+
+\item \mbox{[}!include\doxylink{vs-save-script_8md}{save-\/script}\mbox{]}
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item \mbox{[}!include\doxylink{vs-return-unity_8md}{return-\/unity}\mbox{]}
+\item Do one of the following\+:
+\begin{DoxyItemize}
+\item \mbox{[}!include\doxylink{vs-open-graph-w-node_8md}{open-\/graph-\/w-\/node}\mbox{]}.
+\item \mbox{[}!include\doxylink{vs-ff-add-node_8md}{ff-\/add-\/node}\mbox{]}
+\end{DoxyItemize}
+\end{DoxyEnumerate}\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create-custom-node-add-logic_autotoc_md1744}{}\doxysection{\texorpdfstring{Next steps}{Next steps}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create-custom-node-add-logic_autotoc_md1744}
+After you add logic to a node, \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create-custom-node-add-relations}{add relations}{0} to ensure that the node displays correctly in Visual Scripting. 

@@ -1,0 +1,143 @@
+\doxysection{Unity.\+Visual\+Scripting.\+IResource\+Provider Interface Reference}
+\hypertarget{interface_unity_1_1_visual_scripting_1_1_i_resource_provider}{}\label{interface_unity_1_1_visual_scripting_1_1_i_resource_provider}\index{Unity.VisualScripting.IResourceProvider@{Unity.VisualScripting.IResourceProvider}}
+Inheritance diagram for Unity.\+Visual\+Scripting.\+IResource\+Provider\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.188960cm]{interface_unity_1_1_visual_scripting_1_1_i_resource_provider}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+IEnumerable$<$ string $>$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_resource_provider_a74c4d2498d8ef0a9bb702895f591cccb}{Get\+All\+Files}} ()
+\item 
+IEnumerable$<$ string $>$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_resource_provider_aba9b310673fdec22fe63f00742093f70}{Get\+Files}} (string path)
+\item 
+IEnumerable$<$ string $>$ \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_resource_provider_a061506e66c695702c994ca71700274cf}{Get\+Directories}} (string path)
+\item 
+string \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_resource_provider_af3d5b19d44fa682f4bdbe2a2c444b350}{Get\+Personal\+Path}} (string path, float width)
+\item 
+string \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_resource_provider_a10383aebc748b143ab46d47f2cad4bcb}{Get\+Professional\+Path}} (string path, float width)
+\item 
+bool \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_resource_provider_ae86081a5c9bf75c822fe7582f0f3697b}{File\+Exists}} (string path)
+\item 
+bool \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_resource_provider_a8b1c78805ddebb12f3ef45a3a3700bca}{Directory\+Exists}} (string path)
+\item 
+string \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_resource_provider_a2562645d951955ed128f4f625935fa28}{Debug\+Path}} (string path)
+\item 
+T \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_resource_provider_af881cf629b04cc04b1c209438e262d61}{Load\+Asset$<$ T $>$}} (string path)
+\item 
+Texture2D \mbox{\hyperlink{interface_unity_1_1_visual_scripting_1_1_i_resource_provider_ac82fd7965a77dfcf5634346a19393ae3}{Load\+Texture}} (string path, \mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_create_texture_options}{Create\+Texture\+Options}} options)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_resource_provider_a2562645d951955ed128f4f625935fa28}\label{interface_unity_1_1_visual_scripting_1_1_i_resource_provider_a2562645d951955ed128f4f625935fa28} 
+\index{Unity.VisualScripting.IResourceProvider@{Unity.VisualScripting.IResourceProvider}!DebugPath@{DebugPath}}
+\index{DebugPath@{DebugPath}!Unity.VisualScripting.IResourceProvider@{Unity.VisualScripting.IResourceProvider}}
+\doxysubsubsection{\texorpdfstring{DebugPath()}{DebugPath()}}
+{\footnotesize\ttfamily string Unity.\+Visual\+Scripting.\+IResource\+Provider.\+Debug\+Path (\begin{DoxyParamCaption}\item[{string}]{path }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_assembly_resource_provider_ab54ecfcc876c22f8a140993e745c51b3}{Unity.\+Visual\+Scripting.\+Assembly\+Resource\+Provider}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_asset_bundle_resource_provider_aef538ce3dc9739cdc83da8f5f67237a3}{Unity.\+Visual\+Scripting.\+Asset\+Bundle\+Resource\+Provider}}, and \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_editor_asset_resource_provider_a23be3d8981ca36353246072d7ddbfa2a}{Unity.\+Visual\+Scripting.\+Editor\+Asset\+Resource\+Provider}}.
+
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_resource_provider_a8b1c78805ddebb12f3ef45a3a3700bca}\label{interface_unity_1_1_visual_scripting_1_1_i_resource_provider_a8b1c78805ddebb12f3ef45a3a3700bca} 
+\index{Unity.VisualScripting.IResourceProvider@{Unity.VisualScripting.IResourceProvider}!DirectoryExists@{DirectoryExists}}
+\index{DirectoryExists@{DirectoryExists}!Unity.VisualScripting.IResourceProvider@{Unity.VisualScripting.IResourceProvider}}
+\doxysubsubsection{\texorpdfstring{DirectoryExists()}{DirectoryExists()}}
+{\footnotesize\ttfamily bool Unity.\+Visual\+Scripting.\+IResource\+Provider.\+Directory\+Exists (\begin{DoxyParamCaption}\item[{string}]{path }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_assembly_resource_provider_a2c423e5da732c6410a9385572aee1b6a}{Unity.\+Visual\+Scripting.\+Assembly\+Resource\+Provider}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_asset_bundle_resource_provider_a27f69c179d45e90d357352d622c16acc}{Unity.\+Visual\+Scripting.\+Asset\+Bundle\+Resource\+Provider}}, and \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_editor_asset_resource_provider_a1ddf9a50748490b5ebd3eefa7caa0177}{Unity.\+Visual\+Scripting.\+Editor\+Asset\+Resource\+Provider}}.
+
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_resource_provider_ae86081a5c9bf75c822fe7582f0f3697b}\label{interface_unity_1_1_visual_scripting_1_1_i_resource_provider_ae86081a5c9bf75c822fe7582f0f3697b} 
+\index{Unity.VisualScripting.IResourceProvider@{Unity.VisualScripting.IResourceProvider}!FileExists@{FileExists}}
+\index{FileExists@{FileExists}!Unity.VisualScripting.IResourceProvider@{Unity.VisualScripting.IResourceProvider}}
+\doxysubsubsection{\texorpdfstring{FileExists()}{FileExists()}}
+{\footnotesize\ttfamily bool Unity.\+Visual\+Scripting.\+IResource\+Provider.\+File\+Exists (\begin{DoxyParamCaption}\item[{string}]{path }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_assembly_resource_provider_aa9f8ea175e5d9f1d94af45819c46206e}{Unity.\+Visual\+Scripting.\+Assembly\+Resource\+Provider}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_asset_bundle_resource_provider_a2ec2d4f07d96e9172164ace1536ad4c9}{Unity.\+Visual\+Scripting.\+Asset\+Bundle\+Resource\+Provider}}, and \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_editor_asset_resource_provider_a57b56ff19a4891462272f03a6f9c8610}{Unity.\+Visual\+Scripting.\+Editor\+Asset\+Resource\+Provider}}.
+
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_resource_provider_a74c4d2498d8ef0a9bb702895f591cccb}\label{interface_unity_1_1_visual_scripting_1_1_i_resource_provider_a74c4d2498d8ef0a9bb702895f591cccb} 
+\index{Unity.VisualScripting.IResourceProvider@{Unity.VisualScripting.IResourceProvider}!GetAllFiles@{GetAllFiles}}
+\index{GetAllFiles@{GetAllFiles}!Unity.VisualScripting.IResourceProvider@{Unity.VisualScripting.IResourceProvider}}
+\doxysubsubsection{\texorpdfstring{GetAllFiles()}{GetAllFiles()}}
+{\footnotesize\ttfamily IEnumerable$<$ string $>$ Unity.\+Visual\+Scripting.\+IResource\+Provider.\+Get\+All\+Files (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_assembly_resource_provider_ab98510c1a1d8e78853d0813ee4255cd4}{Unity.\+Visual\+Scripting.\+Assembly\+Resource\+Provider}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_asset_bundle_resource_provider_a2a22d551a139ad68a053a5d6af4202ec}{Unity.\+Visual\+Scripting.\+Asset\+Bundle\+Resource\+Provider}}, and \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_editor_asset_resource_provider_a65b548c7b144cb79ecb8745cbf9ef659}{Unity.\+Visual\+Scripting.\+Editor\+Asset\+Resource\+Provider}}.
+
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_resource_provider_a061506e66c695702c994ca71700274cf}\label{interface_unity_1_1_visual_scripting_1_1_i_resource_provider_a061506e66c695702c994ca71700274cf} 
+\index{Unity.VisualScripting.IResourceProvider@{Unity.VisualScripting.IResourceProvider}!GetDirectories@{GetDirectories}}
+\index{GetDirectories@{GetDirectories}!Unity.VisualScripting.IResourceProvider@{Unity.VisualScripting.IResourceProvider}}
+\doxysubsubsection{\texorpdfstring{GetDirectories()}{GetDirectories()}}
+{\footnotesize\ttfamily IEnumerable$<$ string $>$ Unity.\+Visual\+Scripting.\+IResource\+Provider.\+Get\+Directories (\begin{DoxyParamCaption}\item[{string}]{path }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_assembly_resource_provider_a9bbcf4fbd4bda59823a6e38f7a7cfc3d}{Unity.\+Visual\+Scripting.\+Assembly\+Resource\+Provider}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_asset_bundle_resource_provider_a3a69561b7ac7536973d5050891ac089f}{Unity.\+Visual\+Scripting.\+Asset\+Bundle\+Resource\+Provider}}, and \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_editor_asset_resource_provider_a6a445f3c0a81aede6a2dd2881edd3659}{Unity.\+Visual\+Scripting.\+Editor\+Asset\+Resource\+Provider}}.
+
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_resource_provider_aba9b310673fdec22fe63f00742093f70}\label{interface_unity_1_1_visual_scripting_1_1_i_resource_provider_aba9b310673fdec22fe63f00742093f70} 
+\index{Unity.VisualScripting.IResourceProvider@{Unity.VisualScripting.IResourceProvider}!GetFiles@{GetFiles}}
+\index{GetFiles@{GetFiles}!Unity.VisualScripting.IResourceProvider@{Unity.VisualScripting.IResourceProvider}}
+\doxysubsubsection{\texorpdfstring{GetFiles()}{GetFiles()}}
+{\footnotesize\ttfamily IEnumerable$<$ string $>$ Unity.\+Visual\+Scripting.\+IResource\+Provider.\+Get\+Files (\begin{DoxyParamCaption}\item[{string}]{path }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_assembly_resource_provider_a607703c287878fa085a179e2612b61b8}{Unity.\+Visual\+Scripting.\+Assembly\+Resource\+Provider}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_asset_bundle_resource_provider_a68642bd7aa1ae6a5581362c244872dba}{Unity.\+Visual\+Scripting.\+Asset\+Bundle\+Resource\+Provider}}, and \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_editor_asset_resource_provider_ae443f23fbb9eaa1167bff9d0dbac2ed4}{Unity.\+Visual\+Scripting.\+Editor\+Asset\+Resource\+Provider}}.
+
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_resource_provider_af3d5b19d44fa682f4bdbe2a2c444b350}\label{interface_unity_1_1_visual_scripting_1_1_i_resource_provider_af3d5b19d44fa682f4bdbe2a2c444b350} 
+\index{Unity.VisualScripting.IResourceProvider@{Unity.VisualScripting.IResourceProvider}!GetPersonalPath@{GetPersonalPath}}
+\index{GetPersonalPath@{GetPersonalPath}!Unity.VisualScripting.IResourceProvider@{Unity.VisualScripting.IResourceProvider}}
+\doxysubsubsection{\texorpdfstring{GetPersonalPath()}{GetPersonalPath()}}
+{\footnotesize\ttfamily string Unity.\+Visual\+Scripting.\+IResource\+Provider.\+Get\+Personal\+Path (\begin{DoxyParamCaption}\item[{string}]{path,  }\item[{float}]{width }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_assembly_resource_provider_a2be7c1b94106f0f04fa8b985869f1cef}{Unity.\+Visual\+Scripting.\+Assembly\+Resource\+Provider}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_asset_bundle_resource_provider_a0e65215139b5240964d1324a049c954b}{Unity.\+Visual\+Scripting.\+Asset\+Bundle\+Resource\+Provider}}, and \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_editor_asset_resource_provider_a483bd37f2cf989d533de7546cb8a127b}{Unity.\+Visual\+Scripting.\+Editor\+Asset\+Resource\+Provider}}.
+
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_resource_provider_a10383aebc748b143ab46d47f2cad4bcb}\label{interface_unity_1_1_visual_scripting_1_1_i_resource_provider_a10383aebc748b143ab46d47f2cad4bcb} 
+\index{Unity.VisualScripting.IResourceProvider@{Unity.VisualScripting.IResourceProvider}!GetProfessionalPath@{GetProfessionalPath}}
+\index{GetProfessionalPath@{GetProfessionalPath}!Unity.VisualScripting.IResourceProvider@{Unity.VisualScripting.IResourceProvider}}
+\doxysubsubsection{\texorpdfstring{GetProfessionalPath()}{GetProfessionalPath()}}
+{\footnotesize\ttfamily string Unity.\+Visual\+Scripting.\+IResource\+Provider.\+Get\+Professional\+Path (\begin{DoxyParamCaption}\item[{string}]{path,  }\item[{float}]{width }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_assembly_resource_provider_a857a8891f6e6c1a06f790051968257ee}{Unity.\+Visual\+Scripting.\+Assembly\+Resource\+Provider}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_asset_bundle_resource_provider_ad5cc381e00450f36c56c8509eb7e0d1a}{Unity.\+Visual\+Scripting.\+Asset\+Bundle\+Resource\+Provider}}, and \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_editor_asset_resource_provider_aaefbd436e14a4aa726e55dcd326a6c89}{Unity.\+Visual\+Scripting.\+Editor\+Asset\+Resource\+Provider}}.
+
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_resource_provider_af881cf629b04cc04b1c209438e262d61}\label{interface_unity_1_1_visual_scripting_1_1_i_resource_provider_af881cf629b04cc04b1c209438e262d61} 
+\index{Unity.VisualScripting.IResourceProvider@{Unity.VisualScripting.IResourceProvider}!LoadAsset$<$ T $>$@{LoadAsset$<$ T $>$}}
+\index{LoadAsset$<$ T $>$@{LoadAsset$<$ T $>$}!Unity.VisualScripting.IResourceProvider@{Unity.VisualScripting.IResourceProvider}}
+\doxysubsubsection{\texorpdfstring{LoadAsset$<$ T $>$()}{LoadAsset< T >()}}
+{\footnotesize\ttfamily T Unity.\+Visual\+Scripting.\+IResource\+Provider.\+Load\+Asset$<$ T $>$ (\begin{DoxyParamCaption}\item[{string}]{path }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_assembly_resource_provider_a260336abf4641673dcd435db221e1eba}{Unity.\+Visual\+Scripting.\+Assembly\+Resource\+Provider}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_asset_bundle_resource_provider_a4dfb7afddbf51b513fecd1920d7d457a}{Unity.\+Visual\+Scripting.\+Asset\+Bundle\+Resource\+Provider}}, and \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_editor_asset_resource_provider_a68ed2e62b63bbf9428b66c31836ea85d}{Unity.\+Visual\+Scripting.\+Editor\+Asset\+Resource\+Provider}}.
+
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em \mbox{\hyperlink{_curves_proxy_8cs_a324f8dae84ead9019a250b472ca1b436}{Unity\+Object}}}]\end{description}
+\end{Desc}
+\Hypertarget{interface_unity_1_1_visual_scripting_1_1_i_resource_provider_ac82fd7965a77dfcf5634346a19393ae3}\label{interface_unity_1_1_visual_scripting_1_1_i_resource_provider_ac82fd7965a77dfcf5634346a19393ae3} 
+\index{Unity.VisualScripting.IResourceProvider@{Unity.VisualScripting.IResourceProvider}!LoadTexture@{LoadTexture}}
+\index{LoadTexture@{LoadTexture}!Unity.VisualScripting.IResourceProvider@{Unity.VisualScripting.IResourceProvider}}
+\doxysubsubsection{\texorpdfstring{LoadTexture()}{LoadTexture()}}
+{\footnotesize\ttfamily Texture2D Unity.\+Visual\+Scripting.\+IResource\+Provider.\+Load\+Texture (\begin{DoxyParamCaption}\item[{string}]{path,  }\item[{\mbox{\hyperlink{struct_unity_1_1_visual_scripting_1_1_create_texture_options}{Create\+Texture\+Options}}}]{options }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_assembly_resource_provider_a0b1e04aab4c90bcc1a35036613cc01c6}{Unity.\+Visual\+Scripting.\+Assembly\+Resource\+Provider}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_asset_bundle_resource_provider_af337916b82237811a75ee7a8160f1a21}{Unity.\+Visual\+Scripting.\+Asset\+Bundle\+Resource\+Provider}}, and \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_editor_asset_resource_provider_a9d346db4e09fdf724eecfa799a986817}{Unity.\+Visual\+Scripting.\+Editor\+Asset\+Resource\+Provider}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Package\+Cache/com.\+unity.\+visualscripting@1.\+9.\+2/\+Editor/\+Visual\+Scripting.\+Core/\+Resource\+Providers/\mbox{\hyperlink{_i_resource_provider_8cs}{IResource\+Provider.\+cs}}\end{DoxyCompactItemize}

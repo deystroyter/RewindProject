@@ -1,0 +1,60 @@
+\chapter{Subgraphs and State Units}
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-subgraphs-state-units}{}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-subgraphs-state-units}\index{Subgraphs and State Units@{Subgraphs and State Units}}
+\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-subgraphs-state-units_autotoc_md1942}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-subgraphs-state-units_autotoc_md1942}%
+ In a Script Graph, you can add a node that links directly to another Script Graph or State Graph.
+
+
+\begin{DoxyItemize}
+\item A nested Script Graph is a Subgraph.
+\item A nested State Graph is a State Unit.
+\end{DoxyItemize}
+
+A nested Script Graph or State Graph helps you to organize and reuse logic across an application. A Subgraph or State Unit can exist as the node that adds it to a graph, or it can link to an external graph file.
+
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-subgraphs-state-units_autotoc_md1943}{}\doxysection{\texorpdfstring{Subgraphs}{Subgraphs}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-subgraphs-state-units_autotoc_md1943}
+A Subgraph nests a Script Graph inside another Script Graph. Use a Subgraph node to reuse a set of logic across Script Graphs in an application.
+
+A Subgraph node can take inputs or send outputs back to its parent graph. Add ports to configure what data a Subgraph and its parent graph send to each other.\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-subgraphs-state-units_autotoc_md1944}{}\doxysubsection{\texorpdfstring{Subgraph inputs and outputs}{Subgraph inputs and outputs}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-subgraphs-state-units_autotoc_md1944}
+With the Graph Inspector, you can choose and define the ports that appear when you use a Script Graph as a Subgraph. The port definitions for a Script Graph appear in the \href{vs-interface-overview.md\#the-graph-inspector}{\texttt{ Graph Inspector}} when you have no other items selected in a graph. ~\newline
+
+
+
+
+Defined ports appear on any Subgraph node that uses that Script Graph. In the following image, the Subgraph {\bfseries{Rotate the Cube}} has\+:
+
+
+\begin{DoxyItemize}
+\item A Trigger Input port.
+\item An Data Input port.
+\item An Trigger Output port.
+\item An Data Output port.
+\end{DoxyItemize}
+
+
+
+A port definition also changes the {\bfseries{Input}} and {\bfseries{Output}} nodes for a Subgraph. These nodes control the execution and flow between a Subgraph and its parent graph. In the following image, the Input and Output nodes have the same ports as the {\bfseries{Rotate the Cube}} Subgraph node from the previous example. ~\newline
+
+
+\texorpdfstring{$<$}{<}img src="{}images/vs-\/subgraph-\/ports-\/example-\/2.\+png"{} alt="{}\+An image of the Graph window that displays the Rotate the Cube Script Graph. The Input and Output nodes are highlighted with a red box. A Get Graph variable node, with the Variable name XRotate, connects to the B input port on an Add Inputs node. The Add Inputs node has only 2 inputs, and receives its second input from the var port on the Input node. The Start port on the Input node connects to the Input Trigger port on a Transform Rotate node. The Transform Rotate node rotates the transform from the current Game\+Object by the same amount on the X, Y, and Z axis. It takes its X Angle, Y Angle, and Z Angle inputs from the result of the Add Inputs node. The Output Trigger port on the Transform Rotate node connects to the Input Trigger port on a String Concat node. The String Concat node takes the string from a String literal node, "{}Rotated by"{} and appends the result of the Add Inputs node. The Output Trigger port on the String Concat node connects to the Input Trigger port, Finish, on the Output node. The string output port on the String Concat node connects to the string input port on the Output node."{}/\texorpdfstring{$>$}{>}
+
+\begin{quote}
+\mbox{[}!\+NOTE\mbox{]} You can only use a single {\bfseries{Input}} node and a single {\bfseries{Output}} node in a Script Graph. If you add more {\bfseries{Input}} or {\bfseries{Output}} nodes, Visual Scripting only uses the first {\bfseries{Input}} and {\bfseries{Output}} nodes you added to the graph. \end{quote}
+For more information on how to add ports to a Script Graph, see \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-add-triggers-data-graph}{Add a Trigger or Data port to a Script Graph}{0}. For more information on the different types of ports, see \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-subgraph-node}{Subgraph node}{0}. For more information on how to use a Subgraph, see \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-add-subgraph}{Add a Subgraph to a Script Graph}{0}.\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-subgraphs-state-units_autotoc_md1945}{}\doxysection{\texorpdfstring{State Units}{State Units}}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-subgraphs-state-units_autotoc_md1945}
+A State Unit starts a State Graph from a Script Graph. You can\textquotesingle{}t change the ports that appear on a State Unit node or send data between the State Graph and its parent Script Graph.
+
+
+
+The State Unit node starts different logic in a Script Graph, at different times in code execution\+:
+
+
+\begin{DoxyItemize}
+\item When the nested State Graph starts to run.
+\item While the nested State Graph runs.
+\item When the nested State Graph stops.
+\item After the nested State Graph stops.
+\end{DoxyItemize}
+
+When you start a State Unit node\textquotesingle{}s Start and Started ports in a parent graph, Visual Scripting marks all Start states inside the node\textquotesingle{}s State Graph as active. When you start the Stop and Stopped ports, Visual Scripting marks all Start states as inactive.
+
+For more information on State Graphs and Start states, see \href{vs-graph-types.md\#state-graphs}{\texttt{ State Graphs}}. For more information on the State Unit node, see \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-state-unit-node}{State Unit node}{0} and \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-nesting-add-state-unit}{Add a State Unit to a Script Graph}{0}. 

@@ -1,0 +1,93 @@
+\doxysection{Unity\+Editor.\+Timeline.\+Activation\+Track\+Editor Class Reference}
+\hypertarget{class_unity_editor_1_1_timeline_1_1_activation_track_editor}{}\label{class_unity_editor_1_1_timeline_1_1_activation_track_editor}\index{UnityEditor.Timeline.ActivationTrackEditor@{UnityEditor.Timeline.ActivationTrackEditor}}
+Inheritance diagram for Unity\+Editor.\+Timeline.\+Activation\+Track\+Editor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_editor_1_1_timeline_1_1_activation_track_editor}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override \mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_track_draw_options}{Track\+Draw\+Options}} \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_activation_track_editor_a146b411daea4f5a77ec55bbd1720e761}{Get\+Track\+Options}} (\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} track, \mbox{\hyperlink{_t_m_pro___font_asset_creator_window_8cs_aef19bab18b9814edeef255c43e4f6bbc}{Object}} binding)
+\begin{DoxyCompactList}\small\item\em Implement this method to override the default options for drawing a track. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_activation_track_editor_aac85a9ef4fb7d3531a3c3509c648b3e9}{On\+Create}} (\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} track, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} copied\+From)
+\begin{DoxyCompactList}\small\item\em Callback for when a track is created. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_track_editor}{Unity\+Editor.\+Timeline.\+Track\+Editor}}}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_track_editor_aea1e22bf8942adb19f776b525c933433}{Get\+Error\+Text}} (\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} track, Unity\+Engine.\+Object bound\+Object, \mbox{\hyperlink{namespace_unity_editor_1_1_timeline_ab1298abef70580c7ae84c896c0fa4a85}{Track\+Binding\+Errors}} detect\+Errors)
+\begin{DoxyCompactList}\small\item\em Gets the error text for the specified track. \end{DoxyCompactList}\item 
+Color \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_track_editor_a172572f84be2d2b7c756da8a91b8b8ba}{Get\+Track\+Color}} (\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} track)
+\begin{DoxyCompactList}\small\item\em Gets the color information of a track. \end{DoxyCompactList}\item 
+System.\+Type \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_track_editor_a1eb8c0c3c958c9c3a890028bdcb6fcf8}{Get\+Binding\+Type}} (\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} track)
+\begin{DoxyCompactList}\small\item\em Gets the binding type for a track. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_track_editor_a76e5612bfc7e6174e162ec65a551fa5f}{On\+Track\+Changed}} (\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} track)
+\begin{DoxyCompactList}\small\item\em Callback for when a track is changed. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_track_editor_a01cd3e762b94345a904b15e23f7f78d8}{Is\+Binding\+Assignable\+From}} (Unity\+Engine.\+Object candidate, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} track)
+\begin{DoxyCompactList}\small\item\em Override this method to validate if a binding for {\itshape track}  can be determined from {\itshape candidate} . \end{DoxyCompactList}\item 
+virtual Unity\+Engine.\+Object \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_track_editor_afedf9fabc95d39487ecb22a7eaaec627}{Get\+Binding\+From}} (Unity\+Engine.\+Object candidate, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}} track)
+\begin{DoxyCompactList}\small\item\em Override this method to determine which object to bind to {\itshape track} . A binding object should be determined from {\itshape candidate} . \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Attributes inherited from \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_track_editor}{Unity\+Editor.\+Timeline.\+Track\+Editor}}}
+\begin{DoxyCompactItemize}
+\item 
+static readonly float \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_track_editor_abcc0b1e337aa04673dffccfa5b83dd87}{Default\+Track\+Height}} = 30.\+0f
+\begin{DoxyCompactList}\small\item\em The default height of a track. \end{DoxyCompactList}\item 
+static readonly float \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_track_editor_a8e3c09c79112fc72e507946e8a0e8fe5}{Minimum\+Track\+Height}} = 10.\+0f
+\begin{DoxyCompactList}\small\item\em The minimum unscaled height of a track. \end{DoxyCompactList}\item 
+static readonly float \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_track_editor_ae07ef3cfd2fece33c904983ef556b32c}{Maximum\+Track\+Height}} = 256.\+0f
+\begin{DoxyCompactList}\small\item\em The maximum height of a track. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_activation_track_editor_a146b411daea4f5a77ec55bbd1720e761}\label{class_unity_editor_1_1_timeline_1_1_activation_track_editor_a146b411daea4f5a77ec55bbd1720e761} 
+\index{UnityEditor.Timeline.ActivationTrackEditor@{UnityEditor.Timeline.ActivationTrackEditor}!GetTrackOptions@{GetTrackOptions}}
+\index{GetTrackOptions@{GetTrackOptions}!UnityEditor.Timeline.ActivationTrackEditor@{UnityEditor.Timeline.ActivationTrackEditor}}
+\doxysubsubsection{\texorpdfstring{GetTrackOptions()}{GetTrackOptions()}}
+{\footnotesize\ttfamily override \mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_track_draw_options}{Track\+Draw\+Options}} Unity\+Editor.\+Timeline.\+Activation\+Track\+Editor.\+Get\+Track\+Options (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}}}]{track,  }\item[{\mbox{\hyperlink{_t_m_pro___font_asset_creator_window_8cs_aef19bab18b9814edeef255c43e4f6bbc}{Object}}}]{binding }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implement this method to override the default options for drawing a track. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em track} & The track from which track options are retrieved.\\
+\hline
+{\em binding} & The binding for the track.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The options for drawing the track.
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_track_editor_a3d36fb306a9a0ee9b15dff285d330036}{Unity\+Editor.\+Timeline.\+Track\+Editor}}.
+
+\Hypertarget{class_unity_editor_1_1_timeline_1_1_activation_track_editor_aac85a9ef4fb7d3531a3c3509c648b3e9}\label{class_unity_editor_1_1_timeline_1_1_activation_track_editor_aac85a9ef4fb7d3531a3c3509c648b3e9} 
+\index{UnityEditor.Timeline.ActivationTrackEditor@{UnityEditor.Timeline.ActivationTrackEditor}!OnCreate@{OnCreate}}
+\index{OnCreate@{OnCreate}!UnityEditor.Timeline.ActivationTrackEditor@{UnityEditor.Timeline.ActivationTrackEditor}}
+\doxysubsubsection{\texorpdfstring{OnCreate()}{OnCreate()}}
+{\footnotesize\ttfamily override void Unity\+Editor.\+Timeline.\+Activation\+Track\+Editor.\+On\+Create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}}}]{track,  }\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_track_asset}{Track\+Asset}}}]{copied\+From }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Callback for when a track is created. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em track} & The track that is created.\\
+\hline
+{\em copied\+From} & The source that the track is copied from. This can be set to null if the track is not a copy.\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_track_editor_a6d49935006780094f55cf8adf37c6826}{Unity\+Editor.\+Timeline.\+Track\+Editor}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+7.\+6/\+Editor/\+Activation/\mbox{\hyperlink{_activation_track_editor_8cs}{Activation\+Track\+Editor.\+cs}}\end{DoxyCompactItemize}

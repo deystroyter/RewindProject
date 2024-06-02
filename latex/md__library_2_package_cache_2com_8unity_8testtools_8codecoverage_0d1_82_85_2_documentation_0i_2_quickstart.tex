@@ -1,0 +1,171 @@
+\chapter{Quickstart -\/ Code Coverage tutorial}
+\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_quickstart}{}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_quickstart}\index{Quickstart -\/ Code Coverage tutorial@{Quickstart -\/ Code Coverage tutorial}}
+\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_quickstart_autotoc_md849}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_quickstart_autotoc_md849}%
+ The Quickstart guide will give you an insight into what Code Coverage is and how you can identify areas of your code that need more testing, even if you haven\textquotesingle{}t written any automated tests. It takes about 30 minutes to complete.
+
+\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_quickstart_autotoc_md850}{}\doxysection{\texorpdfstring{Tasks}{Tasks}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_quickstart_autotoc_md850}
+
+\begin{DoxyEnumerate}
+\item What is Code Coverage (2 min) ~\newline
+
+\item Install the Code Coverage package (2 min) ~\newline
+
+\item Install the Asteroids sample project (1 min) ~\newline
+
+\item Enable Code Coverage (1 min) ~\newline
+
+\item Understanding the game code\+: Shoot() function (4 min) ~\newline
+
+\item Generate a Coverage report from Play\+Mode tests (3 min) ~\newline
+
+\item Add Weapon tests to improve coverage (3 min) ~\newline
+
+\item Add a test for the Laser\+Controller (4 min) ~\newline
+
+\item Clear the coverage data (1 min) ~\newline
+
+\item Generate a Coverage report using Coverage Recording (4 min)
+\end{DoxyEnumerate}
+
+{\bfseries{Note\+:}} Estimated times are shown for each task to give you a better understanding of the time required. These times are rough guidelines -\/ it is fine to take as much or as little time as needed.\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_quickstart_autotoc_md851}{}\doxysection{\texorpdfstring{1. What is Code Coverage \textsubscript{(2 min)}}{1. What is Code Coverage \textsubscript{(2 min)}}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_quickstart_autotoc_md851}
+\href{https://en.wikipedia.org/wiki/Code_coverage}{\texttt{ Code Coverage}} is a measure of how much of your code has been executed. It is normally associated with automated tests, but you can gather coverage data in \doxylink{namespace_unity}{Unity} at any time when the Editor is running.
+
+It is typically presented as a \doxysectlink{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_how_to_interpret_results}{report}{0} that shows the percentage of the code that has been executed. For automated testing the report does not measure the quality of tests, only whether your code is executed by Play\+Mode and Edit\+Mode tests. It is especially useful to check that critical or high risk areas of your code are covered, because they should receive the most rigorous testing.
+
+It is much easier to accidentally introduce bugs into code that is not covered by tests, because those bugs are not detected straight away by the tests and can instead cause problems later — such as after you have published your game or app.
+
+Additionally, the Code Coverage package offers a \doxysectlink{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_coverage_recording}{Coverage Recording}{0} feature which allows capturing coverage data on demand, in case you do not have tests in your project or doing manual testing.\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_quickstart_autotoc_md852}{}\doxysection{\texorpdfstring{2. Install the Code Coverage package \textsubscript{(2 min)}}{2. Install the Code Coverage package \textsubscript{(2 min)}}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_quickstart_autotoc_md852}
+{\bfseries{Note\+:}} Skip this task if the package is already installed.
+
+Use the \href{https://docs.unity3d.com/Packages/com.unity.package-manager-ui@latest}{\texttt{ Unity Package Manager}} to find and install the {\bfseries{Code Coverage}} package.
+
+
+
+Alternatively, use the {\bfseries{Add (+)}} dropdown and select {\bfseries{Add package from git URL...}} or {\bfseries{Add package by name...}} and type {\ttfamily com.\+unity.\+testtools.\+codecoverage}.
+
+
+
+To verify that Code Coverage has been installed correctly, open the Code Coverage window (go to {\bfseries{Window}} \texorpdfstring{$>$}{>} {\bfseries{Analysis}} \texorpdfstring{$>$}{>} {\bfseries{Code Coverage}}). If you don\textquotesingle{}t see the {\bfseries{Code Coverage}} menu item, then Code Coverage did not install correctly.\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_quickstart_autotoc_md853}{}\doxysection{\texorpdfstring{3. Install the Asteroids sample project \textsubscript{(1 min)}}{3. Install the Asteroids sample project \textsubscript{(1 min)}}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_quickstart_autotoc_md853}
+
+\begin{DoxyEnumerate}
+\item In the \href{https://docs.unity3d.com/Packages/com.unity.package-manager-ui@latest}{\texttt{ Unity Package Manager}} ({\bfseries{Window}} \texorpdfstring{$>$}{>} {\bfseries{Package Manager}}) select the {\bfseries{Code Coverage}} package, if not already selected.
+\item Find the {\bfseries{\doxylink{namespace_samples}{Samples}}} section in the package details (right hand side) and select {\bfseries{Import}} next to {\bfseries{Code Coverage Tutorial}}.~\newline
+~\newline
+ 
+\end{DoxyEnumerate}\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_quickstart_autotoc_md854}{}\doxysection{\texorpdfstring{4. Enable Code Coverage \textsubscript{(1 min)}}{4. Enable Code Coverage \textsubscript{(1 min)}}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_quickstart_autotoc_md854}
+To enable Code Coverage open the \doxysectlink{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_code_coverage_window}{Code Coverage window}{0} (go to {\bfseries{Window}} \texorpdfstring{$>$}{>} {\bfseries{Analysis}} \texorpdfstring{$>$}{>} {\bfseries{Code Coverage}}) and select {\bfseries{Enable Code Coverage}} if not already selected, to be able to generate Coverage data and reports.
+
+
+
+{\bfseries{Note\+:}} Enabling Code Coverage adds some overhead to the editor and can affect the performance.\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_quickstart_autotoc_md855}{}\doxysection{\texorpdfstring{5. Understanding the game code\+: Shoot() function \textsubscript{(4 min)}}{5. Understanding the game code\+: Shoot() function \textsubscript{(4 min)}}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_quickstart_autotoc_md855}
+
+\begin{DoxyEnumerate}
+\item Go to {\ttfamily Asteroids/\+Scenes} in Project View and open the {\bfseries{Asteroids}} scene.~\newline
+ This is located in {\ttfamily Assets/\+Samples/\+Code Coverage/\texorpdfstring{$<$}{<}version\texorpdfstring{$>$}{>}/\+Code Coverage Tutorial}.
+\item Hit {\bfseries{Play}} and play the game for a minute or two.~\newline
+  Use the arrow keys to move and the spacebar to shoot.
+\item Exit Play\+Mode.
+\item Open the {\ttfamily \doxylink{_spaceship_controller_8cs}{Scripts/\+Controllers/\+Spaceship\+Controller.\+cs}} script.
+\item Study the {\bfseries{Shoot}} function. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{If\ Weapon\ is\ Basic,\ the\ Prefabs/Weapons/Projectile\ prefab\ is\ instantiated}
+\DoxyCodeLine{If\ Weapon\ is\ Laser,\ the\ Prefabs/Weapons/Laser\ prefab\ is\ instantiated}
+
+\end{DoxyCode}
+
+\end{DoxyEnumerate}\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_quickstart_autotoc_md856}{}\doxysection{\texorpdfstring{6. Generate a Coverage report from Play\+Mode tests \textsubscript{(3 min)}}{6. Generate a Coverage report from Play\+Mode tests \textsubscript{(3 min)}}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_quickstart_autotoc_md856}
+
+\begin{DoxyEnumerate}
+\item Open the \doxysectlink{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_code_coverage_window}{Code Coverage window}{0} (go to {\bfseries{Window}} \texorpdfstring{$>$}{>} {\bfseries{Analysis}} \texorpdfstring{$>$}{>} {\bfseries{Code Coverage}}).~\newline
+~\newline
+ 
+\item If you see this warning select {\bfseries{Switch to debug mode}}.~\newline
+  \href{https://docs.unity3d.com/2020.1/Documentation/Manual/ManagedCodeDebugging.html\#CodeOptimizationMode}{\texttt{ Code Optimization}} was introduced in \doxylink{namespace_unity}{Unity} 2020.\+1; in {\itshape Release mode} the code is optimized and therefore not directly represented by the original code. Therefore, {\itshape Debug mode} is required in order to obtain accurate code coverage information.
+\item Click the {\bfseries{Included Assemblies}} dropdown to make sure only~\newline
+ {\ttfamily Unity.\+Test\+Tools.\+Code\+Coverage.\+Sample.\+Asteroids} and~\newline
+ {\ttfamily Unity.\+Test\+Tools.\+Code\+Coverage.\+Sample.\+Asteroids.\+Tests} are selected.~\newline
+~\newline
+ 
+\item Make sure {\bfseries{HTML Report}}, {\bfseries{Report History}}, {\bfseries{Auto Generate Report}} and {\bfseries{Auto Open Report}} are all checked. 
+\item Switch to the \href{https://docs.unity3d.com/Packages/com.unity.test-framework@latest/index.html?subfolder=/manual/workflow-run-test.html}{\texttt{ Test Runner}} window, select the {\bfseries{Play\+Mode}} tab and hit {\bfseries{Run All}} tests.~\newline
+~\newline
+ 
+\item When the tests finish running, a file viewer window will open up containing the coverage report. Select {\ttfamily index.\+htm}.
+\item Look for the classes with low coverage, especially {\bfseries{\doxylink{class_laser_controller}{Laser\+Controller}}}, {\bfseries{\doxylink{class_base_projectile}{Base\+Projectile}}} and {\bfseries{\doxylink{class_projectile_controller}{Projectile\+Controller}}}.
+\end{DoxyEnumerate}
+
+You can sort the results by {\itshape Line coverage}.
+
+
+
+See also \doxysectlink{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_how_to_interpret_results}{How to interpret the results}{0}.\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_quickstart_autotoc_md857}{}\doxysection{\texorpdfstring{7. Add Weapon tests to improve coverage \textsubscript{(3 min)}}{7. Add Weapon tests to improve coverage \textsubscript{(3 min)}}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_quickstart_autotoc_md857}
+
+\begin{DoxyEnumerate}
+\item Open the {\ttfamily \doxylink{_weapon_tests_8cs}{Tests/\+Weapon\+Tests.\+cs}} script.
+\item Uncomment all the tests (from {\itshape line 35} down to {\itshape line 237}).
+\item Back in the {\bfseries{Test Runner}}, hit {\bfseries{Run All}} tests again.
+\item When the tests finish running, a file viewer window will open up containing the coverage report. Select {\ttfamily index.\+htm}.
+\item Notice that now {\bfseries{\doxylink{class_base_projectile}{Base\+Projectile}}} and {\bfseries{\doxylink{class_projectile_controller}{Projectile\+Controller}}} coverage is considerably higher, but {\bfseries{\doxylink{class_laser_controller}{Laser\+Controller}}} has not improved much.
+\end{DoxyEnumerate}
+
+\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_quickstart_autotoc_md858}{}\doxysection{\texorpdfstring{8. Add a test for the Laser\+Controller \textsubscript{(4 min)}}{8. Add a test for the Laser\+Controller \textsubscript{(4 min)}}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_quickstart_autotoc_md858}
+
+\begin{DoxyEnumerate}
+\item Open the {\ttfamily \doxylink{_weapon_tests_8cs}{Tests/\+Weapon\+Tests.\+cs}} script.
+\item Go to the \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}\+\_\+18\+\_\+\+Laser\+Fires\+Successfully\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} test in line 225.
+\item Uncomment and study the code.
+\item Back in the {\bfseries{Test Runner}}, hit {\bfseries{Run All}} tests again.
+\item When the tests finish running, a file viewer window will open up containing the coverage report. Select {\ttfamily index.\+htm}.
+\item Notice how the coverage for {\bfseries{\doxylink{class_laser_controller}{Laser\+Controller}}} has improved.~\newline
+ 
+\item Select the {\bfseries{\doxylink{class_laser_controller}{Laser\+Controller}}} class to enter the class view and notice that about 2/3 (65\%) of the code is now covered (green).
+\end{DoxyEnumerate}
+
+
+
+Complete the Bonus Task at the end of the tutorial to get 100\% coverage!\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_quickstart_autotoc_md859}{}\doxysection{\texorpdfstring{9. Clear the coverage data \textsubscript{(1 min)}}{9. Clear the coverage data \textsubscript{(1 min)}}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_quickstart_autotoc_md859}
+
+\begin{DoxyEnumerate}
+\item Open the \doxysectlink{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_code_coverage_window}{Code Coverage window}{0} (go to {\bfseries{Window}} \texorpdfstring{$>$}{>} {\bfseries{Analysis}} \texorpdfstring{$>$}{>} {\bfseries{Code Coverage}}).
+\item Select {\bfseries{Clear Results}} and confirm.
+\item Select {\bfseries{Clear History}} and confirm.
+\end{DoxyEnumerate}\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_quickstart_autotoc_md860}{}\doxysection{\texorpdfstring{10. Generate a Coverage report using Coverage Recording \textsubscript{(4 min)}}{10. Generate a Coverage report using Coverage Recording \textsubscript{(4 min)}}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_quickstart_autotoc_md860}
+
+\begin{DoxyEnumerate}
+\item Go to {\ttfamily Asteroids/\+Scenes} in Project View and open the {\bfseries{Asteroids}} scene, if not opened already.
+\item Open the \doxysectlink{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_code_coverage_window}{Code Coverage window}{0}. Make sure {\bfseries{HTML Report}}, {\bfseries{Report History}}, {\bfseries{Auto Generate Report}} and {\bfseries{Auto Open Report}} all are checked.~\newline
+ 
+\item Select {\bfseries{Start Recording}}.~\newline
+ 
+\item Hit {\bfseries{Play}} to play the game and {\bfseries{exit}} Play\+Mode before you get {\bfseries{8000}} points. 
+\item Select {\bfseries{Stop Recording}}.~\newline
+ 
+\item A file viewer window will open up containing the coverage report. Select {\ttfamily index.\+htm}.
+\item Notice that {\bfseries{\doxylink{class_laser_controller}{Laser\+Controller}}} has 0\% coverage.~\newline
+ 
+\item Go back to the {\bfseries{Code Coverage window}}.
+\item Select {\bfseries{Start Recording}}.
+\item Now hit {\bfseries{Play}} to play the game again but this time {\bfseries{exit}} Play\+Mode when you get {\bfseries{8000}} points.
+\item Select {\bfseries{Stop Recording}}.
+\item Notice that {\bfseries{\doxylink{class_laser_controller}{Laser\+Controller}}} coverage is now 100\%.~\newline
+ 
+\end{DoxyEnumerate}
+
+See also \doxysectlink{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_how_to_interpret_results}{How to interpret the results}{0}. ~\newline
+~\newline
+\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_quickstart_autotoc_md861}{}\doxysection{\texorpdfstring{11. Bonus task \textsubscript{(5-\/8 min)}}{11. Bonus task \textsubscript{(5-\/8 min)}}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_quickstart_autotoc_md861}
+Write a new test that checks that the laser gets destroyed after 2 seconds, which will also cover the rest of the code in {\bfseries{\doxylink{class_laser_controller}{Laser\+Controller}}}.
+
+{\bfseries{Suggested name\+:}} \+\_\+19\+\_\+\+Laser\+Fires\+And\+Is\+Destroyed\+After\+Two\+Seconds. ~\newline
+ {\bfseries{Hint\+:}} You can use {\ttfamily yield return new Wait\+For\+Seconds(2f);} to wait for 2 seconds.
+
+~\newline
+
+
+\DoxyHorRuler{0}
+
+
+~\newline
+\hypertarget{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_quickstart_autotoc_md863}{}\doxysubsection{\texorpdfstring{Well done for finishing the Code Coverage tutorial!}{Well done for finishing the Code Coverage tutorial!}}\label{md__library_2_package_cache_2com_8unity_8testtools_8codecoverage_0d1_82_85_2_documentation_0i_2_quickstart_autotoc_md863}
+For questions and feedback please visit the \href{https://forum.unity.com/forums/testing-automation.211/}{\texttt{ Testing \& Automation}} forum section to browse current conversations or start a new thread. Please use the {\bfseries{code coverage}} tag. 

@@ -1,0 +1,34 @@
+\chapter{About Jet\+Brains Rider Editor}
+\hypertarget{md__library_2_package_cache_2com_8unity_8ide_8rider_0d3_80_828_2_documentation_0i_2index}{}\label{md__library_2_package_cache_2com_8unity_8ide_8rider_0d3_80_828_2_documentation_0i_2index}\index{About JetBrains Rider Editor@{About JetBrains Rider Editor}}
+\label{md__library_2_package_cache_2com_8unity_8ide_8rider_0d3_80_828_2_documentation_0i_2index_autotoc_md262}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8ide_8rider_0d3_80_828_2_documentation_0i_2index_autotoc_md262}%
+ The \doxylink{namespace_jet_brains}{Jet\+Brains} \doxylink{namespace_rider}{Rider} editor package integrates support for the \href{https://www.jetbrains.com/rider/}{\texttt{ Jet\+Brains Rider}} .NET Integrated Development Environment (IDE), into the \doxylink{namespace_unity}{Unity} Editor. This package provides an end-\/point for \doxylink{namespace_rider}{Rider} to call different \doxylink{namespace_unity}{Unity} APIs and to generate .csproj and .sln files, which \doxylink{namespace_rider}{Rider} uses to implement support for \doxylink{namespace_unity}{Unity} in its \href{https://github.com/JetBrains/resharper-unity}{\texttt{ plug-\/in}}.
+
+This package ensures that IDE features like autocomplete suggestions and flagging dependency conflicts work in \doxylink{namespace_rider}{Rider}. It uses .cproj and .sln files which store information about your project such as\+:
+
+
+\begin{DoxyItemize}
+\item Versioning information
+\item Build files
+\item Platform requirements
+\item Web server or database settings
+\end{DoxyItemize}
+
+Not all code in \doxylink{namespace_unity}{Unity} is directly visible to code editors, particularly when using packages. This is because packages don’t provide their own .csproj files, and \doxylink{namespace_unity}{Unity} doesn’t create them for installed packages by default. This means that IDE features like autocomplete suggestions and flagging dependency conflicts do not work with code in these packages. The purpose of this package is to produce the .csproj files that make these features possible by default when you use \doxylink{namespace_rider}{Rider}.\hypertarget{md__library_2_package_cache_2com_8unity_8ide_8rider_0d3_80_828_2_documentation_0i_2index_autotoc_md263}{}\doxysection{\texorpdfstring{Installation}{Installation}}\label{md__library_2_package_cache_2com_8unity_8ide_8rider_0d3_80_828_2_documentation_0i_2index_autotoc_md263}
+As of \doxylink{namespace_unity}{Unity} version 2019.\+2, this package comes as a part of the default \doxylink{namespace_unity}{Unity} installation. If you are updating your project from an older version of \doxylink{namespace_unity}{Unity}, you might need to install this package via the Package Manager.\hypertarget{md__library_2_package_cache_2com_8unity_8ide_8rider_0d3_80_828_2_documentation_0i_2index_autotoc_md264}{}\doxysection{\texorpdfstring{Requirements}{Requirements}}\label{md__library_2_package_cache_2com_8unity_8ide_8rider_0d3_80_828_2_documentation_0i_2index_autotoc_md264}
+This version of the \doxylink{namespace_jet_brains}{Jet\+Brains} \doxylink{namespace_rider}{Rider} editor package is compatible with the following versions of the \doxylink{namespace_unity}{Unity} Editor\+:
+
+
+\begin{DoxyItemize}
+\item 2019.\+2.\+6 or later
+\end{DoxyItemize}
+
+To use this package, you must have the following third-\/party products installed\+:
+
+
+\begin{DoxyItemize}
+\item \doxylink{namespace_jet_brains}{Jet\+Brains} \doxylink{namespace_rider}{Rider} version 2019.\+3 or newer
+\end{DoxyItemize}
+
+For more information about the \doxylink{namespace_rider}{Rider} IDE, see the \href{https://www.jetbrains.com/rider/documentation/}{\texttt{ Jet\+Brains Rider documentation}}.\hypertarget{md__library_2_package_cache_2com_8unity_8ide_8rider_0d3_80_828_2_documentation_0i_2index_autotoc_md265}{}\doxysubsection{\texorpdfstring{Submitting issues}{Submitting issues}}\label{md__library_2_package_cache_2com_8unity_8ide_8rider_0d3_80_828_2_documentation_0i_2index_autotoc_md265}
+This package is maintained by \doxylink{namespace_jet_brains}{Jet\+Brains} and \doxylink{namespace_unity}{Unity}. Submit issues to the \href{https://github.com/JetBrains/resharper-unity/issues}{\texttt{ Jet\+Brains/resharper-\/unity/issues Git\+Hub page}}. \doxylink{namespace_unity}{Unity} intends for this package to become accessible to the public on Git\+Hub in the future. 

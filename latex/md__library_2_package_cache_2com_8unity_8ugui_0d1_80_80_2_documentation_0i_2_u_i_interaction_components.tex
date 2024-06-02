@@ -1,0 +1,56 @@
+\chapter{Interaction Components}
+\hypertarget{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_u_i_interaction_components}{}\label{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_u_i_interaction_components}\index{Interaction Components@{Interaction Components}}
+\label{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_u_i_interaction_components_autotoc_md1492}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_u_i_interaction_components_autotoc_md1492}%
+ This section covers components in the UI system that handles interaction, such as mouse or touch events and interaction using a keyboard or controller.
+
+The interaction components are not visible on their own, and must be combined with one or more \doxysectlink{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_u_i_visual_components}{visual components}{0} in order to work correctly.\hypertarget{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_u_i_interaction_components_autotoc_md1493}{}\doxysection{\texorpdfstring{Common Functionality}{Common Functionality}}\label{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_u_i_interaction_components_autotoc_md1493}
+Most of the interaction components have some things in common. They are selectables, which means they have shared built-\/in functionality for visualising transitions between states (normal, highlighted, pressed, disabled), and for navigation to other selectables using keyboard or controller. This shared functionality is described on the \doxysectlink{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2script-_selectable}{Selectable}{0} page.
+
+The interaction components have at least one Unity\+Event that is invoked when user interacts with the component in specific way. The UI system catches and logs any exceptions that propagate out of code attached to Unity\+Event.\hypertarget{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_u_i_interaction_components_autotoc_md1494}{}\doxysection{\texorpdfstring{Button}{Button}}\label{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_u_i_interaction_components_autotoc_md1494}
+A Button has an {\bfseries{On\+Click}} Unity\+Event to define what it will do when clicked.
+
+
+
+See the \doxysectlink{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2script-_button}{Button}{0} page for details on using the Button component.\hypertarget{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_u_i_interaction_components_autotoc_md1495}{}\doxysection{\texorpdfstring{Toggle}{Toggle}}\label{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_u_i_interaction_components_autotoc_md1495}
+A Toggle has an {\bfseries{Is On}} checkbox that determines whether the Toggle is currently on or off. This value is flipped when the user clicks the Toggle, and a visual checkmark can be turned on or off accordingly. It also has an {\bfseries{On\+Value\+Changed}} Unity\+Event to define what it will do when the value is changed.
+
+
+
+See the \doxysectlink{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2script-_toggle}{Toggle}{0} page for details on using the Toggle component.\hypertarget{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_u_i_interaction_components_autotoc_md1496}{}\doxysection{\texorpdfstring{Toggle Group}{Toggle Group}}\label{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_u_i_interaction_components_autotoc_md1496}
+A Toggle Group can be used to group a set of \doxysectlink{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2script-_toggle}{Toggles}{0} that are mutually exclusive. Toggles that belong to the same group are constrained so that only one of them can be selected at a time -\/ selecting one of them automatically deselects all the others.
+
+
+
+See the \doxysectlink{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2script-_toggle_group}{Toggle Group}{0} page for details on using the Toggle Group component.\hypertarget{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_u_i_interaction_components_autotoc_md1497}{}\doxysection{\texorpdfstring{Slider}{Slider}}\label{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_u_i_interaction_components_autotoc_md1497}
+A Slider has a decimal number {\bfseries{Value}} that the user can drag between a minimum and maximum value. It can be either horizontal or vertical. It also has a {\bfseries{On\+Value\+Changed}} Unity\+Event to define what it will do when the value is changed.
+
+
+
+See the \doxysectlink{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2script-_slider}{Slider}{0} page for details on using the Slider component.\hypertarget{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_u_i_interaction_components_autotoc_md1498}{}\doxysection{\texorpdfstring{Scrollbar}{Scrollbar}}\label{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_u_i_interaction_components_autotoc_md1498}
+A Scrollbar has a decimal number {\bfseries{Value}} between 0 and 1. When the user drags the scrollbar, the value changes accordingly.
+
+Scrollbars are often used together with a \doxysectlink{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2script-_scroll_rect}{Scroll Rect}{0} and a \doxysectlink{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2script-_mask}{Mask}{0} to create a scroll view. The Scrollbar has a {\bfseries{Size}} value between 0 and 1 that determines how big the handle is as a fraction of the entire scrollbar length. This is often controlled from another component to indicate how big a proportion of the content in a scroll view is visible. The Scroll Rect component can automatically do this.
+
+The Scrollbar can be either horizontal or vertical. It also has a {\bfseries{On\+Value\+Changed}} Unity\+Event to define what it will do when the value is changed.
+
+
+
+See the \doxysectlink{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2script-_scrollbar}{Scrollbar}{0} page for details on using the Scrollbar component.\hypertarget{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_u_i_interaction_components_autotoc_md1499}{}\doxysection{\texorpdfstring{Dropdown}{Dropdown}}\label{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_u_i_interaction_components_autotoc_md1499}
+A Dropdown has a list of options to choose from. A text string and optionally an image can be specified for each option, and can be set either in the Inspector or dynamically from code. It has a {\bfseries{On\+Value\+Changed}} Unity\+Event to define what it will do when the currently chosen option is changed.
+
+
+
+See the \doxysectlink{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2script-_dropdown}{Dropdown}{0} page for details on using the Dropdown component.\hypertarget{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_u_i_interaction_components_autotoc_md1500}{}\doxysection{\texorpdfstring{Input Field}{Input Field}}\label{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_u_i_interaction_components_autotoc_md1500}
+An Input Field is used to make the text of a \doxysectlink{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2script-_text}{Text Element}{0} editable by the user. It has a Unity\+Event to define what it will do when the text content is changed, and an another to define what it will do when the user has finished editing it.
+
+
+
+See the \doxysectlink{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2script-_input_field}{Input Field}{0} page for details on using the Input Field component.\hypertarget{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_u_i_interaction_components_autotoc_md1501}{}\doxysection{\texorpdfstring{Scroll Rect (Scroll View)}{Scroll Rect (Scroll View)}}\label{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2_u_i_interaction_components_autotoc_md1501}
+A Scroll Rect can be used when content that takes up a lot of space needs to be displayed in a small area. The Scroll Rect provides functionality to scroll over this content.
+
+Usually a Scroll Rect is combined with a \doxysectlink{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2script-_mask}{Mask}{0} in order to create a scroll view, where only the scrollable content inside the Scroll Rect is visible. It can also additionally be combined with one or two \doxysectlink{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2script-_scrollbar}{Scrollbars}{0} that can be dragged to scroll horizontally or vertically.
+
+
+
+See the \doxysectlink{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2script-_scroll_rect}{Scroll Rect}{0} page for details on using the Scroll Rect component. 

@@ -1,0 +1,129 @@
+\doxysection{Unity\+Editor.\+Timeline.\+IWindow\+State Interface Reference}
+\hypertarget{interface_unity_editor_1_1_timeline_1_1_i_window_state}{}\label{interface_unity_editor_1_1_timeline_1_1_i_window_state}\index{UnityEditor.Timeline.IWindowState@{UnityEditor.Timeline.IWindowState}}
+
+
+Interface for faking purposes.  
+
+
+Inheritance diagram for Unity\+Editor.\+Timeline.\+IWindow\+State\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_unity_editor_1_1_timeline_1_1_i_window_state}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_window_state_a1d9be410563b08ea760f076920c18e52}{Set\+Current\+Sequence}} (\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_asset}{Timeline\+Asset}} timeline\+Asset, Playable\+Director director, \mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}} host\+Clip)
+\item 
+void \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_window_state_a81644a58b23c5547483dde2366093ca0}{Pop\+Sequences\+Until\+Count}} (int count)
+\item 
+IEnumerable$<$ \mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_sequence_context}{Sequence\+Context}} $>$ \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_window_state_a63aca0cd248abff81ddf2fec9c8cb8a3}{Get\+Sub\+Sequences}} ()
+\item 
+void \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_window_state_ac8f412e464e1bfba28a07e3b1276b0e0}{Set\+Playing}} (bool start)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_sequence_state}{ISequence\+State}} \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_window_state_a66aabb532b3a19324461c984290cf3c7}{master\+Sequence}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_sequence_state}{ISequence\+State}} \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_window_state_ad8890ae9ec6ce35b2759469ce871d6c5}{edit\+Sequence}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+IEnumerable$<$ \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_sequence_state}{ISequence\+State}} $>$ \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_window_state_adfe6a165672d799b54e8d6617607dc07}{all\+Sequences}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_play_range}{Play\+Range}} \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_window_state_a86eb4a942936290ef039c6a0f6ff9366}{play\+Range}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for faking purposes. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interface_unity_editor_1_1_timeline_1_1_i_window_state_a63aca0cd248abff81ddf2fec9c8cb8a3}\label{interface_unity_editor_1_1_timeline_1_1_i_window_state_a63aca0cd248abff81ddf2fec9c8cb8a3} 
+\index{UnityEditor.Timeline.IWindowState@{UnityEditor.Timeline.IWindowState}!GetSubSequences@{GetSubSequences}}
+\index{GetSubSequences@{GetSubSequences}!UnityEditor.Timeline.IWindowState@{UnityEditor.Timeline.IWindowState}}
+\doxysubsubsection{\texorpdfstring{GetSubSequences()}{GetSubSequences()}}
+{\footnotesize\ttfamily IEnumerable$<$ \mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_sequence_context}{Sequence\+Context}} $>$ Unity\+Editor.\+Timeline.\+IWindow\+State.\+Get\+Sub\+Sequences (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_window_state_af09c92964880c2aacfd80392ec5d23dd}{Unity\+Editor.\+Timeline.\+Window\+State}}.
+
+\Hypertarget{interface_unity_editor_1_1_timeline_1_1_i_window_state_a81644a58b23c5547483dde2366093ca0}\label{interface_unity_editor_1_1_timeline_1_1_i_window_state_a81644a58b23c5547483dde2366093ca0} 
+\index{UnityEditor.Timeline.IWindowState@{UnityEditor.Timeline.IWindowState}!PopSequencesUntilCount@{PopSequencesUntilCount}}
+\index{PopSequencesUntilCount@{PopSequencesUntilCount}!UnityEditor.Timeline.IWindowState@{UnityEditor.Timeline.IWindowState}}
+\doxysubsubsection{\texorpdfstring{PopSequencesUntilCount()}{PopSequencesUntilCount()}}
+{\footnotesize\ttfamily void Unity\+Editor.\+Timeline.\+IWindow\+State.\+Pop\+Sequences\+Until\+Count (\begin{DoxyParamCaption}\item[{int}]{count }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_window_state_a0887f76923b63e334e6ea9c158cb24cd}{Unity\+Editor.\+Timeline.\+Window\+State}}.
+
+\Hypertarget{interface_unity_editor_1_1_timeline_1_1_i_window_state_a1d9be410563b08ea760f076920c18e52}\label{interface_unity_editor_1_1_timeline_1_1_i_window_state_a1d9be410563b08ea760f076920c18e52} 
+\index{UnityEditor.Timeline.IWindowState@{UnityEditor.Timeline.IWindowState}!SetCurrentSequence@{SetCurrentSequence}}
+\index{SetCurrentSequence@{SetCurrentSequence}!UnityEditor.Timeline.IWindowState@{UnityEditor.Timeline.IWindowState}}
+\doxysubsubsection{\texorpdfstring{SetCurrentSequence()}{SetCurrentSequence()}}
+{\footnotesize\ttfamily void Unity\+Editor.\+Timeline.\+IWindow\+State.\+Set\+Current\+Sequence (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_asset}{Timeline\+Asset}}}]{timeline\+Asset,  }\item[{Playable\+Director}]{director,  }\item[{\mbox{\hyperlink{class_unity_engine_1_1_timeline_1_1_timeline_clip}{Timeline\+Clip}}}]{host\+Clip }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_window_state_af21f768e0dd8aad7acdc12b4b34d8309}{Unity\+Editor.\+Timeline.\+Window\+State}}.
+
+\Hypertarget{interface_unity_editor_1_1_timeline_1_1_i_window_state_ac8f412e464e1bfba28a07e3b1276b0e0}\label{interface_unity_editor_1_1_timeline_1_1_i_window_state_ac8f412e464e1bfba28a07e3b1276b0e0} 
+\index{UnityEditor.Timeline.IWindowState@{UnityEditor.Timeline.IWindowState}!SetPlaying@{SetPlaying}}
+\index{SetPlaying@{SetPlaying}!UnityEditor.Timeline.IWindowState@{UnityEditor.Timeline.IWindowState}}
+\doxysubsubsection{\texorpdfstring{SetPlaying()}{SetPlaying()}}
+{\footnotesize\ttfamily void Unity\+Editor.\+Timeline.\+IWindow\+State.\+Set\+Playing (\begin{DoxyParamCaption}\item[{bool}]{start }\end{DoxyParamCaption})}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_window_state_a2a0854f3b0a2f92f741dde7cfeb024b8}{Unity\+Editor.\+Timeline.\+Window\+State}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{interface_unity_editor_1_1_timeline_1_1_i_window_state_adfe6a165672d799b54e8d6617607dc07}\label{interface_unity_editor_1_1_timeline_1_1_i_window_state_adfe6a165672d799b54e8d6617607dc07} 
+\index{UnityEditor.Timeline.IWindowState@{UnityEditor.Timeline.IWindowState}!allSequences@{allSequences}}
+\index{allSequences@{allSequences}!UnityEditor.Timeline.IWindowState@{UnityEditor.Timeline.IWindowState}}
+\doxysubsubsection{\texorpdfstring{allSequences}{allSequences}}
+{\footnotesize\ttfamily IEnumerable$<$\mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_sequence_state}{ISequence\+State}}$>$ Unity\+Editor.\+Timeline.\+IWindow\+State.\+all\+Sequences\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_window_state_a8d12b6766485cdc5e90a1308ed997404}{Unity\+Editor.\+Timeline.\+Window\+State}}.
+
+\Hypertarget{interface_unity_editor_1_1_timeline_1_1_i_window_state_ad8890ae9ec6ce35b2759469ce871d6c5}\label{interface_unity_editor_1_1_timeline_1_1_i_window_state_ad8890ae9ec6ce35b2759469ce871d6c5} 
+\index{UnityEditor.Timeline.IWindowState@{UnityEditor.Timeline.IWindowState}!editSequence@{editSequence}}
+\index{editSequence@{editSequence}!UnityEditor.Timeline.IWindowState@{UnityEditor.Timeline.IWindowState}}
+\doxysubsubsection{\texorpdfstring{editSequence}{editSequence}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_sequence_state}{ISequence\+State}} Unity\+Editor.\+Timeline.\+IWindow\+State.\+edit\+Sequence\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_window_state_a006919b74b71f9f6511d64b138264d4c}{Unity\+Editor.\+Timeline.\+Window\+State}}.
+
+\Hypertarget{interface_unity_editor_1_1_timeline_1_1_i_window_state_a66aabb532b3a19324461c984290cf3c7}\label{interface_unity_editor_1_1_timeline_1_1_i_window_state_a66aabb532b3a19324461c984290cf3c7} 
+\index{UnityEditor.Timeline.IWindowState@{UnityEditor.Timeline.IWindowState}!masterSequence@{masterSequence}}
+\index{masterSequence@{masterSequence}!UnityEditor.Timeline.IWindowState@{UnityEditor.Timeline.IWindowState}}
+\doxysubsubsection{\texorpdfstring{masterSequence}{masterSequence}}
+{\footnotesize\ttfamily \mbox{\hyperlink{interface_unity_editor_1_1_timeline_1_1_i_sequence_state}{ISequence\+State}} Unity\+Editor.\+Timeline.\+IWindow\+State.\+master\+Sequence\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_window_state_a6a4700f6c32d922967fa0af6962b9a42}{Unity\+Editor.\+Timeline.\+Window\+State}}.
+
+\Hypertarget{interface_unity_editor_1_1_timeline_1_1_i_window_state_a86eb4a942936290ef039c6a0f6ff9366}\label{interface_unity_editor_1_1_timeline_1_1_i_window_state_a86eb4a942936290ef039c6a0f6ff9366} 
+\index{UnityEditor.Timeline.IWindowState@{UnityEditor.Timeline.IWindowState}!playRange@{playRange}}
+\index{playRange@{playRange}!UnityEditor.Timeline.IWindowState@{UnityEditor.Timeline.IWindowState}}
+\doxysubsubsection{\texorpdfstring{playRange}{playRange}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_unity_editor_1_1_timeline_1_1_play_range}{Play\+Range}} Unity\+Editor.\+Timeline.\+IWindow\+State.\+play\+Range\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_unity_editor_1_1_timeline_1_1_window_state_afd7103d98e1e5db510b950f1d0e0e602}{Unity\+Editor.\+Timeline.\+Window\+State}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+7.\+6/\+Editor/\+State/\mbox{\hyperlink{_window_state_8cs}{Window\+State.\+cs}}\end{DoxyCompactItemize}

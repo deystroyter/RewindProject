@@ -1,0 +1,170 @@
+\doxysection{Timeline.\+Samples.\+Video\+Playable\+Asset Class Reference}
+\hypertarget{class_timeline_1_1_samples_1_1_video_playable_asset}{}\label{class_timeline_1_1_samples_1_1_video_playable_asset}\index{Timeline.Samples.VideoPlayableAsset@{Timeline.Samples.VideoPlayableAsset}}
+Inheritance diagram for Timeline.\+Samples.\+Video\+Playable\+Asset\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_timeline_1_1_samples_1_1_video_playable_asset}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_timeline_1_1_samples_1_1_video_playable_asset_a13efce3a97a7ddf637db9ff47fbb670b}{Render\+Mode}} \{ \mbox{\hyperlink{class_timeline_1_1_samples_1_1_video_playable_asset_a13efce3a97a7ddf637db9ff47fbb670ba6224ff31fb952b5b4f7e0de87882ff21}{Camera\+Far\+Plane}}
+, \mbox{\hyperlink{class_timeline_1_1_samples_1_1_video_playable_asset_a13efce3a97a7ddf637db9ff47fbb670ba6b9b874445f36eac441425b0ffa3eace}{Camera\+Near\+Plane}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override Playable \mbox{\hyperlink{class_timeline_1_1_samples_1_1_video_playable_asset_a1ccccf86a4315a4ab3c94849d08d4108}{Create\+Playable}} (Playable\+Graph graph, Game\+Object go)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Video\+Clip \mbox{\hyperlink{class_timeline_1_1_samples_1_1_video_playable_asset_a7cca9b30684700d486732769f3bea19d}{video\+Clip}}
+\item 
+bool \mbox{\hyperlink{class_timeline_1_1_samples_1_1_video_playable_asset_a18202d759325e9eb2039008cdfa1e172}{mute}}
+\item 
+bool \mbox{\hyperlink{class_timeline_1_1_samples_1_1_video_playable_asset_a6b9be9dae1d6e90411960b0696a14bb4}{loop}} = true
+\item 
+double \mbox{\hyperlink{class_timeline_1_1_samples_1_1_video_playable_asset_ac36e73b3a74b6d66c8b5dfd38b747501}{preload\+Time}} = 0.\+3
+\item 
+Video\+Aspect\+Ratio \mbox{\hyperlink{class_timeline_1_1_samples_1_1_video_playable_asset_a287a6038763e8b4ee88b566b1086075d}{aspect\+Ratio}} = Video\+Aspect\+Ratio.\+Fit\+Horizontally
+\item 
+\mbox{\hyperlink{class_timeline_1_1_samples_1_1_video_playable_asset_a13efce3a97a7ddf637db9ff47fbb670b}{Render\+Mode}} \mbox{\hyperlink{class_timeline_1_1_samples_1_1_video_playable_asset_a0f3a1c0263ac48536b6ee90fa32beb1e}{render\+Mode}} = \mbox{\hyperlink{class_timeline_1_1_samples_1_1_video_playable_asset_a13efce3a97a7ddf637db9ff47fbb670ba6224ff31fb952b5b4f7e0de87882ff21}{Render\+Mode.\+Camera\+Far\+Plane}}
+\item 
+Exposed\+Reference$<$ Camera $>$ \mbox{\hyperlink{class_timeline_1_1_samples_1_1_video_playable_asset_a6d8e9343f17d4c1c42e3ca883739a99a}{target\+Camera}}
+\item 
+Exposed\+Reference$<$ Audio\+Source $>$ \mbox{\hyperlink{class_timeline_1_1_samples_1_1_video_playable_asset_a7d0004c635c44e95f5bd6ae3b3f88499}{audio\+Source}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_timeline_1_1_samples_1_1_video_playable_asset_a2a9f53d4c7e421d4bc956aba15dbc07e}{clip\+In\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+double \mbox{\hyperlink{class_timeline_1_1_samples_1_1_video_playable_asset_a35d41e70a766c2daba58e77c1bca3025}{start\+Time}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+override double \mbox{\hyperlink{class_timeline_1_1_samples_1_1_video_playable_asset_addcfeb21533de1c71bfd93e1ee2e48cd}{duration}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{namespace_unity_engine_1_1_timeline_af0b68b9529bda08f212a5aefa79e7e03}{Clip\+Caps}} \mbox{\hyperlink{class_timeline_1_1_samples_1_1_video_playable_asset_aac4db180727562f3e800a8f41701d52f}{clip\+Caps}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns a description of the features supported by clips with Playable\+Assets implementing this interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_timeline_clip_asset}{Unity\+Engine.\+Timeline.\+ITimeline\+Clip\+Asset}}}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_timeline_1_1_samples_1_1_video_playable_asset_a13efce3a97a7ddf637db9ff47fbb670b}\label{class_timeline_1_1_samples_1_1_video_playable_asset_a13efce3a97a7ddf637db9ff47fbb670b} 
+\index{Timeline.Samples.VideoPlayableAsset@{Timeline.Samples.VideoPlayableAsset}!RenderMode@{RenderMode}}
+\index{RenderMode@{RenderMode}!Timeline.Samples.VideoPlayableAsset@{Timeline.Samples.VideoPlayableAsset}}
+\doxysubsubsection{\texorpdfstring{RenderMode}{RenderMode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_timeline_1_1_samples_1_1_video_playable_asset_a13efce3a97a7ddf637db9ff47fbb670b}{Timeline.\+Samples.\+Video\+Playable\+Asset.\+Render\+Mode}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CameraFarPlane@{CameraFarPlane}!Timeline.Samples.VideoPlayableAsset@{Timeline.Samples.VideoPlayableAsset}}\index{Timeline.Samples.VideoPlayableAsset@{Timeline.Samples.VideoPlayableAsset}!CameraFarPlane@{CameraFarPlane}}}\Hypertarget{class_timeline_1_1_samples_1_1_video_playable_asset_a13efce3a97a7ddf637db9ff47fbb670ba6224ff31fb952b5b4f7e0de87882ff21}\label{class_timeline_1_1_samples_1_1_video_playable_asset_a13efce3a97a7ddf637db9ff47fbb670ba6224ff31fb952b5b4f7e0de87882ff21} 
+Camera\+Far\+Plane&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CameraNearPlane@{CameraNearPlane}!Timeline.Samples.VideoPlayableAsset@{Timeline.Samples.VideoPlayableAsset}}\index{Timeline.Samples.VideoPlayableAsset@{Timeline.Samples.VideoPlayableAsset}!CameraNearPlane@{CameraNearPlane}}}\Hypertarget{class_timeline_1_1_samples_1_1_video_playable_asset_a13efce3a97a7ddf637db9ff47fbb670ba6b9b874445f36eac441425b0ffa3eace}\label{class_timeline_1_1_samples_1_1_video_playable_asset_a13efce3a97a7ddf637db9ff47fbb670ba6b9b874445f36eac441425b0ffa3eace} 
+Camera\+Near\+Plane&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_timeline_1_1_samples_1_1_video_playable_asset_a1ccccf86a4315a4ab3c94849d08d4108}\label{class_timeline_1_1_samples_1_1_video_playable_asset_a1ccccf86a4315a4ab3c94849d08d4108} 
+\index{Timeline.Samples.VideoPlayableAsset@{Timeline.Samples.VideoPlayableAsset}!CreatePlayable@{CreatePlayable}}
+\index{CreatePlayable@{CreatePlayable}!Timeline.Samples.VideoPlayableAsset@{Timeline.Samples.VideoPlayableAsset}}
+\doxysubsubsection{\texorpdfstring{CreatePlayable()}{CreatePlayable()}}
+{\footnotesize\ttfamily override Playable Timeline.\+Samples.\+Video\+Playable\+Asset.\+Create\+Playable (\begin{DoxyParamCaption}\item[{Playable\+Graph}]{graph,  }\item[{Game\+Object}]{go }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_timeline_1_1_samples_1_1_video_playable_asset_a287a6038763e8b4ee88b566b1086075d}\label{class_timeline_1_1_samples_1_1_video_playable_asset_a287a6038763e8b4ee88b566b1086075d} 
+\index{Timeline.Samples.VideoPlayableAsset@{Timeline.Samples.VideoPlayableAsset}!aspectRatio@{aspectRatio}}
+\index{aspectRatio@{aspectRatio}!Timeline.Samples.VideoPlayableAsset@{Timeline.Samples.VideoPlayableAsset}}
+\doxysubsubsection{\texorpdfstring{aspectRatio}{aspectRatio}}
+{\footnotesize\ttfamily Video\+Aspect\+Ratio Timeline.\+Samples.\+Video\+Playable\+Asset.\+aspect\+Ratio = Video\+Aspect\+Ratio.\+Fit\+Horizontally}
+
+\Hypertarget{class_timeline_1_1_samples_1_1_video_playable_asset_a7d0004c635c44e95f5bd6ae3b3f88499}\label{class_timeline_1_1_samples_1_1_video_playable_asset_a7d0004c635c44e95f5bd6ae3b3f88499} 
+\index{Timeline.Samples.VideoPlayableAsset@{Timeline.Samples.VideoPlayableAsset}!audioSource@{audioSource}}
+\index{audioSource@{audioSource}!Timeline.Samples.VideoPlayableAsset@{Timeline.Samples.VideoPlayableAsset}}
+\doxysubsubsection{\texorpdfstring{audioSource}{audioSource}}
+{\footnotesize\ttfamily Exposed\+Reference$<$Audio\+Source$>$ Timeline.\+Samples.\+Video\+Playable\+Asset.\+audio\+Source}
+
+\Hypertarget{class_timeline_1_1_samples_1_1_video_playable_asset_a6b9be9dae1d6e90411960b0696a14bb4}\label{class_timeline_1_1_samples_1_1_video_playable_asset_a6b9be9dae1d6e90411960b0696a14bb4} 
+\index{Timeline.Samples.VideoPlayableAsset@{Timeline.Samples.VideoPlayableAsset}!loop@{loop}}
+\index{loop@{loop}!Timeline.Samples.VideoPlayableAsset@{Timeline.Samples.VideoPlayableAsset}}
+\doxysubsubsection{\texorpdfstring{loop}{loop}}
+{\footnotesize\ttfamily bool Timeline.\+Samples.\+Video\+Playable\+Asset.\+loop = true}
+
+\Hypertarget{class_timeline_1_1_samples_1_1_video_playable_asset_a18202d759325e9eb2039008cdfa1e172}\label{class_timeline_1_1_samples_1_1_video_playable_asset_a18202d759325e9eb2039008cdfa1e172} 
+\index{Timeline.Samples.VideoPlayableAsset@{Timeline.Samples.VideoPlayableAsset}!mute@{mute}}
+\index{mute@{mute}!Timeline.Samples.VideoPlayableAsset@{Timeline.Samples.VideoPlayableAsset}}
+\doxysubsubsection{\texorpdfstring{mute}{mute}}
+{\footnotesize\ttfamily bool Timeline.\+Samples.\+Video\+Playable\+Asset.\+mute}
+
+\Hypertarget{class_timeline_1_1_samples_1_1_video_playable_asset_ac36e73b3a74b6d66c8b5dfd38b747501}\label{class_timeline_1_1_samples_1_1_video_playable_asset_ac36e73b3a74b6d66c8b5dfd38b747501} 
+\index{Timeline.Samples.VideoPlayableAsset@{Timeline.Samples.VideoPlayableAsset}!preloadTime@{preloadTime}}
+\index{preloadTime@{preloadTime}!Timeline.Samples.VideoPlayableAsset@{Timeline.Samples.VideoPlayableAsset}}
+\doxysubsubsection{\texorpdfstring{preloadTime}{preloadTime}}
+{\footnotesize\ttfamily double Timeline.\+Samples.\+Video\+Playable\+Asset.\+preload\+Time = 0.\+3}
+
+\Hypertarget{class_timeline_1_1_samples_1_1_video_playable_asset_a0f3a1c0263ac48536b6ee90fa32beb1e}\label{class_timeline_1_1_samples_1_1_video_playable_asset_a0f3a1c0263ac48536b6ee90fa32beb1e} 
+\index{Timeline.Samples.VideoPlayableAsset@{Timeline.Samples.VideoPlayableAsset}!renderMode@{renderMode}}
+\index{renderMode@{renderMode}!Timeline.Samples.VideoPlayableAsset@{Timeline.Samples.VideoPlayableAsset}}
+\doxysubsubsection{\texorpdfstring{renderMode}{renderMode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_timeline_1_1_samples_1_1_video_playable_asset_a13efce3a97a7ddf637db9ff47fbb670b}{Render\+Mode}} Timeline.\+Samples.\+Video\+Playable\+Asset.\+render\+Mode = \mbox{\hyperlink{class_timeline_1_1_samples_1_1_video_playable_asset_a13efce3a97a7ddf637db9ff47fbb670ba6224ff31fb952b5b4f7e0de87882ff21}{Render\+Mode.\+Camera\+Far\+Plane}}}
+
+\Hypertarget{class_timeline_1_1_samples_1_1_video_playable_asset_a6d8e9343f17d4c1c42e3ca883739a99a}\label{class_timeline_1_1_samples_1_1_video_playable_asset_a6d8e9343f17d4c1c42e3ca883739a99a} 
+\index{Timeline.Samples.VideoPlayableAsset@{Timeline.Samples.VideoPlayableAsset}!targetCamera@{targetCamera}}
+\index{targetCamera@{targetCamera}!Timeline.Samples.VideoPlayableAsset@{Timeline.Samples.VideoPlayableAsset}}
+\doxysubsubsection{\texorpdfstring{targetCamera}{targetCamera}}
+{\footnotesize\ttfamily Exposed\+Reference$<$Camera$>$ Timeline.\+Samples.\+Video\+Playable\+Asset.\+target\+Camera}
+
+\Hypertarget{class_timeline_1_1_samples_1_1_video_playable_asset_a7cca9b30684700d486732769f3bea19d}\label{class_timeline_1_1_samples_1_1_video_playable_asset_a7cca9b30684700d486732769f3bea19d} 
+\index{Timeline.Samples.VideoPlayableAsset@{Timeline.Samples.VideoPlayableAsset}!videoClip@{videoClip}}
+\index{videoClip@{videoClip}!Timeline.Samples.VideoPlayableAsset@{Timeline.Samples.VideoPlayableAsset}}
+\doxysubsubsection{\texorpdfstring{videoClip}{videoClip}}
+{\footnotesize\ttfamily Video\+Clip Timeline.\+Samples.\+Video\+Playable\+Asset.\+video\+Clip}
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_timeline_1_1_samples_1_1_video_playable_asset_aac4db180727562f3e800a8f41701d52f}\label{class_timeline_1_1_samples_1_1_video_playable_asset_aac4db180727562f3e800a8f41701d52f} 
+\index{Timeline.Samples.VideoPlayableAsset@{Timeline.Samples.VideoPlayableAsset}!clipCaps@{clipCaps}}
+\index{clipCaps@{clipCaps}!Timeline.Samples.VideoPlayableAsset@{Timeline.Samples.VideoPlayableAsset}}
+\doxysubsubsection{\texorpdfstring{clipCaps}{clipCaps}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_unity_engine_1_1_timeline_af0b68b9529bda08f212a5aefa79e7e03}{Clip\+Caps}} Timeline.\+Samples.\+Video\+Playable\+Asset.\+clip\+Caps\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Returns a description of the features supported by clips with Playable\+Assets implementing this interface. 
+
+
+
+Implements \mbox{\hyperlink{interface_unity_engine_1_1_timeline_1_1_i_timeline_clip_asset_ad73af6af3aa5b1f06545740d9da4db2c}{Unity\+Engine.\+Timeline.\+ITimeline\+Clip\+Asset}}.
+
+\Hypertarget{class_timeline_1_1_samples_1_1_video_playable_asset_a2a9f53d4c7e421d4bc956aba15dbc07e}\label{class_timeline_1_1_samples_1_1_video_playable_asset_a2a9f53d4c7e421d4bc956aba15dbc07e} 
+\index{Timeline.Samples.VideoPlayableAsset@{Timeline.Samples.VideoPlayableAsset}!clipInTime@{clipInTime}}
+\index{clipInTime@{clipInTime}!Timeline.Samples.VideoPlayableAsset@{Timeline.Samples.VideoPlayableAsset}}
+\doxysubsubsection{\texorpdfstring{clipInTime}{clipInTime}}
+{\footnotesize\ttfamily double Timeline.\+Samples.\+Video\+Playable\+Asset.\+clip\+In\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\Hypertarget{class_timeline_1_1_samples_1_1_video_playable_asset_addcfeb21533de1c71bfd93e1ee2e48cd}\label{class_timeline_1_1_samples_1_1_video_playable_asset_addcfeb21533de1c71bfd93e1ee2e48cd} 
+\index{Timeline.Samples.VideoPlayableAsset@{Timeline.Samples.VideoPlayableAsset}!duration@{duration}}
+\index{duration@{duration}!Timeline.Samples.VideoPlayableAsset@{Timeline.Samples.VideoPlayableAsset}}
+\doxysubsubsection{\texorpdfstring{duration}{duration}}
+{\footnotesize\ttfamily override double Timeline.\+Samples.\+Video\+Playable\+Asset.\+duration\hspace{0.3cm}{\ttfamily [get]}}
+
+\Hypertarget{class_timeline_1_1_samples_1_1_video_playable_asset_a35d41e70a766c2daba58e77c1bca3025}\label{class_timeline_1_1_samples_1_1_video_playable_asset_a35d41e70a766c2daba58e77c1bca3025} 
+\index{Timeline.Samples.VideoPlayableAsset@{Timeline.Samples.VideoPlayableAsset}!startTime@{startTime}}
+\index{startTime@{startTime}!Timeline.Samples.VideoPlayableAsset@{Timeline.Samples.VideoPlayableAsset}}
+\doxysubsubsection{\texorpdfstring{startTime}{startTime}}
+{\footnotesize\ttfamily double Timeline.\+Samples.\+Video\+Playable\+Asset.\+start\+Time\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Package\+Cache/com.\+unity.\+timeline@1.\+7.\+6/\+Samples\texorpdfstring{$\sim$}{\string~}/\+Customization/\+Video/\mbox{\hyperlink{_video_playable_asset_8cs}{Video\+Playable\+Asset.\+cs}}\end{DoxyCompactItemize}

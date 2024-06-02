@@ -1,0 +1,55 @@
+\chapter{Custom equality comparers}
+\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-custom-equality-comparers}{}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-custom-equality-comparers}\index{Custom equality comparers@{Custom equality comparers}}
+\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-custom-equality-comparers_autotoc_md657}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-custom-equality-comparers_autotoc_md657}%
+ To enable easier verification of custom \doxylink{namespace_unity}{Unity} type values in your tests we provide you with some custom equality comparers\+:
+
+
+\begin{DoxyItemize}
+\item \doxysectlink{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-comparer-color}{Color\+Equality\+Comparer}{0}
+\item \doxysectlink{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-comparer-float}{Float\+Equality\+Comparer}{0}
+\item \doxysectlink{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-comparer-quaternion}{Quaternion\+Equality\+Comparer}{0}
+\item \doxysectlink{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-comparer-vector2}{Vector2\+Equality\+Comparer}{0}
+\item \doxysectlink{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-comparer-vector3}{Vector3\+Equality\+Comparer}{0}
+\item \doxysectlink{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-comparer-vector4}{Vector4\+Equality\+Comparer}{0}
+\end{DoxyItemize}
+
+Use these classes to compare two objects of the same type for equality within the range of a given tolerance using \href{https://github.com/nunit/docs/wiki/Constraints}{\texttt{ NUnit}}or \doxysectlink{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-custom-constraints}{custom constraints}{0} . Call Instance to apply the default calculation error value to the comparison. To set a specific error value, instantiate a new comparer object using a one argument constructor {\ttfamily ctor(float error)}.\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-custom-equality-comparers_autotoc_md658}{}\doxysection{\texorpdfstring{Static properties}{Static properties}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-custom-equality-comparers_autotoc_md658}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Syntax   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Syntax   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endhead
+{\ttfamily Instance}   &A singleton instance of the comparer with a predefined default error value.   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-custom-equality-comparers_autotoc_md659}{}\doxysection{\texorpdfstring{Constructors}{Constructors}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-custom-equality-comparers_autotoc_md659}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Syntax   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Syntax   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endhead
+{\ttfamily ctor(float error)}   &Creates an instance of comparer with a custom error {\ttfamily value.\+allowed\+Error}. \+The relative error to be considered while comparing two values.   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-custom-equality-comparers_autotoc_md660}{}\doxysection{\texorpdfstring{Public methods}{Public methods}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-custom-equality-comparers_autotoc_md660}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Syntax   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Syntax   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endhead
+{\ttfamily bool Equals(\+T expected, T actual);}   &Compares the actual and expected objects for equality using a custom comparison mechanism. Returns {\ttfamily true} if expected and actual objects are equal, otherwise it returns {\ttfamily false}.   \\\cline{1-2}
+\end{longtabu}

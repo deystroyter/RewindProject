@@ -1,0 +1,24 @@
+\chapter{Unity version control for Git users}
+\hypertarget{md__library_2_package_cache_2com_8unity_8collab-proxy_0d2_83_81_2_documentation_0i_2_git_users}{}\label{md__library_2_package_cache_2com_8unity_8collab-proxy_0d2_83_81_2_documentation_0i_2_git_users}\index{Unity version control for Git users@{Unity version control for Git users}}
+\label{md__library_2_package_cache_2com_8unity_8collab-proxy_0d2_83_81_2_documentation_0i_2_git_users_autotoc_md135}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8collab-proxy_0d2_83_81_2_documentation_0i_2_git_users_autotoc_md135}%
+ \tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{GIT}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{\doxylink{namespace_unity}{Unity} VCS}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Explanation}}    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{GIT}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{\doxylink{namespace_unity}{Unity} VCS}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Explanation}}    }\\\cline{1-3}
+\endhead
+To Commit   &To Check in   &To Check in is to submit changes to the repo.    \\\cline{1-3}
+Commit   &Changeset   &Each new change on the history of the repo, grouping several individual file and directory changes.    \\\cline{1-3}
+Master   &Main   &When you create a repo in \doxylink{namespace_unity}{Unity} VCS, there\textquotesingle{}s always an "{}empty"{} branch. \doxylink{namespace_unity}{Unity} VCS calls it Main.    \\\cline{1-3}
+To checkout   &To update   &Downloading content to the workspace (working copy). This is called "{}update"{} because in \doxylink{namespace_unity}{Unity} VCS, "{}checkout"{} has a different meaning.    \\\cline{1-3}
+&Checkout   &When you checkout a file in \doxylink{namespace_unity}{Unity} VCS, you\textquotesingle{}re saying you are going to modify the file.    \\\cline{1-3}
+&Exclusive checkout or lock   &This is locking a file so nobody can touch it. It’s only useful for non-\/mergeable files, like binaries, images, or art in a video game.    \\\cline{1-3}
+\multicolumn{2}{|l|}{Rebase   }&\doxylink{namespace_unity}{Unity} VCS handles branching differently than Git. In \doxylink{namespace_unity}{Unity} VCS, a rebase is just a merge operation.    \\\cline{1-3}
+Repository   &Repository   &Where the entire history of the project is stored.    \\\cline{1-3}
+Working copy   &Workspace   &In Git, you have the working copy and the repository in the exact location. You have a working copy and a .git hidden dir with the repository. In \doxylink{namespace_unity}{Unity} VCS, this is slightly different since repositories and workspaces are separated. You can have several workspaces working with the same local repository.   \\\cline{1-3}
+\end{longtabu}

@@ -1,0 +1,59 @@
+\chapter{ICallbacks}
+\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-icallbacks}{}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-icallbacks}\index{ICallbacks@{ICallbacks}}
+\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-icallbacks_autotoc_md673}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-icallbacks_autotoc_md673}%
+An interface for receiving callbacks when running tests. All test runs invoke the callbacks until the next domain reload.
+
+The {\ttfamily Run\+Started} method runs when the whole test run starts. Then the {\ttfamily Test\+Started} method runs with information about the tests it is about to run on an assembly level. Afterward, it runs on a test fixture level and then on the individual test. If the test is a \href{./https://github.com/nunit/docs/wiki/Parameterized-Tests}{\texttt{ parameterized test}}, then it is also invoked for each parameter combination. After each part of the test tree have completed running, the corresponding {\ttfamily Test\+Finished} method runs with the test result. At the end of the run, the {\ttfamily Run\+Finished} event runs with the test result.
+
+An extended version of the callback, \doxysectlink{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-ierror-callbacks}{IError\+Callbacks}{0}, extends this {\ttfamily ICallbacks} to receive calls when a run fails due to a build error.\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-icallbacks_autotoc_md674}{}\doxysection{\texorpdfstring{Public methods}{Public methods}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-icallbacks_autotoc_md674}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Syntax   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Syntax   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endhead
+{\ttfamily void Run\+Started(\+ITest\+Adaptor tests\+To\+Run)}   &Invoked when the test run starts. The \doxysectlink{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-itest-adaptor}{ITest\+Adaptor}{0} represents the tree of tests to run.    \\\cline{1-2}
+{\ttfamily void Run\+Finished(\+ITest\+Result\+Adaptor result)}   &Invoked when the test run finishes. The \doxysectlink{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-itest-result-adaptor}{ITest\+Result\+Adaptor}{0} represents the results of the set of tests that have run.    \\\cline{1-2}
+{\ttfamily void Test\+Started(\+ITest\+Adaptor test)}   &Invoked on each node of the test tree, as that part of the tree starts to run.    \\\cline{1-2}
+{\ttfamily void Test\+Finished(\+ITest\+Result\+Adaptor result)}   &Invoked on each node of the test tree once that part of the test tree has finished running. The \doxysectlink{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-itest-result-adaptor}{ITest\+Result\+Adaptor}{0} represents the results of the current node of the test tree.   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-icallbacks_autotoc_md675}{}\doxysection{\texorpdfstring{Example}{Example}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-icallbacks_autotoc_md675}
+An example that sets up a listener on the API. The listener prints the number of failed tests after the run has finished\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ C\#}
+\DoxyCodeLine{public\ void\ SetupListeners()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ var\ api\ =\ ScriptableObject.CreateInstance<TestRunnerApi>();}
+\DoxyCodeLine{\ \ \ \ api.RegisterCallbacks(new\ MyCallbacks());}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{private\ class\ MyCallbacks\ :\ ICallbacks}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ public\ void\ RunStarted(ITestAdaptor\ testsToRun)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ }
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ public\ void\ RunFinished(ITestResultAdaptor\ result)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ Debug.Log(string.Format("{}Run\ finished\ \{0\}\ test(s)\ failed."{},\ result.FailCount));}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ public\ void\ TestStarted(ITestAdaptor\ test)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ }
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ public\ void\ TestFinished(ITestResultAdaptor\ result)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ }
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 

@@ -1,0 +1,42 @@
+\chapter{Conditional\+Ignore attribute}
+\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-attribute-conditionalignore}{}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-attribute-conditionalignore}\index{ConditionalIgnore attribute@{ConditionalIgnore attribute}}
+\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-attribute-conditionalignore_autotoc_md575}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-attribute-conditionalignore_autotoc_md575}%
+ This attribute is an alternative to the standard {\ttfamily Ignore} attribute in \href{http://www.nunit.org/}{\texttt{ NUnit}}. It allows for ignoring tests only under a specified condition. The condition evaluates during {\ttfamily On\+Load}, referenced by ID.\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-attribute-conditionalignore_autotoc_md576}{}\doxysection{\texorpdfstring{Example}{Example}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-attribute-conditionalignore_autotoc_md576}
+The following example shows a method to use the {\ttfamily Conditional\+Ignore} attribute to ignore a test if the \doxylink{namespace_unity}{Unity} Editor is running mac\+OS\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \#}}
+\DoxyCodeLine{\textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_unity_editor}{UnityEditor}};}
+\DoxyCodeLine{\textcolor{keyword}{using\ }NUnit.Framework;}
+\DoxyCodeLine{\textcolor{keyword}{using\ }UnityEngine.TestTools;}
+\DoxyCodeLine{}
+\DoxyCodeLine{[InitializeOnLoad]}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }OnLoad}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{static}\ OnLoad()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ var\ editorIsOSX\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#if\ UNITY\_EDITOR\_OSX}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ editorIsOSX\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#endif}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_conditional_ignore_attribute}{ConditionalIgnoreAttribute}}.\mbox{\hyperlink{class_unity_engine_1_1_test_tools_1_1_conditional_ignore_attribute_a28de322ff132c36b3801121667407a83}{AddConditionalIgnoreMapping}}(\textcolor{stringliteral}{"{}IgnoreInMacEditor"{}},\ editorIsOSX);}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }MyTestClass}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ [Test,\ ConditionalIgnore(\textcolor{stringliteral}{"{}IgnoreInMacEditor"{}},\ \textcolor{stringliteral}{"{}Ignored\ on\ Mac\ editor."{}})]}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ TestNeverRunningInMacEditor()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ Assert.Pass();}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+\begin{quote}
+{\bfseries{Note}}\+: You can only use {\ttfamily Initialize\+On\+Load} in {\bfseries{Edit Mode}} tests. \end{quote}

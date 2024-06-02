@@ -1,0 +1,83 @@
+\doxysection{Unity\+Engine.\+Test\+Runner.\+Test\+Run\+Callback\+Attribute Class Reference}
+\hypertarget{class_unity_engine_1_1_test_runner_1_1_test_run_callback_attribute}{}\label{class_unity_engine_1_1_test_runner_1_1_test_run_callback_attribute}\index{UnityEngine.TestRunner.TestRunCallbackAttribute@{UnityEngine.TestRunner.TestRunCallbackAttribute}}
+
+
+An assembly level attribute that indicates that a given type should be subscribed for receiving updates on the test progress.  
+
+
+Inheritance diagram for Unity\+Engine.\+Test\+Runner.\+Test\+Run\+Callback\+Attribute\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_unity_engine_1_1_test_runner_1_1_test_run_callback_attribute}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_engine_1_1_test_runner_1_1_test_run_callback_attribute_afab948bc65457160dba55bacdfed182e}{Test\+Run\+Callback\+Attribute}} (Type type)
+\begin{DoxyCompactList}\small\item\em Constructs a new instance of the Test\+Run\+Callback\+Attribute class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An assembly level attribute that indicates that a given type should be subscribed for receiving updates on the test progress. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \textcolor{keyword}{using\ }NUnit.Framework.Interfaces;}
+\DoxyCodeLine{\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_unity_engine}{UnityEngine}};}
+\DoxyCodeLine{\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_unity_engine_1_1_test_runner}{UnityEngine.TestRunner}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ [assembly:TestRunCallback(typeof(TestListener))]}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }TestListener\ :\ \mbox{\hyperlink{interface_unity_engine_1_1_test_runner_1_1_i_test_run_callback}{ITestRunCallback}}}
+\DoxyCodeLine{\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ RunStarted(ITest\ testsToRun)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ RunFinished(ITestResult\ testResults)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \mbox{\hyperlink{_editor_plugin_interop_8cs_a0100be52d45f14348918ea69ec09f959}{Debug}}.Log(\$\textcolor{stringliteral}{"{}Run\ finished\ with\ result\ \{testResults.ResultState\}."{}});}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ TestStarted(ITest\ test)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ TestFinished(ITestResult\ result)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_unity_engine_1_1_test_runner_1_1_test_run_callback_attribute_afab948bc65457160dba55bacdfed182e}\label{class_unity_engine_1_1_test_runner_1_1_test_run_callback_attribute_afab948bc65457160dba55bacdfed182e} 
+\index{UnityEngine.TestRunner.TestRunCallbackAttribute@{UnityEngine.TestRunner.TestRunCallbackAttribute}!TestRunCallbackAttribute@{TestRunCallbackAttribute}}
+\index{TestRunCallbackAttribute@{TestRunCallbackAttribute}!UnityEngine.TestRunner.TestRunCallbackAttribute@{UnityEngine.TestRunner.TestRunCallbackAttribute}}
+\doxysubsubsection{\texorpdfstring{TestRunCallbackAttribute()}{TestRunCallbackAttribute()}}
+{\footnotesize\ttfamily Unity\+Engine.\+Test\+Runner.\+Test\+Run\+Callback\+Attribute.\+Test\+Run\+Callback\+Attribute (\begin{DoxyParamCaption}\item[{Type}]{type }\end{DoxyParamCaption})}
+
+
+
+Constructs a new instance of the Test\+Run\+Callback\+Attribute class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & A target type that implements ITest\+Run\+Callback.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Exception} & Throws an Argument\+Exception if the provided type does not implement ITest\+Run\+Callback.\\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Package\+Cache/com.\+unity.\+test-\/framework@1.\+1.\+33/\+Unity\+Engine.\+Test\+Runner/\+Utils/\mbox{\hyperlink{_test_run_callback_attribute_8cs}{Test\+Run\+Callback\+Attribute.\+cs}}\end{DoxyCompactItemize}

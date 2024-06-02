@@ -1,0 +1,82 @@
+\chapter{Transition Options}
+\hypertarget{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2script-_selectable_transition}{}\label{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2script-_selectable_transition}\index{Transition Options@{Transition Options}}
+\label{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2script-_selectable_transition_autotoc_md1421}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2script-_selectable_transition_autotoc_md1421}%
+ Within a selectable component there are several transition options depending on what state the selectable is currently in. The different states are\+: normal, highlighted, pressed and disabled.
+
+
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Transition Options\+:}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Function\+:}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Transition Options\+:}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Function\+:}}    }\\\cline{1-2}
+\endhead
+{\bfseries{None}}   &This option is for the button to have no state effects at all.    \\\cline{1-2}
+{\bfseries{Color Tint}}   &Changes the colour of the button depending on what state it is in. It is possible to select the colour for each individual state. It is also possible to set the Fade Duration between the different states. The higher the number is, the slower the fade between colors will be.    \\\cline{1-2}
+{\bfseries{Sprite Swap}}   &Allows different sprites to display depending on what state the button is currently in, the sprites can be customised.    \\\cline{1-2}
+{\bfseries{Animation}}   &Allows animations to occur depending on the state of the button, an animator component must exist in order to use animation transition. It’s important to make sure root motion is disabled. To create an animation controller click on generate animation (or create your own) and make sure that an animation controller has been added to the animator component of the button.   \\\cline{1-2}
+\end{longtabu}
+
+
+Each Transition option (except None) provides additional options for controlling the transitions. We\textquotesingle{}ll go into details with those in each of the sections below.\hypertarget{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2script-_selectable_transition_autotoc_md1422}{}\doxysection{\texorpdfstring{Color Tint}{Color Tint}}\label{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2script-_selectable_transition_autotoc_md1422}
+
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property\+:}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Function\+:}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property\+:}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Function\+:}}    }\\\cline{1-2}
+\endhead
+{\bfseries{Target Graphic}}   &The graphic used for the interaction component.    \\\cline{1-2}
+{\bfseries{Normal Color}}   &The normal color of the control    \\\cline{1-2}
+{\bfseries{Highlighted Color}}   &The color of the control when it is highlighted    \\\cline{1-2}
+{\bfseries{Pressed Color}}   &The color of the control when it is pressed    \\\cline{1-2}
+{\bfseries{Disabled Color}}   &The color of the control when it is disabled    \\\cline{1-2}
+{\bfseries{Color Multiplier}}   &This multiplies the tint color for each transition by its value. With this you can create colors greater than 1 to brighten the colors (or alpha channel) on graphic elements whose base color is less than white (or less then full alpha).    \\\cline{1-2}
+{\bfseries{Fade Duration}}   &The time taken, in seconds, to fade from one state to another   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2script-_selectable_transition_autotoc_md1423}{}\doxysection{\texorpdfstring{Sprite Swap}{Sprite Swap}}\label{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2script-_selectable_transition_autotoc_md1423}
+
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property\+:}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Function\+:}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property\+:}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Function\+:}}    }\\\cline{1-2}
+\endhead
+{\bfseries{Target Graphic}}   &The normal sprite to use    \\\cline{1-2}
+{\bfseries{Highlighted Sprite}}   &Sprite to use when the control is highlighted    \\\cline{1-2}
+{\bfseries{Pressed Sprite}}   &Sprite to use when the control is pressed    \\\cline{1-2}
+{\bfseries{Disabled Sprite}}   &Sprite to use when the control is disabled   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2script-_selectable_transition_autotoc_md1424}{}\doxysection{\texorpdfstring{Animation}{Animation}}\label{md__library_2_package_cache_2com_8unity_8ugui_0d1_80_80_2_documentation_0i_2script-_selectable_transition_autotoc_md1424}
+
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property\+:}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Function\+:}}    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Property\+:}}   }&\cellcolor{\tableheadbgcolor}\textbf{ {\bfseries{Function\+:}}    }\\\cline{1-2}
+\endhead
+{\bfseries{Normal Trigger}}   &The normal animation trigger to use    \\\cline{1-2}
+{\bfseries{Highlighted Trigger}}   &Trigger to use when the control is highlighted    \\\cline{1-2}
+{\bfseries{Pressed Trigger}}   &Trigger to use when the control is pressed    \\\cline{1-2}
+{\bfseries{Disabled Trigger}}   &Trigger to use when the control is disabled   \\\cline{1-2}
+\end{longtabu}

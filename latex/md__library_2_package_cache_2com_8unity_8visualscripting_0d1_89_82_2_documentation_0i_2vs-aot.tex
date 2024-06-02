@@ -1,0 +1,27 @@
+\chapter{Use Visual Scripting with Unity Cloud Build}
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-aot}{}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-aot}\index{Use Visual Scripting with Unity Cloud Build@{Use Visual Scripting with Unity Cloud Build}}
+\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-aot_autotoc_md1677}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-aot_autotoc_md1677}%
+ At build time, \doxylink{namespace_unity}{Unity} removes any code that isn\textquotesingle{}t used by a project to reduce build size. This can cause problems with Visual Scripting because \doxylink{namespace_unity}{Unity} can remove code that\textquotesingle{}s necessary for Script Graphs to run in a project.
+
+For versions 1.\+7.\+x, Visual Scripting generates an {\ttfamily Aot\+Stubs.\+cs} file, which stores the \doxylink{namespace_unity}{Unity} APIs that graphs use. With the {\ttfamily Aot\+Stubs.\+cs} file, \doxylink{namespace_unity}{Unity} doesn\textquotesingle{}t remove any \doxylink{namespace_unity}{Unity} APIs used in a graph from a build. You can generate this file when you create a build of a project.
+
+Builds through \doxylink{namespace_unity}{Unity} Cloud Build can fail because Cloud Build prevents domain reload between the prebuild and build phases of the project. Without a domain reload, the build doesn\textquotesingle{}t include the generated {\ttfamily Aot\+Stubs.\+cs} file. For more information about domain reload, see \href{https://docs.unity3d.com/Manual/DomainReloading.html}{\texttt{ Domain Reloading}} in the \doxylink{namespace_unity}{Unity} User Manual.
+
+To build a Visual Scripting project with Cloud Build, do the following\+:
+
+
+\begin{DoxyEnumerate}
+\item Build the project locally for your desired platform. ~\newline
+For more information on how to build a project, see the relevant section for each platform in \href{https://docs.unity3d.com/Documentation/Manual/PlatformSpecific.html}{\texttt{ Platform development}} in the User Manual.
+\item After the build, do one of the following\+:
+\begin{DoxyItemize}
+\item Open the project files in the system file explorer.
+\item Open the \href{https://docs.unity3d.com/Manual/ProjectView.html}{\texttt{ Project window}} in the \doxylink{namespace_unity}{Unity} Editor.
+\end{DoxyItemize}
+\item In the project files, go to {\bfseries{Assets}} \texorpdfstring{$>$}{>} {\bfseries{Unity.\+Visual\+Scripting.\+Generated}} \texorpdfstring{$>$}{>} {\bfseries{Visual\+Scripting.\+Core}}.
+\item Locate the {\ttfamily Aot\+Stubs.\+cs} file.
+\item Add the {\ttfamily Aot\+Stubs.\+cs} file to your source control system.
+\end{DoxyEnumerate}
+
+Your Cloud Build settings might automatically trigger a new build of the project after you commit the {\ttfamily Aot\+Stubs.\+cs} file. For more information about version control systems and Cloud Build, see \href{https://docs.unity3d.com/Manual/UnityCloudBuild.html}{\texttt{ Unity Cloud Build}} in the User Manual. 

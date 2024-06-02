@@ -1,0 +1,387 @@
+\doxysection{Unity.\+Visual\+Scripting.\+Inspector Class Reference}
+\hypertarget{class_unity_1_1_visual_scripting_1_1_inspector}{}\label{class_unity_1_1_visual_scripting_1_1_inspector}\index{Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}}
+Inheritance diagram for Unity.\+Visual\+Scripting.\+Inspector\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{class_unity_1_1_visual_scripting_1_1_inspector}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector_a7852bb34b67013eb6f7dcb2d374741be}{Initialize}} ()
+\item 
+virtual void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector_aa8634fb332fdb7916204bdff9fd308a6}{Dispose}} ()
+\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector_a5a0b376490033a4f552599e89432a1bf}{Draw}} (Rect position, GUIContent label=null)
+\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector_a4aada24e51021f0a51b4212cdacd9a1f}{Set\+Height\+Dirty}} ()
+\item 
+float \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector_a84052774df25b684f88633f8473ad53c}{Get\+Cached\+Height}} (float width, GUIContent label, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector}{Inspector}} parent\+Inspector)
+\item 
+Rect \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector_a4f40577d1a89c96e0ed223ab2854318e}{Get\+Layout\+Position}} (GUIContent label=null, float scrollbar\+Trigger=14, Rect\+Offset offset=null)
+\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector_ade0bdc81fc6f8a586621072d0be86291}{Draw\+Layout}} (GUIContent label=null, float scrollbar\+Trigger=14, Rect\+Offset offset=null)
+\item 
+virtual float \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector_a0c3d144d43cdbef786fec41a5a263a59}{Get\+Adaptive\+Width}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector_ab68c97200c81f743d3f6f9e6958dd5af}{On\+Open\+VFX}} (int instance\+ID, int line)
+\item 
+static GUIContent \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector_ac0c469cdb6dd50fc47f4c5d22e1febc4}{Process\+Label}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Metadata}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector_a7fd3a74b100e7a678314eaec4d37b9fc}{metadata}}, GUIContent label)
+\item 
+static GUIStyle \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector_a63eb7f007cc519bce45c5e7b23a3b0fb}{Process\+Label\+Style}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Metadata}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector_a7fd3a74b100e7a678314eaec4d37b9fc}{metadata}}, GUIStyle label\+Style)
+\item 
+static float \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector_a3c62053a925a76a0b01e786b8aee70b4}{Width\+Without\+Label}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Metadata}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector_a7fd3a74b100e7a678314eaec4d37b9fc}{metadata}}, float width, GUIContent label=null)
+\item 
+static float \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector_a0063e7fb2ce36bae44c03fe41f39c5e1}{Height\+With\+Label}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Metadata}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector_a7fd3a74b100e7a678314eaec4d37b9fc}{metadata}}, float width, float height, GUIContent label=null, GUIStyle label\+Style=null)
+\item 
+static Rect \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector_a587c54548616af8798c2ef8bc5afec0e}{Prefix\+Label}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Metadata}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector_a7fd3a74b100e7a678314eaec4d37b9fc}{metadata}}, Rect position, GUIContent label=null, GUIStyle style=null)
+\item 
+static void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector_a5a556df3c49a5a1b99598dca2a6804a6}{Begin\+Block}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Metadata}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector_a7fd3a74b100e7a678314eaec4d37b9fc}{metadata}}, Rect position)
+\item 
+static Rect \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector_a262cc72c35912058d70cb6db3112aa64}{Begin\+Labeled\+Block}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Metadata}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector_a7fd3a74b100e7a678314eaec4d37b9fc}{metadata}}, Rect position, GUIContent label=null, GUIStyle label\+Style=null)
+\item 
+static bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector_ad4e7c68a53110f8a0c54bff68b8dc972}{End\+Block}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Metadata}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector_a7fd3a74b100e7a678314eaec4d37b9fc}{metadata}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector_ad416ef0faa51978fd0347ba3fcb7265b}{Inspector}} (\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Metadata}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector_a7fd3a74b100e7a678314eaec4d37b9fc}{metadata}})
+\item 
+float \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector_a0d534e397e0338735b5ec80c61c8fb00}{Get\+Height}} (float width, GUIContent label)
+\item 
+virtual bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector_ace07ecc4c8ff698acf59db4f6dd2829a}{Skip\+Event}} (Event \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector_a26dc9f070f61dc8f53fb85b9410816fa}{e}}, Rect position)
+\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector_a4f1a47f7f2bb3e2e668e0ee630f5c6b3}{On\+GUI}} (Rect position, GUIContent label)
+\item 
+virtual void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector_a6544f5f20e6dd98f33a8ac40beb4ab14}{On\+Editor\+Pref\+GUI}} (Rect position, GUIContent label)
+\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector_a8571f9500bfa93c1fb613e89e362fc7f}{Begin\+Profiling}} (string name)
+\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector_a967ddface2924ed2f83411c7b081595b}{End\+Profiling}} (string name)
+\item 
+void \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector_a6cac1cc4ee9824ec74fd8b0c74af26e1}{Reset\+Profiling}} (string name)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Rect \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector_a3e990de8ee242691227db527648ac7fb}{Reclaim\+Implementation\+Selector}} (Rect position)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector_a6983597e7dc89f5bd209987dd0769b7c}{y}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Metadata}} \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector_a7fd3a74b100e7a678314eaec4d37b9fc}{metadata}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+virtual bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector_a07e368ea4246c90b5c088c04ad707f9b}{safe}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+static bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector_aa9bfce1ec59cbe1e8f9dfc35e6ca6c8e}{profile}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+virtual bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector_a006a04aa338fd5e45805e4ea9adba39a}{indent}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector_a11eb0784e1378ddd65cac01371e6112a}{is\+Height\+Dirty}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+virtual bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector_a19dde0ced8d9dfde85a64096fda9ced2}{cache\+Height}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector_a4f17b2f518d53621a552a59330cc81b8}{wide\+Mode}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+float \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector_aae3535324a9d8cca80273c5a1398eac6}{full}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+float \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector_ae730ae7ac780e365c7ec69fb153fb7b9}{half}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+virtual float \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector_a449d251f6ed426a57b76ad6108edf19d}{wide\+Mode\+Threshold}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+static Event \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector_a26dc9f070f61dc8f53fb85b9410816fa}{e}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+static \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_override_stack}{Override\+Stack}}$<$ bool $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector_ae47461487f02221522c39120c54ec950}{expand\+Tooltip}} = new \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_override_stack}{Override\+Stack}}$<$bool$>$(false)\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+static \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_override_stack}{Override\+Stack}}$<$ bool $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector_ae8e88177f9312b5a9fe098a88cf9a16a}{adaptive\+Width}} = new \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_override_stack}{Override\+Stack}}$<$bool$>$(false)\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+static \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_override_stack}{Override\+Stack}}$<$ GUIStyle $>$ \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector_ac251a49902a90b2ad332cc1f081168ee}{default\+Label\+Style}} = new \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_override_stack}{Override\+Stack}}$<$GUIStyle$>$(null)\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_inspector_ad416ef0faa51978fd0347ba3fcb7265b}\label{class_unity_1_1_visual_scripting_1_1_inspector_ad416ef0faa51978fd0347ba3fcb7265b} 
+\index{Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}!Inspector@{Inspector}}
+\index{Inspector@{Inspector}!Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}}
+\doxysubsubsection{\texorpdfstring{Inspector()}{Inspector()}}
+{\footnotesize\ttfamily Unity.\+Visual\+Scripting.\+Inspector.\+Inspector (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Metadata}}}]{metadata }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_inspector_a5a556df3c49a5a1b99598dca2a6804a6}\label{class_unity_1_1_visual_scripting_1_1_inspector_a5a556df3c49a5a1b99598dca2a6804a6} 
+\index{Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}!BeginBlock@{BeginBlock}}
+\index{BeginBlock@{BeginBlock}!Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}}
+\doxysubsubsection{\texorpdfstring{BeginBlock()}{BeginBlock()}}
+{\footnotesize\ttfamily static void Unity.\+Visual\+Scripting.\+Inspector.\+Begin\+Block (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Metadata}}}]{metadata,  }\item[{Rect}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_inspector_a262cc72c35912058d70cb6db3112aa64}\label{class_unity_1_1_visual_scripting_1_1_inspector_a262cc72c35912058d70cb6db3112aa64} 
+\index{Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}!BeginLabeledBlock@{BeginLabeledBlock}}
+\index{BeginLabeledBlock@{BeginLabeledBlock}!Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}}
+\doxysubsubsection{\texorpdfstring{BeginLabeledBlock()}{BeginLabeledBlock()}}
+{\footnotesize\ttfamily static Rect Unity.\+Visual\+Scripting.\+Inspector.\+Begin\+Labeled\+Block (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Metadata}}}]{metadata,  }\item[{Rect}]{position,  }\item[{GUIContent}]{label = {\ttfamily null},  }\item[{GUIStyle}]{label\+Style = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_inspector_a8571f9500bfa93c1fb613e89e362fc7f}\label{class_unity_1_1_visual_scripting_1_1_inspector_a8571f9500bfa93c1fb613e89e362fc7f} 
+\index{Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}!BeginProfiling@{BeginProfiling}}
+\index{BeginProfiling@{BeginProfiling}!Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}}
+\doxysubsubsection{\texorpdfstring{BeginProfiling()}{BeginProfiling()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+Inspector.\+Begin\+Profiling (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_inspector_aa8634fb332fdb7916204bdff9fd308a6}\label{class_unity_1_1_visual_scripting_1_1_inspector_aa8634fb332fdb7916204bdff9fd308a6} 
+\index{Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}}
+\doxysubsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily virtual void Unity.\+Visual\+Scripting.\+Inspector.\+Dispose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_custom_property_drawer_inspector_a97b85dd291a60cec213caf45ec20189a}{Unity.\+Visual\+Scripting.\+Custom\+Property\+Drawer\+Inspector}}, and \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_system_object_inspector_a139844f9fbf6826b27fcaca88c2492dd}{Unity.\+Visual\+Scripting.\+System\+Object\+Inspector}}.
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_inspector_a5a0b376490033a4f552599e89432a1bf}\label{class_unity_1_1_visual_scripting_1_1_inspector_a5a0b376490033a4f552599e89432a1bf} 
+\index{Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}!Draw@{Draw}}
+\index{Draw@{Draw}!Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+Inspector.\+Draw (\begin{DoxyParamCaption}\item[{Rect}]{position,  }\item[{GUIContent}]{label = {\ttfamily null} }\end{DoxyParamCaption})}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_inspector_ade0bdc81fc6f8a586621072d0be86291}\label{class_unity_1_1_visual_scripting_1_1_inspector_ade0bdc81fc6f8a586621072d0be86291} 
+\index{Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}!DrawLayout@{DrawLayout}}
+\index{DrawLayout@{DrawLayout}!Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}}
+\doxysubsubsection{\texorpdfstring{DrawLayout()}{DrawLayout()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+Inspector.\+Draw\+Layout (\begin{DoxyParamCaption}\item[{GUIContent}]{label = {\ttfamily null},  }\item[{float}]{scrollbar\+Trigger = {\ttfamily 14},  }\item[{Rect\+Offset}]{offset = {\ttfamily null} }\end{DoxyParamCaption})}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_inspector_ad4e7c68a53110f8a0c54bff68b8dc972}\label{class_unity_1_1_visual_scripting_1_1_inspector_ad4e7c68a53110f8a0c54bff68b8dc972} 
+\index{Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}!EndBlock@{EndBlock}}
+\index{EndBlock@{EndBlock}!Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}}
+\doxysubsubsection{\texorpdfstring{EndBlock()}{EndBlock()}}
+{\footnotesize\ttfamily static bool Unity.\+Visual\+Scripting.\+Inspector.\+End\+Block (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Metadata}}}]{metadata }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_inspector_a967ddface2924ed2f83411c7b081595b}\label{class_unity_1_1_visual_scripting_1_1_inspector_a967ddface2924ed2f83411c7b081595b} 
+\index{Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}!EndProfiling@{EndProfiling}}
+\index{EndProfiling@{EndProfiling}!Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}}
+\doxysubsubsection{\texorpdfstring{EndProfiling()}{EndProfiling()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+Inspector.\+End\+Profiling (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_inspector_a0c3d144d43cdbef786fec41a5a263a59}\label{class_unity_1_1_visual_scripting_1_1_inspector_a0c3d144d43cdbef786fec41a5a263a59} 
+\index{Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}!GetAdaptiveWidth@{GetAdaptiveWidth}}
+\index{GetAdaptiveWidth@{GetAdaptiveWidth}!Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}}
+\doxysubsubsection{\texorpdfstring{GetAdaptiveWidth()}{GetAdaptiveWidth()}}
+{\footnotesize\ttfamily virtual float Unity.\+Visual\+Scripting.\+Inspector.\+Get\+Adaptive\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_bool_inspector_a8825972139d3ef995d86d7472d942b47}{Unity.\+Visual\+Scripting.\+Bool\+Inspector}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_continuous_number_inspector_a6017cc3e1db1aa6d935c3a64124aa73b}{Unity.\+Visual\+Scripting.\+Continuous\+Number\+Inspector$<$ T $>$}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_discrete_number_inspector_a822cf6383d79572df8850916f537635f}{Unity.\+Visual\+Scripting.\+Discrete\+Number\+Inspector$<$ T $>$}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_string_inspector_ae94f5b245e4769e438818721677b13d5}{Unity.\+Visual\+Scripting.\+String\+Inspector}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_type_inspector_a432d2825e3536de3d80ee4c5a723f19c}{Unity.\+Visual\+Scripting.\+Type\+Inspector}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_custom_property_drawer_inspector_a7bc5ddf463780671a6323a894ecee142}{Unity.\+Visual\+Scripting.\+Custom\+Property\+Drawer\+Inspector}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_dictionary_inspector_a1c2e8122c19ffeb1b1129b9050b3e80f}{Unity.\+Visual\+Scripting.\+Dictionary\+Inspector}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_enum_inspector_a43bf3b8dd46ab8fe2efc551122b52ea5}{Unity.\+Visual\+Scripting.\+Enum\+Inspector}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_list_inspector_aeef6d9c8a5b610f54c13082e5c9bbd11}{Unity.\+Visual\+Scripting.\+List\+Inspector}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reflected_inspector_aafc477028bf2a25a32c1b7747c8e4dcf}{Unity.\+Visual\+Scripting.\+Reflected\+Inspector}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_system_object_inspector_a4ba466f276077a23d478380764b4dee5}{Unity.\+Visual\+Scripting.\+System\+Object\+Inspector}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_type_handle_inspector_a42a74f01f5db2e0fc6950242f0e4f57c}{Unity.\+Visual\+Scripting.\+Type\+Handle\+Inspector}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_layer_mask_inspector_a72e1538077b3e77d79b7656d8f0aefb4}{Unity.\+Visual\+Scripting.\+Layer\+Mask\+Inspector}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_ray2_d_inspector_aecb4e040cac8ad67f7f2bd5501977e10}{Unity.\+Visual\+Scripting.\+Ray2\+DInspector}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_ray_inspector_a35c84535e7bb8df9be21b412202463a9}{Unity.\+Visual\+Scripting.\+Ray\+Inspector}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_rect_inspector_a7c278972607fed92bce2cf3a193e3010}{Unity.\+Visual\+Scripting.\+Rect\+Inspector}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unity_object_inspector_afb17640e1d4c708f6ef554e45bef4528}{Unity.\+Visual\+Scripting.\+Unity\+Object\+Inspector}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_vector2_inspector_ad0b4acba3783753a962a27be26337994}{Unity.\+Visual\+Scripting.\+Vector2\+Inspector}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_vector3_inspector_ab14de76647a9a93a27296edfada365cd}{Unity.\+Visual\+Scripting.\+Vector3\+Inspector}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_vector4_inspector_aa623d3326c2586f74da457d046d6e04a}{Unity.\+Visual\+Scripting.\+Vector4\+Inspector}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_variable_name_inspector_a7c8640f1cd5ce0a310771f951cd0d195}{Unity.\+Visual\+Scripting.\+Variable\+Name\+Inspector}}, and \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_literal_inspector_a7b0f345f4b95b4412767866459d52904}{Unity.\+Visual\+Scripting.\+Literal\+Inspector}}.
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_inspector_a84052774df25b684f88633f8473ad53c}\label{class_unity_1_1_visual_scripting_1_1_inspector_a84052774df25b684f88633f8473ad53c} 
+\index{Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}!GetCachedHeight@{GetCachedHeight}}
+\index{GetCachedHeight@{GetCachedHeight}!Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}}
+\doxysubsubsection{\texorpdfstring{GetCachedHeight()}{GetCachedHeight()}}
+{\footnotesize\ttfamily float Unity.\+Visual\+Scripting.\+Inspector.\+Get\+Cached\+Height (\begin{DoxyParamCaption}\item[{float}]{width,  }\item[{GUIContent}]{label,  }\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_inspector}{Inspector}}}]{parent\+Inspector }\end{DoxyParamCaption})}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_inspector_a0d534e397e0338735b5ec80c61c8fb00}\label{class_unity_1_1_visual_scripting_1_1_inspector_a0d534e397e0338735b5ec80c61c8fb00} 
+\index{Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}!GetHeight@{GetHeight}}
+\index{GetHeight@{GetHeight}!Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}}
+\doxysubsubsection{\texorpdfstring{GetHeight()}{GetHeight()}}
+{\footnotesize\ttfamily float Unity.\+Visual\+Scripting.\+Inspector.\+Get\+Height (\begin{DoxyParamCaption}\item[{float}]{width,  }\item[{GUIContent}]{label }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}, {\ttfamily [protected]}}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_inspector_a4f40577d1a89c96e0ed223ab2854318e}\label{class_unity_1_1_visual_scripting_1_1_inspector_a4f40577d1a89c96e0ed223ab2854318e} 
+\index{Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}!GetLayoutPosition@{GetLayoutPosition}}
+\index{GetLayoutPosition@{GetLayoutPosition}!Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}}
+\doxysubsubsection{\texorpdfstring{GetLayoutPosition()}{GetLayoutPosition()}}
+{\footnotesize\ttfamily Rect Unity.\+Visual\+Scripting.\+Inspector.\+Get\+Layout\+Position (\begin{DoxyParamCaption}\item[{GUIContent}]{label = {\ttfamily null},  }\item[{float}]{scrollbar\+Trigger = {\ttfamily 14},  }\item[{Rect\+Offset}]{offset = {\ttfamily null} }\end{DoxyParamCaption})}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_inspector_a0063e7fb2ce36bae44c03fe41f39c5e1}\label{class_unity_1_1_visual_scripting_1_1_inspector_a0063e7fb2ce36bae44c03fe41f39c5e1} 
+\index{Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}!HeightWithLabel@{HeightWithLabel}}
+\index{HeightWithLabel@{HeightWithLabel}!Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}}
+\doxysubsubsection{\texorpdfstring{HeightWithLabel()}{HeightWithLabel()}}
+{\footnotesize\ttfamily static float Unity.\+Visual\+Scripting.\+Inspector.\+Height\+With\+Label (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Metadata}}}]{metadata,  }\item[{float}]{width,  }\item[{float}]{height,  }\item[{GUIContent}]{label = {\ttfamily null},  }\item[{GUIStyle}]{label\+Style = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_inspector_a7852bb34b67013eb6f7dcb2d374741be}\label{class_unity_1_1_visual_scripting_1_1_inspector_a7852bb34b67013eb6f7dcb2d374741be} 
+\index{Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily virtual void Unity.\+Visual\+Scripting.\+Inspector.\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_member_inspector_ac6098815ebdd7b01d1fa2af7c309846c}{Unity.\+Visual\+Scripting.\+Member\+Inspector}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_type_inspector_ab274c385c786c15081bd1849f2d7c5f4}{Unity.\+Visual\+Scripting.\+Type\+Inspector}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_automatic_reflected_inspector_a8f0c38f32ec4a6ef272fa8ae85dfcffe}{Unity.\+Visual\+Scripting.\+Automatic\+Reflected\+Inspector}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_custom_property_drawer_inspector_a2e9ba00844f2eb4584967ab2151b1b19}{Unity.\+Visual\+Scripting.\+Custom\+Property\+Drawer\+Inspector}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_enum_inspector_a8eafc9062323b311c9396d1ce3cf6711}{Unity.\+Visual\+Scripting.\+Enum\+Inspector}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_reflected_inspector_ab90956dfdbd7e4e31f9e1815c29c7240}{Unity.\+Visual\+Scripting.\+Reflected\+Inspector}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_system_object_inspector_a08510ac0d76419da66f81b5d0cea6bbd}{Unity.\+Visual\+Scripting.\+System\+Object\+Inspector}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_type_handle_inspector_ab556596cc6f095038379058be500f463}{Unity.\+Visual\+Scripting.\+Type\+Handle\+Inspector}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_animation_curve_inspector_aea1d3feb2b35edff0779b18f6c3ece47}{Unity.\+Visual\+Scripting.\+Animation\+Curve\+Inspector}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unity_object_inspector_a5f3f25b53fbe0ba81f10bd4232f50d42}{Unity.\+Visual\+Scripting.\+Unity\+Object\+Inspector}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_variable_declarations_inspector_a30913acf490d5440cdeff511aca8c59d}{Unity.\+Visual\+Scripting.\+Variable\+Declarations\+Inspector}}, and \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_unit_port_definition_inspector_a54dfe5b5524fa63e4e909b378bece048}{Unity.\+Visual\+Scripting.\+Unit\+Port\+Definition\+Inspector}}.
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_inspector_a6544f5f20e6dd98f33a8ac40beb4ab14}\label{class_unity_1_1_visual_scripting_1_1_inspector_a6544f5f20e6dd98f33a8ac40beb4ab14} 
+\index{Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}!OnEditorPrefGUI@{OnEditorPrefGUI}}
+\index{OnEditorPrefGUI@{OnEditorPrefGUI}!Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}}
+\doxysubsubsection{\texorpdfstring{OnEditorPrefGUI()}{OnEditorPrefGUI()}}
+{\footnotesize\ttfamily virtual void Unity.\+Visual\+Scripting.\+Inspector.\+On\+Editor\+Pref\+GUI (\begin{DoxyParamCaption}\item[{Rect}]{position,  }\item[{GUIContent}]{label }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_bool_inspector_afcf8f527236f85ccebb514d9563503d5}{Unity.\+Visual\+Scripting.\+Bool\+Inspector}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_continuous_number_inspector_a504bf83e1c5cda353d386e28b3da30bc}{Unity.\+Visual\+Scripting.\+Continuous\+Number\+Inspector$<$ T $>$}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_discrete_number_inspector_a0798554b371796bb9e0aecedc81531b7}{Unity.\+Visual\+Scripting.\+Discrete\+Number\+Inspector$<$ T $>$}}, \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_enum_inspector_a90e5358ef53935a0385e5b20f5d915a3}{Unity.\+Visual\+Scripting.\+Enum\+Inspector}}, and \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_vector2_inspector_a4f01bec7e9b00aa06925b1a55cc533f0}{Unity.\+Visual\+Scripting.\+Vector2\+Inspector}}.
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_inspector_a4f1a47f7f2bb3e2e668e0ee630f5c6b3}\label{class_unity_1_1_visual_scripting_1_1_inspector_a4f1a47f7f2bb3e2e668e0ee630f5c6b3} 
+\index{Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}!OnGUI@{OnGUI}}
+\index{OnGUI@{OnGUI}!Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}}
+\doxysubsubsection{\texorpdfstring{OnGUI()}{OnGUI()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+Inspector.\+On\+GUI (\begin{DoxyParamCaption}\item[{Rect}]{position,  }\item[{GUIContent}]{label }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}, {\ttfamily [protected]}}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_inspector_ab68c97200c81f743d3f6f9e6958dd5af}\label{class_unity_1_1_visual_scripting_1_1_inspector_ab68c97200c81f743d3f6f9e6958dd5af} 
+\index{Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}!OnOpenVFX@{OnOpenVFX}}
+\index{OnOpenVFX@{OnOpenVFX}!Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}}
+\doxysubsubsection{\texorpdfstring{OnOpenVFX()}{OnOpenVFX()}}
+{\footnotesize\ttfamily static bool Unity.\+Visual\+Scripting.\+Inspector.\+On\+Open\+VFX (\begin{DoxyParamCaption}\item[{int}]{instance\+ID,  }\item[{int}]{line }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_inspector_a587c54548616af8798c2ef8bc5afec0e}\label{class_unity_1_1_visual_scripting_1_1_inspector_a587c54548616af8798c2ef8bc5afec0e} 
+\index{Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}!PrefixLabel@{PrefixLabel}}
+\index{PrefixLabel@{PrefixLabel}!Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}}
+\doxysubsubsection{\texorpdfstring{PrefixLabel()}{PrefixLabel()}}
+{\footnotesize\ttfamily static Rect Unity.\+Visual\+Scripting.\+Inspector.\+Prefix\+Label (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Metadata}}}]{metadata,  }\item[{Rect}]{position,  }\item[{GUIContent}]{label = {\ttfamily null},  }\item[{GUIStyle}]{style = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_inspector_ac0c469cdb6dd50fc47f4c5d22e1febc4}\label{class_unity_1_1_visual_scripting_1_1_inspector_ac0c469cdb6dd50fc47f4c5d22e1febc4} 
+\index{Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}!ProcessLabel@{ProcessLabel}}
+\index{ProcessLabel@{ProcessLabel}!Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}}
+\doxysubsubsection{\texorpdfstring{ProcessLabel()}{ProcessLabel()}}
+{\footnotesize\ttfamily static GUIContent Unity.\+Visual\+Scripting.\+Inspector.\+Process\+Label (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Metadata}}}]{metadata,  }\item[{GUIContent}]{label }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_inspector_a63eb7f007cc519bce45c5e7b23a3b0fb}\label{class_unity_1_1_visual_scripting_1_1_inspector_a63eb7f007cc519bce45c5e7b23a3b0fb} 
+\index{Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}!ProcessLabelStyle@{ProcessLabelStyle}}
+\index{ProcessLabelStyle@{ProcessLabelStyle}!Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}}
+\doxysubsubsection{\texorpdfstring{ProcessLabelStyle()}{ProcessLabelStyle()}}
+{\footnotesize\ttfamily static GUIStyle Unity.\+Visual\+Scripting.\+Inspector.\+Process\+Label\+Style (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Metadata}}}]{metadata,  }\item[{GUIStyle}]{label\+Style }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_inspector_a3e990de8ee242691227db527648ac7fb}\label{class_unity_1_1_visual_scripting_1_1_inspector_a3e990de8ee242691227db527648ac7fb} 
+\index{Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}!ReclaimImplementationSelector@{ReclaimImplementationSelector}}
+\index{ReclaimImplementationSelector@{ReclaimImplementationSelector}!Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}}
+\doxysubsubsection{\texorpdfstring{ReclaimImplementationSelector()}{ReclaimImplementationSelector()}}
+{\footnotesize\ttfamily static Rect Unity.\+Visual\+Scripting.\+Inspector.\+Reclaim\+Implementation\+Selector (\begin{DoxyParamCaption}\item[{Rect}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_inspector_a6cac1cc4ee9824ec74fd8b0c74af26e1}\label{class_unity_1_1_visual_scripting_1_1_inspector_a6cac1cc4ee9824ec74fd8b0c74af26e1} 
+\index{Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}!ResetProfiling@{ResetProfiling}}
+\index{ResetProfiling@{ResetProfiling}!Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}}
+\doxysubsubsection{\texorpdfstring{ResetProfiling()}{ResetProfiling()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+Inspector.\+Reset\+Profiling (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_inspector_a4aada24e51021f0a51b4212cdacd9a1f}\label{class_unity_1_1_visual_scripting_1_1_inspector_a4aada24e51021f0a51b4212cdacd9a1f} 
+\index{Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}!SetHeightDirty@{SetHeightDirty}}
+\index{SetHeightDirty@{SetHeightDirty}!Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}}
+\doxysubsubsection{\texorpdfstring{SetHeightDirty()}{SetHeightDirty()}}
+{\footnotesize\ttfamily void Unity.\+Visual\+Scripting.\+Inspector.\+Set\+Height\+Dirty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_inspector_ace07ecc4c8ff698acf59db4f6dd2829a}\label{class_unity_1_1_visual_scripting_1_1_inspector_ace07ecc4c8ff698acf59db4f6dd2829a} 
+\index{Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}!SkipEvent@{SkipEvent}}
+\index{SkipEvent@{SkipEvent}!Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}}
+\doxysubsubsection{\texorpdfstring{SkipEvent()}{SkipEvent()}}
+{\footnotesize\ttfamily virtual bool Unity.\+Visual\+Scripting.\+Inspector.\+Skip\+Event (\begin{DoxyParamCaption}\item[{Event}]{e,  }\item[{Rect}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_inspector_a3c62053a925a76a0b01e786b8aee70b4}\label{class_unity_1_1_visual_scripting_1_1_inspector_a3c62053a925a76a0b01e786b8aee70b4} 
+\index{Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}!WidthWithoutLabel@{WidthWithoutLabel}}
+\index{WidthWithoutLabel@{WidthWithoutLabel}!Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}}
+\doxysubsubsection{\texorpdfstring{WidthWithoutLabel()}{WidthWithoutLabel()}}
+{\footnotesize\ttfamily static float Unity.\+Visual\+Scripting.\+Inspector.\+Width\+Without\+Label (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Metadata}}}]{metadata,  }\item[{float}]{width,  }\item[{GUIContent}]{label = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_inspector_a6983597e7dc89f5bd209987dd0769b7c}\label{class_unity_1_1_visual_scripting_1_1_inspector_a6983597e7dc89f5bd209987dd0769b7c} 
+\index{Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}!y@{y}}
+\index{y@{y}!Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily float Unity.\+Visual\+Scripting.\+Inspector.\+y\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_inspector_ae8e88177f9312b5a9fe098a88cf9a16a}\label{class_unity_1_1_visual_scripting_1_1_inspector_ae8e88177f9312b5a9fe098a88cf9a16a} 
+\index{Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}!adaptiveWidth@{adaptiveWidth}}
+\index{adaptiveWidth@{adaptiveWidth}!Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}}
+\doxysubsubsection{\texorpdfstring{adaptiveWidth}{adaptiveWidth}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_override_stack}{Override\+Stack}}$<$bool$>$ Unity.\+Visual\+Scripting.\+Inspector.\+adaptive\+Width = new \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_override_stack}{Override\+Stack}}$<$bool$>$(false)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_inspector_a19dde0ced8d9dfde85a64096fda9ced2}\label{class_unity_1_1_visual_scripting_1_1_inspector_a19dde0ced8d9dfde85a64096fda9ced2} 
+\index{Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}!cacheHeight@{cacheHeight}}
+\index{cacheHeight@{cacheHeight}!Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}}
+\doxysubsubsection{\texorpdfstring{cacheHeight}{cacheHeight}}
+{\footnotesize\ttfamily virtual bool Unity.\+Visual\+Scripting.\+Inspector.\+cache\+Height\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected]}}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_inspector_ac251a49902a90b2ad332cc1f081168ee}\label{class_unity_1_1_visual_scripting_1_1_inspector_ac251a49902a90b2ad332cc1f081168ee} 
+\index{Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}!defaultLabelStyle@{defaultLabelStyle}}
+\index{defaultLabelStyle@{defaultLabelStyle}!Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}}
+\doxysubsubsection{\texorpdfstring{defaultLabelStyle}{defaultLabelStyle}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_override_stack}{Override\+Stack}}$<$GUIStyle$>$ Unity.\+Visual\+Scripting.\+Inspector.\+default\+Label\+Style = new \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_override_stack}{Override\+Stack}}$<$GUIStyle$>$(null)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_inspector_a26dc9f070f61dc8f53fb85b9410816fa}\label{class_unity_1_1_visual_scripting_1_1_inspector_a26dc9f070f61dc8f53fb85b9410816fa} 
+\index{Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}!e@{e}}
+\index{e@{e}!Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}}
+\doxysubsubsection{\texorpdfstring{e}{e}}
+{\footnotesize\ttfamily Event Unity.\+Visual\+Scripting.\+Inspector.\+e\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [protected]}}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_inspector_ae47461487f02221522c39120c54ec950}\label{class_unity_1_1_visual_scripting_1_1_inspector_ae47461487f02221522c39120c54ec950} 
+\index{Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}!expandTooltip@{expandTooltip}}
+\index{expandTooltip@{expandTooltip}!Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}}
+\doxysubsubsection{\texorpdfstring{expandTooltip}{expandTooltip}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_override_stack}{Override\+Stack}}$<$bool$>$ Unity.\+Visual\+Scripting.\+Inspector.\+expand\+Tooltip = new \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_override_stack}{Override\+Stack}}$<$bool$>$(false)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_inspector_aae3535324a9d8cca80273c5a1398eac6}\label{class_unity_1_1_visual_scripting_1_1_inspector_aae3535324a9d8cca80273c5a1398eac6} 
+\index{Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}!full@{full}}
+\index{full@{full}!Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}}
+\doxysubsubsection{\texorpdfstring{full}{full}}
+{\footnotesize\ttfamily float Unity.\+Visual\+Scripting.\+Inspector.\+full\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected]}}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_inspector_ae730ae7ac780e365c7ec69fb153fb7b9}\label{class_unity_1_1_visual_scripting_1_1_inspector_ae730ae7ac780e365c7ec69fb153fb7b9} 
+\index{Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}!half@{half}}
+\index{half@{half}!Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}}
+\doxysubsubsection{\texorpdfstring{half}{half}}
+{\footnotesize\ttfamily float Unity.\+Visual\+Scripting.\+Inspector.\+half\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected]}}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_inspector_a006a04aa338fd5e45805e4ea9adba39a}\label{class_unity_1_1_visual_scripting_1_1_inspector_a006a04aa338fd5e45805e4ea9adba39a} 
+\index{Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}!indent@{indent}}
+\index{indent@{indent}!Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}}
+\doxysubsubsection{\texorpdfstring{indent}{indent}}
+{\footnotesize\ttfamily virtual bool Unity.\+Visual\+Scripting.\+Inspector.\+indent\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected]}}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_inspector_a11eb0784e1378ddd65cac01371e6112a}\label{class_unity_1_1_visual_scripting_1_1_inspector_a11eb0784e1378ddd65cac01371e6112a} 
+\index{Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}!isHeightDirty@{isHeightDirty}}
+\index{isHeightDirty@{isHeightDirty}!Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}}
+\doxysubsubsection{\texorpdfstring{isHeightDirty}{isHeightDirty}}
+{\footnotesize\ttfamily bool Unity.\+Visual\+Scripting.\+Inspector.\+is\+Height\+Dirty\hspace{0.3cm}{\ttfamily [get]}}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_inspector_a7fd3a74b100e7a678314eaec4d37b9fc}\label{class_unity_1_1_visual_scripting_1_1_inspector_a7fd3a74b100e7a678314eaec4d37b9fc} 
+\index{Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}!metadata@{metadata}}
+\index{metadata@{metadata}!Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}}
+\doxysubsubsection{\texorpdfstring{metadata}{metadata}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_unity_1_1_visual_scripting_1_1_metadata}{Metadata}} Unity.\+Visual\+Scripting.\+Inspector.\+metadata\hspace{0.3cm}{\ttfamily [get]}}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_inspector_aa9bfce1ec59cbe1e8f9dfc35e6ca6c8e}\label{class_unity_1_1_visual_scripting_1_1_inspector_aa9bfce1ec59cbe1e8f9dfc35e6ca6c8e} 
+\index{Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}!profile@{profile}}
+\index{profile@{profile}!Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}}
+\doxysubsubsection{\texorpdfstring{profile}{profile}}
+{\footnotesize\ttfamily bool Unity.\+Visual\+Scripting.\+Inspector.\+profile\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [protected]}}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_inspector_a07e368ea4246c90b5c088c04ad707f9b}\label{class_unity_1_1_visual_scripting_1_1_inspector_a07e368ea4246c90b5c088c04ad707f9b} 
+\index{Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}!safe@{safe}}
+\index{safe@{safe}!Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}}
+\doxysubsubsection{\texorpdfstring{safe}{safe}}
+{\footnotesize\ttfamily virtual bool Unity.\+Visual\+Scripting.\+Inspector.\+safe\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected]}}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_inspector_a4f17b2f518d53621a552a59330cc81b8}\label{class_unity_1_1_visual_scripting_1_1_inspector_a4f17b2f518d53621a552a59330cc81b8} 
+\index{Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}!wideMode@{wideMode}}
+\index{wideMode@{wideMode}!Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}}
+\doxysubsubsection{\texorpdfstring{wideMode}{wideMode}}
+{\footnotesize\ttfamily bool Unity.\+Visual\+Scripting.\+Inspector.\+wide\+Mode\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected]}}
+
+\Hypertarget{class_unity_1_1_visual_scripting_1_1_inspector_a449d251f6ed426a57b76ad6108edf19d}\label{class_unity_1_1_visual_scripting_1_1_inspector_a449d251f6ed426a57b76ad6108edf19d} 
+\index{Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}!wideModeThreshold@{wideModeThreshold}}
+\index{wideModeThreshold@{wideModeThreshold}!Unity.VisualScripting.Inspector@{Unity.VisualScripting.Inspector}}
+\doxysubsubsection{\texorpdfstring{wideModeThreshold}{wideModeThreshold}}
+{\footnotesize\ttfamily virtual float Unity.\+Visual\+Scripting.\+Inspector.\+wide\+Mode\+Threshold\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Package\+Cache/com.\+unity.\+visualscripting@1.\+9.\+2/\+Editor/\+Visual\+Scripting.\+Core/\+Inspection/\mbox{\hyperlink{_inspector_8cs}{Inspector.\+cs}}\end{DoxyCompactItemize}

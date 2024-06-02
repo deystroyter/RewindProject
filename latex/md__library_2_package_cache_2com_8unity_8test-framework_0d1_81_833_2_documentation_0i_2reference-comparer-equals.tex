@@ -1,0 +1,32 @@
+\chapter{Custom equality comparers with equals operator}
+\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-comparer-equals}{}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-comparer-equals}\index{Custom equality comparers with equals operator@{Custom equality comparers with equals operator}}
+\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-comparer-equals_autotoc_md616}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-comparer-equals_autotoc_md616}%
+ If you need to compare Vectors using the overloaded operator == (see \href{https://docs.unity3d.com/ScriptReference/Vector2-operator_eq.html}{\texttt{ Vector2.\+operator ==}}, \href{https://docs.unity3d.com/ScriptReference/Vector3-operator_eq.html}{\texttt{ Vector3.\+operator ==}}, and \href{https://docs.unity3d.com/ScriptReference/Vector4-operator_eq.html}{\texttt{ Vector4.\+operator ==}}) you should use the respective comparer implementations\+:
+
+
+\begin{DoxyItemize}
+\item Vector2\+Comparer\+With\+Equals\+Operator
+\item Vector3\+Comparer\+With\+Equals\+Operator
+\item Vector4\+Comparer\+With\+Equals\+Operator
+\end{DoxyItemize}
+
+The interface is the same as for other \doxysectlink{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-custom-equality-comparers}{equality comparers}{0} except the public \href{./reference-custom-equality-comparers.md\#constructors}{\texttt{ constructor}} {\ttfamily error} parameter is inapplicable in this case.\hypertarget{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-comparer-equals_autotoc_md617}{}\doxysection{\texorpdfstring{Example}{Example}}\label{md__library_2_package_cache_2com_8unity_8test-framework_0d1_81_833_2_documentation_0i_2reference-comparer-equals_autotoc_md617}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\ \#}}
+\DoxyCodeLine{[TestFixture]}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class\ }Vector3Test}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ [Test]}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ VerifyThat\_TwoVector3ObjectsAreEqual()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ var\ actual\ =\ \textcolor{keyword}{new}\ Vector3(10e-\/7f,\ 10e-\/7f,\ 10e-\/7f);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ var\ expected\ =\ \textcolor{keyword}{new}\ Vector3(0f,\ 0f,\ 0f);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ Assert.That(actual,\ Is.EqualTo(expected).Using(Vector3ComparerWithEqualsOperator.Instance));}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 

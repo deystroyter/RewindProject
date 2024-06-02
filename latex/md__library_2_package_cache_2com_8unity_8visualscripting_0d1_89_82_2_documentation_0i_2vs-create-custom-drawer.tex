@@ -1,0 +1,73 @@
+\chapter{Create a custom Property\+Drawer for a custom type}
+\hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create-custom-drawer}{}\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create-custom-drawer}\index{Create a custom PropertyDrawer for a custom type@{Create a custom PropertyDrawer for a custom type}}
+\label{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create-custom-drawer_autotoc_md1740}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-create-custom-drawer_autotoc_md1740}%
+ If you want to use a custom type from a custom class in Visual Scripting, and you don\textquotesingle{}t have access to its source code, you must create a custom Property\+Drawer.
+
+You can\textquotesingle{}t assign a value to a custom type inside the Editor or initialize the value for a variable with a custom type if it doesn\textquotesingle{}t have a Property\+Drawer.
+
+\begin{quote}
+\mbox{[}!\+NOTE\mbox{]} The class for your custom type must have the {\ttfamily \mbox{[}Serializable\mbox{]}} tag in its source code to create a custom Property\+Drawer. \end{quote}
+To create a custom Property\+Drawer\+:
+
+
+\begin{DoxyEnumerate}
+\item \mbox{[}!include\doxylink{vs-open-project-window_8md}{open-\/project-\/window}\mbox{]}
+\item \mbox{[}!include\doxylink{vs-create-c-script-project_8md}{create-\/c-\/script-\/project}\mbox{]}
+\item Enter a name, such as {\ttfamily Counter\+Drawer}, for the new script file.
+\item Press Enter.
+\item \mbox{[}!include\doxylink{vs-open-new-external-code_8md}{open-\/new-\/external-\/code}\mbox{]}
+\item Remove the {\ttfamily Start} and {\ttfamily Update} functions and their comments from the script file.
+\item Above the line that defines your new {\ttfamily public class}, add a {\ttfamily \mbox{[}Custom\+Property\+Drawer\mbox{]}} attribute.
+\item In the parameters for the {\ttfamily \mbox{[}Custom\+Property\+Drawer\mbox{]}} attribute, specify a {\ttfamily type of} parameter with the name of the type you want to assign to this Property\+Drawer, exactly as it appears in \doxylink{namespace_unity}{Unity}.
+\item Change the {\ttfamily Mono\+Behaviour} class at the end of your {\ttfamily public class} definition to {\ttfamily Property\+Drawer}.
+\end{DoxyEnumerate}
+
+\begin{quote}
+\mbox{[}!\+NOTE\mbox{]} After you create a custom Property\+Drawer, you must generate the required property provider scripts from your Visual Scripting Project Settings. For more information, see \doxysectlink{md__library_2_package_cache_2com_8unity_8visualscripting_0d1_89_82_2_documentation_0i_2vs-configuration}{Configure project settings}{0}. \end{quote}
+The following is an example of a finished Property\+Drawer script\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_unity_editor}{UnityEditor}};}
+\DoxyCodeLine{\textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_unity_engine}{UnityEngine}};}
+\DoxyCodeLine{[CustomPropertyDrawer](type\ of(<Counter>))]}
+\DoxyCodeLine{\textcolor{keyword}{public}\ \textcolor{keyword}{class}\ CounterDrawer\ :\ PropertyDrawer}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Draw\ the\ property\ inside\ the\ given\ rect}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ OnGUI(Rect\ position,\ SerializedProperty\ property,\ GUIContent\ label)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Using\ BeginProperty\ /\ EndProperty\ on\ the\ parent\ property\ means\ that}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ prefab\ override\ logic\ works\ on\ the\ entire\ property.}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ EditorGUI.BeginProperty(position,\ label,\ property);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Draw\ label}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ position\ =\ EditorGUI.PrefixLabel(position,\ GUIUtility.GetControlID(FocusType.Passive),\ label);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Don't\ indent\ child\ fields}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ var\ indent\ =\ EditorGUI.indentLevel;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ EditorGUI.indentLevel\ =\ 0;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Calculate\ rects}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ var\ amountRect\ =\ \textcolor{keyword}{new}\ Rect(position.x,\ position.y,\ 30,\ position.height);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ var\ unitRect\ =\ \textcolor{keyword}{new}\ Rect(position.x\ +\ 35,\ position.y,\ 50,\ position.height);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ var\ nameRect\ =\ \textcolor{keyword}{new}\ Rect(position.x\ +\ 90,\ position.y,\ position.width\ -\/\ 90,\ position.height);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Draw\ fields\ -\/\ passs\ GUIContent.none\ to\ each\ so\ they\ are\ drawn\ without\ labels}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ EditorGUI.PropertyField(amountRect,\ property.FindPropertyRelative(\textcolor{stringliteral}{"{}amount"{}}),\ GUIContent.none);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ EditorGUI.PropertyField(unitRect,\ property.FindPropertyRelative(\textcolor{stringliteral}{"{}unit"{}}),\ GUIContent.none);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ EditorGUI.PropertyField(nameRect,\ property.FindPropertyRelative(\textcolor{stringliteral}{"{}name"{}}),\ GUIContent.none);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Set\ indent\ back\ to\ what\ it\ was}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ EditorGUI.indentLevel\ =\ indent;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ EditorGUI.EndProperty();}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+To create the rest of your custom Property\+Drawer, you must decide what fields you must display, and how you want them to display in the Editor\textquotesingle{}s interface. For example, you might want to use the UIElements module to create your Property\+Drawer, or decide to use \doxylink{namespace_unity}{Unity}\textquotesingle{}s IMGUI module.
+
+For more information on how to create and design a custom Property\+Drawer, see the \href{https://docs.unity3d.com/ScriptReference/PropertyDrawer.html}{\texttt{ Property\+Drawer class}} in the main \doxylink{namespace_unity}{Unity} Scripting API and its related methods. 

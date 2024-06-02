@@ -1,0 +1,263 @@
+\chapter{Transform Tween track sample}
+\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2smpl__custom__tween}{}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2smpl__custom__tween}\index{Transform Tween track sample@{Transform Tween track sample}}
+\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2smpl__custom__tween_autotoc_md1219}%
+\Hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2smpl__custom__tween_autotoc_md1219}%
+ 
+
+This track can be used for simple transform movements between two points.\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2smpl__custom__tween_autotoc_md1220}{}\doxysection{\texorpdfstring{Usage}{Usage}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2smpl__custom__tween_autotoc_md1220}
+This track can be used for simple transform movements. All translation happens in a straight line but the speed can be controlled with an animation curve. The Tween track binds to the scene {\ttfamily Transform} you wish to move.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Field   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Field   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-2}
+\endhead
+Start Location   &This is a reference to a Transform in the scene that marks the position and/or rotation of the moving Transform when the playable starts. If it is left null the position/rotation of the moving Transform when the playable starts will be used.    \\\cline{1-2}
+End Location   &This is a reference to a Transform in the scene that marks the position and/or rotation of the moving Transform when the playable finishes.    \\\cline{1-2}
+Tween Position   &Whether or not the position of the Transform should change.    \\\cline{1-2}
+Tween Rotation   &Whether or not the rotation of the Transform should change.   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2smpl__custom__tween_autotoc_md1221}{}\doxysection{\texorpdfstring{Custom clip workflow example}{Custom clip workflow example}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2smpl__custom__tween_autotoc_md1221}
+This example will demonstrate how to\+:
+
+
+\begin{DoxyItemize}
+\item create a custom clip, track and mixer;
+\item use the Playable\+Graph API to animate an object\textquotesingle{}s transform;
+\item customize a clip with {\ttfamily Clip\+Editor};
+\end{DoxyItemize}\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2smpl__custom__tween_autotoc_md1222}{}\doxysubsection{\texorpdfstring{1. Custom clip}{1. Custom clip}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2smpl__custom__tween_autotoc_md1222}
+when a \doxylink{namespace_timeline}{Timeline} begins playing, nodes called {\ttfamily Playable}s are created. They are organized in a tree-\/like structure called the {\ttfamily Playable\+Graph}. For each frame, \doxylink{namespace_timeline}{Timeline} samples this graph to read and mix multiple data sources (animation, audio and more).
+
+The first step to create a custom clip is to define a new {\ttfamily Playable\+Behaviour} that will be added to a graph. It will need to store the data needed to implement the transform tween\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ c\#}
+\DoxyCodeLine{public\ class\ TweenBehaviour\ :\ PlayableBehaviour}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ public\ Transform\ startLocation;}
+\DoxyCodeLine{\ \ \ \ public\ Transform\ endLocation;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ public\ bool\ shouldTweenPosition;}
+\DoxyCodeLine{\ \ \ \ public\ bool\ shouldTweenRotation;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ public\ AnimationCurve\ curve;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+The {\ttfamily Playable\+Behaviour}\textquotesingle{}s data is not serialized and will be lost once its parent graph is destroyed. To save this data, the next step is to define a new {\ttfamily Playable\+Asset}\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ c\#}
+\DoxyCodeLine{[Serializable]}
+\DoxyCodeLine{public\ class\ TweenClip\ :\ PlayableAsset}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ public\ ExposedReference<Transform>\ startLocation;}
+\DoxyCodeLine{\ \ \ \ public\ ExposedReference<Transform>\ endLocation;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ public\ bool\ shouldTweenPosition\ =\ true;}
+\DoxyCodeLine{\ \ \ \ public\ bool\ shouldTweenRotation\ =\ true;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ public\ AnimationCurve\ curve;}
+\DoxyCodeLine{\ \ \ \ //...}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+{\itshape Note\+:} The clip needs to store a start and an end location. Since an asset cannot directly reference a scene object, it cannot store a transform object directly. This is why an {\ttfamily Exposed\+Reference\texorpdfstring{$<$}{<}Transform\texorpdfstring{$>$}{>}} is used.
+
+A {\ttfamily Playable\+Asset}\textquotesingle{}s main purpose is to build a {\ttfamily Playable\+Behaviour}. This is done with the {\ttfamily Create\+Playable} method\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ c\#}
+\DoxyCodeLine{public\ class\ TweenClip\ :\ PlayableAsset}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ //...}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ public\ override\ Playable\ CreatePlayable(PlayableGraph\ graph,\ GameObject\ owner)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ //\ create\ a\ new\ TweenBehaviour}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ ScriptPlayable<TweenBehaviour>\ playable\ =\ ScriptPlayable<TweenBehaviour>.Create(graph);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ TweenBehaviour\ tween\ =\ playable.GetBehaviour();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ //\ set\ the\ behaviour's\ data}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ tween.startLocation\ =\ startLocation.Resolve(graph.GetResolver());}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ tween.endLocation\ =\ endLocation.Resolve(graph.GetResolver());}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ tween.curve\ =\ curve;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ tween.shouldTweenPosition\ =\ shouldTweenPosition;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ tween.shouldTweenRotation\ =\ shouldTweenRotation;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ return\ playable;}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+{\ttfamily Create\+Playable} will initialize a new {\ttfamily Tween\+Behaviour} using {\ttfamily Tween\+Clip}\textquotesingle{}s data.\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2smpl__custom__tween_autotoc_md1223}{}\doxysubsection{\texorpdfstring{2. Custom track}{2. Custom track}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2smpl__custom__tween_autotoc_md1223}
+A custom track is created by defining a \href{xref:UnityEngine.Timeline.TrackAsset}{\texttt{ Track\+Asset}} subclass. The following attributes can be added to a {\ttfamily Track\+Asset}\+:
+
+
+\begin{DoxyItemize}
+\item \href{xref:UnityEngine.Timeline.TrackBindingTypeAttribute}{\texttt{ Track\+Binding\+Type}}\+: defines which type of object should be bound to a track;
+\item \href{xref:UnityEngine.Timeline.TrackClipTypeAttribute}{\texttt{ Track\+Clip\+Type}}\+: defines which type of clip should be associated to a track.
+\end{DoxyItemize}
+
+For this example, the track needs a {\ttfamily Transform} object binding and can only accepts clips of type {\ttfamily Tween\+Clip}, which was previously defined in step 1\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ c\#}
+\DoxyCodeLine{[TrackBindingType(typeof(Transform))]}
+\DoxyCodeLine{[TrackClipType(typeof(TweenClip))]}
+\DoxyCodeLine{public\ class\ TweenTrack\ :\ TrackAsset}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ //\ ...}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+The data setup is complete; {\ttfamily Tween\+Track} and {\ttfamily Tween\+Clip} can now be added to a timeline\+:
+
+
+
+However, no transform tween has been implemented yet. To do this, a track mixer is needed.\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2smpl__custom__tween_autotoc_md1224}{}\doxysubsection{\texorpdfstring{3. Define a track mixer}{3. Define a track mixer}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2smpl__custom__tween_autotoc_md1224}
+To properly handle blending, or crossfading, between two clips, a track mixer is needed. A track mixer is a {\ttfamily Playable\+Behaviour} that will have access to all clips data and will blend those together.\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2smpl__custom__tween_autotoc_md1225}{}\doxysubsubsection{\texorpdfstring{Track mixer setup}{Track mixer setup}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2smpl__custom__tween_autotoc_md1225}
+By default, when a track is added to a timeline, an empty playable is generated and is connected to each clip\textquotesingle{}s playable.
+
+For example, this track\+:
+
+
+
+will generate the following playable graph\+:
+
+
+
+
+\begin{DoxyItemize}
+\item {\ttfamily \doxylink{namespace_timeline}{Timeline}}\+: this playable is the {\ttfamily root} playable; all playables related to tracks are connected to this node.
+\item {\ttfamily Playable}\+: this playable represents the track mixer. Since no track mixer is defined, an empty one is generated.
+\item {\ttfamily Tween\+Behaviour}\+: this playable represents a clip. One per clip is generated. All clip playables are connected to the track mixer.
+\end{DoxyItemize}
+
+In order to define a custom track mixer, a new {\ttfamily Playable\+Behaviour} needs to be defined\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ c\#}
+\DoxyCodeLine{public\ class\ TweenMixerBehaviour\ :\ PlayableBehaviour\ \{\}}
+
+\end{DoxyCode}
+
+
+then, in {\ttfamily Track\+Asset}, the \href{xref:UnityEngine.Timeline.TrackAsset\#UnityEngine_Timeline_TrackAsset_CreateTrackMixer_UnityEngine_Playables_PlayableGraph_UnityEngine_GameObject_System_Int32_}{\texttt{ Create\+Track\+Mixer}} method can be used to specify a custom track mixer\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ c\#}
+\DoxyCodeLine{public\ class\ TweenTrack\ :\ TrackAsset}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ public\ override\ Playable\ CreateTrackMixer(PlayableGraph\ graph,\ GameObject\ go,\ int\ inputCount)}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ return\ ScriptPlayable<TweenMixerBehaviour>.Create(graph,\ inputCount);}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Now the playable graph looks like this\+:
+
+
+
+The empty playable that used to connect clip playables together is now replaced by {\ttfamily Tween\+Mixer\+Behaviour}.\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2smpl__custom__tween_autotoc_md1226}{}\doxysubsubsection{\texorpdfstring{Transform tween implementation}{Transform tween implementation}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2smpl__custom__tween_autotoc_md1226}
+The implementation of the transform tween resides in the {\ttfamily Process\+Frame} method from {\ttfamily Tween\+Mixer\+Behaviour}. Here are the main steps of that implementation\+:
+
+
+\begin{DoxyItemize}
+\item {\itshape Initialization}\+: When the timeline is first played, the initial transform of the track binding is fetched. If the start or end transform is {\ttfamily null}, the initial transform will be used instead.
+\item {\itshape Get clip behaviours \& weights}\+: to appropriately blend, the mixer needs to ask information for all of its inputs (clips)\+:
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ c\#}
+\DoxyCodeLine{//\ Iterate\ on\ all\ the\ playable's\ (mixer)\ inputs\ (ie\ each\ clip\ on\ the\ track)}
+\DoxyCodeLine{int\ inputCount\ =\ playable.GetInputCount();}
+\DoxyCodeLine{for\ (int\ i\ =\ 0;\ i\ <\ inputCount;\ i++)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ //\ get\ the\ input\ connected\ to\ the\ mixer}
+\DoxyCodeLine{\ \ \ \ Playable\ input\ =\ playable.GetInput(i);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ //\ get\ the\ weight\ of\ the\ connection}
+\DoxyCodeLine{\ \ \ \ float\ inputWeight\ =\ playable.GetInputWeight(i);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ //\ get\ the\ clip's\ behaviour}
+\DoxyCodeLine{\ \ \ \ TweenBehaviour\ tweenInput\ =\ GetTweenBehaviour(input);}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyItemize}
+\item {\itshape Calculate and blend}\+: A linear interpolation is used to calculate a transform between two points.
+\item {\itshape Apply result}\+: Once the calculation is done, the transform is written in the track binding object\+:
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ c\#}
+\DoxyCodeLine{//\ Apply\ the\ final\ position\ and\ rotation\ values\ in\ the\ track\ binding}
+\DoxyCodeLine{trackBinding.position\ =\ accumPosition\ +\ m\_InitialPosition\ *\ (1.0f\ -\/\ totalPositionWeight);}
+\DoxyCodeLine{trackBinding.rotation\ =\ accumRotation.Blend(m\_InitialRotation,\ 1.0f\ -\/\ totalRotationWeight);}
+
+\end{DoxyCode}
+\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2smpl__custom__tween_autotoc_md1227}{}\doxysubsection{\texorpdfstring{4. Customize a clip\textquotesingle{}s appearance}{4. Customize a clip\textquotesingle{}s appearance}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2smpl__custom__tween_autotoc_md1227}
+{\ttfamily Clip\+Editor} can be used to augment the capabilities of a clip in the editor. It works like a custom \href{https://docs.unity3d.com/ScriptReference/CustomEditor.html}{\texttt{ Inspector}}; the \href{xref:UnityEditor.Timeline.CustomTimelineEditorAttribute}{\texttt{ Custom\+Timeline\+Editor attribute}} is used to tell \doxylink{namespace_timeline}{Timeline} that a \href{xref:UnityEditor.Timeline.ClipEditor}{\texttt{ Clip\+Editor}} class should be associated to a given clip.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ c\#}
+\DoxyCodeLine{[CustomTimelineEditor(typeof(TweenClip))]}
+\DoxyCodeLine{public\ class\ TweenClipEditor\ :\ ClipEditor}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ //...}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+It is possible to customize the appearance of a clip with the \href{xref:UnityEditor.Timeline.ClipEditor\#UnityEditor_Timeline_ClipEditor_DrawBackground_UnityEngine_Timeline_TimelineClip_UnityEditor_Timeline_ClipBackgroundRegion_}{\texttt{ Draw\+Background}} method\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ c\#}
+\DoxyCodeLine{public\ override\ void\ DrawBackground(TimelineClip\ clip,\ ClipBackgroundRegion\ region)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ TweenClip\ asset\ =\ clip.asset\ as\ TweenClip;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ if\ (asset\ ==\ null)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ return;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ //\ Drawing\ code\ here...}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\hypertarget{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2smpl__custom__tween_autotoc_md1228}{}\doxysection{\texorpdfstring{Notes}{Notes}}\label{md__library_2_package_cache_2com_8unity_8timeline_0d1_87_86_2_documentation_0i_2smpl__custom__tween_autotoc_md1228}
+
+\begin{DoxyItemize}
+\item Only the portion between (0,1) of the curve will be used.
+\item When a clip ends, the object bound to the track will return to its original position. 
+\end{DoxyItemize}
